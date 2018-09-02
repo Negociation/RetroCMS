@@ -21,7 +21,7 @@ class Hotel{
 	protected $hotelAdvertisementRight = array();
 	
 	//Object Construct
-	public function __constructObject($Adv00,$Adv01,$Adv02,$Adv10,$Adv11,$Adv12,$Adv20,$Adv21,$Adv22,$Closed,$Name,$Nick,$Url,$Version,$Web){
+	public function constructObject($Adv00,$Adv01,$Adv02,$Adv10,$Adv11,$Adv12,$Adv20,$Adv21,$Adv22,$Closed,$Name,$Nick,$Url,$Version,$Web){
 		
 		//0 Advertisement Left [0 - Enabled/Disabled] [1 - Image URL ] [2 - URL Link ]
 		array_push($this->hotelAdvertisementLeft,$Adv00);

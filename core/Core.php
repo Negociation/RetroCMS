@@ -42,5 +42,9 @@ $hotelModel = new HotelModel($Conection);
 //Instance Hotel
 $hotel = $hotelModel->get_HotelObject();
 
+//++++++++++++++++++++++++++ Habbo ++++++++++++++++++++++++++++
+include "./Core/Classes/Habbo.php";
+include "./Core/Models/HabboModel.php";
+
 ?>
 

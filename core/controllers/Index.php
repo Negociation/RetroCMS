@@ -28,10 +28,10 @@ class Index{
 		echo 'Your SSO Login Ticket as: '.$hotelModel->get_HotelTicket().'<br>';
 		echo $hotel->get_HotelName().' ~ '.$hotel->get_HotelNick();
 		
-		echo '<center><br> <b> WARNING: Alpha Preview, only for test. <b></center>';
-		
-		
-		
+		echo '<center><br> <b> WARNING: Alpha Preview, only for test. <br> <a href="'.$hotel->get_HotelURL().'/login.">Login </a>   |   <a href="'.$hotel->get_HotelURL().'/register/start.">Register </a>
+ <b></center>';
+
+
 	}
 
 	
