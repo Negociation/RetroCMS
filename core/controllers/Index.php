@@ -21,9 +21,11 @@ class Index{
 		
 		//Call the Hotel Settings from Core
 		global $hotel;
+		global $hotelModel;
 
 		echo 'Its alive, and working as well! <br>';
-
+		
+		echo 'Your SSO Login Ticket as: '.$hotelModel->get_HotelTicket().'<br>';
 		echo $hotel->get_HotelName().' ~ '.$hotel->get_HotelNick();
 		
 		echo '<center><br> <b> WARNING: Alpha Preview, only for test. <b></center>';
