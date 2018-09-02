@@ -11,12 +11,13 @@
 
 class Index{
 	
+	
 	//The Main Page 
 	function default(){
 		
 		//Call the Hotel Settings from Core
 		global $hotel;
-		
+
 		echo 'Its aliveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee! <br>';
 
 		echo $hotel->get_HotelName();

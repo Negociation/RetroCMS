@@ -21,7 +21,6 @@ header("Content-Type: text/html; charset=ISO-8859-1",true);
 //Core of Aplication
 require_once "./Core/Core.php";
 
-echo $hotel->getHotelName();
 
 //URL Treatment Class MVC
 require_once "./Core/Decrypt.php";
