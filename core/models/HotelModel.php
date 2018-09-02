@@ -78,7 +78,7 @@ class HotelModel{
 	}
 	
 	public function get_HotelTicket(){
-		$ticket = 'LT-'.bin2hex(random_bytes(10)).'-'.rand (1000 , 9999 ).'-br-fe2';
+		$ticket = 'LT-'.rand (100000 , 999999 ).'-'.bin2hex(random_bytes(10)).'-br-fe2';
 		return $ticket;
 	}
 	
