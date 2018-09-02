@@ -9,8 +9,6 @@
 // Branch: Public											//
 //////////////////////////////////////////////////////////////
 
-
-
 //Database Conection Configuration
 define( 'MYSQL_HOST', 'localhost' );
 define( 'MYSQL_USER', 'root' );
@@ -27,7 +25,6 @@ try{
 	exit;
 }
 
-
 //Include All Classes and Models
 
 //++++++++++++++++++++++++++ Hotel ++++++++++++++++++++++++++++
@@ -38,7 +35,6 @@ include "./Core/Models/HotelModel.php";
 $hotelModel = new HotelModel($Conection);
 
 //Instance Hotel
-$hotel = new Hotel();
 $hotel = $hotelModel->get_HotelObject();
 
 ?>
