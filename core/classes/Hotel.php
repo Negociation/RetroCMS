@@ -78,7 +78,7 @@ class Hotel{
 		return $this->hotelClosed;
 	}
 
-	function get_HotelName(){
+	public function get_HotelName(){
 		return $this->hotelName;
 	}
 
