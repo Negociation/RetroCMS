@@ -10,7 +10,11 @@
 //////////////////////////////////////////////////////////////
 
 class Index{
+	private $pageTitle;
 	
+	public function __construct(){ 
+	$this->pageTitle = 'Inicio';
+	}
 	
 	//The Main Page 
 	function default(){
@@ -18,10 +22,16 @@ class Index{
 		//Call the Hotel Settings from Core
 		global $hotel;
 
-		echo 'Its aliveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee! <br>';
+		echo 'Its alive, and working as well! <br>';
 
-		echo $hotel->get_HotelName();
+		echo $hotel->get_HotelName().' ~ '.$hotel->get_HotelNick();
+		
+		echo '<center><br> <b> WARNING: Alpha Preview, only for test. <b></center>';
+		
+		
+		
 	}
+
 	
 }
 ?>
