@@ -1,21 +1,13 @@
 <?php
 //////////////////////////////////////////////////////////////
-// 				     RetroCMS 					//
+// 					RetroCMS 								//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
-// Developed by: Marcos ( M.tiago )					//
+// Developed by: Marcos ( M.tiago )							//
 //////////////////////////////////////////////////////////////
-// Alpha Version 0.7.0 ( Opal ) 				          	//
+// Alpha Version 0.7.0 ( Opal ) 							//		
+// Branch: Public											//
 //////////////////////////////////////////////////////////////
-
-//Include All Classes and Models
-
-//+++++++++++++ Hotel +++++++++++++//
-include "./Core/Classes/Hotel.php";
-include "./Core/Models/HotelModel.php";
-
-
-
 
 
 
@@ -26,15 +18,25 @@ define( 'MYSQL_PASSWORD', '' );
 define( 'MYSQL_DB_NAME', 'Kepler' );
 
 
-
 //Check if MySQL Conection Works
 try{
-	$Conection = new PDO( 'mysql:host=' . MYSQL_HOST . 	';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
+	//Recieve MySQL/MariaDB Conection
+	$Conection = new PDO('mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
 }catch ( PDOException $e ){
-	//Error Message with Code
+	//Error Message with Code and stop the Script
 	echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
+	exit;
 }
 
+
+//Include All Classes and Models
+
+//++++++++++++++++++++++++++ Hotel ++++++++++++++++++++++++++++
+include "./Core/Classes/Hotel.php";
+include "./Core/Models/HotelModel.php";
+
+//Instance Hotel with the Conection
+$hotel = new Hotel($Conection);
 
 
 ?>

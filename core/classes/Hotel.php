@@ -9,24 +9,19 @@
 // Branch: Public											//
 //////////////////////////////////////////////////////////////
 
-//Session
-session_start();
-if (empty($_SESSION['habboLoggedIn'])){ 
-	$_SESSION['habboLoggedIn'] = false; 
+
+class Hotel{
+	protected $hotelConection;
+
+	//Recieves MySQL/MariaDB Conection if as sucessfull
+	public function __construct($HotelConection){ 
+		$hotelConection = $HotelConection;
+	}
+
+	//Recieves all Hotel Data
+	public function Construct(){
+	
+	}
+
 }
-
-//ISO-8859-1
-header("Content-Type: text/html; charset=ISO-8859-1",true);
-
-//Core of Aplication
-require_once "./Core/Core.php";
-
-
-//URL Treatment Class MVC
-require_once "./Core/Decrypt.php";
-
-
-//URL Object Call
-$url = new Url();
-
 ?>
