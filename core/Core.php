@@ -19,11 +19,15 @@ define( 'MYSQL_DB_NAME', 'Kepler' );
 try{
 	//Recieve MySQL/MariaDB Conection
 	$Conection = new PDO('mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
+	
+
 }catch ( PDOException $e ){
 	//Error Message with Code and stop the Script
 	echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
 	exit;
 }
+
+
 
 //Include All Classes and Models
 
@@ -33,6 +37,7 @@ include "./Core/Models/HotelModel.php";
 
 //Instance HotelModel and Hotel with the Conection
 $hotelModel = new HotelModel($Conection);
+
 
 //Instance Hotel
 $hotel = $hotelModel->get_HotelObject();
