@@ -10,15 +10,12 @@
 //////////////////////////////////////////////////////////////
 
 class Index{
-
+	
 	//The Main Page 
 	function default(){
-	
+		echo 'Its aliveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee!';
 	}
-
-
+	
 }
-
-
 ?>
 
