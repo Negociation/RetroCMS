@@ -17,7 +17,6 @@ define( 'MYSQL_USER', 'root' );
 define( 'MYSQL_PASSWORD', '' );
 define( 'MYSQL_DB_NAME', 'Kepler' );
 
-
 //Check if MySQL Conection Works
 try{
 	//Recieve MySQL/MariaDB Conection
@@ -35,9 +34,12 @@ try{
 include "./Core/Classes/Hotel.php";
 include "./Core/Models/HotelModel.php";
 
-//Instance Hotel with the Conection
-$hotel = new Hotel($Conection);
+//Instance HotelModel and Hotel with the Conection
+$hotelModel = new HotelModel($Conection);
 
+//Instance Hotel
+$hotel = new Hotel();
+$hotel = $hotelModel->get_HotelObject();
 
 ?>
 
