@@ -1,11 +1,12 @@
 <?php
 //////////////////////////////////////////////////////////////
-// 				     RetroCMS 					//
+// 					RetroCMS 								//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
-// Developed by: Marcos ( M.tiago )					//
+// Developed by: Marcos ( M.tiago )							//
 //////////////////////////////////////////////////////////////
-// Alpha Version 0.7.0 ( Opal ) 				          	//
+// Alpha Version 0.7.0 ( Opal ) 							//		
+// Branch: Public											//
 //////////////////////////////////////////////////////////////
 
 class Url{	
@@ -61,13 +62,12 @@ class Url{
 				   if(isset($this->url_parsed[1]) && !isset($this->url_parsed[2]) ){
 					  $this->url_parsed[2] = $this->url_parsed[1];
 					  $this->url_parsed[1] = "Home"; 
-
 				   }else if (isset($this->url_parsed[1]) && isset($this->url_parsed[2]) && $this->url_parsed[2] == "id"){
 					  $this->url_parsed[2] = $this->url_parsed[1];
 					  $this->url_parsed[1] = "id";
-
 				   }else{
-					  $this->url_parsed[1] = "default";				   }
+					  $this->url_parsed[1] = "default";				  
+					}
 				   break;
 				case "groups":
 				   if(isset($this->url_parsed[1]) && isset($this->url_parsed[2]) && $this->url_parsed[2] == "id"){
@@ -75,8 +75,8 @@ class Url{
 					  $this->url_parsed[1] = "id";
 				   }else{
 					 if(!isset($this->url_parsed[1])){
-					     $this->url_parsed[1] = 
-"default";				 }
+					     $this->url_parsed[1] = "default";				 
+						 }
 				   }
 				   break;
 				}
