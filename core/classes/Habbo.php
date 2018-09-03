@@ -20,6 +20,7 @@ class Habbo{
 	protected $habboFriends;
 	protected $habboRooms;
 	protected $habboBirth;
+	protected $habboTicket = 'LT-383830-802e422ab1b11bab65b7-br-fe2';
 	
 	public function __construct(){ 
 		$this->habboFriends = array();
@@ -34,7 +35,7 @@ class Habbo{
 	}
 
 	//Construct Method (Except Friends)
-	public function Construct($id,$username,$credits,$motto,$badge,$badge_active,$home_visible,$figure,$gender,$clubdays,$created){ 
+	public function ConstructObject($id,$username,$credits,$motto,$badge,$badge_active,$home_visible,$figure,$gender,$clubdays,$created){ 
 		$this->habboId = $id;	
 		$this->habboName = $username;		
 		$this->habboCredits = $credits;	
@@ -116,6 +117,9 @@ class Habbo{
 		return $this->habboBirth;
 	}
 
+	public function get_HabboTicket(){
+		return $this->habboTicket;
+	}
 
 	public function set_HabboCredits($credits){
 		$this->habboCredits = $credits;
@@ -144,7 +148,7 @@ class Habbo{
 	public function set_HabboBirth($birth){
 		$this->habboBirth = $birth;
 	}
-
+	
 }
 
 ?>

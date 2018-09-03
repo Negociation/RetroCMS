@@ -33,32 +33,42 @@ class Account{
 			require_once './Web/Maintenance/Index.php';
 			exit;
 		}else{
-			echo'
 			
-			<form action="'.$hotel->get_hotelUrl().'/account/submit" method="post" id="login-form">
-			<input type="hidden" name="loginTicket" value="LT-270976-JWCorbGb7fctvYlEP2es-br-fe2"/>
-			<input type="hidden" name="targetPage" value="'.$hotel->get_hotelUrl().'"/>
+			//Check if habbo as logged-in if as true redirects to Home
+			if ($this->habbo->get_HabboLoggedIn()){
+				header('Location: ../');
+				exit;
+			}else{
+				echo'
+				<form action="'.$hotel->get_hotelUrl().'/account/submit" method="post" id="login-form">
+				<input type="hidden" name="loginTicket" value="LT-270976-JWCorbGb7fctvYlEP2es-br-fe2"/>
+				<input type="hidden" name="targetPage" value="'.$hotel->get_hotelUrl().'"/>
 
-			<p>
-			<label for="login-username" class="registration-text">Meu nome Habbo</label>
-			<input type="text" class="required-username" name="credentials.username" id="login-username" value=""/>
-			</p>
+				<p>
+				<label for="login-username" class="registration-text">Meu nome Habbo</label>
+				<input type="text" class="required-username" name="credentials.username" id="login-username" value=""/>
+				</p>
 
-			<script type="text/javascript" language="JavaScript">
-			$("login-username").focus();
-			</script>
+				<script type="text/javascript" language="JavaScript">
+				$("login-username").focus();
+				</script>
 
-			<p>
-			<label for="login-password" class="registration-text">Senha</label>
-			<input type="password" class="required-password" name="credentials.password" id="login-password" value=""/>
-			</p>
+				<p>
+				<label for="login-password" class="registration-text">Senha</label>
+				<input type="password" class="required-password" name="credentials.password" id="login-password" value=""/>
+				</p>
 
-			<p class="last">
-			<input type="submit" value="Entre" class="process-button" id="login-submit"/>
-			</p>
-			</form>
-			';
+				<p class="last">
+				<input type="submit" value="Entre" class="process-button" id="login-submit"/>
+				</p>
+				</form>
+				';
+			}
 		}
+	}
+	
+	function Disconected(){
+			echo 'Your sign yout from Habbo as sucessfull!';
 	}
 	
 	function Submit(){
