@@ -15,6 +15,8 @@ class Client{
 	private $habboModel;
 
 	public function __construct($hotelConection){ 
+		$_SESSION['id'] = 1;
+		$_SESSION['habboLoggedIn'] = true;
 		$this->hotelModel = new HotelModel($hotelConection);
 		$this->habboModel = new HabboModel($hotelConection);
 		
