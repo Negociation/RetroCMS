@@ -15,9 +15,10 @@ class Account{
 	private $habboModel;
 
 	public function __construct(){ 
+		global $hotel;
 		$this->pageTitle = 'Login';
 		$this->habbo = new Habbo();
-		$this->habboModel = new HabboModel();
+		$this->habboModel = new HabboModel($hotel->getHotel);
 		if ($this->habbo->get_HabboLoggedIn()){
 			#$this->habbo = $this->habboModel->get_Habbo($_SESSION['id']);		
 		}
@@ -72,43 +73,46 @@ class Account{
 	}
 	
 	function Submit(){
-		
+
 		//Call the Hotel Settings from Core
 		global $hotel;
 		global $hotelModel;
 		
 		//Check if hotel as Opened
-		if($hotel->get_HotelClosed()){
-			require_once './Web/Maintenance/Index.php';
-			exit;
+		if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+			header('Location: ../');
+			exit;			
 		}else{
-			
-			//Check if habbo as logged-in if as true redirects to Home
-			if ($this->habbo->get_HabboLoggedIn()){
-				header('Location: ../');
+			if($hotel->get_HotelClosed()){
+				require_once './Web/Maintenance/Index.php';
 				exit;
 			}else{
 				
-				//Get Form data using POST
-				$login_username = isset($_POST['login-username']) ? $_POST['login-username'] : '';
-				$login_password = isset($_POST['login-password']) ? $_POST['login-password'] : '';
-				
-				//If as empty redirects to home page 
-				if(empty($login_username) || empty($login_passwordpassword)){
+				//Check if habbo as logged-in if as true redirects to Home
+				if ($this->habbo->get_HabboLoggedIn()){
 					header('Location: ../');
 					exit;
+				}else{
+					
+					//Get Form data using POST
+					$login_username = isset($_POST['login-username']) ? $_POST['login-username'] : '';
+					$login_password = isset($_POST['login-password']) ? $_POST['login-password'] : '';
+					
+					//If as empty redirects to home page 
+					if(empty($login_username) || empty($login_passwordpassword)){
+						header('Location: ../');
+						exit;
+					}
+					
+					//Validation on Model [DATABASE]
+					
+					
+					
+					
 				}
-				
-				//Validation on Model [DATABASE]
-				
-				
-				
-				
 			}
 		}
-	}
-
-	
+	}	
 }
 ?>
 

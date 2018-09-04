@@ -77,12 +77,6 @@ class HotelModel{
 			}
 	}
 	
-	public function get_HotelTicket(){
-		$ticket = 'LT-'.rand (100000 , 999999 ).'-'.bin2hex(random_bytes(10)).'-br-fe2';
-		return $ticket;
-	}
-	
-	
 	public function get_HotelObject(){
 		$sql = "SELECT * FROM Hotel_Settings";
 		$stmt = $this->hotelConection->prepare($sql);

@@ -20,13 +20,15 @@ class Habbo{
 	protected $habboFriends;
 	protected $habboRooms;
 	protected $habboBirth;
-	protected $habboTicket = 'LT-383830-802e422ab1b11bab65b7-br-fe2';
+	protected $habboTicket;
+	protected $habboLanguage = 'br';
 	
 	public function __construct(){ 
 		$this->habboFriends = array();
 		if (count($_SESSION) > 0 ){
 			if ( $_SESSION['habboLoggedIn'] == true){
 				$this->habboLoggedIn = true;
+				$this->habboId = $_SESSION['id'];
 					}else{
 				$this->habboLoggedIn = false;
 			}
@@ -93,6 +95,10 @@ class Habbo{
 		return $this->habboId;
 	}
 	
+	public function get_HabboLanguage(){
+		return $this->habboLanguage;
+	}
+	
 	public function get_HabboBadgeActive(){
 		return $this->habboBadgeActive;
 	}
@@ -116,6 +122,7 @@ class Habbo{
 	public function get_HabboBirth(){
 		return $this->habboBirth;
 	}
+	
 
 	public function get_HabboTicket(){
 		return $this->habboTicket;
@@ -147,6 +154,14 @@ class Habbo{
 
 	public function set_HabboBirth($birth){
 		$this->habboBirth = $birth;
+	}
+	
+	
+	public function set_HabboTicket($habboTicket){
+		//Check if user uses his last ticket
+		if (empty($this->habboTicket)){
+			$this->habboTicket = $habboTicket;
+		}
 	}
 	
 }

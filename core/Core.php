@@ -13,7 +13,7 @@
 define( 'MYSQL_HOST', 'localhost' );
 define( 'MYSQL_USER', 'root' );
 define( 'MYSQL_PASSWORD', '' );
-define( 'MYSQL_DB_NAME', 'Kepler' );
+define( 'MYSQL_DB_NAME', 'KeplerMaster' );
 
 //Check if MySQL Conection Works
 try{

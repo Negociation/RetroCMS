@@ -1,60 +1,65 @@
 <?php
+
 //////////////////////////////////////////////////////////////
-// 					RetroCMS 								//
+// 				     RetroCMS 					//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
-// Developed by: Marcos ( M.tiago )							//
+// Developed by: Marcos ( M.tiago )					//
 //////////////////////////////////////////////////////////////
-// Alpha Version 0.7.0 ( Opal ) 							//		
-// Branch: Public											//
+// Alpha Version 0.7.0 ( Opal ) 				          	//
 //////////////////////////////////////////////////////////////
 
 class Index{
-	private $pageTitle;
-	private $habbo;
-	private $habboModel;
-
-	public function __construct(){ 
-	global $Conection;
-	$this->pageTitle = 'Inicio';
-	$this->habbo = new Habbo();
-	$this->habboModel = new HabboModel($Conection);
-		if ($this->habbo->get_HabboLoggedIn()){
-			$this->habbo = $this->habboModel->get_HabboObject($_SESSION['id']);	
-			
-		}
-	}
+		protected $pageTitle;
+		protected $habbo;
+		protected $habboModel;
+		protected $hotel;
+		protected $hotelModel;
+	public function __construct($hotelConection){ 
 	
-	//The Main Page 
-	function default(){
+		$this->pageTitle = 'Inicio';
 		
-		//Call the Hotel Settings from Core
-		global $hotel;
-		global $hotelModel;
+		$this->hotelModel = new HotelModel($hotelConection);
+		$this->habboModel = new HabboModel($hotelConection);
+		
+		$this->habbo = new Habbo();
+		$this->hotel = $this->hotelModel->get_HotelObject();
 
+		if ($this->habbo->get_HabboLoggedIn()){
+			echo $this->habbo->get_HabboId();
+			$this->habbo = $this->habboModel->get_HabboObject($this->habbo);	
+		}
+		
+	}
+
+
+	// Load Default View
+	public function default(){
+	
 		echo 'Its alive, and working as well! <br>';
 		
-		echo 'Your SSO Login Ticket as: '.$hotelModel->get_HotelTicket().'<br>';
+		echo 'Your SSO Login Ticket as: '.$this->habboModel->get_HabboTicket($this->habbo).'<br>';
 		
-		echo $hotel->get_HotelName().' ~ '.$hotel->get_HotelNick();
-		
+		echo $this->hotel->get_HotelName().' ~ '.$this->hotel->get_HotelNick();
+
 		echo '<center><br> <b> WARNING: Alpha Preview, only for test. </b><br>';
 		
 		//Check if hotel as Opened
-		if($hotel->get_HotelClosed()){
+		if($this->hotel->get_HotelClosed()){
 			require_once './Web/Maintenance/Index.php';
 			exit;
 		}else{
 			if ($this->habbo->get_HabboLoggedIn()){
-				echo ' <b>'. $this->habbo->get_HabboName().' </b> -- <i>'.$this->habbo->get_HabboMotto() .'</i><br> <a href="'.$hotel->get_HotelURL().'/logout.">Logout </a> | <a href="'.$hotel->get_HotelURL().'/client.">Client </a>';
+				echo ' <b>'. $this->habbo->get_HabboName().' </b> -- <i>'.$this->habbo->get_HabboMotto() .'</i><br> <a href="'.$this->hotel->get_HotelURL().'/logout.">Logout </a> | <a href="'.$this->hotel->get_HotelURL().'/client.">Client </a>';
 				
 			}else{
-				echo '<b> <a href="'.$hotel->get_HotelURL().'/login.">Login </a>   |   <a href="'.$hotel->get_HotelURL().'/register/start.">Register </a>';
+				echo '<b> <a href="'.$this->hotel->get_HotelURL().'/login.">Login </a>   |   <a href="'.$this->hotel->get_HotelURL().'/register/start.">Register </a>';
 			}
 		}		
+		
 	}
 
-	
-}
-?>
 
+}
+
+?>

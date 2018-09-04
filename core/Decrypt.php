@@ -16,10 +16,12 @@ class Url{
 	protected $url_method;
 	protected $url_param = [];
 	protected $url_parsed = [];
-
+	protected $hotelConection;
 
 	//Construct Method
-	public function __construct(){
+	public function __construct($HotelConection){
+		$this->hotelConection = $HotelConection;
+		
 		//Initialize
 		$this->url_controller = "Index";
 		$this->url_method = "default";	
@@ -111,7 +113,7 @@ class Url{
 		}
 
 		//Turning Variable Control into a Object 
-		$this->url_controller = new $this->url_controller;
+		$this->url_controller = new $this->url_controller($this->hotelConection);
 		
 		
 		//Check if Method from URL exists		
@@ -124,7 +126,7 @@ class Url{
 				$this->url_controller = "404";	
 				require_once "Core/Controllers/".$this->url_controller.".php";
 				$this->url_controller = "Not_Found";
-				$this->url_controller = new $this->url_controller;
+				$this->url_controller = new $this->url_controller($Conection);
 			}
 		}
 		

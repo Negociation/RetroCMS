@@ -27,7 +27,7 @@ require_once "./Core/Decrypt.php";
 
 
 //URL Object Call
-$url = new Url();
+$url = new Url($Conection);
 $url->urlLoad();
 
 ?>
