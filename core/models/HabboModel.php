@@ -57,7 +57,7 @@ $result[0]['username'],$result[0]['credits'],$result[0]['motto'],$result[0]['bad
 		}
 		return $habboObject;	
 	}
-
+	
 	//Destroys Habbo Session 
 	public function set_HabboLogout(){
 		unset($this->habbo);
@@ -65,6 +65,46 @@ $result[0]['username'],$result[0]['credits'],$result[0]['motto'],$result[0]['bad
 		session_destroy();
 	}	
 
+	public function set_HabboLogin($habboObject){
+		//Step 1 "Check if Habbo Exists"
+		$sql = "SELECT id,username,password,rank FROM users WHERE username = :username";
+		$stmt = $this->hotelConection->prepare($sql);
+		$stmt->bindValue(':username', $habboObject->get_HabboName());
+		$stmt->execute();
+		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		if (count($result) == 0){	
+			echo 'habboname';
+			echo $habboObject->get_HabboName();
+			return false;
+			exit;
+			//Message of Error Habbo doesnt Exist
+		}else{
+			//Step 2 "Check if Password Match"
+			if (!password_verify($habboObject->get_HabboPassword(),$result[0]['password']) == false){
+				echo 'password';
+				return false;
+				exit;
+			}else{
+				echo 'banned';
+				//Step 3 "Check if Habbo as Banned"
+				if ($result[0]['rank'] == 0){
+					return false;
+					exit;
+				}else{
+					//Everthing OK
+					$_SESSION['habboLoggedIn'] = true;
+					$_SESSION['id'] = $result[0]['id'];
+					return true;
+					exit;
+				}
+			}
+		}
+
+		return $loginStatus;
+	}
+	
+	
+	
 }
 
 

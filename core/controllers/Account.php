@@ -13,12 +13,15 @@ class Account{
 	private $pageTitle;
 	private $habbo;
 	private $habboModel;
+	private $hotel;
 
-	public function __construct(){ 
-		global $hotel;
+	public function __construct($hotelConection){ 
+		$this->hotelModel = new HotelModel($hotelConection);
+		$this->hotel = $this->hotelModel->get_HotelObject();
+		
 		$this->pageTitle = 'Login';
 		$this->habbo = new Habbo();
-		$this->habboModel = new HabboModel($hotel->getHotel);
+		$this->habboModel = new HabboModel($hotelConection);
 		if ($this->habbo->get_HabboLoggedIn()){
 			#$this->habbo = $this->habboModel->get_Habbo($_SESSION['id']);		
 		}
@@ -33,6 +36,7 @@ class Account{
 		if($hotel->get_HotelClosed()){
 			require_once './Web/Maintenance/Index.php';
 			exit;
+
 		}else{
 			
 			//Check if habbo as logged-in if as true redirects to Home
@@ -47,7 +51,7 @@ class Account{
 
 				<p>
 				<label for="login-username" class="registration-text">Meu nome Habbo</label>
-				<input type="text" class="required-username" name="credentials.username" id="login-username" value=""/>
+				<input type="text" class="required-username" name="login-username" id="login-username" value=""/>
 				</p>
 
 				<script type="text/javascript" language="JavaScript">
@@ -56,7 +60,7 @@ class Account{
 
 				<p>
 				<label for="login-password" class="registration-text">Senha</label>
-				<input type="password" class="required-password" name="credentials.password" id="login-password" value=""/>
+				<input type="password" class="required-password" name="login-password" id="login-password" value=""/>
 				</p>
 
 				<p class="last">
@@ -69,49 +73,39 @@ class Account{
 	}
 	
 	function Disconected(){
-			echo 'Your sign yout from Habbo as sucessfull!';
+		if($this->hotel->get_HotelClosed()){
+			require_once './Web/Maintenance/Index.php';
+			exit;
+		}else{
+			if(!$this->habbo->get_HabboLoggedIn()){
+				header('Location: ../');
+				exit;			
+			}else{
+				echo 'Your sign yout from Habbo as sucessfull!';
+				echo '<b> <a href="'.$this->hotel->get_HotelURL().'/login.">Login </a>   |   <a href="'.$this->hotel->get_HotelURL().'/register/start.">Register </a> | <a href="'.$this->hotel->get_HotelURL().'/.">Index</a>  ';
+				session_destroy();	
+			}
+		}			
 	}
 	
-	function Submit(){
-
-		//Call the Hotel Settings from Core
-		global $hotel;
-		global $hotelModel;
-		
-		//Check if hotel as Opened
-		if ($_SERVER['REQUEST_METHOD'] != 'POST') {
-			header('Location: ../');
-			exit;			
-		}else{
-			if($hotel->get_HotelClosed()){
+	function Submit(){		
+		if($this->hotel->get_HotelClosed()){
 				require_once './Web/Maintenance/Index.php';
 				exit;
+		}elseif($_SERVER['REQUEST_METHOD'] != 'POST' || $this->habbo->get_HabboLoggedIn()){
+			header('Location: ../');
+			exit;	
+		}else{
+			//Get Form data using POST
+			$this->habbo->set_HabboName(isset($_POST['login-username']) ? $_POST['login-username'] : '');
+			$this->habbo->set_HabboPassword(isset($_POST['login-password']) ? $_POST['login-password'] : '');
+			if($this->habboModel->set_HabboLogin($this->habbo)){
+				header('Location: ../');
+				exit;	
 			}else{
-				
-				//Check if habbo as logged-in if as true redirects to Home
-				if ($this->habbo->get_HabboLoggedIn()){
-					header('Location: ../');
-					exit;
-				}else{
-					
-					//Get Form data using POST
-					$login_username = isset($_POST['login-username']) ? $_POST['login-username'] : '';
-					$login_password = isset($_POST['login-password']) ? $_POST['login-password'] : '';
-					
-					//If as empty redirects to home page 
-					if(empty($login_username) || empty($login_passwordpassword)){
-						header('Location: ../');
-						exit;
-					}
-					
-					//Validation on Model [DATABASE]
-					
-					
-					
-					
-				}
+				echo "Login Failed";
 			}
-		}
+		}	
 	}	
 }
 ?>

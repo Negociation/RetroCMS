@@ -115,6 +115,10 @@ class Habbo{
 		return $this->habboHomeVisible;
 	}
 
+	public function get_HabboPassword(){
+		return $this->habboPassword; 
+	}
+
 	public function get_HabboMotto(){
 		return $this->habboMotto;
 	}
@@ -133,7 +137,21 @@ class Habbo{
 	}
 
 	public function set_HabboName($name){
-		$this->habboName = $name;
+		//Habbo name cant be empty and need to have more than 3 chars
+		if (!(empty($name)) && strlen($name) >= 3 ){
+			$this->habboName = $name;
+		}else{
+			
+		}
+	}
+	
+	public function set_HabboPassword($password){
+		//Habbo password cant be empty and need to have more than 6 chars
+		if (!(empty($password)) && strlen($password) >= 6 ){
+			$this->habboPassword = $password;
+		}else{
+		
+		}
 	}
 
 	public function set_HabboFigure($figure){

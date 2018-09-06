@@ -15,7 +15,7 @@ class Client{
 	private $habboModel;
 
 	public function __construct($hotelConection){ 
-		$_SESSION['id'] = 1;
+		$_SESSION['id'] = 2;
 		$_SESSION['habboLoggedIn'] = true;
 		$this->hotelModel = new HotelModel($hotelConection);
 		$this->habboModel = new HabboModel($hotelConection);
@@ -70,7 +70,7 @@ class Client{
 				<param name='sw4' value='connection.mus.host=localhost;connection.mus.port=12322'>
 				<param name='sw3' value='client.reload.url=https://localhost/'>
 				<param name='sw1' value='site.url=https://www.habbo.ch;url.prefix=https://www.habbo.ch'>
-				<param name='sw5' value='external.variables.txt=http://images.alex-dev.org/dcr/r21_20080417_0343_5110_5527e6590eba8f3fb66348bdf271b5a2/external_variables.txt;external.texts.txt=http://localhost/texts.txt'>
+				<param name='sw5' value='external.variables.txt=http://localhost/vars.txt;external.texts.txt=http://localhost/texts.txt'>
 				<embed src='http://images.alex-dev.org/dcr/r21_20080417_0343_5110_5527e6590eba8f3fb66348bdf271b5a2/habbo.dcr' bgColor='#000000' width='720' height='540' swRemote='swSaveEnabled='true' swVolume='true' swRestart='false' swPausePlay='false' swFastForward='false' swTitle='Habbo Hotel' swContextMenu='true'' swStretchStyle='none' swText='' type='application/x-director' pluginspage='https://www.macromedia.com/shockwave/download/'
 				sw6='use.sso.ticket=1;sso.ticket=".$this->habbo->get_HabboTicket()."'
 				sw8='forward.type=1;forward.id=60'
@@ -78,7 +78,7 @@ class Client{
 				sw4='connection.mus.host=localhost;connection.mus.port=12322'
 				sw3='client.reload.url=http://localhost'
 				sw1='site.url=http://localhost;url.prefix=http://localhost'
-				sw5='external.variables.txt=http://images.alex-dev.org/dcr/r21_20080417_0343_5110_5527e6590eba8f3fb66348bdf271b5a2/external_variables.txt;external.texts.txt=http://localhost/texts.txt'></embed>
+				sw5='external.variables.txt=http://localhost/vars.txt;external.texts.txt=http://localhost/texts.txt'></embed>
 				</object>
 
 				</div>
