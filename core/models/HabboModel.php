@@ -1,11 +1,12 @@
 <?php
 //////////////////////////////////////////////////////////////
-// 				     RetroCMS 					//
+// 							RetroCMS 						//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
-// Developed by: Marcos ( M.tiago )					//
+// Developed by: Marcos ( M.tiago )							//
 //////////////////////////////////////////////////////////////
-// Alpha Version 0.7.0 ( Opal ) 				          	//
+// Alpha Version 0.7.0 ( Opal ) 							//
+// Branch: Public											//
 //////////////////////////////////////////////////////////////
 
 class HabboModel{
@@ -66,6 +67,7 @@ $result[0]['username'],$result[0]['credits'],$result[0]['motto'],$result[0]['bad
 	}	
 
 	public function set_HabboLogin($habboObject){
+		$errorId = -1;
 		//Step 1 "Check if Habbo Exists"
 		$sql = "SELECT id,username,password,rank FROM users WHERE username = :username";
 		$stmt = $this->hotelConection->prepare($sql);
@@ -73,21 +75,20 @@ $result[0]['username'],$result[0]['credits'],$result[0]['motto'],$result[0]['bad
 		$stmt->execute();
 		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		if (count($result) == 0){	
-			echo 'habboname';
-			echo $habboObject->get_HabboName();
+			echo '<script language="JavaScript" type="text/javascript"> sessionStorage.setItem("loginErrorId", "1"); </script>';
 			return false;
 			exit;
 			//Message of Error Habbo doesnt Exist
 		}else{
 			//Step 2 "Check if Password Match"
-			if (!password_verify($habboObject->get_HabboPassword(),$result[0]['password']) == false){
-				echo 'password';
+			if (!password_verify($habboObject->get_HabboPassword(),$result[0]['password'])){
+				echo '<script language="JavaScript" type="text/javascript"> sessionStorage.setItem("loginErrorId", "2"); </script>';
 				return false;
 				exit;
 			}else{
-				echo 'banned';
 				//Step 3 "Check if Habbo as Banned"
 				if ($result[0]['rank'] == 0){
+					echo '<script language="JavaScript" type="text/javascript"> sessionStorage.setItem("loginErrorId", "3"); </script>';
 					return false;
 					exit;
 				}else{
@@ -99,8 +100,6 @@ $result[0]['username'],$result[0]['credits'],$result[0]['motto'],$result[0]['bad
 				}
 			}
 		}
-
-		return $loginStatus;
 	}
 	
 	

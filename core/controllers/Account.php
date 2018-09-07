@@ -8,7 +8,6 @@
 // Alpha Version 0.7.0 ( Opal ) 							//		
 // Branch: Public											//
 //////////////////////////////////////////////////////////////
-
 class Account{
 	private $pageTitle;
 	private $habbo;
@@ -18,12 +17,11 @@ class Account{
 	public function __construct($hotelConection){ 
 		$this->hotelModel = new HotelModel($hotelConection);
 		$this->hotel = $this->hotelModel->get_HotelObject();
-		
 		$this->pageTitle = 'Login';
 		$this->habbo = new Habbo();
 		$this->habboModel = new HabboModel($hotelConection);
 		if ($this->habbo->get_HabboLoggedIn()){
-			#$this->habbo = $this->habboModel->get_Habbo($_SESSION['id']);		
+			$this->habbo = $this->habboModel->get_HabboObject($this->habbo);		
 		}
 	}
 	
@@ -44,35 +42,14 @@ class Account{
 				header('Location: ../');
 				exit;
 			}else{
-				echo'
-				<form action="'.$hotel->get_hotelUrl().'/account/submit" method="post" id="login-form">
-				<input type="hidden" name="loginTicket" value="LT-270976-JWCorbGb7fctvYlEP2es-br-fe2"/>
-				<input type="hidden" name="targetPage" value="'.$hotel->get_hotelUrl().'"/>
-
-				<p>
-				<label for="login-username" class="registration-text">Meu nome Habbo</label>
-				<input type="text" class="required-username" name="login-username" id="login-username" value=""/>
-				</p>
-
-				<script type="text/javascript" language="JavaScript">
-				$("login-username").focus();
-				</script>
-
-				<p>
-				<label for="login-password" class="registration-text">Senha</label>
-				<input type="password" class="required-password" name="login-password" id="login-password" value=""/>
-				</p>
-
-				<p class="last">
-				<input type="submit" value="Entre" class="process-button" id="login-submit"/>
-				</p>
-				</form>
-				';
+				//$this->habboModel->set_HabboLogout();
+				require_once './Web/Account/Login.php';
+				exit;	
 			}
 		}
 	}
 	
-	function Disconected(){
+	function Disconnected(){
 		if($this->hotel->get_HotelClosed()){
 			require_once './Web/Maintenance/Index.php';
 			exit;
@@ -81,9 +58,9 @@ class Account{
 				header('Location: ../');
 				exit;			
 			}else{
-				echo 'Your sign yout from Habbo as sucessfull!';
-				echo '<b> <a href="'.$this->hotel->get_HotelURL().'/login.">Login </a>   |   <a href="'.$this->hotel->get_HotelURL().'/register/start.">Register </a> | <a href="'.$this->hotel->get_HotelURL().'/.">Index</a>  ';
-				session_destroy();	
+					$this->habboModel->set_HabboLogout();
+					require_once './Web/Account/Disconnected.php';
+					exit;	
 			}
 		}			
 	}
@@ -103,7 +80,9 @@ class Account{
 				header('Location: ../');
 				exit;	
 			}else{
-				echo "Login Failed";
+				echo '<link href="'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/styles/style.css" type="text/css" rel="stylesheet">';
+				header( "refresh:0.5;url=../account/login" );
+				exit;
 			}
 		}	
 	}	

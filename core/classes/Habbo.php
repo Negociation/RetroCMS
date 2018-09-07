@@ -31,8 +31,7 @@ class Habbo{
 				$this->habboId = $_SESSION['id'];
 					}else{
 				$this->habboLoggedIn = false;
-			}
-				
+			}		
 		}
 	}
 

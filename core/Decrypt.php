@@ -63,7 +63,7 @@ class Url{
 			
 			case "logout":
 				$this->url_parsed[0] = "Account";
-				$this->url_parsed[1] = "Disconected";
+				$this->url_parsed[1] = "Disconnected";
 				break;
 				
 			case "home":
@@ -77,7 +77,7 @@ class Url{
 					$this->url_parsed[1] = "default";				  
 				}
 				break;
-				
+			
 			case "groups":
 				if(isset($this->url_parsed[1]) && isset($this->url_parsed[2]) && $this->url_parsed[2] == "id"){
 				$this->url_parsed[2] = $this->url_parsed[1];
@@ -111,10 +111,9 @@ class Url{
 		if ($this->url_controller == "404"){ 
 			$this->url_controller = "Not_Found";
 		}
-
+		
 		//Turning Variable Control into a Object 
 		$this->url_controller = new $this->url_controller($this->hotelConection);
-		
 		
 		//Check if Method from URL exists		
 		if(isset($this->url_parsed[1]) && Method_Exists($this->url_controller,$this->url_parsed[1])){ 
@@ -130,17 +129,13 @@ class Url{
 			}
 		}
 		
-		
 		//Get all parameters from the rest of URL
 		if (isset($this->url_parsed)){
 			$this->url_param = $this->url_parsed ? array_values($this->url_parsed): [];
 		}
 		
-		
-
 		//Call Function from Array
 		call_user_func_array([$this->url_controller,$this->url_method],$this->url_param);
-		
 	}
 
 }
