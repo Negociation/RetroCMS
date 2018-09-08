@@ -41,6 +41,17 @@ input.process-button {
 	cursor: hand;
 }
 
+a.process-button {
+	background-color: #FC6303;
+	border: 2px solid black;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+    	text-decoration: none;
+	cursor: hand;
+}
+
 input.process-button:disabled {
 	background-color: #CCC;
 	border-color: #666;

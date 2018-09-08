@@ -35,12 +35,15 @@ class Register{
 		exit;
 	}
 	
+	public function done(){
+		$this->step(5);
+	}
 	public function step($id){
 		if($this->hotel->get_HotelClosed()){
 				require_once './Web/Maintenance/Index.php';
 				exit;
 		}elseif($this->habbo->get_HabboLoggedIn()){
-			header('Location: ../');
+			header('Location: ../../');
 			exit;	
 		}else{
 			switch($id){
@@ -56,13 +59,36 @@ class Register{
 					}
 				break;
 				case 2:
-				
+					if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+						header('Location: ./step/0');
+						exit;	
+					}else{
+						require_once './Web/register/2.php';
+					}
 				break;	
 				case 3:
+					if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+						header('Location: ./step/0');
+						exit;	
+					}else{
+						require_once './Web/register/3.php';
+					}
 				break;
 				case 4:
+					if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+						header('Location: ./step/0');
+						exit;	
+					}else{
+						require_once './Web/register/4.php';
+					}
 				break;
 				case 5:
+					if ($_SERVER['REQUEST_METHOD'] != 'POST'){
+						header('Location: ./step/0');
+						exit;	
+					}else{
+						require_once './Web/register/5.php';
+					}
 				break;
 			}
 		}
