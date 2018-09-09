@@ -1,0 +1,131 @@
+div.ad-scale {
+	margin-top: 8px;
+}
+
+div.ad-scale h5 {
+	margin: 0;
+	color: #777777;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 3px 4px;
+}
+
+div.ad-scale table {
+	border-spacing: 0;
+    border-collapse: collapse;
+}
+
+div.ad-scale td {
+	margin: 0;
+	padding: 0;
+}
+
+td.ad-header-tl {
+	width: 4px;
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-top-l.gif) no-repeat;
+}
+
+td.ad-header-t {
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-top-r.gif) no-repeat;
+}
+
+div.ad-scale.ad300, div.ad-scale.ad160 {
+	margin-top: 0;
+	margin-bottom: 3px;
+}
+
+div.ad-scale.ad160 td.ad-header-t {
+	width: 160px;
+}
+
+div.ad-scale.ad300 td.ad-header-t {
+	width: 300px;
+}
+
+td.ad-header-tr {
+	width: 4px;
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-top-r.gif) no-repeat top right;
+}
+
+td.ad-header-ml
+{
+	width: 4px;
+	background-image: url(../images/ads-scale/bg-banner-top-l.gif);
+	background-repeat: no-repeat;
+	background-position: 0 -15px;
+}
+
+td.ad-header-m {
+	background-color: black;
+	text-align: center;
+}
+
+td.ad-header-mr
+{
+	width: 4px;
+	background-image: url(../images/ads-scale/bg-banner-top-r.gif);
+	background-repeat: no-repeat;
+	background-position: right -15px;
+}
+
+
+td.ad-content-tl {
+	width: 4px;
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-scale-l.gif) no-repeat;
+}
+
+td.ad-content-t {
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-scale-r.gif) no-repeat;
+}
+
+td.ad-content-tr {
+	width: 4px;
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-scale-r.gif) no-repeat top right;
+}
+
+td.ad-content-ml
+{
+	width: 4px;
+	background-image: url(../images/ads-scale/bg-banner-scale-l.gif);
+	background-repeat: no-repeat;
+	background-position: 0 -15px;
+}
+
+td.ad-content-m {
+	background-color: #004979;
+}
+
+td.ad-content-m table, td.ad-content-m div, td.ad-content-m p, td.ad-content-m object, td.ad-content-m embed, td.ad-content-m img {
+	margin: 0;
+}
+
+td.ad-content-mr
+{
+	width: 4px;
+	background-image: url(../images/ads-scale/bg-banner-scale-r.gif);
+	background-repeat: no-repeat;
+	background-position: right -15px;
+}
+
+td.ad-content-bl {
+	width: 4px;
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-scale-btm-l.gif) no-repeat;
+}
+
+td.ad-content-b {
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-scale-btm-r.gif) no-repeat;
+}
+
+td.ad-content-br {
+	width: 4px;
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-scale-btm-r.gif) no-repeat top right;
+}

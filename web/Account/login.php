@@ -12,7 +12,7 @@
 
 <?php 
 //Include Header Content
-include('./Web/Includes/Content/Headers/Account.php'); 
+require_once('./Web/Includes/Content/Headers/Account.php'); 
 
 //Page Content >>
 ?>
@@ -33,7 +33,7 @@ include('./Web/Includes/Content/Headers/Account.php');
 							<div class="processbox-inner">
 								<h4>Primeira vez? Registre-se aqui!</h4>
 								<p>
-									<img vspace="10" hspace="10" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album209/frank_with_key.gif?h=531971dc69fe0357f9a244f47e3239ab" alt="">Habbo È uma comunidade que te permite criar seu prÛprio espaÁo virtual para si e teus amigos. Mais de um milh„o de Habbos j· se registraram (j· pensou?). Ent„o, h· muito para se fazer aÌ dentro.<br/><br/><br/><br/>
+									<img vspace="10" hspace="10" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album209/frank_with_key.gif?h=531971dc69fe0357f9a244f47e3239ab" alt="">Habbo √© uma comunidade que te permite criar seu pr√≥prio espa√ßo virtual para si e teus amigos. Mais de um milh√£o de Habbos j√° se registraram (j√° pensou?). Ent√£o, h√° muito para se fazer a√≠ dentro.<br/><br/><br/><br/>
 								</p>
 							</div>
 							<div id="registration-errors">
@@ -93,7 +93,7 @@ include('./Web/Includes/Content/Headers/Account.php');
 														<option value="">--</option>
 														<option value="1">Janeiro</option>
 														<option value="2">Fevereiro</option>
-														<option value="3">MarÁo</option>
+														<option value="3">Mar√ßo</option>
 														<option value="4">Abril</option>
 														<option value="5">Maio</option>
 														<option value="6">Junho</option>
@@ -230,13 +230,13 @@ include('./Web/Includes/Content/Headers/Account.php');
 							</div>
 							<div class="processbox-inner">
 								<p><br/>
-									<span style="font-weight: bold;">Razıes para registrar-se:</span><br/>
+									<span style="font-weight: bold;">Raz√µes para registrar-se:</span><br/>
 								<ul>
-									<li>Criar seu prÛprio Habbo e p·gina pessoal</li>
+									<li>Criar seu pr√≥prio Habbo e p√°gina pessoal</li>
 									<li>Encontrar seus amigos e fazer novas amizades</li>
-									<li>Decorar seu prÛprio Quarto</li>
-									<li>… muito divertido mesmo</li>
-									<li>… gratuito<br/></li>
+									<li>Decorar seu pr√≥prio Quarto</li>
+									<li>√â muito divertido mesmo</li>
+									<li>√â gratuito<br/></li>
 								</ul>
 								<br/><br/><br/></p>
 							</div>
@@ -251,7 +251,7 @@ include('./Web/Includes/Content/Headers/Account.php');
 					<div class="headline">
 						<div class="headline-content">
 							<div class="headline-wrapper">
-								<h2>J· È um Habbo? Entre!</h2>
+								<h2>J√° √© um Habbo? Entre!</h2>
 							</div>
 						</div>
 					</div>
@@ -259,7 +259,7 @@ include('./Web/Includes/Content/Headers/Account.php');
 						<div class="content">
 							<div class="processbox-inner">
 								<p>
-									J· È registrado? Entre aqui.<br/><br/>Se vocÍ j· possui conta no Habbo, entre aqui usando seu nome Habbo e senha (os mesmo que vocÍ usa no Hotel).<br/><br/>
+									J√° √© registrado? Entre aqui.<br/><br/>Se voc√™ j√° possui conta no Habbo, entre aqui usando seu nome Habbo e senha (os mesmo que voc√™ usa no Hotel).<br/><br/>
 								</p>
 							</div>
 							
@@ -304,11 +304,11 @@ include('./Web/Includes/Content/Headers/Account.php');
 							</div>
 							<div class="processbox-inner">
 								<p>
-									<br style="font-weight: bold;"/><span style="font-weight: bold;"> Esqueceu a senha?</span><br/><br/>Se vocÍ esqueceu sua senha, entre em contato com o Suporte usando a <a href="http://web.archive.org/web/20070613213428/http://www.habbohotel.com.br/iot/go?lang=pt_BR&amp;country=br" target="_blank">Ferramenta de Ajuda Habbo</a>.<br/><br/>
+									<br style="font-weight: bold;"/><span style="font-weight: bold;"> Esqueceu a senha?</span><br/><br/>Se voc√™ esqueceu sua senha, entre em contato com o Suporte usando a <a href="http://web.archive.org/web/20070613213428/http://www.habbohotel.com.br/iot/go?lang=pt_BR&amp;country=br" target="_blank">Ferramenta de Ajuda Habbo</a>.<br/><br/>
 								</p>
-								<h4>PARA SUA SEGURAN«A</h4>
+								<h4>PARA SUA SEGURAN√áA</h4>
 								<p>
-									<img vspace="10" hspace="10" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album209/encryption_pc_ie.gif?h=e4fc37398b1a546726f6e1e4694c8035" alt="">O Habbo È criptografado para proteger todos os seus dados. Para saber se a p·gina È segura, olha no Cadeado que aparece embaixo, na janela do seu navegador (por exemplo, Internet Explorer e Firefox).<br/><br/><br/>
+									<img vspace="10" hspace="10" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album209/encryption_pc_ie.gif?h=e4fc37398b1a546726f6e1e4694c8035" alt="">O Habbo √© criptografado para proteger todos os seus dados. Para saber se a p√°gina √© segura, olha no Cadeado que aparece embaixo, na janela do seu navegador (por exemplo, Internet Explorer e Firefox).<br/><br/><br/>
 								</p>
 							</div>
 							<div class="clear"></div>
@@ -352,10 +352,10 @@ include('./Web/Includes/Content/Headers/Account.php');
 							
 							switch(errorId){
 							case "1":
-								validatorAddError(false, false, "Nome Habbo informado n„o existe.", "login-errors");
+								validatorAddError(false, false, "Nome Habbo informado n√£o existe.", "login-errors");
 								break;
 							case "2":
-								validatorAddError(false, false, "Senha n„o confere com o nome Habbo.", "login-errors");
+								validatorAddError(false, false, "Senha n√£o confere com o nome Habbo.", "login-errors");
 								break;
 							case "3":												
 								validatorAddError(false, false, "Este Habbo esta banido.", "login-errors");
@@ -371,7 +371,7 @@ include('./Web/Includes/Content/Headers/Account.php');
 //<< Page Content
 
 //Include Footer Content
-include('./Web/Includes/Content/Footers/Process.php'); 
+require_once ('./Web/Includes/Content/Footers/Process.php'); 
 
 ?>
 

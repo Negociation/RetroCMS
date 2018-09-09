@@ -120,12 +120,12 @@ class Url{
 			$this->url_method = $this->url_parsed[1];
 			unset($this->url_parsed[1]);
 		}else{
-			if (isset($this->url_parsed[1])){
+			if (isset($this->url_parsed[1]) || !Method_Exists($this->url_controller,'default')){
 				//Include Error Controler
 				$this->url_controller = "404";	
 				require_once "Core/Controllers/".$this->url_controller.".php";
 				$this->url_controller = "Not_Found";
-				$this->url_controller = new $this->url_controller($Conection);
+				$this->url_controller = new $this->url_controller($this->hotelConection);
 			}
 		}
 		

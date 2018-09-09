@@ -66,6 +66,14 @@ class Habbo{
 		return count($this->habboFriends); 
 	}
 
+	public function get_HabboClubStatus(){
+		if ((time()-$this->habboClubDays) < 0){
+			return true;
+		}else{				
+			return false;
+		}
+	}
+	
 	public function get_HabboBadge(){
 		return $this->habboBadge;
 	}
@@ -107,7 +115,10 @@ class Habbo{
 	}
 
 	public function get_habboClubDays(){
-		return $this->habboClubDays;
+		$now =  new DateTime(date("Y-m-d"));
+		$expires = new DateTime(date("Y-m-d",$this->habboClubDays));
+		$daysleft = $expires->diff($now)->format("%a");
+		return $daysleft;		
 	}
 
 	public function get_HabboHomeVisible(){

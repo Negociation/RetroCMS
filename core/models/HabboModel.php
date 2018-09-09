@@ -54,7 +54,7 @@ class HabboModel{
 		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		if (count($result) == 1){	
 			$habboObject->ConstructObject($result[0]['id'],
-$result[0]['username'],$result[0]['credits'],$result[0]['motto'],$result[0]['badge'],$result[0]['badge_active'],$result[0]['home_enabled'],$result[0]['figure'],$result[0]['sex'],0,$result[0]['created']);
+$result[0]['username'],$result[0]['credits'],$result[0]['motto'],$result[0]['badge'],$result[0]['badge_active'],$result[0]['home_enabled'],$result[0]['figure'],$result[0]['sex'],$result[0]['club_expiration'],$result[0]['created']);
 		}
 		return $habboObject;	
 	}

@@ -23,13 +23,13 @@ include('./Web/Includes/Content/Headers/Account.php');
 						<div class="headline">
 							<div class="headline-content">
 								<div class="headline-wrapper">
-									<h2>Você saiu do Habbo</h2>
+									<h2>VocÃª saiu do Habbo</h2>
 								</div>
 							</div>
 						</div>
 						<div class="content-top">
 							<div class="content">
-								<img vspace="0" hspace="0" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb();?>/c_images/album209/frank_waving_dbl.gif" alt="">Você saiu do Habbo.<br/><br/>Esperamos que tenha falado com muitos amigos.<br/><br/>Retorne em breve!<br/><br/>Se desejar entrar novamente, <a href="<?php echo $this->hotel->get_HotelURL();?> " target="_self">clique aqui</a>.<br/>
+								<img vspace="0" hspace="0" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb();?>/c_images/album209/frank_waving_dbl.gif" alt="">VocÃª saiu do Habbo.<br/><br/>Esperamos que tenha falado com muitos amigos.<br/><br/>Retorne em breve!<br/><br/>Se desejar entrar novamente, <a href="<?php echo $this->hotel->get_HotelURL();?>/" target="_self">clique aqui</a>.<br/>
 								<div class="clear"></div>
 							</div>
 						</div>

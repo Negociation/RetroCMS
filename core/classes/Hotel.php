@@ -16,18 +16,19 @@ class Hotel{
 	protected $hotelUrl;
 	protected $hotelWeb;
 	protected $hotelVersion;
-	protected $hotelAdvertisementLeft = array();
+	protected $hotelAdvertisementTop = array();
 	protected $hotelAdvertisementMiddle = array();
 	protected $hotelAdvertisementRight = array();
 	
 
 	//Object Construct
-	public function constructObject($Adv00,$Adv01,$Adv02,$Adv10,$Adv11,$Adv12,$Adv20,$Adv21,$Adv22,$Closed,$Name,$Nick,$Url,$Version,$Web){
-		
+//	public function constructObject($Adv00,$Adv01,$Adv02,$Adv10,$Adv11,$Adv12,$Adv20,$Adv21,$Adv22,$Closed,$Name,$Nick,$Url,$Version,$Web){
+	public function constructObject($Adv00,$Adv01,$Adv02,$Adv10,$Adv11,$Adv12,$Adv20,$Adv21,$Adv22){
+
 		//0 Advertisement Left [0 - Enabled/Disabled] [1 - Image URL ] [2 - URL Link ]
-		array_push($this->hotelAdvertisementLeft,$Adv00);
-		array_push($this->hotelAdvertisementLeft,$Adv01);
-		array_push($this->hotelAdvertisementLeft,$Adv02);
+		array_push($this->hotelAdvertisementTop,$Adv00);
+		array_push($this->hotelAdvertisementTop,$Adv01);
+		array_push($this->hotelAdvertisementTop,$Adv02);
 		
 		//1 Advertisement Left [0 - Enabled/Disabled] [1 - Image URL ] [2 - URL Link ]
 		array_push($this->hotelAdvertisementMiddle,$Adv10);
@@ -40,40 +41,58 @@ class Hotel{
 		array_push($this->hotelAdvertisementRight,$Adv22);
 		
 		//Hotel Info
-		$this->hotelClosed = $Closed;
-		$this->hotelName = $Name;
-		$this->hotelNick = $Nick;
-		$this->hotelUrl = $Url;
-		$this->hotelVersion = $Version;
-		$this->hotelWeb = $Web;
+		//$this->hotelClosed = $Closed;
+		//$this->hotelName = $Name;
+		//$this->hotelNick = $Nick;
+		//$this->hotelUrl = $Url;
+		//$this->hotelVersion = $Version;
+		//$this->hotelWeb = $Web;
 	}
 	
-	function get_AdvertisementTopEnabled(){
-		return $this->hotelAdvertisementTop;
+	function get_AdvertisementTop($setting){
+		switch($setting){
+			case  'status':
+			return $this->hotelAdvertisementTop[0];
+			break;
+			case  'image':
+			return $this->hotelAdvertisementTop[1];
+			break;
+			case  'url':
+			return $this->hotelAdvertisementTop[2];
+			break;
+		}
+		
 	}
 
-	function get_AdvertisementTopImg(){
-		return $this->hotelAdvertisementTopImg;
+	function get_AdvertisementMiddle($setting){
+		switch($setting){
+			case  'status':
+			return $this->hotelAdvertisementMiddle[0];
+			break;
+			case  'image':
+			return $this->hotelAdvertisementMiddle[1];
+			break;
+			case  'url':
+			return $this->hotelAdvertisementMiddle[2];
+			break;
+		}
+		
 	}
 
-
-	function get_AdvertisementMiddleEnabled(){
-		return $this->hotelAdvertisementMiddle;
+	function get_AdvertisementRight($setting){
+		switch($setting){
+			case  'status':
+			return $this->hotelAdvertisementRight[0];
+			break;
+			case  'image':
+			return $this->hotelAdvertisementRight[1];
+			break;
+			case  'url':
+			return $this->hotelAdvertisementRight[2];
+			break;
+		}
+		
 	}
-
-	function get_AdvertisementMiddleImg(){
-		return $this->hotelAdvertisementMiddleImg;
-	}
-
-
-	function get_AdvertisementLeftEnabled(){
-		return $this->hotelAdvertisementLeft;
-	}
-
-	function get_AdvertisementLeftImg(){
-		return $this->hotelAdvertisementLeftImg;
-	}
-
 
 	function get_HotelClosed(){
 		return $this->hotelClosed;
@@ -105,7 +124,7 @@ class Hotel{
 	public function __construct(){ 
 		$this->hotelName = "RetroCMS";
 		$this->hotelNick = "Retro";
-		$this->hotelClosed = true;
+		$this->hotelClosed = false;
 	}
 }
 

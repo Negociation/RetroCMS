@@ -1,38 +1,41 @@
 <?php
 //////////////////////////////////////////////////////////////
-// 							RetroCMS 						//
+// 					RetroCMS 					//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
-// Developed by: Marcos ( M.tiago )							//
+// Developed by: Marcos ( M.tiago )					//
 //////////////////////////////////////////////////////////////
-// Alpha Version 0.7.0 ( Opal ) 							//
-// Branch: Public											//
+// Alpha Version 0.7.0 ( Opal ) 						//
 //////////////////////////////////////////////////////////////
+
+?>
+
+<?php 
+//Include Header Content
+include('./Web/Includes/Content/Headers/General.php'); 
+
+//Page Content >>
 ?>
 
 
-<?php
-include('./Web/Includes/Sources.php');
-echo '
-<script>    
-	var habboReqPath = "";    
-	var habboStaticFilePath = "/web-gallery";    
-	var habboImagerUrl = "/habbo-imaging/";    
-	document.habboLoggedIn = true;    
-	window.name = "habboMain";    
-</script>';
-echo 'Its alive, and working as well! <br>';
-		
-echo 'Your SSO Login Ticket as: '.$this->habboModel->get_HabboTicket($this->habbo).'<br>';
-		
-echo $this->hotel->get_HotelName().' ~ '.$this->hotel->get_HotelNick();
+		<table border="0" cellpadding="0" cellspacing="0" width="100%" class="content-home">
+			<tr><td colspan="6" style="height: 4px;"></td></tr>
 
-echo '<center><br> <b> WARNING: Alpha Preview, only for test. </b><br>';
+		<br>
+		<center><br> <b> WARNING: Alpha Preview, only for test. </b><br></center>
+		<br>
+		</table>
 		
-if ($this->habbo->get_HabboLoggedIn()){
-	echo ' <b>'. $this->habbo->get_HabboName().' </b> -- <i>'.$this->habbo->get_HabboMotto() .'</i><br> <a href="'.$this->hotel->get_HotelURL().'/logout.">Logout </a> | <a href="'.$this->hotel->get_HotelURL().'/client" id="enter-hotel-link" target="client" onclick="openOrFocusHabbo(this); return false;">Client</a>';	
-}else{
-	echo '<b> <a href="'.$this->hotel->get_HotelURL().'/login.">Login </a>   |   <a href="'.$this->hotel->get_HotelURL().'/register/start.">Register </a>';
-}
-			
+		<br style="clear: both;"/>
+		</div>
+		
+<?php 
+//Include Footer Content
+include('./Web/Includes/Content/Footers/General.php'); 
+
+//Page Content >>
 ?>
+
+
+
+	

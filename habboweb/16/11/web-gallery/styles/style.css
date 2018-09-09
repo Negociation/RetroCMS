@@ -511,6 +511,24 @@ img.tabmenu-image.coins {
 	padding: 6px 8px 0 0;
 }
 
+#mainmenu li#disabled a {
+	float: left;
+	display: block;
+	background: transparent url(../images/navi/tab_off_mid.png) repeat-x;
+	height: 33px !important;
+	height /**/: 27px;
+	height: 33px;
+	text-decoration:none;
+	text-shadow: black 2px 2px 2px;	
+	font-weight: bold;
+	color: #8C7853;
+	line-height: 33px;
+	padding: 0 8px 0 0 !important;
+	padding /**/: 10px 8px 0 0;
+	padding: 6px 8px 0 0;
+	margin-top: 3px;
+}
+
 #mainmenu li a img {
 	vertical-align: middle;
 	padding: 0 !important;
@@ -530,6 +548,8 @@ img.tabmenu-image.coins {
 	text-shadow: none;
 }
 
+
+
 #mainmenu li #left {
 	background: url(../images/navi/navi_bar_end_left.gif) no-repeat;
 	width: 8px;
@@ -542,12 +562,29 @@ img.tabmenu-image.coins {
 	height: 39px;
 }
 
+#mainmenu li#disabled .left {
+	width: 5px;
+	float: left;
+	background: transparent url(../images/navi/tab_off_left.png) no-repeat;
+	height: 39px;
+	margin-top: 3px
+}
+
 #mainmenu li .right {
 	width: 4px;
 	float: left;
 	background: transparent url(../images/navi/tab_right.gif) no-repeat;
 	height: 39px;
 }
+
+#mainmenu li#disabled .right {
+	width: 4px;
+	float: left;
+	background: transparent url(../images/navi/tab_off_right.png) no-repeat;
+	height: 39px;
+	margin-top: 3px;
+}
+
 
 #mainmenu li#active .left {
 	width: 5px;
@@ -562,6 +599,9 @@ img.tabmenu-image.coins {
 	background: transparent url(../images/navi/tab_act_right.gif) no-repeat;
 	height: 39px;
 }
+
+
+
 
 #mainmenu li.last .right {
 	background: transparent url(../images/navi/tab_end.gif) no-repeat;

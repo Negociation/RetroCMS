@@ -13,7 +13,7 @@
 	
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" />
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 		<title><?php echo $this->hotel->get_HotelName();?> ~ <?php echo $this->pageTitle ?></title>
 		<?php include('./Web/Includes/Sources.php'); ?>
 	</head>
@@ -25,5 +25,3 @@
 				</div>
 			</div>
 		</div>
-		
-		
