@@ -33,7 +33,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 			<div class="content-column1">
 				<div class="bubble">
 					<div class="bubble-body">
-						Congratulations Marcos3! You are now a habbo! 
+						Congratulations <?php echo $this->newHabbo->get_HabboName(); ?>! You are now a habbo! 
 						<div class="clear"></div>
 					</div>
 				</div>

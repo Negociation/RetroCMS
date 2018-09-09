@@ -58,16 +58,21 @@ include('./Web/Includes/Content/Headers/Register.php');
 										<div class="content-white">
 											<div class="content-white-body">
 												<div class="content-white-content">
-													<form method="post" action="http://localhost/account/register/step/4" id="stepform">
+													<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/register/step/4" id="stepform">
 														<p>
-															Please enter your email address.
+															Please enter your email address. 
 														</p>
 														<p>
-															<label for="email" class="registration-text">Your email address:</label><br>
+															<label for="required-email" class="registration-text">Your email address:  </label><br>
 															<input type="text" name="required-email" id="required-email" value="" class="registration-text required-email">
 														</p>
 														<div id="register-buttons">
 															<div align="right">
+																<input type="hidden" name="required-birth" value="<?php echo $this->newHabbo->get_HabboBirth() ?>" />
+																<input type="hidden" name="newGender" value="<?php echo $this->newHabbo->get_HabboGender() ?>" />
+																<input type="hidden" name="figureData" value="<?php echo $this->newHabbo->get_HabboFigure() ?>" />
+																<input type="hidden" name="required-avatarName" value="<?php echo $this->newHabbo->get_HabboName() ?>" />
+																<input type="hidden" name="required-password" value="<?php echo $this->newHabbo->get_HabboPassword() ?>" />
 																<input type="submit" value="Continue" id="continuebtn" class="process-button">
 															</div>
 															<div class="clear"></div>
@@ -89,16 +94,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 							<div class="content-bottom-content"></div>
 						</div>
 					</div>
-		<script type="text/javascript" language="JavaScript">
-		Object.extend(Validation, { addError : validatorAddError });
-		Validation.addAllThese([
-				['required-email', 'Please enter a valid email address', function(v) {
-				return !Validation.get('IsEmpty').test(v) && /^[\w\-.%]{1,}[@][\w\-]{1,}([.]([\w\-]{1,})){1,3}$/.test(v);
-				}],
-				new Validation('stepform', {focusOnError:true, beforeSubmit:validatorBeforeSubmit, skipValidation:function(){ return backClicked; }
-				});
-				Event.observe($("backbtn"),'click',function() { backClicked=true; },false);
-		</script>
+
 		
 <?php 
 

@@ -125,6 +125,8 @@ class Hotel{
 		$this->hotelName = "RetroCMS";
 		$this->hotelNick = "Retro";
 		$this->hotelClosed = false;
+		$this->hotelWeb = 'http://localhost';
+		$this->hotelUrl= 'http://localhost';
 	}
 }
 

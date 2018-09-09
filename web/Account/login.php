@@ -216,8 +216,18 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 														<option value="1900">1900</option>
 													</select>
 												</div>
+												
+												<script type="text/javascript" language="JavaScript">
+															function MergeData(){
+																var dd = document.getElementById('day').value;
+																var mm = document.getElementById('month').value;
+																var yy = document.getElementById('year').value;
+																document.getElementById('required-birth').value = parseInt((new Date(dd+'/'+mm+'/'+yy).getTime() / 1000).toFixed(0));
+															}
+												</script>
 												<p class="last">
-													<input type="submit" value="Continuar" class="process-button" id="registration-submit"/>
+													<input type="hidden" name="required-birth" id="required-birth" />
+													<input type="submit" value="Continuar" onmousedown="MergeData()" class="process-button" id="registration-submit"/>
 												</p>
 											</form>
 										</div>

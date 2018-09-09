@@ -22,8 +22,11 @@ class Habbo{
 	protected $habboBirth;
 	protected $habboTicket;
 	protected $habboLanguage = 'br';
+	protected $habboCreated;
 	
 	public function __construct(){ 
+		$this->habboFigure = '1000118501210012850129001';
+		$this->habboGender = 'M';
 		$this->habboFriends = array();
 		if (count($_SESSION) > 0 ){
 			if ( $_SESSION['habboLoggedIn'] == true){
@@ -98,6 +101,10 @@ class Habbo{
 		return $this->habboName;
 	}
 
+	public function get_HabboEmail(){
+		return $this->habboName;
+	}
+	
 	public function get_HabboId(){
 		return $this->habboId;
 	}
@@ -184,6 +191,9 @@ class Habbo{
 		$this->habboBirth = $birth;
 	}
 	
+		public function set_HabboEmail($email){
+		$this->habboEmail = $email;
+	}
 	
 	public function set_HabboTicket($habboTicket){
 		//Check if user uses his last ticket

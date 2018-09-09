@@ -46,6 +46,8 @@ switch (get_class($this)){
 	case "Register":
 		echo '
 			<script language="JavaScript" type="text/javascript" src="'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/js/registration.js"></script>
+			<script language="JavaScript" type="text/javascript" src="'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/js/swfobject.js"></script>
+
 		';
 	case "Account":
 		echo'

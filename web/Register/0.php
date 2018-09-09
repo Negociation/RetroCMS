@@ -222,9 +222,20 @@ include('./Web/Includes/Content/Headers/Account.php');
 													<option value="1900">1900</option>
 												</select>
 											</div>
+														<script type="text/javascript" language="JavaScript">
+															function MergeData(){
+																parseInt((new Date('2012.08.10').getTime() / 1000).toFixed(0))
+
+																var dd = document.getElementById('day').value;
+																var mm = document.getElementById('month').value;
+																var yy = document.getElementById('year').value;
+																document.getElementById('required-birth').value = parseInt((new Date(dd+'/'+mm+'/'+yy).getTime() / 1000).toFixed(0));
+															}
+														</script>
 											<div id="register-buttons">
 												<div id="register-buttons-continue">
-													<input type="submit" value="Continue" id="continuebtn" class="process-button"/>
+													<input type="hidden" name="required-birth" id="required-birth" />
+													<input type="submit" value="Continue" onmousedown="MergeData()" id="continuebtn" class="process-button"/>
 												</div>
 												<div id="register-buttons-back"></div>
 												<div class="clear"></div>
@@ -256,6 +267,8 @@ include('./Web/Includes/Content/Headers/Account.php');
 				}
 			}, false);
 		</script>
+		
+		
 		
 <?php 
 

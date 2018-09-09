@@ -8,6 +8,7 @@
 // Alpha Version 0.7.0 ( Opal ) 							//		
 // Branch: Public											//
 //////////////////////////////////////////////////////////////
+
 class Account{
 	private $pageTitle;
 	private $habbo;

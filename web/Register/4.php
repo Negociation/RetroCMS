@@ -60,7 +60,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 									<div class="content-white-content">
 										<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/register/done" id="stepform" autocomplete="off">
 											<p>
-												You must agree to the following terms.
+												You must agree to the following terms.  <?php echo $this->newHabbo->get_HabboGender() ?>
 											</p>
 											<div id="terms">
 												<span style="font-weight: bold;">
@@ -86,6 +86,11 @@ include('./Web/Includes/Content/Headers/Register.php');
 											</p>
 											<div id="register-buttons">
 												<div align="right">
+														<input type="hidden" name="required-birth" value="<?php echo $this->newHabbo->get_HabboBirth() ?>" />
+														<input type="hidden" name="newGender" value="<?php echo $this->newHabbo->get_HabboGender() ?>" />
+														<input type="hidden" name="figureData" value="<?php echo $this->newHabbo->get_HabboFigure() ?>" />
+														<input type="hidden" name="required-avatarName" value="<?php echo $this->newHabbo->get_HabboName() ?>" />
+															<input type="hidden" name="required-password" value="<?php echo $this->newHabbo->get_HabboPassword() ?>" />
 													<input type="submit" value="Continue" id="continuebtn" class="process-button">
 												</div>
 												<div class="clear"></div>

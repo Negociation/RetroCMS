@@ -33,7 +33,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 			<div class="content-column1">
 				<div class="bubble">
 					<div class="bubble-body">               
-						Now to pick your habbo name and password. A good password should contain numbers and both UPPER and lowercase letters.
+						Now to pick your habbo name and password. A good password should contain numbers and both UPPER and lowercase letters. <?php echo $_GET['newGender'] ?>
 						<div class="clear"></div>
 					</div>
 				</div>
@@ -59,12 +59,54 @@ include('./Web/Includes/Content/Headers/Register.php');
 				<div class="content-white-outer">
 					<div class="content-white">
 						<div class="content-white-body">
-							<div class="content-white-content">                                                <form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/register/step/3" id="stepform">                                                    <p>                                                        <b>CHOOSE YOUR USERNAME:</b><br>Your <b>username</b> can contain lowercase and uppercase letters. Your                                                        username can also contain numbers and the following characters: -=?!@:.                                                    </p>                                                    <p>                                                        <label for="username" class="registration-text">Username</label><br>                                                        <input type="text" name="username" id="username" maxlength="14" value="" class="registration-text required-avatarName">                                                    </p>                                                    <hr>                                                    <p>                                                        <b>NOW, CHOOSE YOUR PASSWORD:</b><br>Your <b>password</b> must be at least six characters long. Your <b>password</b> can contain both <b>uppercase letters</b> and <b>numbers</b>.                                                    </p>                                                    <p>                                                        <label for="password" class="registration-text">Password</label><br>                                                        <input type="password" name="password" id="password" maxlength="32" value="" class="registration-text required-password required-password2">                                                    </p>                                                    <div id="pwStatus"></div>                                                    <p>                                                        <label for="retypedPassword" class="registration-text">Retype password</label><br>                                                        <input type="password" name="retypedPassword" id="retypedPassword" maxlength="32" value="" class="registration-text required-retypedPassword required-retypedPassword2">                                                    </p>                                                    <div id="pwRetypeStatus"></div>                                                    
-								<div id="register-buttons">
+							<div class="content-white-content">                                                
+								<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/register/step/3" id="stepform">                                                    
+									<p>                                                        
+										<b>CHOOSE YOUR USERNAME:</b>
+										<br>
+										Your <b>username</b> can contain lowercase and uppercase letters. Your username can also contain numbers and the following characters: -=?!@:.                                                    
+									</p> 
+									
+									<p>                                                        
+										<label for="required-avatarName" class="registration-text">Username</label>
+										<br>                                                        
+										<input type="text" name="required-avatarName" id="username" maxlength="14" value="" class="registration-text required-avatarName">                                                    
+									</p> 
+									
+									<hr> 
+									
+									<p>                                                        
+										<b>NOW, CHOOSE YOUR PASSWORD:</b>
+										<br
+										>Your <b>password</b> must be at least six characters long. Your <b>password</b> can contain both <b>uppercase letters</b> and <b>numbers</b>. 
+									</p> 
+									
+									<p>                                                        
+										<label for="required-password" class="registration-text">Password</label><br>                                                        
+										<input type="password" name="required-password" id="password" maxlength="32" value="" class="registration-text required-password required-password2">                                                    
+									</p>  
+									
+									<div id="pwStatus"></div>                                                    
+									
+									<p>                                                       
+										<label for="required-password" class="registration-text">Retype password</label><br>                                                        
+										<input type="password" name="required-password" id="retypedPassword" maxlength="32" value="" class="registration-text required-retypedPassword required-retypedPassword2">                                                    
+									</p>   
+								
+									<div id="pwRetypeStatus"></div>                                                    
+									<div id="register-buttons">
+	
 									<div align="right" "="">
+									<input type="submit" value="Back" id="continuebtn" class="process-button">
+										<input type="hidden" name="required-birth" value="<?php echo $this->newHabbo->get_HabboBirth() ?>" />
+										<input type="hidden" name="newGender" value="<?php echo $this->newHabbo->get_HabboGender() ?>" />
+										<input type="hidden" name="figureData" value="<?php echo $this->newHabbo->get_HabboFigure() ?>" />
 										<input type="submit" value="Continue" id="continuebtn" class="process-button">
 									</div>
-									<div class="clear"></div>                                                    </div>                                                </form>                                            </div>
+									<div class="clear"></div>                                                    
+									</div>                                                
+								</form>                                            
+							</div>
 									<div class="clear"></div>
 								</div>
 							</div>
