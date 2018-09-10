@@ -333,7 +333,7 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 					Event.observe($("registration-form"), "submit", function(e) {
 						if ($("day").selectedIndex == 0 || $("month").selectedIndex == 0 || $("year").selectedIndex == 0) {
 							validatorBeforeSubmit("registration-errors");
-							validatorAddError(false, false, "Por favor, insira uma data v·lida.", "registration-errors");
+							validatorAddError(false, false, "Por favor, insira uma data v√°lida.", "registration-errors");
 							$("required-birthday").className = "validation-failed";
 							Event.stop(e);
 						} else {

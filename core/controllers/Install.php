@@ -89,7 +89,7 @@ class Register{
 						header('Location: ./step/0');
 						exit;	
 					}else{
-						require_once './Web/register/2a.php';
+						require_once './Web/register/2.php';
 					}
 				break;	
 				case 3:
@@ -97,13 +97,7 @@ class Register{
 						header('Location: ./step/0');
 						exit;	
 					}else{
-						if ($this->habboModel->get_HabboName($this->newHabbo->get_HabboName())){
-							require_once './Web/register/3.php';
-						}else{
-							$id = 2;
-							require_once './Web/register/2b.php';
-						}
-						
+						require_once './Web/register/3.php';
 					}
 				break;
 				case 4:

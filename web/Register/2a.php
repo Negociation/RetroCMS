@@ -33,7 +33,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 			<div class="content-column1">
 				<div class="bubble">
 					<div class="bubble-body">               
-						Now to pick your habbo name and password. A good password should contain numbers and both UPPER and lowercase letters. <?php echo $_GET['newGender'] ?>
+						Now to pick your habbo name and password. A good password should contain numbers and both UPPER and lowercase letters.
 						<div class="clear"></div>
 					</div>
 				</div>

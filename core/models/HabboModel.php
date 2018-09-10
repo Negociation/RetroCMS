@@ -45,6 +45,20 @@ class HabboModel{
 	
 	}
 	
+	public function get_HabboName($Name){
+		$sql = "SELECT id  FROM users WHERE username = :username";
+		$stmt = $this->hotelConection->prepare($sql);
+		$stmt->bindValue(':username', $Name);
+		$stmt->execute();
+		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		if (count($result) == 1){
+			return false;
+		}else{
+			return true;
+		}
+	}
+	
+	
 	//Returns the Habbo after pass the HabboObject with ID
 	public function get_HabboObject($habboObject){
 		$sql = "SELECT id,username,credits,motto,badge,badge_active,home_enabled,figure,sex,club_subscribed,club_expiration,created_at FROM users WHERE id = :id";
@@ -90,8 +104,6 @@ $result[0]['username'],$result[0]['credits'],$result[0]['motto'],$result[0]['bad
 	
 	public function set_HabboLogin($habboObject){
 		$errorId = -1;
-		echo $habboObject->get_HabboName();
-		echo $habboObject->get_HabboPassword();
 		//Step 1 "Check if Habbo Exists"
 		$sql = "SELECT id,username,password,rank FROM users WHERE username = :username";
 		$stmt = $this->hotelConection->prepare($sql);
