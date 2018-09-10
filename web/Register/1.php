@@ -41,7 +41,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 						<img src="<?php echo $this->hotel->get_HotelWeb();?>/habboweb/16/11/web-gallery/images/register/bubble_tail_left.gif" alt="" width="22" height="31">
 					</div>
 				</div>
-				<div class="frank"><img src="<?php echo $this->hotel->get_HotelWeb();?>/habboweb/16/11/web-gallery/images/register/register7.gif" alt="" width="245" height="181"></div>
+				<div class="frank"><img src="<?php echo $this->hotel->get_HotelWeb();?>/habboweb/16/11/web-gallery/images/register/register3.gif" alt="" width="245" height="181"></div>
 			</div>
 			<div class="content-column2">
 				<div id="process-errors">
@@ -58,12 +58,10 @@ include('./Web/Includes/Content/Headers/Register.php');
 					<div class="content-white">
 						<div class="content-white-body">
 							<div class="content-white-content">
-								<div id="flashcontent">
-								
-
-								</div>
-
+								<div id="flashcontent"></div>
 								<?php 
+								
+								if ( $this->hotel->get_HotelVersion() < 17){
 									echo'
 									<script type="text/javascript" language="JavaScript">
 									var swfobj = new SWFObject("'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/flash/HabboRegistration.swf", "habboreg", "406", "327", "7");
@@ -78,8 +76,31 @@ include('./Web/Includes/Content/Headers/Register.php');
 									swfobj.addVariable("gender", "'.$this->newHabbo->get_HabboGender().'");
 									swfobj.write("flashcontent");
 									</script>
-									';
+									';	
+									
+								}else{
+									echo "
+									
+									<script type='text/javascript' language='JavaScript'>
+									var swfobj = new SWFObject('".$this->hotel->get_HotelWeb()."/habboweb/19_893f5b1b323d5c8b3767d50e5f5988a6/7/web-gallery/flash/HabboRegistration.swf', 'habboreg', '435', '400', '8');
+									swfobj.addParam('base', '".$this->hotel->get_HotelWeb()."/habboweb/19_893f5b1b323d5c8b3767d50e5f5988a6/7/web-gallery/flash/');
+									swfobj.addParam('wmode', 'opaque');
+									swfobj.addParam('AllowScriptAccess', 'always');
+									swfobj.addVariable('figuredata_url', '".$this->hotel->get_HotelWeb()."/habboweb/19_893f5b1b323d5c8b3767d50e5f5988a6/7/web-gallery/xml/figuredata.xml');
+									swfobj.addVariable('draworder_url', '".$this->hotel->get_HotelWeb()."/habboweb/19_893f5b1b323d5c8b3767d50e5f5988a6/7/web-gallery/xml/draworder.xml');
+									swfobj.addVariable('localization_url', '".$this->hotel->get_HotelWeb()."/habboweb/19_893f5b1b323d5c8b3767d50e5f5988a6/7/web-gallery/xml/figure_editor.xml');
+									swfobj.addVariable('figure', 'hr-145-42.hd-209-1.ch-220-87.lg-270-76.sh-305-89.ha-1018-.ea-1401-62.wa-2007-');
+									swfobj.addVariable('gender', 'M');
+									swfobj.addVariable('showClubSelections', '1');
+									swfobj.write('flashcontent');
+									</script>"
+									;
+								
+								
+								}
+								
 								?>
+								
 							</div>
 							<div class="clear"></div>
 						</div>

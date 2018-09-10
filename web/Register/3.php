@@ -41,7 +41,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 													<img src="<?php echo $this->hotel->get_HotelURL() ?>/habboweb/16/11/web-gallery/images/register/bubble_tail_left.gif" alt="" width="22" height="31">
 												</div>
 											</div>
-							<div class="frank"><img src="<?php echo $this->hotel->get_HotelURL() ?>/habboweb/16/11/web-gallery/images/register/register4.gif" alt="" width="245" height="191"></div>
+							<div class="frank"><img src="<?php echo $this->hotel->get_HotelURL() ?>/habboweb/16/11/web-gallery/images/register/register3.gif" alt="" width="245" height="191"></div>
 										</div>
 								<div class="content-column2">
 									<div id="process-errors">

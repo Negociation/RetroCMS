@@ -13,7 +13,7 @@
 	<?php
 	if($this->habbo->get_HabboLoggedIn()){ 
 		echo'
-						<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?figure=%3C?php%20echo%20%22$figura2%22;%20?%3E&size=b&action=wav,&direction=3&head_direction=3&gesture=sml&size=m" alt="" class="tabmenu-image" style="margin-right: 5px; margin-right: 0px;"/>
+						<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?figure='.$this->habbo->get_HabboFigure().'&size=b&action=wav,&direction=3&head_direction=3&gesture=sml&size=m" alt="" class="tabmenu-image" style="margin-right: 5px; margin-right: 0px;"/>
 						<h3 style="">Bem Vindo '.$this->habbo->get_HabboName().' ao Habbo</h3>
 						<div class="tabmenu-inner-content">
 							<p>

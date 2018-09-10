@@ -16,14 +16,14 @@ class Hotel{
 	protected $hotelUrl;
 	protected $hotelWeb;
 	protected $hotelVersion;
+	protected $hotelClosed;
 	protected $hotelAdvertisementTop = array();
 	protected $hotelAdvertisementMiddle = array();
 	protected $hotelAdvertisementRight = array();
-	
+
 
 	//Object Construct
-//	public function constructObject($Adv00,$Adv01,$Adv02,$Adv10,$Adv11,$Adv12,$Adv20,$Adv21,$Adv22,$Closed,$Name,$Nick,$Url,$Version,$Web){
-	public function constructObject($Adv00,$Adv01,$Adv02,$Adv10,$Adv11,$Adv12,$Adv20,$Adv21,$Adv22){
+	public function constructObject($Adv00,$Adv01,$Adv02,$Adv10,$Adv11,$Adv12,$Adv20,$Adv21,$Adv22,$Version,$Url,$Web,$Name,$Nick,$Status){
 
 		//0 Advertisement Left [0 - Enabled/Disabled] [1 - Image URL ] [2 - URL Link ]
 		array_push($this->hotelAdvertisementTop,$Adv00);
@@ -40,13 +40,18 @@ class Hotel{
 		array_push($this->hotelAdvertisementRight,$Adv21);
 		array_push($this->hotelAdvertisementRight,$Adv22);
 		
+		
 		//Hotel Info
-		//$this->hotelClosed = $Closed;
-		//$this->hotelName = $Name;
-		//$this->hotelNick = $Nick;
-		//$this->hotelUrl = $Url;
-		//$this->hotelVersion = $Version;
-		//$this->hotelWeb = $Web;
+		$this->hotelVersion = $Version;
+		$this->hotelUrl = $Url;
+		$this->hotelWeb = $Web;
+		$this->hotelName = $Name;
+		$this->hotelNick = $Nick;
+		$this->hotelClosed = $Status; //[ 0 / 1 ]
+
+		//Loader Info
+		
+		
 	}
 	
 	function get_AdvertisementTop($setting){
@@ -127,6 +132,7 @@ class Hotel{
 		$this->hotelClosed = false;
 		$this->hotelWeb = 'http://localhost';
 		$this->hotelUrl= 'http://localhost';
+
 	}
 }
 
