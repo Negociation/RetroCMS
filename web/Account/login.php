@@ -287,7 +287,7 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 										<div class="content-white-content">
 											<form action="./submit" method="post" id="login-form">
 												<input type="hidden" name="loginTicket" value="LT-270976-JWCorbGb7fctvYlEP2es-br-fe2"/>
-												<input type="hidden" name="page" value="<?php echo $this->originURL ?>"/>
+												<?php if(isset($_GET['target'])){ echo '<input type="hidden" name="target" value="'.$_GET['target'].'"/>'; } ?>
 												<input type="hidden" name="service" value="/security_check"/>
 												<p>
 													<label for="login-username" class="registration-text">Meu nome Habbo</label>

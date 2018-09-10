@@ -39,7 +39,7 @@ class Client{
 			
 			//Check if habbo as logged-in if as true redirects to Home
 			if (!$this->habbo->get_HabboLoggedIn()){
-				header('Location: ../account/login?target=habboclient');
+				header('Location: ../account/login?target=habboClient');
 				exit;
 			}else{
 				$this->habbo->set_HabboTicket($this->habboModel->get_HabboTicket($this->habbo));
