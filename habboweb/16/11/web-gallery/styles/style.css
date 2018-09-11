@@ -362,6 +362,17 @@ img.tabmenu-image.coins {
 	width: 160px;
 }
  
+
+#retrologo {
+	position: absolute;
+	top: 15px;
+	left: 5px;
+	background-image: url(../images/logos/retrocms_logo_nourl.gif);
+	background-repeat: no-repeat;
+	height: 66px;
+	width: 160px;
+}
+ 
 #habbologo a {
 	display: block;
 	height: 66px;

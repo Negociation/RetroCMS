@@ -23,11 +23,13 @@ class Habbo{
 	protected $habboTicket;
 	protected $habboLanguage = 'br';
 	protected $habboCreated;
+	protected $habboRank;
 	
 	public function __construct(){ 
 		$this->habboFigure = '1000118501210012850129001';
 		$this->habboGender = 'M';
 		$this->habboFriends = array();
+		$this->habboRank = 1;
 		if (count($_SESSION) > 0 ){
 			if ( $_SESSION['habboLoggedIn'] == true){
 				$this->habboLoggedIn = true;
@@ -121,6 +123,11 @@ class Habbo{
 		return $this->habboCredits;
 	}
 
+	public function get_HabboRank(){
+		return $this->habboRank;
+	}
+	
+	
 	public function get_habboClubDays(){
 		$now =  new DateTime(date("Y-m-d"));
 		$expires = new DateTime(date("Y-m-d",$this->habboClubDays));
@@ -191,8 +198,12 @@ class Habbo{
 		$this->habboBirth = $birth;
 	}
 	
-		public function set_HabboEmail($email){
+	public function set_HabboEmail($email){
 		$this->habboEmail = $email;
+	}
+	
+	public function set_HabboRank($rank){
+		$this->habboRank = $rank;
 	}
 	
 	public function set_HabboTicket($habboTicket){

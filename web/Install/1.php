@@ -12,7 +12,7 @@
 
 <?php 
 //Include Header Content
-include('./Web/Includes/Content/Headers/Register.php'); 
+include('./Web/Includes/Content/Headers/Install.php'); 
 
 //Page Content >>
 ?>
@@ -68,7 +68,37 @@ include('./Web/Includes/Content/Headers/Register.php');
 										<br>                                                        
 										<input type="text" name="required-hotelNick" id="hotelnick" maxlength="14" value="" class="registration-text required-hotelNick">                                                    
 									</p> 
-									
+									<p>                                                        
+										<label for="required-hotelNick" class="registration-text">Hotel Version</label>
+										<br>     
+										<div id="required-hotelVer">
+												<select name="required-hotelVer" id="required-hotelVer" class="dateselector">
+													<option value="">--</option>
+													<option value="11">v11</option>
+													<option value="12">v12</option>
+													<option value="13">v13</option>
+													<option value="14">v14</option>
+													<option value="15">v15</option>
+													<option value="16">v16</option>
+													<option value="17">v17</option>
+													<option value="18">v18</option>
+													<option value="19">v19</option>
+													<option value="20">v20</option>
+													<option value="21">v21</option>
+													<option value="22">v22</option>
+													<option value="23">v23</option>
+													<option value="24">v24</option>
+												</select>
+												
+												
+										<script type="text/javascript" language="JavaScript">
+											function GetVersion(){
+												document.getElementById('required-hotelVersion').value = document.getElementById('required-hotelVer').value;
+											}
+										</script>		
+														
+										</div>
+									</p> 
 									<hr> 
 									
 									<p>                                                        
@@ -80,7 +110,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 									</p> 
 									
 									<p>                                                        
-										<label for="required-hotelWeb" class="registration-text">Website Url</label>
+										<label for="required-hotelUrl" class="registration-text">Website Url</label>
 										<br>                                                        
 										<input type="text" name="required-hotelUrl" id="hotelurl" maxlength="14" value="" class="registration-text required-hotelUrl">                                                    
 									</p>   
@@ -95,11 +125,10 @@ include('./Web/Includes/Content/Headers/Register.php');
 									<div id="pwRetypeStatus"></div>                                                    
 									<div id="register-buttons">
 	
-									<div align="right" "="">
-										<input type="hidden" name="required-birth" value="<?php echo $this->newHabbo->get_HabboBirth() ?>" />
-										<input type="hidden" name="newGender" value="<?php echo $this->newHabbo->get_HabboGender() ?>" />
-										<input type="hidden" name="figureData" value="<?php echo $this->newHabbo->get_HabboFigure() ?>" />
-										<input type="submit" value="Continue" id="continuebtn" class="process-button">
+									<div align="right" >
+										<input type="hidden" name="required-hotelVersion" id="required-hotelVersion"/>
+
+										<input type="submit" value="Continue" id="continuebtn" onmousedown="GetVersion()" class="process-button">
 									</div>
 									<div class="clear"></div>                                                    
 									</div>                                                
@@ -119,178 +148,30 @@ include('./Web/Includes/Content/Headers/Register.php');
 		<div class="content-bottom"><div class="content-bottom-content"></div></div>
 	</div>
 
-	<script type="text/javascript">
-	$(document).ready(function() {
-		var x_timer;    
-		$("#username").keyup(function (e){
-			clearTimeout(x_timer);
-			var user_name = $(this).val();
-			x_timer = setTimeout(function(){
-				check_username_ajax(user_name);
-			}, 1000);
-		}); 
-
-	function check_username_ajax(username){
-		$("#user-result").php('<img src="ajax-loader.gif" />');
-		$.post('http://localhost/username-checker.php', {'username':username}, function(data) {
-		  $("#user-result").php(data);
-		});
-	}
-	});
-	</script>
-
 	<script type="text/javascript" language="JavaScript">
 	function initUserDetailForm() {
 		Object.extend(Validation, { addError : validatorAddError });
 		Validation.addAllThese([
-			['required-avatarName', 'Please choose your name', function(v) {
+			['required-hotelName', 'Please choose your name', function(v) {
 				return !Validation.get('IsEmpty').test(v);
 			}],
-			['required-password', 'Please enter a password', function(v) {
+			['required-hotelNick', 'Please choose your name', function(v) {
 				return !Validation.get('IsEmpty').test(v);
 			}],
-			['required-password2', 'Password is too short', function(v) {
-				return v.length >= 6;
-			}],
-			['required-retypedPassword', 'Please type your password again', function(v) {
+			['required-hotelUrl', 'Please choose your name', function(v) {
 				return !Validation.get('IsEmpty').test(v);
 			}],
-			['required-retypedPassword2', 'The passwords you typed are not identical', function(v) {
-				return v == $F("password");
+			['required-hotelWeb', 'Please choose your name', function(v) {
+				return !Validation.get('IsEmpty').test(v);
 			}]
 		]);
 		new Validation('stepform', {focusOnError:true, beforeSubmit:validatorBeforeSubmit, skipValidation:function(){ return backClicked; }});
 		
-		initPasswordCheck();
-	}
-	function initPasswordCheck() {
-		updatePasswordStatus(false, true);
-		
-		new Form.Element.Observer(
-			"password", .7, 
-			function(element, value) {
-				updatePasswordStatus(false, false);
-			}
-		);
-		
-		new Form.Element.Observer(
-			"retypedPassword", .3, 
-			function(element, value) {
-				updatePasswordStatus(false, false);
-			}
-		);
-	}
-	function updatePasswordStatus(remoteCheck, init) {
-		var value = $F("password");
-		
-		if (!init) {
-			if (!value || value.length < 6) {
-				showPasswordLengthMsg("Your password must be at least 6 characters long.", "error");
-				pwTotal[0] = false;
-			} else {
-				showPasswordLengthMsg("Password is securely long enough.", "ok");
-				pwTotal[0] = true;
-			}
-		}
-		
-		if (value.length < 6) {
-			if ($("pwChars")) { Element.remove("pwChars"); }
-			pwTotal[1] = false;
-		} else if (remoteCheck) {
-			new Ajax.Request(
-				habboReqPath + "register/password", {
-					method: "get",
-					parameters: "password=" + encodeURIComponent(value), 
-					onComplete: showPasswordStatus
-				}
-			);
-		}
-		
-		if (!init) {
-			var retyped = $F("retypedPassword");
-			if (!retyped) {
-				if ($("pwMatch")) {
-					showStatusMsg("pwMatch", "To make sure you didn\'t misspell, Please retype your password below.", "error");
-				}
-				pwTotal[2] = false;
-			} else if (retyped == $F("password")) {
-				showPasswordMatchMsg("The two passwords match.", "ok");
-				pwTotal[2] = true;
-				Element.removeClassName($("retypedPassword"), "validation-failed");
-			} else {
-				showPasswordMatchMsg("Passwords don\'t match.", "error");
-				pwTotal[2] = false;
-			}
-			
-			updatePasswordTotal();
-		}
-	}
-	function showPasswordLengthMsg(msg, status) {
-		var msgNode = $("pwLength");
-		if (!msgNode) {
-			var node = Builder.node("div", { id:"pwLength", className:"field-status-error" }, [
-				Builder.node("b", "Length check: "), 
-				Builder.node("span", { id:"pwLength-content" })
-			]);
-			var charsNode = $("pwChars");
-			if (!charsNode) {
-				$("pwStatus").appendChild(node);
-			} else {
-				$("pwStatus").insertBefore(node, $("pwChars"));
-			}
-		}
-		
-		showStatusMsg("pwLength", msg, status);
-	}
-	function showPasswordCharsMsg(msg, status) {
-		var msgNode = $("pwChars");
-		if (!msgNode) {
-			var node = Builder.node("div", { id:"pwChars", className:"field-status-error" }, [
-				Builder.node("b", "Character check: "), 
-				Builder.node("span", { id:"pwChars-content" })
-			]);
-			$("pwStatus").appendChild(node);
-		}
-		
-		showStatusMsg("pwChars", msg, status);
-	}
-	function showPasswordMatchMsg(msg, status) {
-		var msgNode = $("pwMatch");
-		if (!msgNode) {
-			var node = Builder.node("div", { id:"pwMatch", className:"field-status-error" }, [
-				Builder.node("b", "Match check: "), 
-				Builder.node("span", { id:"pwMatch-content" })
-			]);
-			$("pwRetypeStatus").insertBefore(node, $("pwTotal"));
-		}
-		
-		showStatusMsg("pwMatch", msg, status);
-	}
-	function updatePasswordTotal() {
-		var msgNode = $("pwTotal");
-		if (!msgNode) {
-			msgNode = $("pwRetypeStatus").appendChild(Builder.node("div", {id:"pwTotal"}));
-		}
-		
-		if (pwTotal[0] && pwTotal[1] && pwTotal[2]) {
-			msgNode.innerHTML = "Your password is secure!";
-		} else {
-			msgNode.innerHTML = "Please check your password is long enough, contains all required characters and is rewritten correctly.";
-		}
-	}
-	function showPasswordStatus(req, jsonObj) {
-		if (jsonObj.charOk) {
-			showPasswordCharsMsg(jsonObj.charOk, "ok");
-			pwTotal[1] = true;
-		} else {
-			showPasswordCharsMsg(jsonObj.charErr || "You must use lowercase letters, uppercase letters and numbers.", "error");
-			pwTotal[1] = false;
-		}
-		updatePasswordTotal();
 	}
 	initUserDetailForm();
 	</script>
 
+		
 <?php 
 
 //<< Page Content

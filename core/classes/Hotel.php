@@ -20,7 +20,13 @@ class Hotel{
 	protected $hotelAdvertisementTop = array();
 	protected $hotelAdvertisementMiddle = array();
 	protected $hotelAdvertisementRight = array();
-
+	protected $hotelVariables;
+	protected $hotelTexts;
+	protected $hotelDcr;
+	protected $hotelPort;
+	protected $hotelHost;
+	protected $hotelMusPort;
+	protected $hotelMusHost;	
 
 	//Object Construct
 	public function constructObject($Adv00,$Adv01,$Adv02,$Adv10,$Adv11,$Adv12,$Adv20,$Adv21,$Adv22,$Version,$Url,$Web,$Name,$Nick,$Status){
@@ -125,6 +131,90 @@ class Hotel{
 		return $this->hotelWeb;
 	}
 	
+	function get_HotelVariables(){
+		return $this->hotelVariables;
+	}
+	
+	function get_HotelTexts(){
+		return $this->hotelTexts;
+	}
+	
+	function get_HotelDcr(){
+		return $this->hotelDcr;
+	}
+	
+	function get_HotelHost(){
+		return $this->hotelHost;
+	}
+
+	function get_HotelPort(){
+		return $this->hotelPort;
+	}
+	
+	function get_HotelMusHost(){
+		return $this->hotelMusHost;
+	}
+
+	function get_HotelMusPort(){
+		return $this->hotelMusPort;
+	}	
+	
+//--
+
+	function set_HotelClosed($status){
+		$this->hotelClosed = $status;
+	}
+
+	public function set_HotelName($name){
+		$this->hotelName = $name;
+	}
+
+	function set_HotelNick($nick){
+		$this->hotelNick = $nick;
+	}
+
+
+	function set_HotelUrl($url){
+		$this->hotelUrl = $url;
+	}
+
+	function set_HotelVersion($version){
+		$this->hotelVersion = $version;
+	}
+
+
+	function set_HotelWeb($web){
+		 $this->hotelWeb = $web;
+	}
+	
+	function set_HotelVariables($variables){
+		$this->hotelVariables = $variables;
+	}
+	
+	function set_HotelTexts($texts){
+		$this->hotelTexts = $texts;
+	}
+	
+	function set_HotelDcr($dcr){
+		$this->hotelDcr = $dcr;
+	}
+	
+	function set_HotelHost($host){
+		$this->hotelHost = $host;
+	}
+
+	function set_HotelPort($port){
+		$this->hotelPort = $port;
+	}
+	
+	function set_HotelMusHost($mushost){
+		$this->hotelMusHost = $mushost;
+	}
+
+	function set_HotelMusPort($musport){
+		$this->hotelMusPort = $musport;
+	}	
+	
 	//Default Construct
 	public function __construct(){ 
 		$this->hotelName = "RetroCMS";
@@ -132,7 +222,6 @@ class Hotel{
 		$this->hotelClosed = false;
 		$this->hotelWeb = 'http://localhost';
 		$this->hotelUrl= 'http://localhost';
-
 	}
 }
 

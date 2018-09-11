@@ -24,7 +24,7 @@
 		<div id="process-header">
 			<div id="process-header-body">
 				<div id="process-header-content">
-					<div id="logo"><a href="<?php echo $this->hotel->get_HotelURL(); ?>"></a></div>
+					<div id="retrologo"><a href="<?php echo $this->hotel->get_HotelURL(); ?>"></a></div>
 					<div id="steps">
 						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/images/process/step1<?php if($id == 1){ echo '_on';} ?>.gif" alt="1" width="30" height="26">
 						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/images/process/step_right<?php if($id == 1){ echo '_on';} ?>.gif" alt="" width="20" height="26">
@@ -33,8 +33,7 @@
 						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/images/process/step3<?php if($id == 3){ echo '_on';} ?>.gif" alt="3" width="30" height="26">
 						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/images/process/step_right<?php if($id == 3){ echo '_on';} ?>.gif" alt="" width="20" height="26">
 						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/images/process/step4<?php if($id == 4){ echo '_on';} ?>.gif" alt="4" width="30" height="26">
-						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/images/process/step_right<?php if($id == 4){ echo '_on';} ?>.gif" alt="" width="20" height="26">
-						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/images/process/step5<?php if($id == 5){ echo '_on';} ?>.gif" alt="5" width="30" height="26">
+				
 					</div>
 				</div>
 			</div>

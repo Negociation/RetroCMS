@@ -43,6 +43,13 @@ body {
 	left: 0;
 }
 
+#retrologo {
+	position: relative;
+	background-image: url(../images/logos/retrocms_logo_nourl.gif);
+	top: 15;
+	left: 5;
+}
+
 #steps {
 	position: absolute;
 	right: 13px;

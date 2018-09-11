@@ -29,21 +29,24 @@ class HotelModel{
 		    return $result !== false;
 	}
 	
-	public function set_HotelInstall(){
+	public function set_HotelInstall($hotelObject){
+			$status = true;
 			echo"Executando a Instação no Banco de Dados <br>";
 			try{
 			$stmt = $this->hotelConection->prepare(file_get_contents('./core/install/retrodb.sql'));
-			$stmt->bindValue(':url','http://localhost' );
-			$stmt->bindValue(':web','http://localhost' );
-			$stmt->bindValue(':version',16 );
-			$stmt->bindValue(':name','RetroCMS' );
-			$stmt->bindValue(':nick','Retro' );
+			$stmt->bindValue(':url',$hotelObject->get_HotelUrl() );
+			$stmt->bindValue(':web',$hotelObject->get_HotelWeb() );
+			$stmt->bindValue(':version', $hotelObject->get_HotelVersion() );
+			$stmt->bindValue(':name',$hotelObject->get_HotelName() );
+			$stmt->bindValue(':nick',$hotelObject->get_HotelNick() );
 			$stmt->bindValue(':startcredits',100);			
 			$stmt->execute();
 			
 			}catch(Exception $e){
+				$status = false;
 				echo "Ocorreu um erro com a execução do Script";
 			}
+			return $status;
 	}
 	
 	public function get_HotelObject(){
