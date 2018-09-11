@@ -29,7 +29,7 @@ class Hotel{
 	protected $hotelMusHost;	
 
 	//Object Construct
-	public function constructObject($Adv00,$Adv01,$Adv02,$Adv10,$Adv11,$Adv12,$Adv20,$Adv21,$Adv22,$Version,$Url,$Web,$Name,$Nick,$Status){
+	public function constructObject($Adv00,$Adv01,$Adv02,$Adv10,$Adv11,$Adv12,$Adv20,$Adv21,$Adv22,$Version,$Url,$Web,$Name,$Nick,$Status,$Texts,$Vars,$Dcr,$Host,$Port,$MusHost,$MusPort){
 
 		//0 Advertisement Left [0 - Enabled/Disabled] [1 - Image URL ] [2 - URL Link ]
 		array_push($this->hotelAdvertisementTop,$Adv00);
@@ -56,6 +56,13 @@ class Hotel{
 		$this->hotelClosed = $Status; //[ 0 / 1 ]
 
 		//Loader Info
+		$this->hotelDcr = $Dcr;
+		$this->hotelTexts = $Texts;
+		$this->hotelVariables = $Vars;
+		$this->hotelHost = $Host;
+		$this->hotelPort = $Port;
+		$this->hotelMusHost = $MusHost;
+		$this->hotelMusPort = $MusPort;
 		
 		
 	}
@@ -220,8 +227,6 @@ class Hotel{
 		$this->hotelName = "RetroCMS";
 		$this->hotelNick = "Retro";
 		$this->hotelClosed = false;
-		$this->hotelWeb = 'http://localhost';
-		$this->hotelUrl= 'http://localhost';
 	}
 }
 

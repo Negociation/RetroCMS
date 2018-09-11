@@ -16,8 +16,6 @@ include('./Web/Includes/Content/Headers/Install.php');
 
 //Page Content >>
 ?>
-
-
 <div id="outer">
 <div id="outer-content">
 <div class="processbox">

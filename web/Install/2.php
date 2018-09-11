@@ -70,19 +70,19 @@ include('./Web/Includes/Content/Headers/Install.php');
 									<p>                                                        
 										<label for="required-hotelVars" class="registration-text">External Variables:</label>
 										<br>                                                        
-										<input type="text" name="required-hotelVars" id="required-hotelVars" maxlength="14" value="" class="registration-text hotelVars">                                                    
+										<input type="text" name="required-hotelVars" id="required-hotelVars" maxlength="200" value="" class="registration-text hotelVars">                                                    
 									</p> 
 									
 									<p>                                                        
 										<label for="required-hotelTexts" class="registration-text">External Texts:</label>
 										<br>                                                        
-										<input type="text" name="required-hotelTexts" id="required-hotelTexts" maxlength="14" value="" class="registration-text hotelTexts">                                                    
+										<input type="text" name="required-hotelTexts" id="required-hotelTexts" maxlength="200" value="" class="registration-text hotelTexts">                                                    
 									</p> 
 									
 									<p>                                                        
 										<label for="required-hotelDCR" class="registration-text">DCR:</label>
 										<br>                                                        
-										<input type="text" name="required-hotelDcr" id="required-hotelDcr" maxlength="14" value="" class="registration-text required-hotelDcr">                                                    
+										<input type="text" name="required-hotelDcr" id="required-hotelDcr" maxlength="200" value="http://images.alex-dev.org/dcr/r21_20080417_0343_5110_5527e6590eba8f3fb66348bdf271b5a2/habbo.dcr" class="registration-text required-hotelDcr">                                                    
 									</p> 
 									
 									
@@ -97,7 +97,7 @@ include('./Web/Includes/Content/Headers/Install.php');
 									
 									<p>                                                        
 										<label for="required-hotelHost" class="registration-text">HOST:</label><br>                                                        
-										<input type="text" name="required-hotelHost" id="required-hotelHost" maxlength="14" value="" class="registration-text required-hotelHost">                                                    
+										<input type="text" name="required-hotelHost" id="required-hotelHost" maxlength="200" value="" class="registration-text required-hotelHost">                                                    
 									</p>  
 									
 																		<p>                                                        
@@ -107,7 +107,7 @@ include('./Web/Includes/Content/Headers/Install.php');
 									
 																		<p>                                                        
 										<label for="required-hotelMusHost" class="registration-text">MUS HOST:</label><br>                                                        
-										<input type="text" name="required-hotelMusHost" id="required-hotelMusHost" maxlength="14" value="" class="registration-text required-hotelMusHost">                                                    
+										<input type="text" name="required-hotelMusHost" id="required-hotelMusHost" maxlength="200" value="" class="registration-text required-hotelMusHost">                                                    
 									</p>  
 																		<p>                                                        
 										<label for="equired-hotelMusPort" class="registration-text">MUS PORT:</label><br>                                                        

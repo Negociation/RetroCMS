@@ -30,6 +30,7 @@ class Habbo{
 		$this->habboGender = 'M';
 		$this->habboFriends = array();
 		$this->habboRank = 1;
+		$this->habboBirth = 0;
 		if (count($_SESSION) > 0 ){
 			if ( $_SESSION['habboLoggedIn'] == true){
 				$this->habboLoggedIn = true;

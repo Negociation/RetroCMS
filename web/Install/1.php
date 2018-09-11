@@ -61,18 +61,18 @@ include('./Web/Includes/Content/Headers/Install.php');
 									<p>                                                        
 										<label for="required-hotelName" class="registration-text">Hotel Name</label>
 										<br>                                                        
-										<input type="text" name="required-hotelName" id="hotelname" maxlength="14" value="" class="registration-text required-hotelName">                                                    
+										<input type="text" name="required-hotelName" id="hotelname" maxlength="20" value="" class="registration-text required-hotelName">                                                    
 									</p> 
 									<p>                                                        
 										<label for="required-hotelNick" class="registration-text">Hotel Nick</label>
 										<br>                                                        
-										<input type="text" name="required-hotelNick" id="hotelnick" maxlength="14" value="" class="registration-text required-hotelNick">                                                    
+										<input type="text" name="required-hotelNick" id="hotelnick" maxlength="20" value="" class="registration-text required-hotelNick">                                                    
 									</p> 
 									<p>                                                        
 										<label for="required-hotelNick" class="registration-text">Hotel Version</label>
 										<br>     
-										<div id="required-hotelVer">
-												<select name="required-hotelVer" id="required-hotelVer" class="dateselector">
+										<div id="required-hotelValue">
+												<select name="required-Version" id="required-hotelVer" class="dateselector">
 													<option value="">--</option>
 													<option value="11">v11</option>
 													<option value="12">v12</option>
@@ -93,7 +93,7 @@ include('./Web/Includes/Content/Headers/Install.php');
 												
 										<script type="text/javascript" language="JavaScript">
 											function GetVersion(){
-												document.getElementById('required-hotelVersion').value = document.getElementById('required-hotelVer').value;
+												document.getElementById('required-hotelVersion').value = document.getElementById('required-Version').value;
 											}
 										</script>		
 														
@@ -112,13 +112,13 @@ include('./Web/Includes/Content/Headers/Install.php');
 									<p>                                                        
 										<label for="required-hotelUrl" class="registration-text">Website Url</label>
 										<br>                                                        
-										<input type="text" name="required-hotelUrl" id="hotelurl" maxlength="14" value="" class="registration-text required-hotelUrl">                                                    
+										<input type="text" name="required-hotelUrl" id="hotelurl" maxlength="100" value="" class="registration-text required-hotelUrl">                                                    
 									</p>   
 									
 									<p>                                                        
 										<label for="required-hotelWeb" class="registration-text">Image Patch</label>
 										<br>                                                        
-										<input type="text" name="required-hotelWeb" id="hotelweb" maxlength="14" value="" class="registration-text required-hotelWeb">                                                    
+										<input type="text" name="required-hotelWeb" id="hotelweb" maxlength="100" value="" class="registration-text required-hotelWeb">                                                    
 									</p>
 									  
 								

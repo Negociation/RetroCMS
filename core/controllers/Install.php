@@ -18,7 +18,7 @@ class Install{
 	public function __construct($hotelConection){ 
 		$this->hotelModel = new HotelModel($hotelConection);
 		$this->hotel = new Hotel();
-		$this->pageTitle = 'Login';
+		$this->pageTitle = 'Install';
 		$this->newHabbo = new Habbo();
 		$this->newHotel = new Hotel();
 		$this->habboModel = new HabboModel($hotelConection);
@@ -39,7 +39,7 @@ class Install{
 	}
 	
 	public function step($id){
-		if($this->hotelModel->get_HotelInstall()){
+		if(($this->hotelModel->get_HotelInstall()) && ($id < 4 )){
 			header('Location: ../');
 			exit;	
 		}else{
@@ -59,7 +59,7 @@ class Install{
 			
 			if (isset($_POST['required-avatarName'])){ $this->newHabbo->set_HabboName($_POST['required-avatarName']);  }
 			if (isset($_POST['required-password'])){ $this->newHabbo->set_HabboPassword($_POST['required-password']); }
-
+			$this->newHabbo->set_HabboRank(7);
 			
 			switch($id){
 				case 1:
@@ -74,23 +74,23 @@ class Install{
 					}
 					break;
 				case 3:
-					require_once './Web/install/3.php';
+					if ($this->hotelModel->set_HotelInstall($this->newHotel) && $_SERVER['REQUEST_METHOD'] == 'POST'){
+							require_once './Web/install/3.php';
+						}else{
+							header('Location: ../install/start');
+						}
 					break;
 				case 4:
 					if ($_SERVER['REQUEST_METHOD'] != 'POST'){
 						header('Location: ../install/start');
 						exit;	
 					}else{
-						require_once './Web/install/4.php';
-						$this->newHabbo->set_HabboEmail("staff@retrocms.com");
-						$this->newHabbo->set_HabboBirth(1483228800);
-						$this->newHabbo->set_HabboRank(7);
-						if ($this->hotelModel->set_HotelInstall($this->newHotel)){
-							if ($this->habboModel->set_HabboRegistration($this->newHabbo)){
-							
+						if ($this->habboModel->set_HabboRegistration($this->newHabbo)){
+							require_once './Web/install/4.php';
 							$this->habboModel->set_HabboLogin($this->newHabbo);
-							}	
-						}					
+						}else{
+							header('Location: ../../');
+						}
 					}
 					break;
 			}

@@ -30,23 +30,30 @@ class HotelModel{
 	}
 	
 	public function set_HotelInstall($hotelObject){
-			$status = true;
-			echo"Executando a Instação no Banco de Dados <br>";
-			try{
+		$status = true;
+		try{
 			$stmt = $this->hotelConection->prepare(file_get_contents('./core/install/retrodb.sql'));
 			$stmt->bindValue(':url',$hotelObject->get_HotelUrl() );
 			$stmt->bindValue(':web',$hotelObject->get_HotelWeb() );
-			$stmt->bindValue(':version', $hotelObject->get_HotelVersion() );
-			$stmt->bindValue(':name',$hotelObject->get_HotelName() );
-			$stmt->bindValue(':nick',$hotelObject->get_HotelNick() );
+			//Buggy
+			//$stmt->bindValue(':version', $hotelObject->get_HotelVersion() );
+			$stmt->bindValue(':version', 16 );
+			$stmt->bindValue(':name',$hotelObject->get_HotelName());
+			$stmt->bindValue(':nick',$hotelObject->get_HotelNick());
+			$stmt->bindValue(':texts',$hotelObject->get_HotelTexts());
+			$stmt->bindValue(':vars',$hotelObject->get_HotelVariables());
+			$stmt->bindValue(':dcr',$hotelObject->get_HotelDcr());
+			$stmt->bindValue(':host',$hotelObject->get_HotelHost());
+			$stmt->bindValue(':port',$hotelObject->get_HotelPort());
+			$stmt->bindValue(':mushost',$hotelObject->get_HotelMusHost());
+			$stmt->bindValue(':musport',$hotelObject->get_HotelMusPort());
 			$stmt->bindValue(':startcredits',100);			
 			$stmt->execute();
-			
-			}catch(Exception $e){
-				$status = false;
-				echo "Ocorreu um erro com a execução do Script";
-			}
-			return $status;
+		}catch(Exception $e){
+			$status = false;
+			echo "Ocorreu um erro com a execução do Script";
+		}
+		return $status;
 	}
 	
 	public function get_HotelObject(){
@@ -55,8 +62,7 @@ class HotelModel{
 		$stmt->execute();
 		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		$hotelObject = new Hotel();
-		$hotelObject->constructObject($result[0]['value'],$result[1]['value'],$result[2]['value'],$result[3]['value'],$result[4]['value'],$result[5]['value'],$result[6]['value'],$result[7]['value'],$result[8]['value'],$result[9]['value'],$result[10]['value'],$result[11]['value'],$result[12]['value'],$result[13]['value'],$result[14]['value']);
-		//$hotelObject->constructObject($result[0]['value'],$result[1]['value'],$result[2]['value'],$result[3]['value'],$result[4]['value'],$result[5]['value'],$result[6]['value'],$result[7]['value'],$result[8]['value'],$result[9]['value'],$result[10]['value'],$result[11]['value'],$result[12]['value'],$result[13]['value'],$result[14]['value']);
+		$hotelObject->constructObject($result[0]['value'],$result[1]['value'],$result[2]['value'],$result[3]['value'],$result[4]['value'],$result[5]['value'],$result[6]['value'],$result[7]['value'],$result[8]['value'],$result[9]['value'],$result[10]['value'],$result[11]['value'],$result[12]['value'],$result[13]['value'],$result[14]['value'],$result[15]['value'],$result[16]['value'],$result[17]['value'],$result[18]['value'],$result[19]['value'],$result[20]['value'],$result[21]['value']);
 		return $hotelObject;
 	}
 	

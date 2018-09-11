@@ -9889,8 +9889,14 @@ INSERT INTO `site_settings` (`id`, `setting`, `value`) VALUES
 (12, 'Hotel_Web', :web),
 (13, 'Hotel_Name', :name),
 (14, 'Hotel_Nick', :nick),
-(15, 'Hotel_Closed', '0');
-
+(15, 'Hotel_Closed', '0'),
+(16, 'Hotel_Texts', :texts),
+(17, 'Hotel_Variables', :vars),
+(18, 'Hotel_Dcr', :dcr),
+(19, 'Hotel_Host', :host),
+(20, 'Hotel_Port', :port),
+(21, 'Hotel_MusHost', :mushost),
+(22, 'Hotel_MusPort', :musport);
 -- --------------------------------------------------------
 
 --
@@ -10102,12 +10108,7 @@ ALTER TABLE `rooms_models`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id` (`id`);
 
---
--- Indexes for table `schema_migrations`
---
-ALTER TABLE `schema_migrations`
-  ADD PRIMARY KEY (`version`);
-
+  
 --
 -- Indexes for table `settings`
 --
@@ -10127,6 +10128,15 @@ ALTER TABLE `soundmachine_playlists`
 ALTER TABLE `soundmachine_songs`
   ADD UNIQUE KEY `id` (`id`);
 
+  --
+--
+-- Indexes for table `site_settings`
+--
+ALTER TABLE `site_settings`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `setting` (`setting`);
+  
+  
 --
 -- Indexes for table `users`
 --
@@ -10192,13 +10202,6 @@ ALTER TABLE `rooms_categories`
 ALTER TABLE `rooms_models`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
---
---
--- Indexes for table `site_settings`
---
-ALTER TABLE `site_settings`
-  ADD PRIMARY KEY (`id`) USING BTREE,
-  ADD UNIQUE KEY `setting` (`setting`);
   
   
 -- AUTO_INCREMENT for table `soundmachine_songs`
@@ -10206,6 +10209,7 @@ ALTER TABLE `site_settings`
 ALTER TABLE `soundmachine_songs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
+  
 --
 -- AUTO_INCREMENT for table `users`
 --
@@ -10213,7 +10217,7 @@ ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
   ALTER TABLE `site_settings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Constraints for dumped tables
