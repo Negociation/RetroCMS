@@ -45,6 +45,7 @@ class HabboModel{
 	
 	}
 	
+	//Check if Habboname as Valid
 	public function get_HabboName($Name){
 		$sql = "SELECT id  FROM users WHERE username = :username";
 		$stmt = $this->hotelConection->prepare($sql);
@@ -80,8 +81,9 @@ $result[0]['username'],$result[0]['credits'],$result[0]['motto'],$result[0]['bad
 		session_destroy();
 	}	
 
+	//Register new User
 	public function set_HabboRegistration($habboObject){
-			$status = true;
+		$status = true;
 		$sql = "INSERT INTO users (`username`, `password`, `figure`,`pool_figure`, `sex`, `motto`, `credits`, `tickets`, `film`, `rank`,`console_motto`, `last_online`, `created_at`, `badge_active`, `allow_stalking`, `sound_enabled`, `tutorial_finished`, `battleball_points`, `snowstorm_points`, `home_enabled`, `birthday`,`email`) 
 		VALUES (:habboname, :password , :figure,'', :gender, '', 0, 0, 0, 1,'', 1536089951, :created, 0, 1, 1, 0, 0, 0, 0,:birth,:email);
 ";

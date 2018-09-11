@@ -32,7 +32,7 @@ class Account{
 		//Call the Hotel Settings from Core
 		global $hotel;
 		global $hotelModel;
-		if($hotel->get_HotelClosed()){
+		if($this->hotel->get_HotelClosed()){
 			require_once './Web/Maintenance/Index.php';
 			exit;
 

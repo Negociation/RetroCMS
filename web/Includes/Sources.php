@@ -15,6 +15,7 @@
 <?php 
 //Special CSS Includes
 switch (get_class($this)){
+	case "Install":
 	case "Register":
 	case "Account":
 		echo '			<link href="'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/styles/process.css" type="text/css" rel="stylesheet"/>';	
@@ -44,6 +45,7 @@ switch (get_class($this)){
 		include './Web/Includes/Content/Sources/Home.php'; 
 		break;
 	case "Register":
+	case "Install":
 		echo '
 			<script language="JavaScript" type="text/javascript" src="'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/js/registration.js"></script>
 			<script language="JavaScript" type="text/javascript" src="'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/js/swfobject.js"></script>

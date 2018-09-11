@@ -28,6 +28,12 @@ class Url{
 		if (isset($_GET["origin"])){
 			$this->urlValidate();
 		}
+		
+		//Only for Install
+		$hotelModel = new HotelModel($this->hotelConection);
+		if (!$hotelModel->get_HotelInstall()){
+		$this->url_controller = "Install";
+		}
 	}
 	
 	
@@ -94,6 +100,7 @@ class Url{
 		
 		
 	public function urlLoad(){
+
 		//Check if Controller File from URL exists
 		if (count($this->url_parsed) != 0){
 			if(file_exists("Core/Controllers/".$this->url_parsed[0].".php")){ 

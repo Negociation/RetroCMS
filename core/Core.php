@@ -13,7 +13,7 @@
 define( 'MYSQL_HOST', 'localhost' );
 define( 'MYSQL_USER', 'root' );
 define( 'MYSQL_PASSWORD', '' );
-define( 'MYSQL_DB_NAME', 'KeplerMaster' );
+define( 'MYSQL_DB_NAME', 'test' );
 
 //Check if MySQL Conection Works
 try{
@@ -31,11 +31,7 @@ try{
 include "./Core/Classes/Hotel.php";
 include "./Core/Models/HotelModel.php";
 
-//Instance HotelModel and Hotel with the Conection
-$hotelModel = new HotelModel($Conection);
 
-//Instance Hotel
-$hotel = $hotelModel->get_HotelObject();
 
 //++++++++++++++++++++++++++ Habbo ++++++++++++++++++++++++++++
 include "./Core/Classes/Habbo.php";
