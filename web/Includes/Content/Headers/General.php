@@ -46,11 +46,12 @@
 				<?php require_once('./Web/Includes/Content/Web/MyHabbo/Topbar-Status.php'); ?>
             </tr>
         </table>
+
+		<div id="viewlogo"><a href="<?php echo $this->hotel->get_HotelURL();?>"></a></div>
+		<?php require_once('./Web/Includes/Content/Web/Socket/Enter-Hotel.php'); ?>
+
 		
-		<div id="viewlogo"><a href="http://localhost"></a></div>
-		<div id="enter-hotel">
-			<a href="http://localhost/client" id="enter-hotel-link" target="client" onclick="openOrFocusHabbo(this); return false;"></a>
-		</div>
+
 		
 		<div id="tabmenu" onmouseover="lockCurrentTab();" onmouseout="fadeTab('myhabbo')">
 				<div id="tabmenu-content">

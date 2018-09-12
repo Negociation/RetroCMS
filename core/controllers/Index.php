@@ -40,6 +40,10 @@ class Index{
 			require_once './Web/Maintenance/Index.php';
 			exit;
 		}else{
+			
+
+
+			
 			require_once './Web/Index.php';
 			exit;
 		}		

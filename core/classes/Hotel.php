@@ -222,6 +222,15 @@ class Hotel{
 		$this->hotelMusPort = $musport;
 	}	
 	
+	function get_HotelStatus(){
+		$connection = @fsockopen($this->Host, $this->Port);
+		if (is_resource($connection)){
+			fclose($connection);
+			return true;
+		}else{
+			return false;
+		}
+	}
 	//Default Construct
 	public function __construct(){ 
 		$this->hotelName = "RetroCMS";
