@@ -33,9 +33,16 @@ include('./Web/Includes/Content/Headers/General.php');
                            var promoPages = [
                            	{ image: "<img src=\"https://i.imgur.com/yEo2vdU.png\" / alt=\"\"\>", links: [
                            			"<a href=\"/#\">Mais!</a>", 
-                           			"<a href=\"<?php echo $this->hotel->get_HotelURL() ?>/client\" target=\"client\" onclick=\"openOrFocusHabbo(this); return false;\"\>Abismo</a\>"
+                           			"<a href=\"<?php echo $this->hotel->get_HotelURL() ?>/client\" target=\"client\" onclick=\"openOrFocusHabbo(this); return false;\"\>Hotel</a\>"
                            			
                            	], text:"ErikaFantasma deve estar ocupadíssima neste momento.<br /\>" },
+                           
+						
+                           	{ image: "<img src=\"<?php echo $this->hotel->get_HotelWeb() ?>/c_images/album1054/beta_updated_promo.gif\" / alt=\"\"\>", links: [
+                           			
+                           			"<a href=\"https://github.com/Negociation/RetroCMS\" target=\"client\"; return false;\"\>Github</a\>"
+                           			
+                           	], text:"Warning: Alpha Preview Only for Tests. For more information access the GitHub directory.<br /\>" }
                            
                            	
                            ];
@@ -45,6 +52,8 @@ include('./Web/Includes/Content/Headers/General.php');
                               <h2>Destaques</h2>
                               <ul style="display: none" id="promoheader-selectors">
                                  <li><a href="#" class="selected" onclick="showPromo(0); return false;">1</a></li>
+								 <li><a href="#" onclick="showPromo(1); return false;">2</a></li>
+
                               </ul>
                               <script type="text/javascript">
                                  $('promoheader-selectors').style.display = "block";
@@ -62,7 +71,7 @@ include('./Web/Includes/Content/Headers/General.php');
                                  <div id="promolinks">
                                     <ul id="promolinks-list">
                                        <li><a href="<?php echo $this->hotel->get_HotelURL() ?>/#">Mais!</a></li>
-                                       <li><a href="<?php echo $this->hotel->get_HotelURL() ?>/client" target="client" onclick="openOrFocusHabbo(this); return false;">Abismo</a></li>
+                                       <li><a href="<?php echo $this->hotel->get_HotelURL() ?>/client" target="client" onclick="openOrFocusHabbo(this); return false;">Hotel</a></li>
                                     </ul>
                                  </div>
                               </div>
