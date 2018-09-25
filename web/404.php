@@ -95,7 +95,7 @@ include('./Web/Includes/Content/Headers/General.php');
          <td rowspan="2" valign="top" style=" margin-left: 4px; width: 176px;">
             <div id="ad_sidebar">
                <div class="cooperation">
-                  <table height="120" width="168" valign="middle" align="center" border="0" cellpadding="0" cellspacing="0" background="http://localhost/c_images/themes/partner_box.gif">
+                  <table height="120" width="168" valign="middle" align="center" border="0" cellpadding="0" cellspacing="0" background="<?php echo $this->hotel->get_HotelWeb() ?>/c_images/themes/partner_box.gif">
                      <tbody>
                         <tr>
                            <td>

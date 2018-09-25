@@ -81,7 +81,7 @@ include('./Web/Includes/Content/Headers/General.php');
                         <div id="newsbox">
                            <div id="newsbox-header">
                               <h2>Últimas Notícias</h2>
-                              <a href="<?php echo $this->hotel->get_HotelURL() ?>/news/rss.xml"><img src="<?php echo $this->hotel->get_HotelWeb() ?>/habboweb/16/11/web-gallery/promo_area/feed-icon.gif" alt="" border="0"></a>
+                              <a href="<?php echo $this->hotel->get_HotelURL() ?>/news/rss.xml"><img src="<?php echo $this->hotel->get_HotelWeb() ?>/habboweb/16/11/web-gallery/images/promo_area/feed-icon.gif" alt="" border="0"></a>
                            </div>
                            <div id="newsbox-text">
                               <div class="newsitem">
@@ -113,7 +113,7 @@ include('./Web/Includes/Content/Headers/General.php');
          <td rowspan="2" valign="top" style=" margin-left: 4px; width: 176px;">
             <div id="ad_sidebar">
                <div class="cooperation">
-                  <table height="120" width="168" valign="middle" align="center" border="0" cellpadding="0" cellspacing="0" background="http://localhost/c_images/themes/partner_box.gif">
+                  <table height="120" width="168" valign="middle" align="center" border="0" cellpadding="0" cellspacing="0" background="<?php echo $this->hotel->get_HotelWeb() ?>/c_images/themes/partner_box.gif">
                      <tbody>
                         <tr>
                            <td>
