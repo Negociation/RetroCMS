@@ -24,6 +24,8 @@ require_once "./Core/Core.php";
 //URL Treatment Class MVC
 require_once "./Core/Decrypt.php";
 
+
+
 //URL Object Call
 $url = new Url($Conection);
 $url->urlLoad();
