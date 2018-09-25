@@ -25,7 +25,7 @@
 							<p>
 								<a href="'.$this->hotel->get_HotelURL().'/profile" class="arrow"><span>Editar Preferências</span></a> 							
 							</p>
-								<a href="'.$this->hotel->get_HotelURL().'/logout" class="colorlink orange last"><span>Sair</span></a>   
+								<a href="'.$this->hotel->get_HotelURL().'/logout" class="colorlink orange last" style=" margin-right: 2px;"><span>Sair</span></a>   
 						</div>
 		'; 
 	}else{
@@ -34,10 +34,10 @@
 						<h3>Olá! Por favor, entre ou registre-se</h3>
 						<div class="tabmenu-inner-content">
 							<p>
-								<a href="'.$this->hotel->get_HotelURL().'/login" class="colorlink orange"><span>Registre-se, é gratuito</span></a>
+								<a href="'.$this->hotel->get_HotelURL().'/login" class="colorlink orange" style="margin-left: 0px; margin-right: 2px;"><span>Registre-se, é gratuito</span></a>
 							</p>
 							<p>
-								<a href="'.$this->hotel->get_HotelURL().'/login" class="colorlink orange last"><span>Entre</span></a>
+								<a href="'.$this->hotel->get_HotelURL().'/login" class="colorlink orange last" style="margin-left: 0px; margin-right: 2px;"><span>Entre</span></a>
 							</p>
 						</div>
 		';

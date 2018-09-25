@@ -17,6 +17,7 @@ include('./Web/Includes/Content/Headers/General.php');
 //Page Content >>
 ?>
 
+	
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="content-home">
    <tbody>
       <tr>
@@ -35,7 +36,7 @@ include('./Web/Includes/Content/Headers/General.php');
                            			"<a href=\"/#\">Mais!</a>", 
                            			"<a href=\"<?php echo $this->hotel->get_HotelURL() ?>/client\" target=\"client\" onclick=\"openOrFocusHabbo(this); return false;\"\>Hotel</a\>"
                            			
-                           	], text:"ErikaFantasma deve estar ocupadíssima neste momento.<br /\>" },
+                           	], text:"RetroCMS foi instalado com sucesso.<br /\>" },
                            
 						
                            	{ image: "<img src=\"<?php echo $this->hotel->get_HotelWeb() ?>/c_images/album1054/beta_updated_promo.gif\" / alt=\"\"\>", links: [
@@ -104,6 +105,7 @@ include('./Web/Includes/Content/Headers/General.php');
                      </td>
                   </tr>
                   </td>
+				   </tr>
                </tbody>
             </table>
          </td>
@@ -129,6 +131,7 @@ include('./Web/Includes/Content/Headers/General.php');
          </td>
       </tr>
    </tbody>
+   </tr>
 </table>
 <br style="clear: both;"/>
 </div>
