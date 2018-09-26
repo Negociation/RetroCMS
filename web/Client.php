@@ -29,7 +29,9 @@ document.habboLoggedIn = true;
 <script type="text/javascript" language="javascript">
 window.onload = resizeWin;
 window.onerror = function() { return true; };
+windows.onresize= LoadLanguage("EN");
 window.onunload = clearOpener;
+ 
 ensureOpenerIsLoggedIn();
 addClientUnloadHook();
 Event.observe(document, "keypress", function(e) { if (e.keyCode == Event.KEY_BACKSPACE) { Event.stop(e); } });
@@ -42,17 +44,17 @@ Event.observe(document, "keypress", function(e) { if (e.keyCode == Event.KEY_BAC
 <body id="client">
 
 <div id="client-topbar" style="display:none">
-  <div class="logo"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/16/11/web-gallery/images/popup/popup_topbar_habbologo.gif" alt="" align="middle"/></div>
+  <div class="logo"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/images/popup/popup_topbar_habbologo.gif" alt="" align="middle"/></div>
   <div class="habbocount"><div id="habboCountUpdateTarget">
 </div>
-0 Habbos Online
+0 <span class="lang-topbar-count">Habbos no Hotel</span>
 	<script language="JavaScript" type="text/javascript">
 		setTimeout(function() {
 			HabboCounter.init(600);
 		}, 20000);
 	</script>
 </div>
-  <div class="logout"><a href="./logout?origin=popup" onclick="self.close(); return false;">Logout</a>
+  <div class="logout"><a href="./logout?origin=popup" onclick="self.close(); return false;"><span class="lang-topbar-logout">Logout</span></a>
 </div>
 
 <div>

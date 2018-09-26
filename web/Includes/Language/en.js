@@ -24,7 +24,7 @@ var WORDS_EN = {
 	  //TopBar -> My Habbo Tab
 	  "topbar-myhabbo" : "My Habbo",
 	  "topbar-myhabbo-content-loggedinBefore" : "Welcome",
-	  "topbar-myhabbo-content-loggedinBefore" : "",
+	  "topbar-myhabbo-content-loggedinAfter" : "",
 	  "topbar-myhabbo-content-notLoggedin" : "Welcome! Please sign in or register",
 	  "topbar-myhabbo-inner-login" : "Sign In",
 	  "topbar-myhabbo-inner-register" : "Register Now, it's free!",
@@ -64,10 +64,12 @@ var WORDS_EN = {
   "navbar-groups" : "Groups",  
   "navbar-help" : "Help",   
 
-  //News
+  //News Box
   "promoheader" : "Top Stories",
   "newsbox-header" : "What's New",
   "newsbox-footer" : "More News",
 
+   
+   //Client
    
 };

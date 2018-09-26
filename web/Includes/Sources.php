@@ -52,7 +52,7 @@ switch (get_class($this)){
 				  });
 				}
 
-				window.onload = function Start(){ LoadLanguage("PT"); };
+				window.onload = function Start(){ LoadLanguage("EN"); };
 			
 			</script>
 <?php
