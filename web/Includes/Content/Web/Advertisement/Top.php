@@ -24,7 +24,8 @@
                         <tr>
                             <td class="ad-header-ml"></td>
                             <td class="ad-header-m">
-                                <h5>Advertissement</h5>
+
+                                <h5><span class="lang-Advertissement_Title">Publicidade</span></h5>
                             </td>
                             <td class="ad-header-mr"></td>
                         </tr>

@@ -1,11 +1,11 @@
 <?php
 //////////////////////////////////////////////////////////////
-// 					RetroCMS 					//
+// 							RetroCMS 						//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
-// Developed by: Marcos ( M.tiago )					//
+// Developed by: Marcos ( M.tiago )							//
 //////////////////////////////////////////////////////////////
-// Alpha Version 0.7.0 ( Opal ) 						//
+// Alpha Version 0.7.0 ( Opal ) 							//
 //////////////////////////////////////////////////////////////
 
 ?>
@@ -50,7 +50,7 @@ include('./Web/Includes/Content/Headers/General.php');
                         </script>
                         <div id="promoarea">
                            <div id="promoheader">
-                              <h2>Destaques</h2>
+                              <h2><span class="lang-promoheader">Destaques</span></h2>
                               <ul style="display: none" id="promoheader-selectors">
                                  <li><a href="#" class="selected" onclick="showPromo(0); return false;">1</a></li>
 								 <li><a href="#" onclick="showPromo(1); return false;">2</a></li>
@@ -80,7 +80,7 @@ include('./Web/Includes/Content/Headers/General.php');
                         </div>
                         <div id="newsbox">
                            <div id="newsbox-header">
-                              <h2>Últimas Notícias</h2>
+                              <h2><span class="lang-newsbox-header">Últimas Notícias</span></h2>
                               <a href="<?php echo $this->hotel->get_HotelURL() ?>/news/rss.xml"><img src="<?php echo $this->hotel->get_HotelWeb() ?>/habboweb/16/11/web-gallery/images/promo_area/feed-icon.gif" alt="" border="0"></a>
                            </div>
                            <div id="newsbox-text">
@@ -94,7 +94,7 @@ include('./Web/Includes/Content/Headers/General.php');
                               </div>
                            </div>
                            <div id="newsbox-footer">
-                              <div class="promo-button"><a href="<?php echo $this->hotel->get_HotelURL() ?>/news" alt="">mais notícias</a></div>
+                              <div class="promo-button"><a href="<?php echo $this->hotel->get_HotelURL() ?>/news" alt=""><span class="lang-newsbox-footer">mais notícias</span></a></div>
                            </div>
                         </div>
                   <tr>

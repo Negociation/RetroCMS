@@ -29,17 +29,17 @@
         <div id="top-elements">
         <table id="topbar">
             <tr>
-                <td id="topbar-count">0 Habbos no Hotel</td>
+                <td id="topbar-count">0 <span class="lang-topbar-count">Habbos no Hotel</span></td>
                 <td id="topbar-menu" align="center">
                     <ul>
                         <li id="myhabbo" class="selected" onmouseover="switchTab('myhabbo')">
-                            <div><a href="<?php echo $this->hotel->get_HotelURL();?>/tab/myhabbo" class="topbar-menu-link" onclick="return false;">Meu Habbo</a></div>
+                            <div><a href="<?php echo $this->hotel->get_HotelURL();?>/tab/myhabbo" class="topbar-menu-link" onclick="return false;"><span class="lang-topbar-myhabbo">Meu Habbo</span></a></div>
                         </li>
                         <li id="mycredits" onmouseover="if (switchTab('mycredits') &amp;&amp; document.habboLoggedIn) updateCredits()" onmouseout="fadeTab('myhabbo')">
-                            <div><a href="<?php echo $this->hotel->get_HotelURL();?>/tab/credits" class="topbar-menu-link" onclick="return false;">Minhas Moedas</a></div>
+                            <div><a href="<?php echo $this->hotel->get_HotelURL();?>/tab/credits" class="topbar-menu-link" onclick="return false;"><span class="lang-topbar-mycredits">Minhas Moedas</span></a></div>
                         </li>
                         <li id="habboclub" onmouseover="if (switchTab('habboclub') &amp;&amp; document.habboLoggedIn) updateHabboClub()" onmouseout="fadeTab('myhabbo')">
-                            <div><a href="<?php echo $this->hotel->get_HotelURL();?>/tab/habboclub" class="topbar-menu-link" onclick="return false;">Habbo Club</a></div>
+                            <div><a href="<?php echo $this->hotel->get_HotelURL();?>/tab/habboclub" class="topbar-menu-link" onclick="return false;"><span class="lang-topbar-habboclub">Habbo Club</span></a></div>
                         </li>
                     </ul>
                 </td>
@@ -79,37 +79,37 @@
 						<li id="leftspacer">&nbsp;</li>
 						<li <?php if(get_class($this) == 'Index') echo'id="active"'; ?> >
 							<span class="left"></span>
-							<a href="<?php echo $this->hotel->get_HotelURL(); ?>/"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_01_home.gif" alt=""/> Home</a>
+							<a href="<?php echo $this->hotel->get_HotelURL(); ?>/"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_01_home.gif" alt=""/> <span class="lang-navbar-home">Home</span></a>
 							<span class="right"></span>
 						</li>
 						<li id="disabled">
 							<span class="left"></span>
-							<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_03_community.gif" alt=""/> Comunidade</a>
+							<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_03_community.gif" alt=""/><span class="lang-navbar-community">Comunidade</span></a>
 							<span class="right"></span>
 						</li>
 						<li id="disabled">
 							<span class="left"></span>
-							<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_04_games.gif" alt=""/> Jogos</a>
+							<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_04_games.gif" alt=""/> <span class="lang-navbar-games">Jogos</span></a>
 							<span class="right"></span>
 						</li>
 						<li id="disabled">
 							<span class="left"></span>
-							<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_10_coins.gif" alt=""/> Compre Moedas</a>
+							<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_10_coins.gif" alt=""/><span class="lang-navbar-credits">Compre Moedas</span></a>
 							<span class="right"></span>
 						</li>
 						<li id="disabled">
 							<span class="left"></span>
-							<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_09_hc.gif" alt=""/> Habbo Club</a>
+							<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_09_hc.gif" alt=""/><span class="lang-navbar-habboclub">Habbo Club</span> </a>
 							<span class="right"></span>
 						</li>
 						<li id="disabled">
 							<span class="left"></span>
-							<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_05_fun.gif" alt=""/> Grupos</a>
+							<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_05_fun.gif" alt=""/> <span class="lang-navbar-groups">Grupos</span></a>
 							<span class="right"></span>
 						</li>
 						<li class="last">
 							<span class="left"></span>
-							<a href="<?php echo $this->hotel->get_HotelURL(); ?>/help"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_08_help.gif" alt=""/> Ajuda</a>
+							<a href="<?php echo $this->hotel->get_HotelURL(); ?>/help"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_08_help.gif" alt=""/> <span class="lang-navbar-help">Ajuda</span></a>
 							<span class="right"></span>
 						</li>
 					</ul>

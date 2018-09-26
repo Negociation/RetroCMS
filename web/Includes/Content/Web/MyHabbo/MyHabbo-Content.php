@@ -14,18 +14,18 @@
 	if($this->habbo->get_HabboLoggedIn()){ 
 		echo'
 						<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?figure='.$this->habbo->get_HabboFigure().'&size=b&action=wav,&direction=3&head_direction=3&gesture=sml&size=m" alt="" class="tabmenu-image" style="margin-right: 5px; margin-right: 0px;"/>
-						<h3 style="">Bem Vindo '.$this->habbo->get_HabboName().' ao Habbo</h3>
+						<h3 style=""><span class="lang-topbar-myhabbo-content-before">Bem Vindo</span> '.$this->habbo->get_HabboName().' <span class="lang-topbar-myhabbo-content-after">ao Habbo</span></h3>
 						<div class="tabmenu-inner-content">
 							<p>
-							<a href="'.$this->hotel->get_HotelURL().'/client" class="arrow" target="client" onclick="openOrFocusHabbo(this); return false;"><span>Entrar no Habbo Hotel</span></a> 
+							<a href="'.$this->hotel->get_HotelURL().'/client" class="arrow" target="client" onclick="openOrFocusHabbo(this); return false;"><span class="lang-topbar-myhabbo-inner-client">Entrar no Habbo Hotel</span></a> 
 							</p>
 							<p>
-								<a href="'.$this->hotel->get_HotelURL().'/home/'.$this->habbo->Get_HabboName().'" class="arrow"><span>Ver sua Habbo Home</span></a>  
+								<a href="'.$this->hotel->get_HotelURL().'/home/'.$this->habbo->Get_HabboName().'" class="arrow"><span class="lang-topbar-myhabbo-inner-home">Ver sua Habbo Home</span></a>  
 							</p>
 							<p>
-								<a href="'.$this->hotel->get_HotelURL().'/profile" class="arrow"><span>Editar Preferências</span></a> 							
+								<a href="'.$this->hotel->get_HotelURL().'/profile" class="arrow"><span class="lang-topbar-myhabbo-inner-profile">Editar Preferências</span></a> 							
 							</p>
-								<a href="'.$this->hotel->get_HotelURL().'/logout" class="colorlink orange last" style=" margin-right: 2px;"><span>Sair</span></a>   
+								<a href="'.$this->hotel->get_HotelURL().'/logout" class="colorlink orange last" style=" margin-right: 2px;"><span class="lang-topbar-myhabbo-inner-logout">Sair</span></a>   
 						</div>
 		'; 
 	}else{

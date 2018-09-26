@@ -9,7 +9,7 @@
 //////////////////////////////////////////////////////////////
 
 ?>
-	<link href="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/styles/style.css" type="text/css" rel="stylesheet"/>
+            <link href="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/styles/style.css" type="text/css" rel="stylesheet"/>
 			<link href="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/styles/boxes.css" type="text/css" rel="stylesheet"/>	
 			<link href="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/styles/ads.css" type="text/css" rel="stylesheet"/>
 <?php 
@@ -32,6 +32,25 @@ switch (get_class($this)){
 			<script language="JavaScript" type="text/javascript" src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/js/prototype.js"></script>
 			<script language="JavaScript" type="text/javascript" src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/js/habbo.js"></script>
 			<script language="JavaScript" type="text/javascript" src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/js/builder.js"></script>
+			<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+			
+			<!-- Languages -->
+			<script language="JavaScript" type="text/javascript" src="<?php echo $this->hotel->get_HotelUrl(); ?>/web/includes/language/pt.js"></script>
+			<script language="JavaScript" type="text/javascript" src="<?php echo $this->hotel->get_HotelUrl(); ?>/web/includes/language/en.js"></script>
+
+			
+			
+			<script language="JavaScript" type="text/javascript">
+				var j = jQuery.noConflict();
+				window.onload = function LoadLanguage(){
+					/*fills all the span tags with class=lang pattern*/ 
+				  j('span[class^="lang"]').each(function(){
+					var LangVar = (this.className).replace('lang-','');
+					var Text = window["WORDS_EN"][LangVar];
+					j(this).text(Text);        
+				  });
+				}
+			</script>
 <?php
 //Special JavaScript Includes
 switch (get_class($this)){

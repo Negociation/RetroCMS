@@ -13,7 +13,7 @@
 	<?php
 	if($this->habbo->get_HabboLoggedIn()){ 
 		echo'
-            <td id="topbar-status" class="loggedin"><b>'.$this->habbo->get_HabboName().'</b>, você esta no Habbo</td>
+            <td id="topbar-status" class="loggedin"> <span class="lang-topbar-status-loggedinBefore"></span><b>'.$this->habbo->get_HabboName().'</b><span class="lang-topbar-status-loggedinAfter">, você esta no Habbo</span></td>
 		'; 
 	}else{
 			echo '
