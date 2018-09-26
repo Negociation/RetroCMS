@@ -24,22 +24,23 @@
 		echo'					
 						<div class="tabmenu-inner-content">
 							<p>
-								Habbo Club te dá os melhores benefícios
+								<span class="lang-topbar-habboclub-inner-about">Habbo Club te dá os melhores benefícios</span>
 							</p>
 							<p>
-								<a href="'.$this->hotel->get_HotelWeb().'/tab/habboclub" class="arrow"><span>Últimas Notícias</span></a>
+								<a href="'.$this->hotel->get_HotelWeb().'/tab/habboclub" class="arrow"><span class="lang-topbar-habboclub-inner-club">Últimas Notícias</span></a>
 							</p>
 						</div>
 		'; 
 	}else{
 			echo '
-						<h3>Por favor, <a href="'.$this->hotel->get_HotelWeb().'/login">entre</a> para ver suas informações do Habbo Club</h3>
+						<h3><span class="lang-topbar-habboclub-content-notloggedinBefore">Por favor,</span> <a href="'.$this->hotel->get_HotelWeb().'/login"><span class="lang-sign">entre</span></a> <span class="lang-topbar-habboclub-content-notloggedinAfter">para ver suas informações do Habbo Club</span></h3>
 						<div class="tabmenu-inner-content">
 							<p>
-								Habbo Club te dá os melhores benefícios
+								<span class="lang-topbar-habboclub-inner-about">Habbo Club te dá os melhores benefícios</span>
+								
 							</p>
 							<p>
-								<a href="'.$this->hotel->get_HotelWeb().'/tab/habboclub" class="arrow"><span>Últimas Notícias</span></a>
+								<a href="'.$this->hotel->get_HotelWeb().'/tab/habboclub" class="arrow"><span class="lang-topbar-habboclub-inner-club">Últimas Notícias</span></a>
 							</p>
 						</div>
 		';

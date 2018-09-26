@@ -39,17 +39,21 @@ switch (get_class($this)){
 			<script language="JavaScript" type="text/javascript" src="<?php echo $this->hotel->get_HotelUrl(); ?>/web/includes/language/en.js"></script>
 
 			
-			
+			<!-- Alpha (Will be removed or merged with the javascripts files) -->
 			<script language="JavaScript" type="text/javascript">
 				var j = jQuery.noConflict();
-				window.onload = function LoadLanguage(){
+					
+				function LoadLanguage(lang){
 					/*fills all the span tags with class=lang pattern*/ 
 				  j('span[class^="lang"]').each(function(){
 					var LangVar = (this.className).replace('lang-','');
-					var Text = window["WORDS_EN"][LangVar];
+					var Text = window["WORDS_"+lang][LangVar];
 					j(this).text(Text);        
 				  });
 				}
+
+				window.onload = function Start(){ LoadLanguage("PT"); };
+			
 			</script>
 <?php
 //Special JavaScript Includes

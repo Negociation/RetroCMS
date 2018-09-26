@@ -17,7 +17,7 @@
 		'; 
 	}else{
 			echo '
-			<td id="topbar-status" class="notloggedin">Entre para acessar o Habbo</td>
+			<td id="topbar-status" class="notloggedin"><span class="lang-topbar-status-notLogged">Entre para acessar o Habbo</span></td>
 		';
 	}		
 	

@@ -116,6 +116,12 @@
 				</div>
 				<div id="submenu">
 					<div class="subnav">
+					<!-- Alpha "Will be removed" -->
+					<select id="country_select" onchange="LoadLanguage(this.value);">
+					<option value="PT">PORTUGUÊS</option>
+					<option value="EN">ENGLISH</option>
+					</select>
+
 					</div>
 				</div>
 			</div>
