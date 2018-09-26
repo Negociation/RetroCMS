@@ -14,11 +14,11 @@
 	if($this->habbo->get_HabboLoggedIn()){ 
 		if(!$this->habbo->get_HabboClubStatus()){
 			echo'
-						<h3>Você não é membro do Habbo Clube</h3>
+						<h3><span class="lang-topbar-habboclub-content-loggedin">Você não é membro do Habbo Clube</span></h3>
 			';
 		}else{
 			echo'
-						<h3>Você possui '.$this->habbo->get_HabboClubDays().' dias restantes no Habbo Clube</h3>
+						<h3><span class="lang-topbar-habboclub-content-loggedinBefore">Você possui</span> '.$this->habbo->get_HabboClubDays().' <span class="lang-topbar-habboclub-content-loggedinAfter">dias restantes no Habbo Clube</span></h3>
 			';	
 		}
 		echo'					
