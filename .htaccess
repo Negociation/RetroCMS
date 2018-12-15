@@ -1,8 +1,6 @@
 RewriteEngine on
-RedirectMatch 301 ^/login /account/login
-RedirectMatch 301 ^/logout /account/disconected
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php?origin=$1 [L,QSA]
-
-
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.gif|\.jpg|\.png|\.swf|\.xml)$ [NC]
+RewriteRule ^(.*)$ /index.php?origin=$1 [NC,L,QSA]
+Options -Indexes

@@ -16,12 +16,11 @@ class Route{
 	
 	public function __construct($HotelConection){
 		$this->hotelConection = $HotelConection;
-		$this->urlObject = new Url( isset($_GET["origin"]) ? $_GET["origin"] : ''); 
+		$this->urlObject = new Url( ((isset($_GET["origin"]) &&  ($_GET["origin"]) != "") ) ? $_GET["origin"] : "Index"); 
 	}
 
 	//Call Controller 
 	public function load(){
-		echo 'Loading Controller...';
 		call_user_func_array([$this->urlObject->get_UrlController(),$this->urlObject->get_UrlMethod()],$this->urlObject->get_UrlParams());
 	}
 }
