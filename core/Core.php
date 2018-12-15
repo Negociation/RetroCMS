@@ -13,7 +13,7 @@
 define( 'MYSQL_HOST', 'localhost' );
 define( 'MYSQL_USER', 'root' );
 define( 'MYSQL_PASSWORD', '' );
-define( 'MYSQL_DB_NAME', 'RetroBETA' );
+define( 'MYSQL_DB_NAME', 'RetroCMS' );
 
 //Check if MySQL Conection Works
 try{
@@ -27,11 +27,13 @@ try{
 }
 
 //Include All Classes 
-foreach (glob("./Core/Classes/*.php") as $class){ include $class; }
+foreach (glob("./Core/MVC/Classes/*.php") as $class){ include $class; }
 
 //Include All Models 
-foreach (glob("./Core/Models/*.php") as $model){ include $model; }
+foreach (glob("./Core/MVC/Models/*.php") as $model){ include $model; }
 
+//Include All Controllers 
+foreach (glob("./Core/MVC/Controllers/*.php") as $model){ include $model; }
 
 ?>
 

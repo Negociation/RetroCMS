@@ -21,11 +21,12 @@ header("Content-Type: text/html; charset=utf-8",true);
 require_once "./Core/Core.php";
 
 //URL Treatment Class MVC
-require_once "./Core/Routes.php";
+require_once "./Core/Settings/Routes.php";
+require_once "./Core/Settings/Url.php";
 
 //URL Object Call
-$Url = new Route($Conection);
-$Url->Load();
+$Content = new Route($Conection);
+$Content->Load();
 
 ?>
 
