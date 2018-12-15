@@ -24,8 +24,8 @@ require_once "./Core/Core.php";
 require_once "./Core/Routes.php";
 
 //URL Object Call
-$url = new Url($Conection);
-$url->urlLoad();
+$Url = new Route($Conection);
+$Url->Load();
 
 ?>
 

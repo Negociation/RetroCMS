@@ -11,5 +11,14 @@
 
 
 
-?>
+class Route{
+	
+	
 
+	//Call Controller
+	public function load(){
+		echo 'Loading Controller...';
+	}
+	
+}
+?>
