@@ -39,16 +39,33 @@ class Url{
 		}
 		
 
-
-		if(file_exists("Core/MVC/Controllers/".$parsedUrl[0].".php")){ 
-
+		//Check if Controller Exist
+		if(file_exists("Core/Settings/Controllers/".$parsedUrl[0].".php")){ 
 			$this->set_UrlController($parsedUrl[0]);
 			unset($parsedUrl[0]);
 		}else{
-			$this->url_controller = "404";	
-			$this->url_method = "default";
+			
+			$this->set_UrlController("Not_Found");	
+			$this->set_UrlMethod("default");
 		}		
 		
+		//Check if Method Exists on seted Controller
+		if(isset($parsedUrl[1]) &&  Method_Exists(new $this->url_controller("null"),$parsedUrl[1])){
+			$this->set_UrlMethod($parsedUrl[1]);
+			unset($parsedUrl[1]);
+		}else{
+			if(isset($this->url_parsed[1])){
+				echo 'lala';
+				$this->set_UrlController("Not_Found");	
+				$this->set_UrlMethod("default");
+			}
+		}
+		
+		
+		//Get all parameters from the rest of URL	
+		if (isset($parsedUrl) && $this->get_UrlMethod() != "Not_Found"){
+			$this->set_UrlParams = $parsedUrl ? array_values($parsedUrl): [];
+		}
 	}
 
 	

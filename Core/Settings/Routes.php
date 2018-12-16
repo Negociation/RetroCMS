@@ -23,5 +23,6 @@ class Route{
 	public function load(){
 		call_user_func_array([$this->urlObject->get_UrlController(),$this->urlObject->get_UrlMethod()],$this->urlObject->get_UrlParams());
 	}
+	
 }
 ?>

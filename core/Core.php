@@ -5,7 +5,7 @@
 //----------------------------------------------------------//
 // Developed by: Marcos ( M.tiago )							//
 //////////////////////////////////////////////////////////////
-// Alpha Version 0.8.0 ( Citrino ) 							//		
+// Alpha Version 0.8.0 ( Citrine ) 							//		
 // Branch: Public											//
 //////////////////////////////////////////////////////////////
 
@@ -27,13 +27,13 @@ try{
 }
 
 //Include All Classes 
-foreach (glob("./Core/MVC/Classes/*.php") as $class){ include $class; }
+foreach (glob("./Core/Settings/Classes/*.php") as $class){ include $class; }
 
 //Include All Models 
-foreach (glob("./Core/MVC/Models/*.php") as $model){ include $model; }
+foreach (glob("./Core/Settings/Models/*.php") as $model){ include $model; }
 
 //Include All Controllers 
-foreach (glob("./Core/MVC/Controllers/*.php") as $model){ include $model; }
+foreach (glob("./Core/Settings/Controllers/*.php") as $model){ include $model; }
 
 ?>
 
