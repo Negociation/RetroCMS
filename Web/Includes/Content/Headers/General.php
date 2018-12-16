@@ -48,6 +48,14 @@
         </table>
 
 		<div id="viewlogo"><a href="<?php echo $this->hotel->get_HotelURL();?>"></a></div>
+		<div style="position: absolute; bottom: 15px; left: 40px; height: 14px;">
+			<div style="float: left; margin-top: 2px; height: 14px;">
+			<a href="#" onclick="LoadLanguage('PT')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/hlanguages/icon_br.gif" alt=""></a>
+			<a href="#" onclick="LoadLanguage('EN')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/hlanguages/icon_en.gif" alt=""></a>
+			<a href="#" onclick="LoadLanguage('ES')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/hlanguages/icon_es.gif" alt=""></a>
+			<a href="#" onclick="$('#moreLang').toggle(); return false;" style="margin-left: 5px; height: 14px;" rel="tooltip-More languages..."><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/hlanguages/more.png" alt=""></a>
+			</div>
+		</div>
 		<?php //require_once('./Web/Includes/Content/Web/Socket/Enter-Hotel.php'); ?>
 
 		
@@ -116,11 +124,7 @@
 				</div>
 				<div id="submenu">
 					<div class="subnav">
-					<!-- Alpha "Will be removed" -->
-					<select id="country_select" onchange="LoadLanguage(this.value);">
-					<option value="PT">PORTUGUÊS</option>
-					<option value="EN">ENGLISH</option>
-					</select>
+
 
 					</div>
 				</div>

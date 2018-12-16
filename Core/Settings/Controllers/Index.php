@@ -38,5 +38,6 @@ class Index{
 			exit;
 		}
 	}
+}
 
 ?>

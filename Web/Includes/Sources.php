@@ -1,11 +1,12 @@
 <?php
 //////////////////////////////////////////////////////////////
-// 					RetroCMS 					//
+// 					RetroCMS 								//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
-// Developed by: Marcos ( M.tiago )					//
+// Developed by: Marcos ( M.tiago )							//
 //////////////////////////////////////////////////////////////
-// Alpha Version 0.7.0 ( Opal ) 						//
+// Alpha Version 0.8.0 ( Citrine ) 							//
+// Branch: Public											//
 //////////////////////////////////////////////////////////////
 
 ?>
@@ -52,7 +53,7 @@ switch (get_class($this)){
 				  });
 				}
 
-				window.onload = function Start(){ LoadLanguage("EN"); };
+				window.onload = function Start(){ LoadLanguage("PT"); };
 			
 			</script>
 <?php
