@@ -52,15 +52,17 @@ class Url{
 			$this->set_UrlMethod($parsedUrl[1]);
 			unset($parsedUrl[1]);
 		}else{
+			if(isset($parsedUrl[1]) || !Method_Exists(new $this->url_controller(null),$this->get_UrlMethod("default"))){
 				$this->set_UrlController("Not_Found");	
 				$this->set_UrlMethod("default");
-			
+			}
 		}
 		
 		
-		//Get all parameters from the rest of URL	
-		if (isset($parsedUrl) && $this->get_UrlController() != "Not_Found"){
 
+		
+		//Get all parameters from the rest of URL	
+		if (isset($parsedUrl[2]) && $this->get_UrlController() != "Not_Found"){
 			$this->set_UrlParams = $parsedUrl ? array_values($parsedUrl): [];
 		}
 	}

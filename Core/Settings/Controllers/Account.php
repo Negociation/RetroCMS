@@ -45,12 +45,19 @@ class Account{
 		}
 	}
 	
-	public function logout(){
+	public function disconnected(){
 		if($this->hotel->get_HotelClosed()){
 			require_once './Web/Maintenance/Index.php';
 			exit;
 		}else{
-			
+			if(!$this->habbo->get_HabboLoggedIn()){
+				header('Location: ../');
+				exit;			
+			}else{
+					$this->habboModel->set_HabboLogout();
+					require_once './Web/Account/Disconnected.php';
+					exit;	
+			}
 		}
 	}	
 
