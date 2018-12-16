@@ -1,4 +1,4 @@
-//////////////////////////////////////////////////////////////
+﻿//////////////////////////////////////////////////////////////
 //                       RetroCMS                           //
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
@@ -46,7 +46,7 @@ var WORDS_PT = {
 	  "topbar-habboclub-content-loggedinBefore" : "Você tem ",
 	  "topbar-habboclub-content-loggedinAfter" : "dias no Habbo Club",
 	  "topbar-habboclub-content-notloggedinBefore" : "Por favor,",
-	  "topbarhabboclub-content-notloggedinAfter" : "para ver suas informações do Habbo Club",	
+	  "topbar-habboclub-content-notloggedinAfter" : "para ver suas informações do Habbo Club",	
 	  "topbar-habboclub-inner-about": "Habbo Club te dá os melhores benefícios",
 	  "topbar-habboclub-inner-club" : "Últimas Noticias",
 	  
