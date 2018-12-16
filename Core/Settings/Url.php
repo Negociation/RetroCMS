@@ -41,20 +41,25 @@ class Url{
 
 		//Check if Controller Exist
 		if(file_exists("Core/Settings/Controllers/".$parsedUrl[0].".php")){ 
+		
 			$this->set_UrlController($parsedUrl[0]);
 			unset($parsedUrl[0]);
 		}else{
-			
 			$this->set_UrlController("Not_Found");	
 			$this->set_UrlMethod("default");
 		}		
 		
 		//Check if Method Exists on seted Controller
-		if(isset($parsedUrl[1]) &&  Method_Exists(new $this->url_controller("null"),$parsedUrl[1])){
+		if(isset($parsedUrl[1]) &&  Method_Exists(new $this->url_controller(null),$parsedUrl[1])){
+						echo'lalale';
+
 			$this->set_UrlMethod($parsedUrl[1]);
+
 			unset($parsedUrl[1]);
+			
 		}else{
 			if(isset($this->url_parsed[1])){
+
 				$this->set_UrlController("Not_Found");	
 				$this->set_UrlMethod("default");
 			}
@@ -62,7 +67,7 @@ class Url{
 		
 		
 		//Get all parameters from the rest of URL	
-		if (isset($parsedUrl) && $this->get_UrlMethod() != "Not_Found"){
+		if (isset($parsedUrl[2]) && $this->get_UrlController() != "Not_Found"){
 			$this->set_UrlParams = $parsedUrl ? array_values($parsedUrl): [];
 		}
 	}
