@@ -61,6 +61,36 @@ class Account{
 		}
 	}	
 
+	function Submit(){		
+		if($this->hotel->get_HotelClosed()){
+				require_once './Web/Maintenance/Index.php';
+				exit;
+		}elseif($_SERVER['REQUEST_METHOD'] != 'POST' || $this->habbo->get_HabboLoggedIn()){
+			header('Location: ../');
+			exit;	
+		}else{
+			//Get Form data using POST
+			$this->habbo->set_HabboName(isset($_POST['login-username']) ? $_POST['login-username'] : '');
+			$this->habbo->set_HabboPassword(isset($_POST['login-password']) ? $_POST['login-password'] : '');
+			if($this->habboModel->set_HabboLogin($this->habbo)){
+				echo $_POST['target'];
+				if (isset($_POST['target'])){
+					switch($_POST['target']){
+							case 'habboClient':
+								header('Location: ../client');
+							break;
+					}
+				}else{
+					header('Location: ../');
+				}
+				exit;	
+			}else{
+				echo '<link href="'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/styles/style.css" type="text/css" rel="stylesheet">';
+				header( "refresh:0.5;url=../account/login" );
+				exit;
+			}
+		}	
+	}
 	
 }
 

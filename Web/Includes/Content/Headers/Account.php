@@ -22,6 +22,12 @@
 			<div id="process-header-body">
 				<div id="process-header-content">
 					<div id="habbologo"><a href="<?php echo $this->hotel->get_HotelURL();?>"></a></div>
+			<div style="float: right; margin-top: -14px; height: 14px;">			<a href="#" onclick="LoadLanguage('PT')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_br.gif" alt=""></a>
+			<a href="#" onclick="LoadLanguage('EN')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_en.gif" alt=""></a>
+			<a href="#" onclick="LoadLanguage('ES')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_es.gif" alt=""></a>
+			<a href="#" onclick="$('#moreLang').toggle(); return false;" style="margin-left: 5px; height: 14px;" rel="tooltip-More languages..."><img src="http://127.0.0.1/c_images/hlanguages/more.png" alt=""></a>
+			</div>
 				</div>
+				
 			</div>
 		</div>
