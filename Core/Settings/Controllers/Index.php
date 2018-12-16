@@ -24,12 +24,16 @@ class Index{
 			$this->hotelModel = new HotelModel($hotelConection);
 			$this->habboModel = new HabboModel($hotelConection);
 			$this->hotel = $this->hotelModel->get_HotelObject();
+			if ($this->habbo->get_HabboLoggedIn()){
+				$this->habbo = $this->habboModel->get_HabboObject($this->habbo);	
+			}	
 		}
 	}
 
 
 	//Check if hotel as Opened
 	public function default(){
+		//echo  sodium_crypto_pwhash_str('123456', SODIUM_CRYPTO_PWHASH_OPSLIMIT_INTERACTIVE, SODIUM_CRYPTO_PWHASH_MEMLIMIT_INTERACTIVE);
 		if($this->hotel->get_HotelClosed()){
 			require_once './Web/Maintenance/Index.php';
 			exit;
