@@ -55,7 +55,6 @@ class Url{
 			unset($parsedUrl[1]);
 		}else{
 			if(isset($this->url_parsed[1])){
-				echo 'lala';
 				$this->set_UrlController("Not_Found");	
 				$this->set_UrlMethod("default");
 			}

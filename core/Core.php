@@ -27,13 +27,13 @@ try{
 }
 
 //Include All Classes 
-foreach (glob("./Core/Settings/Classes/*.php") as $class){ include $class; }
+foreach (glob("./Core/Settings/Classes/*.php") as $classe){ require_once $classe; }
 
 //Include All Models 
-foreach (glob("./Core/Settings/Models/*.php") as $model){ include $model; }
+foreach (glob("./Core/Settings/Models/*.php") as $model){ require_once $model; }
 
 //Include All Controllers 
-foreach (glob("./Core/Settings/Controllers/*.php") as $model){ include $model; }
+foreach (glob("./Core/Settings/Controllers/*.php") as $controller){ include $controller; }
 
 ?>
 

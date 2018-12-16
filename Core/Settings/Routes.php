@@ -13,7 +13,8 @@
 
 class Route{
 	protected $urlObject;
-	
+	protected $hotelConection;
+	protected $urlController;
 	public function __construct($HotelConection){
 		$this->hotelConection = $HotelConection;
 		$this->urlObject = new Url( ((isset($_GET["origin"]) &&  ($_GET["origin"]) != "") ) ? $_GET["origin"] : "Index"); 
@@ -21,7 +22,9 @@ class Route{
 
 	//Call Controller 
 	public function load(){
-		call_user_func_array([$this->urlObject->get_UrlController(),$this->urlObject->get_UrlMethod()],$this->urlObject->get_UrlParams());
+		$this->urlController = $this->urlObject->get_UrlController();
+		$this->urlController = new $this->urlController($this->hotelConection);
+		call_user_func_array([$this->urlController,$this->urlObject->get_UrlMethod()],$this->urlObject->get_UrlParams());
 	}
 	
 }
