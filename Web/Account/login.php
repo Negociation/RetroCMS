@@ -24,16 +24,16 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 					<div class="headline">
 						<div class="headline-content">
 							<div class="headline-wrapper">
-								<h2>Primeira vez no Habbo? Registre-se.</h2>
+								<h2> <span class="lang-login-headline-wrapperLeft">Primeira vez no Habbo? Registre-se.</span></h2>
 							</div>
 						</div>
 					</div>
 					<div class="content-top">
 						<div class="content">
 							<div class="processbox-inner">
-								<h4>Primeira vez? Registre-se aqui!</h4>
+								<h4><span class="lang-login-content-subheaderLeft">Primeira vez? Registre-se aqui!</span></h4>
 								<p>
-									<img vspace="10" hspace="10" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album209/frank_with_key.gif?h=531971dc69fe0357f9a244f47e3239ab" alt="">Habbo é uma comunidade que te permite criar seu próprio espaço virtual para si e teus amigos. Mais de um milhão de Habbos já se registraram (já pensou?). Então, há muito para se fazer aí dentro.<br/><br/><br/><br/>
+									<img vspace="10" hspace="10" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album209/frank_with_key.gif?h=531971dc69fe0357f9a244f47e3239ab" alt="" ><span class="lang-login-content-contentLeft">Habbo é uma comunidade que te permite criar seu próprio espaço virtual para si e teus amigos. Mais de um milhão de Habbos já se registraram (já pensou?). Então, há muito para se fazer aí dentro.</span><br/><br/><br/><br/>
 								</p>
 							</div>
 							<div id="registration-errors">
@@ -52,7 +52,7 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 										<div class="content-white-content">
 											<form method="post" action="<?php echo $this->hotel->get_HotelURL(); ?>/register/start" id="registration-form">
 												<p>
-													<label for="day" class="registration-text">Por favor, comece pela data de nascimento</label>
+													<label for="day" class="registration-text"><span class="lang-login-content-registrationText">Por favor, comece pela data de nascimento</span></label>
 												</p>
 												<div id="required-birthday">
 													<select name="day" id="day" class="dateselector">
@@ -227,7 +227,7 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 												</script>
 												<p class="last">
 													<input type="hidden" name="required-birth" id="required-birth" />
-													<input type="submit" value="Continuar" onmousedown="MergeData()" class="process-button" id="registration-submit"/>
+													<input type="submit" value="Continuar" onmousedown="MergeData()" class="process-button" id="registration-submit"/></span>
 												</p>
 											</form>
 										</div>
@@ -238,17 +238,19 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 									<div class="content-white-bottom-body"></div>
 								</div>
 							</div>
+
 							<div class="processbox-inner">
-								<p><br/>
-									<span style="font-weight: bold;">Razões para registrar-se:</span><br/>
+								</br>
+								<p><img vspace="0" hspace="0" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album109/reindeer_1_small.gif" alt=""><br/>
+									<span class="lang-login-content-reistrationReason" style="font-weight: bold;">Razões para registrar-se:</span><br/>
 								<ul>
-									<li>Criar seu próprio Habbo e página pessoal</li>
-									<li>Encontrar seus amigos e fazer novas amizades</li>
-									<li>Decorar seu próprio Quarto</li>
-									<li>É muito divertido mesmo</li>
-									<li>É gratuito<br/></li>
+									<li><span class="lang-login-content-registerReason1">Criar seu próprio Habbo e página pessoal</span></li>
+									<li><span class="lang-login-content-registerReason2">Encontrar seus amigos e fazer novas amizades</span></li>
+									<li><span class="lang-login-content-registerReason3">Decorar seu próprio Quarto</span></li>
+									<li><span class="lang-login-content-registerReason4">É muito divertido mesmo</span></li>
+									<li><span class="lang-login-content-registerReason5">É gratuito</span><br/></li>
 								</ul>
-								<br/><br/><br/></p>
+								</p>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -261,7 +263,7 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 					<div class="headline">
 						<div class="headline-content">
 							<div class="headline-wrapper">
-								<h2>Já é um Habbo? Entre!</h2>
+								<h2><span class="lang-login-headline-wrapperRight">Já é um Habbo? Entre!</span></h2>
 							</div>
 						</div>
 					</div>
@@ -269,7 +271,7 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 						<div class="content">
 							<div class="processbox-inner">
 								<p>
-									Já é registrado? Entre aqui.<br/><br/>Se você já possui conta no Habbo, entre aqui usando seu nome Habbo e senha (os mesmo que você usa no Hotel).<br/><br/>
+									<span class="lang-login-content-subheaderRight">Já é registrado? Entre aqui.</span><br/><span class="lang-login-content-contentRight">Se você já possui conta no Habbo, entre aqui usando seu nome Habbo e senha (os mesmo que você usa no Hotel).</span><br/><br/>
 								</p>
 							</div>
 							
@@ -290,14 +292,14 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 												<?php if(isset($_GET['target'])){ echo '<input type="hidden" name="target" value="'.$_GET['target'].'"/>'; } ?>
 												<input type="hidden" name="service" value="/security_check"/>
 												<p>
-													<label for="login-username" class="registration-text">Meu nome Habbo</label>
+													<label for="login-username" class="registration-text"><span class="lang-login-content-holderUser">Meu nome Habbo</span></label>
 													<input type="text" class="required-username" name="login-username" id="login-username" value=""/>
 												</p>
 												<script type="text/javascript" language="JavaScript">
 													$("login-username").focus();
 												</script>
 												<p>
-													<label for="login-password" class="registration-text">Senha</label>
+													<label for="login-password" class="registration-text"><span class="lang-login-content-holderPassword">Senha</span></label>
 													<input type="password" class="required-password" name="login-password" id="login-password" value=""/>
 												</p>
 												<p class="last">
@@ -314,11 +316,11 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 							</div>
 							<div class="processbox-inner">
 								<p>
-									<br style="font-weight: bold;"/><span style="font-weight: bold;"> Esqueceu a senha?</span><br/><br/>Se você esqueceu sua senha, entre em contato com o Suporte usando a <a href="http://web.archive.org/web/20070613213428/http://www.habbohotel.com.br/iot/go?lang=pt_BR&amp;country=br" target="_blank">Ferramenta de Ajuda Habbo</a>.<br/><br/>
+									<br style="font-weight: bold;"/><span style="font-weight: bold;" class="lang-login-content-loginForgotTitle"> Esqueceu a senha?</span><br/><br/><span class="lang-login-content-loginForgotContent">Se você esqueceu sua senha, entre em contato com o Suporte usando a </span><a href="http://web.archive.org/web/20070613213428/http://www.habbohotel.com.br/iot/go?lang=pt_BR&amp;country=br" target="_blank"><span class="lang-login-content-loginForgotContentURL">Ferramenta de Ajuda Habbo</span></a>.<br/><br/>
 								</p>
-								<h4>PARA SUA SEGURANÇA</h4>
+								<h4><span class="lang-login-content-loginSafetyTitle">PARA SUA SEGURANÇA</span></h4>
 								<p>
-									<img vspace="10" hspace="10" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album209/encryption_pc_ie.gif?h=e4fc37398b1a546726f6e1e4694c8035" alt="">O Habbo é criptografado para proteger todos os seus dados. Para saber se a página é segura, olha no Cadeado que aparece embaixo, na janela do seu navegador (por exemplo, Internet Explorer e Firefox).<br/><br/><br/>
+									<img vspace="10" hspace="9" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album209/encryption_pc_ie.gif?h=e4fc37398b1a546726f6e1e4694c8035" alt=""><span class="lang-login-content-loginSafetyContent">O Habbo é criptografado para proteger todos os seus dados. Para saber se a página é segura, olha no Cadeado que aparece embaixo, na janela do seu navegador (por exemplo, Internet Explorer e Firefox).</span><br/><br/><br/>
 								</p>
 							</div>
 							<div class="clear"></div>

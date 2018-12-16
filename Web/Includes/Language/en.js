@@ -69,7 +69,30 @@ var WORDS_EN = {
   "newsbox-header" : "What's New",
   "newsbox-footer" : "More News",
 
-   
-   //Client
+  //Login
+  "login-headline-wrapperLeft" : "NEW TO HABBO? REGISTER HERE!",
+  "login-content-subheaderLeft" : "REGISTER NOW!",
+  "login-content-contentLeft" : "Habbo is an online community that lets you create your own virtual space for you and your friends. With thousands of members already checked in there's always something to do...", 
+  "login-content-registrationText": "PLEASE START BY ENTERING YOUR BIRTHDAY",
+  "login-content-registrationSubmit": "Continuar",  
+  "login-content-reistrationReason": "TOP REASONS TO REGISTER",
+  "login-content-registerReason1": "Create your own Habbo character and Home page",
+  "login-content-registerReason2": "Meet your friends and find new ones",
+  "login-content-registerReason3": "Decorate your own room",
+  "login-content-registerReason4": "It’s more fun than not joining!",
+  "login-content-registerReason5": "It's completely free!",
+  
+  "login-headline-wrapperRight": "ALREADY HAVE A HABBO? PLEASE LOG IN HERE!",
+  "login-content-subheaderRight": "",
+  "login-content-contentRight": "If you already have a Habbo account then log in here using your Habbo user name and your password. Your user name and password are the same for here as they are in the Hotel.",
+  "login-content-holderUser": "MY HABBO NAME",
+  "login-content-holderPassword": "PASSWORD",
+  "login-content-loginSubmit": "LOG IN",  
+  "login-content-loginForgotTitle": "FORGOTTEN YOUR PASSWORD?",   
+  "login-content-loginForgotContent": "If you have forgotten your password please contact Player Support by using the ",  
+  "login-content-loginForgotContentURL": "Habbo Help Tool",  
+  "login-content-loginSafetyTitle": "SECURITY INFORMATION",   
+  "login-content-loginSafetyContent": "The real Habbo site is encrypted to protect you and your data. You can check whether or not this site is encrypted by looking for the nice looking padlock at the bottom of your web browser.",
+  
    
 };
