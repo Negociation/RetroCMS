@@ -142,7 +142,7 @@ $teste = new Figure('1000118001270012900121001',null);
 								var urls = new Array('#','#','#','#');
 
 								var curOffset = 1;
-								window.onload= function(){
+								function LoadData(){
 									document.getElementById('randLink').href = urls[0];
 									document.getElementById('randImage').src = Ads[0].src;
 									setInterval(

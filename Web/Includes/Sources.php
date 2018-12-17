@@ -46,14 +46,25 @@ switch (get_class($this)){
 					
 				function LoadLanguage(lang){
 					/*fills all the span tags with class=lang pattern*/ 
+					window.localStorage.setItem('userLang', lang);
+
 				  j('span[class^="lang"]').each(function(){
+					  
 					var LangVar = (this.className).replace('lang-','');
 					var Text = window["WORDS_"+lang][LangVar];
 					j(this).text(Text);        
 				  });
 				}
 
-				window.onload = function Start(){ LoadLanguage("PT"); };
+				window.onload = function Start(){ 
+					if (window.localStorage.getItem('userLang') === null){
+						window.localStorage.setItem('userLang', 'PT');
+						alert(window.localStorage.getItem('userLang'));
+					}
+					var lang =  window.localStorage.getItem('userLang');
+					LoadLanguage(lang); 
+					LoadData();
+				};
 			
 			</script>
 <?php
