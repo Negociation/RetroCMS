@@ -81,15 +81,15 @@ class Url{
 		return $this->url_params;		
 	}
 
-	private function set_UrlController($url_controller){
+	public function set_UrlController($url_controller){
 		$this->url_controller = $url_controller;
 	}	
 	
-	private function set_UrlMethod($url_method){
+	public function set_UrlMethod($url_method){
 		$this->url_method = $url_method;		
 	}
 
-	private function set_UrlParams($url_params){
+	public function set_UrlParams($url_params){
 		$this->url_params = $url_params;		
 	}		
 	

@@ -22,8 +22,14 @@ class Route{
 
 	//Call Controller 
 	public function load(){
+		$hotelModel = new HotelModel($this->hotelConection);
+		if (!$hotelModel->get_HotelInstall()){
+			$this->urlObject->set_UrlController("Install");
+		}
+		unset($hotelModel);
 		$this->urlController = $this->urlObject->get_UrlController();
 		$this->urlController = new $this->urlController($this->hotelConection);
+		//Only for Install
 		call_user_func_array([$this->urlController,$this->urlObject->get_UrlMethod()],$this->urlObject->get_UrlParams());
 	}
 	
