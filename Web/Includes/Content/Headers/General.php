@@ -48,14 +48,7 @@
         </table>
 
 		<div id="viewlogo"><a href="<?php echo $this->hotel->get_HotelURL();?>"></a></div>
-		<div style="position: absolute; bottom: 15px; left: 40px; height: 14px;">
-			<div style="float: left; margin-top: 2px; height: 14px;">
-			<a href="#" onclick="LoadLanguage('PT')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/hlanguages/icon_br.gif" alt=""></a>
-			<a href="#" onclick="LoadLanguage('EN')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/hlanguages/icon_en.gif" alt=""></a>
-			<a href="#" onclick="LoadLanguage('ES')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/hlanguages/icon_es.gif" alt=""></a>
-			<a href="#" onclick="$('#moreLang').toggle(); return false;" style="margin-left: 5px; height: 14px;" rel="tooltip-More languages..."><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/hlanguages/more.png" alt=""></a>
-			</div>
-		</div>
+
 		<?php //require_once('./Web/Includes/Content/Web/Socket/Enter-Hotel.php'); ?>
 
 		
@@ -120,11 +113,20 @@
 							<a href="<?php echo $this->hotel->get_HotelURL(); ?>/help"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_08_help.gif" alt=""/> <span class="lang-navbar-help">Ajuda</span></a>
 							<span class="right"></span>
 						</li>
+
 					</ul>
+									
+		
+						
 				</div>
 				<div id="submenu">
 					<div class="subnav">
-
+				<div style="float: right; margin-top: 0px; margin-right: 20px; height: 14px;">
+			<a href="#" onclick="LoadLanguage('PT')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_br.gif" alt=""></a>
+			<a href="#" onclick="LoadLanguage('EN')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_en.gif" alt=""></a>
+			<a href="#" onclick="LoadLanguage('ES')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_es.gif" alt=""></a>
+			<a href="#" onclick="$('#moreLang').toggle(); return false;" style="margin-left: 5px; height: 14px;" rel="tooltip-More languages..."><img src="http://127.0.0.1/c_images/hlanguages/more.png" alt=""></a>
+			</div>
 
 					</div>
 				</div>

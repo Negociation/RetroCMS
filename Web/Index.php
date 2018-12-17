@@ -15,7 +15,7 @@
 <?php 
 //Include Header Content
 include('./Web/Includes/Content/Headers/General.php'); 
-
+$teste = new Figure('1000118001270012900121001',null);
 //Page Content >>
 ?>
 
@@ -119,7 +119,47 @@ include('./Web/Includes/Content/Headers/General.php');
                      <tbody>
                         <tr>
                            <td>
+						   
+						   
                               <!--Partner Box Advertisement-->
+							<script type="text/javascript">
+								var Ads = new Array();
+								function preloadAds(){
+									for (var i = 0; i < arguments.length; i++){
+										Ads[i] = document.createElement('img');
+										Ads[i].setAttribute('src',arguments[i]);
+									};
+								}
+							  
+							  
+								preloadAds(
+								'http://web.archive.org/web/20071024132417/http://images.habbohotel.co.uk/c_images/album2748/creditsback188x125.png',
+								'http://web.archive.org/web/20071024132417/http://images.habbohotel.co.uk/c_images/album2748/grunge_promo_188x125.gif',
+								'http://web.archive.org/web/20071024132417/http://images.habbohotel.co.uk/c_images/album2748/ROTW_Duw_promo.png',
+								'http://web.archive.org/web/20071024132417/http://images.habbohotel.co.uk/c_images/youthmusic/youth_music_lilchris_188x125.gif'
+								);
+							
+								var urls = new Array('#','#','#','#');
+
+								var curOffset = 1;
+								window.onload= function(){
+									document.getElementById('randLink').href = urls[0];
+									document.getElementById('randImage').src = Ads[0].src;
+									setInterval(
+										function() {
+											document.getElementById('randLink').href = urls[curOffset];
+											document.getElementById('randImage').src = Ads[curOffset].src;
+											curOffset = (curOffset >= Ads.length-1) ? 0 : curOffset + 1;
+										}, 1000);
+								};
+							  </script>
+							  
+							  
+							  
+
+<a href="http://web.archive.org/web/20071024132417/http://www.habbo.co.uk/news/article329.html" target="_blank" id="randLink"><img src="http://web.archive.org/web/20071024132417/http://images.habbohotel.co.uk/c_images/album2748/grunge_promo_188x125.gif" border="0" id="randImage"></a>
+<br>
+
                            </td>
                         </tr>
                      </tbody>

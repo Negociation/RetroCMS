@@ -63,7 +63,8 @@ class Url{
 		
 		//Get all parameters from the rest of URL	
 		if (isset($parsedUrl[2]) && $this->get_UrlController() != "Not_Found"){
-			$this->set_UrlParams = $parsedUrl ? array_values($parsedUrl): [];
+			$params = $parsedUrl ? array_values($parsedUrl): [];
+			$this->set_UrlParams($params);
 		}
 	}
 
