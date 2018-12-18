@@ -10016,6 +10016,7 @@ CREATE TABLE `users` (
   `sso_ticket` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `club_subscribed` bigint(11) NOT NULL DEFAULT 0,
   `club_expiration` bigint(11) NOT NULL DEFAULT 0,
+  `club_gift_due` bigint(11) NOT NULL DEFAULT 0,
   `badge` char(3) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `badge_active` tinyint(1) NOT NULL DEFAULT 1,
   `allow_stalking` tinyint(1) NOT NULL DEFAULT 1,
