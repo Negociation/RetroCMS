@@ -10020,6 +10020,7 @@ CREATE TABLE `users` (
   `badge` char(3) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `badge_active` tinyint(1) NOT NULL DEFAULT 1,
   `allow_stalking` tinyint(1) NOT NULL DEFAULT 1,
+  `allow_friend_requests` tinyint(1) NOT NULL DEFAULT 1,
   `sound_enabled` tinyint(1) NOT NULL DEFAULT 1,
   `tutorial_finished` tinyint(1) NOT NULL DEFAULT 0,
   `battleball_points` int(11) NOT NULL DEFAULT 0,
