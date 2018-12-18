@@ -63,7 +63,7 @@ switch (get_class($this)){
 					}
 					var lang =  window.localStorage.getItem('userLang');
 					LoadLanguage(lang); 
-					LoadData();
+					//LoadData();
 				};
 			
 			</script>

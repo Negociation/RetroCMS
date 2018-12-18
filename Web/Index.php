@@ -34,7 +34,7 @@ $teste = new Figure('1000118001270012900121001',null);
                      <td colspan="3" style="padding-bottom: 3px;">
                         <script type="text/javascript">
                            var promoPages = [
-                           	{ image: "<img src=\"https://i.imgur.com/yEo2vdU.png\" / alt=\"\"\>", links: [
+                           	{ image: "<img src=\"https://i.imgur.com/B0v5asa.png\" / alt=\"\"\>", links: [
                            			"<a href=\"/#\">Mais!</a>", 
                            			"<a href=\"<?php echo $this->hotel->get_HotelURL() ?>/client\" target=\"client\" onclick=\"openOrFocusHabbo(this); return false;\"\>Hotel</a\>"
                            			
@@ -66,7 +66,7 @@ $teste = new Figure('1000118001270012900121001',null);
                               <div id="promobody">
                                  <p id="promoimage">
                                     <a href="./#">
-                                    <img src="https://i.imgur.com/yEo2vdU.png" alt=""> </a>
+                                    <img src="https://i.imgur.com/B0v5asa.png" alt=""> </a>
                                  </p>
                                  <div class="promotext">
                                     <p id="promotext-content">RetroCMS foi instalado com sucesso.<br> </p>
@@ -157,7 +157,7 @@ $teste = new Figure('1000118001270012900121001',null);
 							  
 							  
 
-<a href="http://web.archive.org/web/20071024132417/http://www.habbo.co.uk/news/article329.html" target="_blank" id="randLink"><img src="http://web.archive.org/web/20071024132417/http://images.habbohotel.co.uk/c_images/album2748/grunge_promo_188x125.gif" border="0" id="randImage"></a>
+<a href="http://web.archive.org/web/20071024132417/http://www.habbo.co.uk/news/article329.html" target="_blank" id="randLink"><img src="<?php echo $this->hotel->get_HotelWeb() ?>/c_images/shark_tale/EN_tutorial_pic_smalll.gif" border="0" id="randImage"></a>
 <br>
 
                            </td>
