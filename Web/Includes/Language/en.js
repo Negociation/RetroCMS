@@ -95,4 +95,7 @@ var WORDS_EN = {
   "login-content-loginSafetyContent": "The real Habbo site is encrypted to protect you and your data. You can check whether or not this site is encrypted by looking for the nice looking padlock at the bottom of your web browser.",
   
    
+   //Client
+   "topbar-client-count": "Habbos online now",
+   "topbar-client-logout": "CLOSE HOTEL",
 };

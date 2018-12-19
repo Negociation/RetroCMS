@@ -92,7 +92,10 @@ var WORDS_PT = {
   "login-content-loginSafetyContent": "O Habbo é criptografado para proteger todos os seus dados. Para saber se a página é segura, olha no Cadeado que aparece embaixo, na janela do seu navegador (por exemplo, Internet Explorer e Firefox).",
 
   
-  
+   //Client
+   "topbar-count": "Habbos no Hotel",
+   "topbar-logout": "LOGOUT",
+   
   //Logout 
 
 };

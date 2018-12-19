@@ -460,6 +460,11 @@ function showPurchaseResult(productCode) {
 	);
 }
 
+function closeTVResult() {
+   	if ($("habboTV")) Element.remove("habboTV");
+	hideOverlay();
+}
+
 function closePurchaseResult() {
    	if ($("purchase_result")) Element.remove("purchase_result");
     if ($("purchase_dialog")) Element.remove("purchase_dialog");
@@ -515,6 +520,7 @@ function updateHabboCreditAmounts(newAmount) {
 function createDialog(dialogId, header, dialogZIndex, dialogLeft, dialogTop, exitCallback) {
 	if (!dialogId) return;
 	var overlay = $("overlay");
+	if(dialogId != "habboTV"){
 	var headerBar = [Builder.node("div", [ Builder.node("h3", [ Builder.node("span", header) ]) ])];
 	if (exitCallback) { 
 		var exitButton = Builder.node("a", {href:"#", className:"dialog-grey-exit"}, [
@@ -533,8 +539,31 @@ function createDialog(dialogId, header, dialogZIndex, dialogLeft, dialogTop, exi
 	dialog.style.zIndex = (dialogZIndex || 9001);
 	dialog.style.left = (dialogLeft || -1000) + "px";
 	dialog.style.top = (dialogTop || 0) + "px";
+	}else{
+		var headerBar = [Builder.node("div", [ Builder.node("h3", [ Builder.node("span", header) ]) ])];
+		if (exitCallback) { 
+		var exitButton = Builder.node("a", {href:"#", className:"dialog-tv-exit"}, [
+			Builder.node("img", {src:"http://127.0.0.1/habboweb/16/11/web-gallery/images/dialogs/tv-exit.png", width:11, height:11, alt:""})
+		]);
+		Event.observe(exitButton, "click", exitCallback, false);
+		headerBar.push(exitButton);
+		}
+		var dialog = overlay.parentNode.insertBefore(Builder.node("div", {id:dialogId, className:"dialog-tv"}, [
+		Builder.node("div", {className:"dialog-tv-top"}, headerBar), 
+		Builder.node("div", {className:"dialog-tv-content"}, [
+			Builder.node("div", {id:dialogId+"-body", className:"dialog-tv-body"}, [ Builder.node("div", {className:"clear"}) ])
+		]), 
+		Builder.node("div", {className:"dialog-tv-bottom"}, [ Builder.node("div") ])
+	]), overlay.nextSibling);
+	dialog.style.zIndex = (dialogZIndex || 9001);
+	dialog.style.left = (dialogLeft || -1000) + "px";
+	dialog.style.top = (dialogTop || 0) + "px";
+		
+	}
 	return dialog;
 }
+
+
 
 function showInfoDialog(dialogId, message, buttonText, buttonOnClick){
     showOverlay();

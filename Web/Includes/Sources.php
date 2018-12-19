@@ -40,33 +40,7 @@ switch (get_class($this)){
 			<script language="JavaScript" type="text/javascript" src="<?php echo $this->hotel->get_HotelUrl(); ?>/web/includes/language/en.js"></script>
 
 			
-			<!-- Alpha (Will be removed or merged with the javascripts files) -->
-			<script language="JavaScript" type="text/javascript">
-				var j = jQuery.noConflict();
-					
-				function LoadLanguage(lang){
-					/*fills all the span tags with class=lang pattern*/ 
-					window.localStorage.setItem('userLang', lang);
 
-				  j('span[class^="lang"]').each(function(){
-					  
-					var LangVar = (this.className).replace('lang-','');
-					var Text = window["WORDS_"+lang][LangVar];
-					j(this).text(Text);        
-				  });
-				}
-
-				window.onload = function Start(){ 
-					if (window.localStorage.getItem('userLang') === null){
-						window.localStorage.setItem('userLang', 'PT');
-						alert(window.localStorage.getItem('userLang'));
-					}
-					var lang =  window.localStorage.getItem('userLang');
-					LoadLanguage(lang); 
-					//LoadData();
-				};
-			
-			</script>
 <?php
 //Special JavaScript Includes
 switch (get_class($this)){
@@ -102,6 +76,44 @@ switch (get_class($this)){
 
 ?>
 
+			<!-- Alpha (Will be removed or merged with the javascripts files) -->
+			<script language="JavaScript" type="text/javascript">
+				var j = jQuery.noConflict();
+					
+				function LoadLanguage(lang){
+					/*fills all the span tags with class=lang pattern*/ 
+					window.localStorage.setItem('userLang', lang);
+
+				  j('span[class^="lang"]').each(function(){
+					  
+					var LangVar = (this.className).replace('lang-','');
+					var Text = window["WORDS_"+lang][LangVar];
+					j(this).text(Text);        
+				  });
+				}
+
+				window.onload = function Start(){ 
+				var teste2= "<?php echo get_class($this); ?>";
+					if (teste2 == "Client"){
+					resizeWin();
+					window.onerror = function() { return true; };
+					window.onunload = clearOpener;	 
+					ensureOpenerIsLoggedIn();
+					addClientUnloadHook();
+					Event.observe(document, "keypress", function(e) { if (e.keyCode == Event.KEY_BACKSPACE) { Event.stop(e); } });
+					}
+			
+					if (window.localStorage.getItem('userLang') === null){
+						window.localStorage.setItem('userLang', 'PT');
+						alert(window.localStorage.getItem('userLang'));
+					}
+					var lang =  window.localStorage.getItem('userLang');
+					LoadLanguage(lang); 
+					//LoadData();
+					teste();
+				};
+			
+			</script>
 
 
 		

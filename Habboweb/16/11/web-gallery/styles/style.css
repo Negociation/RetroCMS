@@ -1488,10 +1488,188 @@ a.colorlink.disabled-button, a.colorlink:disabled {
 	filter: alpha(opacity=50);
 }
 
+div.dialog-tv, div.dialog-tvtab {
+	position: absolute;
+	width: 724px;
+	z-index: 9001;
+}
+
+
+div.dialog-tv-top, div.dialog-tvtab-top {
+	background-repeat: no-repeat;
+	background-image: url(../images/dialogs/tv-tl.png);
+	padding-left: 37px;
+	height: 34px;
+	position: relative;
+}
+
+
+
+div.dialog-tv-top div, div.dialog-tvtab-top div {
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-image: url(../images/dialogs/tv-tr.png);
+	height: 34px;
+}
+
+div.dialog-tv-top h3, div.dialog-tvtab-top h3 {
+	margin: 0;
+	float: left;
+	height: 34px;
+	background-repeat: repeat-x;
+	background-image: url(../images/dialogs/tv-header.png);
+	font-size: 10px;
+	font-weight: bold;
+	color: #7f5d0b;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+div.dialog-tv-top h3 span, div.dialog-tvtab-top h3 span {
+	float: left;
+	padding: 5px 200px 0 4px;
+}
+
+a.dialog-tv-exit, a.dialog-tvtab-exit {
+	text-align: right;
+	position: absolute;
+	top: 9px;
+	right: 13px;
+	background-image: url(../images/dialogs/grey-content-r.gif);
+	height: 10px;
+}
+
+div.dialog-tv-content, div.dialog-tvtab-content {
+	background-color: #E2E2E2;
+	background-repeat: repeat-y;
+	background-image: url(../images/dialogs/tv-content-l.png);
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+div.dialog-tv-body, div.dialog-tvtab-body {
+	background-position: top right;
+	background-repeat: repeat-y;
+	margin: 0 0 0 37px;
+	background-image: url(../images/dialogs/tv-content-r.png);
+	padding: 0px 0px 0 0;
+	text-align: left;
+}
+
+div.dialog-tv-body p, div.dialog-tvtab-body p {
+	margin: 0;
+	padding: 0 0 1em 0;
+	text-align: left;
+}
+
+div.dialog-tv-bottom, div.dialog-tvtab-bottom {
+	background-repeat: no-repeat;
+	background-image: url(../images/dialogs/tv-bl.png);
+	height: 43px;
+	font-size: 1%;
+}
+
+div.dialog-tv-bottom div, div.dialog-tvtab-bottom div {
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-image: url(../images/dialogs/tv-br.png);
+	height: 43px;
+	margin-left: 7px;
+}
+
+div.dialog-tvtab {
+	width: 300px;
+}
+
+div.dialog-tvtab-tabs {
+	background-image: url(../images/dialogs/greytab-l.gif);
+	background-repeat: repeat-y;
+	padding: 0 0 0 4px;
+}
+
+div.dialog-tvtab-tabs-content {
+	background-image: url(../images/dialogs/greytab-tabbg2.gif);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
+
+div.dialog-tvtab-tabs-bottom {
+	background-image: url(../images/dialogs/greytab-l.gif);
+	background-repeat: repeat-y;
+}
+
+div.dialog-tvtab-tabs-bottom div {
+	background-image: url(../images/dialogs/greytab-tabbg.gif);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	height: 5px;
+	margin-left: 10px;
+}
+
+div.dialog-tvtab-tabs-content ul {
+	margin: 0;
+	padding: 3px 0;
+	list-style-type: none;
+	font-size: 10px;
+}
+
+div.dialog-tvtab-tabs-content ul li {
+	margin: 0;
+	padding: 0 0 0 6px;
+	display: block;
+	float: left;
+	background-image: url(../images/dialogs/greytab-tab-l.gif);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+
+div.dialog-tvtab-tabs-content ul li a, div.dialog-tvtab-tabs-content ul li span {
+	background-image: url(../images/dialogs/greytab-tab-r.gif) !important;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	display: block;
+	padding: 3px 6px 5px 0;
+	color: black;
+	font-weight: normal;
+}
+
+div.dialog-tvtab-tabs-content ul li.selected {
+	background-image: url(../images/dialogs/greytab-tab-l-selected.gif);
+	font-weight: bold;
+}
+
+div.dialog-tvtab-tabs-content ul li.selected a, div.dialog-tvtab-tabs-content ul li.selected span {
+	background-image: url(../images/dialogs/greytab-tab-r-selected.gif) !important;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+div.dialog-tvtab-content {
+	background-image: url(../images/dialogs/greytab-l.gif);
+}
+
+div.dialog-tvtab-body {
+	background-image: url(../images/dialogs/greytab-r.gif);
+	margin: 0 0 0 20px;
+	padding: 20px 20px 0 0;
+}
+
+div.dialog-tvtab-bottom {
+	background-image: url(../images/dialogs/greytab-bl.gif);
+	height: 10px;
+}
+
+div.dialog-tvtab-bottom div {
+	background-image: url(../images/dialogs/greytab-br.gif);
+	height: 10px;
+	margin-left: 10px;
+}
+
 
 div.dialog-grey, div.dialog-greytab {
 	position: absolute;
-	width: 398px;
+	width: 385px;
 	z-index: 9001;
 }
 

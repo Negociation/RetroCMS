@@ -84,24 +84,22 @@ include('./Web/Includes/Content/Headers/Register.php');
 									';	
 									
 								}else{
-									echo "
-									
-									<script type='text/javascript' language='JavaScript'>
-									var swfobj = new SWFObject('".$this->hotel->get_HotelWeb()."/flash/HabboRegistration.swf', 'habboreg', '435', '400', '8');
-									swfobj.addParam('base', '".$this->hotel->get_HotelWeb()."/flash/');
-									swfobj.addParam('wmode', 'opaque');
-									swfobj.addParam('AllowScriptAccess', 'always');
-									swfobj.addVariable('figuredata_url', '".$this->hotel->get_HotelWeb()."/xml/figuredata.xml');
-									swfobj.addVariable('draworder_url', '".$this->hotel->get_HotelWeb()."/xml/draworder.xml');
-									swfobj.addVariable('localization_url', '".$this->hotel->get_HotelWeb()."/xml/figure_editor.xml');
-									swfobj.addVariable('figure', 'hr-145-42.hd-209-1.ch-220-87.lg-270-76.sh-305-89.ha-1018-.ea-1401-62.wa-2007-');
-									swfobj.addVariable('gender', 'M');
-									swfobj.addVariable('showClubSelections', '1');
-									swfobj.write('flashcontent');
-									</script>"
-									;
+									echo '
+										 <script type="text/javascript" language="JavaScript">
+										 var swfobj = new SWFObject("../../../habboweb/19/7/web-gallery/flash/HabboRegistration.swf", "habboreg", "435", "400", "8");
+										 swfobj.addParam("base", "../../../habboweb/19/7/web-gallery/flash/");
+										 swfobj.addParam("wmode", "opaque");
+									     swfobj.addParam("AllowScriptAccess", "always");
+										 swfobj.addVariable("localization_url", "'.$this->hotel->get_HotelWeb().'/habboweb/19/7/web-gallery/xml/figure_editor.xml");
+									     swfobj.addVariable("figuredata_url", "'.$this->hotel->get_HotelWeb().'/habboweb/19/7/web-gallery/xml/figure_data.xml");
+									     swfobj.addVariable("draworder_url", "'.$this->hotel->get_HotelWeb().'/habboweb/19/7/web-gallery/xml/draworder.xml");
+										 swfobj.addVariable("figure", "'.$this->newHabbo->get_HabboFigure().'");
+									     swfobj.addVariable("gender", "'.$this->newHabbo->get_HabboGender().'");
+										 swfobj.write("flashcontent");
+										 </script>	
+							
 								
-								
+									';
 								}
 								
 								?>

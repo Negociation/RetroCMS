@@ -153,11 +153,26 @@ $teste = new Figure('1000118001270012900121001',null);
 										}, 1000);
 								};
 							  </script>
-							  
-							  
+								<script>
+								function teste(){
+								document.getElementById('experience').addEventListener('click', function (e) {
+									Event.stop(e);
+									var dialog = createDialog("habboTV", "Habbo Experience", 9001, 0, -1000, closeTVResult);
+									appendDialogBody(dialog, "<p style=\"text-align:center\"><img src=\"<?php echo $this->hotel->get_HotelWeb() ?>/habboweb/16/11/web-gallery/progress_habbos.gif\" alt=\"\" width=\"29\" height=\"6\" /></p><div style=\"clear\"></div>", true);
+									moveDialogToCenter(dialog);
+									showOverlay();
+									new Ajax.Request("<?php echo $this->hotel->get_HotelURL() ?>/Experience/",
+										{ method: "post", parameters: "product="+encodeURIComponent("g0 group_product"), onComplete: function(req, json) {
+											setDialogBody(dialog, req.responseText);			
+										} }
+									); 
+							   }, false);
+								}
+							
+								</script>
 							  
 
-<a href="http://web.archive.org/web/20071024132417/http://www.habbo.co.uk/news/article329.html" target="_blank" id="randLink"><img src="<?php echo $this->hotel->get_HotelWeb() ?>/c_images/shark_tale/EN_tutorial_pic_smalll.gif" border="0" id="randImage"></a>
+							<img src="<?php echo $this->hotel->get_HotelWeb() ?>/c_images/shark_tale/EN_tutorial_pic_smalll.gif" border="0" id="experience">
 <br>
 
                            </td>
