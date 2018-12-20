@@ -162,7 +162,7 @@ $teste = new Figure('1000118001270012900121001',null);
 									moveDialogToCenter(dialog);
 									showOverlay();
 									new Ajax.Request("<?php echo $this->hotel->get_HotelURL() ?>/Experience/",
-										{ method: "post", parameters: "product="+encodeURIComponent("g0 group_product"), onComplete: function(req, json) {
+										{ method: "post", parameters: "product="+encodeURIComponent("g0 group_product"), onComplete: function(req, text) {
 											setDialogBody(dialog, req.responseText);			
 										} }
 									); 

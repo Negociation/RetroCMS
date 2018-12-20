@@ -115,5 +115,6 @@ switch (get_class($this)){
 			
 			</script>
 
+<script language="JavaScript" type="text/javascript" src="http://localhost/habboweb/16/11/web-gallery/js/swfobject.js"></script>
 
 		

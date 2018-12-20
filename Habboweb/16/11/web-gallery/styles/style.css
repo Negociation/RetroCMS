@@ -1540,21 +1540,22 @@ a.dialog-tv-exit, a.dialog-tvtab-exit {
 }
 
 div.dialog-tv-content, div.dialog-tvtab-content {
-	background-color: #E2E2E2;
+	background-color: black;
+	color: white;
 	background-repeat: repeat-y;
 	background-image: url(../images/dialogs/tv-content-l.png);
 	padding: 0;
-	margin: 0;
+
 	clear: both;
 }
 
 div.dialog-tv-body, div.dialog-tvtab-body {
 	background-position: top right;
 	background-repeat: repeat-y;
-	margin: 0 0 0 37px;
+	margin: 0 0 0 0px;
 	background-image: url(../images/dialogs/tv-content-r.png);
 	padding: 0px 0px 0 0;
-	text-align: left;
+	text-align: center;
 }
 
 div.dialog-tv-body p, div.dialog-tvtab-body p {
