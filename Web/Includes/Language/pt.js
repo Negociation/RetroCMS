@@ -84,7 +84,7 @@ var WORDS_PT = {
   "login-content-contentRight": "Se você já possui conta no Habbo, entre aqui usando seu nome Habbo e senha (os mesmo que você usa no Hotel).",
   "login-content-holderUser": "MEU NOME HABBO",
   "login-content-holderPassword": "SENHA",
-  "login-content-loginSubmit": "Entre",  
+  "login-content-loginSubmit": "Entre",
   "login-content-loginForgotTitle": "Esqueceu a senha?",   
   "login-content-loginForgotContent": "Se você esqueceu sua senha, entre em contato com o Suporte usando a ",  
   "login-content-loginForgotContentURL": "Ferramenta de Ajuda Habbo",  
@@ -128,6 +128,14 @@ var WORDS_PT = {
  	"register-StepTitle-Welcome" : "BEM VINDO AO HABBO!",
 	"register-Finish": "PRONTO",
 
+	//Logout 
+	"logout-headerTitle": "Você saiu do Habbo",
+	"logout-content1": "Você saiu do Habbo.",
+	"logout-content2": "Esperamos que tenha falado com muitos amigos.",
+	"logout-content3": "Retorne em breve!",
+	"logout-content4": "Se deseja entrar novamente,",
+	"logout-content4Url": "clique aqui",
+	
 	//Months
 	"month-1": "Janeiro",
 	"month-2": "Fevereiro",

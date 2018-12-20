@@ -132,6 +132,14 @@ var WORDS_EN = {
 	"register-Finish": "DONE",
 	"register-continue": "CONTINUE",
 	
+	//Logout 
+	"logout-headerTitle": "Logged out",
+	"logout-content1": "You have logged out succesfully.",
+	"logout-content2": "Goodbye, and we hope you come back soon!",
+	"logout-content3": "",
+	"logout-content4": "",
+	"logout-content4Url": "Sign in again",
+	
 	//Months
 	"month-1": "Janaury",
 	"month-2": "February",
