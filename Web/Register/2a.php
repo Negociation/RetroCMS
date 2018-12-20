@@ -24,7 +24,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 	<div class="headline">
 		<div class="headline-content">
 			<div class="headline-wrapper">
-				<h2><span class ="lang-register-headerTitle">Registration</span> <a href="<?php echo $this->hotel->get_HotelURL(); ?>/register/exit" class="exit"><span class ="lang-register-headerExit">Cancel</span></a></h2>
+					<h2><span class ="lang-register-headerTitle">Registro</span> <a href="<?php echo $this->hotel->get_HotelURL(); ?>/register/exit" class="exit"><span class ="lang-register-headerExit">Cancelar</span></a></h2>
 			</div>
 		</div>
 	</div>
@@ -33,7 +33,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 			<div class="content-column1">
 				<div class="bubble">
 					<div class="bubble-body">               
-						<span class ="lang-register-BubbleContent2a">Now to pick your habbo name and password. A good password should contain numbers and both UPPER and lowercase letters.</span>
+						<span class ="lang-register-BubbleContent2a">Agora, escolha seu nome habbo e senha. Uma boa senha deve conter números e letras MAIÚSCULAS e minúsculas.</span>
 						<div class="clear"></div>
 					</div>
 				</div>
@@ -62,13 +62,13 @@ include('./Web/Includes/Content/Headers/Register.php');
 							<div class="content-white-content">                                                
 								<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/register/step/3" id="stepform">                                                    
 									<p>                                                        
-										<b><span class ="lang-register-StepTitle-Username">CHOOSE YOUR USERNAME:</span></b>
+										<b><span class ="lang-register-StepTitle-Username">ESCOLHA SEU NOME HABBO:</span></b>
 										<br>
-										<span class ="lang-register-StepContent-UsernameBefore">Your</span> <b><span class ="lang-register-StepHolder-Username">username</span></b> <span class ="lang-register-StepContent-UsernameAfter">can contain lowercase and uppercase letters. Your username can also contain numbers and the following characters: -=?!@:. </span>                                                    
+										<span class ="lang-register-StepContent-UsernameBefore">Seu</span> <b><span class ="lang-register-StepHolder-Username">nome habbo</span></b> <span class ="lang-register-StepContent-UsernameAfter">pode conter letras minúsculas e maiúsculas. Seu nome habbo também pode conter números e os seguintes caracteres: - =?! @ :. </span>                                                    
 									</p> 
 									
 									<p>                                                        
-										<label for="required-avatarName" class="registration-text"><span class ="lang-register-StepHolder-Username">Username</span></label>
+										<label for="required-avatarName" class="registration-text"><span class ="lang-register-StepHolder-Username">Nome Habbo</span></label>
 										<br>                                                        
 										<input type="text" name="required-avatarName" id="username" maxlength="14" value="" class="registration-text required-avatarName">                                                    
 									</p> 
@@ -76,20 +76,20 @@ include('./Web/Includes/Content/Headers/Register.php');
 									<hr> 
 									
 									<p>                                                        
-										<b>NOW, CHOOSE YOUR PASSWORD:</b>
+										<b>AGORA ESCOLHA SUA SENHA:</b>
 										<br>
-										<span class ="lang-register-StepContent-PasswordBefore">Your</span> <b><span class ="lang-register-StepHolder-Password">password</span></b> <span class ="lang-register-StepContent-PasswordAfter">must be at least six characters long. Your password can contain both uppercase letters and numbers.</span>
+										<span class ="lang-register-StepContent-PasswordBefore">Sua</span> <b><span class ="lang-register-StepHolder-Password">senha</span></b> <span class ="lang-register-StepContent-PasswordAfter">deve ter pelo menos seis caracteres. Sua senha pode conter letras maiúsculas e números.</span>
 									</p> 
 									
 									<p>                                                        
-										<label for="required-password" class="registration-text"><span class ="lang-register-StepHolder-Password">Password</span></label><br>                                                        
+										<label for="required-password" class="registration-text"><span class ="lang-register-StepHolder-Password">Senha</span></label><br>                                                        
 										<input type="password" name="required-password" id="password" maxlength="32" value="" class="registration-text required-password required-password2">                                                    
 									</p>  
 									
 									<div id="pwStatus"></div>                                                    
 									
 									<p>                                                       
-										<label for="required-password" class="registration-text"><span class ="lang-register-StepHolder-RetypePassword">Retype password</span></label><br>                                                        
+										<label for="required-password" class="registration-text"><span class ="lang-register-StepHolder-RetypePassword">Digite sua senha de novo</span></label><br>                                                        
 										<input type="password" name="required-password" id="retypedPassword" maxlength="32" value="" class="registration-text required-retypedPassword required-retypedPassword2">                                                    
 									</p>   
 								

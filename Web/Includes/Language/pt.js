@@ -121,7 +121,10 @@ var WORDS_PT = {
 	"register-BubbleContent4": "Por favor, leia os Termos e Condições cuidadosamente. Estes são mais interessantes do que os habbo reais.",
 	"register-StepContent-TOS" : "Você deve concordar com os seguintes termos.",
 	"register-StepHolder-TOS" : "Eu aceito os Termos e Condições.",
-
+	"register-BubbleContent5Before": "Parabéns",
+	"register-BubbleContent5After": "! Você agora é um Habbo!",
+ 	"register-StepTitle-Welcome" : "BEM VINDO AO HABBO!",
+	"register-Finish": "PRONTO",
 
 	
 	

@@ -98,4 +98,36 @@ var WORDS_EN = {
    //Client
    "topbar-client-count": "Habbos online now",
    "topbar-client-logout": "CLOSE HOTEL",
+   
+   
+     //Register
+	"register-headerTitle": "Registration",
+	"register-headerExit": "Cancel",
+	"register-BubbleContent1": "Now the fun begins! Choose what you want to look like in habbo!",
+	"register-BubbleContent2a": "Now to pick your habbo name and password. A good password should contain numbers and both UPPER and lowercase letters.",
+	"register-StepTitle-Username" : "CHOOSE YOUR USERNAME: ",
+ 	"register-StepContent-UsernameBefore" :"Your",
+	"register-StepHolder-Username": "username", 
+ 	"register-StepContent-UsernameAfter" : "can contain lowercase and uppercase letters. Your username can also contain numbers and the following characters: -=?!@:. ",
+	"register-StepTitle-Password" : "NOW, CHOOSE YOUR PASSWORD:",
+ 	"register-StepContent-PasswordBefore" : "Your",
+	"register-StepHolder-Password": "password",  
+ 	"register-StepContent-PasswordAfter" :"must be at least six characters long. Your password can contain both uppercase letters and numbers.",
+	"register-StepHolder-RetypePassword": "Retype Password",	
+	"register-BubbleContent2b": "Now to pick your Habbo name! Who are you going to be in Habbo?",
+ 	"register-StepContent-UsernamePicked" : "Sorry, but that name is already taken. How about one of these ? ",
+	"register-StepHolder-Other": "Other:",  
+	"register-BubbleContent3": "Email is the only way for our Support team to contact you if you need any help with your account.",
+ 	"register-StepContent-Email" : "Please enter your email address.",
+	"register-StepHolder-Email": "Your email address:  ",  
+	"register-BubbleContent4": "Please read the Terms and Conditions carefully. These ones are more intresting than real habbo ones.",
+	"register-StepContent-TOS" : "You must agree to the following terms.",
+	"register-StepHolder-TOS" : "I accept the Terms and Conditions.",
+	"register-BubbleContent5Before": "Congratulations",
+	"register-BubbleContent5After": "! You are now a habbo!",
+ 	"register-StepTitle-Welcome" : "Welcome to Habbo!",
+	"register-Finish": "DONE",
+
+	
+	
 };

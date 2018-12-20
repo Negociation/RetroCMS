@@ -23,7 +23,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 			<div class="headline">
 				<div class="headline-content">
 					<div class="headline-wrapper">
-						<h2><span class ="lang-register-headerTitle">Registration</span> <a href="<?php echo $this->hotel->get_HotelURL(); ?>/register/exit" class="exit"><span class ="lang-register-headerExit">Cancel</span></a></h2>
+						<h2><span class ="lang-register-headerTitle">Registro</span> <a href="<?php echo $this->hotel->get_HotelURL(); ?>/register/exit" class="exit"><span class ="lang-register-headerExit">Cancelar</span></a></h2>
 					</div>
 				</div>
 			</div>
@@ -32,7 +32,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 					<div class="content-column1">
 						<div class="bubble">
 							<div class="bubble-body">
-								<span class ="lang-register-BubbleContent4">Please read the Terms and Conditions carefully. These ones are more intresting than real habbo ones.</span>
+								<span class ="lang-register-BubbleContent4">Por favor, leia os Termos e Condições cuidadosamente. Estes são mais interessantes do que os habbo reais.</span>
 								<div class="clear"></div>
 							</div>
 						</div>
@@ -60,7 +60,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 									<div class="content-white-content">
 										<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/register/done" id="stepform" autocomplete="off">
 											<p>
-												<span class ="lang-register-StepContent-TOS">You must agree to the following terms.</span>
+												<span class ="lang-register-StepContent-TOS">Você deve concordar com os seguintes termos.</span>
 											</p>
 											<div id="terms">
 												<span style="font-weight: bold;">
@@ -82,7 +82,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 											</div>
 											<p id="required-termsOfService">
 												<input type="checkbox" name="T-O-S" id="T-O-S" value="true"> 
-												<label for="T-O-S"><span class ="lang-register-StepHolder-TOS">I accept the Terms and Conditions.</span></label>
+												<label for="T-O-S"><span class ="lang-register-StepHolder-TOS">Eu aceito os Termos e Condições.</span></label>
 											</p>
 											<div id="register-buttons">
 												<div align="right">

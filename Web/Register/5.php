@@ -24,7 +24,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 	<div class="headline">
 		<div class="headline-content">
 			<div class="headline-wrapper">
-				<h2>Registration</h2>
+				<h2><span class ="lang-register-headerTitle">Registro</span></h2>
 			</div>
 		</div>
 	</div>
@@ -33,7 +33,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 			<div class="content-column1">
 				<div class="bubble">
 					<div class="bubble-body">
-						Congratulations <?php echo $this->newHabbo->get_HabboName(); ?>! You are now a habbo! 
+						<span class ="lang-register-BubbleContent5Before">Parabéns</span> <?php echo $this->newHabbo->get_HabboName(); ?><span class ="lang-register-BubbleContent5After">! Você agora é um Habbo!</span> 
 						<div class="clear"></div>
 					</div>
 				</div>
@@ -49,11 +49,11 @@ include('./Web/Includes/Content/Headers/Register.php');
 					<div class="content-white">
 						<div class="content-white-body">
 							<div class="content-white-content">
-								<h4>Welcome to Habbo!</h4>
+								<h4><span class ="lang-register-StepTitle-Welcome">Bem Vindo ao Habbo!</span></h4>
 								<img src="<?php echo $this->hotel->get_HotelWeb() ?>/c_images/album235/hh_welcome.png" alt="">
 								<div align="left" style="margin-top: 10px;">
 								
-									<a href="<?php echo $this->hotel->get_HotelURL() ?>" class="process-button" style=" width: 0px; height: 0px; padding-top: 2px; padding-bottom: 2px; padding-left: 4px; padding-right: 4px;" >done</a>
+									<a href="<?php echo $this->hotel->get_HotelURL() ?>" class="process-button" style=" width: 0px; height: 0px; padding-top: 2px; padding-bottom: 2px; padding-left: 4px; padding-right: 4px;" ><span class ="lang-register-Finish">PRONTO</span></a>
 								</div>
 							</div>
 							<div class="clear"></div>

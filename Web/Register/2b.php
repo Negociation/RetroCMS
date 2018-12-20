@@ -24,7 +24,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 	<div class="headline">
 		<div class="headline-content">
 			<div class="headline-wrapper">
-				<h2><span class ="lang-register-headerTitle">Registration</span> <a href="<?php echo $this->hotel->get_HotelURL(); ?>/register/exit" class="exit"><span class ="lang-register-headerExit">Cancel</span></a></h2>
+					<h2><span class ="lang-register-headerTitle">Registro</span> <a href="<?php echo $this->hotel->get_HotelURL(); ?>/register/exit" class="exit"><span class ="lang-register-headerExit">Cancelar</span></a></h2>
 			</div>
 		</div>
 	</div>
@@ -33,7 +33,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 			<div class="content-column1">
 				<div class="bubble">
 					<div class="bubble-body">               
-						<span class="lang-register-BubbleContent2b">Now to pick your Habbo name! Who are you going to be in Habbo?</span>
+						<span class="lang-register-BubbleContent2b">Agora escolha o seu Nome Habbo! Quem você quer ser no Habbo ?</span>
 						<div class="clear"></div>
 					</div>
 				</div>
@@ -62,7 +62,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 							<div class="content-white-content">                                                
 								<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/register/step/3" id="stepform">                                                    
 									<p>                                                        
-										<span class ="lang-register-StepContent-UsernamePicked">Sorry, but that name is already taken. How about one of these ?</span>
+										<span class ="lang-register-StepContent-UsernamePicked">Desculpe, mas esse nome já foi escolhido. Que tal um destes ?</span>
 										</p> 
 									
 									<p>                                                        

@@ -23,7 +23,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 				<div class="headline">
 					<div class="headline-content">
 						<div class="headline-wrapper">
-						<h2><span class ="lang-register-headerTitle">Registration</span> <a href="<?php echo $this->hotel->get_HotelURL(); ?>/register/exit" class="exit"><span class ="lang-register-headerExit">Cancel</span></a></h2>
+						<h2><span class ="lang-register-headerTitle">Registro</span> <a href="<?php echo $this->hotel->get_HotelURL(); ?>/register/exit" class="exit"><span class ="lang-register-headerExit">Cancelar</span></a></h2>
 						</div>
 					</div>
 				</div>
@@ -32,7 +32,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 						<div class="content-column1">
 							<div class="bubble">
 								<div class="bubble-body">      
-											<span class ="lang-register-BubbleContent3">Email is the only way for our Support team to contact you if you need any help with your account.</span>
+											<span class ="lang-register-BubbleContent3">O E-mail é a única maneira de a nossa equipe de suporte entrar em contato com você se precisar de ajuda com sua conta.</span>
 											<div class="clear"></div>
 										</div>
 									</div>
@@ -60,10 +60,10 @@ include('./Web/Includes/Content/Headers/Register.php');
 												<div class="content-white-content">
 													<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/register/step/4" id="stepform">
 														<p>
-															<span class ="lang-register-StepContent-Email">Please enter your email address.</span>
+															<span class ="lang-register-StepContent-Email">Por Favor, informe o seu endereço de email.</span>
 														</p>
 														<p>
-															<label for="required-email" class="registration-text"><span class ="lang-register-StepHolder-Email">Your email address:</span> </label><br>
+															<label for="required-email" class="registration-text"><span class ="lang-register-StepHolder-Email">Seu endereço de email:</span> </label><br>
 															<input type="text" name="required-email" id="required-email" value="" class="registration-text required-email">
 														</p>
 														<div id="register-buttons">
