@@ -13,6 +13,8 @@
             <link href="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/styles/style.css" type="text/css" rel="stylesheet"/>
 			<link href="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/styles/boxes.css" type="text/css" rel="stylesheet"/>	
 			<link href="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/styles/ads.css" type="text/css" rel="stylesheet"/>
+			<link href="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/styles/custom/style_custom_default.css" type="text/css" rel="stylesheet"/>
+
 <?php 
 //Special CSS Includes
 switch (get_class($this)){
