@@ -13,7 +13,7 @@
 define( 'MYSQL_HOST', 'localhost' );
 define( 'MYSQL_USER', 'root' );
 define( 'MYSQL_PASSWORD', '' );
-define( 'MYSQL_DB_NAME', 'retro' );
+define( 'MYSQL_DB_NAME', 'retroinstall' );
 
 //Check if MySQL Conection Works
 try{
@@ -36,4 +36,6 @@ foreach (glob("./Core/Settings/Models/*.php") as $model){ require_once $model; }
 foreach (glob("./Core/Settings/Controllers/*.php") as $controller){ include $controller; }
 
 ?>
+
+
 

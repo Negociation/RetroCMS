@@ -31,27 +31,34 @@ class HotelModel{
 	
 	public function set_HotelInstall($hotelObject){
 		$status = true;
-		try{
-			$stmt = $this->hotelConection->prepare(file_get_contents('./core/install/retrodb.sql'));
-			$stmt->bindValue(':url',$hotelObject->get_HotelUrl() );
-			$stmt->bindValue(':web',$hotelObject->get_HotelWeb() );
-			//Buggy
-			//$stmt->bindValue(':version', $hotelObject->get_HotelVersion() );
-			$stmt->bindValue(':version', 16 );
-			$stmt->bindValue(':name',$hotelObject->get_HotelName());
-			$stmt->bindValue(':nick',$hotelObject->get_HotelNick());
-			$stmt->bindValue(':texts',$hotelObject->get_HotelTexts());
-			$stmt->bindValue(':vars',$hotelObject->get_HotelVariables());
-			$stmt->bindValue(':dcr',$hotelObject->get_HotelDcr());
-			$stmt->bindValue(':host',$hotelObject->get_HotelHost());
-			$stmt->bindValue(':port',$hotelObject->get_HotelPort());
-			$stmt->bindValue(':mushost',$hotelObject->get_HotelMusHost());
-			$stmt->bindValue(':musport',$hotelObject->get_HotelMusPort());
-			$stmt->bindValue(':startcredits',100);			
-			$stmt->execute();
-		}catch(Exception $e){
-			$status = false;
-			echo "Ocorreu um erro com a execução do Script";
+		foreach (glob("./Core/Install/*.sql") as $sqlcontent){ 
+			try{
+				$stmt = $this->hotelConection->prepare(file_get_contents($sqlcontent));
+				if($sqlcontent == './Core/Install/retroinstall_table_site_settings.sql'){
+
+				$stmt->bindValue(':url',$hotelObject->get_HotelUrl() );
+				$stmt->bindValue(':web',$hotelObject->get_HotelWeb() );
+				//Buggy
+				//$stmt->bindValue(':version', $hotelObject->get_HotelVersion() );
+				$stmt->bindValue(':version', 16 );
+				$stmt->bindValue(':name',$hotelObject->get_HotelName());
+				$stmt->bindValue(':nick',$hotelObject->get_HotelNick());
+				$stmt->bindValue(':texts',$hotelObject->get_HotelTexts());
+				$stmt->bindValue(':vars',$hotelObject->get_HotelVariables());
+				$stmt->bindValue(':dcr',$hotelObject->get_HotelDcr());
+				$stmt->bindValue(':host',$hotelObject->get_HotelHost());
+				$stmt->bindValue(':port',$hotelObject->get_HotelPort());
+				$stmt->bindValue(':mushost',$hotelObject->get_HotelMusHost());
+				$stmt->bindValue(':musport',$hotelObject->get_HotelMusPort());
+				}
+				if($sqlcontent == './Core/Install/retroinstall_table_users.sql'){
+				$stmt->bindValue(':startcredits',100);	
+				}				
+				$stmt->execute();
+			}catch(Exception $e){
+				$status = false;
+				echo "Ocorreu um erro com a execução do Script";
+			}
 		}
 		return $status;
 	}
