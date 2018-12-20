@@ -98,4 +98,31 @@ var WORDS_PT = {
    
   //Logout 
 
-};
+  //Register
+	"register-headerTitle": "Registro",
+	"register-headerExit": "Cancelar",
+	"register-BubbleContent1": "Agora a diversão começa! Escolha como você quer parecer no habbo!",
+	"register-BubbleContent2a": "Agora, escolha seu nome habbo e senha. Uma boa senha deve conter números e letras MAIÚSCULAS e minúsculas.",
+	"register-StepTitle-Username" : "ESCOLHA SEU NOME HABBO:",
+ 	"register-StepContent-UsernameBefore" :"Seu",
+	"register-StepHolder-Username": "nome habbo", 
+ 	"register-StepContent-UsernameAfter" : "pode conter letras minúsculas e maiúsculas. Seu nome habbo também pode conter números e os seguintes caracteres: - =?! @ :. ",
+	"register-StepTitle-Password" : "AGORA, ESCOLHA SUA SENHA:",
+ 	"register-StepContent-PasswordBefore" : "Sua",
+	"register-StepHolder-Password": "senha",  
+ 	"register-StepContent-PasswordAfter" :"deve ter pelo menos seis caracteres. Sua senha pode conter letras maiúsculas e números.",
+	"register-StepHolder-RetypePassword": "Digite sua senha de novo",	
+	"register-BubbleContent2b": "Agora escolha o seu Nome Habbo! Quem você quer ser no Habbo ?",
+ 	"register-StepContent-UsernamePicked" : "Desculpe, mas esse nome já foi escolhido. Que tal um destes ? ",
+	"register-StepHolder-Other": "Outro:",  
+	"register-BubbleContent3": "O E-mail é a única maneira de a nossa equipe de suporte entrar em contato com você se precisar de ajuda com sua conta.",
+ 	"register-StepContent-Email" : "Por Favor, informe o seu endereço de email.",
+	"register-StepHolder-Email": "SEU ENDEREÇO DE EMAIL: ",  
+	"register-BubbleContent4": "Por favor, leia os Termos e Condições cuidadosamente. Estes são mais interessantes do que os habbo reais.",
+	"register-StepContent-TOS" : "Você deve concordar com os seguintes termos.",
+	"register-StepHolder-TOS" : "Eu aceito os Termos e Condições.",
+
+
+	
+	
+	};

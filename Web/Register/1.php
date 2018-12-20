@@ -23,7 +23,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 	<div class="headline">
 		<div class="headline-content">
 			<div class="headline-wrapper">
-				<h2>Registration <a href="<?php echo $this->hotel->get_HotelURL(); ?>/register/exit" class="exit">Cancel</a></h2>
+				<h2><span class ="lang-register-headerTitle">Registration</span> <a href="<?php echo $this->hotel->get_HotelURL(); ?>/register/exit" class="exit"><span class ="lang-register-headerExit">Cancel</span></a></h2>
 			</div>
 		</div>
 	</div>
@@ -32,7 +32,7 @@ include('./Web/Includes/Content/Headers/Register.php');
 			<div class="content-column1">
 				<div class="bubble">
 					<div class="bubble-body">
-						Now the fun begins! Choose what you want to look like in habbo!
+						<span class="lang-register-BubbleContent1">Now the fun begins! Choose what you want to look like in habbo!</span>
 						<div class="clear"></div>
 					</div>
 				</div>
