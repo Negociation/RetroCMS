@@ -1518,7 +1518,7 @@ div.dialog-tv-top h3, div.dialog-tvtab-top h3 {
 	height: 34px;
 	background-repeat: repeat-x;
 	background-image: url(../images/dialogs/tv-header.png);
-	font-size: 10px;
+	font-size: 9px;
 	font-weight: bold;
 	color: #7f5d0b;
 	text-transform: uppercase;
@@ -1527,7 +1527,7 @@ div.dialog-tv-top h3, div.dialog-tvtab-top h3 {
 
 div.dialog-tv-top h3 span, div.dialog-tvtab-top h3 span {
 	float: left;
-	padding: 5px 200px 0 4px;
+	padding: 7px 200px 0 4px;
 }
 
 a.dialog-tv-exit, a.dialog-tvtab-exit {

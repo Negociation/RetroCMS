@@ -107,7 +107,6 @@ switch (get_class($this)){
 			
 					if (window.localStorage.getItem('userLang') === null){
 						window.localStorage.setItem('userLang', 'PT');
-						alert(window.localStorage.getItem('userLang'));
 					}
 					var lang =  window.localStorage.getItem('userLang');
 					LoadLanguage(lang); 

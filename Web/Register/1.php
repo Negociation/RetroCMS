@@ -86,13 +86,13 @@ include('./Web/Includes/Content/Headers/Register.php');
 								}else{
 									echo '
 										 <script type="text/javascript" language="JavaScript">
-										 var swfobj = new SWFObject("../../../habboweb/19/7/web-gallery/flash/HabboRegistration.swf", "habboreg", "435", "400", "8");
-										 swfobj.addParam("base", "../../../habboweb/19/7/web-gallery/flash/");
+										 var swfobj = new SWFObject("'.$this->hotel->get_HotelWeb().'/habboweb/19_893f5b1b323d5c8b3767d50e5f5988a6/7/web-gallery/flash/HabboRegistration.swf","habboreg", "435", "400", "8");
+										 swfobj.addParam("base", "'.$this->hotel->get_HotelWeb().'/habboweb/19_893f5b1b323d5c8b3767d50e5f5988a6/7/web-gallery/flash/");
 										 swfobj.addParam("wmode", "opaque");
 									     swfobj.addParam("AllowScriptAccess", "always");
-										 swfobj.addVariable("localization_url", "'.$this->hotel->get_HotelWeb().'/habboweb/19/7/web-gallery/xml/figure_editor.xml");
-									     swfobj.addVariable("figuredata_url", "'.$this->hotel->get_HotelWeb().'/habboweb/19/7/web-gallery/xml/figure_data.xml");
-									     swfobj.addVariable("draworder_url", "'.$this->hotel->get_HotelWeb().'/habboweb/19/7/web-gallery/xml/draworder.xml");
+										 swfobj.addVariable("localization_url", "'.$this->hotel->get_HotelWeb().'/habboweb/19_893f5b1b323d5c8b3767d50e5f5988a6/7/web-gallery/xml/figure_editor.xml");
+									     swfobj.addVariable("figuredata_url", "'.$this->hotel->get_HotelWeb().'/habboweb/19_893f5b1b323d5c8b3767d50e5f5988a6/7/web-gallery/xml/figure_data.xml");
+									     swfobj.addVariable("draworder_url", "'.$this->hotel->get_HotelWeb().'/habboweb/19_893f5b1b323d5c8b3767d50e5f5988a6/7/web-gallery/xml/draworder.xml");
 										 swfobj.addVariable("figure", "'.$this->newHabbo->get_HabboFigure().'");
 									     swfobj.addVariable("gender", "'.$this->newHabbo->get_HabboGender().'");
 										 swfobj.write("flashcontent");
