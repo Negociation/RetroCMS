@@ -92,6 +92,19 @@ switch (get_class($this)){
 					var Text = window["WORDS_"+lang][LangVar];
 					j(this).text(Text);        
 				  });
+				  
+				  
+				  j('option[id^="lang"]').each(function(){
+					var LangVar = (this.id).replace('lang-','');
+					var Text = window["WORDS_"+lang][LangVar];
+					j(this).text(Text);        
+				  });
+				  
+				  j('input[id^="lang"]').each(function(){
+					var LangVar = (this.id).replace('lang-','');
+					var Text = window["WORDS_"+lang][LangVar];
+					j(this).val(Text);        
+				  });
 				}
 
 				window.onload = function Start(){ 

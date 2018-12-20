@@ -24,7 +24,7 @@
 		<div id="process-header">
 			<div id="process-header-body">
 				<div id="process-header-content">
-					<div id="logo"><a href="<?php echo $this->hotel->get_HotelURL(); ?>"></a></div>
+					<div id="habbologo"><a href="<?php echo $this->hotel->get_HotelURL(); ?>"></a></div>
 					<div id="steps">
 						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/images/process/step1<?php if($id == 1){ echo '_on';} ?>.gif" alt="1" width="30" height="26">
 						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/images/process/step_right<?php if($id == 1){ echo '_on';} ?>.gif" alt="" width="20" height="26">

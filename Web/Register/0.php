@@ -23,7 +23,7 @@ include('./Web/Includes/Content/Headers/Account.php');
 			<div class="headline">
 				<div class="headline-content">
 					<div class="headline-wrapper">
-						<h2>Registration <a href="<?php echo $this->hotel->get_HotelURL(); ?>/register/exit" class="exit">Cancel</a></h2>
+					<h2><span class ="lang-register-headerTitle">Registro</span> <a href="<?php echo $this->hotel->get_HotelURL(); ?>/register/exit" class="exit"><span class ="lang-register-headerExit">Cancelar</span></a></h2>
 					</div>
 				</div>
 			</div>
@@ -32,7 +32,7 @@ include('./Web/Includes/Content/Headers/Account.php');
 					<div class="content-column1">
 						<div class="bubble">
 							<div class="bubble-body">
-								Please tell us your birthday.
+								<span class ="lang-register-BubbleContent0">Por favor, nos informe sua data de nascimento.</span>
 								<div class="clear"></div>
 							</div>
 						</div>
@@ -59,12 +59,12 @@ include('./Web/Includes/Content/Headers/Account.php');
 								<div class="content-white-body">
 									<div class="content-white-content">
 										<form method="post" action="<?php echo $this->hotel->get_HotelURL(); ?>/register/step/1" id="stepform">
-											<div><label class="registration-text">Birthday</label></div>
+											<div><label class="registration-text"><span class="lang-register-StepTitle-Birthday">Data de Nascimento</span></label></div>
 											<div id="required-birthday">
 												<select name="day" id="day" class="dateselector">
 													<option value="">--</option>
 													<option value="1">1</option>
-													<option value="2">2</option>
+													<option value="2">2</option
 													<option value="3">3</option>
 													<option value="4">4</option>
 													<option value="5">5</option>
@@ -97,18 +97,18 @@ include('./Web/Includes/Content/Headers/Account.php');
 												</select>
 												<select name="month" id="month" class="dateselector">
 													<option value="">--</option>
-													<option value="1">January</option>
-													<option value="2">February</option>
-													<option value="3">March</option>
-													<option value="4">April</option>
-													<option value="5">May</option>
-													<option value="6">June</option>
-													<option value="7">July</option>
-													<option value="8">August</option>
-													<option value="9">September</option>
-													<option value="10">October</option>
-													<option value="11">November</option>
-													<option value="12">December</option>
+													<option id="lang-month-1" value="1">Janeiro</option>
+													<option id="lang-month-2" value="2">Fevereiro</option>
+													<option id="lang-month-3" value="3">Março</option>
+													<option id="lang-month-4" value="4">Abril</option>
+													<option id="lang-month-5" value="5">Maio</option>
+													<option id="lang-month-6" value="6">Junho</option>
+													<option id="lang-month-7" value="7">Julho</option>
+													<option id="lang-month-8" value="8">Agosto</option>
+													<option id="lang-month-9" value="9">Setembro</option>
+													<option id="lang-month-10" value="10">Outubro</option>
+													<option id="lang-month-11" value="11">Novembro</option>
+													<option id="lang-month-12" value="12">Dezembro</option>
 												</select>
 												<select name="year" id="year" class="dateselector">
 													<option value="">--</option>

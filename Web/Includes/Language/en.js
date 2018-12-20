@@ -75,7 +75,7 @@ var WORDS_EN = {
   "login-content-contentLeft" : "Habbo is an online community that lets you create your own virtual space for you and your friends. With thousands of members already checked in there's always something to do...", 
   "login-content-registrationText": "PLEASE START BY ENTERING YOUR BIRTHDAY",
   "login-content-registrationSubmit": "Continuar",  
-  "login-content-reistrationReason": "TOP REASONS TO REGISTER",
+  "login-content-registrationReason": "TOP REASONS TO REGISTER",
   "login-content-registerReason1": "Create your own Habbo character and Home page",
   "login-content-registerReason2": "Meet your friends and find new ones",
   "login-content-registerReason3": "Decorate your own room",
@@ -83,7 +83,7 @@ var WORDS_EN = {
   "login-content-registerReason5": "It's completely free!",
   
   "login-headline-wrapperRight": "ALREADY HAVE A HABBO? PLEASE LOG IN HERE!",
-  "login-content-subheaderRight": "",
+  "login-content-subheaderRight": " ",
   "login-content-contentRight": "If you already have a Habbo account then log in here using your Habbo user name and your password. Your user name and password are the same for here as they are in the Hotel.",
   "login-content-holderUser": "MY HABBO NAME",
   "login-content-holderPassword": "PASSWORD",
@@ -101,8 +101,11 @@ var WORDS_EN = {
    
    
      //Register
+	 
 	"register-headerTitle": "Registration",
 	"register-headerExit": "Cancel",
+	"register-BubbleContent0": "Please tell us your birthday.",
+	"register-StepTitle-Birthday" : "Birthday",
 	"register-BubbleContent1": "Now the fun begins! Choose what you want to look like in habbo!",
 	"register-BubbleContent2a": "Now to pick your habbo name and password. A good password should contain numbers and both UPPER and lowercase letters.",
 	"register-StepTitle-Username" : "CHOOSE YOUR USERNAME: ",
@@ -127,7 +130,19 @@ var WORDS_EN = {
 	"register-BubbleContent5After": "! You are now a habbo!",
  	"register-StepTitle-Welcome" : "Welcome to Habbo!",
 	"register-Finish": "DONE",
-
+	"register-continue": "CONTINUE",
 	
-	
+	//Months
+	"month-1": "Janaury",
+	"month-2": "February",
+	"month-3": "March",
+	"month-4": "April",
+	"month-5": "May",
+	"month-6": "June",	
+	"month-7": "July",
+	"month-8": "August",
+	"month-9": "September",	
+	"month-10": "October",	
+	"month-11": "November",	
+	"month-12": "December",	
 };

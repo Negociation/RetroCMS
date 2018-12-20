@@ -91,18 +91,18 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 													</select>
 													<select name="month" id="month" class="dateselector">
 														<option value="">--</option>
-														<option value="1">Janeiro</option>
-														<option value="2">Fevereiro</option>
-														<option value="3">Março</option>
-														<option value="4">Abril</option>
-														<option value="5">Maio</option>
-														<option value="6">Junho</option>
-														<option value="7">Julho</option>
-														<option value="8">Agosto</option>
-														<option value="9">Setembro</option>
-														<option value="10">Outubro</option>
-														<option value="11">Novembro</option>
-														<option value="12">Dezembro</option>
+														<option id="lang-month-1" value="1">Janeiro</option>
+														<option id="lang-month-2" value="2">Fevereiro</option>
+														<option id="lang-month-3" value="3">Março</option>
+														<option id="lang-month-4" value="4">Abril</option>
+														<option id="lang-month-5" value="5">Maio</option>
+														<option id="lang-month-6" value="6">Junho</option>
+														<option id="lang-month-7" value="7">Julho</option>
+														<option id="lang-month-8" value="8">Agosto</option>
+														<option id="lang-month-9" value="9">Setembro</option>
+														<option id="lang-month-10" value="10">Outubro</option>
+														<option id="lang-month-11" value="11">Novembro</option>
+														<option id="lang-month-12" value="12">Dezembro</option>
 													</select>
 													<select name="year" id="year" class="dateselector">
 														<option value="">--</option>
@@ -303,7 +303,7 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 													<input type="password" class="required-password" name="login-password" id="login-password" value=""/>
 												</p>
 												<p class="last">
-													<input type="submit" value="Entre" class="process-button" id="login-submit"/>
+													<input type="submit" value="Entre" class="process-button" id="lang-login-content-loginSubmit"/>
 												</p>
 											</form>
 										</div>
@@ -342,6 +342,7 @@ require_once('./Web/Includes/Content/Headers/Account.php');
 							$("registration-submit").disabled = 'true';
 						}
 					}, false);
+					
 					Event.observe($("login-form"), "submit", function(e) {
 						if ($F("login-username") == "" || $F("login-password") == "") {
 							validatorBeforeSubmit("login-errors");

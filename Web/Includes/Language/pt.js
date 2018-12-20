@@ -101,6 +101,8 @@ var WORDS_PT = {
   //Register
 	"register-headerTitle": "Registro",
 	"register-headerExit": "Cancelar",
+	"register-BubbleContent0": "Por favor, nos informe sua data de nascimento.",
+	"register-StepTitle-Birthday" : "Data de Nascimento",
 	"register-BubbleContent1": "Agora a diversão começa! Escolha como você quer parecer no habbo!",
 	"register-BubbleContent2a": "Agora, escolha seu nome habbo e senha. Uma boa senha deve conter números e letras MAIÚSCULAS e minúsculas.",
 	"register-StepTitle-Username" : "ESCOLHA SEU NOME HABBO:",
@@ -126,6 +128,18 @@ var WORDS_PT = {
  	"register-StepTitle-Welcome" : "BEM VINDO AO HABBO!",
 	"register-Finish": "PRONTO",
 
-	
+	//Months
+	"month-1": "Janeiro",
+	"month-2": "Fevereiro",
+	"month-3": "Março",
+	"month-4": "Abril",
+	"month-5": "Maio",
+	"month-6": "Junho",	
+	"month-7": "Julho",
+	"month-8": "Agosto",
+	"month-9": "Setembro",	
+	"month-10": "Outubro",	
+	"month-11": "Novembro",	
+	"month-12": "Dezembro",		
 	
 	};

@@ -97,17 +97,21 @@ include('./Web/Includes/Content/Headers/Register.php');
 									<div id="register-buttons">
 	
 									<div align="right" "="">
-									<input type="submit" value="Back" id="continuebtn" class="process-button">
 										<input type="hidden" name="required-birth" value="<?php echo $this->newHabbo->get_HabboBirth() ?>" />
 										<input type="hidden" name="newGender" value="<?php echo $this->newHabbo->get_HabboGender() ?>" />
 										<input type="hidden" name="figureData" value="<?php echo $this->newHabbo->get_HabboFigure() ?>" />
 										<input type="submit" value="Continue" id="continuebtn" class="process-button">
+										</form>
+										
 									</div>
 									<div class="clear"></div>                                                    
 									</div>                                                
-								</form>                                            
+							
+
 							</div>
+	
 									<div class="clear"></div>
+						
 								</div>
 							</div>
 							<div class="content-white-bottom">
