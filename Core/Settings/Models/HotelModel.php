@@ -35,7 +35,6 @@ class HotelModel{
 			try{
 				$stmt = $this->hotelConection->prepare(file_get_contents($sqlcontent));
 				if($sqlcontent == './Core/Install/retroinstall_table_site_settings.sql'){
-
 				$stmt->bindValue(':url',$hotelObject->get_HotelUrl() );
 				$stmt->bindValue(':web',$hotelObject->get_HotelWeb() );
 				//Buggy
@@ -57,7 +56,7 @@ class HotelModel{
 				$stmt->execute();
 			}catch(Exception $e){
 				$status = false;
-				echo "Ocorreu um erro com a execução do Script";
+				echo "Ocorreu um erro com a execução do Script em: ".$sqlcontent;
 			}
 		}
 		return $status;
