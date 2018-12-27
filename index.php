@@ -5,28 +5,15 @@
 //----------------------------------------------------------//
 // Developed by: Marcos ( M.tiago )							//
 //////////////////////////////////////////////////////////////
-// Alpha Version 0.8.0 ( Citrine ) 							//
+// Alpha Version 0.8.1 ( Citrine ) 							//
 // Branch: Public											//
 //////////////////////////////////////////////////////////////
 
+$keypair = sodium_crypto_kx_keypair();
+$secret = sodium_crypto_kx_secretkey($keypair);
+$public = sodium_crypto_kx_publickey($keypair);
+printf("secret: %s\npublic: %s", bin2hex($secret), bin2hex($public));
 
-//Session (Check if Session exists)
-session_start();
-if (empty($_SESSION['habboLoggedIn'])){ $_SESSION['habboLoggedIn'] = false; }
-
-//ISO-8859-1 (Portuguese and Spanish Accents)
-header("Content-Type: text/html; charset=utf-8",true);
-
-//Core of Aplication ( Database and RCON )
-require_once "./Core/Core.php";
-
-//URL Treatment Class MVC
-require_once "./Core/Settings/Routes.php";
-require_once "./Core/Settings/Url.php";
-
-//URL Object Call
-$Content = new Route($Conection);
-$Content->Load();
 
 ?>
 
