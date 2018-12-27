@@ -1,6 +1,8 @@
-RewriteEngine on
-RedirectMatch 301 ^/login /account/login
-RedirectMatch 301 ^/logout /account/disconected
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php?origin=$1 [L,QSA]
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RedirectMatch 301 ^/login /account/login
+	RedirectMatch 301 ^/logout /account/disconected
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.*)$ index.php?origin=$1 [QSA,L]
+</IfModule>

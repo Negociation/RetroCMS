@@ -86,19 +86,20 @@ $result[0]['username'],$result[0]['credits'],$result[0]['motto'],$result[0]['bad
 		$status = true;
 		$sql = "INSERT INTO users (`username`, `password`, `figure`,`pool_figure`, `sex`, `motto`,`rank`, `birthday`,`email`) 
 		VALUES (:habboname, :password , :figure,'', :gender, '', :rank, :birth,:email);
-";
+		";
+		
 		try{ 
-		$stmt = $this->hotelConection->prepare($sql);
-		$stmt->bindValue(':habboname', $habboObject->get_HabboName());
-		$stmt->bindValue(':password', password_hash($habboObject->get_HabboPassword(), PASSWORD_ARGON2I));
-		$stmt->bindValue(':figure', $habboObject->get_HabboFigure());
-		$stmt->bindValue(':gender', $habboObject->get_HabboGender());
-		$stmt->bindValue(':rank', $habboObject->get_HabboRank());
-		$stmt->bindValue(':birth', $habboObject->get_HabboBirth());
-		$stmt->bindValue(':email', $habboObject->get_HabboEmail());
-
-		$stmt->execute();
+			$stmt = $this->hotelConection->prepare($sql);
+			$stmt->bindValue(':habboname', $habboObject->get_HabboName());
+			$stmt->bindValue(':password', password_hash($habboObject->get_HabboPassword(), PASSWORD_ARGON2I));
+			$stmt->bindValue(':figure', $habboObject->get_HabboFigure());
+			$stmt->bindValue(':gender', $habboObject->get_HabboGender());
+			$stmt->bindValue(':rank', $habboObject->get_HabboRank());
+			$stmt->bindValue(':birth', $habboObject->get_HabboBirth());
+			$stmt->bindValue(':email', $habboObject->get_HabboEmail());
+			$stmt->execute();
 		}catch (PDOException $e){
+			echo "Erro during create user";
 			$status = false;
 		}
 			return $status;

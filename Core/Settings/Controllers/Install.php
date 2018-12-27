@@ -5,9 +5,10 @@
 //----------------------------------------------------------//
 // Developed by: Marcos ( M.tiago )							//
 //////////////////////////////////////////////////////////////
-// Alpha Version 0.7.0 ( Opal ) 							//		
+// Alpha Version 0.8.0 ( Citrine ) 							//		
 // Branch: Public											//
 //////////////////////////////////////////////////////////////
+
 class Install{
 	private $pageTitle;
 	private $habbo;
@@ -15,13 +16,15 @@ class Install{
 	private $habboModel;
 	private $hotel;
 	
-	public function __construct($hotelConection){ 
-		$this->hotelModel = new HotelModel($hotelConection);
-		$this->hotel = new Hotel();
+	public function __construct($hotelConection){
 		$this->pageTitle = 'Install';
 		$this->newHabbo = new Habbo();
 		$this->newHotel = new Hotel();
-		$this->habboModel = new HabboModel($hotelConection);
+		$this->hotel = new Hotel();
+		if (!is_null($hotelConection)){ 
+			$this->hotelModel = new HotelModel($hotelConection);
+			$this->habboModel = new HabboModel($hotelConection);
+		}
 	}
 	
 	public function default(){
