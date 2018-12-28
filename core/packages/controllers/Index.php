@@ -11,6 +11,9 @@
 
 class Index extends Controller{
 
+	public function default(){
+	echo "Index Loaded";
+	}
 }
 
 

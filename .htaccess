@@ -1,15 +1,17 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-	RedirectMatch 301 ^/login /account/login
-	RedirectMatch 301 ^/logout /account/disconected
+	Redirect /login /account/login
+	Redirect /logout /account/disconnected
 	RewriteRule ^core/?$ - [F,L]
 	RedirectMatch 403 ^/core/?$
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_URI} !-d
+	RewriteCond %{REQUEST_URI} !-f
 	RewriteRule ^(.*)$ index.php?origin=$1 [QSA,L]
 </IfModule>
 
-<filesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+<filesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|view)$">
  Order Allow,Deny
  Deny from all
 </filesMatch>

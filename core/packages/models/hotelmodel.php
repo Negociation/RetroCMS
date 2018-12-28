@@ -9,12 +9,24 @@
 // Branch: Public (Unstable)								//
 //////////////////////////////////////////////////////////////
 
-class Model{
-	protected $hotelConection;
+class HotelModel extends Model{
 
+	public function __construct($hotelConection){
+		$this->hotelConection = $hotelConection;
+	}
 	
-	
+	//Check if table Site_Settings exist and have content inside 
+	public function get_HotelInstall(){
+		try {
+			$sql = 'SELECT 1 FROM Site_Settings LIMIT 1';
+			$result = $this->hotelConection->query($sql);
+		}catch(Exception $e){
+			//If not return false
+			return false;
+		}
+			//If exists return true :D
+		    return $result !== false;
+	}
 }
-
 
 ?>

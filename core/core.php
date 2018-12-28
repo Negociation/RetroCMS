@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //////////////////////////////////////////////////////////////
 // 					    RetroCMS 							//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
@@ -28,8 +28,7 @@ try{
 	$hotelData = parse_ini_file('./core/install/settings.ini', true);
 	$hotelConection = new PDO('mysql:host=' . $hotelData['database']['host'] . ';dbname=' . $hotelData['database']['name'], $hotelData['database']['user'], $hotelData['database']['password']);
 }catch ( PDOException $e ){	
-	
-	include './web/install/0.view';
+	include './web/install/index.view';
 	exit;
 }
 

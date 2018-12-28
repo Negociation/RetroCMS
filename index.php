@@ -10,16 +10,17 @@
 //////////////////////////////////////////////////////////////
 
 
-//ISO-8859-1 (Portuguese and Spanish Accents)
-header("Content-Type: text/html; charset=utf-8",true);
+
 
 //Core of Aplication ( Database and RCON )
 require_once "./Core/Core.php";
 
-//URL Object Call
-$Content = new Route($Conection);
-$Content->Load();
+//ISO-8859-1 (Portuguese and Spanish Accents)
+header("Content-Type: text/html; charset=utf-8",true);
 
+//URL Object Call
+$Content = new Route($hotelConection);
+$Content->load();
 
 
 ?>
