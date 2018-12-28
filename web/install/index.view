@@ -6,14 +6,14 @@
 	<body>
 		<div id="container">
 			<div id="header">
-				<h1><a href="#"><img src="./web/install/web-gallery/retrocms_logo_nourl.gif" alt="Retro" width="113" height="41" border="0"/></a></h1>
+				<h1><a href="#"><img src="./web/install/images/logos/retrocms_logo_nourl.gif" alt="Retro" width="113" height="41" border="0"/></a></h1>
 			</div>
 			<div id="content">
 					<div id="writecontent">
 						<div align="center">
 						<div id="error" align="left">
 							<p><b>Error:</b></p>
-							<p><?php echo $e->getMessage() ?></p>
+							<p><?php echo $e ?></p>
 							<p>&nbsp;</p>
 							</p>
 						</div>
