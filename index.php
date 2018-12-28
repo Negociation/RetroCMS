@@ -9,9 +9,6 @@
 // Branch: Public (Unstable)								//
 //////////////////////////////////////////////////////////////
 
-
-
-
 //Core of Aplication ( Database and RCON )
 require_once "./Core/Core.php";
 

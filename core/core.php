@@ -25,7 +25,7 @@ if(version_compare(PHP_VERSION, '7.0.0', '<')){
 	$e = "<center> <br>Sua versão do PHP não é compativel com o RetroCMS, atualize antes de continuar! <br><br> Your version of PHP its not compatibile with RetroCMS, please update before install! </center>";
 	include './web/install/index.view';
 	exit;
-}else if(extension_loaded ("sodium")){
+}else if(!extension_loaded ("sodium")){
 	$e = "<center><br> Extensão sodim não encontrada <br> Extension Sodium disabled or not found</center>";
 	include './web/install/index.view';		
 	exit;
