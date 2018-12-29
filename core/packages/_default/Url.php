@@ -86,7 +86,7 @@ class Url{
 	public function get_UrlController(){
 		return $this->url_controller;
 	}	
-	b
+	
 	public function get_UrlMethod(){
 		return $this->url_method;		
 	}
