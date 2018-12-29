@@ -11,9 +11,17 @@
 
 class Index extends Controller{
 
-	public function default(){
-	echo "Index Loaded";
+	public function __construct($hotelConection){
+		$this->hotelConection = $hotelConection;
+
+	
+
 	}
+	public function default(){
+		$this->pageTitle = "Habbo";
+		echo "Index Loaded";
+	}
+	
 }
 
 

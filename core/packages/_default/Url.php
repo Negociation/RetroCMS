@@ -53,20 +53,26 @@ class Url{
 		}
 		
 		//Check if file of controller exist
-		if(file_exists("./core/packages/controllers/".$parsedUrl[0].".php")){ 
+		if(file_exists("./core/packages/controllers/".$parsedUrl[0].".php") && strtolower($parsedUrl[0]) != "index"){ 
 			$this->set_UrlController($parsedUrl[0]);	
 			unset($parsedUrl[0]);
 			//Check if Method Exists on selected Controller
-			if(isset($parsedUrl[1]) &&  Method_Exists(new $this->url_controller(null),$parsedUrl[1])){
+			if(isset($parsedUrl[1]) &&  Method_Exists(new $this->url_controller(null),$parsedUrl[1]) && strtolower($parsedUrl[1]) != "default"){
 				$this->set_UrlMethod($parsedUrl[1]);
 				unset($parsedUrl[1]);
 				//Get all parameters from the rest of URL if method exist	
-				if (isset($parsedUrl[2])){
+				$method = new ReflectionMethod($this->get_UrlController(), $this->get_UrlMethod());
+				$method->getNumberOfParameters();
+				//Check if numbers of parameters passed are equal number of args of function(View)
+				if ($method->getNumberOfParameters()== count($parsedUrl)){
 					$params = $parsedUrl ? array_values($parsedUrl): [];
 					$this->set_UrlParams($params);
+				}else{
+					$this->set_UrlController("Not_Found");	
+					$this->set_UrlMethod("default");	
 				}
 			}else{
-				if(isset($parsedUrl[1]) && !Method_Exists(new $this->url_controller(null),"default")){
+				if(isset($parsedUrl[1]) && !Method_Exists(new $this->url_controller(null),"default") || isset($parsedUrl[1]) && strtolower($parsedUrl[1]) == "default"){
 					$this->set_UrlController("Not_Found");	
 					unset($parsedUrl[1]);
 				}
@@ -80,7 +86,7 @@ class Url{
 	public function get_UrlController(){
 		return $this->url_controller;
 	}	
-	
+	b
 	public function get_UrlMethod(){
 		return $this->url_method;		
 	}
