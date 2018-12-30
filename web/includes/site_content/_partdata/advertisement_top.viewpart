@@ -17,19 +17,25 @@ foreach($this->hotel->get_HotelAdvertisements() as $row){
 }
 
 //If have any ad to show so
-if($statusTop){
+if(isset($statusTop) && $statusTop){
+	$Ads_Array = [];
+	
 	echo "<script type='text/javascript'>\n				Ads_Top(";
 		//Get Images from Ads
-		$Ads_Array = $this->hotel->get_HotelAdvertisements();
-		foreach($Ads_Array as $row){ 
+		
+		foreach($this->hotel->get_HotelAdvertisements() as $row){
 			if ($row->get_Type() == 1 && $row->get_Status()){
-				if(!next($Ads_Array)){ echo "'".$row->get_Image()."');\n				"; }else{ echo "'".$row->get_Image()."',"; }
+				array_push($Ads_Array, $row);
 			}
+		}
+		
+		foreach($Ads_Array as $row){ 
+			if(!next($Ads_Array)){ echo "'".$row->get_Image()."');\n				"; }else{ echo "'".$row->get_Image()."',"; }
 		}
 
 		//Get Url from Ads
-		foreach($this->hotel->get_HotelAdvertisements() as $row){ 
-			if ($row->get_Type() == 1 && $row->get_Status()){ echo "Links_Top.push('".$row->get_Url()."');  "; }
+		foreach($Ads_Array as $row){ 
+			echo "Links_Top.push('".$row->get_Url()."');  ";
 		}
 
 			echo '

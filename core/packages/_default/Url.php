@@ -79,7 +79,6 @@ class Url{
 			}
 		}else{
 			$this->set_UrlController("Not_Found");	
-				echo "lelel";
 			unset($parsedUrl[0]);
 		}
 	}

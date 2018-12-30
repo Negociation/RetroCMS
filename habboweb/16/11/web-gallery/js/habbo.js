@@ -1318,9 +1318,10 @@ function Ads_Right(){
 /* Load All ADS */
 
 function Advertisement_Load(){
-	document.getElementById('TopLink').href = Links_Top[0];
-	document.getElementById('TopImage').src = Images_Top[0].src;
-
+	if(document.getElementById('TopLink')){
+		document.getElementById('TopLink').href = Links_Top[0];
+		document.getElementById('TopImage').src = Images_Top[0].src;
+	}
 	setInterval(
 		function() {
 			document.getElementById('TopLink').href = Links_Top[curOffsetT];
@@ -1328,25 +1329,29 @@ function Advertisement_Load(){
 			curOffsetT = (curOffsetT >= Images_Top.length-1) ? 0 : curOffsetT + 1;
 		}
 	,10000);
-			
-	document.getElementById('MiddleLink').href = Links_Top[0];
-	document.getElementById('MiddleImage').src = Images_Top[0].src;
+	
+	if(document.getElementById('MiddleLink')){			
+		document.getElementById('MiddleLink').href = Links_Middle[0];
+		document.getElementById('MiddleImage').src = Images_Middle[0].src;
+	}
 				
 	setInterval(
 		function() {
-			document.getElementById('MiddleLink').href = Links_Top[curOffsetM];
-			document.getElementById('MiddleImage').src = Images_Top[curOffsetM].src;
+			//document.getElementById('MiddleLink').href = Links_Middle[curOffsetM];
+			//document.getElementById('MiddleImage').src = Images_Middle[curOffsetM].src;
 			curOffsetM = (curOffsetM >= Images_Middle.length-1) ? 0 : curOffsetM + 1;
 		}
 	,20000);
-
-		document.getElementById('RightLink').href = Links_Top[0];
-		document.getElementById('RightImage').src = Images_Top[0].src;	
-					
+	
+	if(document.getElementById('RightLink')){
+		document.getElementById('RightLink').href = Links_Right[0];
+		document.getElementById('RightImage').src = Images_Right[0].src;	
+	}
+	
 	setInterval(
 		function() {
 			document.getElementById('RightLink').href = Links_Right[curOffsetR];
-			document.getElementById('RightImageImage').src = Images_Right[curOffsetR].src;
+			document.getElementById('RightImage').src = Images_Right[curOffsetR].src;
 			curOffsetR = (curOffsetR >= Images_Right.length-1) ? 0 : curOffsetR + 1;
 		}
 	,15000);
