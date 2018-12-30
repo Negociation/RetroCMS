@@ -1274,3 +1274,80 @@ function setPreview(selectedoption, template, targetDiv) {
 			habboReqPath + "/components/roomlink_export_update",
 			{ method: "post", parameters: "roomId="+selectedoption+"&template="+template });
 }
+
+
+/*  Advertsement Top */
+				
+var Images_Top = new Array();
+var Links_Top = new Array();				
+var curOffsetT = 0;
+
+function Ads_Top(){
+	for (var i = 0; i < arguments.length; i++){
+		Images_Top[i] = document.createElement('img');
+		Images_Top[i].setAttribute('src',arguments[i]);
+	};
+}
+				
+/*  Advertsement Middle */
+				
+var Images_Middle = new Array();
+var Links_Middle = new Array();
+var curOffsetM = 0;
+				
+function Ads_Middle(){
+	for (var i = 0; i < arguments.length; i++){
+		Images_Middle[i] = document.createElement('img');
+		Images_Middle[i].setAttribute('src',arguments[i]);
+	};
+}
+				
+/*  Advertsement Right */			
+				
+var Images_Right = new Array();
+var Links_Right = new Array();
+var curOffsetR = 0;
+	
+function Ads_Right(){
+	for (var i = 0; i < arguments.length; i++){
+		Images_Right[i] = document.createElement('img');
+		Images_Right[i].setAttribute('src',arguments[i]);
+	};
+}
+
+/* Load All ADS */
+
+function Advertisement_Load(){
+	document.getElementById('TopLink').href = Links_Top[0];
+	document.getElementById('TopImage').src = Images_Top[0].src;
+
+	setInterval(
+		function() {
+			document.getElementById('TopLink').href = Links_Top[curOffsetT];
+			document.getElementById('TopImage').src = Images_Top[curOffsetT].src;
+			curOffsetT = (curOffsetT >= Images_Top.length-1) ? 0 : curOffsetT + 1;
+		}
+	,10000);
+			
+	document.getElementById('MiddleLink').href = Links_Top[0];
+	document.getElementById('MiddleImage').src = Images_Top[0].src;
+				
+	setInterval(
+		function() {
+			document.getElementById('MiddleLink').href = Links_Top[curOffsetM];
+			document.getElementById('MiddleImage').src = Images_Top[curOffsetM].src;
+			curOffsetM = (curOffsetM >= Images_Middle.length-1) ? 0 : curOffsetM + 1;
+		}
+	,20000);
+
+		document.getElementById('RightLink').href = Links_Top[0];
+		document.getElementById('RightImage').src = Images_Top[0].src;	
+					
+	setInterval(
+		function() {
+			document.getElementById('RightLink').href = Links_Right[curOffsetR];
+			document.getElementById('RightImageImage').src = Images_Right[curOffsetR].src;
+			curOffsetR = (curOffsetR >= Images_Right.length-1) ? 0 : curOffsetR + 1;
+		}
+	,15000);
+}

@@ -41,6 +41,10 @@ class Hotel{
 		}
 	}
 	
+	public function get_hotelAdvertisements(){
+		return $this->hotel_Advertisements;
+	}	
+	
 	public function get_HotelName(){
 		return $this->hotel_Name;
 	}

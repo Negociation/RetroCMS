@@ -10,7 +10,6 @@
 //////////////////////////////////////////////////////////////
 
 class Habbo{
-
 	protected $habboId;
 	protected $habboLoggedIn;
 	public function __construct(){

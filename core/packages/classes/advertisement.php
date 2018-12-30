@@ -25,7 +25,25 @@ class Advertisement{
 		$this->adv_Status = $Adv_Status;
 		$this->adv_Type = $Adv_Type;
 		$this->adv_Url = $Adv_Url;
+
 	}	
+	
+	public function get_Image(){
+		return $this->adv_Image;
+	}
+	
+	public function get_Url(){
+						
+		return "http://localhost";
+	}
+	
+	public function get_Type(){
+		return $this->adv_Type;
+	}
+	
+	public function get_Status(){
+		return $this->adv_Status;
+	}
 }
 
 

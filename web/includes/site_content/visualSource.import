@@ -27,7 +27,16 @@
   echo "\n
 		<!-- Language Content -->
 		<script type='text/javascript' src='".$this->hotel->get_HotelUrl()."/web/includes/language/pt.js'></script>
-		<script type='text/javascript' src='".$this->hotel->get_HotelUrl()."/web/includes/language/en.js'></script>";
+		<script type='text/javascript' src='".$this->hotel->get_HotelUrl()."/web/includes/language/en.js'></script>
+		
+		<script>
+			window.onload = function() {
+				Advertisement_Load();
+			};
+		</script>
+		";
+		
+		
 		
 ?>
 
