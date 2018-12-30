@@ -9,33 +9,19 @@
 // Branch: Public (Unstable)								//
 //////////////////////////////////////////////////////////////
 
-class Index extends Controller{
+class Not_Found extends Controller{
 
 	public function __construct($hotelConection){
-		//Setting PDO Conection
 		$this->hotelConection = $hotelConection;
-		
-		//Setting Hotel_Model(DAO) and getting Hotel Object from Database
-		$this->hotelModel = new HotelModel($this->hotelConection);
-		$this->hotel =  $this->hotelModel->get_HotelObject();
-		
-		//
+
 	
+
 	}
-	
 	public function default(){
-		//Set Page Title;
 		$this->pageTitle = "Habbo";
-		
-		//Maintenance ? 
-		if(!$this->hotel->get_HotelStatus()){
-			require_once './web/maintenance/index.view';
-			exit;
-		}else{
-			include 'web/index.view';	
-			exit;
-		}
+		echo "404 Not Found";
 	}
+	
 }
 
 

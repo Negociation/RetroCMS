@@ -1,6 +1,6 @@
 <?php
 //////////////////////////////////////////////////////////////
-//							RetroCMS						//
+// 					RetroCMS 								//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
 // Developed by: Marcos ( M.tiago )							//
@@ -9,13 +9,13 @@
 // Branch: Public (Unstable)								//
 //////////////////////////////////////////////////////////////
 
-//Core of Aplication ( Database and RCON )
-require_once "./Core/Core.php";
+//Include Header Content ()
+include('./web/includes/site_content/headers/default.viewpart'); 
+?>
 
-//ISO-8859-1 (Portuguese and Spanish Accents)
-header("Content-Type: text/html; charset=utf-8",true);
+SITE CONTENT
 
-//URL Object Call
-$Content = new Route($hotelConection);
-$Content->load();
+<?php
+//Include Footer Content()
+include('./web/includes/site_content/footers/default.viewpart'); 
 ?>

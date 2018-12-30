@@ -53,7 +53,7 @@ class Url{
 		}
 		
 		//Check if file of controller exist
-		if(file_exists("./core/packages/controllers/".$parsedUrl[0].".php") && strtolower($parsedUrl[0]) != "index"){ 
+		if(file_exists("./core/packages/controllers/".$parsedUrl[0].".php")){ 
 			$this->set_UrlController($parsedUrl[0]);	
 			unset($parsedUrl[0]);
 			//Check if Method Exists on selected Controller
@@ -73,12 +73,13 @@ class Url{
 				}
 			}else{
 				if(isset($parsedUrl[1]) && !Method_Exists(new $this->url_controller(null),"default") || isset($parsedUrl[1]) && strtolower($parsedUrl[1]) == "default"){
-					$this->set_UrlController("Not_Found");	
+					$this->set_UrlController("Not_Found");					
 					unset($parsedUrl[1]);
 				}
 			}
 		}else{
 			$this->set_UrlController("Not_Found");	
+				echo "lelel";
 			unset($parsedUrl[0]);
 		}
 	}

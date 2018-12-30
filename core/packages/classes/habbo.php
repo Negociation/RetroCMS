@@ -1,6 +1,6 @@
 <?php
 //////////////////////////////////////////////////////////////
-//							RetroCMS						//
+// 					RetroCMS 								//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
 // Developed by: Marcos ( M.tiago )							//
@@ -9,13 +9,13 @@
 // Branch: Public (Unstable)								//
 //////////////////////////////////////////////////////////////
 
-//Core of Aplication ( Database and RCON )
-require_once "./Core/Core.php";
+class Habbo{
 
-//ISO-8859-1 (Portuguese and Spanish Accents)
-header("Content-Type: text/html; charset=utf-8",true);
+	public function __construct(){
+	}
+	
+	
+}
 
-//URL Object Call
-$Content = new Route($hotelConection);
-$Content->load();
+
 ?>

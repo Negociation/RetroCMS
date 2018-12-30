@@ -1,6 +1,6 @@
 <?php
 //////////////////////////////////////////////////////////////
-//							RetroCMS						//
+// 					RetroCMS 								//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
 // Developed by: Marcos ( M.tiago )							//
@@ -9,13 +9,24 @@
 // Branch: Public (Unstable)								//
 //////////////////////////////////////////////////////////////
 
-//Core of Aplication ( Database and RCON )
-require_once "./Core/Core.php";
+class Advertisement{
+	protected $adv_Id;
+	protected $adv_Image;	
+	protected $adv_Status;
+	protected $adv_Type;
+	protected $adv_Url;
+	
+	public function __construct(){		
+	}
+	
+	public function constructObject($Adv_Id,$Adv_Image,$Adv_Url,$Adv_Type,$Adv_Status){
+		$this->adv_Id = $Adv_Id;
+		$this->adv_Image = $Adv_Image;
+		$this->adv_Status = $Adv_Status;
+		$this->adv_Type = $Adv_Type;
+		$this->adv_Url = $Adv_Url;
+	}	
+}
 
-//ISO-8859-1 (Portuguese and Spanish Accents)
-header("Content-Type: text/html; charset=utf-8",true);
 
-//URL Object Call
-$Content = new Route($hotelConection);
-$Content->load();
 ?>

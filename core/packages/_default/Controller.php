@@ -15,6 +15,10 @@ class Controller{
 	protected $habboModel;		
 	protected $hotel;
 	protected $hotelModel;
+	
+	public function get_ViewTitle(){
+		return $this->pageTitle;
+	}
 }
 
 
