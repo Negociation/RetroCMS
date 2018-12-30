@@ -19,7 +19,10 @@ class Index extends Controller{
 		$this->hotelModel = new HotelModel($this->hotelConection);
 		$this->hotel =  $this->hotelModel->get_HotelObject();
 		
-		//
+		
+		//Starting Habbo
+		$this->habbo = new Habbo();
+		
 	
 	}
 	

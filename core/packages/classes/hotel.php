@@ -40,9 +40,25 @@ class Hotel{
 			$this->hotel_Advertisements = $Hotel_Advertisements;
 		}
 	}
-		
+	
+	public function get_HotelName(){
+		return $this->hotel_Name;
+	}
+	
+	public function get_HotelNick(){
+		return $this->hotel_Nick;
+	}
+	
 	public function get_HotelStatus(){
 		return $this->hotel_Status;
+	}
+	
+	public function get_HotelUrl(){
+		return $this->hotel_Url;
+	}
+	
+		public function get_HotelWeb(){
+		return $this->hotel_Url;
 	}
 }
 ?>

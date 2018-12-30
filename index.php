@@ -15,6 +15,9 @@ require_once "./Core/Core.php";
 //ISO-8859-1 (Portuguese and Spanish Accents)
 header("Content-Type: text/html; charset=utf-8",true);
 
+//Start session before load content;
+session_start();
+
 //URL Object Call
 $Content = new Route($hotelConection);
 $Content->load();

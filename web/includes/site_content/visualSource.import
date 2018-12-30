@@ -1,0 +1,34 @@
+<?php
+//////////////////////////////////////////////////////////////
+// 						RetroCMS 							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos ( M.tiago )							//
+//////////////////////////////////////////////////////////////
+// Alpha Version 0.8.1 ( Citrine ) 							//
+// Branch: Public (Unstable)								//
+//////////////////////////////////////////////////////////////
+
+
+//Default CSS Content
+  echo "<link href='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/styles/style.css' type='text/css' rel='stylesheet'/>
+		<link href='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/styles/boxes.css' type='text/css' rel='stylesheet'/>
+		<link href='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/styles/ads.css' type='text/css' rel='stylesheet'/>
+		<link href='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/styles/custom/style_custom_default.css' type='text/css' rel='stylesheet'/>";
+		
+//Default JS Content	
+  echo "\n
+		<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/prototype.js'></script>
+		<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/habbo.js'></script>
+		<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/builder.js'></script>";
+		
+		
+//Language Content	
+  echo "\n
+		<!-- Language Content -->
+		<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelUrl()."/web/includes/language/pt.js'></script>
+		<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelUrl()."/web/includes/language/en.js'></script>";
+		
+?>
+
+
