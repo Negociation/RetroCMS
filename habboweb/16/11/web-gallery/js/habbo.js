@@ -1337,8 +1337,8 @@ function Advertisement_Load(){
 				
 	setInterval(
 		function() {
-			//document.getElementById('MiddleLink').href = Links_Middle[curOffsetM];
-			//document.getElementById('MiddleImage').src = Images_Middle[curOffsetM].src;
+			document.getElementById('MiddleLink').href = Links_Middle[curOffsetM];
+			document.getElementById('MiddleImage').src = Images_Middle[curOffsetM].src;
 			curOffsetM = (curOffsetM >= Images_Middle.length-1) ? 0 : curOffsetM + 1;
 		}
 	,20000);
@@ -1354,5 +1354,5 @@ function Advertisement_Load(){
 			document.getElementById('RightImage').src = Images_Right[curOffsetR].src;
 			curOffsetR = (curOffsetR >= Images_Right.length-1) ? 0 : curOffsetR + 1;
 		}
-	,15000);
+	,25000);
 }

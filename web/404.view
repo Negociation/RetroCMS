@@ -32,7 +32,7 @@ include('./web/includes/site_content/headers/default.viewpart');
 									  <td colspan="2" style="padding-bottom: 3px;"></td>
 								   </tr>
 								   <tr>
-									  <td align="left" valign="top" style="width: 430px; height: 400px;" class="habboPage-col">
+									  <td align="left" valign="top" style="width: 430px; height: 400px;" class="habboPage-col" id="habboLeftColumn" >
 										 <div class="portlet-scale gold">
 											<div class="portlet-scale-header">
 											   <h3>Página não encontrada</h3>
@@ -48,39 +48,12 @@ include('./web/includes/site_content/headers/default.viewpart');
 											</div>
 										 </div>
 									  </td>
-									  
-									  <td align="left" valign="top" style="width: 310px; height: 400px;" class="habboPage-col rightmost">
+									  <td align="right" valign="top" style="width: 310px; height: 400px;" class="habboPage-col rightmost"  id="habboMiddleColumn">
 										<!-- Advertisement Middle -->
-										 <div class="ad-scale ad300">
-											<table>
-											   <tbody>
-												  <tr>
-													 <td class="ad-header-tl"></td>
-													 <td class="ad-header-t"></td>
-													 <td class="ad-header-tr"></td>
-												  </tr>
-												  <tr>
-													 <td class="ad-header-ml"></td>
-													 <td class="ad-header-m">
-														<h5>Publicidade</h5>
-													 </td>
-													 <td class="ad-header-mr"></td>
-												  </tr>
-												  <tr>
-													 <td class="ad-content-ml"></td>
-													 <td class="ad-content-m" align="center" valign="top"><img style="width: 300px; height: 250px;" alt="" src="http://localhost/c_images/album728/ads_habbogroup_monstersofhabbo.png"><br></td>
-													 <td class="ad-content-mr"></td>
-												  </tr>
-												  <tr>
-													 <td class="ad-content-bl"></td>
-													 <td class="ad-content-b"></td>
-													 <td class="ad-content-br"></td>
-												  </tr>
-											   </tbody>
-											</table>
-										 </div>
+										<?php require_once('./web/includes/site_content/_partdata/advertisement_middle.viewpart'); ?>
 									  </td>
-									  
+									  <script> if(!document.getElementById("habboMiddleAd")){ document.getElementById("habboMiddleColumn").style.width = "0px";  document.getElementById("habboLeftColumn").style.width = "730px"; } </script>
+
 								   </tr>
 								</tbody>
 							 </table>
