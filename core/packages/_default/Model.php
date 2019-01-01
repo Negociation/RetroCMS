@@ -32,11 +32,13 @@ class Model{
 	
 	}
 
-	public function getByColumn($Table,$Column,$Param){
+	public function getByParam($Table,$Column,$Param){
 		try {
-			$sql = 'SELECT * FROM .'.$Table.' where order by id';
+			$sql = 'SELECT * FROM .'.$Table.' where '.$Column.' = :param order by id';
 			$stmt = $this->hotelConection->prepare($sql);
+			$stmt->bindValue(':param', $Param);
 			$stmt->execute();
+
 			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			
 			}catch(Exception $e){

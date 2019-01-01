@@ -1,0 +1,93 @@
+<?php
+//////////////////////////////////////////////////////////////
+// 						RetroCMS 							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos ( M.tiago )							//
+//////////////////////////////////////////////////////////////
+// Alpha Version 0.8.1 ( Citrine ) 							//
+// Branch: Public (Unstable)								//
+//////////////////////////////////////////////////////////////
+?>
+
+										<script type="text/javascript">
+										   var promoPages = [
+										   	<?php 
+											foreach($this->promoArray as $row){
+												echo '{ image: "<img src=\"'.$row->get_Image().'\" / alt=\"\"\>", links: [';
+													if ($row->get_ButtonStatus(1)){
+													echo '"<a href=\"'.$row->get_ButtonUrl(1).'\">'.$row->get_ButtonLabel(1).'</a>",';
+													}
+													if ($row->get_ButtonStatus(2)){
+													echo '"<a href=\"'.$row->get_ButtonUrl(2).'\" target=\"client\" onclick=\"openOrFocusHabbo(this); return false;\"\>'.$row->get_ButtonLabel(2).'</a\>"';
+													}
+											echo '] , text:"'.$row->get_Text().'" },';
+											}
+												if (!next($this->promoArray)){ echo ',';}
+											?>
+											
+										   ];
+										</script>
+										<div id="promoarea">
+										   <div id="promoheader">
+											  <h2><span class="lang-promoheader">Destaques</span></h2>
+											  <ul style="display: block;" id="promoheader-selectors">
+												 <?php
+												 foreach($this->promoArray as $key=>$row){
+													 if($key == 0){
+														echo "<li><a href='#' onclick='showPromo(0); return false;' class='selected'>1</a></li>\n";
+													 }else{
+														echo "<li><a href='#' onclick='showPromo(".$key."); return false;' class=''>".($key+1)."</a></li>\n";
+													 }
+												 }
+												 ?>
+											  </ul>
+											  <script type="text/javascript">
+												 $('promoheader-selectors').style.display = "block";
+											  </script>
+										   </div>
+										   <div id="promocontent">
+											  <div id="promobody">
+												 <p id="promoimage"><img src="<?php echo $this->promoArray[0]->get_Image(); ?>" alt=""></p>
+												 <div class="promotext">
+													<p id="promotext-content"><?php echo $this->promoArray[0]->get_Text(); ?><br></p>
+												 </div>
+												 <div id="promolinks">
+													<ul id="promolinks-list">
+													<?php 
+													if($this->promoArray[0]->get_ButtonStatus(1)){
+														echo '<li><a href="'.$this->promoArray[0]->get_ButtonUrl(1).'">'.$this->promoArray[0]->get_ButtonLabel(1).'</a></li>';
+	
+													}
+													if($this->promoArray[0]->get_ButtonStatus(2)){
+														echo '\n <li><a href="'.$this->promoArray[0]->get_ButtonUrl(2).'" target="client" ;="" return="" false;"="">'.$this->promoArray[0]->get_ButtonLabel(2).'</a></li>';
+													}													
+													
+													?>
+													</ul>
+												 </div>
+											  </div>
+										   </div>
+										</div>
+										<div id="newsbox">
+										   <div id="newsbox-header">
+											  <h2><span class="lang-newsbox-header">Últimas Notícias</span></h2>
+											  <a href="http://localhost/news/rss.xml"><img src="http://localhost/habboweb/16/11/web-gallery/images/promo_area/feed-icon.gif" alt="" border="0"></a>
+										   </div>
+										   <div id="newsbox-text">
+											  <div class="newsitem">
+												 <h3><span class="articledate">[00/00/00]</span> 			
+													<a href="http://localhost/#">RetroCMS Instalado com Sucesso</a>
+												 </h3>
+												 <p>
+													Clique para mais informações...
+												 </p>
+											  </div>
+										   </div>
+										   <div id="newsbox-footer">
+											  <div class="promo-button"><a href="http://localhost/news" alt=""><span class="lang-newsbox-footer">mais notícias</span></a></div>
+										   </div>
+										</div>
+	
+
+

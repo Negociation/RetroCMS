@@ -10,7 +10,9 @@
 //////////////////////////////////////////////////////////////
 
 class Index extends Controller{
-
+	protected $promoArray = [];
+	protected $newsModel;
+	
 	public function __construct($hotelConection){
 		//Setting PDO Conection
 		$this->hotelConection = $hotelConection;
@@ -18,11 +20,14 @@ class Index extends Controller{
 		//Setting Hotel_Model(DAO) and getting Hotel Object from Database
 		$this->hotelModel = new HotelModel($this->hotelConection);
 		$this->hotel =  $this->hotelModel->get_HotelObject();
-		
+	
 		
 		//Starting Habbo
 		$this->habbo = new Habbo();
 		
+		//Webpromos and News
+		$this->newsModel = new NewsModel($this->hotelConection);
+		$this->promoArray = $this->newsModel->get_ActivePromos();
 	
 	}
 	
