@@ -73,13 +73,31 @@
 											  <a href="<?php echo $this->hotel->get_HotelUrl().'/rss.xml' ?>"><img src="http://localhost/habboweb/16/11/web-gallery/images/promo_area/feed-icon.gif" alt="" border="0"></a>
 										   </div>
 										   <div id="newsbox-text">
-											  <div class="newsitem">
-												 <h3><span class="articledate">[00/00/00]</span> 			
-													<a href="http://localhost/#">RetroCMS Instalado com Sucesso</a>
-												 </h3>
-												 <p>
-													Clique para mais informações...
-												 </p>
+												<div class="newsitem">
+												<?php
+												foreach($this->newsArray as $key=>$row){
+													if ($key > 4){ break; }else{
+														if ($key == 3){ echo '<div class="hr">&nbsp;</div>'; }
+														if($key < 3){
+															echo'
+																<h3><span class="articledate">[00/00/00]</span> 			
+																	<a href="'.$this->hotel->get_HotelUrl().'/news/'.$row->get_Id().'">'.$row->get_Title().'</a>
+																</h3>
+																	 <p>
+																		'.$row->get_Desc().'
+																	 </p>
+																';
+														}else{
+																echo'
+																<h3><span class="articledate">[00/00/00]</span> 			
+																	<a href="'.$this->hotel->get_HotelUrl().'/news/'.$row->get_Id().'">'.$row->get_Title().'</a>
+																</h3>
+																';	
+														}
+													}
+												}
+												?>
+
 											  </div>
 										   </div>
 										   <div id="newsbox-footer">

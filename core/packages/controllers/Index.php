@@ -28,6 +28,7 @@ class Index extends Controller{
 		//Webpromos and News
 		$this->newsModel = new NewsModel($this->hotelConection);
 		$this->promoArray = $this->newsModel->get_ActivePromos();
+		$this->newsArray = $this->newsModel->get_ActiveNews();
 	}
 	
 	public function default(){
