@@ -81,7 +81,7 @@
 														if($key < 3){
 															echo'
 																<h3><span class="articledate">[00/00/00]</span> 			
-																	<a href="'.$this->hotel->get_HotelUrl().'/news/'.$row->get_Id().'">'.$row->get_Title().'</a>
+																	<a href="'.$this->hotel->get_HotelUrl().'/news/article/'.$row->get_Id().'">'.$row->get_Title().'</a>
 																</h3>
 																	 <p>
 																		'.$row->get_Desc().'
@@ -90,7 +90,7 @@
 														}else{
 																echo'
 																<h3><span class="articledate">[00/00/00]</span> 			
-																	<a href="'.$this->hotel->get_HotelUrl().'/news/'.$row->get_Id().'">'.$row->get_Title().'</a>
+																	<a href="'.$this->hotel->get_HotelUrl().'/news/article/'.$row->get_Id().'">'.$row->get_Title().'</a>
 																</h3>
 																';	
 														}

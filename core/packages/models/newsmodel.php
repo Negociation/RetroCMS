@@ -32,9 +32,11 @@ class NewsModel extends Model{
 		return array_reverse($promosArray);
 	}
 	
+	//Return a array of active newsCalls (Object)
 	public function get_ActiveNews(){
 		$newsArray = [];
 		$newsObject;
+		//Get all content from table (site_news) where Column(status) as active(true)
 		$result = $this->getByParam('site_news','status',true);
 		foreach($result as $row){
 			$newsObject = new News();

@@ -82,27 +82,27 @@
 							</li>
 							<li id="disabled">
 								<span class="left"></span>
-								<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_03_community.gif" alt=""/><span class="lang-navbar-community">Comunidade</span></a>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_03_community.gif" alt=""/><span class="lang-navbar-community">Comunidade</span></a>
 								<span class="right"></span>
 							</li>
 							<li id="disabled">
 								<span class="left"></span>
-								<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_04_games.gif" alt=""/><span class="lang-navbar-games">Jogos</span></a>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_04_games.gif" alt=""/><span class="lang-navbar-games">Jogos</span></a>
 								<span class="right"></span>
 								</li>
 							<li id="disabled">
 								<span class="left"></span>
-								<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_10_coins.gif" alt=""/><span class="lang-navbar-credits">Compre Moedas</span></a>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_10_coins.gif" alt=""/><span class="lang-navbar-credits">Compre Moedas</span></a>
 								<span class="right"></span>
 							</li>
 							<li id="disabled">
 								<span class="left"></span>
-								<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_09_hc.gif" alt=""/><span class="lang-navbar-habboclub">Habbo Club</span></a>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_09_hc.gif" alt=""/><span class="lang-navbar-habboclub">Habbo Club</span></a>
 								<span class="right"></span>
 							</li>
 							<li id="disabled">
 								<span class="left"></span>
-								<a href="./#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_05_fun.gif" alt=""/><span class="lang-navbar-groups">Grupos</span></a>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_05_fun.gif" alt=""/><span class="lang-navbar-groups">Grupos</span></a>
 								<span class="right"></span>
 							</li>
 							<li class="last">
