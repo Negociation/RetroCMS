@@ -17,8 +17,13 @@ class News{
 	protected $news_Content;
 	protected $news_Status;
 	
-	public function __construct(){	
-	
+	public function __construct(){
+		$this->news_Id = 0;
+		$this->news_Date = 0;
+		$this->news_Title = 'Noticia Não Encontrada';
+		$this->news_Desc = 'Well, something happened, news not found!';
+		$this->news_Content = "Please check your database and try again...";
+		$this->news_Status = 1;		
 	}
 	
 	public function constructObject($News_Id,$News_Date,$News_Title,$News_Desc,$News_Content,$News_Status){

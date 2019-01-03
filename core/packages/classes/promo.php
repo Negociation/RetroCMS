@@ -1,6 +1,6 @@
 <?php
 //////////////////////////////////////////////////////////////
-// 					RetroCMS 								//
+// 						RetroCMS 							//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
 // Developed by: Marcos ( M.tiago )							//
@@ -19,7 +19,10 @@ class Promo{
 
 	
 	public function __construct(){	
-	
+		$this->promo_Id = 0;
+		$this->promo_Image = "./c_images/album1480/habbo_content_missing.png";
+		$this->promo_Text = "Noticia Não Encontrada";
+		$this->promo_Status = 1;
 	}
 	
 	
@@ -46,7 +49,7 @@ class Promo{
 	}
 	
 	public function get_ButtonStatus($id){
-		if ($this->promo_Labels[$id-1] != 'None'){
+		if (isset($this->promo_Labels[$id-1]) && $this->promo_Labels[$id-1] != 'none'){
 			return true;
 		}else{
 			return false;
@@ -54,11 +57,19 @@ class Promo{
 	}
 	
 	public function get_ButtonLabel($id){
-		return $this->promo_Labels[$id-1];
+		if(isset($this->promo_Labels[$id-1])){
+			return $this->promo_Labels[$id-1];
+		}else{
+			return false;
+		}
 	}
 	
 	public function get_ButtonUrl($id){
-		return $this->promo_Urls[$id-1];
+		if(isset($this->promo_Urls[$id-1])){
+			return $this->promo_Urls[$id-1];
+		}else{
+			return false;
+		}
 	}
 }
 

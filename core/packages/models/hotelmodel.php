@@ -34,21 +34,21 @@ class HotelModel extends Model{
 		$result = $this->getAll('site_settings');
 		if (count($result) > 0){
 			//Set Hotel data in Object
-			$hotelObject->constructObject($result[0]['value'],$result[1]['value'],$result[2]['value']);		
+			$hotelObject->constructObject($result[0]['setting_value'],$result[1]['setting_value'],$result[2]['setting_value']);		
 		}			
 		
 		//Get Hotel Adverstments
-		$result = $this->getAll('advertisements');
+		$result = $this->getAll('site_advertisements');
 		if (count($result) > 0){
 			foreach($result as $row){
 				$Advertisement = new Advertisement();
-				$Advertisement->constructObject($row['Id'],$row['Image'],$row['Url'],$row['Type'],$row['Status']);
+				$Advertisement->constructObject($row['id'],$row['image'],$row['url'],$row['type'],$row['status']);
 				array_push($Advertisement_Array,$Advertisement);
 			}
 		}
 		//Set Hotel Advertisements in Object
 		$hotelObject->set_hotelAdvertisements($Advertisement_Array);
-		
+
 		return $hotelObject;
 	}
 	

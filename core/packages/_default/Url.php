@@ -57,7 +57,7 @@ class Url{
 			$this->set_UrlController($parsedUrl[0]);	
 			unset($parsedUrl[0]);
 			//Check if Method Exists on selected Controller
-			if(isset($parsedUrl[1]) &&  Method_Exists(new $this->url_controller(null),$parsedUrl[1]) && strtolower($parsedUrl[1]) != "default"){
+			if(isset($parsedUrl[1]) &&  Method_Exists(new $this->url_controller($this->hotelConection),$parsedUrl[1]) && strtolower($parsedUrl[1]) != "default"){
 				$this->set_UrlMethod($parsedUrl[1]);
 				unset($parsedUrl[1]);
 				//Get all parameters from the rest of URL if method exist	
@@ -72,7 +72,7 @@ class Url{
 					$this->set_UrlMethod("default");	
 				}
 			}else{
-				if(isset($parsedUrl[1]) && !Method_Exists(new $this->url_controller(null),"default") || isset($parsedUrl[1]) && strtolower($parsedUrl[1]) == "default"){
+				if(isset($parsedUrl[1]) && !Method_Exists(new $this->url_controller($this->hotelConection),"default") || isset($parsedUrl[1]) && strtolower($parsedUrl[1]) == "default" || !isset($parsedUrl[1]) && !Method_Exists(new $this->url_controller($this->hotelConection),"default")){
 					$this->set_UrlController("Not_Found");					
 					unset($parsedUrl[1]);
 				}
