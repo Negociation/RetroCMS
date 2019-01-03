@@ -19,9 +19,15 @@ class Not_Found extends Controller{
 		$this->hotelModel = new HotelModel($this->hotelConection);
 		$this->hotel =  $this->hotelModel->get_HotelObject();
 		
-		
-		//Starting Habbo
+		//Starting Habbo_Model(DAO) and get the logged Habbo 
+		$this->habboModel = new HabboModel($this->hotelConection);
 		$this->habbo = new Habbo();
+		
+		if ($this->habbo->get_HabboLoggedIn()){
+			$this->habbo = $this->habboModel->get_HabboObject($this->habbo->get_HabboId());	
+		}
+		
+		
 	}
 	public function default(){
 		//Set Page Title;
