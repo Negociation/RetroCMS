@@ -28,7 +28,7 @@ class HabboModel extends Model{
 		$habboObject = new Habbo();
 		//Get one row from table (users) where id as equal habboId value;
 		$row = $this->getById('users',$habboId);
-		$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank']);
+		$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank'],$row['figure'],$row['sex'],$row['credits']);
 		return $habboObject;
 	}
 	
@@ -42,7 +42,7 @@ class HabboModel extends Model{
 		//If found the habbo
 		if(count($result) == 1){
 			$row = $result[0];
-			$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank']);
+			$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank'],$row['figure'],$row['sex'],$row['credits']);
 			
 			//Check if password match
 			if($testObject->get_HabboName() == $habboObject->get_HabboName()){

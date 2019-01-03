@@ -30,11 +30,15 @@ class Habbo{
 		}		
 	}
 	
-	public function constructObject($id,$username,$password,$rank){
+	public function constructObject($id,$username,$password,$rank,$figure,$gender,$credits){
 		$this->habboId = $id;	
 		$this->habboName = $username;	
 		$this->habboPassword = $password;	
 		$this->habboRank = $rank;	
+		$this->habboFigure = $figure;	
+		$this->habboGender = $gender;
+		$this->habboCredits = $credits;
+		
 	}
 
 	public function get_HabboId(){
@@ -62,7 +66,7 @@ class Habbo{
 	}
 	
 	public function get_HabboCredits(){
-		return 0;
+		return $this->habboCredits;
 	}
 	
 	public function get_HabboClubStatus(){
