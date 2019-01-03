@@ -83,6 +83,14 @@ class Habbo{
 		$_SESSION['id'] = $this->habboId;
 	}
 	
+	public function set_HabboLogout(){
+		session_destroy();
+		$_SESSION['habboLoggedIn'] = false;
+	}
+	
+	public function get_HabboPassword(){
+		return $this->habboPassword;
+	}
 }
 
 

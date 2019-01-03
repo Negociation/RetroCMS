@@ -45,7 +45,7 @@ class HabboModel extends Model{
 			$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank'],$row['figure'],$row['sex'],$row['credits']);
 			
 			//Check if password match
-			if($testObject->get_HabboName() == $habboObject->get_HabboName()){
+			if(sodium_crypto_pwhash_str_verify($habboObject->get_HabboPassword(), $testObject->get_HabboPassword())){
 				
 				//Check if not banned
 				if($habboObject->get_HabboRank() < 0){

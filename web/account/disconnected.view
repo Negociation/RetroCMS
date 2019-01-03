@@ -1,20 +1,16 @@
 <?php
 //////////////////////////////////////////////////////////////
-// 							RetroCMS 						//
+// 						RetroCMS 							//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
 // Developed by: Marcos ( M.tiago )							//
 //////////////////////////////////////////////////////////////
-// Alpha Version 0.7.0 ( Opal ) 							//
-// Branch: Public											//
+// Alpha Version 0.8.1 ( Citrine ) 							//
+// Branch: Public (Unstable)								//
 //////////////////////////////////////////////////////////////
-?>
 
-<?php 
-//Include Header Content
-include('./Web/Includes/Content/Headers/Account.php'); 
-
-//Page Content >>
+//Include Header Content ()
+include('./web/includes/site_content/headers/account.viewpart'); 
 ?>
 
 			<div id="outer">
@@ -37,12 +33,8 @@ include('./Web/Includes/Content/Headers/Account.php');
 							<div class="content-bottom-content"></div>
 						</div>
 					</div>
-
-<?php 
-
-//<< Page Content
-
-//Include Footer Content
-include('./Web/Includes/Content/Footers/Process.php'); 
-
+					
+<?php
+//Include Footer Content()
+include('./web/includes/site_content/footers/process.viewpart'); 
 ?>

@@ -1,6 +1,6 @@
 <?php
 //////////////////////////////////////////////////////////////
-// 					RetroCMS 								//
+// 						RetroCMS 							//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
 // Developed by: Marcos ( M.tiago )							//
@@ -41,7 +41,7 @@ class Account extends Controller{
 		}
 	}
 	
-	public function disconected(){
+	public function disconnected(){
 		//Set Page Title;
 		$this->pageTitle = "Login";
 		
@@ -50,8 +50,14 @@ class Account extends Controller{
 			require_once './web/maintenance/index.view';
 			exit;
 		}else{
-			include 'web/account/login.view';	
-			exit;
+			if($this->habbo->get_HabboLoggedIn()){
+				$this->habbo->set_HabboLogout();
+				include 'web/account/disconnected.view';	
+				exit;
+			}else{
+				header('Location: ../');
+				exit;	
+			}
 		}
 	}
 
