@@ -9,7 +9,7 @@
 // Branch: Public (Unstable)								//
 //////////////////////////////////////////////////////////////
 
-class News{
+class Article{
 	protected $news_Id;
 	protected $news_Date;
 	protected $news_Title;

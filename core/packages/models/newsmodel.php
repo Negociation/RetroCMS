@@ -43,13 +43,13 @@ class NewsModel extends Model{
 		$result = $this->getByParam('site_news','status',true);
 		if (count($result) > 0 && $result != false ){
 			foreach($result as $row){
-				$newsObject = new News();
-				$newsObject->constructObject($row['id'],$row['date'],utf8_encode($row['title']),utf8_encode($row['description']),utf8_encode($row['content']),$row['status']);				
-				array_push($newsArray,$newsObject);
+				$articleObject = new Article();
+				$articleObject->constructObject($row['id'],$row['date'],utf8_encode($row['title']),utf8_encode($row['description']),utf8_encode($row['content']),$row['status']);				
+				array_push($newsArray,$articleObject);
 			}
 		}else{
-			$newsObject = new News();
-			array_push($newsArray,$newsObject);
+			$articleObject = new Article();
+			array_push($newsArray,$articleObject);
 		}
 		return array_reverse($newsArray);
 	}
