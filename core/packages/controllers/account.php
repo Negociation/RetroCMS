@@ -42,7 +42,7 @@ class Account extends Controller{
 	}
 	
 	public function disconected(){
-			//Set Page Title;
+		//Set Page Title;
 		$this->pageTitle = "Login";
 		
 		//Maintenance ? 
@@ -53,7 +53,12 @@ class Account extends Controller{
 			include 'web/account/login.view';	
 			exit;
 		}
-	}	
+	}
+
+	public function submit(){
+		echo 'Trying to submit';
+	}
+	
 }
 
 

@@ -14,8 +14,15 @@
   echo "<link href='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/styles/style.css' type='text/css' rel='stylesheet'/>
 		<link href='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/styles/boxes.css' type='text/css' rel='stylesheet'/>
 		<link href='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/styles/ads.css' type='text/css' rel='stylesheet'/>
-		<link href='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/styles/custom/style_custom_default.css' type='text/css' rel='stylesheet'/>";
+		<link href='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/styles/custom/style_custom_default.css' type='text/css' rel='stylesheet'/>\n";
 		
+  switch (get_class($this)){
+	//Import Process CSS if the control as:
+	case "Account":  
+		echo "		<link href='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/styles/process.css' type='text/css' rel='stylesheet'/>";	
+		break;
+  }
+  
 //Default JS Content	
   echo "\n
 		<script type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/prototype.js'></script>
