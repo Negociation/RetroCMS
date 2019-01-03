@@ -69,6 +69,29 @@ class HabboModel extends Model{
 		return array(true,0,0);
 	}
 	
+	
+	//Return a valid Habbo Ticket
+	public function get_ValidTicket($habboObject){
+		$uniqueTicket = true;
+		$result = $this->getColumn('users','sso_ticket');
+		if (count($result) > 0){
+			$uniqueTicket = true;
+			do{
+				$ramdomTicket = 'LT-'.rand (100000 , 999999 ).'-'.bin2hex(random_bytes(10)).'-'.$habboObject->get_HabboLanguage().'-fe2';
+				foreach($result as $existingTicket){
+					if($ramdomTicket == $existingTicket){
+						$uniqueTicket = false;
+					}
+				}
+			}while($uniqueTicket == false);
+		}	
+		return $ramdomTicket;
+	}
+	
+	public function set_HabboTicket($habboObject){
+		return $this->setColumnById('users', 'sso_ticket', $habboObject->get_HabboId(), $habboObject->get_HabboTicket());
+	}
+	
 }
 
 ?>

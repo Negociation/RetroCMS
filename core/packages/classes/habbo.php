@@ -88,12 +88,21 @@ class Habbo{
 		$_SESSION['habboLoggedIn'] = false;
 	}
 	
+	public function set_HabboTicket($Param){
+		$this->habboTicket = $Param;
+	}
+	
 	public function get_HabboPassword(){
 		return $this->habboPassword;
 	}
 	
+	
 	public function get_HabboTicket(){
-		return '123';
+		return $this->habboTicket;
+	}
+	
+	public function get_HabboLanguage(){
+			return 'br';
 	}
 }
 

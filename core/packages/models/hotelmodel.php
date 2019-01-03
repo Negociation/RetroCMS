@@ -52,9 +52,6 @@ class HotelModel extends Model{
 		return $hotelObject;
 	}
 	
-	
-	
-	
 }
 
 ?>

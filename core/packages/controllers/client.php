@@ -41,8 +41,16 @@ class Client extends Controller{
 			exit;
 		}else{
 			if($this->habbo->get_HabboLoggedIn()){
-				include 'web/client.view';	
-				exit;
+				//Get a new Ticket for Client Access
+				$this->habbo->set_HabboTicket($this->habboModel->get_ValidTicket($this->habbo));
+				
+				//If habbo ticket as seted so update on Database
+				if($this->habbo->get_HabboTicket() != null && $this->habboModel->set_HabboTicket($this->habbo)){
+					include 'web/client.view';	
+					exit;
+				}else{
+					exit;
+				}
 			}else{
 				header('Location: ../account/login?target=habboClient');
 				exit;

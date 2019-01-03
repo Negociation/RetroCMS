@@ -52,7 +52,7 @@ class Model{
 
 			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			
-			}catch(Exception $e){
+		}catch(Exception $e){
 			//If not return false
 			return false;
 			exit;
@@ -60,10 +60,41 @@ class Model{
 		return $result;	
 	}
 	
+	public function getColumn($Table,$Column){
+		try {
+			$sql = 'SELECT '.$Column.' FROM '.$Table;
+			$stmt = $this->hotelConection->prepare($sql);
+			$stmt->execute();
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			
+		}catch(Exception $e){
+			//If not return false
+			return false;
+			exit;
+		}
+		return $result;			
+	}
+	
 	public function deleteById($Column,$Id){
 		
 	}
 	
+	public function setColumnById($Table, $Column, $Id, $Param){
+		try {
+			$sql = 'UPDATE '.$Table.' SET '.$Column.' = :param where id = :id';
+			$stmt = $this->hotelConection->prepare($sql);
+			$stmt->bindValue(':param', $Param);
+			$stmt->bindValue(':id', $Id);
+			$stmt->execute();
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			
+		}catch(Exception $e){
+			//If not return false
+			return false;
+			exit;
+		}
+		return true;		
+	}
 	
 }
 
