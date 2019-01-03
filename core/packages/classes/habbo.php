@@ -11,7 +11,14 @@
 
 class Habbo{
 	protected $habboId;
+	protected $habboName;
+	protected $habboPassword;
 	protected $habboLoggedIn;
+	protected $habboRank;
+	protected $habboFigure;
+	protected $habboGender;
+	protected $habboCredits;
+	
 	public function __construct(){
 		//Get Data from Habbo if Logged in 
 		//Remember to update incluing session expiration time :D
@@ -21,6 +28,13 @@ class Habbo{
 		}else{
 			$this->habboLoggedIn = false;
 		}		
+	}
+	
+	public function constructObject($id,$username,$password,$rank){
+		$this->habboId = $id;	
+		$this->habboName = $username;	
+		$this->habboPassword = $password;	
+		$this->habboRank = $rank;	
 	}
 
 	public function get_HabboId(){
@@ -32,9 +46,38 @@ class Habbo{
 	}
 	
 	public function get_HabboName(){
-		return null;
+		return $this->habboName;
+	}
+
+	public function get_HabboRank(){
+		return $this->habboRank;	
 	}
 	
+	public function set_HabboName($Param){
+		$this->habboName = $Param;
+	}
+	
+	public function get_HabboFigure(){
+		return $this->habboFigure;	
+	}
+	
+	public function get_HabboCredits(){
+		return 0;
+	}
+	
+	public function get_HabboClubStatus(){
+		return false;;
+	}
+	public function set_HabboPassword($Param){
+		if(strlen($Param) > 6){
+			$this->habboPassword = $Param;
+		}
+	}
+
+	public function set_HabboSession(){
+		$_SESSION['habboLoggedIn'] = true;
+		$_SESSION['id'] = $this->habboId;
+	}
 	
 }
 

@@ -28,8 +28,19 @@ class Model{
 		return $result;		
 	}
 	
-	public function getById($Column,$Id){
-	
+	public function getById($Table,$Id){
+		try {
+			$sql = 'SELECT * FROM .'.$Table.' where '.$Id.' = :id';
+			$stmt = $this->hotelConection->prepare($sql);
+			$stmt->bindValue(':id', $Id);
+			$stmt->execute();
+			$result = $stmt->fetch();
+			}catch(Exception $e){
+			//If not return false
+			return false;
+			exit;
+		}
+		return $result;	
 	}
 
 	public function getByParam($Table,$Column,$Param){
