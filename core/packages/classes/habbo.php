@@ -22,11 +22,13 @@ class Habbo{
 	public function __construct(){
 		//Get Data from Habbo if Logged in 
 		//Remember to update incluing session expiration time :D
-		if (count($_SESSION) > 0 && $_SESSION['habboLoggedIn'] == true){
-			$this->habboLoggedIn = true;
+		if ($_SESSION['habboLoggedIn'] == true){
+			$this->habboLoggedIn = 1;
 			$this->habboId = $_SESSION['id'];
 		}else{
-			$this->habboLoggedIn = false;
+			$this->habboLoggedIn = 0;
+			$_SESSION['habboLoggedIn'] = false;
+			unset($_SESSION['id']);
 		}		
 	}
 	

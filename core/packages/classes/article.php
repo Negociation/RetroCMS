@@ -43,6 +43,10 @@ class Article{
 		return $this->news_Title;
 	}
 	
+	public function get_Content(){
+		return $this->news_Content;
+	}
+	
 	public function get_Desc(){
 		return $this->news_Desc;
 	}

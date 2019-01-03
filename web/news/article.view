@@ -16,7 +16,7 @@ include('./web/includes/site_content/headers/default.viewpart');
 				<div id="page-headline">
 				   <div id="page-headline-breadcrums">
 				   </div>
-				   <div id="page-headline-text">Prêmio Emblema 2006: Quem será o ganhador?</div>
+				   <div id="page-headline-text"><?php echo $this->article->get_Title() ?></div>
 				</div>
 				<table border="0" cellpadding="0" cellspacing="0" width="100%">
 				   <tr>
@@ -36,10 +36,10 @@ include('./web/includes/site_content/headers/default.viewpart');
 										</li>
 										<li>
 										   <span class="articledate">19/12/06</span>
-										   Prêmio Emblema 2006: Quem será o ganhador?
+										   <?php echo $this->article->get_Title() ?>
 										</li>
 									 </ul>
-									 <div class="promo-button"><a href="/web/20070104105227/http://www.habbo.com.br:80/news">mais notícias</a></div>
+									 <div class="promo-button"><a href="<?php echo $this->hotel->get_HotelUrl().'/news'; ?>">mais notícias</a></div>
 								  </div>
 								  <div class="clear"></div>
 							   </div>
@@ -52,14 +52,15 @@ include('./web/includes/site_content/headers/default.viewpart');
 					  <td valign="top" style="width: 539px; padding-top: 3px;" class="habboPage-col rightmost">
 						 <div class="portlet-scale gold">
 							<div class="portlet-scale-header">
-							   <h3>%ArticleTitle% [00/00/00]</h3>
+							   <h3><?php echo $this->article->get_Title() ?> [00/00/00]</h3>
 							</div>
 							<div class="portlet-scale-body">
 							   <div class="portlet-scale-content">
 								  <div class="article-full">
 									 <div>
-										%ArticleContent%
+										<?php echo $this->article->get_Content() ?>
 									 </div>
+									 <br>
 									 <p class="article-author"><b>%Author%, Gerente do Hotel</b></p>
 								  </div>
 								  <div class="clear"></div>
