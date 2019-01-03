@@ -11,7 +11,9 @@
 
 class News extends Controller{
 	protected $promoArray = [];
+	protected $newsArray = [];
 	protected $newsModel;
+	protected $article;
 	
 	public function __construct($hotelConection){
 		//Setting PDO Conection
@@ -33,34 +35,27 @@ class News extends Controller{
 		//Webpromos and News
 		$this->newsModel = new NewsModel($this->hotelConection);
 		$this->newsArray = $this->newsModel->get_ActiveNews();
+		$this->article = new Article();
 	}
 	
-	public function article($id){
-		
+	public function article($id){	
 		//Maintenance ? 
 		if(!$this->hotel->get_HotelStatus()){
 			require_once './web/maintenance/index.view';
 			exit;
 		}else{
-			include 'web/news/article.view';	
-			exit;
-		}
-	
-	}
-	
-	public function default(){
-		//Set Page Title;
-		$this->pageTitle = "Habbo";
-		
-		//Maintenance ? 
-		if(!$this->hotel->get_HotelStatus()){
-			require_once './web/maintenance/index.view';
-			exit;
-		}else{
-			include 'web/index.view';	
-			exit;
+			$this->article = $this->newsModel->get_Article($id);
+			if($this->article != false){
+				include 'web/news/article.view';
+				exit;				
+			}else{
+				include 'web/404.view';	
+				exit;				
+			}
 		}
 	}
+	
+
 }
 
 

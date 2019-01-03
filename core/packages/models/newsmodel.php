@@ -38,7 +38,7 @@ class NewsModel extends Model{
 	//Return a array of active newsCalls (Object)
 	public function get_ActiveNews(){
 		$newsArray = [];
-		$newsObject;
+		$articleObject;
 		//Get all content from table (site_news) where Column(status) as active(true)
 		$result = $this->getByParam('site_news','status',true);
 		if (count($result) > 0 && $result != false ){
@@ -52,6 +52,18 @@ class NewsModel extends Model{
 			array_push($newsArray,$articleObject);
 		}
 		return array_reverse($newsArray);
+	}
+	
+	public function get_Article($id){
+		$articleObject = new Article();		
+		$result = $this->getById('site_news',$id);
+		if (!$result && $id != 0){
+			return false;
+			exit;
+		}elseif( is_array($result) && $result != false){
+			$articleObject->constructObject($result['id'],$result['date'],utf8_encode($result['title']),utf8_encode($result['description']),utf8_encode($result['content']),$result['status']);	
+		}
+		return $articleObject;
 	}
 }
 
