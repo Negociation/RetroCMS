@@ -39,6 +39,18 @@
 		<script>
 			window.onload = function() {
 				Advertisement_Load();
+				if (habboClient == true){					
+					resizeWin();
+					window.onerror = function() { return true; }; 
+					ensureOpenerIsLoggedIn();
+					addClientUnloadHook();
+				}else{
+					var habboReqPath = 	'';
+					var habboStaticFilePath = '';
+					var habboImagerUrl = '/habbo-imaging/';
+					document.habboLoggedIn = ".$this->habbo->get_habboLoggedIn().";
+					window.name = 'habboMain';
+				}
 			};
 		</script>
 		";

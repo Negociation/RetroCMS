@@ -16,6 +16,7 @@ class Hotel{
 	protected $hotel_Version;
 	protected $hotel_Web;
 	protected $hotel_Url;
+	protected $hotel_Client = [] ; //(0 DCR) - (1 TEXTS) - (2 VARIABLES) - (3 SERVER HOST) - (4 SERVER PORT) - ( 5 MUS PORT );
 	protected $hotel_Status;
 	
 	//Default construct method if hotel haven't installed yet [ Php doesnt allow multiple constructors methods :/ ]
@@ -28,10 +29,12 @@ class Hotel{
 	}
 	
 	//Construct hotel Object 
-	public function constructObject($Hotel_Name,$Hotel_Nick,$Hotel_Version){
+	public function constructObject($Hotel_Name,$Hotel_Nick,$Hotel_Version,$Hotel_Client){
 		$this->hotel_Name = $Hotel_Name;
 		$this->hotel_Nick = $Hotel_Nick;
 		$this->hotel_Version = $Hotel_Version;		
+		$this->hotel_Client = $Hotel_Client;
+		$this->hotelStatus = 1;
 	}
 	
 	//Get Hotel Advertisements if have any enabled :)
@@ -61,8 +64,32 @@ class Hotel{
 		return $this->hotel_Url;
 	}
 	
-		public function get_HotelWeb(){
+	public function get_HotelWeb(){
 		return $this->hotel_Url;
+	}
+	
+	public function get_HotelDCR(){
+		return $this->hotel_Client[0];
+	}
+	
+	public function get_HotelTexts(){
+		return $this->hotel_Client[1];
+	}
+	
+	public function get_HotelVars(){
+		return $this->hotel_Client[2];
+	}
+	
+	public function get_HotelHost(){
+		return $this->hotel_Client[3];
+	}
+	
+	public function get_HotelPort(){
+		return $this->hotel_Client[4];
+	}
+
+	public function get_HotelMUS(){
+		return $this->hotel_Client[5];
 	}
 }
 ?>

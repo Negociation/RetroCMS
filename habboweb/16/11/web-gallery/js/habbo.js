@@ -101,7 +101,7 @@ function openOrFocusHabbo(link) {
 	}
 }
 
-function _openHabboWindow(url, target) { return window.open(url, target, "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=740,height=597"); }
+function _openHabboWindow(url, target) { return window.open(url, target, "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=740,height=588"); }
 function openEmptyHabboWindow(target) { return _openHabboWindow('', target); }
 
 function _isHabboPopupOpen() { return openedHabbo && !openedHabbo.closed && openedHabbo.focus; }

@@ -91,6 +91,10 @@ class Habbo{
 	public function get_HabboPassword(){
 		return $this->habboPassword;
 	}
+	
+	public function get_HabboTicket(){
+		return '123';
+	}
 }
 
 
