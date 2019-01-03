@@ -80,6 +80,15 @@ class Account extends Controller{
 				if (!isset($_POST['target'])){
 					header('Location: ../');
 					exit;
+				}else{
+					switch($_POST['target']){
+						case 'habboClient': 
+							header('Location: ../client');
+							break;
+						default:
+							header('Location: ../');
+							break;
+					}
 				}
 				
 			}else{
