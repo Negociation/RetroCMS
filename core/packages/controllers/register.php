@@ -29,6 +29,7 @@ class Register extends Controller{
 
 	}
 	
+	//Start registration 
 	public function start(){
 		$this->step(1);			
 	}
@@ -64,15 +65,52 @@ class Register extends Controller{
 					case 2:
 						if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 							require_once './web/register/2.view';
+						}else{
+							header('Location: ../../');	
+							break;
+						}
+						break;
+					
+					//Step 3 (Email and default language)
+					case 3:
+						if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+							require_once './web/register/3.view';
+						}else{
+							header('Location: ../../');	
+							break;
 						}
 						break;
 						
+					//Step 4 (TOS)
+					case 4:
+						if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+							require_once './web/register/4.view';
+						}else{
+							header('Location: ../../');	
+							break;
+						}
+						break;
+						
+					//Step 5 (Welcome Page)
+					case 5:
+						if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+							require_once './web/register/5.view';
+						}else{
+							header('Location: ../../');	
+							break;
+						}
+						break;
 					default:
 						require_once './web/404.view';
 						break;
 				}
 			}
 		}
+	}
+	
+	//Finish Registration
+	public function done(){
+		$this->step(5);			
 	}
 }
 

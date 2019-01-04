@@ -38,7 +38,10 @@ class News extends Controller{
 		$this->article = new Article();
 	}
 	
-	public function article($id){	
+	public function article($id){
+		//Author of Article Data
+		$authorObject = new Habbo();
+		
 		//Maintenance ? 
 		if(!$this->hotel->get_HotelStatus()){
 			require_once './web/maintenance/index.view';
@@ -46,6 +49,7 @@ class News extends Controller{
 		}else{
 			$this->article = $this->newsModel->get_Article($id);
 			if($this->article != false){
+				$authorObject = $this->habboModel->get_HabboObject($this->article->get_Author());
 				include 'web/news/article.view';
 				exit;				
 			}else{

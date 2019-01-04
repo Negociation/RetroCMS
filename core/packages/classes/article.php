@@ -15,8 +15,8 @@ class Article{
 	protected $news_Title;
 	protected $news_Desc;
 	protected $news_Content;
+	protected $news_Author;
 	protected $news_Status;
-	
 	public function __construct(){
 		$this->news_Id = 0;
 		$this->news_Date = 0;
@@ -24,15 +24,18 @@ class Article{
 		$this->news_Desc = 'Well, something happened, news not found!';
 		$this->news_Content = "Please check your database and try again...";
 		$this->news_Status = 1;		
+		$this->news_Author = 0;
 	}
 	
-	public function constructObject($News_Id,$News_Date,$News_Title,$News_Desc,$News_Content,$News_Status){
+	public function constructObject($News_Id,$News_Date,$News_Title,$News_Desc,$News_Content,$News_Author,$News_Status){
 		$this->news_Id = $News_Id;
 		$this->news_Date = $News_Date;
 		$this->news_Title = $News_Title;
 		$this->news_Desc = $News_Desc;
 		$this->news_Content = $News_Content;
+		$this->news_Author = $News_Author;
 		$this->news_Status = $News_Status;
+		
 	}
 	
 	public function get_Id(){
@@ -49,6 +52,10 @@ class Article{
 	
 	public function get_Desc(){
 		return $this->news_Desc;
+	}
+	
+	public function get_Author(){
+		return $this->news_Author;
 	}
 	
 	public function get_Status(){
