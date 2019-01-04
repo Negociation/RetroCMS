@@ -39,23 +39,41 @@ class News extends Controller{
 	}
 	
 	public function article($id){
-		//Author of Article Data
-		$authorObject = new Habbo();
+		
 		
 		//Maintenance ? 
 		if(!$this->hotel->get_HotelStatus()){
 			require_once './web/maintenance/index.view';
 			exit;
 		}else{
+			
+			//Author of Article Data
+			$authorObject = new Habbo();
+			
+			//Get Article Data By Id
 			$this->article = $this->newsModel->get_Article($id);
+			
+			//Get Last Active News 
+			
+			//If article exists then shows View
 			if($this->article != false){
-				//$authorObject = $this->habboModel->get_HabboObject($this->article->get_Author());
+				$authorObject = $this->habboModel->get_HabboObject($this->article->get_Author());
 				include 'web/news/article.view';
 				exit;				
 			}else{
 				include 'web/404.view';	
 				exit;				
 			}
+		}
+	}
+	
+	public function default(){
+		if(!$this->hotel->get_HotelStatus()){
+			require_once './web/maintenance/index.view';
+			exit;
+		}else{
+			include 'web/news/index.view';
+			exit;	
 		}
 	}
 	

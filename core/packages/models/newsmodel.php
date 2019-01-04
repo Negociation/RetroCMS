@@ -56,7 +56,7 @@ class NewsModel extends Model{
 	public function get_Article($id){
 		$articleObject = new Article();		
 		$result = $this->getById('site_news',$id);
-		if (!$result && $id != 0){
+		if ((!$result && $id != 0) || $result['status'] == false){
 			return false;
 			exit;
 		}elseif( is_array($result) && $result != false){

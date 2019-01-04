@@ -30,14 +30,32 @@ include('./web/includes/site_content/headers/default.viewpart');
 							   <div class="portlet-scale-content">
 								  <div class="archive-sidebar">
 									 <ul>
-										<li>
-										   <span class="articledate">03/01/07</span>
-										   <a href="/web/20070104105227/http://www.habbo.com.br:80/news/article_0145.html">Desejos de Ano Novo: vencedores</a>			
-										</li>
-										<li>
-										   <span class="articledate">19/12/06</span>
-										   <?php echo $this->article->get_Title() ?>
-										</li>
+										<?php
+										
+										foreach($this->newsArray as $index=>$row){
+											if($index > 5){
+												break;
+											}else{
+												
+												if($row == $this->article){
+													echo '
+														<li>
+															<span class="articledate">03/01/07</span>'.$row->get_Title().'	
+														</li>	
+														';	
+												}else{
+													echo '
+														<li>
+															<span class="articledate">03/01/07</span>
+							
+															<a href="/web/20070104105227/http://www.habbo.com.br:80/news/article_0145.html">'.$row->get_Title().'</a>			
+														</li>	
+														';												
+												}
+											}
+										}
+										?>
+										
 									 </ul>
 									 <div class="promo-button"><a href="<?php echo $this->hotel->get_HotelUrl().'/news'; ?>">mais notícias</a></div>
 								  </div>
