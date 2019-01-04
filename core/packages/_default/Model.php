@@ -30,17 +30,19 @@ class Model{
 	
 	public function getById($Table,$Id){
 		try {
-			$sql = 'SELECT * FROM .'.$Table.' where '.$Id.' = :id';
+			$sql = 'SELECT * FROM '.$Table.' WHERE id = :id';
 			$stmt = $this->hotelConection->prepare($sql);
-			$stmt->bindValue(':id', $Id);
+			$stmt->bindParam(':id', $Id);
 			$stmt->execute();
 			$result = $stmt->fetch();
-			}catch(Exception $e){
+		}catch(Exception $e){
 			//If not return false
 			return false;
 			exit;
 		}
+		
 		return $result;	
+		
 	}
 
 	public function getByParam($Table,$Column,$Param){

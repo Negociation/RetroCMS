@@ -61,7 +61,7 @@ include('./web/includes/site_content/headers/default.viewpart');
 										<?php echo $this->article->get_Content() ?>
 									 </div>
 									 <br>
-									 <p class="article-author"><b><?php if(is_null($authorObject->get_HabboName())){ echo $authorObject->get_HabboName().' - '; } ?> Gerente do Hotel</b></p>
+									 <p class="article-author"><b><?php if(!is_null($authorObject->get_HabboName())){ echo $authorObject->get_HabboName().' - '; } ?> Gerente do Hotel</b></p>
 								  </div>
 								  <div class="clear"></div>
 							   </div>

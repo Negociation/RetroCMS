@@ -13,7 +13,6 @@ class NewsModel extends Model{
 
 	public function __construct($hotelConection){
 		$this->hotelConection = $hotelConection;
-
 	}
 	
 	//Return a array of active promos(Object)
@@ -61,7 +60,7 @@ class NewsModel extends Model{
 			return false;
 			exit;
 		}elseif( is_array($result) && $result != false){
-			$articleObject->constructObject($result['id'],$result['date'],utf8_encode($result['title']),utf8_encode($result['description']),utf8_encode($result['content']),$result['status']);	
+			$articleObject->constructObject($result['id'],$result['date'],utf8_encode($result['title']),utf8_encode($result['description']),utf8_encode($result['content']),$result['author'],$result['status']);	
 		}
 		return $articleObject;
 	}

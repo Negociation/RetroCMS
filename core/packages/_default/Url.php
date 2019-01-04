@@ -60,9 +60,8 @@ class Url{
 			if(isset($parsedUrl[1]) &&  Method_Exists(new $this->url_controller($this->hotelConection),$parsedUrl[1]) && strtolower($parsedUrl[1]) != "default"){
 				$this->set_UrlMethod($parsedUrl[1]);
 				unset($parsedUrl[1]);
-				//Get all parameters from the rest of URL if method exist	
+				//Get all parameters from the rest of URL if method exist
 				$method = new ReflectionMethod($this->get_UrlController(), $this->get_UrlMethod());
-				$method->getNumberOfParameters();
 				//Check if numbers of parameters passed are equal number of args of function(View)
 				if ($method->getNumberOfParameters()== count($parsedUrl)){
 					$params = $parsedUrl ? array_values($parsedUrl): [];

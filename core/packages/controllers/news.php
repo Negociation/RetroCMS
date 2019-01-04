@@ -49,7 +49,7 @@ class News extends Controller{
 		}else{
 			$this->article = $this->newsModel->get_Article($id);
 			if($this->article != false){
-				$authorObject = $this->habboModel->get_HabboObject($this->article->get_Author());
+				//$authorObject = $this->habboModel->get_HabboObject($this->article->get_Author());
 				include 'web/news/article.view';
 				exit;				
 			}else{
