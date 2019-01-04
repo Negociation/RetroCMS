@@ -44,7 +44,7 @@ class NewsModel extends Model{
 		if (count($result) > 0 && $result != false ){
 			foreach($result as $row){
 				$articleObject = new Article();
-				$articleObject->constructObject($row['id'],$row['date'],utf8_encode($row['title']),utf8_encode($row['description']),utf8_encode($row['content']),$row['status']);				
+				$articleObject->constructObject($row['id'],$row['date'],utf8_encode($row['title']),utf8_encode($row['description']),utf8_encode($row['content']),$row['author'],$row['status']);				
 				array_push($newsArray,$articleObject);
 			}
 		}else{
