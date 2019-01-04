@@ -18,7 +18,8 @@
 		
   switch (get_class($this)){
 	//Import Process CSS if the control as:
-	case "Account":  
+	case "Account": 
+	case "Register":	
 		echo "		<link href='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/styles/process.css' type='text/css' rel='stylesheet'/>";	
 		break;
   }
@@ -27,7 +28,8 @@
   echo "\n
 		<script type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/prototype.js'></script>
 		<script type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/habbo.js'></script>
-		<script type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/builder.js'></script>";
+		<script type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/builder.js'></script>
+		<script type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/swfobject.js'></script>";
 		
 		
 //Language Content	

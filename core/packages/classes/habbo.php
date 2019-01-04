@@ -104,7 +104,11 @@ class Habbo{
 	}
 	
 	public function get_HabboLanguage(){
-			return 'br';
+		return 'br';
+	}
+	
+	public function get_HabboGender(){
+		return $this->habboGender;
 	}
 }
 

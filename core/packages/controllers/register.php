@@ -53,14 +53,16 @@ class Register extends Controller{
 						
 					//Step 1 ( Habbo Avatar )
 					case 1:
-						if ($_SERVER['REQUEST_METHOD'] != 'POST'){
+						if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 							require_once './web/register/1.view';
+						}else{
+							header('Location: ../../');	
 						}
 						break;
 						
 					//Step 2 ( Habbo Username and Password )	
 					case 2:
-						if ($_SERVER['REQUEST_METHOD'] != 'POST'){
+						if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 							require_once './web/register/2.view';
 						}
 						break;
