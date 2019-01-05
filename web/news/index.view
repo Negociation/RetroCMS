@@ -13,8 +13,82 @@
 include('./web/includes/site_content/headers/default.viewpart'); 
 ?>
 
-			
+			<div id="page-headline">
+				<div id="page-headline-breadcrums"></div>
+				<div id="page-headline-text">Arquivo</div>
+			</div>
 
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tr>
+					<td style="width: 8px;"></td>
+					<td valign="top" style="width: 202px;" class="habboPage-col">
+						<div class="portlet-scale gold">
+							<div class="portlet-scale-header"><h3>Notícias Habbo</h3></div>
+							<div class="portlet-scale-body">
+								<div class="portlet-scale-content">
+									No Arquivo de Notícias Habbo você encontra o que está buscando.
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="portlet-scale-bottom">
+								<div class="portlet-scale-bottom-body"></div>
+							</div>
+						</div>
+					</td>	
+					
+					<td valign="top" style="width: 539px;" class="habboPage-col rightmost">
+						<div class="portlet-scale gold">
+							<div class="portlet-scale-header"><h3>Lista de Notícias</h3></div>
+							<div class="portlet-scale-body">
+								<div class="portlet-scale-content">
+									<p>
+										<ul>
+										<?php
+											if (count($this->newsArray) > 0){
+												foreach($this->newsArray as $index=>$row){
+													echo'
+														<li>
+															<span class="articledate">[02/02/07]</span>
+															<a href="'.$this->hotel->get_HotelUrl().'/news/article/'.$row->get_Id().'">'.$row->get_Title().'</a>
+														</li>
+													';
+												}
+											}else{
+												echo '<center> Nenhuma noticia foi encontrada !</center>';
+											}
+
+										?>
+										</ul>
+									</p>
+								<div class="clear"></div>
+								</div>
+							</div>
+							<div class="portlet-scale-bottom">
+								<div class="portlet-scale-bottom-body"></div>
+							</div>
+						</div>
+					</td>				
+					<td style="width: 4px;"></td>
+					<td rowspan="2" valign="top" style=" margin-left: 4px; width: 176px;">
+						<div id="ad_sidebar">
+						   <div class="cooperation">
+							  <table height="120" width="168" valign="middle" align="center" border="0" cellpadding="0" cellspacing="0" background="<?php echo $this->hotel->get_HotelWeb() ?>/c_images/themes/partner_box.gif">
+								 <tbody>
+									<tr>
+									   <td>
+											<img src="<?php echo $this->hotel->get_HotelWeb() ?>/c_images/shark_tale/EN_tutorial_pic_smalll.gif" border="0" id="experience"><br>
+									   </td>
+									</tr>
+								 </tbody>
+							  </table>
+						   </div>
+						   
+						   <!--Advertisement Right if as enabled-->
+						   <?php include('./web/includes/site_content/_partdata/advertisement_right.viewpart'); ?>
+						</div>
+					</td>
+				</tr>  
+			</table>
 
 
 <?php
