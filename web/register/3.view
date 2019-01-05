@@ -10,7 +10,7 @@
 //////////////////////////////////////////////////////////////
 
 //Include Header Content ()
-include('./web/includes/site_content/headers/account.viewpart'); 
+include('./web/includes/site_content/_partdata/_headers/register.viewpart'); 
 ?>
 		<div id="outer">
 			<div id="outer-content">
@@ -96,5 +96,5 @@ include('./web/includes/site_content/headers/account.viewpart');
 				</div>
 <?php
 //Include Footer Content()
-include('./web/includes/site_content/footers/process.viewpart'); 
+include('./web/includes/site_content/_partdata/_footers/process.viewpart'); 
 ?>

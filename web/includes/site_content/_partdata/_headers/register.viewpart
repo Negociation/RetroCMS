@@ -18,6 +18,7 @@
 		<?php include('./web/includes/site_content/visualSource.import'); ?>
 	</head>
 	<body>
+		<div id="overlay"></div>
 		<div id="process-wrapper">
 			<div id="process-header">
 				<div id="process-header-body">

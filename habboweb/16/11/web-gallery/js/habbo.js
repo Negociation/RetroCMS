@@ -658,7 +658,14 @@ function moveDialogToView(dialog, e, coordinates) {
 }
 
 function moveDialogToCenter(dialog) {
-	var topPos = Position.cumulativeOffset($("top"));
+	
+	var topPos;
+	
+	if (document.getElementById('top') != null){
+		topPos =  Position.cumulativeOffset($("top"));
+	}else{
+		topPos =  Position.cumulativeOffset($("process-header-content"));
+	}
 
 	var dim = Element.getDimensions(dialog);
 	var pageSize = getPageSize();

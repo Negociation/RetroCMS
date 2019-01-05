@@ -57,7 +57,7 @@ class Register extends Controller{
 						if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 							require_once './web/register/1.view';
 						}else{
-							header('Location: ../../');	
+							header('Location: ../../register/step/0');	
 						}
 						break;
 						
