@@ -7,6 +7,8 @@
 // Alpha Version 0.7.0 ( Opal )                             //
 //////////////////////////////////////////////////////////////
 
+var languageDialogTitle = 'Selecione o seu idioma';
+
 var WORDS_PT = {
 
   "Advertissement_Title" : "Publicidade",

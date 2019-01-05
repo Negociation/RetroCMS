@@ -524,7 +524,7 @@ function createDialog(dialogId, header, dialogZIndex, dialogLeft, dialogTop, exi
 	var headerBar = [Builder.node("div", [ Builder.node("h3", [ Builder.node("span", header) ]) ])];
 	if (exitCallback) { 
 		var exitButton = Builder.node("a", {href:"#", className:"dialog-grey-exit"}, [
-			Builder.node("img", {src:"http://127.0.0.1/habboweb/16/11/web-gallery/images/dialogs/grey-exit.png", width:12, height:17, alt:""})
+			Builder.node("img", {src: habboStaticFilePath + "/images/dialogs/grey-exit.png", width:12, height:17, alt:""})
 		]);
 		Event.observe(exitButton, "click", exitCallback, false);
 		headerBar.push(exitButton);
@@ -1359,12 +1359,13 @@ function Advertisement_Load(){
 /* Custom Boxes */
 
 function setLanguageDialog(){
-		var dialog = createDialog("purchase_dialog", "Select your Language", 9001, 0, -1000, closePurchaseResult);
-		appendDialogBody(dialog, "<p style=\"text-align:center\"><img src=\"./habboweb/16/11/web-gallery/progress_habbos.gif\" alt=\"\" width=\"29\" height=\"6\" /></p><div style=\"clear\"></div>", true);
+		var dialog = createDialog("purchase_dialog",'SELECIONE O SEU IDIOMA', 9001, 0, -1000, closePurchaseResult);
+		appendDialogBody(dialog, "<p style=\"text-align:center\"><img src=\""+ habboStaticFilePath +"./images/progress_habbos.gif\" alt=\"\" width=\"29\" height=\"6\" /></p><div style=\"clear\"></div>", true);
 		moveDialogToCenter(dialog);
 		showOverlay();
+		setDialogBody(dialog, "ola"); 
 		new Ajax.Request("/",{ 
-			method: "post", onComplete: function(req, text) {
+			method: "post", onComplete: function(req, html) {
 				setDialogBody(dialog, req.responseText); 
 			} 
 		}); 
