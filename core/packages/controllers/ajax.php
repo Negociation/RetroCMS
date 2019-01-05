@@ -46,7 +46,7 @@ class Ajax extends Controller{
 	}
 	
 	public function Experience(){
-
+		echo 'false';
 	}
 	
 }

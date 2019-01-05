@@ -89,14 +89,33 @@ include('./web/includes/site_content/_partdata/_headers/register.viewpart');
 													
 														<div id="pwRetypeStatus"></div>                                                    
 														<div id="register-buttons">
-						
+
 														<div align="right" "="">
 															<input type="hidden" name="required-birth" value="<?php //echo $this->newHabbo->get_HabboBirth() ?>" />
 															<input type="hidden" name="newGender" value="<?php //echo $this->newHabbo->get_HabboGender() ?>" />
 															<input type="hidden" name="figureData" value="<?php //echo $this->newHabbo->get_HabboFigure() ?>" />
-															<input type="submit" value="Continue" id="continuebtn" class="process-button">
+															<input  type="button" value="Continue" onclick="testeajax()" id="continuebtn" class="process-button">
 															</form>
+															<script> 
+															function testeajax(){
+																new Ajax.Request(habboStaticUrl+"/Ajax/isHabboExist",{
+
+																	method: "post", parameters: "habboName="+encodeURIComponent(document.getElementById("username").value), 
+																	onComplete: function(req, text) {
+																		alert("lele");
+																		if(req.responseText == "false"){
+																			document.getElementById("stepform").action = "lele";
+																		}else{
+																			document.getElementById("stepform").action = "lala";
+																		}
+																		document.getElementById("stepform").submit();
+
+																	}
+																}); 
+															};
 															
+															</script>
+		
 														</div>
 														<div class="clear"></div>                                                    
 														</div>                                                

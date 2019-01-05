@@ -44,11 +44,11 @@ class Register extends Controller{
 			if($this->habbo->get_HabboLoggedIn()){
 				header('Location: ../../');
 				exit;
-			}else{
+			}else if(is_numeric($id)){
 				switch($id){
-					
 					//Step 0 ( Habbo Birthday )
 					case 0:
+						
 						require_once './web/register/0.view';
 						break;
 						
@@ -104,6 +104,9 @@ class Register extends Controller{
 						require_once './web/404.view';
 						break;
 				}
+			}else{
+				require_once './web/404.view';
+				exit;
 			}
 		}
 	}
