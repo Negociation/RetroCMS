@@ -22,14 +22,21 @@ class Habbo{
 	public function __construct(){
 		//Get Data from Habbo if Logged in 
 		//Remember to update incluing session expiration time :D
-		if ($_SESSION['habboLoggedIn'] == true){
-			$this->habboLoggedIn = 1;
-			$this->habboId = $_SESSION['id'];
+
+		if (isset($_SESSION['habboLoggedIn'])){
+			if($_SESSION['habboLoggedIn']){
+				$this->habboLoggedIn = true;
+				$this->habboId = $_SESSION['id'];
+			}else{
+				$this->habboLoggedIn = false;
+				$_SESSION['habboLoggedIn'] = false;
+			}
 		}else{
-			$this->habboLoggedIn = 0;
+			$this->habboLoggedIn = false;
 			$_SESSION['habboLoggedIn'] = false;
 			unset($_SESSION['id']);
-		}		
+		}
+		
 	}
 	
 	public function constructObject($id,$username,$password,$rank,$figure,$gender,$credits){

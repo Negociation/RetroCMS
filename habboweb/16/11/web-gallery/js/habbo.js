@@ -1355,4 +1355,18 @@ function Advertisement_Load(){
 			curOffsetR = (curOffsetR >= Images_Right.length-1) ? 0 : curOffsetR + 1;
 		}
 	,25000);
+}	
+/* Custom Boxes */
+
+function setLanguageDialog(){
+		var dialog = createDialog("purchase_dialog", "Select your Language", 9001, 0, -1000, closePurchaseResult);
+		appendDialogBody(dialog, "<p style=\"text-align:center\"><img src=\"./habboweb/16/11/web-gallery/progress_habbos.gif\" alt=\"\" width=\"29\" height=\"6\" /></p><div style=\"clear\"></div>", true);
+		moveDialogToCenter(dialog);
+		showOverlay();
+		new Ajax.Request("/",{ 
+			method: "post", onComplete: function(req, text) {
+				setDialogBody(dialog, req.responseText); 
+			} 
+		}); 
 }
+

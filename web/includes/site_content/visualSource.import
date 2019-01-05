@@ -47,7 +47,7 @@
 					ensureOpenerIsLoggedIn();
 					addClientUnloadHook();
 				}else{
-					document.habboLoggedIn = ".$this->habbo->get_habboLoggedIn().";
+					document.habboLoggedIn = "; echo $this->habbo->get_habboLoggedIn() ? 'true' : 'false'.";
 					window.name = 'habboMain';
 				};
 			};
