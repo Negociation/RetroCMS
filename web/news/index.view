@@ -90,7 +90,6 @@ include('./web/includes/site_content/headers/default.viewpart');
 				</tr>  
 			</table>
 
-
 <?php
 //Include Footer Content()
 include('./web/includes/site_content/footers/default.viewpart'); 
