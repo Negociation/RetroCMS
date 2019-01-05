@@ -1356,6 +1356,34 @@ function Advertisement_Load(){
 		}
 	,25000);
 }	
+
+
+/* Language */
+
+function loadLanguage(lang){
+	/*fills all the span tags with class=lang pattern*/ 
+	window.localStorage.setItem('userLang', lang);
+
+	j('span[class^="lang"]').each(function(){  
+		var LangVar = (this.className).replace('lang-','');
+		var Text = window["WORDS_"+lang][LangVar];
+		j(this).text(Text);        
+	});
+				  
+				  
+	j('option[id^="lang"]').each(function(){
+		var LangVar = (this.id).replace('lang-','');
+		var Text = window["WORDS_"+lang][LangVar];
+		j(this).text(Text);        
+	});
+				  
+	j('input[id^="lang"]').each(function(){
+		var LangVar = (this.id).replace('lang-','');
+		var Text = window["WORDS_"+lang][LangVar];
+		j(this).val(Text);        
+	});
+}
+				
 /* Custom Boxes */
 
 function setLanguageDialog(){

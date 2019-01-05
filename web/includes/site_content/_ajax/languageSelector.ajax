@@ -1,0 +1,20 @@
+<?php
+//////////////////////////////////////////////////////////////
+// 						   RetroCMS 						//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos ( M.tiago )							//
+//////////////////////////////////////////////////////////////
+// Alpha Version 0.7.0 ( Opal ) 							//
+//////////////////////////////////////////////////////////////
+
+?>
+
+<div style="float: right; margin-top: 0px; margin-right: 20px; height: 20px; padding-left: 20px">
+	<a href="#" onclick="loadLanguage('PT')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_br.gif" alt=""></a>
+	<a href="#" onclick="loadLanguage('EN')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_en.gif" alt=""></a>
+	<a href="#" onclick="loadLanguage('ES')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_es.gif" alt=""></a>
+	<a href="#" onclick="$('#moreLang').toggle(); return false;" style="margin-left: 5px; height: 14px;" rel="tooltip-More languages..."><img src="http://127.0.0.1/c_images/hlanguages/more.png" alt=""></a>
+</div>
+
+<div class="clear"></div>

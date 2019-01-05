@@ -36,7 +36,7 @@ class Ajax extends Controller{
 			exit;
 		}else{
 			if($_SERVER['REQUEST_METHOD'] == 'POST'){
-				echo 'ok';
+				include './web/includes/site_content/_ajax/languageSelector.ajax';
 			}else{
 							echo 'nao autorizado';
 			}
@@ -44,7 +44,7 @@ class Ajax extends Controller{
 	}
 	
 	public function Experience(){
-			
+
 	}
 	
 }

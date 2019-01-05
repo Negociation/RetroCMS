@@ -115,7 +115,7 @@
 					<div id="submenu">
 						<div class="subnav">
 							<div style="float: right; margin-top: 0px; margin-right: 20px; height: 14px;">
-								<a href="#" onclick="setLanguageDialog()" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_br.png" alt=""></a>
+								<a href="#languageSelector" onclick="setLanguageDialog()" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_br.png" alt=""></a>
 							</div>
 						</div>
 					</div>

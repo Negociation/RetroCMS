@@ -48,7 +48,7 @@ include('./web/includes/site_content/headers/default.viewpart');
 									 <tbody>
 										<tr>
 										   <td>
-												<img src="<?php echo $this->hotel->get_HotelWeb() ?>/c_images/shark_tale/EN_tutorial_pic_smalll.gif" border="0" id="experience"><br>
+												<a href="#openHabboExperience"><img src="<?php echo $this->hotel->get_HotelWeb() ?>/c_images/shark_tale/EN_tutorial_pic_smalll.gif" border="0" onclick="setExperienceDialog()" id="experience"></a><br>
 										   </td>
 										</tr>
 									 </tbody>

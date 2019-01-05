@@ -37,7 +37,7 @@
 			document.habboLoggedIn = "; echo $this->habbo->get_habboLoggedIn() ? 'true' : 'false'; echo ";
 			var habboStaticFilePath = '".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/';
 			var habboStaticUrl = '".$this->hotel->get_HotelUrl()."';
-			
+
 			window.onload = function(){
 				Advertisement_Load();
 				if (typeof habboClient != 'undefined'){	
@@ -59,8 +59,14 @@
 		<script type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/habbo.js'></script>
 		<script type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/builder.js'></script>
 		<script type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/swfobject.js'></script>
+		<script type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/jquery.min.js'></script>
 		";
 
+  echo "\n 
+		<script>
+		var j = jQuery.noConflict();
+		</script>
+	";
 ?>
 
 
