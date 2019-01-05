@@ -36,7 +36,7 @@
 		<script>
 			document.habboLoggedIn = "; echo $this->habbo->get_habboLoggedIn() ? 'true' : 'false'; echo ";
 			var habboStaticFilePath = '".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/';
-			var habboStaticUrl = \"".$this->hotel->get_HotelUrl()."/habboweb/16/11/web-gallery/\";
+			var habboStaticUrl = '".$this->hotel->get_HotelUrl()."';
 			
 			window.onload = function(){
 				Advertisement_Load();
