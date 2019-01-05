@@ -9,7 +9,7 @@
 // Branch: Public (Unstable)								//
 //////////////////////////////////////////////////////////////
 
-class Language extends Controller{
+class Ajax extends Controller{
 
 	public function __construct($hotelConection){
 		//Setting PDO Conection
@@ -29,8 +29,7 @@ class Language extends Controller{
 		
 		
 	}
-	public function default(){
-		
+	public function languageSelector(){
 		//Maintenance ? 
 		if(!$this->hotel->get_HotelStatus()){
 			require_once './web/maintenance/index.view';
@@ -42,6 +41,10 @@ class Language extends Controller{
 							echo 'nao autorizado';
 			}
 		}
+	}
+	
+	public function Experience(){
+			
 	}
 	
 }

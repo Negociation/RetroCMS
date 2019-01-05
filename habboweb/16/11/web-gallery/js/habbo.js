@@ -1363,10 +1363,26 @@ function setLanguageDialog(){
 		appendDialogBody(dialog, "<p style=\"text-align:center\"><img src=\"" + habboStaticFilePath +"/images/progress_habbos.gif\" alt=\"\" /></p><div style=\"clear\"></div>", true);
 		moveDialogToCenter(dialog);
 		showOverlay();
-		new Ajax.Request(habboStaticUrl+"/language",{ 
-			method: "post", onComplete: function(req, html) {
+		new Ajax.Request(habboStaticUrl+"/ajax/languageSelector",{ 
+			method: "post", parameters: "product="+encodeURIComponent("g0 group_product"),
+			onComplete: function(req, html) {
 				setDialogBody(dialog, req.responseText); 
 			} 
 		}); 
 }
+
+function setExperienceDialog(){
+	
+	var dialog = createDialog("habboTV", "Habbo Experience", 9001, 0, -1000, closeTVResult);
+	appendDialogBody(dialog, "<p style=\"text-align:center\"><img src=\"" + habboStaticFilePath +"/images/progress_habbos.gif\" alt=\"\" width=\"29\" height=\"6\" /></p><div style=\"clear\"></div>", true);
+	moveDialogToCenter(dialog);
+	showOverlay();
+	new Ajax.Request(habboStaticUrl+"/Ajax/Experience",{
+		method: "post", parameters: "product="+encodeURIComponent("g0 group_product"), 
+		onComplete: function(req, text) {
+			setDialogBody(dialog, req.responseText);			
+		} 
+	}); 
+}
+
 
