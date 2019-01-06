@@ -28,7 +28,7 @@ class HabboModel extends Model{
 		$habboObject = new Habbo();
 		//Get one row from table (users) where id as equal habboId value;
 		$row = $this->getById('users',$habboId);
-		$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank'],$row['figure'],$row['sex'],$row['credits']);
+		$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank'],$row['figure'],$row['sex'],$row['credits'],array($row['club_subscribed'],$row['club_expiration']));
 		return $habboObject;
 	}
 	

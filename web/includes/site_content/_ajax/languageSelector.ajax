@@ -10,11 +10,56 @@
 
 ?>
 
-<div style="float: right; margin-top: 0px; margin-right: 20px; height: 20px; padding-left: 20px">
-	<a href="#" onclick="loadLanguage('PT')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_br.gif" alt=""></a>
-	<a href="#" onclick="loadLanguage('EN')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_en.gif" alt=""></a>
-	<a href="#" onclick="loadLanguage('ES')" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="http://127.0.0.1/c_images/hlanguages/icon_es.gif" alt=""></a>
-	<a href="#" onclick="$('#moreLang').toggle(); return false;" style="margin-left: 5px; height: 14px;" rel="tooltip-More languages..."><img src="http://127.0.0.1/c_images/hlanguages/more.png" alt=""></a>
+<div> Bem Vindo ao Habbo, clique aqui para selecionar o idioma de exibição padrão. </div>
+<div style=" margin-top: 5px; margin-bottom: 10px;">
+	<center>
+		<table width="100%">
+			<tbody>
+				<tr>
+					<td width="75%">
+						<table width="100%">
+							<tbody>
+								<tr>
+									<td width="25%" valign="middle">
+										<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1411/frankselector.gif" alt="">
+									</td>
+									<td width="25%">
+										<center><a href="#"><img border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1401/flag_uk.gif" alt=""></a></center>
+									</td>
+									<td width="25%">
+										<center><a href="#"><img border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1401/flag_br.gif" alt=""></a></center>
+									</td>
+									<td width="25%">
+										<center><a href="#"><img border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1401/flag_es.gif" alt=""></a></center>
+									</td>
+									<td width="25%">
+										<center><a href="#"><img border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1401/flag_other.gif" alt=""></a></center>
+									</td>
+								</tr>
+								<tr>
+									<td width="25%"></td>
+									<td width="25%">
+										<center><a style="text-decoration: none;" onclick="loadLanguage('EN')" href="#setLanguage"><b>Inglês</b></a></center>
+									</td>
+									<td width="25%">
+										<center><a style="text-decoration: none;" onclick="loadLanguage('PT')" href="#setLanguage"><b>Português</b></a></center>
+									</td>
+									<td width="25%">
+										<center><a style="text-decoration: none;" onclick="loadLanguage('ES')" href="#setLanguage"><b>Espanhol</b></a></center>
+									</td>
+									<td width="25%">
+										<center><a style="text-decoration: none;" href="#"><b>Other Countries</b></a></center>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</center>
 </div>
-
+<p>
+	<a href="#" class="colorlink orange dialogbutton" onclick="closePurchaseResult(); return false;"><span>Done</span></a>
+</p>
 <div class="clear"></div>

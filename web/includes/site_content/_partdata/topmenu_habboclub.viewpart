@@ -10,13 +10,13 @@
 //////////////////////////////////////////////////////////////
 
 if($this->habbo->get_HabboLoggedIn()){
-	if(!$this->habbo->get_HabboClubStatus()){
+	if(!$this->habbo->get_HabboClub(1)){
 			echo'
 						<h3><span class="lang-topbar-habboclub-content-loggedin">Você não é membro do Habbo Clube</span></h3>
 			';
 		}else{
 			echo'
-						<h3><span class="lang-topbar-habboclub-content-loggedinBefore">Você possui</span> '.$this->habbo->get_HabboClubDays().' <span class="lang-topbar-habboclub-content-loggedinAfter">dias restantes no Habbo Clube</span></h3>';	
+						<h3><span class="lang-topbar-habboclub-content-loggedinBefore">Você possui</span> '.$this->habbo->get_HabboClub(2).' <span class="lang-topbar-habboclub-content-loggedinAfter">dias restantes no Habbo Clube</span></h3>';	
 		}
 		echo'					
 						<div class="tabmenu-inner-content">

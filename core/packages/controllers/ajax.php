@@ -45,10 +45,29 @@ class Ajax extends Controller{
 		}
 	}
 	
-	public function Experience(){
-		echo 'false';
+	public function experience(){
+		
 	}
 	
+	public function isHabboExist(){
+		if(!$this->hotel->get_HotelStatus()){
+			require_once './web/maintenance/index.view';
+			exit;
+		}else{
+			if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["habboName"])){
+				if($this->habboModel->getByParam("users","username",$_POST["habboName"]) != false){
+					echo 'true';
+					exit;
+				}else{
+					echo 'false';
+					exit;
+				}
+			}else{
+				require_once './web/404.view';
+				exit;	
+			}	
+		}
+	}
 }
 
 

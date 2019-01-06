@@ -18,6 +18,7 @@ class Habbo{
 	protected $habboFigure;
 	protected $habboGender;
 	protected $habboCredits;
+	protected $habboClub = [];
 	
 	public function __construct(){
 		//Get Data from Habbo if Logged in 
@@ -39,7 +40,7 @@ class Habbo{
 		
 	}
 	
-	public function constructObject($id,$username,$password,$rank,$figure,$gender,$credits){
+	public function constructObject($id,$username,$password,$rank,$figure,$gender,$credits,$habboclub){
 		$this->habboId = $id;	
 		$this->habboName = $username;	
 		$this->habboPassword = $password;	
@@ -47,7 +48,7 @@ class Habbo{
 		$this->habboFigure = $figure;	
 		$this->habboGender = $gender;
 		$this->habboCredits = $credits;
-		
+		$this->habboClub = $habboclub;
 	}
 
 	public function get_HabboId(){
@@ -116,6 +117,21 @@ class Habbo{
 	
 	public function get_HabboGender(){
 		return $this->habboGender;
+	}
+	
+	public function get_HabboClub($requestId){
+		switch($requestId){
+			//Status
+			case 1:
+				if(($this->habboClub[1]-$this->habboClub[0]) > 0){
+					return true;
+				}else{
+					return false;
+				}
+			case 2:
+				return(new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a");	
+			break;
+		}	
 	}
 }
 

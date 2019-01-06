@@ -35,7 +35,10 @@ Validation.prototype = {
 			afterSuccesfulValidation : false
 		}, options || {});
 		this.form = $(form);
+		
 		Event.observe(this.form,'submit',this.onSubmit.bind(this),false);
+		
+		//Event.observe(this.form,'button',this.onSubmit.bind(this),false);
 		if(this.options.immediate) {
 			Form.getElements(this.form).each(function(input) { // Thanks Mike!
 				Event.observe(input, 'blur', function(ev) { Validation.validate(Event.element(ev).id) });
@@ -57,10 +60,13 @@ Validation.prototype = {
                 this.options.onFailure();
             }
             if(this.options.focusOnError) {
+				stepError = 1;
 				$$('.validation-failed').first().focus();
 			}
 		} else {
+			stepError = 0;
 			if (this.options.afterSuccesfulValidation) {
+				stepError = 0;
 				this.options.afterSuccesfulValidation();
 			}
 		}

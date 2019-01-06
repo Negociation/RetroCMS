@@ -61,7 +61,17 @@
 		<script type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/swfobject.js'></script>
 		<script type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/jquery.min.js'></script>
 		";
+		
+  switch (get_class($this)){
+	//Import Process js if the control as:
+	case "Register":	
+		echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/validation.js'></script>";	
+		echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/registration.js'></script> ";	
+		echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/js/hobojax.js'></script> ";	
 
+		break;
+  }
+  
   echo "\n 
 		<script>
 		var j = jQuery.noConflict();

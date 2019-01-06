@@ -206,6 +206,7 @@ function showPromo(num) {
 
 
 function validatorAddError(element, name, message, errorBoxId) {
+	
 	var errorBoxId = errorBoxId || "process-errors";
 	var errorcontent = $(errorBoxId + "-content");
 	errorcontent.appendChild(document.createTextNode(message));
@@ -1420,4 +1421,24 @@ function setExperienceDialog(){
 	}); 
 }
 
+var stepError = 0;
+
+function validateUsername(){
+	
+	new Ajax.Request(habboStaticUrl+"/Ajax/isHabboExist",{
+		method: "post", parameters: "habboName="+encodeURIComponent(document.getElementById("username").value), 
+		onComplete: function(req, text) {
+			console.log(req.responseText);
+			if(req.responseText == "true"){
+				document.getElementById("stepform").action = habboStaticUrl + "/register/step/2?avatarName=1";				
+			}else{
+				document.getElementById("stepform").action = habboStaticUrl  + "/register/step/3";
+			}	
+		}						
+	});
+	if(stepError == 0){
+		document.getElementById("stepform").submit();
+	}
+	
+};
 
