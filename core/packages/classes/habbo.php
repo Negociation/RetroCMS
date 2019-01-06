@@ -128,6 +128,7 @@ class Habbo{
 				}else{
 					return false;
 				}
+			//Days Left 
 			case 2:
 				return(new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a");	
 			break;

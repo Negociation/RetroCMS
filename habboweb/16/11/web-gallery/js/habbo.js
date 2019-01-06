@@ -1329,42 +1329,43 @@ function Advertisement_Load(){
 	if(document.getElementById('TopLink')){
 		document.getElementById('TopLink').href = Links_Top[0];
 		document.getElementById('TopImage').src = Images_Top[0].src;
+	
+		setInterval(
+			function() {
+				document.getElementById('TopLink').href = Links_Top[curOffsetT];
+				document.getElementById('TopImage').src = Images_Top[curOffsetT].src;
+				curOffsetT = (curOffsetT >= Images_Top.length-1) ? 0 : curOffsetT + 1;
+			}
+		,10000);
 	}
-	setInterval(
-		function() {
-			document.getElementById('TopLink').href = Links_Top[curOffsetT];
-			document.getElementById('TopImage').src = Images_Top[curOffsetT].src;
-			curOffsetT = (curOffsetT >= Images_Top.length-1) ? 0 : curOffsetT + 1;
-		}
-	,10000);
 	
 	if(document.getElementById('MiddleLink')){			
 		document.getElementById('MiddleLink').href = Links_Middle[0];
 		document.getElementById('MiddleImage').src = Images_Middle[0].src;
+			
+		setInterval(
+			function() {
+				document.getElementById('MiddleLink').href = Links_Middle[curOffsetM];
+				document.getElementById('MiddleImage').src = Images_Middle[curOffsetM].src;
+				curOffsetM = (curOffsetM >= Images_Middle.length-1) ? 0 : curOffsetM + 1;
+			}
+		,20000);
 	}
-				
-	setInterval(
-		function() {
-			document.getElementById('MiddleLink').href = Links_Middle[curOffsetM];
-			document.getElementById('MiddleImage').src = Images_Middle[curOffsetM].src;
-			curOffsetM = (curOffsetM >= Images_Middle.length-1) ? 0 : curOffsetM + 1;
-		}
-	,20000);
 	
 	if(document.getElementById('RightLink')){
 		document.getElementById('RightLink').href = Links_Right[0];
 		document.getElementById('RightImage').src = Images_Right[0].src;	
-	}
+		
+		setInterval(
+			function() {
+				document.getElementById('RightLink').href = Links_Right[curOffsetR];
+				document.getElementById('RightImage').src = Images_Right[curOffsetR].src;
+				curOffsetR = (curOffsetR >= Images_Right.length-1) ? 0 : curOffsetR + 1;
+			}
+		,25000);
+	}	
 	
-	setInterval(
-		function() {
-			document.getElementById('RightLink').href = Links_Right[curOffsetR];
-			document.getElementById('RightImage').src = Images_Right[curOffsetR].src;
-			curOffsetR = (curOffsetR >= Images_Right.length-1) ? 0 : curOffsetR + 1;
-		}
-	,25000);
-}	
-
+}
 
 /* Language */
 
@@ -1414,17 +1415,17 @@ function setExperienceDialog(){
 	moveDialogToCenter(dialog);
 	showOverlay();
 	new Ajax.Request(habboStaticUrl+"/Ajax/Experience",{
-		method: "post", parameters: "product="+encodeURIComponent("g0 group_product"), 
-		onComplete: function(req, text) {
+		method: "post", 
+		onComplete: function(req, html) {
 			setDialogBody(dialog, req.responseText);			
 		} 
 	}); 
 }
 
-var stepError = 0;
 
+/* Test Ajax */
+var stepError = 0;
 function validateUsername(){
-	
 	new Ajax.Request(habboStaticUrl+"/Ajax/isHabboExist",{
 		method: "post", parameters: "habboName="+encodeURIComponent(document.getElementById("username").value), 
 		onComplete: function(req, text) {
