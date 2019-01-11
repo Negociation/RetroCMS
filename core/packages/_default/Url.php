@@ -71,7 +71,7 @@ class Url{
 					$this->set_UrlMethod("default");	
 				}
 			}else{
-				if(isset($parsedUrl[1]) && !Method_Exists(new $this->url_controller($this->hotelConection),"default") || isset($parsedUrl[1]) && strtolower($parsedUrl[1]) == "default" || !isset($parsedUrl[1]) && !Method_Exists(new $this->url_controller($this->hotelConection),"default")){
+				if(isset($parsedUrl[1]) && !Method_Exists(new $this->url_controller($this->hotelConection),"default") || isset($parsedUrl[1]) && strtolower($parsedUrl[1]) == "default" || !isset($parsedUrl[1]) && !Method_Exists(new $this->url_controller($this->hotelConection),"default") || isset($parsedUrl[1]) && !Method_Exists(new $this->url_controller($this->hotelConection),$parsedUrl[1])){
 					$this->set_UrlController("Not_Found");					
 					unset($parsedUrl[1]);
 				}

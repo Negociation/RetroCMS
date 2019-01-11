@@ -25,8 +25,11 @@
   }
   
 
-		
-		
+//Language Content	
+  echo "\n";
+
+  
+
 //Language Content	
   echo "\n
 		<!-- Language Content -->
@@ -34,21 +37,20 @@
 		<script type='text/javascript' src='".$this->hotel->get_HotelUrl()."/web/includes/language/en.js'></script>
 		
 		<script>
-			document.habboLoggedIn = "; echo $this->habbo->get_habboLoggedIn() ? 'true' : 'false'; echo ";
+			document.habboLoggedIn = "; echo $this->habbo->get_habboLoggedIn() ? 'true;' : 'false;'; echo "\n			";
+			if($this->habbo->get_habboLoggedIn()){ echo "document.habboId = ".$this->habbo->get_HabboId().";"; }
+			echo "
 			var habboStaticFilePath = '".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/';
 			var habboStaticUrl = '".$this->hotel->get_HotelUrl()."';
-
-			window.onload = function(){
-				Advertisement_Load();
-				if (typeof habboClient != 'undefined'){	
-					resizeWin();
-					window.onerror = function() { return true; }; 
-					ensureOpenerIsLoggedIn();
-					addClientUnloadHook();
+			window.onload = function(){";
+				if($this->habbo->get_habboLoggedIn()){
+						echo "loadLanguage('".$this->habbo->get_habboLanguage()."');";
 				}else{
-					window.name = 'habboMain';
-				};
+						echo "loadLanguage(getDefaultLanguage('".$this->hotel->get_hotelLanguage()."'));";
+				}
 				
+			echo"
+				loadContent();		
 			};
 		</script>
 		";

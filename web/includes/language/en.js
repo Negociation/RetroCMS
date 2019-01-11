@@ -12,7 +12,7 @@ var WORDS_EN = {
 
   "Advertissement_Title" : "Advertissement",
   "sign": "enter",
-  
+   "logIn": "log in", 
   
 	  //Topbar
 	  "topbar-count" : "members online",
@@ -153,4 +153,23 @@ var WORDS_EN = {
 	"month-10": "October",	
 	"month-11": "November",	
 	"month-12": "December",	
+	
+	//Habbo Club
+		"hc-login-before": "In order to join Habbo Club you need to",
+		"hc-login-after": "first.",		
+		
+		//Habbo Club->Index
+		
+		//Habbo Club->Join
+		"hcjoin-headline": "Join or Extend Membership ",
+		"hcjoin-aboutTitle": "Join or Extend Membership",
+		"hcjoin-aboutDesc": "Habbo Club is Habbo Hotel's exclusive club, and as a member of this club you get privileges that are not available to non-Habbo Club Habbos. As a member you get priority access to the Hotel and Public Rooms, rare furni gifts, extra cool dances and more.",
+		"hcjoin-joinTitle": "JOIN HABBO CLUB",
+		"hcjoin-joinDesc": "Hello, what you waiting for, join today on Habbo Club only for 25 Habbo Credits!",
+		"hcjoin-comingTitle" :"Elapsed Months",
+		"hcjoin-pastTitle" :"Prepaid Months",
+		
+		//Habbo Club->Shop
+		"hcshop-headline": "Club Shop",
+
 };

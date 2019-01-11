@@ -85,6 +85,9 @@ class Account extends Controller{
 						case 'habboClient': 
 							header('Location: ../client');
 							break;
+						case 'clubSubscribe': 
+							header('Location: ../club/join');
+							break;
 						default:
 							header('Location: ../');
 							break;

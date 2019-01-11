@@ -1,0 +1,40 @@
+<?php
+//////////////////////////////////////////////////////////////
+// 						   RetroCMS 						//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos ( M.tiago )							//
+//////////////////////////////////////////////////////////////
+// Alpha Version 0.7.0 ( Opal ) 							//
+//////////////////////////////////////////////////////////////
+
+?>
+
+<div id="hc_confirm_box">
+
+	<img src="<?php echo $this->hotel->get_hotelWeb(); ?>/c_images/album209/frank_cleaning.png" alt="" align="left" style="margin:10px;">
+	<p><b>Congratulations</b></p>
+	<p> Congratulations <?php echo $this->habbo->get_HabboName(); ?>! Your default language as changed.</p>
+	<?php
+	if($this->habbo->get_HabboLoggedIn()){
+		echo '
+			<div style="margin-left: 100px; margin-right: 10px; height: 56px; margin-top: 10px;">
+				<div class="content-red">
+					<div class="content-red-body">You can change that any momment on settings!</div>
+				</div>
+				<div class="content-red-bottom"><div class="content-red-bottom-body"></div></div>
+			</div>
+		';
+	}
+	?>
+	<p>
+		<table align="right">
+			<tbody>
+				<tr>
+					<td><a href="#" class="colorlink" onclick="closeSubscription(); return false;" style="margin-left: 5px;"><span><b>Done</b></span><i></i></a></td>
+				</tr>
+			</tbody>
+		</table>
+	</p>
+</div>
+<div class="clear"></div>

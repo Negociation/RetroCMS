@@ -47,7 +47,7 @@ class Model{
 
 	public function getByParam($Table,$Column,$Param){
 		try {
-			$sql = 'SELECT * FROM .'.$Table.' where '.$Column.' = :param order by id';
+			$sql = 'SELECT * FROM .'.$Table.' where '.$Column.' = :param';
 			$stmt = $this->hotelConection->prepare($sql);
 			$stmt->bindValue(':param', $Param);
 			$stmt->execute();
@@ -80,6 +80,7 @@ class Model{
 	public function deleteById($Column,$Id){
 		
 	}
+	
 	
 	public function setColumnById($Table, $Column, $Id, $Param){
 		try {

@@ -20,6 +20,11 @@ class Controller{
 		return $this->pageTitle;
 	}
 	
+	//View Name Constraint
+	public function set_MethodName($name){
+		define('__VIEW__', $name);  	
+	}
+	
 }
 
 

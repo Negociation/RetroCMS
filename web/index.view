@@ -32,7 +32,7 @@ include('./web/includes/site_content/_partdata/_headers/default.viewpart');
 									 <td valign="top" style="width: 450px; height: 400px;" class="habboPage-col">
 										<br>
 										<center><br> <b> WARNING: Beta Preview, only for test. </b><br></center>
-										<br>
+							
 									 </td>
 								  </tr>
 								  </td>

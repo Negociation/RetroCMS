@@ -220,8 +220,6 @@ include('./web/includes/site_content/_partdata/_headers/account.viewpart');
 															</div>
 																		<script type="text/javascript" language="JavaScript">
 																			function MergeData(){
-																				parseInt((new Date('2012.08.10').getTime() / 1000).toFixed(0))
-
 																				var dd = document.getElementById('day').value;
 																				var mm = document.getElementById('month').value;
 																				var yy = document.getElementById('year').value;

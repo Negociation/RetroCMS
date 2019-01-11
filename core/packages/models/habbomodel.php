@@ -28,7 +28,7 @@ class HabboModel extends Model{
 		$habboObject = new Habbo();
 		//Get one row from table (users) where id as equal habboId value;
 		$row = $this->getById('users',$habboId);
-		$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank'],$row['figure'],$row['sex'],$row['credits'],array($row['club_subscribed'],$row['club_expiration']));
+		$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank'],$row['figure'],$row['sex'],$row['credits'],array($row['club_subscribed'],$row['club_expiration'],count($this->getByParam('users_club_gifts','user_id',$habboId))),$row['user_language']);
 		return $habboObject;
 	}
 	
@@ -42,7 +42,7 @@ class HabboModel extends Model{
 		//If found the habbo
 		if(count($result) == 1){
 			$row = $result[0];
-			$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank'],$row['figure'],$row['sex'],$row['credits']);
+			$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank'],$row['figure'],$row['sex'],$row['credits'],array($row['club_subscribed'],$row['club_expiration'],count($this->getByParam('users_club_gifts','user_id',$habboId))),$row['user_language']);
 			
 			//Check if password match
 			if(sodium_crypto_pwhash_str_verify($habboObject->get_HabboPassword(), $testObject->get_HabboPassword())){
@@ -90,6 +90,22 @@ class HabboModel extends Model{
 	
 	public function set_HabboTicket($habboObject){
 		return $this->setColumnById('users', 'sso_ticket', $habboObject->get_HabboId(), $habboObject->get_HabboTicket());
+	}
+	
+	public function set_HabboSubscribe($id,$type){
+		$habboObject = $this->get_HabboObject($id);
+		switch($type){
+			case 'subscribe1':
+				if($habboObject->get_HabboCredits() >= 25){
+					return true;
+				}else{
+					return false;
+				}
+				break;
+			default:
+				return false;
+				break;			
+		}
 	}
 	
 }

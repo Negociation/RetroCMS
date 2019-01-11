@@ -20,35 +20,35 @@
 						<table width="100%">
 							<tbody>
 								<tr>
-									<td width="25%" valign="middle">
+									<td width="20%" valign="middle">
 										<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1411/frankselector.gif" alt="">
 									</td>
-									<td width="25%">
-										<center><a href="#"><img border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1401/flag_uk.gif" alt=""></a></center>
+									<td width="20%">
+										<center><a href="#"><img border="0" id = "flagUK" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1401/flag_uk_off.gif" alt=""></a></center>
 									</td>
-									<td width="25%">
-										<center><a href="#"><img border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1401/flag_br.gif" alt=""></a></center>
+									<td width="20%">
+										<center><a href="#"><img border="0" id = "flagBR" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1401/flag_br.gif" alt=""></a></center>
 									</td>
-									<td width="25%">
-										<center><a href="#"><img border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1401/flag_es.gif" alt=""></a></center>
+									<td width="20%">
+										<center><a href="#"><img border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1401/flag_other_off.gif" alt=""></a></center>
 									</td>
-									<td width="25%">
-										<center><a href="#"><img border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1401/flag_other.gif" alt=""></a></center>
+									<td width="20%">
+										<center><a href="#"><img border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1401/flag_other_off.gif" alt=""></a></center>
 									</td>
 								</tr>
 								<tr>
-									<td width="25%"></td>
-									<td width="25%">
-										<center><a style="text-decoration: none;" onclick="loadLanguage('EN')" href="#setLanguage"><b>Inglês</b></a></center>
+									<td width="20%"></td>
+									<td width="20%">
+										<center><a style="text-decoration: none;" onclick="languageSelect('EN')" href="#setLanguage"><b>Inglês</b></a></center>
 									</td>
-									<td width="25%">
-										<center><a style="text-decoration: none;" onclick="loadLanguage('PT')" href="#setLanguage"><b>Português</b></a></center>
+									<td width="20%">
+										<center><a style="text-decoration: none;" onclick="languageSelect('PT')" href="#setLanguage"><b>Português</b></a></center>
 									</td>
-									<td width="25%">
-										<center><a style="text-decoration: none;" onclick="loadLanguage('ES')" href="#setLanguage"><b>Espanhol</b></a></center>
+									<td width="20%">
+										<center><a style="text-decoration: none;" href="#"><b>Not Load</b></a></center>
 									</td>
-									<td width="25%">
-										<center><a style="text-decoration: none;" href="#"><b>Other Countries</b></a></center>
+									<td width="20%">
+										<center><a style="text-decoration: none;" href="#"><b>Not Load</b></a></center>
 									</td>
 								</tr>
 							</tbody>
@@ -60,6 +60,6 @@
 	</center>
 </div>
 <p>
-	<a href="#" class="colorlink orange dialogbutton" onclick="closePurchaseResult(); return false;"><span>Done</span></a>
+	<a href="#" class="colorlink orange dialogbutton" onclick="showLanguageResult(selectedLang); return false;"><span>Done</span></a>
 </p>
 <div class="clear"></div>

@@ -116,5 +116,5 @@ include('./web/includes/site_content/_partdata/_headers/default.viewpart');
 
 <?php
 //Include Footer Content()
-include('./web/includes/site_content/footers/default.viewpart'); 
+include('./web/includes/site_content/_partdata/_footers/default.viewpart'); 
 ?>

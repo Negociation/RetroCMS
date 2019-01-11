@@ -56,6 +56,7 @@
 									<!-- TOPMENU INCLUDE (MYHABBO) -->
 									<?php require_once('./web/includes/site_content/_partdata/topmenu_myhabbo.viewpart'); ?>
 								</div>
+										
 								<div id="mycredits-content" class="tabmenu-inner">
 								
 									<!-- TOPMENU INCLUDE (MYCREDITS) -->
@@ -95,9 +96,9 @@
 								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_10_coins.gif" style="margin-left: 4px" alt=""/> <span class="lang-navbar-credits">Compre Moedas</span></a>
 								<span class="right"></span>
 							</li>
-							<li id="disabled">
+							<li <?php if(get_class($this) == 'Club') echo 'id="active"'; ?> >
 								<span class="left"></span>
-								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_09_hc.gif" style="margin-left: 4px"  alt="";/> <span class="lang-navbar-habboclub">Habbo Club</span></a>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/club"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_09_hc.gif" style="margin-left: 4px"  alt="";/> <span class="lang-navbar-habboclub">Habbo Club</span></a>
 								<span class="right"></span>
 							</li>
 							<li id="disabled">
@@ -114,8 +115,32 @@
 					</div>
 					<div id="submenu">
 						<div class="subnav">
+						
+							<?php
+								if(get_class($this) == 'Club'){
+									switch(__VIEW__){
+										case 'default':
+											echo '
+											Habbo Club | <a href="'.$this->hotel->get_HotelWeb().'/club/join"><span class="lang-hcjoin-headline">Associe-se ou renove seu HC</span></a> | <a href="'.$this->hotel->get_HotelWeb().'/club/shop" <span class="lang-hcshop-headline">Loja HC</span> </a> 
+											';
+											break;
+										case 'join':
+											echo '
+											<a href="'.$this->hotel->get_HotelWeb().'/club/">Habbo Club</a>| <span class="lang-hcjoin-headline">Associe-se ou renove seu HC</span> | <a href="'.$this->hotel->get_HotelWeb().'/club/shop"> <span class="lang-hcshop-headline">Loja HC</span> </a> 
+											';
+											break;
+										case 'shop':
+											echo '
+											<a href="'.$this->hotel->get_HotelWeb().'/club/"> Habbo Club </a>| <a href="'.$this->hotel->get_HotelWeb().'/club/join"><span class="lang-hcjoin-headline">Associe-se ou renove seu HC</span></a>  | <span class="lang-hcshop-headline">Loja HC</span> 
+											';
+											break;
+										default:
+											break;
+									}
+								}
+							?>
 							<div style="float: right; margin-top: 0px; margin-right: 20px; height: 14px;">
-								<a href="#languageSelector" onclick="setLanguageDialog()" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/hlanguages/icon_br.png" alt=""></a>
+								<a href="#languageSelector" onclick="setLanguageDialog()" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/hlanguages/icon_pt.png" id="languageIcon" alt=""></a>
 							</div>
 						</div>
 					</div>

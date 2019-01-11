@@ -70,9 +70,9 @@ include('./web/includes/site_content/_partdata/_headers/register.viewpart');
 													swfobj.addVariable("localization_url", "'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/xml/figure_editor.xml");
 													swfobj.addVariable("post_figure", "figureData");
 													swfobj.addVariable("post_gender", "newGender");
-													swfobj.addVariable("required-birth", "$this->habbo->get_HabboBirth()");
+													swfobj.addVariable("required-birth", "'.$_POST['required-birth'].'");
 													swfobj.addVariable("figure", "'.$this->habbo->get_HabboFigure().'");
-													swfobj.addVariable("gender", "'.$this->habbo->get_HabboGender().'");
+													swfobj.addVariable("gender", "M");
 													swfobj.write("flashcontent");
 													</script>
 													';	

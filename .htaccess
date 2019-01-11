@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	Options -Indexes
+	RewriteRule ^!^c_images/downloads/exp-20060201-1/?$ -[L]
 	Redirect /login /account/login
 	Redirect /logout /account/disconnected
 	RewriteCond %{REQUEST_FILENAME} !-d

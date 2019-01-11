@@ -13,7 +13,7 @@ var WORDS_PT = {
 
   "Advertissement_Title" : "Publicidade",
   "sign": "entre",
-
+  "logIn": "entre", 
   
   //TopBar
   "topbar-count" : "Habbos no Hotel",
@@ -152,4 +152,22 @@ var WORDS_PT = {
 	"month-11": "Novembro",	
 	"month-12": "Dezembro",		
 	
+	
+	//Habbo Club 
+		"hc_login_before": "Para associar-se ao Habbo Club você precisa primeiro",
+		"hc_login_after": "no Hotel.",	
+		
+		//Habbo Club->Index
+		
+		//Habbo Club->Join
+		"hcjoin-headline": "Associe-se ou renove seu HC",
+		"hcjoin-aboutTitle": "Associe-se",
+		"hcjoin-aboutDesc": "Aqui você pode associar-se ao HC, renovar ou prolongar sua sociedade e também ver quantos dias ou períodos ainda tem. Entre no Hotel. Fique à vontade.",
+		"hcjoin-joinTitle": "ASSOCIE-SE AO HABBO CLUB",
+		"hcjoin-joinDesc": "Olá. O Habbo Club é massa. Tem Mobis, roupas e emoções fortes por 30 Moedas",
+		"hcjoin-comingTitle" :"Periodos Decorridos",
+		"hcjoin-pastTitle" :"Periodos Pre-Pagos",	
+		
+		//Habbo Club->Shop
+		"hcshop-headline": "Loja HC",
 	};

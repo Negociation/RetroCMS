@@ -20,6 +20,7 @@
 			document.habboLoggedIn = true;
 		</script>
 		<?php include('./web/includes/site_content/visualSource.import'); ?>
+
 	</head>
 
 	<body id="client">

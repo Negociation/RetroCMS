@@ -16,6 +16,7 @@ class Hotel{
 	protected $hotel_Version;
 	protected $hotel_Web;
 	protected $hotel_Url;
+	protected $hotel_Language;
 	protected $hotel_Client = [] ; //(0 DCR) - (1 TEXTS) - (2 VARIABLES) - (3 SERVER HOST) - (4 SERVER PORT) - ( 5 MUS PORT );
 	protected $hotel_Status;
 	
@@ -29,10 +30,13 @@ class Hotel{
 	}
 	
 	//Construct hotel Object 
-	public function constructObject($Hotel_Name,$Hotel_Nick,$Hotel_Version,$Hotel_Client){
+	public function constructObject($Hotel_Name,$Hotel_Nick,$Hotel_Version,$Hotel_Web,$Hotel_Url,$Hotel_Language,$Hotel_Client){
 		$this->hotel_Name = $Hotel_Name;
 		$this->hotel_Nick = $Hotel_Nick;
 		$this->hotel_Version = $Hotel_Version;		
+		$this->hotel_Web = $Hotel_Web;
+		$this->hotel_Url = $Hotel_Url;
+		$this->hotel_Language = $Hotel_Language;
 		$this->hotel_Client = $Hotel_Client;
 		$this->hotelStatus = 1;
 	}
@@ -90,6 +94,10 @@ class Hotel{
 
 	public function get_HotelMUS(){
 		return $this->hotel_Client[5];
+	}
+	
+	public function get_HotelLanguage(){
+		return $this->hotel_Language;
 	}
 }
 ?>

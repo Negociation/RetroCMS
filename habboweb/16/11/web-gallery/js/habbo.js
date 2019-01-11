@@ -787,15 +787,14 @@ function closeSubscription(e) {
 
 function showSubscriptionResult(optionNumber,res_dialog_header) {
 	new Ajax.Request(
-		habboReqPath + "/habboclub/habboclub_subscribe",
-		{ method: "post", parameters: "optionNumber="+encodeURIComponent(optionNumber), onComplete: function(req, json) {
+		habboStaticUrl + "/club/club_subscribe_result",
+		{ method: "post", parameters: "optionNumber="+encodeURIComponent(optionNumber), onComplete: function(req, html) {
    			if ($("subscription_dialog")) Element.remove("subscription_dialog");
 			var resultDialog = createDialog("subscription_result", res_dialog_header, "9003", 0, -1000, closeSubscription);
 			appendDialogBody(resultDialog, req.responseText, true);
 			moveDialogToCenter(resultDialog);
 		} }
 	);
-	Element.remove("hc_confirm_box");
 }
 
 function closeSubscriptionResult() {
@@ -1369,6 +1368,22 @@ function Advertisement_Load(){
 
 /* Language */
 
+var selectedLang;
+function languageSelect(lang){
+	selectedLang = lang;
+	switch(lang){
+		case 'PT':
+			document.getElementById("flagUK").src = habboStaticUrl+"/c_images/album1401/flag_uk_off.gif";
+			document.getElementById("flagBR").src = habboStaticUrl+"/c_images/album1401/flag_br.gif";
+			break;
+		case 'EN':
+			document.getElementById("flagUK").src = habboStaticUrl+"/c_images/album1401/flag_uk.gif";
+			document.getElementById("flagBR").src = habboStaticUrl+"/c_images/album1401/flag_br_off.gif";
+			break;
+	}
+}
+
+
 function loadLanguage(lang){
 	/*fills all the span tags with class=lang pattern*/ 
 	window.localStorage.setItem('userLang', lang);
@@ -1378,8 +1393,14 @@ function loadLanguage(lang){
 		var Text = window["WORDS_"+lang][LangVar];
 		j(this).text(Text);        
 	});
-				  
-				  
+	if(document.getElementById("languageIcon")){		  
+		document.getElementById("languageIcon").src = habboStaticUrl+"/c_images/hlanguages/icon_"+lang+".png";  
+	}
+	
+	if(document.getElementById("footerIcon")){		  
+		document.getElementById("footerIcon").src = habboStaticUrl+"/c_images/hlanguages/footer_"+lang+".png";  
+	}
+	
 	j('option[id^="lang"]').each(function(){
 		var LangVar = (this.id).replace('lang-','');
 		var Text = window["WORDS_"+lang][LangVar];
@@ -1392,7 +1413,19 @@ function loadLanguage(lang){
 		j(this).val(Text);        
 	});
 }
-				
+		
+function getDefaultLanguage(hotelLang){
+	if (document.habboLoggedIn == false){
+		if(window.localStorage.getItem('userLang')){
+			return window.localStorage.getItem('userLang');		
+		}else{
+			window.localStorage.setItem('userLang', hotelLang);
+			return hotelLang;
+		}	
+	}
+}
+
+	
 /* Custom Boxes */
 
 function setLanguageDialog(){
@@ -1401,15 +1434,17 @@ function setLanguageDialog(){
 		moveDialogToCenter(dialog);
 		showOverlay();
 		new Ajax.Request(habboStaticUrl+"/ajax/languageSelector",{ 
-			method: "post", parameters: "product="+encodeURIComponent("g0 group_product"),
+			method: "post",
 			onComplete: function(req, html) {
 				setDialogBody(dialog, req.responseText); 
+				languageSelect(window.localStorage.getItem('userLang'));
+
 			} 
 		}); 
+
 }
 
-function setExperienceDialog(){
-	
+function setExperienceDialog(){	
 	var dialog = createDialog("habboTV", "Habbo Experience", 9001, 0, -1000, closeTVResult);
 	appendDialogBody(dialog, "<p style=\"text-align:center\"><img src=\"" + habboStaticFilePath +"/images/progress_habbos.gif\" alt=\"\" width=\"29\" height=\"6\" /></p><div style=\"clear\"></div>", true);
 	moveDialogToCenter(dialog);
@@ -1420,6 +1455,20 @@ function setExperienceDialog(){
 			setDialogBody(dialog, req.responseText);			
 		} 
 	}); 
+}
+
+function showLanguageResult(lang) {
+	loadLanguage(lang);
+	new Ajax.Request(
+		habboStaticUrl + "/ajax/languageSelectorResult",
+		{ method: "post", parameters: "userLang="+encodeURIComponent(lang), onComplete: function(req, html) {
+   			if ($("purchase_dialog")) Element.remove("purchase_dialog");
+			var resultDialog = createDialog("subscription_result", "Status", "9003", 0, -1000, closeSubscription);
+			appendDialogBody(resultDialog, req.responseText, true);
+			moveDialogToCenter(resultDialog);
+		} }
+	);
+	window.localStorage.setItem('userLang', lang);	
 }
 
 
@@ -1443,3 +1492,15 @@ function validateUsername(){
 	
 };
 
+
+function loadContent(){
+	if (typeof habboClient != 'undefined'){	
+		resizeWin();
+		window.onerror = function() { return true; }; 
+		ensureOpenerIsLoggedIn();
+		addClientUnloadHook();
+	}else{
+		window.name = 'habboMain';
+	};	
+	Advertisement_Load();
+}

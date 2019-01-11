@@ -29,6 +29,7 @@ class Ajax extends Controller{
 		
 		
 	}
+	
 	public function languageSelector(){
 		//Maintenance ? 
 		if(!$this->hotel->get_HotelStatus()){
@@ -44,9 +45,37 @@ class Ajax extends Controller{
 			}
 		}
 	}
+
+	public function languageSelectorResult(){
+		//Maintenance ? 
+		if(!$this->hotel->get_HotelStatus()){
+			require_once './web/maintenance/index.view';
+			exit;
+		}else{
+			if($_SERVER['REQUEST_METHOD'] == 'POST'){
+				if($this->habbo->get_habboLoggedIn()){
+					$this->habboModel->setColumnById('users','user_language',$this->habbo->get_HabboId(),$_POST["userLang"]);
+				}
+				include './web/includes/site_content/_ajax/languageSelector_Result.ajax';
+				exit;
+			}else{
+				require_once './web/404.view';
+				exit;
+			}
+		}
+	}
+	
 	
 	public function experience(){
-		
+		if(!$this->hotel->get_HotelStatus()){
+			require_once './web/maintenance/index.view';
+			exit;
+		}else{
+			if($_SERVER['REQUEST_METHOD'] == 'POST'){
+				echo '<iframe align="center" width="650px" height="430px" src="'.$this->hotel->get_HotelWeb().'/c_images/downloads/experience/exp-20060201-1/index_br.html" name="myIframe" id="myIframe" scrolling="no" frameborder="no"> </iframe>';
+				exit;
+			}
+		}			
 	}
 	
 	public function isHabboExist(){

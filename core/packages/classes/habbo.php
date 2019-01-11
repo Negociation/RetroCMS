@@ -25,10 +25,11 @@ class Habbo{
 		//Remember to update incluing session expiration time :D
 
 		if (isset($_SESSION['habboLoggedIn'])){
-			if($_SESSION['habboLoggedIn']){
+			if($_SESSION['habboLoggedIn'] == true){
 				$this->habboLoggedIn = true;
 				$this->habboId = $_SESSION['id'];
 			}else{
+				
 				$this->habboLoggedIn = false;
 				$_SESSION['habboLoggedIn'] = false;
 			}
@@ -40,7 +41,7 @@ class Habbo{
 		
 	}
 	
-	public function constructObject($id,$username,$password,$rank,$figure,$gender,$credits,$habboclub){
+	public function constructObject($id,$username,$password,$rank,$figure,$gender,$credits,$habboclub,$language){
 		$this->habboId = $id;	
 		$this->habboName = $username;	
 		$this->habboPassword = $password;	
@@ -49,6 +50,7 @@ class Habbo{
 		$this->habboGender = $gender;
 		$this->habboCredits = $credits;
 		$this->habboClub = $habboclub;
+		$this->habboLanguage = $language;
 	}
 
 	public function get_HabboId(){
@@ -95,7 +97,7 @@ class Habbo{
 	
 	public function set_HabboLogout(){
 		session_destroy();
-		$_SESSION['habboLoggedIn'] = false;
+		$this->habboLoggedIn = false;
 	}
 	
 	public function set_HabboTicket($Param){
@@ -112,12 +114,15 @@ class Habbo{
 	}
 	
 	public function get_HabboLanguage(){
-		return 'br';
+		if($this->get_habboLoggedIn()){
+			return $this->habboLanguage;			
+		}
 	}
 	
 	public function get_HabboGender(){
 		return $this->habboGender;
 	}
+	
 	
 	public function get_HabboClub($requestId){
 		switch($requestId){
@@ -128,10 +133,32 @@ class Habbo{
 				}else{
 					return false;
 				}
-			//Days Left 
+			//Days Left from all pre-paid period
 			case 2:
 				return(new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a");	
 			break;
+			//Days left from pre-paid period
+			case 3:
+				$calc = (new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a");
+				$calc = $calc % 31;
+				return($calc);
+			break;
+			//Pre-paid peridots
+			case 4:
+				$calc = (new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a");
+				$calc = $calc % 31;
+				$calc = (new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a") - $calc;
+				$calc = $calc/31;
+				return($calc);
+			break;		
+			case 5:
+				if($this->get_HabboClub(1)){
+					return ($this->habboClub[2]-1);
+					
+				}else{
+					return($this->habboClub[2]);
+				}
+			break;			
 		}	
 	}
 }

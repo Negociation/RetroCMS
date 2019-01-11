@@ -26,6 +26,10 @@ class Route{
 		$this->urlController = $this->urlObject->get_UrlController();
 		//Create a new Object
 		$this->urlController = new $this->urlController($this->hotelConection);
+		
+		//Set method name Constraint
+		$this->urlController->set_MethodName($this->urlObject->get_UrlMethod());
+		
 		//Load View on Controller Object
 		call_user_func_array([$this->urlController,$this->urlObject->get_UrlMethod()],$this->urlObject->get_UrlParams());			
 	}
