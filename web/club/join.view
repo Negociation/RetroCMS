@@ -58,7 +58,7 @@ include('./web/includes/site_content/_partdata/_headers/default.viewpart');
 														<div class="body">
 															<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/images/piccolo_happy.gif" alt="" align="left" style="margin:10px;"/>
 															<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/16/11/web-gallery/images/hcclick_trnsprnt.gif" alt="" align="right"/>
-															<p><span class="lang-hcjoin-joinDesc">Olá. O Habbo Club é massa. Tem Mobis, roupas e emoções fortes por 30 Moedas.</span></p>
+															<p><span class="lang-hcjoin-joinDesc">Olá. O Habbo Club é massa. Tem Mobis, roupas e emoções fortes por 25 Moedas.</span></p>
 															<div id="subscription-divider">
 																<div >
 																	<div class="content-beige">
@@ -73,7 +73,7 @@ include('./web/includes/site_content/_partdata/_headers/default.viewpart');
 																						echo '	
 																							<div id="subscription-meter-box">
 																								<div id="pastmonthsVal">'.$this->habbo->get_HabboClub(5).'</div> 
-																								<div id="clubdays"> <b>'.$this->habbo->get_HabboClub(3).'</b> days left of hc  </div>
+																								<div id="clubdays"> <b>'.$this->habbo->get_HabboClub(3).'</b> <span class="lang-hcjoin-remainingHeader">dias restantes</span> </div>
 																								<div id="comingmonthsVal">'.$this->habbo->get_HabboClub(4).'</div>
 																								<span><img src="'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/images/club_subscription_arrow.png" style="margin-left: '.$arrowPos.'px;"></span>
 																								<div style=" margin-top: 35px;">
@@ -91,11 +91,11 @@ include('./web/includes/site_content/_partdata/_headers/default.viewpart');
 																								<div id= "habboclub-buy-details"> 
 																									<span><img src="'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/images/club_subscription_arrow.png" style="margin-left: '.$arrowPos.'px;"></span>
 																									<div style=" margin-top: 35px;">
-																										<div style="float: left; width: 56px">Periodos Decorridos</div>
+																										<div style="float: left; width: 56px"><center><span class="lang-hcjoin-comingTitle">Periodos Decorridos</span></center></div>
 																									</div>
 																								</div>
 																								<div id="pastmonthsVal">'.$this->habbo->get_HabboClub(5).'</div> 
-																								<div id="clubdays"> <b>'.$this->habbo->get_HabboClub(3).'</b> days left of hc  </div>																										
+																								<div id="clubdays"> <b>'.$this->habbo->get_HabboClub(3).'</b> <span class="lang-hcjoin-remainingHeader">dias restantes</span> </div>																										
 																							</div>
 																					
 																						';
@@ -115,7 +115,7 @@ include('./web/includes/site_content/_partdata/_headers/default.viewpart');
 																							';																						
 																					}			
 																					echo '
-																								<div style="float: left; width: 60px; margin-top: 45px;"><b>Periodos Decorridos</b></div>
+																								<div style="float: left; width: 60px; margin-top: 45px;"><b><center><span class="lang-hcjoin-comingTitle">Periodos Decorridos</span></center></b></div>
 																								
 																							</div>
 																					';
@@ -140,16 +140,16 @@ include('./web/includes/site_content/_partdata/_headers/default.viewpart');
 																			<table width="100%">
 																				<tbody>
 																					<tr>
-																						<td width="60%"><span class="habboclub-buy-details">31 days = 25 Coins </span></td>
-																						<td><a class="colorlink noarrow" onclick="openClubSubscribe(this.id)" id="subscribe1" href="#"  return false;"><span>Buy 1 month(s)</span></a></td>
+																						<td width="60%"><span class="habboclub-buy-details"> <span class="lang-hcjoin-subscribe1Title">31 dias = 25 Moedas</span></span></td>
+																						<td><a class="colorlink noarrow" onclick="openClubSubscribe(this.id)" id="subscribe1" href="#"  return false;"><span class="lang-hcjoin-subscribe1Buy">Comprar 1 mês(es)</span></a></td>
 																					</tr>
 																					<tr>
-																						<td width="60%"><span class="habboclub-buy-details">93 days = 60 Coins </span></td>
-																						<td><a class="colorlink noarrow" id="subscribe2" onclick="openClubSubscribe(this.id)" href="#"  return false;"><span>Buy 3 month(s)</span></a></td>
+																						<td width="60%"><span class="habboclub-buy-details"><span class="lang-hcjoin-subscribe2Title">93 dias =60 Moedas</span></span></td>
+																						<td><a class="colorlink noarrow" id="subscribe2" onclick="openClubSubscribe(this.id)" href="#"  return false;"><span class="lang-hcjoin-subscribe2Buy">Comprar 3 mês(es)</span></a></td>
 																					</tr>
 																					<tr>
-																						<td width="60%"><span class="habboclub-buy-details">186 days = 105 Coins </span></td>
-																						<td><a class="colorlink noarrow" id="subscribe3" onclick="openClubSubscribe(this.id)" href="#"  return false;"><span>Buy 6 month(s)</span></a></td>
+																						<td width="60%"><span class="habboclub-buy-details"><span class="lang-hcjoin-subscribe3Title">186 dias = 105 Moedas</span></span></td>
+																						<td><a class="colorlink noarrow" id="subscribe3" onclick="openClubSubscribe(this.id)" href="#"  return false;"><span class="lang-hcjoin-subscribe3Buy">Comprar 6 mês(es)</span></a></td>
 																					</tr>
 																				</tbody>
 																			</table>

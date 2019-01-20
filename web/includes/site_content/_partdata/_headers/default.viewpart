@@ -121,7 +121,7 @@
 									switch(__VIEW__){
 										case 'default':
 											echo '
-											Habbo Club | <a href="'.$this->hotel->get_HotelWeb().'/club/join"><span class="lang-hcjoin-headline">Associe-se ou renove seu HC</span></a> | <a href="'.$this->hotel->get_HotelWeb().'/club/shop" <span class="lang-hcshop-headline">Loja HC</span> </a> 
+											Habbo Club | <a href="'.$this->hotel->get_HotelWeb().'/club/join"><span class="lang-hcjoin-headline">Associe-se ou renove seu HC</span></a> | <a href="'.$this->hotel->get_HotelWeb().'/club/shop"> <span class="lang-hcshop-headline">Loja HC</span> </a> 
 											';
 											break;
 										case 'join':

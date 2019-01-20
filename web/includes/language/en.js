@@ -168,7 +168,13 @@ var WORDS_EN = {
 		"hcjoin-joinDesc": "Hello, what you waiting for, join today on Habbo Club only for 25 Habbo Credits!",
 		"hcjoin-comingTitle" :"Elapsed Months",
 		"hcjoin-pastTitle" :"Prepaid Months",
-		
+		"hcjoin-remainingHeader" : "days left of hc",
+		"hcjoin-subscribe1Title" : "31 days = 25 Coins",
+		"hcjoin-subscribe1Buy" : "Buy 1 month(s)",
+		"hcjoin-subscribe2Title" : "93 ddays = 60 Coins",
+		"hcjoin-subscribe2Buy" : "Buy 3 month(s)",
+		"hcjoin-subscribe3Title" : "186 days = 105 Coins",
+		"hcjoin-subscribe3Buy" : "Buy 6 month(s)",		
 		//Habbo Club->Shop
 		"hcshop-headline": "Club Shop",
 

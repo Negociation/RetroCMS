@@ -51,7 +51,6 @@
 						<param name='sw5' value='external.variables.txt=".$this->hotel->get_HotelVars().";external.texts.txt=".$this->hotel->get_HotelTexts()."'>
 						<embed src='".$this->hotel->get_HotelDCR()."' bgColor='#000000' width='720' height='540' swRemote='swSaveEnabled='true' swVolume='true' swRestart='false' swPausePlay='false' swFastForward='false' swTitle='Habbo Hotel' swContextMenu='true'' swStretchStyle='none' swText='' type='application/x-director' pluginspage='https://www.macromedia.com/shockwave/download/'
 						sw6='use.sso.ticket=1;sso.ticket=".$this->habbo->get_HabboTicket()."'
-						sw8='forward.type=1;forward.id=25'
 						sw2='connection.info.host=".$this->hotel->get_HotelHost().";connection.info.port=".$this->hotel->get_HotelPort()."'
 						sw4='connection.mus.host=".$this->hotel->get_HotelHost().";connection.mus.port=".$this->hotel->get_HotelMUS()."'
 						sw3='client.reload.url=".$this->hotel->get_HotelUrl()."'

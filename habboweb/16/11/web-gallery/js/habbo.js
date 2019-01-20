@@ -1492,6 +1492,21 @@ function validateUsername(){
 	
 };
 
+function Validate(){
+	var errorId = sessionStorage.getItem("errorId");
+		switch(errorId){
+			case "1":
+				validatorAddError(false, false, "Nome Habbo informado não existe.", "login-errors");
+			break;
+			case "2":
+				validatorAddError(false, false, "Senha não confere com o nome Habbo.", "login-errors");
+			break;
+			case "3":												
+				validatorAddError(false, false, "Este Habbo esta banido.", "login-errors");
+			break;					
+		}
+	sessionStorage.removeItem("loginErrorId");	
+}
 
 function loadContent(){
 	if (typeof habboClient != 'undefined'){	
@@ -1502,5 +1517,6 @@ function loadContent(){
 	}else{
 		window.name = 'habboMain';
 	};	
+	Validate();
 	Advertisement_Load();
 }

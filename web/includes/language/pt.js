@@ -164,10 +164,16 @@ var WORDS_PT = {
 		"hcjoin-aboutTitle": "Associe-se",
 		"hcjoin-aboutDesc": "Aqui você pode associar-se ao HC, renovar ou prolongar sua sociedade e também ver quantos dias ou períodos ainda tem. Entre no Hotel. Fique à vontade.",
 		"hcjoin-joinTitle": "ASSOCIE-SE AO HABBO CLUB",
-		"hcjoin-joinDesc": "Olá. O Habbo Club é massa. Tem Mobis, roupas e emoções fortes por 30 Moedas",
+		"hcjoin-joinDesc": "Olá. O Habbo Club é massa. Tem Mobis, roupas e emoções fortes por 25 Moedas",
 		"hcjoin-comingTitle" :"Periodos Decorridos",
-		"hcjoin-pastTitle" :"Periodos Pre-Pagos",	
-		
+		"hcjoin-pastTitle" :"Periodos Pre-Pagos",
+		"hcjoin-remainingHeader" : "dias restantes",		
+		"hcjoin-subscribe1Title" : "31 dias : 25 Moedas",
+		"hcjoin-subscribe1Buy" : "Comprar 1 mêses",
+		"hcjoin-subscribe2Title" : "93 dias : 60 Moedas",
+		"hcjoin-subscribe2Buy" : "Comprar 3 mêses",
+		"hcjoin-subscribe3Title" : "186 dias :105 Moedas",
+		"hcjoin-subscribe3Buy" : "Comprar 6 mêses",
 		//Habbo Club->Shop
 		"hcshop-headline": "Loja HC",
 	};

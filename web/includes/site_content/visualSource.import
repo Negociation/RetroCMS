@@ -43,6 +43,7 @@
 			var habboStaticFilePath = '".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/';
 			var habboStaticUrl = '".$this->hotel->get_HotelUrl()."';
 			window.onload = function(){";
+				
 				if($this->habbo->get_habboLoggedIn()){
 						echo "loadLanguage('".$this->habbo->get_habboLanguage()."');";
 				}else{
@@ -80,5 +81,6 @@
 		</script>
 	";
 ?>
+
 
 

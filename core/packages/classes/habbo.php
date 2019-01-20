@@ -85,7 +85,7 @@ class Habbo{
 		return false;;
 	}
 	public function set_HabboPassword($Param){
-		if(strlen($Param) > 6){
+		if(strlen($Param) >= 6){
 			$this->habboPassword = $Param;
 		}
 	}

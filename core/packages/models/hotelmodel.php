@@ -34,7 +34,7 @@ class HotelModel extends Model{
 		$result = $this->getAll('site_settings');
 		if (count($result) > 0){
 			//Set Hotel data in Object
-			$hotelObject->constructObject($result[0]['setting_value'],$result[1]['setting_value'],$result[2]['setting_value'],$result[3]['setting_value'],$result[4]['setting_value'],$result[5]['setting_value'],array($result[7]['setting_value'],$result[7]['setting_value'],$result[8]['setting_value'],$result[9]['setting_value'],$result[10]['setting_value'],$result[11]['setting_value']));		
+			$hotelObject->constructObject($result[0]['setting_value'],$result[1]['setting_value'],$result[2]['setting_value'],$result[3]['setting_value'],$result[4]['setting_value'],$result[5]['setting_value'],array($result[6]['setting_value'],$result[7]['setting_value'],$result[8]['setting_value'],$result[9]['setting_value'],$result[10]['setting_value'],$result[11]['setting_value']));		
 		}			
 		
 		//Get Hotel Adverstments

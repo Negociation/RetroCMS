@@ -95,11 +95,12 @@ class Account extends Controller{
 				}
 				
 			}else{
-				
+				echo '<script>sessionStorage.setItem("errorId",'.$this->habboModel->set_HabboLogin($this->habbo)[1].'); </script> ';
 				//Set the error message by id:
 				switch($this->habboModel->set_HabboLogin($this->habbo)[1]){
 					case 1:
 						//Habbo Login or Password Wrong
+						
 						break;					
 					case 2:
 						//Habbo dont exist
