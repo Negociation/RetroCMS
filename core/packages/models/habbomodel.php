@@ -42,13 +42,13 @@ class HabboModel extends Model{
 		//If found the habbo
 		if(count($result) == 1){
 			$row = $result[0];
-			$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank'],$row['figure'],$row['sex'],$row['credits'],array($row['club_subscribed'],$row['club_expiration'],count($this->getByParam('users_club_gifts','user_id',$habboId))),$row['user_language']);
-			
+			$habboObject->constructObject($row['id'],$row['username'],$row['password'],$row['rank'],$row['figure'],$row['sex'],$row['credits'],array($row['club_subscribed'],$row['club_expiration'],count($this->getByParam('users_club_gifts','user_id',$row['id']))),$row['user_language']);
+
 			//Check if password match
 			if(sodium_crypto_pwhash_str_verify($habboObject->get_HabboPassword(), $testObject->get_HabboPassword())){
 				
 				//Check if not banned
-				if($habboObject->get_HabboRank() < 0){
+				if($habboObject->get_HabboRank() <= 0){
 					//Returns (Habbo Banned)
 					return array(false,4,"Some Reason");
 					exit;		

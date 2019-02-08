@@ -327,6 +327,30 @@ include('./web/includes/site_content/_partdata/_headers/account.viewpart');
 					
 					<!-- Validator Input Data Script before POST -->
 					<script type="text/javascript">
+					j( document ).ready(function() {
+							if("errorId" in localStorage){
+								validatorBeforeSubmit("login-errors");
+
+							switch (localStorage.getItem('errorId')){
+								case '1':
+									validatorAddError(false, false, window["WORDS_"+localStorage.getItem('userLang')]["login-error1"], "login-errors");
+									break;
+								case '2':
+									validatorAddError(false, false,window["WORDS_"+localStorage.getItem('userLang')]["login-error2"], "login-errors");
+									break;
+								case '3':
+									validatorAddError(false, false,window["WORDS_"+localStorage.getItem('userLang')]["login-error3"], "login-errors");
+									break;		
+								case '4':
+									validatorAddError(false, false,window["WORDS_"+localStorage.getItem('userLang')]["login-error4"], "login-errors");
+									break;										
+							}
+							localStorage.removeItem('errorId');
+						}
+
+});
+
+						
 						Event.observe($("registration-form"), "submit", function(e) {
 							if ($("day").selectedIndex == 0 || $("month").selectedIndex == 0 || $("year").selectedIndex == 0) {
 								validatorBeforeSubmit("registration-errors");

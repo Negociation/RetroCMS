@@ -95,7 +95,15 @@ class Account extends Controller{
 				}
 				
 			}else{
-				echo '<script>sessionStorage.setItem("errorId",'.$this->habboModel->set_HabboLogin($this->habbo)[1].'); </script> ';
+				echo "
+				<html>
+				<title>".$this->hotel->get_HotelNick()." ~ ".$this->pageTitle."</title>
+				";
+				if(isset($this->habboModel->set_HabboLogin($this->habbo)[1])){
+					echo "<script>localStorage.setItem('errorId', '".$this->habboModel->set_HabboLogin($this->habbo)[1]."'); document.location = '../account/login';</script>";
+				}
+				echo "</html>";
+				
 				//Set the error message by id:
 				switch($this->habboModel->set_HabboLogin($this->habbo)[1]){
 					case 1:
@@ -104,17 +112,18 @@ class Account extends Controller{
 						break;					
 					case 2:
 						//Habbo dont exist
+						
 						break;						
 					case 3:
 						//Habbo Banned 
+						
 						break;
 					default:
 						//Something wrong try again
+						
 						break;
 				}
 				
-				//Now redirect to login showing the seted error
-				header('Location: ../account/login');
 				exit;
 				
 			}

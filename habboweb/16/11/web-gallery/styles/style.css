@@ -1098,10 +1098,13 @@ body#client {
 /* individual article pages */
 .article-full {
 	margin: 0;
-	padding: 0;
+	padding: 0;jj
 }
 .article-full .article-author {
+	display: inline-block;
+ 	font-size: 12px;
 	margin: 0;
+	margin-top: -10px;
 	padding: 0;
 }
 

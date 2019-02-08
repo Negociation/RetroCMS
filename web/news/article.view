@@ -78,8 +78,12 @@ include('./web/includes/site_content/_partdata/_headers/default.viewpart');
 									 <div>
 										<?php echo $this->article->get_Content() ?>
 									 </div>
-									 <br>
-									 <p class="article-author"><b><?php if(!is_null($authorObject->get_HabboName())){ echo $authorObject->get_HabboName().' - '; } ?> Gerente do Hotel</b></p>
+									 <br> 
+									 <img vspace="0"; src="<?php echo $this->hotel->get_HotelWeb() ?>/habboweb/16/11/web-gallery/images/staff_icon.png" border="0">
+									 <div style="display: inline-block">
+									 <p class="article-author">
+									<b><?php if(!is_null($authorObject->get_HabboName())){ echo $authorObject->get_HabboName().' - '; } ?> Gerente do Hotel</b></p>
+									</div>
 								  </div>
 								  <div class="clear"></div>
 							   </div>

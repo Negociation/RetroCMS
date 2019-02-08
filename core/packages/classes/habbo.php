@@ -87,6 +87,8 @@ class Habbo{
 	public function set_HabboPassword($Param){
 		if(strlen($Param) >= 6){
 			$this->habboPassword = $Param;
+		}else{
+			$this->habboPassword = "";	
 		}
 	}
 
@@ -143,7 +145,7 @@ class Habbo{
 				$calc = $calc % 31;
 				return($calc);
 			break;
-			//Pre-paid peridots
+			//Pre-paid peridods
 			case 4:
 				$calc = (new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a");
 				$calc = $calc % 31;
@@ -153,8 +155,11 @@ class Habbo{
 			break;		
 			case 5:
 				if($this->get_HabboClub(1)){
-					return ($this->habboClub[2]-1);
-					
+					if($this->habboClub[2]-1 >= 0){
+						return ($this->habboClub[2]-1);
+					}else{
+						return 0;	
+					}
 				}else{
 					return($this->habboClub[2]);
 				}

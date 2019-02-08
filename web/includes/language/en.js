@@ -94,7 +94,10 @@ var WORDS_EN = {
   "login-content-loginSafetyTitle": "SECURITY INFORMATION",   
   "login-content-loginSafetyContent": "The real Habbo site is encrypted to protect you and your data. You can check whether or not this site is encrypted by looking for the nice looking padlock at the bottom of your web browser.",
   
-   
+  "login-error1": "Habbo Name doesnt exists!",
+  "login-error2": "Habbo Name or Password wrong!!",
+  "login-error3": "You have been baned permanently!",
+  "login-error4": "You have been banned permanently!", 
    //Client
    "topbar-client-count": "Habbos online now",
    "topbar-client-logout": "CLOSE HOTEL",
