@@ -265,3 +265,112 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users_badges`
   ADD CONSTRAINT `users_badges_users_FK` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+CREATE TRIGGER `Tgr_Windows` AFTER INSERT ON `rooms`
+ FOR EACH ROW BEGIN 
+IF (NEW.model = 'model_a') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=8,0 l=3,57 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_b') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=8,0 l=28,67 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_d') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1414, '0', '0', '0.0', ':w=8,0 l=13,57 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_e') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=7,2 l=0,53 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_f') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1414, '0', '0', '0.0', ':w=5,2 l=12,58 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_g') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=4,4 l=23,66 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_h') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=8,1 l=0,54 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_i') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=5,0 l=12,37 r', 0, '16', 0);
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=12,0 l=4,33 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_j') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=8,6 l=0,31 r', 0, '16', 0);
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=3,6 l=10,36 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_k') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=20,0 l=12,37 r', 0, '16', 0);
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=4,8 l=12,37 r', 0, '16', 0);
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=12,4 l=12,37 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_l') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=5,0 l=4,33 r', 0, '16', 0);
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=17,0 l=0,31 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_m') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1414, '0', '0', '0.0', ':w=17,0 l=6,35 r', 0, '16', 0);
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1414, '0', '0', '0.0', ':w=14,0 l=2,33 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_n') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=5,0 l=4,33 r', 0, '16', 0);
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=17,0 l=0,31 r', 0, '16', 0);
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=11,0 l=2,32 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_o') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=3,14 l=14,38 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_p') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=9,0 l=0,31 r', 0, '16', 0);
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=14,0 l=12,37 r', 0, '16', 0);
+
+END IF;
+
+IF (NEW.model = 'model_q') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=14,0 l=14,38 r', 0, '16', 0);
+END IF;
+
+IF (NEW.model = 'model_r') THEN
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=14,0 l=12,53 r', 0, '16', 0);
+INSERT INTO `items` (`order_id`, `user_id`, `room_id`, `definition_id`, `x`, `y`, `z`, `wall_position`, `rotation`, `custom_data`, `is_hidden`) VALUES
+(0, NEW.owner_id, NEW.id, 1413, '0', '0', '0.0', ':w=20,0 l=12,53 r', 0, '16', 0);
+END IF;
+END
