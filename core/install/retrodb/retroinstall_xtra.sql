@@ -7,13 +7,20 @@
 -- Indexes for table `catalogue_items`
 --
 ALTER TABLE `catalogue_items`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
+
+--
+-- Indexes for table `catalogue_packages`
+--
+ALTER TABLE `catalogue_packages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `external_texts`
+-- Indexes for table `catalogue_pages`
 --
-ALTER TABLE `external_texts`
-  ADD KEY `entry` (`entry`(191));
+ALTER TABLE `catalogue_pages`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `games_ranks`
@@ -32,7 +39,7 @@ ALTER TABLE `items`
 -- Indexes for table `items_definitions`
 --
 ALTER TABLE `items_definitions`
-  ADD UNIQUE KEY `id` (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `items_moodlight_presets`
@@ -59,6 +66,12 @@ ALTER TABLE `items_teleporter_links`
 ALTER TABLE `messenger_messages`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `public_items`
+--
+ALTER TABLE `public_items`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `rare_cycle`
@@ -94,11 +107,28 @@ ALTER TABLE `settings`
   ADD PRIMARY KEY (`setting`);
 
 --
+-- Indexes for table `site_advertisements`
+--
+ALTER TABLE `site_advertisements`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `site_news`
+--
+ALTER TABLE `site_news`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `site_promos`
+--
+ALTER TABLE `site_promos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `site_settings`
 --
 ALTER TABLE `site_settings`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `setting` (`setting`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `soundmachine_playlists`
@@ -134,7 +164,13 @@ ALTER TABLE `users_badges`
 -- AUTO_INCREMENT for table `catalogue_items`
 --
 ALTER TABLE `catalogue_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=643;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1350;
+
+--
+-- AUTO_INCREMENT for table `catalogue_packages`
+--
+ALTER TABLE `catalogue_packages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `games_ranks`
@@ -146,13 +182,13 @@ ALTER TABLE `games_ranks`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 
 --
 -- AUTO_INCREMENT for table `items_definitions`
 --
 ALTER TABLE `items_definitions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=761;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1419;
 
 --
 -- AUTO_INCREMENT for table `messenger_messages`
@@ -161,10 +197,16 @@ ALTER TABLE `messenger_messages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `public_items`
+--
+ALTER TABLE `public_items`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3460;
+
+--
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1000;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1059;
 
 --
 -- AUTO_INCREMENT for table `rooms_categories`
@@ -179,16 +221,40 @@ ALTER TABLE `rooms_models`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
+-- AUTO_INCREMENT for table `site_advertisements`
+--
+ALTER TABLE `site_advertisements`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `site_news`
+--
+ALTER TABLE `site_news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `site_promos`
+--
+ALTER TABLE `site_promos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `site_settings`
+--
+ALTER TABLE `site_settings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT for table `soundmachine_songs`
 --
 ALTER TABLE `soundmachine_songs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Constraints for dumped tables

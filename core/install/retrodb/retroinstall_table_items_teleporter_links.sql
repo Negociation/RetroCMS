@@ -15,5 +15,7 @@ CREATE TABLE `items_teleporter_links` (
 --
 
 INSERT INTO `items_teleporter_links` (`item_id`, `linked_id`) VALUES
-(1, 2),
-(2, 1);
+(14, 15),
+(15, 14),
+(32, 33),
+(33, 32);

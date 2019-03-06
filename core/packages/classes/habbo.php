@@ -19,6 +19,7 @@ class Habbo{
 	protected $habboGender;
 	protected $habboCredits;
 	protected $habboClub = [];
+	protected $habboBirth;
 	
 	public function __construct(){
 		//Get Data from Habbo if Logged in 
@@ -66,7 +67,11 @@ class Habbo{
 	}
 
 	public function get_HabboRank(){
-		return $this->habboRank;	
+		if ( $this->habboRank != null){
+			return $this->habboRank;
+		}else{
+			return 1;
+		}			
 	}
 	
 	public function set_HabboName($Param){
@@ -74,7 +79,11 @@ class Habbo{
 	}
 	
 	public function get_HabboFigure(){
-		return $this->habboFigure;	
+		if($this->habboFigure == null){
+			return '1350218001280013000123511';
+		}else{		
+			return $this->habboFigure;
+		}		
 	}
 	
 	public function get_HabboCredits(){
@@ -105,11 +114,19 @@ class Habbo{
 	public function set_HabboTicket($Param){
 		$this->habboTicket = $Param;
 	}
+
 	
 	public function get_HabboPassword(){
 		return $this->habboPassword;
 	}
-	
+
+	public function get_HabboBirth(){
+		if($this->habboBirth == null){
+			return '0';
+		}else{
+			return $this->habboBirth;
+		}
+	}		
 	
 	public function get_HabboTicket(){
 		return $this->habboTicket;
@@ -120,9 +137,46 @@ class Habbo{
 			return $this->habboLanguage;			
 		}
 	}
+
+
+	public function get_HabboEmail(){
+		return $this->habboName;
+	}
+	
 	
 	public function get_HabboGender(){
-		return $this->habboGender;
+		if ($this->habboGender== null){
+			return 'M';
+		}else{
+			return $this->habboGender;
+		}
+	}
+	public function set_HabboFigure($figure){
+		$this->habboFigure = $figure;
+	}
+
+	public function set_HabboGender($gender){
+		$this->habboGender = $gender;
+	}
+
+	public function set_HabboMotto($motto){
+		$this->habboMotto = $motto;
+	}
+
+	public function set_HabboHomeVisible($visibility){
+		$this->habboHomeVisible = $visibility;
+	}
+
+	public function set_HabboBirth($birth){
+		$this->habboBirth = $birth;
+	}
+	
+	public function set_HabboEmail($email){
+		$this->habboEmail = $email;
+	}
+	
+	public function set_HabboRank($rank){
+		$this->habboRank = $rank;
 	}
 	
 	

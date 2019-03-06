@@ -52,6 +52,40 @@ class HotelModel extends Model{
 		return $hotelObject;
 	}
 	
+
+	public function set_HotelInstall($hotelObject){
+		$status = true;
+		foreach (glob("./core/install/retrodb/*.sql") as $sqlcontent){ 
+			try{
+				$stmt = $this->hotelConection->prepare(file_get_contents($sqlcontent));
+				if($sqlcontent == './core/install/retrodb/retroinstall_table_site_settings.sql'){
+				$stmt->bindValue(':url',$hotelObject->get_HotelUrl());
+				$stmt->bindValue(':web',$hotelObject->get_HotelWeb());
+				$stmt->bindValue(':version', $hotelObject->get_HotelVersion());
+				$stmt->bindValue(':name',$hotelObject->get_HotelName());
+				$stmt->bindValue(':nick',$hotelObject->get_HotelNick());
+				$stmt->bindValue(':texts',$hotelObject->get_HotelTexts());
+				$stmt->bindValue(':vars',$hotelObject->get_HotelVars());
+				$stmt->bindValue(':dcr',$hotelObject->get_HotelDcr());
+				$stmt->bindValue(':host',$hotelObject->get_HotelHost());
+				$stmt->bindValue(':port',$hotelObject->get_HotelPort());
+				$stmt->bindValue(':musport',$hotelObject->get_HotelMus());
+				}
+				if($sqlcontent == './core/install/retrodb/retroinstall_table_users.sql'){
+				$stmt->bindValue(':startcredits',100);
+				}				
+				$stmt->execute();
+			}catch(Exception $e){
+				$status = false;
+				echo "Ocorreu um erro com a execução do Script em: ".$sqlcontent;
+			}
+		}
+		return $status;
+	}
+	
 }
+
+	
+	
 
 ?>

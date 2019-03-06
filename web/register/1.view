@@ -11,6 +11,7 @@
 
 //Include Header Content ()
 include('./web/includes/site_content/_partdata/_headers/register.viewpart'); 
+
 ?>
 
 				<div id="outer">

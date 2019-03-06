@@ -23,12 +23,10 @@ class Url{
 		$this->url_method = "default";
 		$this->hotelModel = new HotelModel($this->hotelConection);
 		//If CMS not Installed Show Install Content instead 
-		if(!$this->hotelModel->get_HotelInstall()){
-			$this->url_controller = "Install";
-		}else{
+
 			$this->buildUrl($targetUrl);
 			unset($targetUrl);
-		}
+		
 	}
 	
 	protected function buildUrl($targetUrl){
@@ -79,6 +77,10 @@ class Url{
 		}else{
 			$this->set_UrlController("Not_Found");	
 			unset($parsedUrl[0]);
+		}
+		
+		if(!$this->hotelModel->get_HotelInstall()){
+			$this->url_controller = "Install";
 		}
 	}
 	

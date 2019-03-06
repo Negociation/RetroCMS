@@ -10,8 +10,9 @@
 //////////////////////////////////////////////////////////////
 
 //Include Header Content ()
-include('./web/includes/site_content/_partdata/_headers/register.viewpart'); 
+include('./web/includes/site_content/_partdata/_headers/install.viewpart'); 
 ?>
+						
 			<div id="outer">
 				<div id="outer-content">
 					<div class="processbox">
@@ -64,7 +65,7 @@ include('./web/includes/site_content/_partdata/_headers/register.viewpart');
 							<div class="content-bottom-content"></div>
 						</div>
 					</div>
-
+					
 <?php
 //Include Footer Content()
 include('./web/includes/site_content/_partdata/_footers/process.viewpart'); 

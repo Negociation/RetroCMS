@@ -82,11 +82,11 @@ include('./web/includes/site_content/_partdata/_headers/register.viewpart');
 														</p>
 														<div id="register-buttons">
 															<div align="right">
-																	<input type="hidden" name="required-birth" value="<?php //echo $this->newHabbo->get_HabboBirth() ?>" />
-																	<input type="hidden" name="newGender" value="<?php //echo $this->newHabbo->get_HabboGender() ?>" />
-																	<input type="hidden" name="figureData" value="<?php //echo $this->newHabbo->get_HabboFigure() ?>" />
-																	<input type="hidden" name="required-avatarName" value="<?php //echo $this->newHabbo->get_HabboName() ?>" />
-																		<input type="hidden" name="required-password" value="<?php //echo $this->newHabbo->get_HabboPassword() ?>" />
+															<?php 
+															foreach($_POST as $key => $value) {
+																echo"\n <input type=\"hidden\" name=\"".$key."\" value=\"".$value."\" />";
+															}
+														?>
 																<input type="submit" value="Continue" id="continuebtn" class="process-button">
 															</div>
 															<div class="clear"></div>

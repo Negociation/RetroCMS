@@ -32,6 +32,32 @@ class HabboModel extends Model{
 		return $habboObject;
 	}
 	
+	//Register new User
+	public function set_HabboRegistration($habboObject){
+		$status = true;
+		$sql = "INSERT INTO users (`username`, `password`, `figure`,`pool_figure`, `sex`, `motto`,`rank`, `birthday`,`email`) 
+		VALUES (:habboname, :password , :figure,'', :gender, '', :rank, :birth,:email);
+		";
+		if(count($this->getByParam('users','username',$habboObject->get_HabboName())) == 0){
+			try{ 
+				$stmt = $this->hotelConection->prepare($sql);
+				$stmt->bindValue(':habboname', $habboObject->get_HabboName());
+				$stmt->bindValue(':password', sodium_crypto_pwhash_str($habboObject->get_HabboPassword(), SODIUM_CRYPTO_PWHASH_OPSLIMIT_INTERACTIVE, SODIUM_CRYPTO_PWHASH_MEMLIMIT_INTERACTIVE));
+				$stmt->bindValue(':figure', $habboObject->get_HabboFigure());
+				$stmt->bindValue(':gender', $habboObject->get_HabboGender());
+				$stmt->bindValue(':rank', $habboObject->get_HabboRank());
+				$stmt->bindValue(':birth', $habboObject->get_HabboBirth());
+				$stmt->bindValue(':email', $habboObject->get_HabboEmail());
+				$stmt->execute();
+			}catch (PDOException $e){
+				echo "Erro during create user";
+				$status = false;
+			}
+		}
+			return $status;
+	}
+	
+	
 	public function set_HabboLogin($testObject){
 		//New Habbo
 		$habboObject = new Habbo();

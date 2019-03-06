@@ -12,6 +12,7 @@
 class Register extends Controller{
 	protected $promoArray = [];
 	protected $newsModel;
+	protected $newHabbo;
 	
 	public function __construct($hotelConection){
 		//Setting PDO Conection
@@ -26,7 +27,7 @@ class Register extends Controller{
 		//Starting Habbo
 		$this->habboModel = new HabboModel($this->hotelConection);
 		$this->habbo = new Habbo();
-
+		$this->newHabbo = new Habbo();
 	}
 	
 	//Start registration 
@@ -45,6 +46,27 @@ class Register extends Controller{
 				header('Location: ../../');
 				exit;
 			}else if(is_numeric($id)){
+				//Step 0
+				$this->newHabbo->set_HabboBirth(isset($_POST['required-birth']) ? $_POST['required-birth'] : '');
+
+				//Step 1
+				
+					//V17 OR LESS
+					if (isset($_GET['newGender'])){ $this->newHabbo->set_HabboGender($_GET['newGender']); }
+					if (isset($_GET['figureData'])){ $this->newHabbo->set_HabboFigure($_GET['figureData']); }
+					if (isset($_POST['newGender'])){ $this->newHabbo->set_HabboGender($_POST['newGender']); }
+					if (isset($_POST['figureData'])){ $this->newHabbo->set_HabboFigure($_POST['figureData']); }
+					
+					//V18 ... V21
+						
+				//Step 2		
+				if (isset($_POST['required-avatarName'])){ $this->newHabbo->set_HabboName($_POST['required-avatarName']);  }
+				if (isset($_POST['required-password'])){ $this->newHabbo->set_HabboPassword($_POST['required-password']); }
+
+				//Step 3
+				if (isset($_POST['required-email'])){ $this->newHabbo->set_HabboEmail($_POST['required-email']); }
+						
+					
 				switch($id){
 					//Step 0 ( Habbo Birthday )
 					case 0:
@@ -94,7 +116,15 @@ class Register extends Controller{
 					//Step 5 (Welcome Page)
 					case 5:
 						if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-							require_once './web/register/5.view';
+							$this->habboModel->set_HabboRegistration($this->newHabbo);
+							if ($this->habboModel->set_HabboRegistration($this->newHabbo)){
+								$this->habboModel->set_HabboLogin($this->newHabbo);
+								require_once './web/register/5.view';
+							}else{
+								header('Location: ../error');	
+								break;
+							}
+							
 						}else{
 							header('Location: ../../');	
 							break;

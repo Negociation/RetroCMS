@@ -69,7 +69,7 @@ class Hotel{
 	}
 	
 	public function get_HotelWeb(){
-		return $this->hotel_Url;
+		return $this->hotel_Web;
 	}
 	
 	public function get_HotelDCR(){
@@ -99,5 +99,64 @@ class Hotel{
 	public function get_HotelLanguage(){
 		return $this->hotel_Language;
 	}
+	
+	function get_HotelVersion(){
+		return $this->hotel_Version;
+	}
+
+
+	function set_HotelClosed($status){
+		$this->hotel_Status= $status;
+	}
+
+	public function set_HotelName($name){
+		$this->hotel_Name = $name;
+	}
+
+	function set_HotelNick($nick){
+		$this->hotel_Nick = $nick;
+	}
+
+
+	function set_HotelUrl($url){
+		$this->hotel_Url = $url;
+	}
+
+	function set_HotelVersion($version){
+		$this->hotel_Version = $version;
+	}
+
+
+	function set_HotelWeb($web){
+		 $this->hotel_Web = $web;
+	}
+	
+	function set_HotelVariables($variables){
+		$this->hotel_Client[2] = $variables;
+		}
+	
+	function set_HotelTexts($texts){
+		$this->hotel_Client[1] = $texts;
+	}
+	
+	function set_HotelDcr($dcr){
+		$this->hotel_Client[0] = $dcr;
+	}
+	
+	function set_HotelHost($host){
+				$this->hotel_Client[3] = $host;
+	}
+
+	function set_HotelPort($port){
+				$this->hotel_Client[4] = $port;
+	}
+	
+	function set_HotelMusHost($mushost){
+
+	}
+
+	function set_HotelMusPort($musport){
+				$this->hotel_Client[5] = $musport;
+	}	
 }
 ?>

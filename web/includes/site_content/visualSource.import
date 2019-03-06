@@ -20,6 +20,7 @@
 	//Import Process CSS if the control as:
 	case "Account": 
 	case "Register":	
+	case "Install":	
 		echo "		<link href='".$this->hotel->get_HotelWeb()."/habboweb/16/11/web-gallery/styles/process.css' type='text/css' rel='stylesheet'/>";	
 		break;
   }
