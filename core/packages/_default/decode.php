@@ -11,19 +11,31 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
+// Class: Decode
+// Desc: Decode the Url Request 
 
-// + Call the Configuration File Once
-// - File: Core.php
-// - Desc: Database Settings 
-require_once('./core/core.php');
+class Decode{
+	
+	private $urlController;
+	private $urlAction;
+	private $urlParams;
+	
+	public function __construct($urlRequest){
+		echo trim($urlRequest);
+	}
+	
+	public function get_DecodeController(){
+		return $this->urlController;
+	}
+	
+	public function get_DecodeAction(){
+		return $this->urlAction;
+	}
+	
+	public function get_DecodeParams(){
+		return $this->urlParams;
+	}	
+	
+}
 
-// + Start Session "habboWebsite"
-// - Desc: Sessions for Website 
-session_id("habboWebsite");
-session_start();
-
-// + Load the Destination Content
-// - Desc: Created a Object of RoutePath and Called function Load
-$routeObject = new RoutePath();
-$routeObject->load($hotelConection);
 ?>

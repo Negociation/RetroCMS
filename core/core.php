@@ -11,9 +11,18 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
+// + Setting Default Configuration Timeout 
+// - Desc: Preveting errors during Install
+ini_set('max_execution_time', 300); 
+
+
 // + Include Default
 // - Desc: Include all default classes for MVC model
 foreach (glob("./core/packages/_default/*.php") as $default){ require_once $default; }
+
+
+
+
 
 //Check if MySQL Conection Works
 try{
