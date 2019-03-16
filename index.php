@@ -9,6 +9,9 @@
 // Branch: Public (Unstable)								//
 //////////////////////////////////////////////////////////////
 
+//Small Correction for Install
+ini_set('max_execution_time', 300);
+
 //Core of Aplication ( Database and RCON )
 require_once "./Core/Core.php";
 
