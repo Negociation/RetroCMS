@@ -18,11 +18,31 @@ class Decode{
 	
 	private $urlController;
 	private $urlAction;
-	private $urlParams;
+	private $urlParams = [];
 	
 	public function __construct($urlRequest){
-		echo trim($urlRequest);
+		
+		//Default Constructor Decode
+		$this->urlController = 'index';
+		$this->urlAction = 'default';
+
+		//Remove First Character of String if as "/"
+		$urlRequest = (isset($urlRequest[0]) && $urlRequest[0] == "/")? substr($urlRequest, 1) : $urlRequest;
+				
+		//Remove Last Character of String if as "/"
+		$urlRequest = (isset($urlRequest[-1]) && $urlRequest[-1] == "/")? rtrim($urlRequest,"/") : $urlRequest;
+		
+		//Split url into array using middle "/"  as param 
+		$parsedRequest = (!empty($urlRequest))? explode("/",filter_var(rtrim($urlRequest), FILTER_SANITIZE_URL)) : $urlRequest;
+		
+		//Decode Data if is Array Object
+		if(is_array($parsedRequest)){
+			$this->decodeRequest($parsedRequest);
+		}
+		
 	}
+	
+	//Set and Gets
 	
 	public function get_DecodeController(){
 		return $this->urlController;
@@ -34,8 +54,12 @@ class Decode{
 	
 	public function get_DecodeParams(){
 		return $this->urlParams;
-	}	
+	}
 	
+	// Decode parsedRequest
+	public function decodeRequest($request){
+		
+	}
 }
 
 ?>

@@ -20,6 +20,13 @@ ini_set('max_execution_time', 300);
 // - Desc: Include all default classes for MVC model
 foreach (glob("./core/packages/_default/*.php") as $default){ require_once $default; }
 
+// + Include Default Structure
+// - Desc: Include all default structure for Classes/Models/Controllers
+foreach (glob("./core/packages/_default/structure/*.php") as $structure){ require_once $structure; }
+
+// + Include Controllers
+// - Desc: Include all default structure for Classes/Models/Controllers
+foreach (glob("./core/packages/_controllers/*.php") as $controllers){ require_once $controllers; }
 
 
 

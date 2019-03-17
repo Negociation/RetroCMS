@@ -11,24 +11,20 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-// Class: Request
-// Desc: Handle the URL Target Request
+// Class: Index
+// Desc: Index Controller 
 
-class Request{
-	
-	private $urlRequest;
+class Index{
+
 	
 	/* Construct Method */
 	public function __construct(){
-		if(isset($_SERVER["REQUEST_URI"])){
-			$this->urlRequest =  trim($_SERVER["REQUEST_URI"]);
-		}
+		
 	}
 	
-	/* Return url Request */	
-	public function getRequest(){
-		return $this->urlRequest;
-		
+	/* Default View Call */
+	public function default(){
+		echo 'Index Loaded';
 	}
 	
 }
