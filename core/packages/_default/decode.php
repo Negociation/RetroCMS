@@ -57,8 +57,20 @@ class Decode{
 	}
 	
 	// Decode parsedRequest
-	public function decodeRequest($request){
-		
+	protected function decodeRequest($request){
+		if(file_exists("./core/packages/_controllers/".$request[0].".php")){
+			
+			//Will do some friendly url cases like Home by Id
+			$request = orderRequest($request);
+			
+		}else{
+			$this->urlController = 'not_found';
+		}
+	}
+	
+	// Re-order url based on Request
+	protected function orderRequest($request){
+		return $request;
 	}
 }
 
