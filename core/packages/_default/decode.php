@@ -56,20 +56,49 @@ class Decode{
 		return $this->urlParams;
 	}
 	
+	
 	// Decode parsedRequest
 	protected function decodeRequest($request){
 		if(file_exists("./core/packages/_controllers/".$request[0].".php")){
-			
-			//Will do some friendly url cases like Home by Id
-			$request = orderRequest($request);
-			
+			$this->urlController = $request[0];
+			if(isset($request[1])){
+				if(Method_Exists(new $request[0],$request[1]) && $request[1] != 'default' ){
+					$this->urlAction = $request[1];
+					$reflectionAction = new \ReflectionMethod($request[0],$request[1]); 
+					if($reflectionAction->getNumberOfParameters() == (count($request)-2)){
+						unset($request[0]);
+						unset($request[1]);
+						$this->urlParams = $request ? array_values($request): [];
+						unset($request);
+					}else{
+						$this->urlController = 'not_found';
+						unset($request);
+					}
+				}else{
+					$this->urlController = 'not_found';
+					unset($request);
+				}
+			}
 		}else{
 			$this->urlController = 'not_found';
+			unset($request);
 		}
 	}
-	
+				
 	// Re-order url based on Request
 	protected function orderRequest($request){
+		//Special Cases of URL Routes
+		switch(strtolower($request[0])){
+			case "login":
+				$request[0] = "Account";
+				$request[1] = "Login";
+			break;
+			
+			case "logout":
+				$request[0] = "Account";
+				$request[1] = "Disconnected";
+			break;
+		}
 		return $request;
 	}
 }

@@ -25,6 +25,7 @@ class Not_Found{
 	/* Default View Call */
 	public function default(){
 		echo 'Not_Found';
+
 	}
 	
 }
