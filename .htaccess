@@ -1,3 +1,4 @@
 RewriteEngine on
+ErrorDocument 404 /Not_Found
 RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png)$ [NC]
 RewriteRule ^([a-zA-Z0-9\-\_\/]*)$ index.php?p=$1
