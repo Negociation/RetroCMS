@@ -13,7 +13,7 @@
 ini_set('max_execution_time', 300);
 
 //Core of Aplication ( Database and RCON )
-require_once "./Core/Core.php";
+require_once "./core/core.php";
 
 //ISO-8859-1 (Portuguese and Spanish Accents)
 header("Content-Type: text/html; charset=utf-8",true);
