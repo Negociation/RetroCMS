@@ -27,6 +27,8 @@ class Index extends ControllerTemplate{
 	
 	/* Default View Call */
 	public function default(){
+		//Set Page Title;
+		$this->pageTitle = "Habbo";
 		echo 'Index Loaded';
 	}
 	

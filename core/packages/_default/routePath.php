@@ -31,8 +31,10 @@ class RoutePath{
 	
 	public function load($hotelConection){
 		
+		$controllerObject = $this->urlDecode->get_DecodeController();
+		
 		//Load View on Controller Object
-		call_user_func_array([$this->urlDecode->get_DecodeController($hotelConection),$this->urlDecode->get_DecodeAction()],$this->urlDecode->get_DecodeParams());
+		call_user_func_array([new $controllerObject($hotelConection),$this->urlDecode->get_DecodeAction()],$this->urlDecode->get_DecodeParams());
 		
 	}
 	
