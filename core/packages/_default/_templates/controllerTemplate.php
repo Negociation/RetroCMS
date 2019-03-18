@@ -15,7 +15,7 @@
 // Desc: Default Template for Controllers
 
 class ControllerTemplate{
-	protected $pageTitle;
+	private $pageTitle;
 	protected $habbo;
 	protected $habboModel;		
 	protected $hotel;
