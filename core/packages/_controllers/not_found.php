@@ -14,11 +14,13 @@
 // Class: Not Found
 // Desc: Not Found Controller (Only if the passed controller isn't valid) 
 
-class Not_Found{
-
+class Not_Found extends ControllerTemplate{
 	
 	/* Construct Method */
-	public function __construct(){
+	public function __construct($hotelConection){
+		
+		//Setting PDO Conection
+		$this->hotelConection = $hotelConection;
 		
 	}
 	

@@ -25,5 +25,5 @@ session_start();
 // + Load the Destination Content
 // - Desc: Created a Object of RoutePath and Called function Load
 $routeObject = new RoutePath();
-$routeObject->load($hotelConection);
+$routeObject->load($siteDiagnosis->get_hotelConection());
 ?>

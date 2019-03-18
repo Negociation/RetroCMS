@@ -20,24 +20,26 @@ ini_set('max_execution_time', 300);
 // - Desc: Include all default classes for MVC model
 foreach (glob("./core/packages/_default/*.php") as $default){ require_once $default; }
 
+// + Include Diagnosis Class and Related Content
+// - Desc: A small check-up of all cms requirements before install 
+foreach (glob("./core/packages/_default/_install/*.php") as $install){ require_once $install; }
+
 // + Include Default Structure
-// - Desc: Include all default structure for Classes/Models/Controllers
-foreach (glob("./core/packages/_default/structure/*.php") as $structure){ require_once $structure; }
+// - Desc: Include all default template structure for Classes/Models/Controllers
+foreach (glob("./core/packages/_default/_templates/*.php") as $structure){ require_once $structure; }
 
 // + Include Controllers
 // - Desc: Include all default structure for Classes/Models/Controllers
 foreach (glob("./core/packages/_controllers/*.php") as $controllers){ require_once $controllers; }
 
-
-
-
-//Check if MySQL Conection Works
-try{
-	//Recieve MySQL/MariaDB Conection
-	$hotelData = parse_ini_file('./core/install/settings.ini', true);
-	$hotelConection = new PDO('mysql:host=' . $hotelData['database']['host'] . ';dbname=' . $hotelData['database']['name'], $hotelData['database']['user'], $hotelData['database']['password']);
-}catch ( PDOException $e ){	
-
+// + Site Diagnosis Unit Test
+// - Desc: Test if the diagnosis result as true , if not so show error status
+$siteDiagnosis = new Diagnosis();
+$siteDiagnosis->start();
+if(!$siteDiagnosis->result()){
+	include './web/install/index.view';
+	exit;
 }
+
 
 ?>

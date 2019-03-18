@@ -11,25 +11,24 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-// Class: Index
-// Desc: Index Controller 
+// Class: ControllerTemplate
+// Desc: Default Template for Controllers
 
-class Index extends ControllerTemplate{
-
+class ControllerTemplate{
+	protected $pageTitle;
+	protected $habbo;
+	protected $habboModel;		
+	protected $hotel;
+	protected $hotelModel;
 	
-	/* Construct Method */
-	public function __construct($hotelConection){
-		
-		//Setting PDO Conection
-		$this->hotelConection = $hotelConection;
-		
+	public function get_ViewTitle(){
+		return $this->pageTitle;
 	}
 	
-	/* Default View Call */
-	public function default(){
-		echo 'Index Loaded';
+	//View Name Constraint
+	public function set_MethodName($name){
+		define('__VIEW__', $name);  	
 	}
 	
 }
-
 ?>
