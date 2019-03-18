@@ -23,7 +23,7 @@
 
 1º) Create a New Blank Database on your MySQL.
 
-2º) Set the correctly information on ./core/core.php "USERNAME , PASSWORD, HOST"...
+2º) Set the correctly information on ./core/install/settings.ini "USERNAME , PASSWORD, HOST"...
 
 3º)Open the main directory on Navigator example "localhost" and set the information on Install
 
