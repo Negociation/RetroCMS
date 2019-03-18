@@ -11,7 +11,6 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-
 // + Call the Configuration File Once
 // - File: Core.php
 // - Desc: Database Settings 
