@@ -3,7 +3,10 @@
 
 
 + This is the Beta Ring ( Aquamarine ) , for a stable Beta please Use Beta 2 (Citrine), who as planned to get some features from the Private Branch:
-  - MVC with Security (50%)
+  - MVC with Security (70%)
+  - Diagnosis Class ( 100% )
+  - Diagnosis Panel ( 100% )
+  - Views ( 2% )
   - Optimize some content
 
   
