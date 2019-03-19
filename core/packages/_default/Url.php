@@ -19,7 +19,7 @@ class Url{
 	//Recieve the Url from Route and Work with before return
 	public function __construct($targetUrl,$hotelConection){
 		$this->hotelConection = $hotelConection;
-		$this->url_controller = "Index";
+		$this->url_controller = "index";
 		$this->url_method = "default";
 		$this->hotelModel = new HotelModel($this->hotelConection);
 		//If CMS not Installed Show Install Content instead 
@@ -40,18 +40,19 @@ class Url{
 		//Special Cases of URL Routes
 		switch(strtolower($parsedUrl[0])){
 			case "login":
-				$parsedUrl[0] = "Account";
-				$parsedUrl[1] = "Login";
+				$parsedUrl[0] = "account";
+				$parsedUrl[1] = "login";
 			break;
 			
 			case "logout":
-				$parsedUrl[0] = "Account";
-				$parsedUrl[1] = "Disconnected";
+				$parsedUrl[0] = "account";
+				$parsedUrl[1] = "disconnected";
 			break;
 		}
 		
 		//Check if file of controller exist
-		if(file_exists("./core/packages/controllers/".$parsedUrl[0].".php")){ 
+
+		if(file_exists("./core/packages/controllers/".strtolower($parsedUrl[0]).".php")){ 
 			$this->set_UrlController($parsedUrl[0]);	
 			unset($parsedUrl[0]);
 			//Check if Method Exists on selected Controller
@@ -65,7 +66,8 @@ class Url{
 					$params = $parsedUrl ? array_values($parsedUrl): [];
 					$this->set_UrlParams($params);
 				}else{
-					$this->set_UrlController("Not_Found");	
+				    
+					$this->set_UrlController("not_found");	
 					$this->set_UrlMethod("default");	
 				}
 			}else{

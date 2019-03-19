@@ -10,16 +10,16 @@
 //////////////////////////////////////////////////////////////
 
 //Include Default
-foreach (glob("./core/packages/_default/*.php") as $default){ require_once $default; }
+foreach (glob("./core/packages/_default/*.php") as $default){ require_once strtolower($default); }
 
 //Include All Classes 
-foreach (glob("./core/packages/classes/*.php") as $classe){ require_once $classe; }
+foreach (glob("./core/packages/classes/*.php") as $classe){ require_once strtolower($classe); }
 
 //Include All Models 
-foreach (glob("./core/packages/models/*.php") as $model){ require_once $model; }
+foreach (glob("./core/packages/models/*.php") as $model){ require_once strtolower($model); }
 
 //Include All Controllers 
-foreach (glob("./Core/packages/controllers/*.php") as $controller){ include $controller; }
+foreach (glob("./core/packages/controllers/*.php") as $controller){ include strtolower($controller); }
 
 if(version_compare(PHP_VERSION, '7.0.0', '<')){
 	$e = "<center> <br>Sua versão do PHP não é compativel com o RetroCMS, atualize antes de continuar! <br><br> Your version of PHP its not compatibile with RetroCMS, please update before install! </center>";
