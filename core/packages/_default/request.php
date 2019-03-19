@@ -21,7 +21,7 @@ class Request{
 	/* Construct Method */
 	public function __construct(){
 		if(isset($_SERVER["REQUEST_URI"])){
-			$this->urlRequest =  trim($_SERVER["REQUEST_URI"]);
+			$this->urlRequest =  strtolower(trim($_SERVER["REQUEST_URI"]));
 		}
 	}
 	

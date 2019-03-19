@@ -88,15 +88,15 @@ class Decode{
 	// Re-order url based on Request
 	protected function orderRequest($request){
 		//Special Cases of URL Routes
-		switch(strtolower($request[0])){
+		switch($request[0]){
 			case "login":
-				$request[0] = "Account";
-				$request[1] = "Login";
+				$request[0] = "account";
+				$request[1] = "login";
 			break;
 			
 			case "logout":
-				$request[0] = "Account";
-				$request[1] = "Disconnected";
+				$request[0] = "account";
+				$request[1] = "disconnected";
 			break;
 		}
 		return $request;
