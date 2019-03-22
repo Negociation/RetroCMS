@@ -25,7 +25,7 @@ class Not_Found extends ControllerTemplate{
 	}
 	
 	/* Default View Call */
-	public function default(){
+	protected function default(){
 		echo 'Not_Found';
 
 	}
