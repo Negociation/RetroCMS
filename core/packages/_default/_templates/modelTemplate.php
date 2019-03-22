@@ -15,5 +15,5 @@
 // Desc: Default Template for Models (DAO)
 
 class ModelTemplate{
-	
+}
 ?>

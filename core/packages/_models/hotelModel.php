@@ -15,6 +15,16 @@
 // Desc: DAO Content of hotel Object
 
 class HotelModel extends ModelTemplate{
-	
+
+
+	public function get_HotelObject(){
+		//Empty Hotel Object
+		$hotelObject = new Hotel();
+		
+		//Emprty Advertisement Array
+		$advertisementArray = [];
+		
+		return $hotelObject;
+	}
 }
 ?>

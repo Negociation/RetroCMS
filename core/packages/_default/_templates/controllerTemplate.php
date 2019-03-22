@@ -32,8 +32,16 @@ class ControllerTemplate{
 	
 	//Intercept Request Rules before load
 	public function interceptRequest($request){
-		//Load View on Controller Object
-		call_user_func_array([new $this($this->hotelConection),$request->get_DecodeAction()],$request->get_DecodeParams());
+		
+		if($this->hotel->get_HotelStatus()){
+			//Load View on Controller Object
+			call_user_func_array([new $this($this->hotelConection),$request->get_DecodeAction()],$request->get_DecodeParams());
+		}else{
+			$this->pageTitle = 'Maintenance';
+			echo 'Maintenance Break';
+			//include 'web/account/login.view';	
+			exit;
+		}
 	}
 	
 }
