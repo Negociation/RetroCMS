@@ -36,7 +36,7 @@ class RoutePath{
 		$loadController = new $controller($hotelConection);
 		
 		//Call the View (If the intercept Allows)
-		$controller->interceptRequest($this->urlDecode);
+		$loadController->interceptRequest($this->urlDecode);
 
 		
 	}
