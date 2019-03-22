@@ -26,11 +26,17 @@ foreach (glob("./core/packages/_default/_install/*.php") as $install){ require_o
 
 // + Include Default Structure
 // - Desc: Include all default template structure for Classes/Models/Controllers
-foreach (glob("./core/packages/_default/_templates/*.php") as $structure){ require_once $structure; }
+foreach (glob("./core/packages/_default/_templates/*.php") as $template){ require_once $template; }
 
 // + Include Controllers
-// - Desc: Include all default structure for Classes/Models/Controllers
+// - Desc: Include all Controllers of the Website 
 foreach (glob("./core/packages/_controllers/*.php") as $controllers){ require_once $controllers; }
+
+// + Include Controllers
+// - Desc: Include all Models of ObjectClass
+foreach (glob("./core/packages/_models/*.php") as $models){ require_once $models; }
+
+
 
 // + Site Diagnosis Unit Test
 // - Desc: Test if the diagnosis result as true , if not so show error status
