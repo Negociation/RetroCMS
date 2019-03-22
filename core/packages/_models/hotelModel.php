@@ -12,9 +12,9 @@
 //////////////////////////////////////////////////////////////
 
 // Class: Hotel Model
-// Desc: DAO Content of hotel 
+// Desc: DAO Content of hotel Object
 
-class HotelModel extends modelTemplate{
+class HotelModel extends ModelTemplate{
 	
 }
 ?>

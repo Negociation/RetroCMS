@@ -28,11 +28,15 @@ foreach (glob("./core/packages/_default/_install/*.php") as $install){ require_o
 // - Desc: Include all default template structure for Classes/Models/Controllers
 foreach (glob("./core/packages/_default/_templates/*.php") as $template){ require_once $template; }
 
+// + Include Classes
+// - Desc: Include all ObjectClasses 
+foreach (glob("./core/packages/_classes/*.php") as $classes){ require_once $classes; }
+
 // + Include Controllers
 // - Desc: Include all Controllers of the Website 
 foreach (glob("./core/packages/_controllers/*.php") as $controllers){ require_once $controllers; }
 
-// + Include Controllers
+// + Include Models
 // - Desc: Include all Models of ObjectClass
 foreach (glob("./core/packages/_models/*.php") as $models){ require_once $models; }
 

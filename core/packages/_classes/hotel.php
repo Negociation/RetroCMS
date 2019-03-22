@@ -11,9 +11,25 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-// Class: ModelTemplate
-// Desc: Default Template for Models (DAO)
+// Class: Hotel 
+// Desc: Get all hotel data 
 
-class ModelTemplate{
+class Hotel{
+
+	protected $hotelStatus;
 	
+	public function __construct(){
+		
+		//Default Information if database issues or hotel Install 
+		$this->hotelStatus = true;
+	}
+	
+	
+	/** GETS **/
+	public function get_HotelStatus(){
+		return $this->hotelStatus;
+	}
+	
+	
+}
 ?>
