@@ -15,5 +15,23 @@
 // Desc: Default Template for Models (DAO)
 
 class ModelTemplate{
+	
+	protected $hotelConection;
+	
+	public function getAll($table){	
+		try {
+			$sql = 'SELECT * FROM .'.$table.' order by id';
+			$stmt = $this->hotelConection->prepare($sql);
+			$stmt->execute();
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		}catch(Exception $e){
+			//If not return false
+			return false;
+			exit;
+		}
+		return $result;		
+	}
+	
+	
 }
 ?>

@@ -21,7 +21,7 @@ class HotelModel extends ModelTemplate{
 		//Empty Hotel Object
 		$hotelObject = new Hotel();
 		
-		//Emprty Advertisement Array
+		//Empty Advertisement Array
 		$advertisementArray = [];
 		
 		return $hotelObject;

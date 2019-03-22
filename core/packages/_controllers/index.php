@@ -15,7 +15,6 @@
 // Desc: Index Controller 
 
 class Index extends ControllerTemplate{
-
 	
 	/* Construct Method */
 	public function __construct($hotelConection){
@@ -33,8 +32,10 @@ class Index extends ControllerTemplate{
 	
 	/* Default View Call */
 	protected function default(){
+		
 		//Set Page Title;
 		$this->pageTitle = "Habbo";
+		
 		echo 'Index Loaded';
 	}
 	
