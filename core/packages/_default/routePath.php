@@ -31,10 +31,13 @@ class RoutePath{
 	
 	public function load($hotelConection){
 		
-		$controllerObject = $this->urlDecode->get_DecodeController();
+		//Create a object loadController
+		$loadController = $this->urlDecode->get_DecodeController();
+		$loadController = new $controller($hotelConection);
 		
-		//Load View on Controller Object
-		call_user_func_array([new $controllerObject($hotelConection),$this->urlDecode->get_DecodeAction()],$this->urlDecode->get_DecodeParams());
+		//Call the View (If the intercept Allows)
+		$controller->interceptRequest($this->urlDecode);
+
 		
 	}
 	

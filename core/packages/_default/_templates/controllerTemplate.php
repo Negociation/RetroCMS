@@ -30,5 +30,11 @@ class ControllerTemplate{
 		define('__VIEW__', $name);  	
 	}
 	
+	//Intercept Request Rules before load
+	public function interceptRequest($request){
+		//Load View on Controller Object
+		call_user_func_array([new $this($this->hotelConection),$request->get_DecodeAction()],$request->get_DecodeParams());
+	}
+	
 }
 ?>
