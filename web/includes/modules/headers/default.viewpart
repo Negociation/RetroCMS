@@ -109,7 +109,7 @@
 								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_05_fun.gif" alt=""/> <span class="lang-navbar-groups">Grupos</span></a>
 								<span class="right"></span>
 							</li>
-							<li class="last">
+							<li id="disabled" class="last">
 								<span class="left"></span>
 								<a href="<?php echo $this->hotel->get_HotelURL(); ?>/help"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_08_help.gif" alt=""/> <span class="lang-navbar-help">Ajuda</span></a>
 								<span class="right"></span>

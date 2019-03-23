@@ -551,6 +551,11 @@ img.tabmenu-image.coins {
 	background-position: 100% -39px;
 }
 
+#mainmenu li#disabled.last .right {
+	width: 12px;
+	height: 39px;
+	background-position: 0 -39px;
+}
 
 #submenu {
 	background: transparent url(../images/navi/navi_bar_slice_btm.gif) no-repeat;
