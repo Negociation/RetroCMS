@@ -26,7 +26,7 @@ class Index extends ControllerTemplate{
 		$this->hotelModel = new hotelModel();
 		
 		//Get Hotel Object
-		$this->hotel = $this->hotelModel->get_HotelObject();	
+		$this->hotel = $this->hotelModel->get_HotelObject();
 	}
 	
 	/* Default View Call */

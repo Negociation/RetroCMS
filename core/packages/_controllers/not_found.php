@@ -21,13 +21,22 @@ class Not_Found extends ControllerTemplate{
 		
 		//Setting PDO Conection
 		$this->hotelConection = $hotelConection;
+
+		//Generic Models
+		$this->hotelModel = new hotelModel();
 		
+		//Get Hotel Object
+		$this->hotel = $this->hotelModel->get_HotelObject();		
 	}
 	
 	/* Default View Call */
 	protected function default(){
+		
+		//Set Page Title;
+		$this->pageTitle = "Not Found";
+		
 		echo 'Not_Found';
-
+		exit;
 	}
 	
 }
