@@ -11,11 +11,11 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-//Include Header Content ()
-include('./web/includes/site_content/_partdata/_headers/default.viewpart'); 
+//Include Header Content
+include('./web/includes/site_content/_partdata/_headers/default.viewpart');
+
 ?>
 
-		
 				<table border="0" cellpadding="0" cellspacing="0" width="100%" class="content-home">
 				   <tbody>
 					  <tr>
@@ -50,7 +50,7 @@ include('./web/includes/site_content/_partdata/_headers/default.viewpart');
 									 <tbody>
 										<tr>
 										   <td>
-												<a href="#openHabboExperience"><img src="<?php echo $this->hotel->get_HotelWeb() ?>/c_images/shark_tale/EN_tutorial_pic_smalll.gif" border="0" onclick="setExperienceDialog()" id="experience"></a><br>
+												<!-- <a href="#openHabboExperience"><img src="./c_images/shark_tale/EN_tutorial_pic_smalll.gif" border="0" onclick="setExperienceDialog()" id="experience"></a><br> -->
 										   </td>
 										</tr>
 									 </tbody>
@@ -58,7 +58,6 @@ include('./web/includes/site_content/_partdata/_headers/default.viewpart');
 							   </div>
 							   <!--Advertisement Right if as enabled-->
 							   <?php include('./web/includes/site_content/_partdata/advertisement_right.viewpart'); ?>
-				  
 							</div>
 						 </td>
 					  </tr>

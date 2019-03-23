@@ -17,11 +17,16 @@
 class Hotel{
 
 	protected $hotelStatus;
+	protected $hotelUrl;
+	protected $hotelWeb;
 	
 	public function __construct(){
 		
 		//Default Information if database issues or hotel Install 
 		$this->hotelStatus = true;
+		$this->hotelWeb = $this->hotelUrl = 'http://'.$_SERVER['SERVER_NAME'];
+		
+		
 	}
 	
 	
@@ -30,6 +35,13 @@ class Hotel{
 		return $this->hotelStatus;
 	}
 	
+	public function get_HotelUrl(){
+		return $this->hotelUrl;
+	}
+	
+	public function get_HotelWeb(){
+		return $this->hotelWeb;
+	}
 	
 }
 ?>

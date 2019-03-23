@@ -16,13 +16,14 @@
 
 class HotelModel extends ModelTemplate{
 
-
 	public function get_HotelObject(){
+		
 		//Empty Hotel Object
 		$hotelObject = new Hotel();
 		
 		//Empty Advertisement Array
 		$advertisementArray = [];
+		
 		
 		return $hotelObject;
 	}

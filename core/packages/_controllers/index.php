@@ -26,19 +26,16 @@ class Index extends ControllerTemplate{
 		$this->hotelModel = new hotelModel();
 		
 		//Get Hotel Object
-		$this->hotel = $this->hotelModel->get_HotelObject();
-		
+		$this->hotel = $this->hotelModel->get_HotelObject();	
 	}
 	
 	/* Default View Call */
-	protected function default(){
-		
+	protected function default(){		
 		//Set Page Title;
 		$this->pageTitle = "Habbo";
-		
-		echo 'Index Loaded';
+		include 'web/index.view';	
+		exit;
 	}
-	
 }
 
 ?>
