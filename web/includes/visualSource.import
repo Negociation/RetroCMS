@@ -11,6 +11,16 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
+
+//Default CSS Content
+echo "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/style.css' type='text/css' rel='stylesheet'/>";
+echo "\n\t\t";
+echo get_class($this) != 'Account' || get_class($this) != 'Register' || get_class($this) == 'Install' ? "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/ads.css' type='text/css' rel='stylesheet'/>" : "";
+echo "\n\t\t";
+echo get_class($this) != 'Account' || get_class($this) != 'Register' || get_class($this) == 'Install' ? "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/boxes.css' type='text/css' rel='stylesheet'/>" : "";
+echo "\n\t\t";
+echo get_class($this) == 'Account' || get_class($this) == 'Register' || get_class($this) == 'Install' ? "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/process.css' type='text/css' rel='stylesheet'/>" : "";
+
 ?>
 
 
