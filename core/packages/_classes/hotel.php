@@ -19,13 +19,16 @@ class Hotel{
 	protected $hotelStatus;
 	protected $hotelUrl;
 	protected $hotelWeb;
+	protected $hotelName;
+	protected $hotelNick;
 	
 	public function __construct(){
 		
-		//Default Information if database issues or hotel Install 
+		//Default Information only for database issues or hotel Install 
 		$this->hotelStatus = true;
 		$this->hotelWeb = $this->hotelUrl = 'http://'.$_SERVER['SERVER_NAME'];
-		
+		$this->hotelName = 'RetroCMS';
+		$this->hotelNick = 'Retro';
 		
 	}
 	
@@ -42,6 +45,15 @@ class Hotel{
 	public function get_HotelWeb(){
 		return $this->hotelWeb;
 	}
+
+	public function get_HotelName(){
+		return $this->hotelName;
+	}
 	
+	public function get_HotelNick(){
+		return $this->hotelNick;
+	}
+	
+		
 }
 ?>

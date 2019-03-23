@@ -1,0 +1,150 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.0 ( Aquamarine ) 					    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <title><?php echo $this->hotel->get_HotelName(); ?> ~ <?php echo $this->get_ViewTitle(); ?></title>
+		<!-- IMPORT LAYOUT CONTENT(CSS/JS) -->
+		<?php include('./web/includes/site_content/visualSource.import'); ?>
+	</head>
+	<body id="home">
+        <div id="overlay"></div>
+        <h1 id="main-header"><?php echo $this->hotel->get_HotelNick();?></h1>
+        <div id="wrapper">
+			<!-- ADVERTISEMENT INCLUDE -->
+			<?php include('./web/includes/site_content/partdata/advertisement_top.viewpart'); ?>
+			<div id="top_wrap">
+				<div id="top">
+					<div id="topdim"></div>
+					<div id="top-elements">
+						<table id="topbar">
+								<tr>
+									<td id="topbar-count"> 0 <span class="lang-topbar-count">Habbos no Hotel</span></td>
+									<td id="topbar-menu" align="center">
+										<ul>
+											<li id="myhabbo" class="selected" onmouseover="switchTab('myhabbo')">
+												<div><a href="<?php echo $this->hotel->get_HotelURL();?>/tab/myhabbo" class="topbar-menu-link" onclick="return false;"><span class="lang-topbar-myhabbo">Meu Habbo</span></a></div>
+											</li>
+											<li id="mycredits" onmouseover="if (switchTab('mycredits') &amp;&amp; document.habboLoggedIn) updateCredits()" onmouseout="fadeTab('myhabbo')">
+												<div><a href="<?php echo $this->hotel->get_HotelURL();?>/tab/credits" class="topbar-menu-link" onclick="return false;"><span class="lang-topbar-mycredits">Minhas Moedas</span></a></div>
+											</li>
+											<li id="habboclub" onmouseover="if (switchTab('habboclub') &amp;&amp; document.habboLoggedIn) updateHabboClub()" onmouseout="fadeTab('myhabbo')">
+												<div><a href="<?php echo $this->hotel->get_HotelURL();?>/tab/habboclub" class="topbar-menu-link" onclick="return false;"><span class="lang-topbar-habboclub">Habbo Club</span></a></div>
+											</li>
+										</ul>
+									</td>
+									<!-- TOPBAR INCLUDE ( User Status ) -->
+									<?php require_once('./web/includes/site_content/_partdata/topbar.viewpart'); ?>
+								</tr>
+							</table>
+						<div id="viewlogo"><a href="<?php echo $this->hotel->get_HotelURL();?>"></a></div>
+						<?php //require_once('./Web/Includes/Content/Web/Socket/Enter-Hotel.php'); ?>
+						<div id="tabmenu" onmouseover="lockCurrentTab();" onmouseout="fadeTab('myhabbo')">
+							<div id="tabmenu-content">
+								<div id="myhabbo-content" class="tabmenu-inner selected">
+								
+									<!-- TOPMENU INCLUDE (MYHABBO) -->
+									<?php require_once('./web/includes/site_content/_partdata/topmenu_myhabbo.viewpart'); ?>
+								</div>
+										
+								<div id="mycredits-content" class="tabmenu-inner">
+								
+									<!-- TOPMENU INCLUDE (MYCREDITS) -->
+									<?php require_once('./web/includes/site_content/_partdata/topmenu_mycredits.viewpart'); ?>
+								</div>
+								<div id="habboclub-content" class="tabmenu-inner">
+								
+									<!-- TOPMENU INCLUDE (HABBOCLUB) -->
+									<?php require_once('./web/includes/site_content/_partdata/topmenu_habboclub.viewpart'); ?>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div id="tabmenu-bottom"></div>
+						</div>
+					<script type="text/javascript">$("tabmenu").style.left = (Position.cumulativeOffset($("myhabbo"))[0] - Position.cumulativeOffset($("top"))[0]) + "px";</script>
+					</div>
+					<div id="mainmenu">
+						<ul>
+							<li id="leftspacer">&nbsp;</li>
+							<li <?php if(get_class($this) == 'Index') echo 'id="active"'; ?> >
+								<span class="left"></span>
+								<a href="<?php echo $this->hotel->get_HotelURL(); ?>/"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_01_home.gif" alt=""/> <span class="lang-navbar-home">Home</span></a>
+								<span class="right"></span>
+							</li>
+							<li id="disabled">
+								<span class="left"></span>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_03_community.gif" alt=""/> <span class="lang-navbar-community">Comunidade</span></a>
+								<span class="right"></span>
+							</li>
+							<li id="disabled">
+								<span class="left"></span>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_04_games.gif" alt=""/> <span class="lang-navbar-games">Jogos</span></a>
+								<span class="right"></span>
+								</li>
+							<li id="disabled">
+								<span class="left"></span>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_10_coins.gif" style="margin-left: 4px" alt=""/> <span class="lang-navbar-credits">Compre Moedas</span></a>
+								<span class="right"></span>
+							</li>
+							<li <?php if(get_class($this) == 'Club') echo 'id="active"'; ?> >
+								<span class="left"></span>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/club"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_09_hc.gif" style="margin-left: 4px"  alt="";/> <span class="lang-navbar-habboclub">Habbo Club</span></a>
+								<span class="right"></span>
+							</li>
+							<li id="disabled">
+								<span class="left"></span>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_05_fun.gif" alt=""/> <span class="lang-navbar-groups">Grupos</span></a>
+								<span class="right"></span>
+							</li>
+							<li class="last">
+								<span class="left"></span>
+								<a href="<?php echo $this->hotel->get_HotelURL(); ?>/help"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_08_help.gif" alt=""/> <span class="lang-navbar-help">Ajuda</span></a>
+								<span class="right"></span>
+							</li>
+						</ul>		
+					</div>
+					<div id="submenu">
+						<div class="subnav">
+						
+							<?php
+								if(get_class($this) == 'Club'){
+									switch(__VIEW__){
+										case 'default':
+											echo '
+											Habbo Club | <a href="'.$this->hotel->get_HotelWeb().'/club/join"><span class="lang-hcjoin-headline">Associe-se ou renove seu HC</span></a> | <a href="'.$this->hotel->get_HotelWeb().'/club/shop"> <span class="lang-hcshop-headline">Loja HC</span> </a> 
+											';
+											break;
+										case 'join':
+											echo '
+											<a href="'.$this->hotel->get_HotelWeb().'/club/">Habbo Club</a>| <span class="lang-hcjoin-headline">Associe-se ou renove seu HC</span> | <a href="'.$this->hotel->get_HotelWeb().'/club/shop"> <span class="lang-hcshop-headline">Loja HC</span> </a> 
+											';
+											break;
+										case 'shop':
+											echo '
+											<a href="'.$this->hotel->get_HotelWeb().'/club/"> Habbo Club </a>| <a href="'.$this->hotel->get_HotelWeb().'/club/join"><span class="lang-hcjoin-headline">Associe-se ou renove seu HC</span></a>  | <span class="lang-hcshop-headline">Loja HC</span> 
+											';
+											break;
+										default:
+											break;
+									}
+								}
+							?>
+
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div id="main-content">

@@ -12,7 +12,7 @@
 //////////////////////////////////////////////////////////////
 
 //Include Header Content
-include('./web/includes/site_content/_partdata/_headers/default.viewpart');
+include('./web/includes/site_content/partdata/headers/default.viewpart');
 
 ?>
 
@@ -29,7 +29,7 @@ include('./web/includes/site_content/_partdata/_headers/default.viewpart');
 								  <tr>
 									 <td colspan="3" style="padding-bottom: 3px;">
 									 <!-- NEWS AREA  INCLUDE -->
-									 <?php include('./web/includes/site_content/_partdata/news_area.viewpart'); ?>
+									 <?php include('./web/includes/site_content/partdata/news_area.viewpart'); ?>
 								  <tr>
 									 <td valign="top" style="width: 450px; height: 400px;" class="habboPage-col">
 										<br>
@@ -57,7 +57,7 @@ include('./web/includes/site_content/_partdata/_headers/default.viewpart');
 								  </table>
 							   </div>
 							   <!--Advertisement Right if as enabled-->
-							   <?php include('./web/includes/site_content/_partdata/advertisement_right.viewpart'); ?>
+							   <?php include('./web/includes/site_content/partdata/advertisement_right.viewpart'); ?>
 							</div>
 						 </td>
 					  </tr>
