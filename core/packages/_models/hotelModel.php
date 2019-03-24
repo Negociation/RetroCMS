@@ -38,7 +38,7 @@ class HotelModel extends ModelTemplate{
 		
 		if (count($queryResult) == 12 ){
 			//Set Hotel data in Object
-			$hotelObject->constructObject($queryResult[0]['setting_value'],$queryResult[1]['setting_value'],$queryResult[2]['setting_value'],$queryResult[3]['setting_value'],$queryResult[4]['setting_value'],$queryResult[5]['setting_value'],array($queryResult[6]['setting_value'],$queryResult[7]['setting_value'],$queryResult[8]['setting_value'],$queryResult[9]['setting_value'],$queryResult[10]['setting_value'],$queryResult[11]['setting_value']));		
+			$hotelObject->constructObject($queryResult[0]['setting_value'],$queryResult[1]['setting_value'],$queryResult[2]['setting_value'],$queryResult[3]['setting_value'],$queryResult[4]['setting_value'],$queryResult[5]['setting_value'],array($queryResult[6]['setting_value'],$queryResult[7]['setting_value'],$queryResult[8]['setting_value'],$queryResult[9]['setting_value'],$queryResult[10]['setting_value'],$queryResult[11]['setting_value']),array());		
 		
 		
 			//Get Hotel Adverstments

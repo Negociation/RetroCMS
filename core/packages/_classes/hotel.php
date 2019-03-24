@@ -30,11 +30,17 @@ class Hotel{
 		$this->hotelName = 'RetroCMS';
 		$this->hotelNick = 'Retro';
 		
+		
 	}
 	
 	/** DAO CONSTRUCT **/
-	public function constructObject(){
-	
+	public function constructObject($hotelName,$hotelNick,$hotelVersion,$hotelWeb,$hotelUrl,$hotelLanguage,$hotelClient,$hotelCustom){
+		$this->hotelName = $hotelName;
+		$this->hotelNick = $hotelNick;
+		//$this->hotelVersion = $hotelVersion
+		$this->hotelWeb = $hotelWeb;
+		//$this->hotelStatus = $hotelStatus;
+		
 	}
 	
 	/** GETS **/

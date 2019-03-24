@@ -34,8 +34,7 @@ class Not_Found extends ControllerTemplate{
 		
 		//Set Page Title;
 		$this->pageTitle = "Not Found";
-		
-		echo 'Not_Found';
+		include 'web/404.view';		
 		exit;
 	}
 	
