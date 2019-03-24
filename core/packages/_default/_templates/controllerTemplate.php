@@ -35,6 +35,10 @@ class ControllerTemplate{
 	public function interceptRequest($request){
 		//Check if hotel as Working 
 		if($this->hotel->get_HotelStatus()){
+			
+			//Set method name Constraint
+			$this->set_MethodName($request->get_DecodeAction());
+			
 			if($this->hotelModel->get_HotelInstall()){
 				if(get_class($this) != 'Install'){
 					
