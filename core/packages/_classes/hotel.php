@@ -61,5 +61,9 @@ class Hotel{
 	/** SETS **/
 	public function set_HotelAdvertisements(){
 	}
+	
+	public function set_HotelStatus($status){
+		$this->hotelStatus = $status;			
+	}
 }
 ?>

@@ -18,7 +18,6 @@ class Index extends ControllerTemplate{
 	
 	/* Construct Method */
 	public function __construct($hotelConection){
-		
 		//Setting PDO Conection
 		$this->hotelConection = $hotelConection;
 		
@@ -30,7 +29,7 @@ class Index extends ControllerTemplate{
 	}
 	
 	/* Default View Call */
-	protected function default(){		
+	protected function default(){
 		//Set Page Title;
 		$this->pageTitle = "Habbo";
 		include 'web/index.view';	

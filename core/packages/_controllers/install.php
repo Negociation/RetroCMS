@@ -42,7 +42,7 @@ class Install extends ControllerTemplate{
 	
 	/* Steps of Install */
 	protected function steps($id){
-
+		echo 'Lets start the RetroCMS Install';
 	}
 	
 	protected function done(){

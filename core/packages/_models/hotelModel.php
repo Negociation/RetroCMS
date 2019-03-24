@@ -35,15 +35,11 @@ class HotelModel extends ModelTemplate{
 		$queryResult = $this->getAll('site_settings');
 		
 		//If the query returned all site_settings
-		if (count($queryResult) > 0 ){
-			//If everything working fine then
-			try {
+		
+		if (count($queryResult) == 12 ){
 			//Set Hotel data in Object
 			$hotelObject->constructObject($queryResult[0]['setting_value'],$queryResult[1]['setting_value'],$queryResult[2]['setting_value'],$queryResult[3]['setting_value'],$queryResult[4]['setting_value'],$queryResult[5]['setting_value'],array($queryResult[6]['setting_value'],$queryResult[7]['setting_value'],$queryResult[8]['setting_value'],$queryResult[9]['setting_value'],$queryResult[10]['setting_value'],$queryResult[11]['setting_value']));		
-			}catch(Exception $e){
-				//If something wrong on construct method (like missing information) so set the hotel to Offline!
-				$hotelObject->set_HotelStatus(0);
-			}
+		
 		
 			//Get Hotel Adverstments
 			$queryResult = $this->getAll('site_advertisements');
@@ -57,6 +53,9 @@ class HotelModel extends ModelTemplate{
 			
 			//Set Hotel Advertisements in Object
 			$hotelObject->set_hotelAdvertisements($advertisementArray);
+		}else{
+			//If something wrong on construct method (like missing information) so set the hotel to Offline!
+			$hotelObject->set_HotelStatus(false);	
 		}
 		return $hotelObject;
 	}
