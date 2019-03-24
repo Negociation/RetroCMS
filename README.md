@@ -6,7 +6,7 @@
   - MVC with Security (70%)
   - Diagnosis Class ( 100% )
   - Diagnosis Panel ( 100% )
-  - Views ( 2% )
+  - Views ( 7% ) 
   - Optimize some content
 
   
