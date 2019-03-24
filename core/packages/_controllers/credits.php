@@ -11,10 +11,10 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-// Class: Club
-// Desc: Habbo Club Controller 
+// Class: Credits
+// Desc: Habbo Credits Controller 
 
-class Club extends ControllerTemplate{
+class Credits extends ControllerTemplate{
 	
 	/* Construct Method */
 	public function __construct($hotelConection){
@@ -26,23 +26,19 @@ class Club extends ControllerTemplate{
 		
 		//Get Hotel Object
 		$this->hotel = $this->hotelModel->get_HotelObject();
-		
-		//New Habbo Object
-		$this->habbo = new Habbo();
-		
 	}
 	
-	/* Default View Call - Club */
+	/* Default View Call - Credits */
 	protected function default(){
 		//Set Page Title;
 		$this->pageTitle = "Habbo Club";
-		include 'web/club/index.view';	
+		include 'web/credits/index.view';	
 		exit;
 	}
 	
 
-	/* View Call - Club/Join */
-	protected function join(){
+	/* View Call - Credits/Credit_Faq */
+	protected function credit_faq(){
 		//Set Page Title;
 		$this->pageTitle = "Habbo";
 		include 'web/club/join.view';	

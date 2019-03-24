@@ -58,23 +58,28 @@
 								
 									<!-- TOPMENU INCLUDE (MYHABBO) -->
 									<?php include('./web/includes/modules/topmenu_myhabbo.viewpart'); ?>
+									
 								</div>
 										
 								<div id="mycredits-content" class="tabmenu-inner">
 								
 									<!-- TOPMENU INCLUDE (MYCREDITS) -->
 									<?php include('./web/includes/modules/topmenu_mycredits.viewpart'); ?>
+									
 								</div>
 								<div id="habboclub-content" class="tabmenu-inner">
 								
 									<!-- TOPMENU INCLUDE (HABBOCLUB) -->
 									<?php include('./web/includes/modules/topmenu_habboclub.viewpart'); ?>
+									
 								</div>
 								<div class="clear"></div>
 							</div>
 							<div id="tabmenu-bottom"></div>
 						</div>
-					<script type="text/javascript">$("tabmenu").style.left = (Position.cumulativeOffset($("myhabbo"))[0] - Position.cumulativeOffset($("top"))[0]) + "px";</script>
+						<script type="text/javascript">
+							$("tabmenu").style.left = (Position.cumulativeOffset($("myhabbo"))[0] - Position.cumulativeOffset($("top"))[0]) + "px";
+						</script>
 					</div>
 					<div id="mainmenu">
 						<ul>
@@ -94,9 +99,9 @@
 								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_04_games.gif" alt=""/> <span class="lang-navbar-games">Jogos</span></a>
 								<span class="right"></span>
 								</li>
-							<li id="disabled">
+							<li <?php if(get_class($this) == 'Credits') echo 'id="active"'; ?> >
 								<span class="left"></span>
-								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_10_coins.gif" style="margin-left: 4px" alt=""/> <span class="lang-navbar-credits">Compre Moedas</span></a>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/credits"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_10_coins.gif" style="margin-left: 4px" alt=""/> <span class="lang-navbar-credits">Compre Moedas</span></a>
 								<span class="right"></span>
 							</li>
 							<li <?php if(get_class($this) == 'Club') echo 'id="active"'; ?> >
@@ -120,6 +125,7 @@
 						<div class="subnav">
 						
 							<?php
+								//Habbo Club Sub-Header
 								if(get_class($this) == 'Club'){
 									switch(__VIEW__){
 										case 'default':
@@ -138,6 +144,17 @@
 											';
 											break;
 										default:
+											break;
+									}
+								}
+								
+								//Credits Sub-Header
+								if(get_class($this) == 'Credits'){
+									switch(__VIEW__){
+										case 'default':
+											echo '
+											Porta Moedas | 
+											';
 											break;
 									}
 								}
