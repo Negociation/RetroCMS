@@ -37,13 +37,23 @@ class Club extends ControllerTemplate{
 	}
 	
 
-	/* Default View Call - Club/Join */
+	/* View Call - Club/Join */
 	protected function join(){
 		//Set Page Title;
 		$this->pageTitle = "Habbo";
 		include 'web/club/join.view';	
 		exit;
 	}	
+	
+	
+	/* View Call - Club/Shop */
+	protected function shop(){
+		//Set Page Title;
+		$this->pageTitle = "Habbo";
+		include 'web/club/shop.view';	
+		exit;
+	}	
+	
 }
 
 ?>

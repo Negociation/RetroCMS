@@ -22,15 +22,48 @@ echo "\n\t\t";
 echo get_class($this) == 'Account' || get_class($this) == 'Register' || get_class($this) == 'Install' ? "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/process.css' type='text/css' rel='stylesheet'/>" : "";
 echo "\n\t\t";
 
-echo'
-<script language="JavaScript" type="text/javascript">
-	var habboReqPath = "";
-	var habboStaticFilePath = "https://web.archive.org/web/20070914190355/http://images.habbohotel.fr/web/web-5.0.22";
-	var habboImagerUrl = "/habbo-imaging/";
-	document.habboLoggedIn = true;
-	window.name = "habboMain";
-</script>
-';
+//Custom CSS Content
+echo "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/custom/style_custom_default.css' type='text/css' rel='stylesheet'/>";
+echo "\n\t\t";
+
+if(!is_array($this->hotel->get_HotelCustom())){
+		echo "
+		<style>
+
+			body {
+				background-image: url(".$this->hotel->get_HotelCustom()[0].");
+			}
+
+
+			#top {
+				background-image: url(".$this->hotel->get_HotelCustom()[1].");
+			}
+
+
+			#viewlogo {
+				position: absolute;
+				top: 63px;
+				left: 35px;
+				background-image: url(".$this->hotel->get_HotelCustom()[2].");
+				background-repeat: no-repeat;
+				height: 66px;
+				width: 160px;
+			}
+			
+		</style>
+		";
+}
+
+		//Default Javascript Content
+		echo"
+		<script language='JavaScript' type='text/javascript'>
+			var habboReqPath = '';
+			var habboStaticFilePath = 'https://web.archive.org/web/20070914190355/http://images.habbohotel.fr/web/web-5.0.22';
+			var habboImagerUrl = '/habbo-imaging/';
+			document.habboLoggedIn = true;
+			window.name = 'habboMain';
+		</script>
+		";
 
 echo "\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/habbo.js'></script>";

@@ -21,6 +21,7 @@ class Hotel{
 	protected $hotelWeb;
 	protected $hotelName;
 	protected $hotelNick;
+	protected $hotelCustom;
 	
 	public function __construct(){
 		
@@ -29,7 +30,7 @@ class Hotel{
 		$this->hotelWeb = $this->hotelUrl = 'http://'.$_SERVER['SERVER_NAME'];
 		$this->hotelName = 'RetroCMS';
 		$this->hotelNick = 'Retro';
-		
+		$this->hotelCustom = array('http://localhost/habboweb/17/16/web-gallery/images/bg_patterns/habbo.gif','http://localhost/habboweb/17/16/web-gallery/images/hotelviews/web_view_bg_beta.gif','http://localhost/habboweb/17/16/web-gallery/images/logos/habbo_logo_nourl.gif');
 		
 	}
 	
@@ -62,6 +63,10 @@ class Hotel{
 	
 	public function get_HotelNick(){
 		return $this->hotelNick;
+	}
+	
+	public function get_HotelCustom(){
+		return $this->hotelCustom;
 	}
 	
 	/** SETS **/

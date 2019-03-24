@@ -1,0 +1,30 @@
+/* --- Hotel view image on the top bar (image size - width: 928px, height: 154px) --- */
+#top {
+	background-image: url(../../images/hotelviews/web_view_bg_beta.gif);
+}
+
+
+
+#viewlogo {
+	position: absolute;
+	top: 63px;
+	left: 35px;
+	background-image: url(../../images/logos/habbo_logo_nourl.gif);
+	background-repeat: no-repeat;
+	height: 66px;
+	width: 160px;
+}
+ 
+#viewlogo a {
+	display: block;
+	height: 66px;
+	width: 160px;
+}
+
+ 
+/* --- Enter hotel button on the right of the top bar (image size - width: 105px, height: 106px) --- */
+#top-elements #enter-hotel a#enter-hotel-link { 
+	background-image: url(../../images/enterbuttons/enterHH.gif);
+} 
+
+
