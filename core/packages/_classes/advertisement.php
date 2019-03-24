@@ -11,27 +11,20 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-// Class: ModelTemplate
-// Desc: Default Template for Models (DAO)
+// Class: Advertisement
+// Desc: All Advertisement Data from Hotel
 
-class ModelTemplate{
+class Advertisement{
 	
-	protected $hotelConection;
-	
-	public function getAll($table){	
-		try {
-			$sql = 'SELECT * FROM .'.$table.' order by id';
-			$stmt = $this->hotelConection->prepare($sql);
-			$stmt->execute();
-			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-		}catch(Exception $e){
-			//If not return false
-			return false;
-			exit;
-		}
-		return $result;
+	public function __construct(){
+		
+
 	}
+
+	/** DAO CONSTRUCT **/
+	public function constructObject(){
 	
+	}
 	
 }
 ?>

@@ -50,7 +50,8 @@ require_once('./web/includes/modules/headers/default.viewpart');
 									 <tbody>
 										<tr>
 										   <td>
-												<!-- <a href="#openHabboExperience"><img src="./c_images/shark_tale/EN_tutorial_pic_smalll.gif" border="0" onclick="setExperienceDialog()" id="experience"></a><br> -->
+										   <!--Advertisement Box if as enabled-->
+										   <?php include('./web/includes/modules/advertisement_box.viewpart'); ?>										   
 										   </td>
 										</tr>
 									 </tbody>

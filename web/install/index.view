@@ -16,7 +16,7 @@
 	<head>
 		<title> RetroCMS ~ Not ready yet</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<link rel="stylesheet" type="text/css" href="http://web.archive.org/web/20070312162526cs_/http://promo.habbohotel.com/prelaunch/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="./web/install/css/style.css"/>
 	</head>
 	<body>
 		<div id="container">

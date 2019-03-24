@@ -23,7 +23,7 @@ class Index extends ControllerTemplate{
 		$this->hotelConection = $hotelConection;
 		
 		//Generic Models
-		$this->hotelModel = new hotelModel();
+		$this->hotelModel = new hotelModel($hotelConection);
 		
 		//Get Hotel Object
 		$this->hotel = $this->hotelModel->get_HotelObject();

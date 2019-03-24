@@ -32,6 +32,10 @@ class Hotel{
 		
 	}
 	
+	/** DAO CONSTRUCT **/
+	public function constructObject(){
+	
+	}
 	
 	/** GETS **/
 	public function get_HotelStatus(){
@@ -54,6 +58,8 @@ class Hotel{
 		return $this->hotelNick;
 	}
 	
-		
+	/** SETS **/
+	public function set_HotelAdvertisements(){
+	}
 }
 ?>
