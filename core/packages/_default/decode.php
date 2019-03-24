@@ -20,7 +20,7 @@ class Decode{
 	private $urlAction;
 	private $urlParams = [];
 	
-	public function __construct($urlRequest){
+	public function __construct($urlRequest,$hotelConection){
 		
 		//Default Constructor Decode
 		$this->urlController = 'index';
@@ -37,7 +37,7 @@ class Decode{
 		
 		//Decode Data if is Array Object
 		if(is_array($parsedRequest)){
-			$this->decodeRequest($parsedRequest);
+			$this->decodeRequest($parsedRequest,$hotelConection);
 		}
 		
 	}
@@ -58,11 +58,11 @@ class Decode{
 	
 	
 	// Decode parsedRequest
-	protected function decodeRequest($request){
+	protected function decodeRequest($request,$hotelConection){
 		if(file_exists("./core/packages/_controllers/".$request[0].".php")){
 			$this->urlController = $request[0];
 			if(isset($request[1])){
-				if(Method_Exists(new $request[0],$request[1]) && $request[1] != 'default' ){
+				if(Method_Exists(new $request[0]($hotelConection),$request[1]) && $request[1] != 'default' ){
 					$this->urlAction = $request[1];
 					$reflectionAction = new \ReflectionMethod($request[0],$request[1]); 
 					if($reflectionAction->getNumberOfParameters() == (count($request)-2)){

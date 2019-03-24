@@ -11,10 +11,10 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-// Class: Not Found
-// Desc: Not Found Controller (Only if the passed controller isn't valid) 
+// Class: Install
+// Desc: Install method (Only for first access)
 
-class Not_Found extends ControllerTemplate{
+class Install extends ControllerTemplate{
 	
 	/* Construct Method */
 	public function __construct($hotelConection){
@@ -29,15 +29,27 @@ class Not_Found extends ControllerTemplate{
 		$this->hotel = $this->hotelModel->get_HotelObject();		
 	}
 	
-	/* Default View Call */
+	/* Default View Calls */
 	protected function default(){
+		$this->steps(0);
 		
-		//Set Page Title;
-		$this->pageTitle = "Not Found";
-		
-		echo 'Not_Found';
-		exit;
 	}
+	
+	protected function start(){
+		$this->steps(0);
+		
+	}
+	
+	/* Steps of Install */
+	protected function steps($id){
+
+	}
+	
+	protected function done(){
+		$this->steps(6);
+		exit;			
+	}
+	
 	
 }
 

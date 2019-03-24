@@ -61,5 +61,16 @@ class HotelModel extends ModelTemplate{
 		return $hotelObject;
 	}
 	
+
+	//Check if table Site_Settings exist and have content inside 
+	public function get_HotelInstall(){
+		$resultObject = $this->getAll('site_settings');
+		if ($resultObject == false){
+			return false;
+		}else{
+			return $resultObject !== false;
+		}
+	}
+	
 }
 ?>

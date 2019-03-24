@@ -19,21 +19,25 @@ class RoutePath{
 	//Class Variables
 	private $urlRequest;
 	private $urlDecode;
+	private $hotelConection;
 	
-	public function __construct(){
+	public function __construct($hotelConection){
 		//Create Url Request 
 		$this->urlRequest = new Request();
 		
+		//PDO Conection 
+		$this->hotelConection = $hotelConection;
+		
 		//Decode Request Url
-		$this->urlDecode = new Decode($this->urlRequest->getRequest());
+		$this->urlDecode = new Decode($this->urlRequest->getRequest(),$hotelConection);
 	}
 	
 	
-	public function load($hotelConection){
+	public function load(){
 		
 		//Create a object loadController
 		$loadController = $this->urlDecode->get_DecodeController();
-		$loadController = new $loadController($hotelConection);
+		$loadController = new $loadController($this->hotelConection);
 		
 		//Call the View (If the intercept Allows)
 		$loadController->interceptRequest($this->urlDecode);

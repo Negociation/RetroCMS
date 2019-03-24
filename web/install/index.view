@@ -16,33 +16,33 @@
 	<head>
 		<title> RetroCMS ~ Not ready yet</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<link rel="stylesheet" type="text/css" href="./web/install/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="<?php 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/css/style.css"/>
 	</head>
 	<body>
 		<div id="container">
 			<div id="header">
-				<h1><a href="#"><img src="./web/install/images/logos/retrocms_logo_nourl.gif" alt="Retro" width="113" height="41" border="0"/></a></h1>
+				<h1><a href="#"><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/logos/retrocms_logo_nourl.gif" alt="Retro" width="113" height="41" border="0"/></a></h1>
 			</div>
 			<div id="content">
 					<div id="writecontent">
 						<div align="center">
 						<div id="error" align="left" vspace="2000" style="width: 620px;">
-						<h3><p><img src="./web/install/images/tools.gif"> <font color="#c00">Check your configuration before proceed with RetroCMS Install:</font></p></h3>
+						<h3><p><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/tools.gif"> <font color="#c00">Check your configuration before proceed with RetroCMS Install:</font></p></h3>
 						<br>
 						<table>
 						<tr>
-						<td><img src="./web/install/images/<?php echo $siteDiagnosis->get_testStatus()[0] ? 'yes' : 'no' ?>.gif" alt="Italian Trulli"></td>
+						<td><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/<?php echo $siteDiagnosis->get_testStatus()[0] ? 'yes' : 'no' ?>.gif" alt="Italian Trulli"></td>
 						<td><div style="margin-left: 0px;padding-top: 5px;padding-left: 5px;padding-bottom: 5px;"><h6><b>PHP version 7.0 or higher</b></h6></td>
 						</tr>
 						<tr>
-						<td><img src="./web/install/images/<?php echo $siteDiagnosis->get_testStatus()[1] ? 'yes' : 'no' ?>.gif" alt="Italian Trulli"></td>
+						<td><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/<?php echo $siteDiagnosis->get_testStatus()[1] ? 'yes' : 'no' ?>.gif" alt="Italian Trulli"></td>
 						<td><div style="margin-left: 0px;padding-top: 5px;padding-left: 5px;padding-bottom: 5px;"><h6><b>Settings file configuration integrity</b></h6></td>
 						</tr>
 						<tr>
-						<td><img src="./web/install/images/<?php echo $siteDiagnosis->get_testStatus()[2] ? 'yes' : 'no' ?>.gif" alt="Italian Trulli"></td>
+						<td><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/<?php echo $siteDiagnosis->get_testStatus()[2] ? 'yes' : 'no' ?>.gif" alt="Italian Trulli"></td>
 						<td><div style="margin-left: 0px;padding-top: 5px;padding-left: 5px;padding-bottom: 5px;"><h6><b>Libsodium library installed and loaded</b></h6></td>
 						</tr>
-						<td><img src="./web/install/images/<?php echo !is_array($siteDiagnosis->get_testStatus()[3]) ? 'yes' : 'no' ?>.gif"></td>
+						<td><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/<?php echo !is_array($siteDiagnosis->get_testStatus()[3]) ? 'yes' : 'no' ?>.gif"></td>
 						<td><div style="margin-left: 0px;padding-top: 5px;padding-left: 5px;padding-bottom: 5px;"><h6><b>MySQL Conection Status ~ </b> <?php echo is_array($siteDiagnosis->get_testStatus()[3]) ? $siteDiagnosis->get_testStatus()[3][1] : '' ?></h6></td>
 
 						</tr>
