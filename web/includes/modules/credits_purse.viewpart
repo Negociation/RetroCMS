@@ -10,4 +10,42 @@
 // Branch: Public (Unstable)								//
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
+
+if($this->habbo->get_isHabboLoggedIn()){
+	echo'
+												<div class="purse-balance">
+														Você tem <span class="purse-balance-amount">&nbsp;<span class="habbocredits">'.$this->habbo->get_HabboCredits().'</span>&nbsp;</span> Habbo Moedas
+												</div>
+												<p><a href="'.$this->hotel->get_HotelURL().'/credits" class="colorlink"><span>Comprar mais Moedas</span></a></p>
+												<div id="purse-redeem">
+													<div id="purse-form-container" >
+														If you have a Coins or furniture redemption code, enter it below to get your stuff.
+														<form method="post" action="'.$this->hotel->get_HotelUrl().'/credits/redeem" id="purse-redeem-form">
+															<input type="text" name="redeem-code" size="35" id="redeem-code" />
+															<input type="hidden" name="doRedeem" value="yes" id="doredeem"/>
+															<input type="image" src="'.$this->hotel->get_HotelWeb().'/habboweb/17/16/web-gallery/images/button/arrow_button.gif" class="arrow-button" align="top"/>
+														</form>
+													</div>
+												</div>
+	';
+}else{
+	echo'
+												<p><a href="'.$this->hotel->get_HotelURL().'/credits" class="colorlink"><span>Comprar mais Moedas</span></a></p>
+												<div id="purse-redeem">
+													<div>
+														<div class="content-beige">
+															<div class="content-beige-body">
+																Você ainda não entrou no Habbo.
+																<div class="clear"></div>
+															</div>
+														</div>
+														<div class="content-beige-bottom">
+															<div class="content-beige-bottom-body"></div>
+														</div>
+													</div>
+												</div>
+	';
+	
+}
+
 ?>

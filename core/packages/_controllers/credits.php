@@ -26,6 +26,9 @@ class Credits extends ControllerTemplate{
 		
 		//Get Hotel Object
 		$this->hotel = $this->hotelModel->get_HotelObject();
+
+		//New Habbo Object
+		$this->habbo = new Habbo();
 	}
 	
 	/* Default View Call - Credits */
@@ -46,11 +49,11 @@ class Credits extends ControllerTemplate{
 	}	
 	
 	
-	/* View Call - Club/Shop */
-	protected function shop(){
+	/* Rirediect Call - Credits/Redeem */
+	protected function redeem(){
 		//Set Page Title;
 		$this->pageTitle = "Habbo";
-		include 'web/club/shop.view';	
+		include 'web/credits/index.view';	
 		exit;
 	}	
 	

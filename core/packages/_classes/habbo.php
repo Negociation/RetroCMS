@@ -30,5 +30,9 @@ class Habbo{
 		return false;	
 	}
 	
+	public function get_HabboCredits(){
+			return 0;
+	}
+	
 }
 ?>

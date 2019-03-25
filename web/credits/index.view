@@ -87,9 +87,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 											  <div></div>
 										   </div>
 										   <div class="body">
-											  <p>
-												 Você pode usar as Moedas para comprar Mobis, tíquetes para jogos e conteúdo para Habbo Home. <a href="<?php echo $this->hotel->get_HotelURL(); ?>/credits">Saiba mais</a>
-											  </p>
+										      <p>Você pode usar as Moedas para comprar Mobis, tíquetes para jogos e conteúdo para Habbo Home. <a href="<?php echo $this->hotel->get_HotelURL(); ?>/credits">Saiba mais</a></p>
 											  <!-- Include Habbo Purse Content -->
 											  <?php include('./web/includes/modules/credits_purse.viewpart'); ?>
 											  <div class="clear"></div>
