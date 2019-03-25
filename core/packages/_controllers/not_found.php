@@ -26,7 +26,10 @@ class Not_Found extends ControllerTemplate{
 		$this->hotelModel = new hotelModel($hotelConection);
 		
 		//Get Hotel Object
-		$this->hotel = $this->hotelModel->get_HotelObject();		
+		$this->hotel = $this->hotelModel->get_HotelObject();
+		
+		//New Habbo Object
+		$this->habbo = new Habbo();
 	}
 	
 	/* Default View Call */

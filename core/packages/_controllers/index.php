@@ -26,6 +26,9 @@ class Index extends ControllerTemplate{
 		
 		//Get Hotel Object
 		$this->hotel = $this->hotelModel->get_HotelObject();
+		
+		//New Habbo Object
+		$this->habbo = new Habbo();
 	}
 	
 	/* Default View Call */

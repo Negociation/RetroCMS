@@ -47,7 +47,7 @@
 										</ul>
 									</td>
 									<!-- TOPBAR INCLUDE ( User Status ) -->
-									<?php include('./web/includes/modules/topbar.viewpart'); ?>
+									<?php include('./web/includes/modules/topbar_right.viewpart'); ?>
 								</tr>
 							</table>
 						<div id="viewlogo"><a href="<?php echo $this->hotel->get_HotelURL();?>"></a></div>
