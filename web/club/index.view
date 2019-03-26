@@ -30,7 +30,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 								</div>
 								<div class="v3box-content">
 									<div class="v3box-body">
-										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Roupas e penteados<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Emblema HC<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Danças exclusivas<br/><br/><a target="_self" href="/web/20071014005009/http://www.habbo.com.br/club/benefits/habbo">Saiba mais</a><br/>
+										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Roupas e penteados<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Emblema HC<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Danças exclusivas<br/>
 										<div class="clear"></div>
 									</div>
 								</div>
@@ -44,7 +44,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 								</div>
 								<div class="v3box-content">
 									<div class="v3box-body">
-										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Um Mobi HC a cada período<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Quartos diferentes<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Fura fila das salas<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Acesso a salas exclusivas<br/><br/><a target="_self" href="/web/20071014005009/http://www.habbo.com.br/club/benefits/room">Saiba mais</a><br/>
+										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Um Mobi HC a cada período<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Quartos diferentes<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Fura fila das salas<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Acesso a salas exclusivas<br/>
 										<div class="clear"></div>
 									</div>
 								</div>
@@ -58,7 +58,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 								</div>
 								<div class="v3box-content">
 									<div class="v3box-body">
-										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Novos Colantes<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Novos Fundos<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Sem propagandas<br/><br/><a target="_self" href="/web/20071014005009/http://www.habbo.com.br/club/benefits/home">Saiba mais</a><br/>
+										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Novos Colantes<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Novos Fundos<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Sem propagandas<br/>
 										<div class="clear"></div>
 									</div>
 								</div>
@@ -72,7 +72,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 								</div>
 								<div class="v3box-content">
 									<div class="v3box-body">
-										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Console 5 vezes maior<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Comando :chooser <br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Comando :furni<br/><br/><a target="_self" href="/web/20071014005009/http://www.habbo.com.br/club/benefits/extras">Saiba Mais</a><br/>
+										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Console 5 vezes maior<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Comando :chooser <br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Comando :furni<br/>
 										<div class="clear"></div>
 									</div>
 								</div>
