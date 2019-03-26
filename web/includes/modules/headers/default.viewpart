@@ -32,7 +32,8 @@
 					<div id="top-elements">
 						<table id="topbar">
 								<tr>
-									<td id="topbar-count"> 0 <span class="lang-topbar-count">Habbos no Hotel</span></td>
+									<!-- TOPBAR INCLUDE ( User Status ) -->
+									<?php include('./web/includes/modules/topbar_left.viewpart'); ?>
 									<td id="topbar-menu" align="center">
 										<ul>
 											<li id="myhabbo" class="selected" onmouseover="switchTab('myhabbo')">

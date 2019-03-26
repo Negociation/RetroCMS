@@ -11,11 +11,8 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-if($this->habbo->get_isHabboLoggedIn()){ 
-		echo'<td id="topbar-status" class="loggedin"><span class="lang-topbar-status-loggedinBefore"></span><b>'.$this->habbo->get_HabboName().'</b><span class="lang-topbar-status-loggedinAfter">, você esta no Habbo</span></td>'; 
-	}else{
-		echo '<td id="topbar-status" class="notloggedin"><span class="lang-topbar-status-notLogged">Entre para acessar o Habbo</span></td>';
-	}
+
+echo '<td id="topbar-count"> 0 <span class="lang-topbar-count">Habbos no Hotel</span></td>';
 	
 
 ?>
