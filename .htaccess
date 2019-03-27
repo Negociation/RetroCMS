@@ -3,6 +3,8 @@
 	Options -Indexes
 	Redirect /login /account/login
 	Redirect /logout /account/disconnected
+	Redirect /tab/credits /credits
+	Redirect /tab/habboclub /club
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_URI} !-d

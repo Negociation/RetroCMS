@@ -32,11 +32,15 @@ class Decode{
 		//Remove Last Character of String if as "/"
 		$urlRequest = (isset($urlRequest[-1]) && $urlRequest[-1] == "/")? rtrim($urlRequest,"/") : $urlRequest;
 		
+		//Remove Params from URL PHP
+		$urlRequest = strtok($urlRequest, '?');
+		
 		//Split url into array using middle "/"  as param 
 		$parsedRequest = (!empty($urlRequest))? explode("/",filter_var(rtrim($urlRequest), FILTER_SANITIZE_URL)) : $urlRequest;
 		
 		//Decode Data if is Array Object
 		if(is_array($parsedRequest)){
+			$parsedRequest = $this->orderRequest($parsedRequest);
 			$this->decodeRequest($parsedRequest,$hotelConection);
 		}
 		
@@ -87,17 +91,10 @@ class Decode{
 				
 	// Re-order url based on Request
 	protected function orderRequest($request){
+		
 		//Special Cases of URL Routes
 		switch($request[0]){
-			case "login":
-				$request[0] = "account";
-				$request[1] = "login";
-			break;
 			
-			case "logout":
-				$request[0] = "account";
-				$request[1] = "disconnected";
-			break;
 		}
 		return $request;
 	}

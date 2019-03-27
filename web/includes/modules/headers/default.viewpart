@@ -52,7 +52,9 @@
 								</tr>
 							</table>
 						<div id="viewlogo"><a href="<?php echo $this->hotel->get_HotelURL();?>"></a></div>
-						<?php //require_once('./Web/Includes/Content/Web/Socket/Enter-Hotel.php'); ?>
+						<!-- TOPMENU INCLUDE ( Enter Hotel ) -->
+						<?php include('./web/includes/modules/topmenu_enterhotel.viewpart'); ?>
+						
 						<div id="tabmenu" onmouseover="lockCurrentTab();" onmouseout="fadeTab('myhabbo')">
 							<div id="tabmenu-content">
 								<div id="myhabbo-content" class="tabmenu-inner selected">

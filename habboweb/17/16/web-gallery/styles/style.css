@@ -344,7 +344,7 @@ img.tabmenu-image.coins {
  
 #enter-hotel a {
 	display: block;
-	background-image: url(../images/nav/enterHH.gif);
+	background-image: url(../images/enterbuttons/enterHH.gif);
 	background-repeat: no-repeat;
 	height: 106px;
 	width: 105px;
@@ -355,7 +355,7 @@ img.tabmenu-image.coins {
 	top: 44px;
 	right: 151px;
     display: block;
-	background-image: url( ../images/nav/closedHH.gif );
+	background-image: url( ../images/enterbuttons/closedHH.gif );
 	background-repeat: no-repeat;
     height: 106px;
 	width: 105px;
