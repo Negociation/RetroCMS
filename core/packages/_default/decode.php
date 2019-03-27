@@ -83,6 +83,8 @@ class Decode{
 					$this->urlController = 'not_found';
 					unset($request);
 				}
+			}elseif(!Method_Exists(new $request[0]($hotelConection),'default')){
+				$this->urlController = 'not_found';
 			}
 		}else{
 			$this->urlController = 'not_found';
