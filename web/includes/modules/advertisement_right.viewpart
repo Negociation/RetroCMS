@@ -11,6 +11,72 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
+//Check if have any Top Ads and if as enabled
+foreach($this->hotel->get_HotelAdvertisement() as $advertisement){
+	if ($advertisement->get_advertisementType() == 3 && $advertisement->get_advertisementStatus()){
+		$status = true;
+		break;
+	}
+}
+
+//If exist a Top Ads 
+if(isset($status) && $status){
+	
+	//Temp Array Var
+	$array = [];
+	
+	foreach($this->hotel->get_HotelAdvertisement() as $advertisement){
+		if ($advertisement->get_advertisementType() == 3 && $advertisement->get_advertisementStatus()){
+			array_push($array,$advertisement);
+		}
+	}
+	//Write All Top Ads Javascript
+	echo "<script type='text/javascript'>";
+	echo 'Ads_Right(';
+	foreach($array as $advertisement){ 
+		if(!next($array)){ echo "'".$advertisement->get_advertisementImage()."'); "; }else{ echo "'".$advertisement->get_advertisementImage()."',"; }
+	}
+	
+	foreach($array as $advertisement){ 
+		echo "Links_Right.push('".$advertisement->get_advertisementUrl()."'); ";
+	}
+	echo '</script>';
+	
+	echo '
+				<div class="ad-scale ad160">
+                  <table>
+                     <tbody>
+                        <tr>
+                           <td class="ad-header-tl"></td>
+                           <td class="ad-header-t"></td>
+                           <td class="ad-header-tr"></td>
+                        </tr>
+                        <tr>
+                           <td class="ad-header-ml"></td>
+                           <td class="ad-header-m">
+                              <h5><span class="lang-Advertissement_Title">Publicidade</span></h5>
+                           </td>
+                           <td class="ad-header-mr"></td>
+                        </tr>
+                        <tr>
+                           <td class="ad-content-ml"></td>
+                           <td class="ad-content-m" align="center" valign="top"><a href="#" target="_blank" id="RightLink" ><img style="width: 160px; height: 600px;" alt="" src="#" id="RightImage"></a>
+                           </td>
+                           <td class="ad-content-mr"></td>
+                        </tr>
+                        <tr>
+                           <td class="ad-content-bl"></td>
+                           <td class="ad-content-b"></td>
+                           <td class="ad-content-br"></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+	';
+	unset($array);
+	unset($status);
+}
+
 ?>
 
 

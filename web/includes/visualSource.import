@@ -58,9 +58,9 @@ if(!is_array($this->hotel->get_HotelCustom())){
 		echo"
 		<script language='JavaScript' type='text/javascript'>
 			var habboReqPath = '';
-			var habboStaticFilePath = 'https://web.archive.org/web/20070914190355/http://images.habbohotel.fr/web/web-5.0.22';
+			var habboStaticFilePath = '".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery';
 			var habboImagerUrl = '/habbo-imaging/';
-			document.habboLoggedIn = true;
+			document.habboLoggedIn = '".$this->habbo->get_strHabboLoggedIn()."';
 			window.name = 'habboMain';
 		</script>
 		";

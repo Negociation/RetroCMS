@@ -76,6 +76,7 @@ class Decode{
 						unset($request);
 					}else{
 						$this->urlController = 'not_found';
+						$this->urlAction= 'default';
 						unset($request);
 					}
 				}else{

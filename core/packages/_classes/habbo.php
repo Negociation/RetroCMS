@@ -30,6 +30,10 @@ class Habbo{
 		return false;	
 	}
 	
+	public function get_strHabboLoggedIn(){
+		return $this->get_isHabboLoggedIn() ? "true" : "false";
+	}
+	
 	public function get_HabboCredits(){
 			return 0;
 	}
