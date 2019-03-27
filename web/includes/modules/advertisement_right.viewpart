@@ -19,7 +19,7 @@ foreach($this->hotel->get_HotelAdvertisement() as $advertisement){
 	}
 }
 
-//If exist a Top Ads 
+//If exist a Right Ads 
 if(isset($status) && $status){
 	
 	//Temp Array Var
@@ -30,7 +30,7 @@ if(isset($status) && $status){
 			array_push($array,$advertisement);
 		}
 	}
-	//Write All Top Ads Javascript
+	//Write All Right Ads Javascript
 	echo "<script type='text/javascript'>";
 	echo 'Ads_Right(';
 	foreach($array as $advertisement){ 
