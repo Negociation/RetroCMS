@@ -52,7 +52,7 @@ class HotelModel extends ModelTemplate{
 			}
 			
 			//Set Hotel Advertisements in Object
-			$hotelObject->set_hotelAdvertisements($advertisementArray);
+			$hotelObject->set_hotelAdvertisement($advertisementArray);
 		}else{
 			//If something wrong on construct method (like missing information) so set the hotel to Offline!
 			$hotelObject->set_HotelStatus(false);	

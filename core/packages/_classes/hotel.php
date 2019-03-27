@@ -21,7 +21,9 @@ class Hotel{
 	protected $hotelWeb;
 	protected $hotelName;
 	protected $hotelNick;
+	protected $hotelClient;
 	protected $hotelCustom;
+	protected $hotelAdvertisement;
 	
 	public function __construct(){
 		
@@ -38,8 +40,13 @@ class Hotel{
 	public function constructObject($hotelName,$hotelNick,$hotelVersion,$hotelWeb,$hotelUrl,$hotelLanguage,$hotelClient,$hotelCustom){
 		$this->hotelName = $hotelName;
 		$this->hotelNick = $hotelNick;
+		
 		//$this->hotelVersion = $hotelVersion
 		$this->hotelWeb = $hotelWeb;
+		$this->hotelUrl = $hotelUrl;
+		$this->hotelLanguage = $hotelLanguage;
+		$this->hotelClient = $hotelClient;
+		$this->hotelCustom = $hotelCustom;
 		//$this->hotelStatus = $hotelStatus;
 		
 	}
@@ -77,8 +84,13 @@ class Hotel{
 		return 0;
 	}
 	
+	public function get_hotelAdvertisement(){
+		return $this->hotelAdvertisement;
+	}
+	
 	/** SETS **/
-	public function set_HotelAdvertisements(){
+	public function set_HotelAdvertisement($hotelAdvertisement){
+		$this->hotelAdvertisement = $hotelAdvertisement;
 	}
 	
 	public function set_HotelStatus($status){

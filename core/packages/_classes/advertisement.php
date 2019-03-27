@@ -16,14 +16,42 @@
 
 class Advertisement{
 	
+	protected $advertisementId;
+	protected $advertisementImage;	
+	protected $advertisementStatus;
+	protected $advertisementType;
+	protected $advertisementUrl;
+	
 	public function __construct(){
 		
 
 	}
 
+
 	/** DAO CONSTRUCT **/
-	public function constructObject(){
+	public function constructObject($advertisementId,$advertisementImage,$advertisementStatus,$advertisementType,$advertisementUrl){
+		$this->advertisementId = $advertisementId;
+		$this->advertisementImage = $advertisementImage;
+		$this->advertisementStatus = $advertisementStatus;
+		$this->advertisementType =  $advertisementType;
+		$this->advertisementUrl = $advertisementUrl;	
+	}
 	
+	/** GETS **/
+	public function get_advertisementImage(){
+		return $this->advertisementImage;
+	}
+	
+	public function get_advertisementUrl(){		
+		return "#";
+	}
+	
+	public function get_advertisementType(){
+		return $this->advertisementType;
+	}
+	
+	public function get_advertisementStatus(){
+		return $this->advertisementStatus;
 	}
 	
 }

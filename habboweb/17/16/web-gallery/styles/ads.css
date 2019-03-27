@@ -23,12 +23,12 @@ div.ad-scale td {
 td.ad-header-tl {
 	width: 4px;
 	height: 4px;
-	background: url(./images/ads-scale/bg-banner-top-l.gif) no-repeat;
+	background: url(../images/ads-scale/bg-banner-top-l.gif) no-repeat;
 }
 
 td.ad-header-t {
 	height: 4px;
-	background: url(./images/ads-scale/bg-banner-top-r.gif) no-repeat;
+	background: url(../images/ads-scale/bg-banner-top-r.gif) no-repeat;
 }
 
 div.ad-scale.ad300, div.ad-scale.ad160 {
@@ -47,13 +47,13 @@ div.ad-scale.ad300 td.ad-header-t {
 td.ad-header-tr {
 	width: 4px;
 	height: 4px;
-	background: url(./images/ads-scale/bg-banner-top-r.gif) no-repeat top right;
+	background: url(../images/ads-scale/bg-banner-top-r.gif) no-repeat top right;
 }
 
 td.ad-header-ml
 {
 	width: 4px;
-	background-image: url(./images/ads-scale/bg-banner-top-l.gif);
+	background-image: url(../images/ads-scale/bg-banner-top-l.gif);
 	background-repeat: no-repeat;
 	background-position: 0 -15px;
 }
@@ -66,7 +66,7 @@ td.ad-header-m {
 td.ad-header-mr
 {
 	width: 4px;
-	background-image: url(./images/ads-scale/bg-banner-top-r.gif);
+	background-image: url(../images/ads-scale/bg-banner-top-r.gif);
 	background-repeat: no-repeat;
 	background-position: right -15px;
 }
@@ -75,24 +75,24 @@ td.ad-header-mr
 td.ad-content-tl {
 	width: 4px;
 	height: 4px;
-	background: url(./images/ads-scale/bg-banner-scale-l.gif) no-repeat;
+	background: url(../images/ads-scale/bg-banner-scale-l.gif) no-repeat;
 }
 
 td.ad-content-t {
 	height: 4px;
-	background: url(./images/ads-scale/bg-banner-scale-r.gif) no-repeat;
+	background: url(../images/ads-scale/bg-banner-scale-r.gif) no-repeat;
 }
 
 td.ad-content-tr {
 	width: 4px;
 	height: 4px;
-	background: url(./images/ads-scale/bg-banner-scale-r.gif) no-repeat top right;
+	background: url(../images/ads-scale/bg-banner-scale-r.gif) no-repeat top right;
 }
 
 td.ad-content-ml
 {
 	width: 4px;
-	background-image: url(./images/ads-scale/bg-banner-scale-l.gif);
+	background-image: url(../images/ads-scale/bg-banner-scale-l.gif);
 	background-repeat: no-repeat;
 	background-position: 0 -15px;
 }
@@ -108,7 +108,7 @@ td.ad-content-m table, td.ad-content-m div, td.ad-content-m p, td.ad-content-m o
 td.ad-content-mr
 {
 	width: 4px;
-	background-image: url(./images/ads-scale/bg-banner-scale-r.gif);
+	background-image: url(../images/ads-scale/bg-banner-scale-r.gif);
 	background-repeat: no-repeat;
 	background-position: right -15px;
 }
@@ -116,16 +116,16 @@ td.ad-content-mr
 td.ad-content-bl {
 	width: 4px;
 	height: 4px;
-	background: url(./images/ads-scale/bg-banner-scale-btm-l.gif) no-repeat;
+	background: url(../images/ads-scale/bg-banner-scale-btm-l.gif) no-repeat;
 }
 
 td.ad-content-b {
 	height: 4px;
-	background: url(./images/ads-scale/bg-banner-scale-btm-r.gif) no-repeat;
+	background: url(../images/ads-scale/bg-banner-scale-btm-r.gif) no-repeat;
 }
 
 td.ad-content-br {
 	width: 4px;
 	height: 4px;
-	background: url(./images/ads-scale/bg-banner-scale-btm-r.gif) no-repeat top right;
+	background: url(../images/ads-scale/bg-banner-scale-btm-r.gif) no-repeat top right;
 }

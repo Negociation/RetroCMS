@@ -64,13 +64,20 @@ if(!is_array($this->hotel->get_HotelCustom())){
 			window.name = 'habboMain';
 		</script>
 		";
-
+		
+echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/prototype.js'></script>";
 echo "\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/habbo.js'></script>";
 echo "\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/builder.js'></script>";
-echo "\n\t\t";
-echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/prototype.js'></script>";
+
+
+
+		echo"
+		<script language='JavaScript' type='text/javascript'>
+			window.onload = function(){ advertisementLoad(); }
+		</script>
+		";
 
 ?>
 
