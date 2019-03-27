@@ -1,0 +1,35 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.0 ( Aquamarine ) 					    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+?>
+
+		<div id="footer">
+					<div id="footer-top">
+						<div id="footer-content">
+						<div style="float: right; margin-top: 0px; height: 0px;">			
+							<a href="#languageSelector" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/hlanguages/footer_pt.png" onclick="setLanguageDialog()" id="footerIcon" alt=""></a>
+						</div>						
+						&copy; 2009-2018 RetroCMS ~ The Oldschool era is Back!!!  <br> Powered by m.tiago from Ragezone.</div>
+					</div>
+					<div id="footer-bottom">
+						<div id="footer-bottom-content"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="outer-bottom">
+			<div id="outer-bottom-content"></div>
+		</div>
+	</div>
+	</body>
+</html>

@@ -22,6 +22,7 @@ echo "\n\t\t";
 echo get_class($this) == 'Account' || get_class($this) == 'Register' || get_class($this) == 'Install' ? "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/process.css' type='text/css' rel='stylesheet'/>" : "";
 echo "\n\t\t";
 
+
 //Custom CSS Content
 echo "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/custom/style_custom_default.css' type='text/css' rel='stylesheet'/>";
 echo "\n\t\t";
@@ -54,8 +55,8 @@ if(!is_array($this->hotel->get_HotelCustom())){
 		";
 }
 
-		//Default Javascript Content
-		echo"
+//Default Javascript Content
+echo"
 		<script language='JavaScript' type='text/javascript'>
 			var habboReqPath = '';
 			var habboStaticFilePath = '".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery';
@@ -63,21 +64,23 @@ if(!is_array($this->hotel->get_HotelCustom())){
 			document.habboLoggedIn = '".$this->habbo->get_strHabboLoggedIn()."';
 			window.name = 'habboMain';
 		</script>
-		";
-		
+";
+
+echo "\n\t\t";		
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/prototype.js'></script>";
 echo "\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/habbo.js'></script>";
 echo "\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/builder.js'></script>";
+echo "\n\t\t";
 
-
-
-		echo"
+echo"
 		<script language='JavaScript' type='text/javascript'>
 			window.onload = function(){ advertisementLoad(); }
 		</script>
-		";
+";
+
+
 
 ?>
 
