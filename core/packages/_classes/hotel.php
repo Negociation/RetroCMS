@@ -69,6 +69,14 @@ class Hotel{
 		return $this->hotelCustom;
 	}
 	
+	public function get_isHotelOnline(){
+		return false;
+	}
+	
+	public function get_HotelCount(){
+		return 0;
+	}
+	
 	/** SETS **/
 	public function set_HotelAdvertisements(){
 	}

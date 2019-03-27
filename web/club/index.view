@@ -108,7 +108,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 								</div>
 								<div class="v3box-content">
 									<div class="v3box-body">
-										Associe-se ao Habbo Club, o clube VIP do Habbo Hotel, para ter privilégios como acesso prioritário às salas, Mobis, roupas e penteados exclusivos, comandos especiais e layouts para Quartos. <br/><span style="font-weight: bold;"><br/>O Habbo Club custa 30 Moedas por período. Cada período dura 31 dias. Ao comprar 3 ou 6 períodos você ganha desconto, <a href="<?php echo $this->hotel->get_HotelUrl(); ?>/club/join" target="_self">veja</a>.<br/><br/></span><a href="<?php echo $this->hotel->get_HotelUrl(); ?>/club/join" target="_self">Associe-se</a><br/>
+										Associe-se ao Habbo Club, o clube VIP do Habbo Hotel, para ter privilégios como acesso prioritário às salas, Mobis, roupas e penteados exclusivos, comandos especiais e layouts para Quartos. <br/><span style="font-weight: bold;"><br/>O Habbo Club custa 30 Moedas por período. Cada período dura 31 dias. Ao comprar 3 ou 6 períodos você ganha desconto, <a href="<?php echo $this->hotel->get_HotelUrl(); ?>/club/join" target="_self">veja</a>.<br/><br/></span><a href="<?php echo $this->hotel->get_HotelUrl(); ?>/club/join" class="colorlink"><span>Associe-se</span></a> 
 										<div class="clear"></div>
 									</div>
 								</div>

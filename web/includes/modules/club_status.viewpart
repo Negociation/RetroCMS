@@ -1,0 +1,63 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.0 ( Aquamarine ) 					    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+if($this->habbo->get_isHabboLoggedIn()){
+	if($this->habbo->get_HabboClub(1)){
+		$arrowPos = ((31 - $this->habbo->get_HabboClub(3)) * 5 ) + 52;
+			if($this->habbo->get_HabboClub(2) > 31){
+				echo '	
+					<div id="subscription-meter-box">
+						<div id="pastmonthsVal">'.$this->habbo->get_HabboClub(5).'</div> 
+						<div id="clubdays"> <b>'.$this->habbo->get_HabboClub(3).'</b> <span class="lang-hcjoin-remainingHeader">dias restantes</span> </div>
+						<div id="comingmonthsVal">'.$this->habbo->get_HabboClub(4).'</div>
+						<span><img src="'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/images/club_subscription_arrow.png" style="margin-left: '.$arrowPos.'px;"></span>
+						<div style=" margin-top: 35px;">
+							<div style="float: left; width: 60px"><center><span class="lang-hcjoin-comingTitle">Periodos Decorridos</span></center></div>
+							<div style="float: right; width: 56px"><center><span class="lang-hcjoin-pastTitle">Periodos Pre-Pagos</span></center></div>
+						</div>
+					</div>
+				';
+			}else{
+				$arrowPos = $arrowPos+2;
+					echo '																	
+						<div id="subscription-meter-box3" style="left: 20px;">
+							<div id= "habboclub-buy-details"> 
+								<span><img src="'.$this->hotel->get_HotelWeb().'/habboweb/16/11/web-gallery/images/club_subscription_arrow.png" style="margin-left: '.$arrowPos.'px;"></span>
+								<div style=" margin-top: 35px;">
+									<div style="float: left; width: 56px"><center><span class="lang-hcjoin-comingTitle">Periodos Decorridos</span></center></div>
+								</div>
+							</div>
+							<div id="pastmonthsVal">'.$this->habbo->get_HabboClub(5).'</div> 
+							<div id="clubdays"> <b>'.$this->habbo->get_HabboClub(3).'</b> <span class="lang-hcjoin-remainingHeader">dias restantes</span> </div>																										
+						</div>																
+					';
+			}
+		}else{
+			echo '
+				<div id="subscription-meter-box2" style="left: 10px;">
+					<div id="pastmonthsVal"> 6</div>
+				';
+				if($this->habbo->get_HabboClub(1)){
+					echo '<div style="float: right; width: 160px; margin-right: 10px;">Seu Periodo de membro de Habbo Club venceu no dia 00/00/00, aproveite e renove a sua assinatura abaixo.  </div>';
+				}else{
+					echo '<div style="float: right; width: 160px; margin-right: 10px;">Você nunca fez parte do Habbo Club, para entrar basta comprar um periodo abaixo.  </div>';																						
+				}			
+		echo '
+				<div style="float: left; width: 60px; margin-top: 45px;"><b><center><span class="lang-hcjoin-comingTitle">Periodos Decorridos</span></center></b></div>
+			</div>
+			';
+		}
+	}else{
+		echo'<span class="lang-hc-login-before">Para associar-se ao Habbo Club você precisa primeiro</span> <a href="'.$this->hotel->get_HotelUrl().'/account/login?target=clubSubscribe"><span class="lang-logIn">entrar</span></a> <span class="lang-hc-login-after">no Hotel.</span>';
+	}
+?>

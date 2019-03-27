@@ -27,7 +27,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 					   </tr>
 					   <tr>
 						  <td rowspan="2" style="width: 8px;">&nbsp;</td>
-						  <td valign="top" style="width: 740px;">
+						  <td valign="top" style="width: 730px;">
 							 <table border="0" cellpadding="0" cellspacing="0" width="100%">
 								<tbody>
 								   <tr>
@@ -51,7 +51,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 											
 										</td>
 
-										<td valign="top" style="width: 300px;" class="habboPage-col rightmost">
+										<td valign="top" style="width: 310px;" class="habboPage-col rightmost">
 									
 											<div class="nobox">	
 												<div class="nobox-content">		
@@ -66,8 +66,8 @@ require_once('./web/includes/modules/headers/default.viewpart');
 																<div >
 																	<div class="content-beige">
 																		<div class="content-beige-body">
-																			  <!-- Include Habbo Club Join Module Content -->
-																			  <?php include('./web/includes/modules/club_join.viewpart'); ?>
+																			  <!-- Include Habbo Club Status Module Content -->
+																			  <?php include('./web/includes/modules/club_status.viewpart'); ?>
 
 																			<div class="clear"></div>
 																		</div>
@@ -78,44 +78,8 @@ require_once('./web/includes/modules/headers/default.viewpart');
 																</div>
 																
 															</div>
-															<?php 
-																if($this->habbo->get_isHabboLoggedIn()){
-																	echo'
-																		<div style="margin-top: 10px;">
-																			<table width="100%">
-																				<tbody>
-																					<tr>
-																						<td width="60%"><span class="habboclub-buy-details"> <span class="lang-hcjoin-subscribe1Title">31 dias = 25 Moedas</span></span></td>
-																						<td><a class="colorlink noarrow" onclick="openClubSubscribe(this.id)" id="subscribe1" href="#"  return false;"><span class="lang-hcjoin-subscribe1Buy">Comprar 1 mês(es)</span></a></td>
-																					</tr>
-																					<tr>
-																						<td width="60%"><span class="habboclub-buy-details"><span class="lang-hcjoin-subscribe2Title">93 dias =60 Moedas</span></span></td>
-																						<td><a class="colorlink noarrow" id="subscribe2" onclick="openClubSubscribe(this.id)" href="#"  return false;"><span class="lang-hcjoin-subscribe2Buy">Comprar 3 mês(es)</span></a></td>
-																					</tr>
-																					<tr>
-																						<td width="60%"><span class="habboclub-buy-details"><span class="lang-hcjoin-subscribe3Title">186 dias = 105 Moedas</span></span></td>
-																						<td><a class="colorlink noarrow" id="subscribe3" onclick="openClubSubscribe(this.id)" href="#"  return false;"><span class="lang-hcjoin-subscribe3Buy">Comprar 6 mês(es)</span></a></td>
-																					</tr>
-																				</tbody>
-																			</table>
-																		</div>
-																	';
-																}
-															?>
-															<script>
-															function openClubSubscribe(id){
-																var dialog = createDialog("subscription_dialog", "Habbo Club", 9001, 0, -1000, closeSubscription);
-																appendDialogBody(dialog, "<p style=\"text-align:center\"><img src=\"<?php echo $this->hotel->get_HotelWeb() ?>/habboweb/16/11/web-gallery/progress_habbos.gif\" alt=\"\" /></p><div style=\"clear\"></div>", true);	
-																showOverlay();
-																new Ajax.Request("<?php echo $this->hotel->get_HotelURL() ?>/club/club_subscribe_form",{ 
-																	method: "post", parameters: "optionNumber="+encodeURIComponent(id), onComplete: function(req, json) {
-																	setDialogBody(dialog, req.responseText);	
-																	moveDialogToCenter(dialog);			
-																	} 
-																});
-															};
-															</script>
-
+															<!-- Include Habbo Club Join Module Content -->
+															<?php include('./web/includes/modules/club_join.viewpart'); ?>
 															<div class="clear"></div>
 														</div>
 														<div class="bottom"><div></div></div>
