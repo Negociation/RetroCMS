@@ -14,7 +14,7 @@
 if($this->hotel->get_isHotelOnline()){
 	echo '<td id="topbar-count">'.$this->hotel->get_HotelCount().' <span class="lang-topbar-count">Habbos no Hotel</span></td>';
 }else{
-	echo '<td id="topbar-count"><span class="lang-topbar-offline">Hotel Offline</span></td>';
+	echo '<td id="topbar-count"><span class="lang-topbar-offline">Hotel Closed</span></td>';
 }
 echo "\n";
 ?>

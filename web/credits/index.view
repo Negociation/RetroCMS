@@ -33,7 +33,6 @@ require_once('./web/includes/modules/headers/default.viewpart');
 							</tr>
 							<tr>
 							   <td align="left" valign="top" style="width: 430px; height: 400px;" class="habboPage-col">
-								  <div class="v3box blue">
 									 <div class="v3box blue">
 										<div class="v3box-top">
 										   <h3>O que é Habbo Moeda?</h3>
@@ -48,18 +47,19 @@ require_once('./web/includes/modules/headers/default.viewpart');
 										   <div></div>
 										</div>
 									 </div>
-									 <div class="v3box-top">
-										<h3>Como ativar os Códigos</h3>
-									 </div>
-									 <div class="v3box-content">
-										<div class="v3box-body">
-										   <img align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/content/purse_big.gif" alt=""> Ao comprar Habbo Moedas através de alguns Métodos de Pagamento, você não receberá as Moedas imediatamente, mas sim um <span style="font-weight: bold;">Código</span>, que efetivamente lhe dará as Moedas. Para obter as Moedas com o Código:<br/><br/><span style="font-weight: bold;">1. </span>Entre no jogo com o seu personagem Habbo.<br/><span style="font-weight: bold;">2. </span>Clique no seu Porta-Moeda (você verá um desenho embaixo, é super fácil de achar.<br/><span style="font-weight: bold;">3. </span>Clique em Códigos. Vai aparecer uma nova tela com um campo vazio e um botão escrito &quot;Código OK&quot;.<br/><span style="font-weight: bold;">4. </span>No campo vazio digite o Código que você recebeu e após isso clique no botão &quot;Código OK&quot;.<br/><br/>Assim, você obterá suas Moedas. Até que você digite o Código em seu Porta-Moeda, melhor guardá-lo bem e em local seguro. Não dê seu Código para ninguém, certo?<br/><br/><span style="font-weight: bold;">Lembre-se:</span> não adianta nada receber o Código e não digitá-lo no Porta-Moeda. Você só receberá as Moedas após seguir os passos acima.<br/><br/>
-										   <div class="clear"></div>
-										</div>
-									 </div>
-									 <div class="v3box-bottom">
-										<div></div>
-									 </div>
+									 <div class="v3box blue">
+										 <div class="v3box-top">
+											<h3>Como ativar os Códigos</h3>
+										 </div>
+										 <div class="v3box-content">
+											<div class="v3box-body">
+											   <img align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/content/purse_big.gif" alt=""> Ao comprar Habbo Moedas através de alguns Métodos de Pagamento, você não receberá as Moedas imediatamente, mas sim um <span style="font-weight: bold;">Código</span>, que efetivamente lhe dará as Moedas. Para obter as Moedas com o Código:<br/><br/><span style="font-weight: bold;">1. </span>Entre no jogo com o seu personagem Habbo.<br/><span style="font-weight: bold;">2. </span>Clique no seu Porta-Moeda (você verá um desenho embaixo, é super fácil de achar.<br/><span style="font-weight: bold;">3. </span>Clique em Códigos. Vai aparecer uma nova tela com um campo vazio e um botão escrito &quot;Código OK&quot;.<br/><span style="font-weight: bold;">4. </span>No campo vazio digite o Código que você recebeu e após isso clique no botão &quot;Código OK&quot;.<br/><br/>Assim, você obterá suas Moedas. Até que você digite o Código em seu Porta-Moeda, melhor guardá-lo bem e em local seguro. Não dê seu Código para ninguém, certo?<br/><br/><span style="font-weight: bold;">Lembre-se:</span> não adianta nada receber o Código e não digitá-lo no Porta-Moeda. Você só receberá as Moedas após seguir os passos acima.<br/><br/>
+											   <div class="clear"></div>
+											</div>
+										 </div>
+										 <div class="v3box-bottom">
+											<div></div>
+										 </div>
 								  </div>
 								  <div class="v3box blue">
 									 <div class="v3box-top">
