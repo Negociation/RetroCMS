@@ -21,6 +21,7 @@ class Hotel{
 	protected $hotelWeb;
 	protected $hotelName;
 	protected $hotelNick;
+	protected $hotelVersion;
 	protected $hotelClient;
 	protected $hotelCustom;
 	protected $hotelAdvertisement;
@@ -40,8 +41,7 @@ class Hotel{
 	public function constructObject($hotelName,$hotelNick,$hotelVersion,$hotelWeb,$hotelUrl,$hotelLanguage,$hotelClient,$hotelCustom){
 		$this->hotelName = $hotelName;
 		$this->hotelNick = $hotelNick;
-		
-		//$this->hotelVersion = $hotelVersion
+		$this->hotelVersion = $hotelVersion;
 		$this->hotelWeb = $hotelWeb;
 		$this->hotelUrl = $hotelUrl;
 		$this->hotelLanguage = $hotelLanguage;

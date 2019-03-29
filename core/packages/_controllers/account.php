@@ -43,6 +43,18 @@ class Account extends ControllerTemplate{
 		}
 	}
 	
+	/* Submit View Call */	
+	protected function submit(){
+		if($_SERVER['REQUEST_METHOD'] == 'POST' && !$this->habbo->get_isHabboLoggedIn()){
+			echo 'Validating Username...';
+			exit;
+		}else{
+			header('Location: ../');
+			exit;
+		}
+	}
+	
+	
 	/* Logout View Call */
 	protected function disconnected(){		
 		if($this->habbo->get_isHabboLoggedIn()){
