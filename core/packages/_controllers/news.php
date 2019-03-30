@@ -11,17 +11,10 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-// Class: Index
-// Desc: Index Controller 
+// Class: News
+// Desc: Habbo News Articles Controller
 
-class Index extends ControllerTemplate{
-	
-	/* Variables of Views */
-	protected $promoArray = [];
-	protected $promosModel;
-	protected $newsArray = [];
-	protected $newsModel;
-	
+class News extends ControllerTemplate{
 	
 	/* Construct Method */
 	public function __construct($hotelConection){
@@ -29,7 +22,7 @@ class Index extends ControllerTemplate{
 		$this->hotelConection = $hotelConection;
 		
 		//Generic Models
-		$this->hotelModel = new hotelModel($this->hotelConection);
+		$this->hotelModel = new hotelModel($hotelConection);
 		
 		//Get Hotel Object
 		$this->hotel = $this->hotelModel->get_HotelObject();
@@ -37,25 +30,24 @@ class Index extends ControllerTemplate{
 		//New Habbo Object
 		$this->habbo = new Habbo();
 		
-		
-		//New Webpromo Object
-		$this->promosModel = new promosModel($this->hotelConection);
-		$this->promoArray = $this->promosModel->get_ActivePromos();
-		
-		//New News Object
-		$this->newsModel = new newsModel($this->hotelConection);
-		$this->newsArray = $this->newsModel->get_ActiveNews();
-		
-		
 	}
 	
-	/* Default View Call */
+	/* Default View Call - News */
 	protected function default(){
 		//Set Page Title;
-		$this->pageTitle = "Habbo";
-		include 'web/index.view';	
+		$this->pageTitle = "Habbo Club";
+		include 'web/club/index.view';	
 		exit;
 	}
+	
+
+	/* View Call - News/Article/%Id% */
+	protected function article($id){
+
+	}	
+	
+	
+	
 }
 
 ?>
