@@ -32,6 +32,23 @@ class ModelTemplate{
 		return $result;
 	}
 	
+	public function getByParam($table,$column,$param){
+		try {
+			$sql = 'SELECT * FROM .'.$table.' where '.$column.' = :param';
+			$stmt = $this->hotelConection->prepare($sql);
+			$stmt->bindValue(':param', $param);
+			$stmt->execute();
+
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			
+		}catch(Exception $e){
+			//If not return false
+			return false;
+			exit;
+		}
+		return $result;	
+	}
+	
 	
 }
 ?>

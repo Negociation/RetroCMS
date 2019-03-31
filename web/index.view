@@ -28,8 +28,10 @@ require_once('./web/includes/modules/headers/default.viewpart');
 							   <tbody>
 								  <tr>
 									 <td colspan="3" style="padding-bottom: 3px;">
+
 										<div id="promoarea">
 											<!-- NEWS ITEMS INCLUDE -->
+											
 											<?php include('./web/includes/modules/promo_area.viewpart'); ?>		   
 										</div>
 										<div id="newsbox">
