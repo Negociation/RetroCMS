@@ -24,7 +24,7 @@ class NewsModel extends ModelTemplate{
 	}
 	
 	public function get_ActiveNews(){
-		return null;
+		return array();
 	}
 
 }

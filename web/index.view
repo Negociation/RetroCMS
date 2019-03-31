@@ -28,8 +28,26 @@ require_once('./web/includes/modules/headers/default.viewpart');
 							   <tbody>
 								  <tr>
 									 <td colspan="3" style="padding-bottom: 3px;">
-									 <!-- NEWS AREA  INCLUDE -->
-									 <?php include('./web/includes/modules/news_area.viewpart'); ?>
+										<div id="promoarea">
+											<!-- NEWS ITEMS INCLUDE -->
+											<?php include('./web/includes/modules/promo_area.viewpart'); ?>		   
+										</div>
+										<div id="newsbox">
+										   <div id="newsbox-header">
+											  <h2><span class="lang-newsbox-header">Últimas Notícias</span></h2>
+											  <a href="<?php echo $this->hotel->get_HotelUrl().'/rss.xml' ?>"><img src="<?php echo $this->hotel->get_HotelUrl().'/habboweb/17/16/web-gallery/images/promo_area/feed-icon.gif' ?>" alt="" border="0"></a>
+										   </div>
+										   <div id="newsbox-text">
+												<div class="newsitem">
+													<!-- NEWS ITEMS INCLUDE -->
+													<?php include('./web/includes/modules/news_area.viewpart'); ?>
+												</div>
+											</div>
+											<div id="newsbox-footer">
+											  <div class="promo-button"><a href="http://localhost/news" alt=""><span class="lang-newsbox-footer">mais notícias</span></a></div>
+										   </div>
+										</div>
+									 
 								  <tr>
 									 <td valign="top" style="width: 450px; height: 400px;" class="habboPage-col">
 										<br>

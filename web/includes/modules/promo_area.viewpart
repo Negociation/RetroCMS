@@ -13,6 +13,7 @@
 
 
 if(count($this->promoArray)>0){
+	echo '';
 	echo '<script type="text/javascript">';
 	echo 'var promoPages = [';	
 	foreach($this->promoArray as $index=>$row){
@@ -33,6 +34,33 @@ if(count($this->promoArray)>0){
 			break;
 		}
 	}
-	echo '</script>';
+										echo "
+											</script>
+											<div id='promoheader'>
+												<h2><span class='lang-promoheader'>Destaques</span></h2>
+												<ul style='display: block;' id='promoheader-selectors'>
+										";
+	
+	
+	foreach($this->promoArray as $key=>$row){
+		if($key < 6){
+			if($key == 0){
+				echo "<li><a href='#' onclick='showPromo(0); return false;' class='selected'>1</a></li>\n";
+			}else{
+				echo "<li><a href='#' onclick='showPromo(".$key."); return false;' class=''>".($key+1)."</a></li>\n";
+			}
+		}else{
+			break;
+		}
+	}
+											echo '
+												</ul>
+												<script type="text/javascript">
+													$("promoheader-selectors").style.display = "block";
+												</script>
+											</div>';
+
+	
+	
 }
 ?>

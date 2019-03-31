@@ -24,7 +24,7 @@ class PromosModel extends ModelTemplate{
 	}
 	
 	public function get_ActivePromos(){
-		return null;
+		return array();
 	}
 }
 ?>
