@@ -30,7 +30,7 @@ if(count($this->promoArray)>0){
 			}
 														
 			echo '] , text:"'.$row->get_Text().'" }';
-			if ( next($this->promoArray)){ echo "\n , ";}
+			if ( next($this->promoArray) && $index < 5){ echo "\n , ";}
 		}else{
 			break;
 		}
