@@ -16,6 +16,11 @@
 
 class News extends ControllerTemplate{
 	
+	/* Variable of News */
+	protected $newsArray = [];
+	protected $newsModel;
+	protected $articleObject;
+	
 	/* Construct Method */
 	public function __construct($hotelConection){
 		//Setting PDO Conection
@@ -29,21 +34,35 @@ class News extends ControllerTemplate{
 		
 		//New Habbo Object
 		$this->habbo = new Habbo();
-		
+
+		//New News Object
+		$this->newsModel = new newsModel($this->hotelConection);
+		$this->newsArray = $this->newsModel->get_ActiveNews();
+				
 	}
 	
 	/* Default View Call - News */
 	protected function default(){
 		//Set Page Title;
-		$this->pageTitle = "Habbo Club";
-		include 'web/club/index.view';	
-		exit;
+		$this->pageTitle = "Arquivo";
+		include 'web/news/index.view';
+		exit;	
 	}
 	
 
 	/* View Call - News/Article/%Id% */
 	protected function article($id){
-
+		//Get Article Data By Id
+		$this->articleObject = $this->newsModel->get_ArticleObject($id);
+		//Author 
+		$authorObject = new Habbo();
+		if($this->articleObject != false){
+			include 'web/news/article.view';
+			exit;				
+		}else{
+			include 'web/404.view';	
+			exit;				
+		}
 	}	
 	
 	

@@ -49,6 +49,19 @@ class ModelTemplate{
 		return $result;	
 	}
 	
-	
+	public function getById($table,$id){
+		try {
+			$sql = 'SELECT * FROM '.$table.' WHERE id = :id';
+			$stmt = $this->hotelConection->prepare($sql);
+			$stmt->bindParam(':id', $id);
+			$stmt->execute();
+			$result = $stmt->fetch();
+		}catch(Exception $e){
+			//If not return false
+			return false;
+			exit;
+		}		
+		return $result;		
+	}	
 }
 ?>

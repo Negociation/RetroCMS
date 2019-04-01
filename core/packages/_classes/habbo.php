@@ -26,6 +26,8 @@ class Habbo{
 	
 	}
 	
+	/** GETS **/
+	
 	public function get_isHabboLoggedIn(){
 		return false;	
 	}
@@ -35,8 +37,14 @@ class Habbo{
 	}
 	
 	public function get_HabboCredits(){
-			return 0;
+		return 0;
 	}
+	
+	public function get_HabboName(){
+		return null;
+	}
+	
+	
 	
 }
 ?>
