@@ -33,32 +33,11 @@ require_once('./web/includes/modules/headers/default.viewpart');
 							   <div class="portlet-scale-content">
 								  <div class="archive-sidebar">
 									 <ul>
-										<?php
-										
-										foreach($this->newsArray as $index=>$row){
-											if($index > 5){
-												break;
-											}else{
-												
-												if($row == $this->articleObject){
-													echo '
-														<li>
-															<span class="articledate">03/01/07</span>'.$row->get_Title().'	
-														</li>	
-														';	
-												}else{
-													echo '
-														<li>
-															<span class="articledate">03/01/07</span>
-							
-															<a href="/web/20070104105227/http://www.habbo.com.br:80/news/article_0145.html">'.$row->get_Title().'</a>			
-														</li>	
-														';												
-												}
-											}
-										}
-										?>
-										
+									 <!-- Include Archive-Sidebar -->
+									<?php include('./web/includes/modules/archive_sidebar.viewpart'); ?>
+									 
+
+		
 									 </ul>
 									 <div class="promo-button"><a href="<?php echo $this->hotel->get_HotelUrl().'/news'; ?>">mais notícias</a></div>
 								  </div>

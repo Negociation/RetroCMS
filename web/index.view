@@ -49,18 +49,37 @@ require_once('./web/includes/modules/headers/default.viewpart');
 											  <div class="promo-button"><a href="http://localhost/news" alt=""><span class="lang-newsbox-footer">mais notícias</span></a></div>
 										   </div>
 										</div>
-									 
-								  <tr>
-									 <td valign="top" style="width: 450px; height: 400px;" class="habboPage-col">
-										<br>
-										<center><br> <b> WARNING: Beta Preview, only for test. </b><br></center>
-							
-									 </td>
-								  </tr>
+									 									  
+											
+										<tr>
+											<td valign="top" style="width: 450px; height: 400px;" class="habboPage-col">
+												<div class="v2box red darker">
+													<div class="headline"><h3>Bem-Vindos!</h3></div>
+													<div class="border"><div></div></div>
+													<div class="body">
+														<img hspace="10" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/common/habbo_window.gif" align="left" alt="">Entre e fique à vontade. Você não paga nada, e <span style="FONT-WEIGHT: bold">pode conversar, andar, dançar, comer e beber, sem nunca se cansar.</span><br/><br/>Tome um café, nade um pouco, jogue. Invente mil coisas pra fazer com seus Habbo amigos e amigas. 
+														<div class="clear"></div>
+													</div>
+													<div class="bottom"><div></div></div>
+												</div>
+												<!-- Habbo Tags  if hotel version as 15 or higher -->
+												<?php include('./web/includes/modules/tags_displaybox.viewpart'); ?>
+											</td>
+											<td valign="top" style="width: 310px; height: 400px;" class="habboPage-col rightmost">
+										   <!--Advertisement Middle if as enabled-->
+										   <?php include('./web/includes/modules/advertisement_middle.viewpart'); ?>
+											</td>
+												
+									
+									  </tr>
+
+
 								  </td>
 								   </tr>
+								   <td colspan="2"><center><br> <b> WARNING: Beta Preview, only for test. </b><br></center></td>
 							   </tbody>
 							</table>
+							
 						 </td>
 						 <td rowspan="2" style="width: 4px;"></td>
 						 <td rowspan="2" valign="top" style=" margin-left: 4px; width: 176px;">

@@ -1,0 +1,34 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.0 ( Aquamarine ) 					    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+foreach($this->newsArray as $index=>$row){
+	if($index <= 5){
+		if($row == $this->articleObject){
+			echo '
+				<li>
+					<span class="articledate">03/01/07</span>'.$row->get_Title().'	
+				</li>	
+			';	
+		}else{
+			echo '
+				<li>
+					<span class="articledate">03/01/07</span>
+					<a href="/web/20070104105227/http://www.habbo.com.br:80/news/article_0145.html">'.$row->get_Title().'</a>			
+				</li>	
+			';	
+		}
+	}else{
+		break;
+	}
+}
+?>

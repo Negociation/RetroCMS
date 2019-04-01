@@ -84,6 +84,11 @@ class Hotel{
 		return 0;
 	}
 	
+	public function get_HotelVersion(){
+		return $this->hotelVersion;	
+	}
+	
+	
 	public function get_hotelAdvertisement(){
 		return $this->hotelAdvertisement;
 	}
