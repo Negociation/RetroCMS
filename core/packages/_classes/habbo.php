@@ -14,7 +14,7 @@
 // Class: Habbo
 // Desc: All Habbo Data
 
-class Habbo{
+class Habbo extends ClassTemplate{
 	
 	public function __construct(){
 		

@@ -34,12 +34,25 @@ class Account extends ControllerTemplate{
 	/* Login View Call */
 	protected function login(){
 		if($this->habbo->get_isHabboLoggedIn()){
+			header('Location: ../../');
 			exit;
 		}else{
 			//Set Page Title;
 			$this->pageTitle = "Habbo";
 			include 'web/account/login.view';	
 			exit;
+		}
+	}
+	
+	/* Login Reauthenticate Call */
+	protected function reauthenticate(){
+		if(isset($_GET["target"])){
+			//Call Login Method Again
+			$this->login();
+			exit;
+		}else{
+			header('Location: ../../');
+			exit;		
 		}
 	}
 	
