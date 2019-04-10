@@ -3,7 +3,7 @@
 //						  RetroCMS							//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
-// Developed by: Marcos [ aka: m.tiago ]					//
+// Developed by: Marcos [ aka: m.tiago ]					//				
 // Development Thread: goo.gl/nwzdZo						//
 //////////////////////////////////////////////////////////////
 // Beta Version 0.9.0 ( Aquamarine ) 					    //
@@ -11,24 +11,18 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-foreach($this->newsArray as $index=>$row){
-	if($index <= 5){
-		if($row == $this->articleObject){
-			echo '
-				<li>
-					<span class="articledate">03/01/07</span>'.$row->get_Title().'	
-				</li>	
-			';	
-		}else{
-			echo '
-				<li>
-					<span class="articledate">03/01/07</span>
-					<a href="'.$this->hotel->get_hotelUrl().'/news/article/'.$row->get_Id().'">'.$row->get_Title().'</a>			
-				</li>	
-			';	
-		}
-	}else{
-		break;
+// Class: Tags Model
+// Desc: DAO Content of habbo Tags
+
+class TagsModel extends ModelTemplate{
+
+	public function __construct($hotelConection){
+		
+		//Setting PDO Conection
+		$this->hotelConection = $hotelConection;
+		
 	}
+
+	
 }
 ?>

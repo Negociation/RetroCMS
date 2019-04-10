@@ -56,10 +56,11 @@ class News extends ControllerTemplate{
 		$this->articleObject = $this->newsModel->get_ArticleObject($id);
 		//Author 
 		$authorObject = new Habbo();
-		if($this->articleObject != false){
+		if($this->articleObject != false && is_numeric($id)){
 			include 'web/news/article.view';
 			exit;				
 		}else{
+			unset($this->articleObject);
 			include 'web/404.view';	
 			exit;				
 		}

@@ -62,6 +62,19 @@ class ModelTemplate{
 			exit;
 		}		
 		return $result;		
-	}	
+	}
+	
+	public function customQuery($query){
+		try {
+			$stmt = $this->hotelConection->prepare($query);
+			$stmt->execute();
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		}catch(Exception $e){
+			//If not return false
+			return false;
+			exit;
+		}		
+		return $result;	
+	}
 }
 ?>
