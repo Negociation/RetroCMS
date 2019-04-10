@@ -17,7 +17,7 @@ foreach($this->newsArray as $key=>$article){
 		if($key < 3){
 			echo'
 				<h3>
-					<span class="articledate">[00/00/00]</span> 			
+					<span class="articledate">['.$article->get_DateFormat(1,$article->get_Date()).']</span> 			
 					<a href="'.$this->hotel->get_HotelUrl().'/news/article/'.$article->get_Id().'">'.$article->get_Title().'</a>
 				</h3>
 				<p>'.$article->get_Desc().'</p>
@@ -26,7 +26,7 @@ foreach($this->newsArray as $key=>$article){
 			if ($key == 3){ echo '<div class="hr">&nbsp;</div>'; }
 			echo'
 				<h3>
-					<span class="articledate">[00/00/00]</span> 			
+					<span class="articledate">['.$row->get_DateFormat(1,$row->get_Date()).']</span> 			
 					<a href="'.$this->hotel->get_HotelUrl().'/news/article/'.$article->get_Id().'">'.$article->get_Title().'</a>
 				</h3>
 			';	

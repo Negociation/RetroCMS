@@ -52,7 +52,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 					  <td valign="top" style="width: 539px; padding-top: 3px;" class="habboPage-col rightmost">
 						 <div class="portlet-scale gold">
 							<div class="portlet-scale-header">
-							   <h3><?php echo $this->articleObject->get_Title() ?> [00/00/00]</h3>
+							   <h3><?php echo $this->articleObject->get_Title() ?> [<?php echo $this->articleObject->get_DateFormat(1, $this->articleObject->get_Date()); ?>]</h3>
 							</div>
 							<div class="portlet-scale-body">
 							   <div class="portlet-scale-content">

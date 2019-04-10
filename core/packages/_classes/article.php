@@ -14,9 +14,10 @@
 // Class: Habbo
 // Desc: All Article Data
 
-class Article{
+class Article extends ClassTemplate{
 	
 	protected $articleId;
+	protected $articleDate;
 	protected $articleTitle;
 	protected $articleContent;
 	protected $articleDesc;
@@ -25,7 +26,7 @@ class Article{
 	
 	public function __construct(){
 		$this->articleId = 0;
-		$this->articleDate = 0;
+		$this->articleDate = date('m-d-Y h:i:s a', time());
 		$this->articleTitle = "<span class='lang-article-notfound-title'>Noticia não Encontrada</span>";
 		$this->articleDesc = "<span class='lang-article-notfound-desc'>Oops, parece que algo inesperado aconteceu, tente novamente mais tarde!</span>";
 		$this->articleContent = "<span class='lang-article-notfound-content'>Por favor, verifique sua base de dados e tente novamente...</span>";
@@ -53,6 +54,10 @@ class Article{
 	
 	public function get_Content(){
 		return $this->articleContent;
+	}
+	
+	public function get_Date(){
+		return $this->articleDate;
 	}
 	
 	public function get_Desc(){

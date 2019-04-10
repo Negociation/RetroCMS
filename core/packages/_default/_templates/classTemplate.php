@@ -3,7 +3,7 @@
 //						  RetroCMS							//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
-// Developed by: Marcos [ aka: m.tiago ]					//
+// Developed by: Marcos [ aka: m.tiago ]					//				
 // Development Thread: goo.gl/nwzdZo						//
 //////////////////////////////////////////////////////////////
 // Beta Version 0.9.0 ( Aquamarine ) 					    //
@@ -11,24 +11,23 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-foreach($this->newsArray as $index=>$row){
-	if($index <= 5){
-		if($row == $this->articleObject){
-			echo '
-				<li>
-					<span class="articledate">'.$row->get_DateFormat(1,$row->get_Date()).'</span>'.$row->get_Title().'	
-				</li>	
-			';	
-		}else{
-			echo '
-				<li>
-					<span class="articledate">'.$row->get_DateFormat(1,$row->get_Date()).'</span>
-					<a href="'.$this->hotel->get_hotelUrl().'/news/article/'.$row->get_Id().'">'.$row->get_Title().'</a>			
-				</li>	
-			';	
+// Class: ClassTemplate
+// Desc: Default Template for Classes
+
+class ClassTemplate{
+
+	public function get_DateFormat($format,$value){
+		switch($format){
+			//Format Day/Month/Year
+			case 1:
+				return date('d/m/y', strtotime(str_replace('-','/', $value)));
+				break;
+			//Format Month/Day/Year
+			case 2:
+				return date('m/d/y', strtotime(str_replace('-','/', $value)));
+				break;
 		}
-	}else{
-		break;
 	}
+	
 }
 ?>
