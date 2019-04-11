@@ -71,12 +71,13 @@ class Account extends ControllerTemplate{
 	/* Logout View Call */
 	protected function disconnected(){		
 		if($this->habbo->get_isHabboLoggedIn()){
-		//Set Page Title;
+			//Set Page Title;
 			$this->pageTitle = "Habbo";
-			include 'web/account/login.view';	
+			include 'web/account/disconnected.view';	
+			$this->habbo->set_HabboLogout();
 			exit;
 		}else{
-			echo 'You have to login  first';
+			header('Location: ../');
 			exit;
 		}
 	}

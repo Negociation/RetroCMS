@@ -45,8 +45,12 @@ class Profile extends ControllerTemplate{
 	protected function default(){
 		//Set Page Title;
 		$this->pageTitle = "Habbo";
-		echo 'Profile';
-		exit;
+		if($this->habbo->get_isHabboLoggedIn()){
+			echo 'Profile';
+			exit;
+		}else{
+			echo 'You must login first...';
+		}
 	}
 }
 
