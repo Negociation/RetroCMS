@@ -16,7 +16,7 @@ if (count($this->newsArray) > 0 && ($this->newsArray[0]->get_Id() != 0)){
 	foreach($this->newsArray as $index=>$row){
 		echo'
 													<li>
-														<span class="articledate">[02/02/07]</span>
+														<span class="articledate">['.$row->get_DateFormat(1,$row->get_Date()).']</span>
 														<a href="'.$this->hotel->get_HotelUrl().'/news/article/'.$row->get_Id().'">'.$row->get_Title().'</a>
 													</li>													
 		';

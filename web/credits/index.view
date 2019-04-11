@@ -39,7 +39,10 @@ require_once('./web/includes/modules/headers/default.viewpart');
 										</div>
 										<div class="v3box-content">
 										   <div class="v3box-body">
-											  <img width="110" height="103" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/payment/coins_big.gif" id="galleryImage" alt=""> Habbo Moeda é o dinheiro do hotel, utilizado para pagar Tíquetes de Jogos, <a target="_self" href="http://web.archive.org/web/20070830035342/http://www.habbo.com.br/hotel/furniture/index.html">Mobis</a> para seu Quarto, <a target="_self" href="http://web.archive.org/web/20070830035342/http://www.habbo.com.br/club/index.html">Habbo Club</a> e presentes para seus amigos.<br/><br/>A única maneira de adquirir Habbo Moedas é comprando-as.<br/><br/>Os Métodos de Pagamento são diferentes para quem está no Brasil e Portugal, dá uma olhada aqui ao lado, para que você saiba as opções.<br/><br/>
+											  <img width="110" height="103" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/payment/coins_big.gif" id="galleryImage" alt=""> Habbo Moeda é o dinheiro do hotel, utilizado para pagar Tíquetes de Jogos, Mobis para seu Quarto, <a target="_self" href="<?php echo $this->hotel->get_HotelUrl(); ?>/club">Habbo Club</a> (Nosso Clube Exclusivo), presentes para seus amigos ou participar de jogos como Wobble Squabble e Battle Ball Rebound.<br/><br/><b>Para saber mais sobre as Habbo Moedas e formas de adiquiri-las , continue lendo abaixo.</b> <br/><br/>
+											  
+											  
+											
 											  <div class="clear"></div>
 										   </div>
 										</div>
@@ -53,7 +56,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 										 </div>
 										 <div class="v3box-content">
 											<div class="v3box-body">
-											   <img align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/content/purse_big.gif" alt=""> Ao comprar Habbo Moedas através de alguns Métodos de Pagamento, você não receberá as Moedas imediatamente, mas sim um <span style="font-weight: bold;">Código</span>, que efetivamente lhe dará as Moedas. Para obter as Moedas com o Código:<br/><br/><span style="font-weight: bold;">1. </span>Entre no jogo com o seu personagem Habbo.<br/><span style="font-weight: bold;">2. </span>Clique no seu Porta-Moeda (você verá um desenho embaixo, é super fácil de achar.<br/><span style="font-weight: bold;">3. </span>Clique em Códigos. Vai aparecer uma nova tela com um campo vazio e um botão escrito &quot;Código OK&quot;.<br/><span style="font-weight: bold;">4. </span>No campo vazio digite o Código que você recebeu e após isso clique no botão &quot;Código OK&quot;.<br/><br/>Assim, você obterá suas Moedas. Até que você digite o Código em seu Porta-Moeda, melhor guardá-lo bem e em local seguro. Não dê seu Código para ninguém, certo?<br/><br/><span style="font-weight: bold;">Lembre-se:</span> não adianta nada receber o Código e não digitá-lo no Porta-Moeda. Você só receberá as Moedas após seguir os passos acima.<br/><br/>
+											   <img align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/content/purse_big.gif" alt="">Caso você tenha um <span style="font-weight: bold;">Código</span> de Moedas e necessário gerar o mesmo para conseguir as respectivas moedas. Para obter as Moedas com o Código:<br/><br/><span style="font-weight: bold;">1. </span>Entre no jogo com o seu personagem Habbo.<br/><span style="font-weight: bold;">2. </span>Clique no seu Porta-Moeda (você verá um desenho embaixo, é super fácil de achar.<br/><span style="font-weight: bold;">3. </span>Clique em Códigos. Vai aparecer uma nova tela com um campo vazio e um botão escrito &quot;Código OK&quot;.<br/><span style="font-weight: bold;">4. </span>No campo vazio digite o Código que você recebeu e após isso clique no botão &quot;Código OK&quot;.<br/><br/>Assim, você obterá suas Moedas. Até que você digite o Código em seu Porta-Moeda, melhor guardá-lo bem e em local seguro. Não dê seu Código para ninguém, certo?<br/><br/><span style="font-weight: bold;">Lembre-se:</span> não adianta nada receber o Código e não digitá-lo no Porta-Moeda. Você só receberá as Moedas após seguir os passos acima.<br/><br/>
 											   <div class="clear"></div>
 											</div>
 										 </div>
@@ -67,7 +70,32 @@ require_once('./web/includes/modules/headers/default.viewpart');
 									 </div>
 									 <div class="v3box-content">
 										<div class="v3box-body">
-										   <span style="font-weight: bold;"></span><img hspace="0" border="0" align="left" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album923/news_icon_05.gif" alt="">Você deve pedir <span style="font-weight: bold;">autorização</span> para seus pais, tutor, ou à pessoa que paga suas contas, antes de comprar Habbo Moedas.<br/><br/>Se você adquirir alguma Moeda sem consentimento ou permissão de seus pais ou responsáveis, você será banido permanentemente do Hotel e sua compra será negada.<br/>
+										   <span style="font-weight: bold;"></span><img hspace="5" border="0" align="left" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album923/news_icon_05.gif" alt="">Estas moedas podem ser adiquiridas de forma gratuita , atualmente existem duas maneiras de conseguir habbo moedas. Leia abaixo é fique informado :<br/>
+										   	<br>
+											
+											  <ul>
+											  
+													<li>
+														<span style="font-weight: bold;">Tempo de Acesso Online</span>
+														<br>
+														<img vspace="0"  border="0" align="right" alt="Online" id="galleryImage" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/payment/get_credits_online.gif">Fique online e curta com os seus amigos, no momento você pode ganhar %% creditos a cada %% minutos online.							
+														
+
+													</li>
+												</ul>
+											
+											  <ul>
+
+													<li>
+																								
+														<span style="font-weight: bold;">Codigo de Moedas</span>
+														<br>
+														<img border="0" align="right" alt="Online" id="galleryImage" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/payment/get_credits_redeem.gif">
+														Você pode conseguir moedas gerando códigos que podem ser conseguidos através de competições, não esqueça de anotar e gerar no seu porta moedas.
+																							 
+
+													</li>
+												</ul>
 										   <div class="clear"></div>
 										</div>
 									 </div>
@@ -104,7 +132,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 									 </div>
 									 <div class="v3box-content">
 										<div class="v3box-body">
-										   Qualquer problema que você tiver na compra de Habbo Moedas, por favor, entre em contato através da <a target="new" href="<?php echo $this->hotel->get_HotelURL(); ?>/iot/go?lang=pt_BR&amp;country=br"><b>Ferramenta de Ajuda Habbo</b></a>.<br/><br/>Selecione a opção correta no menu para que sua mensagem chegue até nós.<br/>
+										   Qualquer problema que você tiver para gerar codigos de Habbo Moedas, por favor, entre em contato através da <a target="new" href="<?php echo $this->hotel->get_HotelURL(); ?>/iot/go?lang=pt_BR&amp;country=br"><b>Ferramenta de Ajuda Habbo</b></a>.<br/><br/>Selecione a opção correta no menu para que sua mensagem chegue até nós.<br/>
 										   <div class="clear"></div>
 										</div>
 									 </div>
