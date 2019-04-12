@@ -16,14 +16,33 @@
 
 class Habbo extends ClassTemplate{
 	
+	protected $habboId;
+	protected $habboName;
+	protected $habboPassword;
+	protected $habboLoggedIn;
+	protected $habboRank;
+	protected $habboFigure;
+	protected $habboGender;
+	protected $habboCredits;
+	protected $habboClub = [];
+	protected $habboBirth;
+	
 	public function __construct(){
 		
 
 	}
 
 	/** DAO CONSTRUCT **/
-	public function constructObject(){
-	
+	public function constructObject($id,$username,$password,$rank,$figure,$gender,$credits,$habboclub,$language){
+		$this->habboId = $id;	
+		$this->habboName = $username;	
+		$this->habboPassword = $password;	
+		$this->habboRank = $rank;	
+		$this->habboFigure = $figure;	
+		$this->habboGender = $gender;
+		$this->habboCredits = $credits;
+		$this->habboClub = $habboclub;
+		$this->habboLanguage = $language;
 	}
 	
 	/** GETS **/
@@ -41,7 +60,7 @@ class Habbo extends ClassTemplate{
 	}
 	
 	public function get_HabboName(){
-		return null;
+		return $this->habboName;
 	}
 	
 	

@@ -1,0 +1,26 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.0 ( Aquamarine ) 					    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+echo '<span id="header-bar-text">Habbo Home: '.$this->homeObject->get_habboObject()->get_habboName().'</span>';
+
+if($this->habbo->get_isHabboLoggedIn()){
+	echo '<a href="#" id="reporting-button" class="toolbutton reporting-start" style="display: none;"><span>Show Report Buttons</span></a>';
+	echo '<a href="#" id="stop-reporting-button" class="toolbutton reporting-stop" style="display: none;"><span>Hide Report Buttons</span></a>';
+}else{
+	echo '<a href="'.$this->hotel->get_hotelUrl().'/community/mgm_sendlink_invite?sendLink=/home/'.$this->homeObject->get_habboObject()->get_habboName().'" id="tell-button" class="toolbutton tell"><span>Convidar um amigo</span></a>';
+	echo '<a href="'.$this->hotel->get_hotelUrl().'/home" class="toolbutton" id="gethome-button"><span>Monte a sua Habbo Home</span></a>';
+}
+
+?>
+
+

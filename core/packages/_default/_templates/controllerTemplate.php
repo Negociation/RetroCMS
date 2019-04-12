@@ -33,6 +33,7 @@ class ControllerTemplate{
 	
 	//Intercept Request Rules before load
 	public function interceptRequest($request){
+		
 		//Check if hotel as Working 
 		if($this->hotel->get_HotelStatus()){
 			
@@ -41,7 +42,6 @@ class ControllerTemplate{
 			
 			if($this->hotelModel->get_HotelInstall()){
 				if(get_class($this) != 'Install'){
-					
 					call_user_func_array([new $this($this->hotelConection),$request->get_DecodeAction()],$request->get_DecodeParams());
 				}else{
 					call_user_func_array([new Not_Found($this->hotelConection),'default'],array());

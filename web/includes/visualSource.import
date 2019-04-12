@@ -20,7 +20,32 @@ echo "\n\t\t";
 echo get_class($this) != 'Account' || get_class($this) != 'Register' || get_class($this) == 'Install' ? "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/boxes.css' type='text/css' rel='stylesheet'/>" : "";
 echo "\n\t\t";
 echo get_class($this) == 'Account' || get_class($this) == 'Register' || get_class($this) == 'Install' ? "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/process.css' type='text/css' rel='stylesheet'/>" : "";
+
+//Habbo Home CSS Content
+echo "\n\n\t\t";
+echo get_class($this) == 'Home' ? "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/myhabbo/myhabbo.css' type='text/css' rel='stylesheet'/>" : "";
 echo "\n\t\t";
+echo get_class($this) == 'Home' ? "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/myhabbo/boxes.css' type='text/css' rel='stylesheet'/>" : "";
+echo "\n\t\t";
+echo get_class($this) == 'Home' ? "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/myhabbo/assets.css' type='text/css' rel='stylesheet'/>" : "";
+echo "\n\t\t";
+echo get_class($this) == 'Home' ? "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/myhabbo/skins.css' type='text/css' rel='stylesheet'/>" : "";
+echo "\n\t\t";
+echo get_class($this) == 'Home' ? "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/myhabbo/buttons.css' type='text/css' rel='stylesheet'/>" : "";
+echo "\n\t\t";
+
+if(get_class($this) == 'Home'){
+		echo "
+		<style>
+			#playground, #playground-outer {
+				width: 928px;
+				height: 1360px;
+			}
+		</style>
+
+		";
+}
+
 
 
 //Custom CSS Content
@@ -74,15 +99,30 @@ echo "\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/builder.js'></script>";
 echo "\n\t\t";
 
+//Habbo Home Javascript Content
+echo get_class($this) == 'Home' ? "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/myhabbo/myhabbo.js'></script>" : "";
+echo "\n\t\t";
+echo get_class($this) == 'Home' ? "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/myhabbo/effects.js'></script>" : "";
+echo "\n\t\t";
+echo get_class($this) == 'Home' ? "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/myhabbo/homeauth.js'></script>" : "";
+echo "\n\t\t";
+
+//Default Javascript Load
 echo"
 		<script language='JavaScript' type='text/javascript'>
 			window.onload = function(){ advertisementLoad(); }
 		</script>
+		
+
 ";
 
 
-
 ?>
+
+
+<script type="text/javascript">
+document.observe("dom:loaded", function() { initView(4); });
+</script>
 
 
 

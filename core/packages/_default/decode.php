@@ -97,7 +97,28 @@ class Decode{
 		
 		//Special Cases of URL Routes
 		switch($request[0]){
-			
+			case 'home':
+				//Disable url access by id
+				if(isset($request[1]) && $request[1] == 'id'){
+					if(count($request) != 2){
+						$request = null;
+					}else{
+						$request[2] = 'id';
+						$request[1] = 'name';
+						
+					}
+				}else{
+					//Re-order url [ $url_request/home/id/%id ]
+					if(count($request) == 3 && (is_numeric($request[1]) && $request[2] == 'id')){
+						$request[2] = $request[1]; 
+						$request[1] = 'id';
+					//Enable url access by name [ $url_request/home/%name ]
+					}elseif(count($request) == 2){
+						$request[2] = $request[1];
+						$request[1] = 'name';
+					}
+				}
+				break;
 		}
 		return $request;
 	}

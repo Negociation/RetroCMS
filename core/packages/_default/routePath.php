@@ -34,7 +34,6 @@ class RoutePath{
 	
 	
 	public function load(){
-		
 		//Create a object loadController
 		$loadController = $this->urlDecode->get_DecodeController();
 		call_user_func_array([new $loadController($this->hotelConection),'interceptRequest'],array($this->urlDecode));
