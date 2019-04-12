@@ -16,8 +16,164 @@ require_once('./web/includes/modules/headers/default.viewpart');
 
 ?>
 
-<center><br> <b> WARNING: Beta Preview, only for test. </b><br></center>
-
+					<div id="page-headline">
+						<div id="page-headline-breadcrums">
+						</div>
+						<div id="page-headline-text">Habbo Homes</div>
+					</div>
+					<table border="0" cellpadding="0" cellspacing="0" width="100%" class="content-2col">
+					<tr>
+						<td style="width: 8px;"></td>
+						<td valign="top" style="width: 225px;" class="habboPage-col">
+							<div class="v3box orange">
+								<div class="v3box-top">
+									<h3>	
+										Como usar este treco?
+									</h3>
+								</div>
+								<div class="v3box-content">
+									<div class="v3box-body">
+										Usar é fácil, basta seguir as instruções. Depois, treinar na sua Habbo Home. Para usá-la, você deve entrar no Hotel.<br>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="v3box-bottom">
+									<div></div>
+								</div>
+							</div>
+							<div class="v3box blue">
+								<div class="v3box-top">
+									<h3>Procura alguem?</h3>
+								</div>
+								<div class="v3box-content">
+									<div class="v3box-body">
+										<img vspace="3" hspace="3" border="0" align="left" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/stickers/nail2.gif" alt="">Para encontrar Habbo Home de seu amigo, escreva-a no fim da URL.<br/><br/>Por exemplo:<br/><br/><span style="font-weight: bold;"><?php echo $this->hotel->get_hotelURL(); ?>/home/x</span><br/>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="v3box-bottom">
+									<div></div>
+								</div>
+							</div>
+							<div class="v3box blue">
+								<div class="v3box-top">
+									<h3>Recently renovated</h3>
+								</div>
+								<div class="v3box-content">
+									<div class="v3box-body">
+									<img vspace="5" hspace="5" border="0" align="right" src="<?php echo $this->hotel->get_hotelURL(); ?>/c_images/album1356/Habbo_with_calendar_001.gif" alt="">
+										These Habbo Homes have just been updated. Check them out now, now I say!<br/><br/>
+										
+										<!-- Include Habbo Homes Updated List Module -->
+										<?php include('./web/includes/modules/home_sidebar.viewpart'); ?>	
+										
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="v3box-bottom">
+									<div></div>
+								</div>
+							</div>
+							<div class="v3box blue">
+								<div class="v3box-top">
+									<h3>Habbo Credits</h3>
+								</div>
+								<div class="v3box-content">
+									<div class="v3box-body">
+										<img vspace="5" hspace="5" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/common/habbo_purse_big_64.gif" alt="">Habbo Credits: they are great. <br/><br/>You can buy new stickers and backgrounds for your Habbo Home with them!<br/><br/><a target="_self" href="<?php echo $this->hotel->get_HotelURL(); ?>/credits">More about Habbo Credits</a><br/>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="v3box-bottom">
+									<div></div>
+								</div>
+							</div>
+						</td>
+						<td valign="top" style="width: 520px;" class="habboPage-col rightmost">
+							<div class="nobox">
+								<div class="nobox-content">
+									<div align="center">
+										<object width="520" height="353" align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" id="home_landingpage">
+											<param name="allowScriptAccess" value="sameDomain"/>
+											<param name="movie" value="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1740/home_landingpage.swf"/>
+											<param name="quality" value="high"/>
+											<param name="bgcolor" value="#47839d"/>
+											<embed width="520" height="353" align="middle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1740/home_landingpage.swf" quality="high" bgcolor="#47839d" name="home_landingpage" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"/>
+										</object>
+									</div>
+								</div>
+							</div>
+							<div class="v3box blue">
+								<div class="v3box-top">
+								
+									<h3>Getting (the party) started</h3>
+								</div>
+								<div class="v3box-content">
+									<div class="v3box-body">
+									<center>
+										<table width="470">
+											<tbody>
+												<tr>
+													<td width="130"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1740/step01.gif" alt=""></td>
+													<td width="170"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1740/step02.gif" alt=""></td>
+													<td width="170"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1740/step03.gif" alt=""></td>
+												</tr>
+												<tr>
+													<td valign="top"><a href="<?php echo $this->hotel->get_HotelURL(); ?>/account/login">Log in</a> to Habbo through the toolbar.<br/></td>
+													<td valign="top">Click the 'view your Habbo Home page' link.<br/></td>
+													<td valign="top">Click the 'edit' button to edit your Habbo Home. <br/></td>
+												</tr>
+											</tbody>
+										</table>
+										</center>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="v3box-bottom">
+									<div></div>
+								</div>
+							</div>
+							<div class="v3box blue">
+								<div class="v3box-top">
+									<h3>Stick these on your Habbo Home!</h3>
+								</div>
+								<div class="v3box-content">
+									<div class="v3box-body">
+										These are just four of the many great stickers you can buy for your Habbo Home:<br/><br/>
+										<img vspace="10" hspace="10" border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/stickers/sticker_heartbeat.gif" alt="">
+										<img vspace="10" hspace="10" border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/stickers/sticker_bobbaskull.gif" alt="">
+										<img vspace="10" hspace="10" border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/stickers/sticker_cactus_anim.gif" alt="http://images.habbohotel.co.uk/c_images/stickers/sticker_cactus_anim.gif"/> <img vspace="10" hspace="10" border="0" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/stickers/sticker_moonpig.gif" alt="">
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="v3box-bottom">
+									<div></div>
+								</div>
+							</div>
+						</td>
+						<td rowspan="2" style="width: 4px;"></td>
+						 <td rowspan="2" valign="top" style=" margin-left: 4px; width: 176px;">
+							<div id="ad_sidebar">
+							   <div class="cooperation">
+								  <table height="120" width="168" valign="middle" align="center" border="0" cellpadding="0" cellspacing="0" background="<?php echo $this->hotel->get_HotelWeb() ?>/c_images/themes/partner_box.gif">
+									 <tbody>
+										<tr>
+										   <td>
+										   <!--Advertisement Box if as enabled-->
+										   <?php include('./web/includes/modules/advertisement_box.viewpart'); ?>										   
+										   </td>
+										</tr>
+									 </tbody>
+								  </table>
+							   </div>
+							   <!--Advertisement Right if as enabled-->
+							   <?php include('./web/includes/modules/advertisement_right.viewpart'); ?>
+							</div>
+						 </td>
+					  </tr>
+				   </tbody>
+				</table>
+				<br style="clear: both;"/>
 <?php
 //Include Footer Content()
 require_once('./web/includes/modules/footers/default.viewpart'); 
