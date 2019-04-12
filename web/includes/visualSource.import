@@ -38,7 +38,7 @@ if(get_class($this) == 'Home'){
 		echo "
 		<style>
 			#playground, #playground-outer {
-				width: 928px;
+				width: 915px;
 				height: 1360px;
 			}
 		</style>

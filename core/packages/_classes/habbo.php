@@ -62,6 +62,15 @@ class Habbo extends ClassTemplate{
 	public function get_HabboName(){
 		return $this->habboName;
 	}
+
+	public function get_HabboId(){
+		return $this->habboId;
+	}
+	
+	public function get_isHomeVisible(){
+		return true;
+	}
+	
 	
 	
 	

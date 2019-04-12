@@ -33,6 +33,9 @@ require_once('./web/includes/modules/headers/default.viewpart');
 							</div>
 						</div>
 						<div id="mypage-top-spacer"></div>
+							<!-- Include Home Box-Content -->
+							<?php include('./web/includes/modules/home_editcontent.viewpart'); ?>
+							
 						<div id="mypage-bg" class="<?php echo $this->homeObject->get_background()?>">
 							<div id="mypage-ad">
 								<!--Advertisement Right if habbo doesnt have HC -->

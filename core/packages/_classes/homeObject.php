@@ -20,11 +20,13 @@ class HomeObject extends ClassTemplate{
 	protected $background;
 	protected $widgetsArray  = [];
 	protected $stickersArray = []; 
-
+	protected $homeStatus;
+	
 	/** DAO CONSTRUCT **/
 	public function constructObject($habboObject){
 		$this->habboObject = $habboObject;
 		$this->background = 'b_hc_bg_machine';
+		$this->homeStatus = 'view';
 	}	
 	
 	/** GETS **/
@@ -44,6 +46,9 @@ class HomeObject extends ClassTemplate{
 		return $this->background;
 	}
 
+	public function get_homeStatus(){
+		return $this->homeStatus;
+	}
 	
 }
 ?>

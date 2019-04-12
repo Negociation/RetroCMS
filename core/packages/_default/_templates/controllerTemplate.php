@@ -20,11 +20,19 @@ class ControllerTemplate{
 	protected $habboModel;		
 	protected $hotel;
 	protected $hotelModel;
-	
+	protected $bodyId;
 	
 	public function get_ViewTitle(){
 		return $this->pageTitle;
 	}
+	
+	public function get_ViewBody(){
+		return $this->bodyId;
+	}
+	
+	public function set_ViewBody($bodyId){
+		$this->bodyId = $bodyId;
+	}	
 	
 	//View Name Constraint
 	public function set_MethodName($name){

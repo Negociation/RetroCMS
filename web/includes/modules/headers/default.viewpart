@@ -20,7 +20,7 @@
 		<!-- IMPORT LAYOUT CONTENT(CSS/JS) -->
 		<?php require_once('./web/includes/visualSource.import'); ?>
 	</head>
-	<body id="home">
+	<body id="<?php echo $this->get_viewBody(); ?>">
         <div id="overlay"></div>
         <h1 id="main-header"><?php echo $this->hotel->get_HotelNick();?></h1>
         <div id="wrapper">

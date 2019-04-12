@@ -1,0 +1,32 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.0 ( Aquamarine ) 					    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+if(!$this->habbo->get_isHabboLoggedIn() && $this->homeObject->get_homeStatus() == 'edit'){	
+	echo '
+		<div id="header-bar-outer">
+			<div id="header-bar" class="box dark">
+				<div class="box-header"><div></div></div>
+					<div class="box-body">
+						<div class="box-content" style="height: 16px;">
+							<a href="#" id="inventory-button" class="toolbutton inventory"><span>Inventory</span></a>
+							<a href="#" id="webstore-button" class="toolbutton webstore"><span>Web Store</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+	'; 	
+}
+
+?>
+
+
