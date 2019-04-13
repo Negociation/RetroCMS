@@ -41,7 +41,7 @@ class Index extends ControllerTemplate{
 		//If Logged In
 		if($this->habboModel->get_SessionStatus($this->habbo->get_habboSession())){
 			$this->habbo = $this->habboModel->get_HabboObject($this->habbo->get_HabboId(),1);
-			$this->habbo->set_isHabboLoggedIn('true');
+			$this->habbo->set_isHabboLoggedIn(true);
 		}else{
 			$this->habbo->set_isHabboLoggedIn(false);		
 		}

@@ -47,19 +47,21 @@ class HabboModel extends ModelTemplate{
 		}
 	}
 	
+	
+	//Get habbo session
 	public function get_SessionStatus($sessionData){
-		
-		//Remove That Later
-		//$sessionData[0] = '1';
-		//$sessionData[1] = 'ola';	
-		
+		//If recieved session data 
 		if(!$sessionData){
 			return false;
 		}else{
+			//MySQL Query
 			$resultQuery = $this->getById('site_sessions',$sessionData[1]) ? $this->getById('site_sessions',$sessionData[1]) : false;
+			
+			//If not found a ticked
 			if(!$resultQuery){
 				return false;
 			}else{
+				//If founded ticket and not expired yet 
 				if(date($resultQuery[2]) <= date('Y-m-d h:i:s', strtotime('+12 hours')) && ($sessionData[0] == $resultQuery[1])){	
 					return true;
 				}else{
@@ -68,7 +70,54 @@ class HabboModel extends ModelTemplate{
 			}
 		}
 	}
+	
+	//Set Habbo Login
+	public function set_habboLogin($testObject){
+
+		//New Habbo
+		$habboObject = new Habbo();
+		
+		//Get all content from table (users) where Column(username) as equal habboObject username
+		$resultQuery = $this->getByParam('users','username',$testObject->get_HabboName());
+		
+		//If found the habbo
+		if(count($resultQuery) == 1){
+			$habboObject->constructObject($resultQuery['id'],$resultQuery[0]['username'],$resultQuery[0]['password'],$resultQuery[0]['rank'],$resultQuery[0]['figure'],$resultQuery[0]['sex'],$resultQuery[0]['credits'],array($resultQuery[0]['club_subscribed'],$resultQuery[0]['club_expiration'],count($this->getByParam('users_club_gifts','user_id',$resultQuery[0]['id']))),$resultQuery[0]['user_language']);
+
+			//Check if password match
+			if(sodium_crypto_pwhash_str_verify($habboObject->get_HabboPassword(), $testObject->get_HabboPassword())){
+				
+				//If Habbo have a permanent ban
+				if($habboObject->get_HabboRank == 0){
+					//Habbo have been 
+					return array(false,4);	
+					exit;
+				}else {
+					//Habbo have been temporary banned
+					//$resultQuery = $this->getByParam();
+					if(true){
+					return array(false,3);	
+					exit;
+					}
+				}
+			}else{
+				//Password wrong
+				return array(false,2);
+				exit;
+			}
+			
+		}else{
+			//Habbo not exists
+			return array(false,1);
+			exit;
+		}
+		//If everthing ok just return true no-problem with habbo
+		return array(true,0);
+	}
 
 
+	public function get_validTicket(){
+			
+	}
 }
 ?>

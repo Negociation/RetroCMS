@@ -17,9 +17,19 @@
 require_once('./core/core.php');
 
 // + Start Session "habboWebsite"
-// - Desc: Sessions for Website 
+// - Desc: Sessions for Website
 session_id("habboWebsite");
-session_start();
+session_start();	
+
+// + Destroy Session "habboWebsite" if timeout 
+// - Desc: Sessions for Website
+if (isset($_SESSION['habboLastActivity']) && ($_SERVER['REQUEST_TIME'] - $_SESSION['habboLastActivity']) > 10800) {
+	session_unset();
+	session_destroy();
+	session_id("habboWebsite");
+	session_start();		
+}
+
 
 // + Load the Destination Content
 // - Desc: Created a Object of RoutePath and Called function Load

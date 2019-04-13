@@ -62,6 +62,9 @@ class Habbo extends ClassTemplate{
 			//If logged set the ID
 			$this->habboId = $_SESSION['habboLoggedId'];
 			
+			// + Set New Timeout for "habboWebsite"
+			$_SESSION['habboLastActivity'] = $_SERVER['REQUEST_TIME'];
+			
 			//Return Array
 			return array($_SESSION['habboLoggedId'],$_SESSION['habboLoggedToken']);
 		}else{
