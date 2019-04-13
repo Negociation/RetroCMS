@@ -16,6 +16,11 @@
 ini_set('max_execution_time', 300); 
 
 
+// + Setting Default Cookie Mode
+// - Desc: Preveting XSS Atacks
+ini_set('session.cookie_httponly', 1);
+
+
 // + Include Default
 // - Desc: Include all default classes for MVC model
 foreach (glob("./core/packages/_default/*.php") as $default){ require_once $default; }

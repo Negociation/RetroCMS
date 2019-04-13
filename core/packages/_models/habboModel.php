@@ -82,25 +82,26 @@ class HabboModel extends ModelTemplate{
 		
 		//If found the habbo
 		if(count($resultQuery) == 1){
-			$habboObject->constructObject($resultQuery['id'],$resultQuery[0]['username'],$resultQuery[0]['password'],$resultQuery[0]['rank'],$resultQuery[0]['figure'],$resultQuery[0]['sex'],$resultQuery[0]['credits'],array($resultQuery[0]['club_subscribed'],$resultQuery[0]['club_expiration'],count($this->getByParam('users_club_gifts','user_id',$resultQuery[0]['id']))),$resultQuery[0]['user_language']);
-
+			$habboObject->constructObject($resultQuery[0]['id'],$resultQuery[0]['username'],$resultQuery[0]['password'],$resultQuery[0]['rank'],$resultQuery[0]['figure'],$resultQuery[0]['sex'],$resultQuery[0]['credits'],array($resultQuery[0]['club_subscribed'],$resultQuery[0]['club_expiration'],count($this->getByParam('users_club_gifts','user_id',$resultQuery[0]['id']))),$resultQuery[0]['user_language']);
 			//Check if password match
 			if(sodium_crypto_pwhash_str_verify($habboObject->get_HabboPassword(), $testObject->get_HabboPassword())){
-				
 				//If Habbo have a permanent ban
-				if($habboObject->get_HabboRank == 0){
+				if($habboObject->get_HabboRank() == 0){
 					//Habbo have been 
 					return array(false,4);	
 					exit;
 				}else {
-					//Habbo have been temporary banned
-					//$resultQuery = $this->getByParam();
+					//Habbo have been temporary banned (TODO)
+					/*
+					$resultQuery = $this->getByParam();
 					if(true){
 					return array(false,3);	
 					exit;
 					}
+					*/
 				}
 			}else{
+				
 				//Password wrong
 				return array(false,2);
 				exit;
@@ -112,6 +113,8 @@ class HabboModel extends ModelTemplate{
 			exit;
 		}
 		//If everthing ok just return true no-problem with habbo
+		$sessionToken = 'ola';
+		$habboObject->set_habboSession($sessionToken);
 		return array(true,0);
 	}
 

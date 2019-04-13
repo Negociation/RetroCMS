@@ -80,6 +80,14 @@ class Habbo extends ClassTemplate{
 		return $this->habboName;
 	}
 
+	public function get_HabboPassword(){
+		return $this->habboPassword;
+	}
+
+	public function get_HabboRank(){
+		return $this->habboRank;
+	}
+	
 	public function get_HabboCredits(){
 		return 0;
 	}
@@ -91,6 +99,7 @@ class Habbo extends ClassTemplate{
 	public function get_HabboClub(){
 		return 0;
 	}
+
 	
 	public function get_isHomeVisible(){
 		return true;
@@ -101,6 +110,31 @@ class Habbo extends ClassTemplate{
 		//Set the logged status
 		$this->habboLoggedStatus = $status;
 	}
+	
+	public function set_HabboSession($sessionToken){
+		$_SESSION['habboLoggedId'] = $this->habboId;
+		$_SESSION['habboLoggedToken'] = $sessionToken;
+	}
+
+	public function set_HabboLogout(){
+		//Destroy Session
+		session_unset();
+		session_destroy();
+	}
+	
+	public function set_HabboName($param){
+		$this->habboName = $param;
+	}
+	
+	
+	public function set_HabboPassword($param){
+		if(strlen($param) >= 6){
+			$this->habboPassword = $param;
+		}else{
+			$this->habboPassword = null;	
+		}
+	}
+	
 	
 }
 ?>

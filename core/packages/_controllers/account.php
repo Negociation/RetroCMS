@@ -69,7 +69,43 @@ class Account extends ControllerTemplate{
 	/* Submit View Call */	
 	protected function submit(){
 		if($_SERVER['REQUEST_METHOD'] == 'POST' && !$this->habbo->get_isHabboLoggedIn()){
-			echo 'Validating Username...';
+			
+			//Add username and password from POST fields to Habbo Object
+			$this->habbo->set_HabboName(isset($_POST['login-username']) ? $_POST['login-username'] : '');
+			$this->habbo->set_HabboPassword(isset($_POST['login-password']) ? $_POST['login-password'] : '');
+			
+			//Recieve the result of habbo login
+			$requestStatus = $this->habboModel->set_HabboLogin($this->habbo);
+			//The request return True , so Login is valid
+			if ($requestStatus){				
+				//If login hasn't a target ( like client )just redirect to Index
+				if (!isset($_POST['target'])){
+					header('Location: ../');
+					exit;
+				}else{
+					switch($_POST['target']){
+						case 'habboClient': 
+							header('Location: ../client');
+							break;
+						case 'clubSubscribe': 
+							header('Location: ../club/join');
+							break;
+						default:
+							header('Location: ../');
+							break;
+					}
+				}
+			
+			}else{
+
+				//The request returned Login or Password Wrong
+				if(!is_array($requestStatus[1])){
+					
+				}else{
+					//habbo Banned (comming soon)
+				}
+			}
+
 			exit;
 		}else{
 			header('Location: ../');

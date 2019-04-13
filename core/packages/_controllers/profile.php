@@ -53,10 +53,11 @@ class Profile extends ControllerTemplate{
 		//Set Page Title;
 		$this->pageTitle = "Habbo";
 		if($this->habbo->get_isHabboLoggedIn()){
-			echo 'Profile';
+			echo 'Profile ~ Not Ready Yet';
 			exit;
 		}else{
-			echo 'You must login first...';
+			header('Location: ../');
+			exit;
 		}
 	}
 }
