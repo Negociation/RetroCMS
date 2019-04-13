@@ -50,5 +50,10 @@ class HomeObject extends ClassTemplate{
 		return $this->homeStatus;
 	}
 	
+	/** SETS **/
+	public function set_homeMode($mode){
+		$this->homeStatus = $mode;
+	}
+	
 }
 ?>

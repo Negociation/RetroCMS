@@ -11,7 +11,7 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-if(!$this->habbo->get_isHabboLoggedIn() && $this->homeObject->get_homeStatus() == 'edit'){	
+if($this->habbo->get_isHabboLoggedIn() && $this->homeObject->get_homeStatus() == 'edit'){	
 	echo '
 		<div id="header-bar-outer">
 			<div id="header-bar" class="box dark">
@@ -19,7 +19,11 @@ if(!$this->habbo->get_isHabboLoggedIn() && $this->homeObject->get_homeStatus() =
 					<div class="box-body">
 						<div class="box-content" style="height: 16px;">
 							<a href="#" id="inventory-button" class="toolbutton inventory"><span>Inventory</span></a>
-							<a href="#" id="webstore-button" class="toolbutton webstore"><span>Web Store</span></a>
+							<a href="#" id="webstore-button" class="toolbutton webstore"><span>Webstore</span></a>
+							<form action="#" method="get">
+								<a href="#" id="cancel-button" class="toolbutton cancel"><span>Cancel</span></a>
+								<a href="#" id="save-button" class="toolbutton save"><span>Save</span></a>
+							</form>
 						</div>
 					</div>
 				</div>

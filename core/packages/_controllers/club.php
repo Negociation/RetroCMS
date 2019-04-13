@@ -22,13 +22,22 @@ class Club extends ControllerTemplate{
 		$this->hotelConection = $hotelConection;
 		
 		//Generic Models
-		$this->hotelModel = new hotelModel($hotelConection);
-		
+		$this->hotelModel = new hotelModel($this->hotelConection);
+		$this->habboModel = new habboModel($this->hotelConection);
+
 		//Get Hotel Object
 		$this->hotel = $this->hotelModel->get_HotelObject();
 		
 		//New Habbo Object
 		$this->habbo = new Habbo();
+
+		//If Logged In
+		if($this->habboModel->get_SessionStatus($this->habbo->get_habboSession())){
+			$this->habbo = $this->habboModel->get_HabboObject($this->habbo->get_HabboId(),1);
+			$this->habbo->set_isHabboLoggedIn(true);
+		}else{
+			$this->habbo->set_isHabboLoggedIn(false);		
+		}
 		
 	}
 	

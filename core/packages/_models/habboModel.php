@@ -47,6 +47,27 @@ class HabboModel extends ModelTemplate{
 		}
 	}
 	
+	public function get_SessionStatus($sessionData){
+		
+		//Remove That Later
+		//$sessionData[0] = '1';
+		//$sessionData[1] = 'ola';	
+		
+		if(!$sessionData){
+			return false;
+		}else{
+			$resultQuery = $this->getById('site_sessions',$sessionData[1]) ? $this->getById('site_sessions',$sessionData[1]) : false;
+			if(!$resultQuery){
+				return false;
+			}else{
+				if(date($resultQuery[2]) <= date('Y-m-d h:i:s', strtotime('+12 hours')) && ($sessionData[0] == $resultQuery[1])){	
+					return true;
+				}else{
+					return false;
+				}
+			}
+		}
+	}
 
 
 }
