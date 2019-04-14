@@ -21,7 +21,7 @@ if($this->habbo->get_isHabboLoggedIn()){
 		$arrowPos = ((31 - $this->habbo->get_HabboClub(3)) * 5 ) + 52;
 
 		//Check if habbo get any prepaid period
-			if($this->habbo->get_HabboClub(3) > 31 ){	
+			if($this->habbo->get_HabboClub(4) > 0 ){	
 				echo '	
 					<div id="subscription-meter-box">
 						<div id="pastmonthsVal">'.$this->habbo->get_HabboClub(5).'</div> 

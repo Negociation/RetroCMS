@@ -110,23 +110,19 @@ class Habbo extends ClassTemplate{
 			
 			//If habbo have hc days left (with prepaid periods)
 			case 2:
-				return   ((new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a")) > 0 ?(new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a") : 1;
+				return ($this->habboClub[1] - $_SERVER['REQUEST_TIME'] )> 0  ?  ceil(($this->habboClub[1] - $_SERVER['REQUEST_TIME'])/86400) : 0;
 				break;
 				
-			//Days left from the current pre-paid period (1 month)
+			//Days left from the current period (1 month)
 			case 3:
-				return ceil(((new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a") )/ 31);
+				return $this->get_habboClub(2)%31;
 				break;			
 			
 			
 			
 			//Pre-paid peridods
 			case 4:
-				$calc = (new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a");
-				$calc = $calc % 31;
-				$calc = (new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a") - $calc;
-				$calc = $calc/31;
-				return($calc);
+				return ($this->get_habboClub(2) - $this->get_habboClub(3)) / 31;
 			break;
 			
 			//Elapsed Periods
@@ -141,7 +137,7 @@ class Habbo extends ClassTemplate{
 					return($this->habboClub[2]);
 				}
 			break;
-			
+			//Get HC Ending TIME
 			case 6:
 				return (new DateTime(date("Y-m-d",$this->habboClub[1])))->format('d-m-Y');
 				break;
