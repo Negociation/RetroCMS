@@ -89,15 +89,65 @@ class Habbo extends ClassTemplate{
 	}
 	
 	public function get_HabboCredits(){
-		return 0;
+		return $this->habboCredits;
 	}
 
 	public function get_HabboFigure(){
 		return 0;
 	}
 
-	public function get_HabboClub(){
-		return 0;
+	public function get_HabboClub($requestId){
+		switch($requestId){
+			
+			//If habbo have been part of HC
+			case 1:
+				if($this->habboClub[0]>0){
+					return true;
+				}else{
+					return false;
+				}
+				break;
+			
+			//If habbo have hc days left (with prepaid periods)
+			case 2:
+				return   ((new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a")) > 0 ?(new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a") : 1;
+				break;
+				
+			//Days left from the current pre-paid period (1 month)
+			case 3:
+				return ceil(((new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a") )/ 31);
+				break;			
+			
+			
+			
+			//Pre-paid peridods
+			case 4:
+				$calc = (new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a");
+				$calc = $calc % 31;
+				$calc = (new DateTime(date("Y-m-d",$this->habboClub[1])))->diff(new DateTime(date("Y-m-d")))->format("%a") - $calc;
+				$calc = $calc/31;
+				return($calc);
+			break;
+			
+			//Elapsed Periods
+			case 5:
+				if($this->get_HabboClub(1)){
+					if($this->habboClub[2]-1 >= 0){
+						return ($this->habboClub[2]-1);
+					}else{
+						return 0;	
+					}
+				}else{
+					return($this->habboClub[2]);
+				}
+			break;
+			
+			case 6:
+				return (new DateTime(date("Y-m-d",$this->habboClub[1])))->format('d-m-Y');
+				break;
+		}
+	
+			
 	}
 
 	

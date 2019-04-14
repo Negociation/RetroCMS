@@ -62,21 +62,30 @@ require_once('./web/includes/modules/headers/default.viewpart');
 															<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/piccolo_happy.gif" alt="" align="left" style="margin:10px;"/>
 															<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/hcclick_trnsprnt.gif" alt="" align="right"/>
 															<p><span class="lang-hcjoin-joinDesc">Olá. O Habbo Club é massa. Tem Mobis, roupas e emoções fortes por 25 Moedas.</span></p>
+															
 															<div id="subscription-divider">
-																<div >
+															<!-- Include Habbo Club Status Module Content -->
+															<?php if(( $this->habbo->get_isHabboLoggedIn() && $this->habbo->get_HabboClub(1)) || (!$this->habbo->get_isHabboLoggedIn())){
+																echo'
+																<div>
 																	<div class="content-beige">
 																		<div class="content-beige-body">
-																			  <!-- Include Habbo Club Status Module Content -->
-																			  <?php include('./web/includes/modules/club_status.viewpart'); ?>
+																';
+																
+																include('./web/includes/modules/club_status.viewpart');
 
+																echo '
 																			<div class="clear"></div>
 																		</div>
-																	</div>
+																	</div>																
 																	<div class="content-beige-bottom">
 																		<div class="content-beige-bottom-body"></div>
 																	</div>
 																</div>
+																';
 																
+																}
+															?>
 															</div>
 															<!-- Include Habbo Club Join Module Content -->
 															<?php include('./web/includes/modules/club_join.viewpart'); ?>

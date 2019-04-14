@@ -120,9 +120,16 @@ echo"
 ?>
 
 
+
 <script type="text/javascript">
 document.observe("dom:loaded", function() { initView(4); });
 </script>
+
+<script src="https://classichabbo.com/web-gallery/static/js/libs2.js" type="text/javascript"></script>
+<script src="https://classichabbo.com/web-gallery/static/js/visual.js" type="text/javascript"></script>
+<script src="https://classichabbo.com/web-gallery/static/js/libs.js" type="text/javascript"></script>
+<script src="https://classichabbo.com/web-gallery/static/js/common.js" type="text/javascript"></script>
+<script src="https://classichabbo.com/web-gallery/static/js/fullcontent.js" type="text/javascript"></script>
 
 
 
