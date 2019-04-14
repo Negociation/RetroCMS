@@ -42,6 +42,11 @@ class Client extends ControllerTemplate{
 		if($this->habboModel->get_SessionStatus($this->habbo->get_habboSession())){
 			$this->habbo = $this->habboModel->get_HabboObject($this->habbo->get_HabboId(),1);
 			$this->habbo->set_isHabboLoggedIn(true);
+			
+			//Set Client Ticket
+			$this->habbo->set_habboTicket($this->habboModel->get_ValidTicket('ST',$this->habbo));
+			$this->habboModel->set_habboTicket('ST',$this->habbo);
+			
 		}else{
 			$this->habbo->set_isHabboLoggedIn(false);		
 		}

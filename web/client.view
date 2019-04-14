@@ -67,7 +67,6 @@
 		</div>
 		<div>
 		<?php 
-		
 			echo"
 			
 			<object classid='clsid:166B1BCA-3F9C-11CF-8075-444553540000' codebase='https://download.macromedia.com/pub/shockwave/cabs/director/sw.cab#version=10,8,5,1,0' id='habbo' width='720' height='540'>

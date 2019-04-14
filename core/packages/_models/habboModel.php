@@ -60,11 +60,10 @@ class HabboModel extends ModelTemplate{
 			//If not found a ticked
 			if(!$resultQuery){
 				return false;
-			}else{
-				
+			}else{				
 				//If founded ticket and not expired yet 
-				if( date('Y-m-d h:i:s', strtotime('+12 hours')) < date($resultQuery[2]) &&( $resultQuery[0] == $sessionData[0])){
-					return true;	
+				if( date('Y-m-d h:i:s', strtotime('+12 hours')) < date($resultQuery[2]) && ($resultQuery[1] == $sessionData[0])){
+					return true;
 				}else{
 					return false;
 				}
@@ -120,8 +119,55 @@ class HabboModel extends ModelTemplate{
 	}
 
 
-	public function get_validTicket(){
+	//Return a valid Habbo Ticket
+	public function get_ValidTicket($type,$habboObject){
+		$uniqueTicket = true;
+		switch($type){
 			
+			//Login Ticket
+			case 'LT':
+				$resultQuery = $this->getColumn('site_sessions','id');
+				if (count($result) > 0){
+					$uniqueTicket = true;
+					do{
+						$ramdomTicket = 'LT-'.rand (100000 , 999999 ).'-'.bin2hex(random_bytes(10)).'-'.strtolower($habboObject->get_HabboLanguage()).'-fe2';
+						foreach($resultQuery as $existingTicket){
+							if($ramdomTicket == $existingTicket){
+								$uniqueTicket = false;
+							}
+						}
+					}while($uniqueTicket == false);
+				}
+				break;
+				
+			//Server Ticket
+			case 'ST':
+				$result = $this->getColumn('users','sso_ticket');
+				if (count($result) > 0){
+					$uniqueTicket = true;
+					do{
+						$ramdomTicket = 'ST-'.rand (100000 , 999999 ).'-'.bin2hex(random_bytes(10)).'-'.strtolower($habboObject->get_HabboLanguage()).'-fe2';
+						foreach($result as $existingTicket){
+							if($ramdomTicket == $existingTicket){
+								$uniqueTicket = false;
+							}
+						}
+					}while($uniqueTicket == false);
+				
+				}
+				break;
+		}
+		return $ramdomTicket;
+	}
+	
+	public function set_HabboTicket($type,$habboObject){
+		switch($type){
+			case 'LT':
+				break;
+			case 'ST':
+				return $this->setColumnById('users', 'sso_ticket', $habboObject->get_HabboId(), $habboObject->get_HabboTicket());
+				break;
+		}
 	}
 }
 ?>

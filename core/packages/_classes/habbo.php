@@ -27,6 +27,7 @@ class Habbo extends ClassTemplate{
 	protected $habboClub = [];
 	protected $habboBirth;
 	protected $habboLoggedStatus;
+	protected $habboTicket;
 	
 	public function __construct(){
 
@@ -97,7 +98,7 @@ class Habbo extends ClassTemplate{
 	}
 	
 	public function get_HabboTicket(){
-		return 0;
+		return $this->habboTicket;
 	}
 
 	public function get_HabboClub($requestId){
@@ -154,11 +155,22 @@ class Habbo extends ClassTemplate{
 	public function get_isHomeVisible(){
 		return true;
 	}
+	
+	public function get_habboLanguage(){
+		return $this->habboLanguage;
+	}
 
 	/** SETS **/
 	public function set_isHabboLoggedIn($status){
 		//Set the logged status
 		$this->habboLoggedStatus = $status;
+		
+		//If status as false so destroy session data for safety
+		if(!$status){
+			unset($_SESSION['habboLoggedId']);
+			unset($_SESSION['habboLoggedToken']);
+		}
+		
 	}
 	
 	public function set_HabboSession($sessionToken){
@@ -176,6 +188,9 @@ class Habbo extends ClassTemplate{
 		$this->habboName = $param;
 	}
 	
+	public function set_HabboTicket($param){
+		$this->habboTicket = $param;
+	}
 	
 	public function set_HabboPassword($param){
 		if(strlen($param) >= 6){

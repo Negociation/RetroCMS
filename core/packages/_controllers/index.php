@@ -43,7 +43,7 @@ class Index extends ControllerTemplate{
 			$this->habbo = $this->habboModel->get_HabboObject($this->habbo->get_HabboId(),1);
 			$this->habbo->set_isHabboLoggedIn(true);
 		}else{
-			$this->habbo->set_isHabboLoggedIn(false);		
+			$this->habbo->set_isHabboLoggedIn(false);
 		}
 		
 		//New Webpromo Object
