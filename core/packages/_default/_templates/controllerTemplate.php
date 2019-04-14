@@ -48,6 +48,9 @@ class ControllerTemplate{
 			//Set method name Constraint
 			$this->set_MethodName($request->get_DecodeAction());
 			
+			//Set_Deafult Body Id
+			$this->bodyId = 'home';
+			
 			if($this->hotelModel->get_HotelInstall()){
 				if(get_class($this) != 'Install'){
 					call_user_func_array([new $this($this->hotelConection),$request->get_DecodeAction()],$request->get_DecodeParams());

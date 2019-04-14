@@ -65,7 +65,11 @@ class Club extends ControllerTemplate{
 		$this->pageTitle = "Habbo";
 		include 'web/club/shop.view';	
 		exit;
-	}	
+	}
+	
+	protected function club_subscribe_form(){
+		echo 'lele';
+	}
 	
 }
 

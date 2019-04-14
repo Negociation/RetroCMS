@@ -83,7 +83,7 @@ if(!is_array($this->hotel->get_HotelCustom())){
 //Default Javascript Content
 echo"
 		<script language='JavaScript' type='text/javascript'>
-			var habboReqPath = '';
+			var habboReqPath = '".$this->hotel->get_HotelUrl()."';
 			var habboStaticFilePath = '".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery';
 			var habboImagerUrl = '/habbo-imaging/';
 			document.habboLoggedIn = '".$this->habbo->get_strHabboLoggedIn()."';
@@ -116,20 +116,22 @@ echo"
 
 ";
 
-
-?>
-
-
-
-<script type="text/javascript">
-document.observe("dom:loaded", function() { initView(4); });
-</script>
-
+//<script type="text/javascript">
+//document.observe("dom:loaded", function() { initView(4); });
+//</script>
+/*
 <script src="https://classichabbo.com/web-gallery/static/js/libs2.js" type="text/javascript"></script>
 <script src="https://classichabbo.com/web-gallery/static/js/visual.js" type="text/javascript"></script>
 <script src="https://classichabbo.com/web-gallery/static/js/libs.js" type="text/javascript"></script>
 <script src="https://classichabbo.com/web-gallery/static/js/common.js" type="text/javascript"></script>
 <script src="https://classichabbo.com/web-gallery/static/js/fullcontent.js" type="text/javascript"></script>
+*/
+
+?>
+
+
+
+
 
 
 

@@ -37,9 +37,9 @@ if($this->habbo->get_isHabboLoggedIn()){
 		<script>
 			function openClubSubscribe(id){
 				var dialog = createDialog("subscription_dialog", "Habbo Club", 9001, 0, -1000, closeSubscription);
-				appendDialogBody(dialog, "<p style=\"text-align:center\"><img src=\"<?php echo $this->hotel->get_HotelWeb() ?>/habboweb/16/11/web-gallery/progress_habbos.gif\" alt=\"\" /></p><div style=\"clear\"></div>", true);	
+				appendDialogBody(dialog, "<p style=\"text-align:center\"><img src=\"'.$this->hotel->get_HotelWeb().'/habboweb/17/16/web-gallery/progress_habbos.gif\" alt=\"\" /></p><div style=\"clear\"></div>", true);	
 				showOverlay();
-				new Ajax.Request("<?php echo $this->hotel->get_HotelURL() ?>/club/club_subscribe_form",{ 
+				new Ajax.Request("'.$this->hotel->get_HotelURL().'/club/club_subscribe_form",{ 
 					method: "post", parameters: "optionNumber="+encodeURIComponent(id), onComplete: function(req, json) {
 					setDialogBody(dialog, req.responseText);	
 					moveDialogToCenter(dialog);			
