@@ -12,6 +12,8 @@ a:link, a:visited, a:hover, a:active { color: #FE6301; text-decoration: none; }
 #content { margin: 0 0 0 26px; width: 683px; }
 #sidebar { background: transparent url(../images/sidebar.gif) top left no-repeat; height: 447px; position: absolute; right: 0; top: 108px; width: 131px; }
 #error { background-color: #FFD2A6; border: #c00 solid 2px; margin: 10px 10px 0 0; padding:10px; width: 300px; }
+#footer { margin: 0 0 0 26px; width: 683px; bottom:0;position: absolute; padding-bottom:10px }
+#footer-content { background-color: #f47a04; border: #ff870f solid 1px; margin: 10px 10px 0 0; padding:10px; width: 650px; color:#FFF; text-align: center; font-size: 10px;font-weight: bold;}
 
 /* opt */
 body#opt { background: #B4DEFF  url(../images/bg_opt.gif) top left repeat-y;  }

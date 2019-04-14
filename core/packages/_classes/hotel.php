@@ -47,7 +47,7 @@ class Hotel{
 		$this->hotelLanguage = $hotelLanguage;
 		$this->hotelClient = $hotelClient;
 		$this->hotelCustom = $hotelCustom;
-		//$this->hotelStatus = $hotelStatus;
+		$this->hotelStatus = $hotelStatus;
 		
 	}
 	

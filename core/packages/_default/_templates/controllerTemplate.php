@@ -43,7 +43,7 @@ class ControllerTemplate{
 	public function interceptRequest($request){
 		
 		//Check if hotel as Working 
-		if($this->hotel->get_HotelStatus()){
+		if($this->hotelModel->get_HotelInstall()){
 			
 			//Set method name Constraint
 			$this->set_MethodName($request->get_DecodeAction());
@@ -51,24 +51,26 @@ class ControllerTemplate{
 			//Set_Deafult Body Id
 			$this->bodyId = 'home';
 			
-			if($this->hotelModel->get_HotelInstall()){
+			if($this->hotelModel->get_HotelStatus()){
 				if(get_class($this) != 'Install'){
 					call_user_func_array([new $this($this->hotelConection),$request->get_DecodeAction()],$request->get_DecodeParams());
 				}else{
 					call_user_func_array([new Not_Found($this->hotelConection),'default'],array());
 				}
 			}else{
-				if(get_class($this) != 'Install'){					
-					header('Location: '.$this->hotel->get_HotelUrl().'/install/start');
-				}else{
-					call_user_func_array([$this($this->hotelConection),$request->get_DecodeAction()],$request->get_DecodeParams());
-				}
+								
+				$this->pageTitle = 'Maintenance Break';
+				include 'web/maintenance/index.view';	
+				exit;
 			}
 			
 		}else{
-			$this->pageTitle = 'Maintenance Break';
-			include 'web/maintenance/index.view';	
-			exit;
+			if(get_class($this) != 'Install'){		
+				header('Location: '.$this->hotel->get_HotelUrl().'/install/start');
+			}else{
+				call_user_func_array([new $this($this->hotelConection),$request->get_DecodeAction()],$request->get_DecodeParams());
+			}
+				
 		}
 	}
 	
