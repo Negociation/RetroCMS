@@ -52,7 +52,6 @@ class Index extends ControllerTemplate{
 		//New News Object
 		$this->newsModel = new newsModel($this->hotelConection);
 		$this->newsArray = $this->newsModel->get_ActiveNews();
-		//echo $this->habbo->get_habboSession()[1];
 	}
 	
 	/* Default View Call */
