@@ -1774,8 +1774,7 @@ span#habboclub_sub a.dialogbutton {
 }
 span.habboclub-buy-details {
  	line-height: 20px !important;
- 	line-height: 23px;
- 	padding-left: 5px;
+ 	padding-left: 0px;
 }
 
 /* recentGroups */

@@ -51,8 +51,14 @@ class Client extends ControllerTemplate{
 	/* Default View Call */
 	protected function default(){
 		//Set Page Title;
-		$this->pageTitle = "Habbo";
-		echo 'Client';
+		$this->pageTitle = "Client";
+		if($this->habbo->get_isHabboLoggedIn()){
+			include 'web/client.view';				
+			exit;
+		}else{
+			header('Location: ../account/login?target=habboClient');
+			exit;
+		}
 		exit;
 	}
 }

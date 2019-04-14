@@ -88,10 +88,35 @@ class Hotel{
 		return $this->hotelVersion;	
 	}
 	
+	public function get_HotelDCR(){
+		return $this->hotelClient[0];
+	}
+	
+	public function get_HotelTexts(){
+		return $this->hotelClient[1];
+	}
+	
+	public function get_HotelVars(){
+		return $this->hotelClient[2];
+	}
+	
+	public function get_HotelHost(){
+		return $this->hotelClient[3];
+	}
+	
+	public function get_HotelPort(){
+		return $this->hotelClient[4];
+	}
+
+	public function get_HotelMUS(){
+		return $this->hotelClient[5];
+	}
 	
 	public function get_hotelAdvertisement(){
 		return $this->hotelAdvertisement;
 	}
+	
+
 	
 	/** SETS **/
 	public function set_HotelAdvertisement($hotelAdvertisement){

@@ -95,6 +95,10 @@ class Habbo extends ClassTemplate{
 	public function get_HabboFigure(){
 		return 0;
 	}
+	
+	public function get_HabboTicket(){
+		return 0;
+	}
 
 	public function get_HabboClub($requestId){
 		switch($requestId){
