@@ -163,6 +163,12 @@ class Habbo extends ClassTemplate{
 	public function set_isHabboLoggedIn($status){
 		//Set the logged status
 		$this->habboLoggedStatus = $status;
+		
+		//Destroy session ticket for safety
+		if(!$status){
+			unset($_SESSION['habboLoggedId']);
+			unset($_SESSION['habboLoggedToken']);
+		}
 	}
 	
 	public function set_HabboSession($sessionToken){
