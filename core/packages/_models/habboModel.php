@@ -61,9 +61,10 @@ class HabboModel extends ModelTemplate{
 			if(!$resultQuery){
 				return false;
 			}else{
+				
 				//If founded ticket and not expired yet 
-				if(date($resultQuery[2]) <= date('Y-m-d h:i:s', strtotime('+12 hours')) && ($sessionData[0] == $resultQuery[1])){	
-					return true;
+				if( date('Y-m-d h:i:s', strtotime('+12 hours')) < date($resultQuery[2]) &&( $resultQuery[0] == $sessionData[0])){
+					return true;	
 				}else{
 					return false;
 				}
