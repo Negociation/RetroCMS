@@ -59,7 +59,6 @@ class Habbo extends ClassTemplate{
 
 	public function get_habboSession(){
 		if(isset($_SESSION['habboLoggedId']) &&  isset($_SESSION['habboLoggedToken'])){
-			
 			//If logged set the ID
 			$this->habboId = $_SESSION['habboLoggedId'];
 			
@@ -164,13 +163,6 @@ class Habbo extends ClassTemplate{
 	public function set_isHabboLoggedIn($status){
 		//Set the logged status
 		$this->habboLoggedStatus = $status;
-		
-		//If status as false so destroy session data for safety
-		if(!$status){
-			unset($_SESSION['habboLoggedId']);
-			unset($_SESSION['habboLoggedToken']);
-		}
-		
 	}
 	
 	public function set_HabboSession($sessionToken){

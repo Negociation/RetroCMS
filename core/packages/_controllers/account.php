@@ -78,6 +78,7 @@ class Account extends ControllerTemplate{
 			$requestStatus = $this->habboModel->set_HabboLogin($this->habbo);
 			//The request return True , so Login is valid
 			if ($requestStatus){				
+				echo 'Redirecting now...';
 				//If login hasn't a target ( like client )just redirect to Index
 				if (!isset($_POST['target'])){
 					header('Location: ../');

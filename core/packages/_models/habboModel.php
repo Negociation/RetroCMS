@@ -60,13 +60,10 @@ class HabboModel extends ModelTemplate{
 			//If not found a ticked
 			if(!$resultQuery){
 				return false;
-			}else{				
+			}else{
 				//If founded ticket and not expired yet 
-				if( date('Y-m-d h:i:s', strtotime('+12 hours')) < date($resultQuery[2]) && ($resultQuery[1] == $sessionData[0])){
-					return true;
-				}else{
-					return false;
-				}
+				return ((date('Y-m-d H:i:s', $_SERVER['REQUEST_TIME']) < date("Y-m-d H:i:s", strtotime('+12 hours', strtotime($resultQuery[2]))) ) &&  ($resultQuery[1] == $sessionData[0])) ? true : false;
+
 			}
 		}
 	}
@@ -112,9 +109,14 @@ class HabboModel extends ModelTemplate{
 			return array(false,1);
 			exit;
 		}
-		//If everthing ok just return true no-problem with habbo
-		$sessionToken = 'ola';
-		$habboObject->set_habboSession($sessionToken);
+		//If everthing ok just return true no-problem with habbo 
+		
+		//Get a Valid Login Ticket
+		$habboObject->set_habboSession($this->get_ValidTicket('LT',$habboObject));	
+		
+		//Set the Login Ticket on Database
+		$this->set_HabboTicket('LT',$habboObject);
+		
 		return array(true,0);
 	}
 
@@ -127,17 +129,16 @@ class HabboModel extends ModelTemplate{
 			//Login Ticket
 			case 'LT':
 				$resultQuery = $this->getColumn('site_sessions','id');
-				if (count($result) > 0){
-					$uniqueTicket = true;
-					do{
-						$ramdomTicket = 'LT-'.rand (100000 , 999999 ).'-'.bin2hex(random_bytes(10)).'-'.strtolower($habboObject->get_HabboLanguage()).'-fe2';
-						foreach($resultQuery as $existingTicket){
-							if($ramdomTicket == $existingTicket){
-								$uniqueTicket = false;
-							}
+				$uniqueTicket = true;
+				do{
+					$ramdomTicket = 'LT-'.rand (100000 , 999999 ).'-'.bin2hex(random_bytes(10)).'-'.strtolower($habboObject->get_HabboLanguage()).'-fe2';
+					foreach($resultQuery as $existingTicket){
+						if($ramdomTicket == $existingTicket){
+							$uniqueTicket = false;
 						}
-					}while($uniqueTicket == false);
-				}
+					}
+				}while($uniqueTicket == false);
+				
 				break;
 				
 			//Server Ticket
@@ -162,8 +163,23 @@ class HabboModel extends ModelTemplate{
 	
 	public function set_HabboTicket($type,$habboObject){
 		switch($type){
+			
+			//Set Login ticket on site_sessions
 			case 'LT':
+				$sql = "INSERT INTO site_sessions (`id`, `username`, `created_at`) VALUES (:id, :username,:created_at); 
+				";
+				try{
+					$stmt = $this->hotelConection->prepare($sql);
+					$stmt->bindValue(':id', $habboObject->get_habboSession()[1]);
+					$stmt->bindValue(':username', $habboObject->get_habboId());
+					$stmt->bindValue(':created_at', date('Y-m-d H:i:s', $_SERVER['REQUEST_TIME']));
+					$stmt->execute();
+				}catch (PDOException $e){
+					echo "Erro during create user";
+				}
 				break;
+			
+			//Set Server ticked on field SSO of username row
 			case 'ST':
 				return $this->setColumnById('users', 'sso_ticket', $habboObject->get_HabboId(), $habboObject->get_HabboTicket());
 				break;

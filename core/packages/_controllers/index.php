@@ -37,7 +37,6 @@ class Index extends ControllerTemplate{
 		
 		//New Habbo Object
 		$this->habbo = new Habbo();
-
 		//If Logged In
 		if($this->habboModel->get_SessionStatus($this->habbo->get_habboSession())){
 			$this->habbo = $this->habboModel->get_HabboObject($this->habbo->get_HabboId(),1);
@@ -53,8 +52,7 @@ class Index extends ControllerTemplate{
 		//New News Object
 		$this->newsModel = new newsModel($this->hotelConection);
 		$this->newsArray = $this->newsModel->get_ActiveNews();
-		
-		
+		//echo $this->habbo->get_habboSession()[1];
 	}
 	
 	/* Default View Call */
