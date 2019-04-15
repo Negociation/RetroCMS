@@ -1,0 +1,143 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.0 ( Aquamarine ) 					    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+//Include Headers Content()
+require_once('./web/includes/modules/headers/install.viewpart'); 
+
+?>
+
+
+
+		<div id="outer">
+			<div id="outer-content">
+				<div class="processbox">
+					<div class="headline">
+						<div class="headline-content">
+							<div class="headline-wrapper">
+								<h2>Install</h2>
+							</div>
+						</div>
+					</div>
+					<div class="content-top">
+						<div class="content">
+							<div class="content-column1">
+							<div class="frank"><img src="<?php echo $this->hotel->get_HotelURL() ?>/habboweb/17/16/web-gallery/images/install/1.png" alt="" ></div>
+						</div>
+					
+							<div class="content-column2">
+								<div id="process-errors">
+									<div class="content-red">
+										<div class="content-red-body" id="process-errors-content">
+											<div class="clear"></div>
+										</div>
+									</div>
+									<div class="content-red-bottom">
+										<div class="content-red-bottom-body"></div>
+									</div>
+								</div>
+								<div class="content-white-outer">
+									<div class="content-white">
+										<div class="content-white-body">
+											<div class="content-white-content">                                                
+												<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/install/step/2" id="stepform">                                                    
+													<p>                                                        
+														<b>Vamos começar ?</b>
+														<br>
+														Olá , bem vindo a instalação do RetroCMS , por favor siga as etapas corretamente e preencha com as devidas informações sobre o seu hotel. Estas informaçõs podem ser alteradas posteriormente no painel de controle.
+													</p> 
+														
+													<p> 
+														<b>Creditos de desenvolvimento:</b>
+														<br>
+														O desenvolvimento do RetroCMS foi possivel graças as seguintes pessoas:
+													</p>
+													<p>- <a href="url">m.tiago</a></p>
+													<p>- <a href="url">Quackster</a></p>
+													<p>- <a href="url">Shefhrillof</a></p>
+													<p>- <a href="url">Alito</a></p>
+													<br>														
+													<p>
+														<b>Idioma</b>
+														<br>
+														Bem , agora para começarmos a instalação primeiramente selecione o idioma padrão para o seu hotel.   
+											
+														<div id="required-hotelLanguage">
+																<select name="required-Version" id="required-hotelVer" class="dateselector">
+																	<option value="">Select your default Language</option>
+																</select>
+																
+																
+														<script type="text/javascript" language="JavaScript">
+															function GetVersion(){
+																document.getElementById('required-hotelVersion').value = document.getElementById('required-Version').value;
+															}
+														</script>		
+																		
+														</div>
+													</p> 
+													
+												                                       
+													<div id="register-buttons">
+					
+													<div align="right" >
+														<input type="hidden" name="required-hotelVersion" id="required-hotelVersion"/>
+
+														<input type="submit" value="Continue" id="continuebtn" onmousedown="GetVersion()" class="process-button">
+													</div>
+													<div class="clear"></div>                                                    
+													</div>                                                
+												</form>                                            
+											</div>
+													<div class="clear"></div>
+												</div>
+											</div>
+											<div class="content-white-bottom">
+												<div class="content-white-bottom-body"></div>
+											</div>
+										</div>
+									</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="content-bottom"><div class="content-bottom-content"></div></div>
+					</div>
+
+					<script type="text/javascript" language="JavaScript">
+					function initUserDetailForm() {
+						Object.extend(Validation, { addError : validatorAddError });
+						Validation.addAllThese([
+							['required-hotelName', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}],
+							['required-hotelNick', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}],
+							['required-hotelUrl', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}],
+							['required-hotelWeb', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}]
+						]);
+						new Validation('stepform', {focusOnError:true, beforeSubmit:validatorBeforeSubmit, skipValidation:function(){ return backClicked; }});
+						
+					}
+					initUserDetailForm();
+					</script>
+
+
+
+<?php
+//Include Footer Content()
+require_once('./web/includes/modules/footers/process.viewpart'); 
+?>

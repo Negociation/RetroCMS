@@ -51,7 +51,7 @@ class ControllerTemplate{
 			//Set_Deafult Body Id
 			$this->bodyId = 'home';
 			
-			if($this->hotelModel->get_HotelStatus()){
+			if($this->hotel->get_HotelStatus()){
 				if(get_class($this) != 'Install'){
 					call_user_func_array([new $this($this->hotelConection),$request->get_DecodeAction()],$request->get_DecodeParams());
 				}else{

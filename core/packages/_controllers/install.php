@@ -31,23 +31,39 @@ class Install extends ControllerTemplate{
 	
 	/* Default View Calls */
 	protected function default(){
-		$this->steps(0);
-		
+		$this->step(1);	
 	}
 	
+	//Step 1
 	protected function start(){
-		$this->steps(0);
-		
+		$this->step(1);
 	}
 	
 	/* Steps of Install */
-	protected function steps($id){
-		echo 'Lets start the RetroCMS Install';
+	protected function step($id){
+		if(($_SERVER['REQUEST_METHOD'] == 'POST' &&  $id > 1 ) || $id == 1){
+			switch($id){
+				case 1:
+					include 'web/install/steps/1.view';	
+					break;
+				case 2:
+					include 'web/install/steps/2.view';	
+					break;
+				default:
+					header('Location: ../start');
+					break;
+
+			}
+		}else{
+			//Restart Install
+			header('Location: ../start');
+		}
 	}
 	
+	//Step 6
 	protected function done(){
-		$this->steps(6);
-		exit;			
+			$this->step(6);
+			exit;		
 	}
 	
 	
