@@ -45,6 +45,9 @@ foreach (glob("./core/packages/_controllers/*.php") as $controllers){ require_on
 // - Desc: Include all Models of ObjectClass
 foreach (glob("./core/packages/_models/*.php") as $models){ require_once $models; }
 
+// + Include Extensions
+// - Desc: Include all Extensions Classes
+foreach (glob("./core/packages/_extensions/*.php") as $extensions){ require_once $extensions; }
 
 
 // + Site Diagnosis Unit Test
