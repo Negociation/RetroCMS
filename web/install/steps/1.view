@@ -11,12 +11,11 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-//Include Headers Content()
+
+//Include Headers Content 
 require_once('./web/includes/modules/headers/install.viewpart'); 
 
 ?>
-
-
 
 		<div id="outer">
 			<div id="outer-content">
@@ -141,6 +140,8 @@ require_once('./web/includes/modules/headers/install.viewpart');
 					}
 					initUserDetailForm();
 					</script>
+
+
 
 
 

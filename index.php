@@ -21,6 +21,9 @@ require_once('./core/core.php');
 session_id("habboWebsite");
 session_start();	
 
+//UTF-8(Portuguese and Spanish Accents for PHP)
+header("Content-Type: text/html; charset=utf-8",true);
+
 // + Destroy Session "habboWebsite" if timeout 
 // - Desc: Sessions for Website
 if (isset($_SESSION['habboLastActivity']) && ($_SERVER['REQUEST_TIME'] - $_SESSION['habboLastActivity']) > 10800) {

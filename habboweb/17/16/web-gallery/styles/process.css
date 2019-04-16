@@ -46,8 +46,10 @@ body {
 #retrologo {
 	position: relative;
 	background-image: url(../images/logos/retrocms_logo_nourl.gif);
-	top: 15;
-	left: 5;
+	width: 113px;
+	height: 41px;
+	top: 15px;
+	left: 5px;
 }
 
 #steps {

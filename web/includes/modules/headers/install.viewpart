@@ -16,12 +16,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" />
         <title><?php echo $this->hotel->get_HotelName(); ?> ~ <?php echo $this->get_ViewTitle(); ?></title>
 		<!-- LOAD STATIC IMPORT(CSS/JS) -->
 		
 		<link href='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/styles/style.css' type='text/css' rel='stylesheet'/>
-		<link href='<?php echo $this->hotel->get_HotelWeb(); ?>habboweb/17/16/web-gallery/styles/ads.css' type='text/css' rel='stylesheet'/>
 		<link href='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/styles/boxes.css' type='text/css' rel='stylesheet'/>
 		<link href='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/styles/process.css' type='text/css' rel='stylesheet'/>
 	</head>
@@ -42,7 +41,12 @@
 						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step_right<?php if($id == 3){ echo '_on';} ?>.gif" alt="" width="20" height="26">
 						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step4<?php if($id == 4){ echo '_on';} ?>.gif" alt="4" width="30" height="26">
 						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step_right<?php if($id == 4){ echo '_on';} ?>.gif" alt="" width="20" height="26">
-						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step5<?php if($id == 5){ echo '_on';} ?>.gif" alt="4" width="30" height="26">							
+						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step5<?php if($id == 5){ echo '_on';} ?>.gif" alt="4" width="30" height="26">	
+						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step_right<?php if($id == 5){ echo '_on';} ?>.gif" alt="" width="20" height="26">
+						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step6<?php if($id == 6){ echo '_on';} ?>.gif" alt="4" width="30" height="26">				
+						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step_right<?php if($id == 6){ echo '_on';} ?>.gif" alt="" width="20" height="26">
+						<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step6<?php if($id == 7){ echo '_on';} ?>.gif" alt="4" width="30" height="26">									
+						
 					</div>
 					</div>	
 				</div>

@@ -41,13 +41,22 @@ class Install extends ControllerTemplate{
 	
 	/* Steps of Install */
 	protected function step($id){
-		if(($_SERVER['REQUEST_METHOD'] == 'POST' &&  $id > 1 ) || $id == 1){
+		if( is_numeric($id) && (($_SERVER['REQUEST_METHOD'] == 'POST' &&  $id > 1 ) || $id == 1)){
 			switch($id){
 				case 1:
-					include 'web/install/steps/1.view';	
+					include 'web/install/steps/1.view';
 					break;
 				case 2:
-					include 'web/install/steps/2.view';	
+					include 'web/install/steps/2.view';
+					break;
+				case 3:
+					include 'web/install/steps/3.view';
+					break;
+				case 4:
+					include 'web/install/steps/4.view';
+					break;
+				case 5:
+					include 'web/install/steps/5.view';
 					break;
 				default:
 					header('Location: ../start');
