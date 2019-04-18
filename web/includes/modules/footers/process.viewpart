@@ -17,7 +17,7 @@
 					<div id="footer-top">
 						<div id="footer-content">
 						<div style="float: right; margin-top: 0px; height: 0px;">			
-							<a href="#languageSelector" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/hlanguages/footer_pt.png" onclick="setLanguageDialog()" id="footerIcon" alt=""></a>
+							<a href="#languageSelector" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/hlanguages/footer_pt.png" onclick="setLanguageDialog()" id="footerIcon" alt=""></a>
 						</div>						
 						&copy; 2009-2018 RetroCMS ~ The Oldschool era is Back!!!  <br> Powered by m.tiago from Ragezone.</div>
 					</div>

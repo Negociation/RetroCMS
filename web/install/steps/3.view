@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //////////////////////////////////////////////////////////////
 //						  RetroCMS							//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
@@ -32,7 +32,7 @@ require_once('./web/includes/modules/headers/install.viewpart');
 							<div class="content-column1">
 									<div class="bubble">
 										<div class="bubble-body">               
-											<span class ="lang-register-BubbleContent2a">Ok , now you already after you finished the custom preferênces , lets start with the server information.</span>
+											<span class ="lang-register-BubbleContent2a">Certo, agora que você ja customizou o seu hotel é hora de configurarmos as infomações basica de acesso.</span>
 											<div class="clear"></div>
 										</div>
 									</div>
@@ -60,81 +60,77 @@ require_once('./web/includes/modules/headers/install.viewpart');
 										<div class="content-white-body">
 											<div class="content-white-content">                                                
 												<div class="content-white-content">                                                
-													<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/install/step/4" id="stepform">                                                    
+													<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/install/step/4" id="stepform">
+													
 														<p>                                                        
-															<b>SET THE BASIC HOTEL INFORMATION</b>
-															<br>
-															Please write the basic information about your hotel:
-															</p> 
+															<b>DEFINA AS INFORMAÇÕES BASICAS DO HOTEL</b><br>
+															Por favor preencha as informações sobre o seu hotel.
+														</p>
+														
+														<p>
+															<label for="required-hotelName" class="registration-text">Nome do Hotel</label><br>                                                        
+															<input type="text" name="required-hotelName" id="hotelname" maxlength="20" placeholder="RetroCMS" class="registration-text required-hotelName">                                                    
+														</p>
 														
 														<p>                                                        
-															<label for="required-hotelName" class="registration-text">Hotel Name</label>
-															<br>                                                        
-															<input type="text" name="required-hotelName" id="hotelname" maxlength="20" value="" class="registration-text required-hotelName">                                                    
+															<label for="required-hotelNick" class="registration-text">Nick do Hotel</label><br>                                                        
+															<input type="text" name="required-hotelNick" id="hotelnick" maxlength="20" placeholder="Retro" class="registration-text required-hotelNick">                                                    
 														</p> 
+														
 														<p>                                                        
-															<label for="required-hotelNick" class="registration-text">Hotel Nick</label>
-															<br>                                                        
-															<input type="text" name="required-hotelNick" id="hotelnick" maxlength="20" value="" class="registration-text required-hotelNick">                                                    
-														</p> 
-														<p>                                                        
-															<label for="required-hotelNick" class="registration-text">Hotel Version</label>
-															<br>     
-															<div id="required-hotelValue">
-																	<select name="required-Version" id="required-hotelVer" class="dateselector">
-																		<option value="">--</option>
-																		<option value="14">v14</option>
-																		<option value="15">v15</option>
-																		<option value="16">v16</option>
-																		<option value="17">v17</option>
-																	</select>
-																	
-																	
-															<script type="text/javascript" language="JavaScript">
-																function GetVersion(){
-																	document.getElementById('required-hotelVersion').value = document.getElementById('required-Version').value;
-																}
-															</script>		
-																			
+															<label for="required-hotelVersion" class="registration-text">Versão do Hotel</label><br>
+															<div id="required-hotelVersion">
+																<select name="required-Version" id="hotelVersion"  class="dateselector" onchange="checkSelectedVersion(this.value)">
+																	<option value="">Selecione a versão do seu Hotel</option>
+																	<option value="14">v14</option>
+																	<option value="15">v15</option>
+																	<option value="16">v16</option>
+																	<option value="17">v17 *RetroDCR </option>	
+																</select>
 															</div>
-														</p> 
+														</p>
+
+														<script>
+															function checkSelectedVersion(version){
+																if(version == 17){
+																	document.getElementById("required-windowsStatus").disabled = false;
+																}else{
+																	document.getElementById("required-windowsStatus").disabled = true;
+																}
+															}
+														</script>
+														
+														<p><input type="checkbox" id="required-windowsStatus" name="scales" checked disabled> <label for="required-windowsStatus">Desejo ativar o suporte para execução de janelas estaticas aos quartos ( recurso compativel apenas com a v17 *RetroDCR).</label></p> 
+														
+														<p><input type="checkbox" id="required-windowsStatus" name="scales" disabled> <label for="required-noobStatus" style="color: Grey;">Desejo ativar o suporte para Quartos novato (Recurso disponivel apenas com a v17 *RetroDCR, v19 ou superior ).</label></p> 
+
 														<hr> 
 														
 														<p>                                                        
-															<b>NOW INFORMS YOUR HOTEL URLS:</b>
+															<b>AGORA INFORME AS URLS DE ACESSO DO SEU HOTEL:</b>
 															<br>
-															Please write the basic information about your hotel , you cant change that for now:
-
-															
-														</p> 
+															Por favor informe os dados referentes a url de acesso do hotel e diretorio de imagens:	
+														</p>
 														
 														<p>                                                        
-															<label for="required-hotelUrl" class="registration-text">Website Url</label>
-															<br>                                                        
-															<input type="text" name="required-hotelUrl" id="hotelurl" maxlength="100" value="" class="registration-text required-hotelUrl">                                                    
+															<label for="required-hotelUrl" class="registration-text">Url do Website</label><br>                                                        
+															<input type="text" name="required-hotelUrl" id="hotelurl" maxlength="100"  placeholder="<?php echo $this->hotel->get_HotelURL() ?>" class="registration-text required-hotelUrl">                                                    
 														</p>   
 														
 														<p>                                                        
-															<label for="required-hotelWeb" class="registration-text">Image Patch</label>
-															<br>                                                        
-															<input type="text" name="required-hotelWeb" id="hotelweb" maxlength="100" value="" class="registration-text required-hotelWeb">                                                    
+															<label for="required-hotelWeb" class="registration-text">Diretorio de Imagens</label><br>                                                        
+															<input type="text" name="required-hotelWeb" id="hotelweb" maxlength="100"  placeholder="<?php echo $this->hotel->get_HotelURL() ?>" class="registration-text required-hotelWeb">                                                    
 														</p>
-														  
-													 
-												
-															
-																							   
-															<div id="register-buttons">
-							
+														  																							   
+														<div id="register-buttons">
 															<div align="right" >
 																<input type="hidden" name="required-hotelLanguage" id="required-hotelLanguage"/>
-
-																<input type="submit" value="Continue" id="continuebtn" onmousedown="GetVersion()" class="process-button">
+																<input type="submit" value="Continuar" id="continuebtn" class="process-button">
 															</div>
 															<div class="clear"></div>                                                    
-															</div>      
+														</div>      
 															
-														</form>                                            
+													</form>                                            
 												</div>
 											</div>
 											<div class="clear"></div>
@@ -150,7 +146,41 @@ require_once('./web/includes/modules/headers/install.viewpart');
 					</div>
 					<div class="content-bottom"><div class="content-bottom-content"></div></div>
 				</div>
-
+				
+				<script type="text/javascript" language="JavaScript">
+					function initUserDetailForm() {
+						Object.extend(Validation, { addError : validatorAddError });
+						Validation.addAllThese([
+							['required-hotelName', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}],
+							['required-hotelNick', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}],
+							['required-hotelWeb', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}],
+							['required-hotelUrl', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}]								
+						]);
+						new Validation('stepform', {focusOnError:true, beforeSubmit:validatorBeforeSubmit, skipValidation:function(){ return backClicked; }});
+					}
+					initUserDetailForm();
+				</script>
+				
+				<!-- Validator Input Data Script before POST -->
+				<script type="text/javascript" language="JavaScript">
+					Event.observe($("stepform"), "submit", function(e) {
+						if ($("hotelVersion").selectedIndex == 0) {
+							validatorBeforeSubmit();
+							validatorAddError(false, false, "Informe um CMS!");
+							$("required-hotelVersion").className = "validation-failed";
+							Event.stop(e);
+						}
+					}, false);
+				</script>
+				
 <?php
 //Include Footer Content()
 require_once('./web/includes/modules/footers/process.viewpart'); 

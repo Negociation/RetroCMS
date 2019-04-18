@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //////////////////////////////////////////////////////////////
 //						  RetroCMS							//
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
@@ -55,6 +55,7 @@ require_once('./web/includes/modules/headers/install.viewpart');
 														Agora escolha como deve ser a aparência do seu hotel, esta escolha pode ser alterada posteriormente no painel de controle. 
 													</p> 
 													
+													Comming Soon...
 												                                       
 													<div id="register-buttons">
 					

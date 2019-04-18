@@ -19,6 +19,10 @@
         <title><?php echo $this->hotel->get_HotelName(); ?> ~ <?php echo $this->get_ViewTitle(); ?></title>
 		<!-- IMPORT LAYOUT CONTENT(CSS/JS) -->
 		<?php require_once('./web/includes/visualSource.import'); ?>
+		
+		<!-- LANGUAGUEMANAGER IMPORT INCLUDE(JS) -->
+		<?php include('./web/includes/extensions/languageManager/visualSource.import'); ?>
+		
 	</head>
 	<body id="<?php echo $this->get_viewBody(); ?>">
         <div id="overlay"></div>

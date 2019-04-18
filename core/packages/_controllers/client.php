@@ -16,12 +16,7 @@
 
 class Client extends ControllerTemplate{
 	
-	/* Variables of Views */
-	protected $promoArray = [];
-	protected $promosModel;
-	protected $newsArray = [];
-	protected $newsModel;
-	
+	protected $forwardData = [];
 	
 	/* Construct Method */
 	public function __construct($hotelConection){
@@ -58,6 +53,13 @@ class Client extends ControllerTemplate{
 		//Set Page Title;
 		$this->pageTitle = "Client";
 		if($this->habbo->get_isHabboLoggedIn()){
+			
+			//Get forward Shortcut
+			if(isset($_GET['forwardId']) && isset($_GET['roomId']) && is_numeric($_GET['roomId']) && is_numeric($_GET['forwardId'])){
+				array_push($this->forwardData,$_GET['forwardId']);
+				array_push($this->forwardData,$_GET['roomId']);
+			}
+			
 			include 'web/client.view';				
 			exit;
 		}else{

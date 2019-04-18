@@ -32,7 +32,7 @@ require_once('./web/includes/modules/headers/install.viewpart');
 							<div class="content-column1">
 									<div class="bubble">
 										<div class="bubble-body">               
-											<span class ="lang-register-BubbleContent2a">Now, please inform the client and server information.</span>
+											<span class ="lang-register-BubbleContent2a">Agora, por favor informe os dados referêntes ao client e servidor.</span>
 											<div class="clear"></div>
 										</div>
 									</div>
@@ -62,25 +62,25 @@ require_once('./web/includes/modules/headers/install.viewpart');
 												<div class="content-white-content">                                                
 													<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/install/step/5" id="stepform">                                                    
 														<p>                                                        
-															<b>CLIENT DATA:</b><br>Set the client data of your hotel:
+															<b>DADOS DO CLIENT:</b><br>Defina os dados do client do seu hotel:
 														</p> 
 														
 														<p>                                                        
 															<label for="required-hotelVars" class="registration-text">External Variables:</label>
 															<br>                                                        
-															<input type="text" name="required-hotelVars" id="required-hotelVars" maxlength="200" value="http://localhost/gamedata/external_variables.txt" class="registration-text hotelVars">                                                    
+															<input type="text" name="required-hotelVars" id="hotelVars" maxlength="200" value="http://localhost/gamedata/external_variables.txt" class="registration-text required-hotelVars">                                                    
 														</p> 
 														
 														<p>                                                        
 															<label for="required-hotelTexts" class="registration-text">External Texts:</label>
 															<br>                                                        
-															<input type="text" name="required-hotelTexts" id="required-hotelTexts" maxlength="200" value="http://localhost/gamedata/external?id=external_texts" class="registration-text hotelTexts">                                                    
+															<input type="text" name="required-hotelTexts" id="hotelTexts" maxlength="200" value="http://localhost/gamedata/external?id=external_texts" class="registration-text required-hotelTexts">                                                    
 														</p> 
 														
 														<p>                                                        
 															<label for="required-hotelDCR" class="registration-text">DCR:</label>
 															<br>                                                        
-															<input type="text" name="required-hotelDcr" id="required-hotelDcr" maxlength="200" value="http://images.alex-dev.org/dcr/r21_20080417_0343_5110_5527e6590eba8f3fb66348bdf271b5a2/habbo.dcr" class="registration-text required-hotelDcr">                                                    
+															<input type="text" name="required-hotelDcr" id="hotelDcr" maxlength="200" value="http://images.alex-dev.org/dcr/r21_20080417_0343_5110_5527e6590eba8f3fb66348bdf271b5a2/habbo.dcr" class="registration-text required-hotelDcr">                                                    
 														</p> 
 														
 														
@@ -88,28 +88,26 @@ require_once('./web/includes/modules/headers/install.viewpart');
 														<hr> 
 														
 														<p>                                                        
-															<b>HOTEL SETTINGS:</b>
+															<b>CONFIGURAÇÕES DO HOTEL:</b>
 															<br>
-															Set you server information:
+															Defina as informações do seu servidor:
 														</p> 
 														
 														<p>                                                        
 															<label for="required-hotelHost" class="registration-text">HOST:</label><br>                                                        
-															<input type="text" name="required-hotelHost" id="required-hotelHost" maxlength="200" value="" class="registration-text required-hotelHost">                                                    
-														</p>  
-														
-																							<p>                                                        
-															<label for="required-hotelPort" class="registration-text">PORT:</label><br>                                                        
-															<input type="text" name="required-hotelPort" id="required-hotelPort" maxlength="14" value="12321" class="registration-text required-hotelHost">                                                    
-														</p>  
-														
-																							<p>                                                        
+															<input type="text" name="required-hotelHost" id="hotelHost" maxlength="200" placeholder="localhost" class="registration-text required-hotelHost">                                                    
+														</p>  														
+														<p>                                                        
+															<label for="required-hotelPort" class="registration-text">PORTA:</label><br>                                                        
+															<input type="text" name="required-hotelPort" pattern="[0-9]+" id="hotelPort" maxlength="14" placeholder="12321" class="registration-text required-hotelHost">                                                    
+														</p>  														
+														<p>                                                        
 															<label for="required-hotelMusHost" class="registration-text">MUS HOST:</label><br>                                                        
-															<input type="text" name="required-hotelMusHost" id="required-hotelMusHost" maxlength="200" value="" class="registration-text required-hotelMusHost">                                                    
+															<input type="text" name="required-hotelMusHost" id="hotelMusHost" maxlength="200" placeholder="localhost" class="registration-text required-hotelMusHost">                                                    
 														</p>  
-																							<p>                                                        
-															<label for="equired-hotelMusPort" class="registration-text">MUS PORT:</label><br>                                                        
-															<input type="text" name="required-hotelMusPort" id="required-hotelMusPort" maxlength="14" value="12322" class="registration-text required-hotelMusPort">                                                    
+														<p>                                                        
+															<label for="equired-hotelMusPort" class="registration-text">PORTA MUS:</label><br>                                                        
+															<input type="text" name="required-hotelMusPort" pattern="[0-9]+" id="hotelMusPort" maxlength="14" placeholder="12322" class="registration-text required-hotelMusPort">                                                    
 														</p>
 														
 														
@@ -144,6 +142,37 @@ require_once('./web/includes/modules/headers/install.viewpart');
 					<div class="content-bottom"><div class="content-bottom-content"></div></div>
 				</div>
 
+				<script type="text/javascript" language="JavaScript">
+					function initUserDetailForm() {
+						Object.extend(Validation, { addError : validatorAddError });
+						Validation.addAllThese([
+							['required-hotelVars', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}],
+							['required-hotelTexts', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}],
+							['required-hotelDcr', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}],
+							['required-hotelHost', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}],
+							['required-hotelPort', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}],
+							['required-hotelMusHost', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}],
+							['required-hotelMusPort', 'Please choose your name', function(v) {
+								return !Validation.get('IsEmpty').test(v);
+							}]
+						]);
+						new Validation('stepform', {focusOnError:true, beforeSubmit:validatorBeforeSubmit, skipValidation:function(){ return backClicked; }});
+					}
+					initUserDetailForm();
+				</script>
+				
 <?php
 //Include Footer Content()
 require_once('./web/includes/modules/footers/process.viewpart'); 

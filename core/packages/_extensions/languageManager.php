@@ -30,7 +30,7 @@ class languageManager extends extensionTemplate{
 		if($handle != false){
 			while (false !== ($directoryFolder = readdir($handle))) {
 				if ($directoryFolder != "." && $directoryFolder != "..") {
-					if(file_exists($this->extensionDirectory.'/'.$directoryFolder.'/infoContent.ini') && file_exists($this->extensionDirectory.'/'.$directoryFolder.'/'.$directoryFolder.'.js') && file_exists($this->extensionDirectory.'/'.$directoryFolder.'/install.js')){
+					if(file_exists($this->extensionDirectory.'/'.$directoryFolder.'/infoContent.ini') && file_exists($this->extensionDirectory.'/'.$directoryFolder.'/habboweb.js') && file_exists($this->extensionDirectory.'/'.$directoryFolder.'/install.js')){
 						array_push($this->loadedLanguages,$directoryFolder);
 					}else{
 						array_push($this->errorsMessage,'Sorry, some missing files content when loading the language "'.$directoryFolder.'"');

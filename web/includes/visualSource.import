@@ -98,6 +98,10 @@ echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->
 echo "\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/builder.js'></script>";
 echo "\n\t\t";
+echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/jquery.min.js'></script>";
+echo "\n\t\t";
+echo "<script>var j = jQuery.noConflict();</script>";
+echo "\n\t\t";
 
 //Habbo Home Javascript Content
 echo get_class($this) == 'Home' ? "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/myhabbo/myhabbo.js'></script>" : "";
@@ -122,7 +126,7 @@ if(get_class($this) == 'Home'){
 		</script>
 	";	
 }
-	
+
 /*
 <script src="https://classichabbo.com/web-gallery/static/js/libs2.js" type="text/javascript"></script>
 <script src="https://classichabbo.com/web-gallery/static/js/visual.js" type="text/javascript"></script>
