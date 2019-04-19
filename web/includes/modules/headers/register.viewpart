@@ -18,32 +18,21 @@
     <head>
         <meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" />
         <title><?php echo $this->hotel->get_HotelName(); ?> ~ <?php echo $this->get_ViewTitle(); ?></title>
-		<!-- LOAD STATIC IMPORT(CSS/JS) -->
+		<!-- IMPORT LAYOUT CONTENT(CSS/JS) -->
+		<?php include('./web/includes/visualSource.import'); ?>
 		
-		<link href='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/styles/style.css' type='text/css' rel='stylesheet'/>
-		<link href='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/styles/boxes.css' type='text/css' rel='stylesheet'/>
-		<link href='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/styles/process.css' type='text/css' rel='stylesheet'/>
-		
-		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/prototype.js'></script>
-		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/habbo.js'></script>
-		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/builder.js'></script>
-		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/validation.js'></script>
-		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/jquery.min.js'></script>
-
-		<script>var j = jQuery.noConflict();</script>
-	
 		<!-- LANGUAGUEMANAGER IMPORT INCLUDE(JS) -->
 		<?php include('./web/includes/extensions/languageManager/visualSource.import'); ?>
 
 	</head>
 	
-	<body id="install">
+	<body id="register">
 		<div id="overlay"></div>
 		<div id="process-wrapper">
 			<div id="process-header">
 				<div id="process-header-body">
 					<div id="process-header-content">
-						<div id="retrologo"><a href="<?php echo $this->hotel->get_HotelURL();?>"></a></div>
+						<div id="habbologo"><a href="<?php echo $this->hotel->get_HotelURL();?>"></a></div>
 						<div id="steps">
 							<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step1<?php if($id == 1){ echo '_on';} ?>.gif" alt="1" width="30" height="26">
 							<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step_right<?php if($id == 1){ echo '_on';} ?>.gif" alt="" width="20" height="26">
@@ -53,11 +42,7 @@
 							<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step_right<?php if($id == 3){ echo '_on';} ?>.gif" alt="" width="20" height="26">
 							<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step4<?php if($id == 4){ echo '_on';} ?>.gif" alt="4" width="30" height="26">
 							<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step_right<?php if($id == 4){ echo '_on';} ?>.gif" alt="" width="20" height="26">
-							<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step5<?php if($id == 5){ echo '_on';} ?>.gif" alt="4" width="30" height="26">	
-							<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step_right<?php if($id == 5){ echo '_on';} ?>.gif" alt="" width="20" height="26">
-							<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step6<?php if($id == 6){ echo '_on';} ?>.gif" alt="4" width="30" height="26">				
-							<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step_right<?php if($id == 6){ echo '_on';} ?>.gif" alt="" width="20" height="26">
-							<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step7<?php if($id == 7){ echo '_on';} ?>.gif" alt="4" width="30" height="26">									
+							<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/process/step5<?php if($id == 5){ echo '_on';} ?>.gif" alt="4" width="30" height="26">								
 						</div>
 					</div>	
 				</div>

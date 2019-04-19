@@ -31,6 +31,16 @@ hr {
 	height: 1px;
 }
 
+a.process-button {
+    background-color: #FC6303;
+    border: 2px solid black;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 input.process-button {
 	background-color: #FC6303;
 	border: 2px solid black;

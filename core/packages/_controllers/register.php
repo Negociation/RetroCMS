@@ -11,10 +11,10 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-// Class: Install
-// Desc: Install method (Only for first access)
+// Class: Register
+// Desc: Register a new Habbo
 
-class Install extends ControllerTemplate{
+class Register extends ControllerTemplate{
 	
 	/* Construct Method */
 	public function __construct($hotelConection){
@@ -27,9 +27,21 @@ class Install extends ControllerTemplate{
 		$this->habboModel = new habboModel($this->hotelConection);
 		
 		//Get Hotel Object
-		$this->hotel = new Hotel();
-
+		$this->hotel = $this->hotelModel->get_HotelObject();
+		
+		//New Habbo Object
+		$this->habbo = new Habbo();
 		$this->newHabbo = new Habbo();
+
+		//If Logged In
+		if($this->habboModel->get_SessionStatus($this->habbo->get_habboSession())){
+			$this->habbo = $this->habboModel->get_HabboObject($this->habbo->get_HabboId(),1);
+			$this->habbo->set_isHabboLoggedIn(true);
+		}else{
+			$this->habbo->set_isHabboLoggedIn(false);		
+		}
+		
+		
 	}
 	
 	/* Default View Calls */
@@ -44,37 +56,30 @@ class Install extends ControllerTemplate{
 	
 	/* Steps of Install */
 	protected function step($id){
-		if( is_numeric($id) && (($_SERVER['REQUEST_METHOD'] == 'POST' &&  $id > 1 ) || $id == 1)){
+		if( (is_numeric($id) && (($_SERVER['REQUEST_METHOD'] == 'POST' &&  $id > 1 ) || $id == 1 ))&&(!$this->habbo->get_isHabboLoggedIn())){
 			switch($id){
 				case 1:
-					include 'web/install/1.view';
+					include 'web/register/1.view';
 					break;
 				case 2:
-					include 'web/install/steps/2.view';
+					include 'web/register/2.view';
 					break;
 				case 3:
-					include 'web/install/steps/3.view';
+					include 'web/register/3.view';
 					break;
 				case 4:
-					include 'web/install/steps/4.view';
+					include 'web/register/4.view';
 					break;
 				case 5:
-					include 'web/install/steps/5.view';
-					break;
-				case 6:
-					include 'web/install/steps/6.view';
-					break;
-				case 7:
-					include 'web/install/steps/7.view';
+					include 'web/register/5.view';
 					break;
 				default:
 					header('Location: ../start');
 					break;
-
 			}
 		}else{
 			//Restart Install
-			header('Location: ../start');
+			header('Location: ../');
 		}
 	}
 	
