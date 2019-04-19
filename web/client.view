@@ -63,7 +63,7 @@
 					}, 20000);
 				</script>
 				</div>
-				<div class="logout"><a href="<?php echo $this->hotel->get_HotelUrl(); ?>/account/logout?origin=popup">logout</a></div>
+				<div class="logout"><a href="<?php echo $this->hotel->get_HotelUrl(); ?>/account/disconnected?origin=popup">logout</a></div>
 		</div>
 		<div>
 		<?php 

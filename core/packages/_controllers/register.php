@@ -56,8 +56,11 @@ class Register extends ControllerTemplate{
 	
 	/* Steps of Install */
 	protected function step($id){
-		if( (is_numeric($id) && (($_SERVER['REQUEST_METHOD'] == 'POST' &&  $id > 1 ) || $id == 1 ))&&(!$this->habbo->get_isHabboLoggedIn())){
+		if( (is_numeric($id) && (($_SERVER['REQUEST_METHOD'] == 'POST' &&  $id > 0 ) || $id == 0 ))&&(!$this->habbo->get_isHabboLoggedIn())){
 			switch($id){
+				case 0:
+					include 'web/register/0.view';
+					break;
 				case 1:
 					include 'web/register/1.view';
 					break;
@@ -79,7 +82,7 @@ class Register extends ControllerTemplate{
 			}
 		}else{
 			//Restart Install
-			header('Location: ../');
+			header('Location: ../register/step/0');
 		}
 	}
 	

@@ -29,8 +29,10 @@ class Habbo extends ClassTemplate{
 	protected $habboLoggedStatus;
 	protected $habboTicket;
 	
+	//Construct for Default Register/Install
 	public function __construct(){
-
+		$this->habboFigure = '1000118001210012700129001';	
+		$this->habboGender = 'M';		
 	}
 
 	/** DAO CONSTRUCT **/
@@ -93,7 +95,11 @@ class Habbo extends ClassTemplate{
 	}
 
 	public function get_HabboFigure(){
-		return 0;
+		return $this->habboFigure;
+	}
+	
+	public function get_HabboGender(){
+		return $this->habboGender;
 	}
 	
 	public function get_HabboTicket(){
