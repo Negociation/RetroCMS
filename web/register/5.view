@@ -13,7 +13,7 @@
 
 
 //Include Headers Content 
-require_once('./web/includes/modules/headers/install.viewpart'); 
+require_once('./web/includes/modules/headers/register.viewpart'); 
 
 ?>
 								
