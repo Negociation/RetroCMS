@@ -12,4 +12,10 @@
 //////////////////////////////////////////////////////////////
 
 
+$languageManager = new languageManager();
+foreach ($languageManager->get_loadedLanguages() as $language){
+	$loadedLanguage = $languageManager->get_loadedLanguages();
+	echo '<option value="'.$languageManager->get_languageInfo($language)['languageParams']['languageAcronomy'].'">'.utf8_encode($languageManager->get_languageInfo($language)['languageParams']['languageName']).'</option>';
+}
+
 ?>

@@ -102,6 +102,8 @@ echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->
 echo "\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/swfobject.js'></script>";
 echo "\n\t\t";
+echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/validation.js'></script>";
+echo "\n\t\t";
 echo "<script>var j = jQuery.noConflict();</script>";
 echo "\n\t\t";
 

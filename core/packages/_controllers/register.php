@@ -77,7 +77,7 @@ class Register extends ControllerTemplate{
 					include 'web/register/5.view';
 					break;
 				default:
-					header('Location: ../start');
+					header('Location: ../register/start');
 					break;
 			}
 		}else{
@@ -88,7 +88,7 @@ class Register extends ControllerTemplate{
 	
 	//Step 6
 	protected function done(){
-			$this->step(7);
+			$this->step(5);
 			exit;		
 	}
 	
