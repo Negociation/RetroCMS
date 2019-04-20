@@ -74,7 +74,7 @@ require_once('./web/includes/modules/headers/install.viewpart');
 															<select name="required-Version" id="required-hotelVersion" class="selector"  onchange="languageSelect(this.value)">
 																<option value="">Select your default Language</option>
 																<!-- Include the Language Options -->
-																<?php include('./web/includes/modules/language_selected.viewpart');  ?>
+																<?php include('./web/includes/modules/language_select.viewpart');  ?>
 															</select>
 														</div>
 													</p> 

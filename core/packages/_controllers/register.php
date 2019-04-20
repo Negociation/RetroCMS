@@ -80,9 +80,11 @@ class Register extends ControllerTemplate{
 					header('Location: ../../register/start');
 					break;
 			}
-		}else{
+		}else if(!$this->habbo->get_isHabboLoggedIn()){
 			//Restart Install
 			header('Location: ../../register/step/0');
+		}else{
+			header('Location: ../../');			
 		}
 	}
 	

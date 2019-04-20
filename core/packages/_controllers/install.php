@@ -47,7 +47,7 @@ class Install extends ControllerTemplate{
 		if( is_numeric($id) && (($_SERVER['REQUEST_METHOD'] == 'POST' &&  $id > 1 ) || $id == 1)){
 			switch($id){
 				case 1:
-					include 'web/install/1.view';
+					include 'web/install/steps/1.view';
 					break;
 				case 2:
 					include 'web/install/steps/2.view';

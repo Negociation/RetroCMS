@@ -254,7 +254,7 @@ require_once('./web/includes/modules/headers/install.viewpart');
 							msgNode = $("pwRetypeStatus").appendChild(Builder.node("div", {id:"pwTotal"}));
 						}
 						
-						if (pwTotal[0] && pwTotal[1] && pwTotal[2]) {
+						if (pwTotal[0] && pwTotal[2]) {
 							msgNode.innerHTML = "Your password is secure!";
 						} else {
 							msgNode.innerHTML = "Please check your password is long enough, contains all required characters and is rewritten correctly.";
