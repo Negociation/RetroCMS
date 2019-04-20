@@ -31,8 +31,16 @@ class Habbo extends ClassTemplate{
 	
 	//Construct for Default Register/Install
 	public function __construct(){
-		$this->habboFigure = '1000118001210012700129001';	
-		$this->habboGender = 'M';		
+		
+		//Habbo Avatar Default Easter Egg
+		if(rand(1,100) <= 50){
+			$this->habboFigure = '1000118001210012700129001';	
+			$this->habboGender = 'M';		
+		}else{
+			$this->habboFigure = '5000160001630016950172501';	
+			$this->habboGender = 'F';		
+		}
+		
 	}
 
 	/** DAO CONSTRUCT **/

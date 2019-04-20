@@ -43,4 +43,6 @@ if($this->habbo->get_isHabboLoggedIn()){
 									</div>';
 }
 
+echo "<script>habboClubUpdated = false;</script>";
+
 ?>

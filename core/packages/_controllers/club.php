@@ -67,8 +67,38 @@ class Club extends ControllerTemplate{
 		exit;
 	}
 	
+	protected function club_subscribe(){
+		echo 'result';
+		
+	}
+	
+	
 	protected function club_subscribe_form(){
-		echo 'lele';
+		if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["optionNumber"])){
+			if($this->habbo->get_isHabboLoggedIn()){
+				switch($_POST["optionNumber"]){
+					case 'subscribe1':
+						$optionDays = 31;
+						$optionCredits = 25;
+						break;
+					case 'subscribe2':
+						$optionDays = 96;
+						$optionCredits = 60;
+						break;
+					case 'subscribe3':
+						$optionDays = 186;
+						$optionCredits = 105;
+						break;							
+				}				
+				include './web/includes/modules/ajax/club_subscribe_form.ajax';
+				exit;		
+			}else{
+				include './web/includes/modules/ajax/login_intercept_form.ajax';
+				exit;
+			}
+		}else{
+			echo 'not allowed';
+		}
 	}
 	
 }

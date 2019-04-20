@@ -492,17 +492,19 @@ var creditsUpdateOn = false;
 function updateCredits() {
 	if (!creditsUpdated && !creditsUpdateOn) {
 		creditsUpdateOn = true;
-		new Ajax.Updater("credits-status", habboReqPath + "/topbar/credits", { onComplete: function() { creditsUpdateOn = false; }, evalScripts: true });
-		creditsUpdated = true;
+		document.getElementById('credits-status').innerHTML = getProgressNode();
+		setTimeout(function(){ new Ajax.Updater("credits-status", habboReqPath + "/topbar/credits", { onComplete: function() { creditsUpdateOn = false; }, evalScripts: true });}, 500);
 	}
 }
 var habboClubUpdated = false;
 var habboClubUpdateOn = false;
 function updateHabboClub() {
 	if (!habboClubUpdated && !habboClubUpdateOn) {
-		habboClubUpdateOn = true;
-		new Ajax.Updater("habboclub-status", habboReqPath + "/topbar/habboclub", { onComplete: function() { habboClubUpdateOn = false; }, evalScripts : true });
-		habboClubUpdated = true;
+		habboClubUpdateOn = true;		
+		document.getElementById('habboclub-status').innerHTML = getProgressNode();
+		setTimeout(function(){ new Ajax.Updater("habboclub-status", habboReqPath + "/topbar/habboclub", { onComplete: function() { habboClubUpdateOn = false; }, evalScripts : true }); }, 500);
+
+
 	}
 }
 
@@ -758,7 +760,7 @@ function closeSubscription(e) {
 
 function showSubscriptionResult(optionNumber,res_dialog_header) {
 	new Ajax.Request(
-		habboReqPath + "/habboclub/habboclub_subscribe",
+		habboReqPath + "/club/club_subscribe",
 		{ method: "post", parameters: "optionNumber="+encodeURIComponent(optionNumber), onComplete: function(req, json) {
    			if ($("subscription_dialog")) Element.remove("subscription_dialog");
 			var resultDialog = createDialog("subscription_result", res_dialog_header, "9003", 0, -1000, closeSubscription);

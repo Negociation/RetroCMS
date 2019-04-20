@@ -43,10 +43,10 @@
 											<li id="myhabbo" class="selected" onmouseover="switchTab('myhabbo')">
 												<div><a href="<?php echo $this->hotel->get_HotelURL();?>/tab/myhabbo" class="topbar-menu-link" onclick="return false;"><span class="lang-topbar-myhabbo">Meu Habbo</span></a></div>
 											</li>
-											<li id="mycredits" onmouseover="if (switchTab('mycredits') &amp;&amp; document.habboLoggedIn) updateCredits()" onmouseout="fadeTab('myhabbo')">
+											<li id="mycredits" onmouseover="if (switchTab('mycredits') && document.habboLoggedIn) updateCredits()" onmouseout="fadeTab('myhabbo')">
 												<div><a href="<?php echo $this->hotel->get_HotelURL();?>/tab/credits" class="topbar-menu-link" onclick="return false;"><span class="lang-topbar-mycredits">Minhas Moedas</span></a></div>
 											</li>
-											<li id="habboclub" onmouseover="if (switchTab('habboclub') &amp;&amp; document.habboLoggedIn) updateHabboClub()" onmouseout="fadeTab('myhabbo')">
+											<li id="habboclub" onmouseover="if (switchTab('habboclub') && document.habboLoggedIn) updateHabboClub()" onmouseout="fadeTab('myhabbo')">
 												<div><a href="<?php echo $this->hotel->get_HotelURL();?>/tab/habboclub" class="topbar-menu-link" onclick="return false;"><span class="lang-topbar-habboclub">Habbo Club</span></a></div>
 											</li>
 										</ul>
@@ -62,23 +62,23 @@
 						<div id="tabmenu" onmouseover="lockCurrentTab();" onmouseout="fadeTab('myhabbo')">
 							<div id="tabmenu-content">
 								<div id="myhabbo-content" class="tabmenu-inner selected">
-								
+									
 									<!-- TOPMENU INCLUDE (MYHABBO) -->
 									<?php include('./web/includes/modules/topmenu_myhabbo.viewpart'); ?>
-									
+					
 								</div>
 										
 								<div id="mycredits-content" class="tabmenu-inner">
-								
-									<!-- TOPMENU INCLUDE (MYCREDITS) -->
-									<?php include('./web/includes/modules/topmenu_mycredits.viewpart'); ?>
-									
+									<div id="credits-status">
+										<!-- TOPMENU INCLUDE (MYCREDITS) -->
+										<?php include('./web/includes/modules/topmenu_mycredits.viewpart'); ?>
+									</div>
 								</div>
 								<div id="habboclub-content" class="tabmenu-inner">
-								
+									<div id="habboclub-status">
 									<!-- TOPMENU INCLUDE (HABBOCLUB) -->
 									<?php include('./web/includes/modules/topmenu_habboclub.viewpart'); ?>
-									
+									</div>
 								</div>
 								<div class="clear"></div>
 							</div>

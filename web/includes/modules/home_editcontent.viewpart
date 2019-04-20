@@ -21,8 +21,8 @@ if($this->habbo->get_isHabboLoggedIn() && $this->homeObject->get_homeStatus() ==
 							<a href="#" id="inventory-button" class="toolbutton inventory"><span>Meu Inventário</span></a>
 							<a href="#" id="webstore-button" class="toolbutton webstore"><span>Loja Habbo Home</span></a>
 							<form action="#" method="get">
-								<a href="#" id="cancel-button" class="toolbutton cancel"><span>Cancelar</span></a>
-								<a href="#" id="save-button" class="toolbutton save"><span>Salvar</span></a>
+								<a id="cancel-button" class="toolbutton cancel" href="#"><span>Cancelar</span></a>
+								<a id="save-button" class="toolbutton save" href="#"><span>Salvar</span></a>
 							</form>
 						</div>
 					</div>
