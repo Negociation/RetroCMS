@@ -55,7 +55,7 @@ require_once('./web/includes/modules/headers/register.viewpart');
 															<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=gif&amp;user=Flecha&amp;action=wlk&amp;direction=0&amp;head_direction=1&amp;gesture=sml&amp;size=b" alt="">
 														</div>
 														<div id="hh_welcome_enter" style="padding-left: 0px;padding-top: 55px;position: absolute;margin-left: 170px;margin-top: 120px;">
-															<a href=”<?php echo $this->hotel->get_hotelUrl(); ?>/client" target="client" onclick="redirectNewHabbo(this); return false;" ><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/welcome/enter_button.gif" height= 95px; width=134px; alt="enter"></a>
+															<a href= '<?php echo $this->hotel->get_hotelUrl(); ?>/client' target="client" onclick="redirectNewHabbo(this); return false;" ><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/welcome/enter_button.gif" height= 95px; width=134px; alt="enter"></a>
 														</div>
 													</div>
 													

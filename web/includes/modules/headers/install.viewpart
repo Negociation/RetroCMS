@@ -27,6 +27,7 @@
 		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/prototype.js'></script>
 		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/habbo.js'></script>
 		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/builder.js'></script>
+		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/registration.js'></script>
 		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/validation.js'></script>
 		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/jquery.min.js'></script>
 

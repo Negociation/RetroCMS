@@ -93,6 +93,8 @@ require_once('./web/includes/modules/headers/install.viewpart');
 															<input type="password" name="required-password" id="retypedPassword" maxlength="32" value="" class="registration-text required-retypedPassword required-retypedPassword2">                                                    
 														</p>	
 														
+														<div id="pwRetypeStatus"></div>                                                    
+
 															<div id="register-buttons">
 							
 															<div align="right">

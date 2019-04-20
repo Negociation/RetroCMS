@@ -77,12 +77,12 @@ class Register extends ControllerTemplate{
 					include 'web/register/5.view';
 					break;
 				default:
-					header('Location: ../register/start');
+					header('Location: ../../register/start');
 					break;
 			}
 		}else{
 			//Restart Install
-			header('Location: ../register/step/0');
+			header('Location: ../../register/step/0');
 		}
 	}
 	

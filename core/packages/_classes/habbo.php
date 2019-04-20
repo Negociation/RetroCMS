@@ -156,7 +156,6 @@ class Habbo extends ClassTemplate{
 			
 	}
 
-	
 	public function get_isHomeVisible(){
 		return true;
 	}
@@ -164,6 +163,12 @@ class Habbo extends ClassTemplate{
 	public function get_habboLanguage(){
 		return $this->habboLanguage;
 	}
+	
+	
+	public function get_habboBirth(){
+		return 0;
+	}
+	
 
 	/** SETS **/
 	public function set_isHabboLoggedIn($status){
@@ -203,6 +208,7 @@ class Habbo extends ClassTemplate{
 			$this->habboPassword = null;	
 		}
 	}
+	
 	
 	
 }

@@ -102,7 +102,11 @@ echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->
 echo "\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/swfobject.js'></script>";
 echo "\n\t\t";
-echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/validation.js'></script>";
+
+// Register or Account JavaScript Content
+echo get_class($this) == 'Register' || 'Account' ? "<script type='text/javascript' language='JavaScript'  src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/validation.js'></script>" : "";
+echo "\n\t\t";
+echo get_class($this) == 'Register' ? "<script type='text/javascript' language='JavaScript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/registration.js'></script>" : "";
 echo "\n\t\t";
 echo "<script>var j = jQuery.noConflict();</script>";
 echo "\n\t\t";
