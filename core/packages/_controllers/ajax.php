@@ -11,12 +11,10 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-// Class: Client
-// Desc: Habbo Api for Ajax Requests
+// Class: Ajax
+// Desc: Generic Ajax Request
 
-class Api extends ControllerTemplate{
-	
-	protected $forwardData = [];
+class Ajax extends ControllerTemplate{
 	
 	/* Construct Method */
 	public function __construct($hotelConection){
@@ -26,40 +24,44 @@ class Api extends ControllerTemplate{
 		//Generic Models
 		$this->hotelModel = new hotelModel($this->hotelConection);
 		$this->habboModel = new habboModel($this->hotelConection);
-
+		
 		//Get Hotel Object
 		$this->hotel = $this->hotelModel->get_HotelObject();
-		
-	}
 
-	protected function habboname_avaliability(){
-		if($_SERVER['REQUEST_METHOD'] == 'POST'){
-			if(isset($_POST["habboName"])){
-				if($this->habboModel->getByParam('users','username',$_POST["habboName"]) != false){
-					echo 'true';	
-				}else{
-					echo 'false';					
-				}
-			}else{
-				'missing params';
-			}
+		//New Habbo Object
+		$this->habbo = new Habbo();
+		//If Logged In
+		if($this->habboModel->get_SessionStatus($this->habbo->get_habboSession())){
+			$this->habbo = $this->habboModel->get_HabboObject($this->habbo->get_HabboId(),1);
+			$this->habbo->set_isHabboLoggedIn(true);
 		}else{
-			echo 'not allowed';
+			$this->habbo->set_isHabboLoggedIn(false);
+		}
+		
+	}
+	
+	/* Default View Call */
+	protected function languageSelector(){
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+			include './web/includes/extensions/languageManager/ajax/languageSelector.ajax';
+			exit;
+		}else{
+			require_once './web/404.view';
+			exit;
 		}
 	}
 	
-	protected function hotel(){
-		if($_SERVER['REQUEST_METHOD'] == 'GET'){
-			$hotelData = array('hotel_language' => 'EN');
-			echo json_encode($hotelData);
-		}else{
-			echo 'not allowed';
-		}
-		
 	
+	protected function languageResult(){
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+			include './web/includes/extensions/languageManager/ajax/languageResult.ajax';
+			exit;
+		}else{
+			require_once './web/404.view';
+			exit;
+		}
 	}
 	
 }
 
-	
 ?>

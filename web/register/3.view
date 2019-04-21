@@ -74,7 +74,7 @@ require_once('./web/includes/modules/headers/register.viewpart');
 															<span class ="lang-register-StepContent-Language">Por Favor, informe o seu idioma padrão de exibição de conteudo.</span>
 </p>
 														<div id="required-hotelLanguage" style="width: 198px;">
-															<select name="requiredLanguage" id="required-Language" class="selector"  onchange="languageSelect(this.value)">
+															<select name="required-language" id="required-language" class="selector"  onchange="languageSelect(this.value)">
 																<option value="">Select your default Language</option>
 																<!-- Include the Language Options -->
 																<?php include('./web/includes/modules/language_select.viewpart');  ?>
@@ -118,7 +118,7 @@ require_once('./web/includes/modules/headers/register.viewpart');
 					<!-- Validator Input Data Script before POST -->
 					<script type="text/javascript" language="JavaScript">
 						Event.observe($("stepform"), "submit", function(e) {
-							if ($("required-Language").selectedIndex == 0) {
+							if ($("required-language").selectedIndex == 0) {
 								validatorBeforeSubmit();
 								validatorAddError(false, false, "Por favor informe uma data valida!");
 								$("required-hotelLanguage").className = "validation-failed";

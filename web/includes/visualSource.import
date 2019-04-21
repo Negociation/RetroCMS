@@ -119,13 +119,6 @@ echo "\n\t\t";
 echo get_class($this) == 'Home' ? "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/myhabbo/homeauth.js'></script>" : "";
 echo "\n\t\t";
 
-//Default Javascript Load
-echo"
-		<script language='JavaScript' type='text/javascript'>
-			window.onload = function(){ advertisementLoad(); }
-		</script>
-";
-
 
 if(get_class($this) == 'Home'){
 	echo "

@@ -44,5 +44,6 @@ if($this->habbo->get_isHabboLoggedIn()){
 }
 
 echo "<script>habboClubUpdated = false;</script>";
+echo "<script type='text/javascript'>loadCurrentLanguage();</script>";
 
 ?>

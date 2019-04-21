@@ -23,6 +23,13 @@
 		<!-- LANGUAGUEMANAGER IMPORT INCLUDE(JS) -->
 		<?php include('./web/includes/extensions/languageManager/visualSource.import'); ?>
 		
+		<script language='JavaScript' type='text/javascript'>
+			window.onload = function(){ 
+				advertisementLoad(); 
+				loadCurrentLanguage(); 
+			}
+		</script>
+		
 	</head>
 	<body id="<?php echo $this->get_viewBody(); ?>">
         <div id="overlay"></div>
@@ -167,6 +174,9 @@
 								}
 							?>
 
+							<div style="float: right; margin-top: 0px; margin-right: 20px; height: 14px;">
+								<a href="#languageSelector" onclick="showLanguageDialog()" style="margin-left: 5px; height: 14px;" rel="tooltip-English"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/languages/header/icon_default.png" id="languageIcon" alt=""></a>
+							</div>
 						</div>
 					</div>
 				</div>

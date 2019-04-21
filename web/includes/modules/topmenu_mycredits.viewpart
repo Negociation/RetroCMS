@@ -36,5 +36,7 @@ if($this->habbo->get_isHabboLoggedIn()){
 										</p>
 									</div>';
 }
+
 echo "<script>CreditsUpdated = false;</script>";
+echo "<script type='text/javascript'>loadCurrentLanguage();</script>";
 ?>

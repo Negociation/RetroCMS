@@ -16,11 +16,15 @@
 // languageManager 1.0.0
 // visualSource import 
 
+echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/languageManager.js'></script>";
+echo "\n\t\t";
+
 $languageManager = new languageManager();
 foreach ($languageManager->get_loadedLanguages() as $language){
 	echo get_class($this) == 'Install' ? "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/web/includes/extensions/languageManager/".strtolower($languageManager->get_languageInfo($language)['languageParams']['languageAcronomy'])."/install.js'></script>" :  "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/web/includes/extensions/languageManager/".strtolower($languageManager->get_languageInfo($language)['languageParams']['languageAcronomy'])."/habboweb.js'></script>";
 	echo "\n\t\t";
 }
+
 
 
 ?>

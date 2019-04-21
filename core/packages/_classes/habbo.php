@@ -41,6 +41,7 @@ class Habbo extends ClassTemplate{
 			$this->habboGender = 'F';		
 		}
 		
+		$this->habboRank = 1;
 	}
 
 	/** DAO CONSTRUCT **/
@@ -172,12 +173,14 @@ class Habbo extends ClassTemplate{
 		return $this->habboLanguage;
 	}
 	
-	
 	public function get_habboBirth(){
-		return 0;
+		return $this->habboBirth;
 	}
 	
-
+	public function get_habboEmail(){
+		return $this->habboEmail;
+	}
+	
 	/** SETS **/
 	public function set_isHabboLoggedIn($status){
 		//Set the logged status
@@ -217,7 +220,28 @@ class Habbo extends ClassTemplate{
 		}
 	}
 	
+	public function set_HabboBirth($param){
+		$this->habboBirth = $param;
+	}
+
+	public function set_HabboFigure($param){
+		$this->habboFigure = $param;
+	}
 	
+	public function set_HabboGender($param){
+		$this->habboBGender = $param;
+	}
 	
+	public function set_HabboEmail($param){
+		$this->habboEmail = $param;
+	}
+	
+	public function set_EmailCalls($param){
+		true;
+	}
+
+	public function set_HabboLanguage($param){
+		$this->habboLanguage = $param;
+	}		
 }
 ?>

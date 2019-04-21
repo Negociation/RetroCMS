@@ -23,6 +23,14 @@
 		
 		<!-- LANGUAGUEMANAGER IMPORT INCLUDE(JS) -->
 		<?php include('./web/includes/extensions/languageManager/visualSource.import'); ?>
+		
+		<script language='JavaScript' type='text/javascript'>
+			window.onload = function(){ 
+				advertisementLoad(); 
+				loadCurrentLanguage(); 
+			}
+		</script>
+		
 	</head>
 	<body>
 		<div id="overlay"></div>

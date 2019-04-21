@@ -32,16 +32,28 @@
 		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/prototype.js'></script>
 		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/effects.js'></script>
 		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/habbo.js'></script>
-
-
+		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/jquery.min.js'></script>
+		
+		<!-- LANGUAGUEMANAGER IMPORT INCLUDE(JS) -->
+		<?php include('./web/includes/extensions/languageManager/visualSource.import'); ?>
+		
+		
 		<script language="JavaScript" type="text/javascript">
 			window.onload = resizeWin;
 			window.onerror = function() { return true; };
 			window.onunload = clearOpener;
 			ensureOpenerIsLoggedIn();
-			addClientUnloadHook();
+			addClientUnloadHook();			
 			Event.observe(document, "keypress", function(e) { if (e.keyCode == Event.KEY_BACKSPACE) { Event.stop(e); } });
 		</script>
+		
+		<script>
+			$( document ).ready(function() {
+				loadCurrentLanguage(); 
+			});
+		</script>
+		
+		
 			<!--[if IE]>
 			<link href="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/styles/ie-all.css" type="text/css" rel="stylesheet" />
 			<![endif]-->
@@ -54,16 +66,17 @@
 	<body id="client">
 		<div id="client-topbar" style="display:none">
 			<div class="logo"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/popup/popup_topbar_habbologo.gif" alt="" align="middle"/></div>
-				<div class="habbocount"><div id="habboCountUpdateTarget">
-				740 members online
+			<div class="habbocount">
+				<div id="habboCountUpdateTarget">
+					740 <span class="lang-topbar-client-count">Habbos no Hotel</span>
 				</div>
 				<script language="JavaScript" type="text/javascript">
 					setTimeout(function() {
 					HabboCounter.init(600);
 					}, 20000);
 				</script>
-				</div>
-				<div class="logout"><a href="<?php echo $this->hotel->get_HotelUrl(); ?>/account/disconnected?origin=popup">logout</a></div>
+			</div>
+			<div class="logout"><a href="<?php echo $this->hotel->get_HotelUrl(); ?>/account/disconnected?origin=popup">logout</a></div>
 		</div>
 		<div>
 		<?php 

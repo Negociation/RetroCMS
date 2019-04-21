@@ -1,0 +1,98 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.0 ( Aquamarine ) 					    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+
+$languageManager = new languageManager();
+$loadedLanguage = $languageManager->get_loadedLanguages();
+
+echo'
+<div> Bem Vindo ao Habbo, clique aqui para selecionar o idioma de exibição padrão. </div>
+<div id="loadedLanguages" style=" margin-top: 5px; margin-bottom: 10px;">
+	<center>
+		<table width="100%">
+			<tbody>
+				<tr>
+					<td width="75%">
+						<table width="100%">
+							<tbody>
+								<tr>
+									<td width="20%" valign="middle">
+										<img src="'.$this->hotel->get_HotelWeb().'/c_images/album1411/frankselector.gif" alt="">
+									</td>
+							
+';
+
+									$x = $y = 0;
+																			
+
+									foreach ($languageManager->get_loadedLanguages() as $language){
+											echo $x == 0 && $y > 0 ? '<tr> <td width="20%"></td>' : '';
+											echo '
+												<td width="20%">
+													<table>
+													<tr>
+													<td>
+													
+													<center><a href="#"><img border="0" id = "flag_'.$languageManager->get_languageInfo($language)['languageParams']['languageFlag'].'" name="flag" src="'.$this->hotel->get_HotelWeb().'/c_images/album1401/flag_'.$languageManager->get_languageInfo($language)['languageParams']['languageFlag'].'_off.gif" alt=""></a></center>
+													
+													</td>
+													</tr>
+													<tr>
+													<td>
+													<center><a style="text-decoration: none;" name="'.$languageManager->get_languageInfo($language)['languageParams']['languageAcronomy'].'" id = "'.$languageManager->get_languageInfo($language)['languageParams']['languageFlag'].'" onclick="selectLanguage(this,\''.$languageManager->get_languageInfo($language)['languageParams']['languageAcronomy'].'\')" href="#setLanguage"><b>'.utf8_encode($languageManager->get_languageInfo($language)['languageParams']['languageName']).'</b></a></center>
+													</td>
+													</tr>
+													</table>
+												</td>									
+											';
+										if($x > 4){
+											$y+=1;
+											$x= 0;
+											echo '</tr>';
+										}
+										$x+=1;
+									}
+								
+									while($x < 4){
+										echo'
+											<td width="20%">
+												<table>
+													<tr>
+														<td><center><a href="#"><img border="0" src="'.$this->hotel->get_HotelWeb().'/c_images/album1401/flag_other_off.gif" alt=""></a></center></td>
+													</tr>
+													<tr>
+														<td><center><a style="text-decoration: none;"  href="#setLanguage"><b>Not Loaded</b></a></center></td>
+													</tr>
+												</table>
+											</td>
+										';
+										$x+=1;
+									}
+
+echo'
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</center>
+</div>
+<p>
+	<a href="#" class="colorlink orange dialogbutton" onclick="setLanguageResult(selectedLang); return false;"><span>Done</span></a>
+</p>
+<div class="clear"></div>
+';
+
+?>
+
