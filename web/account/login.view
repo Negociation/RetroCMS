@@ -352,7 +352,7 @@ require_once('./web/includes/modules/headers/account.viewpart');
 								else { Element.removeClassName($("login-username"), "validation-failed"); }
 								Event.stop(e);
 							} else {
-								$("login-submit").disabled = 'true';
+								$("lang-login-content-loginSubmit").disabled = 'true';
 							}
 						}, false);
 					</script>

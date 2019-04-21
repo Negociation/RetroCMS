@@ -85,13 +85,16 @@ require_once('./web/includes/modules/headers/register.viewpart');
 															<label for="T-O-S"><span class ="lang-register-StepHolder-TOS">Eu aceito os Termos e Condições.</span></label>
 														</p>
 														<div id="register-buttons">
-															<div align="right">
-															<?php 
-															foreach($_POST as $key => $value) {
-																echo"\n <input type=\"hidden\" name=\"".$key."\" value=\"".$value."\" />";
-															}
-														?>
+															<div id="register-buttons-continue">
+																<?php 
+																	foreach($_POST as $key => $value) {
+																		echo"\n <input type=\"hidden\" name=\"".$key."\" value=\"".$value."\" />";
+																	}
+																?>
 																<input type="submit" value="Continue" id="continuebtn" class="process-button">
+															</div>
+															<div id="register-buttons-back">
+																<input type="button" value="back" id="backbtn" class="process-button">
 															</div>
 															<div class="clear"></div>
 														</div>

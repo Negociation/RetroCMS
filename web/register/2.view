@@ -95,14 +95,19 @@ if(!isset($_GET['usernameExists'])){
 															<input type="password" name="required-password" id="retypedPassword" maxlength="32" value="" class="registration-text required-retypedPassword required-retypedPassword2">                                                    
 														</p>	
 														
-														<div id="pwRetypeStatus"></div>                                                    
-
-														
+														<div id="pwRetypeStatus"></div>											
 															<div id="register-buttons">
-							
-															<div align="right">
-																<input type="submit" value="Continue" id="continuebtn" class="process-button">
-															</div>
+																<div id="register-buttons-continue">
+																	<?php 
+																		foreach($_POST as $key => $value) {
+																			echo"\n <input type=\"hidden\" name=\"".$key."\" value=\"".$value."\" />";
+																		}
+																	?>
+																	<input type="submit" value="Continue" id="continuebtn" class="process-button">
+																</div>
+																<div id="register-buttons-back">
+																	<input type="button" value="back" id="backbtn" class="process-button">
+																</div>
 															<div class="clear"></div>                                                    
 															</div>      
 															

@@ -86,7 +86,7 @@ echo"
 			var habboReqPath = '".$this->hotel->get_HotelUrl()."';
 			var habboStaticFilePath = '".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery';
 			var habboImagerUrl = '/habbo-imaging/';
-			document.habboLoggedIn = '".$this->habbo->get_strHabboLoggedIn()."';
+			document.habboLoggedIn = ".$this->habbo->get_strHabboLoggedIn().";
 			window.name = 'habboMain';
 		</script>
 ";

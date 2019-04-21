@@ -116,9 +116,9 @@
 								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/club"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_09_hc.gif" style="margin-left: 4px"  alt="";/> <span class="lang-navbar-habboclub">Habbo Club</span></a>
 								<span class="right"></span>
 							</li>
-							<li id="disabled">
+							<li <?php if(get_class($this) == 'Groups') echo 'id="active"'; ?> >
 								<span class="left"></span>
-								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/#"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_05_fun.gif" alt=""/> <span class="lang-navbar-groups">Grupos</span></a>
+								<a href="<?php echo $this->hotel->get_HotelUrl(); ?>/groups"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/navi_icons/tab_icon_05_fun.gif" alt=""/> <span class="lang-navbar-groups">Grupos</span></a>
 								<span class="right"></span>
 							</li>
 							<li id="disabled" class="last">
