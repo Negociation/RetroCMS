@@ -43,7 +43,7 @@ echo'
 													<tr>
 													<td>
 													
-													<center><a href="#"><img border="0" id = "flag_'.$languageManager->get_languageInfo($language)['languageParams']['languageFlag'].'" name="flag" src="'.$this->hotel->get_HotelWeb().'/c_images/album1401/flag_'.$languageManager->get_languageInfo($language)['languageParams']['languageFlag'].'_off.gif" alt=""></a></center>
+													<center><a href="#"><img border="0" id = "flag_'.$languageManager->get_languageInfo($language)['languageParams']['languageFlag'].'" name="flag" src="'.$this->hotel->get_HotelWeb().'/c_images/album1401/flag_'.strtolower($languageManager->get_languageInfo($language)['languageParams']['languageFlag']).'_off.gif" alt=""></a></center>
 													
 													</td>
 													</tr>

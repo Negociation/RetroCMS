@@ -34,7 +34,6 @@ function setLanguageResult(lang) {
 			appendDialogBody(resultDialog, req.responseText, true);
 			moveDialogToCenter(resultDialog);
 			setCurrentLanguage(lang);
-			loadCurrentLanguage();
 		} }
 	);		
 
@@ -104,8 +103,11 @@ function setSelector(value, index, array){
 }
 
 function setCurrentLanguage(userLanguage){
-	window.localStorage.setItem('userSelectedLanguage', userLanguage);
-	set_languageInterface(userLanguage);
+	if(userLanguage != null){
+		window.localStorage.setItem('userSelectedLanguage', userLanguage);
+		set_languageInterface(userLanguage);
+		loadCurrentLanguage();
+	}
 }
 	
 function set_languageInterface(userLanguage){
@@ -114,6 +116,6 @@ function set_languageInterface(userLanguage){
 	}
 	
 	if(document.getElementById("footerIcon") !== null){		  
-		document.getElementById("footerIcon").src = habboStaticFilePath+"/images/languages/header/icon_"+userLanguage.toLowerCase()+".png";  
+		document.getElementById("footerIcon").src = habboStaticFilePath+"/images/languages/footer/footer_"+userLanguage.toLowerCase()+".png";  
 	}
 }
