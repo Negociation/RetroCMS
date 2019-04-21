@@ -75,15 +75,14 @@ if(!isset($_GET['avatarName'])){
 														swfobj.addVariable("figuredata_url", "'.$this->hotel->get_HotelWeb().'/habboweb/17/16/web-gallery/xml/figure_data_xml.xml");
 														swfobj.addVariable("localization_url", "'.$this->hotel->get_HotelWeb().'/habboweb/17/16/web-gallery/xml/figure_editor.xml");
 														swfobj.addVariable("post_figure", "figureData");
-														swfobj.addVariable("post_gender", "newGender");
-														swfobj.addVariable("required-birth", "'.$_POST['required-birth'].'");
+														swfobj.addVariable("post_gender", "newGender");														
+														swfobj.addVariable("required-birth", "'. strtotime($_POST['day'].'-'.$_POST['month'].'-'.$_POST['year']).'");
 														swfobj.addVariable("figure", "'.$this->newHabbo->get_HabboFigure().'");
 														swfobj.addVariable("gender", "'.$this->newHabbo->get_HabboGender().'");
 														swfobj.write("flashcontent");
 														</script>
 														';	
 													?>
-													
 												</div>
 												<div class="clear"></div>
 											</div>

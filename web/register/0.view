@@ -222,14 +222,7 @@ require_once('./web/includes/modules/headers/account.viewpart');
 																	<option value="1900">1900</option>
 																</select>
 															</div>
-																		<script type="text/javascript" language="JavaScript">
-																			function MergeData(){
-																				var dd = document.getElementById('day').value;
-																				var mm = document.getElementById('month').value;
-																				var yy = document.getElementById('year').value;
-																				document.getElementById('required-birth').value = parseInt((new Date(dd+'/'+mm+'/'+yy).getTime() / 1000).toFixed(0));
-																			}
-																		</script>
+
 															<div id="register-buttons">
 																<div id="register-buttons-continue">
 																	<input type="hidden" name="required-birth" id="required-birth" />

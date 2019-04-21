@@ -78,6 +78,11 @@ require_once('./web/includes/modules/headers/register.viewpart');
 
 													</div>
 													<div align="left" style="margin-top: 10px;">
+																											<?php 
+																	foreach($_POST as $key => $value) {
+																		echo"\n <input type=\"hidden\" name=\"".$key."\" value=\"".$value."\" />";
+																	}
+																?>
 														<a href="<?php echo $this->hotel->get_HotelURL() ?>" class="process-button" style=" width: 0px; height: 0px; padding-top: 2px; padding-bottom: 2px; padding-left: 4px; padding-right: 4px;" ><span class ="lang-register-Finish">PRONTO</span></a>
 													</div>
 												</div>

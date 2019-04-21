@@ -98,11 +98,9 @@ if(!isset($_GET['usernameExists'])){
 														<div id="pwRetypeStatus"></div>											
 															<div id="register-buttons">
 																<div id="register-buttons-continue">
-																	<?php 
-																		foreach($_POST as $key => $value) {
-																			echo"\n <input type=\"hidden\" name=\"".$key."\" value=\"".$value."\" />";
-																		}
-																	?>
+																	<input type="hidden" name="required-figure" value="<?php echo $_POST['figure']; ?>" />
+																	<input type="hidden" name="required-gender" value="<?php echo $_POST['gender']; ?>" />
+																	<input type="hidden" name="required-birth" value="<?php echo $_POST['required-birth']; ?>" />
 																	<input type="submit" value="Continue" id="continuebtn" class="process-button">
 																</div>
 																<div id="register-buttons-back">
@@ -365,34 +363,38 @@ if(!isset($_GET['usernameExists'])){
 															</p> 
 														
 														<p>                                                        
-															<input type="radio" name="required-avatarName1" disabled= true value="male" > Option 1<br>
+															<input type="radio" name="required-avatarName" disabled= true value="not_found" style="color: Grey;"> <label for="required-avatarName" style="color: Grey;"> Option 3 (Habbo name not found)</label><br>
 
 														</p> 
 														
 														<p>                                                        
-															<input type="radio" name="required-avatarName2" disabled= true value="male" > Option 2<br>
+															<input type="radio" name="required-avatarName" disabled= true value="not_found" style="color: Grey;"> <label for="required-avatarName" style="color: Grey;"> Option 3 (Habbo name not found)</label><br>
 														</p> 
 														
 														<p>                                                        
-															<input type="radio" name="required-avatarName3" disabled= true value="male" > Option 3<br>
+															<input type="radio" name="required-avatarName" disabled= true value="not_found">  <label for="required-avatarName" style="color: Grey;"> Option 3 (Habbo name not found)</label><br>
 														</p> 
 														
 														<p>                                                        
-															<input type="radio" name="gender" value="male" checked> <span class ="lang-register-StepHolder-Other">Other:</span> 	
+															<input type="radio" name="required-customAvatar" value="male" checked disabled> <span class ="lang-register-StepHolder-Other">Other:</span> 	
 															<input type="text" name="required-avatarName" onchange="resetLabel()" id="username" maxlength="14" value="" class="registration-text required-avatarName">                                                                                                      
 
 														</p> 
 																																						  
 														<div id="register-buttons">
-						
-														<div align="right" "="">
-															<input type="hidden" name="required-password" value="<?php echo $this->newHabbo->get_HabboPassword() ?>" />
-															<input type="hidden" name="required-birth" value="<?php echo $this->newHabbo->get_HabboBirth() ?>" />
-															<input type="hidden" name="newGender" value="<?php echo $this->newHabbo->get_HabboGender() ?>" />
-															<input type="hidden" name="figureData" value="<?php echo $this->newHabbo->get_HabboFigure() ?>" />
-															<input type="submit" value="Continue" id="continuebtn" class="process-button">
-														</div>
-														<div class="clear"></div>                                                    
+															<div id="register-buttons-continue">
+															<?php 
+																foreach($_POST as $key => $value) {
+																	if($key != 'required-avatarName'){
+																		echo "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+																		echo"<input type=\"hidden\" name=\"".$key."\" value=\"".$value."\" />";
+																	}
+																}
+															?>
+															
+																<input type="submit" value="Continue" id="continuebtn" class="process-button">
+															</div>
+															<div class="clear"></div>                                                    
 														</div>                                                
 													</form>                                            
 												</div>

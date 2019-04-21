@@ -67,7 +67,7 @@ require_once('./web/includes/modules/headers/register.viewpart');
 															<input type="text" name="required-email" id="required-email" value="" class="registration-text required-email">
 														</p>
 														
-														<p><input type="checkbox" id="required-emailMarket" name="scales" checked> <label for="required-emailMarket">Sim, gostaria de receber as novidades sobre jogos, prêmios e promoções através de e-mail.</label></p> 
+														<p><input type="checkbox" id="required-emailMarket" name="required-emailMarket" checked> <label for="required-emailMarket">Sim, gostaria de receber as novidades sobre jogos, prêmios e promoções através de e-mail.</label></p> 
 														
 														<hr>
 														<p>												
@@ -86,7 +86,8 @@ require_once('./web/includes/modules/headers/register.viewpart');
 															<div id="register-buttons-continue">
 																<?php 
 																	foreach($_POST as $key => $value) {
-																		echo"\n <input type=\"hidden\" name=\"".$key."\" value=\"".$value."\" />";
+																		echo "\t\t\t";
+																		echo"<input type=\"hidden\" name=\"".$key."\" value=\"".$value."\" />";
 																	}
 																?>
 																<input type="submit" value="Continue" id="continuebtn" class="process-button">
