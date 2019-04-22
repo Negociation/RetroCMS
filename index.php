@@ -18,7 +18,6 @@ require_once('./core/core.php');
 
 // + Start Session "habboWebsite"
 // - Desc: Sessions for Website
-session_id("habboWebsite");
 session_start();	
 
 //UTF-8(Portuguese and Spanish Accents for PHP)

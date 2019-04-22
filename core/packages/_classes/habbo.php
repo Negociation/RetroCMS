@@ -70,6 +70,7 @@ class Habbo extends ClassTemplate{
 
 	public function get_habboSession(){
 		if(isset($_SESSION['habboLoggedId']) &&  isset($_SESSION['habboLoggedToken'])){
+			
 			//If logged set the ID
 			$this->habboId = $_SESSION['habboLoggedId'];
 			
