@@ -26,24 +26,19 @@ class Decode{
 		$this->urlController = 'index';
 		$this->urlAction = 'default';
 
-		//Remove First Character of String if as "/"
-		$urlRequest = (isset($urlRequest[0]) && $urlRequest[0] == "/")? substr($urlRequest, 1) : $urlRequest;
-				
-		//Remove Last Character of String if as "/"
-		$urlRequest = (isset($urlRequest[-1]) && $urlRequest[-1] == "/")? rtrim($urlRequest,"/") : $urlRequest;
-		
 		//Remove Params from URL PHP
 		$urlRequest = strtok($urlRequest, '?');
 		
 		//Split url into array using middle "/"  as param 
 		$parsedRequest = (!empty($urlRequest))? explode("/",filter_var(rtrim($urlRequest), FILTER_SANITIZE_URL)) : $urlRequest;
+		$parsedRequest = $this->cleanSlashes($parsedRequest);
 		
 		//Decode Data if is Array Object
-		if(is_array($parsedRequest)){
+		if(is_array($parsedRequest) && count($parsedRequest) > 0 ){
 			$parsedRequest = $this->orderRequest($parsedRequest);
 			$this->decodeRequest($parsedRequest,$hotelConection);
 		}
-		
+
 	}
 	
 	//Set and Gets
@@ -91,7 +86,27 @@ class Decode{
 			unset($request);
 		}
 	}
-				
+	
+	protected function cleanSlashes($request){
+		
+		$fixedRequest = [];
+		
+		if(is_array($request)){
+			foreach($request as $index=>$parsed){
+				if($parsed=='' || $parsed == null){
+					unset($request[$index]);
+				}else{
+					array_push($fixedRequest,$parsed);
+				}
+			}
+			return $fixedRequest;
+		}
+		
+		
+			
+	}
+	
+	
 	// Re-order url based on Request
 	protected function orderRequest($request){
 		
