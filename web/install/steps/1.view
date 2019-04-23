@@ -70,8 +70,8 @@ require_once('./web/includes/modules/headers/install.viewpart');
 														<br>
 														Bem , agora para começarmos a instalação primeiramente selecione o idioma padrão para o seu hotel.   
 											
-														<div id="required-hotelLanguage" style="width: 198px;">
-															<select name="required-Version" id="required-hotelVersion" class="selector"  onchange="setCurrentLanguage(this.value)">
+														<div id="required-selectedLanguage" style="width: 198px;">
+															<select name="required-hotelLanguage" id="required-language" class="selector"  onchange="setCurrentLanguage(this.value)">
 																<option value= "" >Select your default Language</option>
 																<!-- Include the Language Options -->
 																<?php include('./web/includes/modules/language_select.viewpart');  ?>
@@ -107,10 +107,10 @@ require_once('./web/includes/modules/headers/install.viewpart');
 					<!-- Validator Input Data Script before POST -->
 					<script type="text/javascript" language="JavaScript">
 						Event.observe($("stepform"), "submit", function(e) {
-							if ($("required-hotelVersion").selectedIndex == 0) {
+							if ($("required-language").selectedIndex == 0) {
 								validatorBeforeSubmit();
 								validatorAddError(false, false, "Por favor informe uma data valida!");
-								$("required-hotelLanguage").className = "validation-failed";
+								$("required-selectedLanguage").className = "validation-failed";
 								Event.stop(e);
 							}
 						}, false);

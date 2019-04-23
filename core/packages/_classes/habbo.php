@@ -24,11 +24,15 @@ class Habbo extends ClassTemplate{
 	protected $habboFigure;
 	protected $habboGender;
 	protected $habboCredits;
+	protected $habboFilms;
 	protected $habboClub = [];
 	protected $habboBirth;
 	protected $habboLoggedStatus;
 	protected $habboTicket;
-	
+	protected $habboTickets;
+	protected $habboMotto;
+	protected $habboConsoleMotto;
+		
 	//Construct for Default Register/Install
 	public function __construct(){
 		
@@ -161,9 +165,7 @@ class Habbo extends ClassTemplate{
 			case 6:
 				return (new DateTime(date("Y-m-d",$this->habboClub[1])))->format('d-m-Y');
 				break;
-		}
-	
-			
+		}		
 	}
 
 	public function get_isHomeVisible(){
@@ -180,6 +182,18 @@ class Habbo extends ClassTemplate{
 	
 	public function get_habboEmail(){
 		return $this->habboEmail;
+	}
+
+	public function get_HabboTickets(){
+		return $this->habboTickets;
+	}	
+
+	public function get_HabboMotto(){
+		return $this->habboMotto;
+	}	
+
+	public function get_HabboConsoleMotto(){
+		return $this->habboConsoleMotto;
 	}
 	
 	/** SETS **/
@@ -211,6 +225,14 @@ class Habbo extends ClassTemplate{
 	
 	public function set_HabboTicket($param){
 		$this->habboTicket = $param;
+	}
+
+	public function set_HabboCredits($param){
+		$this->habboCredits = $param;
+	}
+
+	public function set_HabboFilms($param){
+		$this->habboFilms = $param;
 	}
 	
 	public function set_HabboPassword($param){
@@ -244,5 +266,21 @@ class Habbo extends ClassTemplate{
 	public function set_HabboLanguage($param){
 		$this->habboLanguage = $param;
 	}		
+
+	public function set_HabboRank($param){
+		$this->habboRank = $param;
+	}
+
+	public function set_HabboTickets($param){
+		$this->habboTickets = $param;
+	}	
+
+	public function set_HabboMotto($param){
+		$this->habboMotto = $param;
+	}	
+
+	public function set_HabboConsoleMotto($param){
+		$this->habboConsoleMotto = $param;
+	}	
 }
 ?>

@@ -36,7 +36,7 @@ class HotelModel extends ModelTemplate{
 		
 		//If the query returned all site_settings
 		
-		if (count($queryResult) == 12 ){
+		if (count($queryResult) >= 12){
 			//Set Hotel data in Object
 			$hotelObject->constructObject($queryResult[0]['setting_value'],$queryResult[1]['setting_value'],$queryResult[2]['setting_value'],$queryResult[3]['setting_value'],$queryResult[4]['setting_value'],$queryResult[5]['setting_value'],array($queryResult[6]['setting_value'],$queryResult[7]['setting_value'],$queryResult[8]['setting_value'],$queryResult[9]['setting_value'],$queryResult[10]['setting_value'],$queryResult[11]['setting_value']),array());		
 		
@@ -70,6 +70,41 @@ class HotelModel extends ModelTemplate{
 			return $resultObject !== false;
 		}
 	}
-	
+
+
+	public function set_HotelInstall($hotelObject,$habboObject){
+		$status = true;
+		foreach (glob("./core/install/retrodb/*.sql") as $sqlcontent){ 
+			try{
+				$stmt = $this->hotelConection->prepare(file_get_contents($sqlcontent));
+				if($sqlcontent == './core/install/retrodb/retroinstall_table_site_settings.sql'){
+				$stmt->bindValue(':url',$hotelObject->get_HotelUrl());
+				$stmt->bindValue(':web',$hotelObject->get_HotelWeb());
+				$stmt->bindValue(':version', $hotelObject->get_HotelVersion());
+				$stmt->bindValue(':name',$hotelObject->get_HotelName());
+				$stmt->bindValue(':nick',$hotelObject->get_HotelNick());
+				$stmt->bindValue(':texts',$hotelObject->get_HotelTexts());
+				$stmt->bindValue(':vars',$hotelObject->get_HotelVars());
+				$stmt->bindValue(':dcr',$hotelObject->get_HotelDcr());
+				$stmt->bindValue(':host',$hotelObject->get_HotelHost());
+				$stmt->bindValue(':port',$hotelObject->get_HotelPort());
+				$stmt->bindValue(':musport',$hotelObject->get_HotelMus());
+				}
+				if($sqlcontent == './core/install/retrodb/retroinstall_table_users.sql'){
+				$stmt->bindValue(':startcredits',$habboObject->get_HabboCredits());
+				$stmt->bindValue(':starttickets',$habboObject->get_HabboTickets());
+				$stmt->bindValue(':startfilms',$habboObject->get_HabboFilms());
+				$stmt->bindValue(':startmotto',$habboObject->get_HabboMotto());
+				$stmt->bindValue(':startconsole',$habboObject->get_HabboConsoleMotto());
+
+				}				
+				$stmt->execute();
+			}catch(Exception $e){
+				$status = false;
+				echo "Ocorreu um erro com a execução do Script em: ".$sqlcontent;
+			}
+		}
+		return $status;
+	}
 }
 ?>

@@ -79,8 +79,8 @@ require_once('./web/includes/modules/headers/install.viewpart');
 														
 														<p>                                                        
 															<label for="required-hotelVersion" class="registration-text">Versão do Hotel</label><br>
-															<div id="required-hotelVersion">
-																<select name="required-Version" id="hotelVersion"  class="dateselector" onchange="checkSelectedVersion(this.value)">
+															<div id="required-selectedVersion">
+																<select name="required-hotelVersion" id="required-Version"  class="dateselector" onchange="checkSelectedVersion(this.value)">
 																	<option value="">Selecione a versão do seu Hotel</option>
 																	<option value="14">v14</option>
 																	<option value="15">v15</option>
@@ -179,10 +179,9 @@ require_once('./web/includes/modules/headers/install.viewpart');
 				<!-- Validator Input Data Script before POST -->
 				<script type="text/javascript" language="JavaScript">
 					Event.observe($("stepform"), "submit", function(e) {
-						if ($("hotelVersion").selectedIndex == 0) {
-							validatorBeforeSubmit();
+						if ($("required-Version").selectedIndex == 0) {
 							validatorAddError(false, false, "Informe um CMS!");
-							$("required-hotelVersion").className = "validation-failed";
+							$("required-selectedVersion").className = "validation-failed";
 							Event.stop(e);
 						}
 					}, false);

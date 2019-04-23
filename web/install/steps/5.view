@@ -67,9 +67,9 @@ require_once('./web/includes/modules/headers/install.viewpart');
 														</p> 
 														
 														<p>                                                        
-															<label for="required-hotelCedits" class="registration-text">Creditos</label>
+															<label for="required-hotelCredits" class="registration-text">Creditos</label>
 															<br>                                                        
-															<input type="text" name="required-hotelCedits" pattern="[0-9]+" id="hotelCredits" maxlength="200" value="0" class="registration-text required-hotelCredits">                                                    
+															<input type="text" name="required-hotelCredits" pattern="[0-9]+" id="hotelCredits" maxlength="200" value="0" class="registration-text required-hotelCredits">                                                    
 														</p> 
 														
 														<p>                                                        
@@ -79,9 +79,9 @@ require_once('./web/includes/modules/headers/install.viewpart');
 														</p> 
 														
 														<p>                                                        
-															<label for="required-hotelRolls" class="registration-text">Filmes:</label>
+															<label for="required-hotelFilms" class="registration-text">Filmes:</label>
 															<br>                                                        
-															<input type="text" name="required-hotelRolls" pattern="[0-9]+" id="hotelRolls" maxlength="200" value="0" class="registration-text required-hotelRolls">                                                    
+															<input type="text" name="required-hotelFilms" pattern="[0-9]+" id="hotelRolls" maxlength="200" value="0" class="registration-text required-hotelRolls">                                                    
 														</p>
 
 														<p>                                                        
@@ -162,7 +162,7 @@ require_once('./web/includes/modules/headers/install.viewpart');
 							['required-hotelTickets', 'Please choose your name', function(v) {
 								return !Validation.get('IsEmpty').test(v);
 							}],
-							['required-hotelRolls', 'Please choose your name', function(v) {
+							['required-hotelFilms', 'Please choose your name', function(v) {
 								return !Validation.get('IsEmpty').test(v);
 							}]
 						]);
