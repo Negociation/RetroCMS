@@ -104,7 +104,7 @@ function setSelector(value, index, array){
 }
 
 function setCurrentLanguage(userLanguage){
-	if(userLanguage != null){
+	if(userLanguage !== null && userLanguage != ''){
 		window.localStorage.setItem('userSelectedLanguage', userLanguage);
 		set_languageInterface(userLanguage);
 		loadCurrentLanguage();
@@ -112,11 +112,11 @@ function setCurrentLanguage(userLanguage){
 }
 	
 function set_languageInterface(userLanguage){
-	if(document.getElementById("languageIcon") !== null){		  
+	if(document.getElementById("languageIcon") !== null ){		  
 		document.getElementById("languageIcon").src = habboStaticFilePath+"/images/languages/header/icon_"+userLanguage.toLowerCase()+".png";  
 	}
 	
-	if(document.getElementById("footerIcon") !== null){		  
+	if(document.getElementById("footerIcon") !== null ){		  
 		document.getElementById("footerIcon").src = habboStaticFilePath+"/images/languages/footer/footer_"+userLanguage.toLowerCase()+".png";  
 	}
 }

@@ -71,8 +71,8 @@ require_once('./web/includes/modules/headers/install.viewpart');
 														Bem , agora para começarmos a instalação primeiramente selecione o idioma padrão para o seu hotel.   
 											
 														<div id="required-hotelLanguage" style="width: 198px;">
-															<select name="required-Version" id="required-hotelVersion" class="selector"  onchange="languageSelect(this.value)">
-																<option value="">Select your default Language</option>
+															<select name="required-Version" id="required-hotelVersion" class="selector"  onchange="setCurrentLanguage(this.value)">
+																<option value= "" >Select your default Language</option>
 																<!-- Include the Language Options -->
 																<?php include('./web/includes/modules/language_select.viewpart');  ?>
 															</select>

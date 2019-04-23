@@ -32,10 +32,20 @@
 		<script language='JavaScript' type='text/javascript' src='<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/js/jquery.min.js'></script>
 
 		<script>var j = jQuery.noConflict();</script>
-	
+
+		<script language='JavaScript' type='text/javascript'>
+			var habboReqPath = '<?php echo $this->hotel->get_HotelUrl() ?>';
+			var habboStaticFilePath = '<?php echo $this->hotel->get_HotelWeb() ?>/habboweb/17/16/web-gallery';
+			var habboImagerUrl = '/habbo-imaging/';
+			document.habboLoggedIn = "false";
+			window.name = 'habboInstall';
+		</script>
+		
 		<!-- LANGUAGUEMANAGER IMPORT INCLUDE(JS) -->
 		<?php include('./web/includes/extensions/languageManager/visualSource.import'); ?>
 
+		<script>window.onload = function(){ loadCurrentLanguage(); }</script>
+		
 	</head>
 	
 	<body id="install">
