@@ -1,10 +1,11 @@
+var selectedLang = null;
+
 function closeSelector(e){
 	if (e) Event.stop(e);
 	Element.remove("selector_dialog");
 	hideOverlay();
 }
 
-var selectedLang = null;
 
 function showLanguageDialog() {
 		

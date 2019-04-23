@@ -18,7 +18,7 @@
 
 class languageManager extends extensionTemplate{
 
-	protected $extensionDirectory = './web/includes/extensions/languageManager/';
+	protected $extensionDirectory = './web/includes/extensions/languageManager/webcontent';
 	protected $loadedLanguages = [];
 	
 	public function __construct(){
