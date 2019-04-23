@@ -94,16 +94,22 @@ require_once('./web/includes/modules/headers/install.viewpart');
 														</p>	
 														
 														<div id="pwRetypeStatus"></div>                                                    
-
-															<div id="register-buttons">
-							
-															<div align="right">
-																<input type="submit" value="Continue" id="continuebtn" class="process-button">
+														<div id="register-buttons">
+															<div id="register-buttons-continue">
+																<?php 
+																	foreach($_POST as $key => $value) {
+																		echo "\t\t\t";
+																		echo"<input type=\"hidden\" name=\"".$key."\" value=\"".$value."\" />";
+																	}
+																?>
+																<input type="submit" value="Continuar" id="continuebtn" class="process-button">
 															</div>
-															<div class="clear"></div>                                                    
-															</div>      
-															
-														</form>                                            
+															<div id="register-buttons-back">
+																<input type="button" value="back" id="backbtn" class="process-button">
+															</div>
+															<div class="clear"></div>
+														</div>      							
+													</form>                                            
 												</div>
 											</div>
 											<div class="clear"></div>

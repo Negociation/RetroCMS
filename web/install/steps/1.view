@@ -78,17 +78,16 @@ require_once('./web/includes/modules/headers/install.viewpart');
 															</select>
 														</div>
 													</p> 
-													
-												                                       
+														                                       
 													<div id="register-buttons">
-					
-													<div align="right" >
-														<input type="hidden" name="required-hotelVersion" id="required-hotelVersion"/>
-
-														<input type="submit" value="Continuar" id="continuebtn" class="process-button">
-													</div>
-													<div class="clear"></div>                                                    
-													</div>                                                
+														<div id="register-buttons-continue">
+															<input type="submit" value="Continuar" id="continuebtn" class="process-button">
+														</div>
+														<div id="register-buttons-back">
+															<input type="button" value="back" id="backbtn" class="process-button">
+														</div>
+														<div class="clear"></div>
+													</div>                                             
 												</form>                                            
 											</div>
 													<div class="clear"></div>

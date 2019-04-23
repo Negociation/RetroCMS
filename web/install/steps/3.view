@@ -123,12 +123,19 @@ require_once('./web/includes/modules/headers/install.viewpart');
 														</p>
 														  																							   
 														<div id="register-buttons">
-															<div align="right" >
-																<input type="hidden" name="required-hotelLanguage" id="required-hotelLanguage"/>
+															<div id="register-buttons-continue">
+																<?php 
+																	foreach($_POST as $key => $value) {
+																		echo"<input type=\"hidden\" name=\"".$key."\" value=\"".$value."\" />";
+																	}
+																?>
 																<input type="submit" value="Continuar" id="continuebtn" class="process-button">
 															</div>
-															<div class="clear"></div>                                                    
-														</div>      
+															<div id="register-buttons-back">
+																<input type="button" value="back" id="backbtn" class="process-button">
+															</div>
+															<div class="clear"></div>
+														</div>   
 															
 													</form>                                            
 												</div>

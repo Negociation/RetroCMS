@@ -58,14 +58,20 @@ require_once('./web/includes/modules/headers/install.viewpart');
 													Comming Soon...
 												                                       
 													<div id="register-buttons">
-					
-													<div align="right" >
-														<input type="hidden" name="required-hotelLanguage" id="required-hotelLanguage"/>
-
-														<input type="submit" value="Continue" id="continuebtn" onmousedown="GetVersion()" class="process-button">
-													</div>
-													<div class="clear"></div>                                                    
-													</div>                                                
+														<div id="register-buttons-continue">
+															<?php 
+																foreach($_POST as $key => $value) {
+																	echo "\t\t\t";
+																	echo"<input type=\"hidden\" name=\"".$key."\" value=\"".$value."\" />";
+																}
+															?>
+															<input type="submit" value="Continuar" id="continuebtn" class="process-button">
+														</div>
+														<div id="register-buttons-back">
+															<input type="button" value="back" id="backbtn" class="process-button">
+														</div>
+														<div class="clear"></div>
+													</div>                                             
 												</form>                                            
 											</div>
 													<div class="clear"></div>
