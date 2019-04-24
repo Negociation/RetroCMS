@@ -21,7 +21,7 @@ echo "\n\t\t";
 
 $languageManager = new languageManager();
 foreach ($languageManager->get_loadedLanguages() as $language){
-	echo get_class($this) == 'Install' ? "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/web/includes/extensions/languageManager/".strtolower($languageManager->get_languageInfo($language)['languageParams']['languageAcronomy'])."/install.js'></script>" :  "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/web/includes/extensions/languageManager/webcontent/".strtolower($languageManager->get_languageInfo($language)['languageParams']['languageAcronomy'])."/habboweb.js'></script>";
+	echo get_class($this) == 'Install' ? "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/web/includes/extensions/languageManager/webcontent/".strtolower($languageManager->get_languageInfo($language)['languageParams']['languageAcronomy'])."/install.js'></script>" :  "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/web/includes/extensions/languageManager/webcontent/".strtolower($languageManager->get_languageInfo($language)['languageParams']['languageAcronomy'])."/habboweb.js'></script>";
 	echo "\n\t\t";
 }
 

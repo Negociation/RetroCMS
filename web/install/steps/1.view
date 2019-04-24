@@ -23,7 +23,7 @@ require_once('./web/includes/modules/headers/install.viewpart');
 					<div class="headline">
 						<div class="headline-content">
 							<div class="headline-wrapper">
-								<h2>Install</h2>
+								<h2><span class ="lang-install-headerTitle">Instalação</span></h2>
 							</div>
 						</div>
 					</div>
@@ -50,15 +50,15 @@ require_once('./web/includes/modules/headers/install.viewpart');
 											<div class="content-white-content">                                                
 												<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/install/step/2" id="stepform">                                                    
 													<p>                                                        
-														<b>Vamos começar ?</b>
+														<b><span class ="lang-install-StepTitle-Start">Vamos começar ?</span></b>
 														<br>
-														Olá , bem vindo a instalação do RetroCMS , por favor siga as etapas corretamente e preencha com as devidas informações sobre o seu hotel. Estas informaçõs podem ser alteradas posteriormente no painel de controle.
+														<span class ="lang-install-StepContent-Start">Olá , bem vindo a instalação do RetroCMS , por favor siga as etapas corretamente e preencha com as devidas informações sobre o seu hotel. Estas informaçõs podem ser alteradas posteriormente no painel de controle.</span>
 													</p> 
 														
 													<p> 
-														<b>Creditos de desenvolvimento:</b>
+														<b><span class ="lang-install-StepTitle-DevCredits">Creditos de desenvolvimento:</span></b>
 														<br>
-														O desenvolvimento do RetroCMS foi possivel graças as seguintes pessoas:
+														<span class ="lang-install-StepContent-DevCredits">O desenvolvimento do RetroCMS foi possivel graças as seguintes pessoas:</span>
 													</p>
 													<p>- <a href="url">m.tiago</a></p>
 													<p>- <a href="url">Quackster</a></p>
@@ -66,9 +66,9 @@ require_once('./web/includes/modules/headers/install.viewpart');
 													<p>- <a href="url">Alito</a></p>
 													<br>														
 													<p>
-														<b>Idioma</b>
+														<b><span class ="lang-install-StepTitle-Language">Idioma</span></b>
 														<br>
-														Bem , agora para começarmos a instalação primeiramente selecione o idioma padrão para o seu hotel.   
+														<span class ="lang-install-StepContent-Language">Bem , agora para começarmos a instalação primeiramente selecione o idioma padrão para o seu hotel.</span> 
 											
 														<div id="required-selectedLanguage" style="width: 198px;">
 															<select name="required-hotelLanguage" id="required-language" class="selector"  onchange="setCurrentLanguage(this.value)">
@@ -81,10 +81,10 @@ require_once('./web/includes/modules/headers/install.viewpart');
 														                                       
 													<div id="register-buttons">
 														<div id="register-buttons-continue">
-															<input type="submit" value="Continuar" id="continuebtn" class="process-button">
+															<input type="submit" value="Continuar" name="install-ButtonTitle-Continue" id="continuebtn" class="process-button">
 														</div>
 														<div id="register-buttons-back">
-															<input type="button" value="back" id="backbtn" class="process-button">
+															<input type="button" value="back" name="install-ButtonTitle-Back" id="backbtn" class="process-button">
 														</div>
 														<div class="clear"></div>
 													</div>                                             

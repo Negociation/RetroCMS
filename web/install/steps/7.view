@@ -23,7 +23,7 @@ require_once('./web/includes/modules/headers/install.viewpart');
 						<div class="headline">
 							<div class="headline-content">
 								<div class="headline-wrapper">
-									<h2><span class ="lang-register-headerTitle">Registro</span></h2>
+									<h2><span class ="lang-install-headerTitle">Instalação</span></h2>
 								</div>
 							</div>
 						</div>

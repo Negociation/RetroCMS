@@ -50,9 +50,9 @@ require_once('./web/includes/modules/headers/install.viewpart');
 											<div class="content-white-content">                                                
 												<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/install/step/3" id="stepform">                                                    
 													<p>                                                        
-														<b>Indentidade Visual</b>
+														<b><span class ="lang-install-StepTitle-Customizations">Indentidade Visual</span></b>
 														<br>
-														Agora escolha como deve ser a aparência do seu hotel, esta escolha pode ser alterada posteriormente no painel de controle. 
+														<span class ="lang-install-StepContent-Customizations">Agora escolha como deve ser a aparência do seu hotel, esta escolha pode ser alterada posteriormente no painel de controle. 
 													</p> 
 													
 													Comming Soon...

@@ -110,9 +110,12 @@ class Install extends ControllerTemplate{
 					}
 					break;
 				case 6:
-					if($this->hotelModel->set_HotelInstall($this->newHotel,$this->defaultHabbo)){
-						include 'web/install/steps/6.view';
+					if($_SERVER['REQUEST_METHOD'] == 'POST'){
+						if(!$this->hotelModel->set_HotelInstall($this->newHotel,$this->defaultHabbo)){
+							echo 'error';
+						}
 					}
+					include 'web/install/steps/6.view';
 					break;
 				case 7:			
 					
