@@ -2,7 +2,10 @@
 --
 -- Indexes for dumped tables
 --
-
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
+  
 --
 -- Indexes for table `catalogue_items`
 --
@@ -154,9 +157,6 @@ ALTER TABLE `soundmachine_songs`
 --
 -- Indexes for table `users`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- Indexes for table `users_badges`

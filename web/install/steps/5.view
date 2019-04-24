@@ -32,7 +32,7 @@ require_once('./web/includes/modules/headers/install.viewpart');
 							<div class="content-column1">
 									<div class="bubble">
 										<div class="bubble-body">               
-											<span class ="lang-register-BubbleContent2a">Agora que já temos as informações sobre o seu hotel, vamos definir as preferências do hospede como créditos iniciais, tickets, dias de clube, bilhetes, missão etc.</span>
+											<span class ="lang-install-BubbleContent5">Agora que já temos as informações sobre o seu hotel, vamos definir as preferências do hospede como créditos iniciais, tickets, dias de clube, bilhetes, missão etc.</span>
 											<div class="clear"></div>
 										</div>
 									</div>
@@ -62,30 +62,30 @@ require_once('./web/includes/modules/headers/install.viewpart');
 												<div class="content-white-content">                                                
 													<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/install/step/6" id="stepform">                                                    
 														<p>                                                        
-															<b>DADOS DO USUARIO:</b><br>Defina os dados basicos para novos usuarios.
+															<b><span class ="lang-install-StepTitle-UserDefault">DADOS DO USUARIO:</span></b><br><span class ="lang-install-StepContent-UserDefault">Defina os dados basicos para novos usuarios.</span>
 															
 														</p> 
 														
 														<p>                                                        
-															<label for="required-hotelCredits" class="registration-text">Creditos</label>
+															<label for="required-hotelCredits" class="registration-text"><span class ="lang-install-StepLabel-DefaultCredits">Creditos</span></label>
 															<br>                                                        
 															<input type="text" name="required-hotelCredits" pattern="[0-9]+" id="hotelCredits" maxlength="200" value="0" class="registration-text required-hotelCredits">                                                    
 														</p> 
 														
 														<p>                                                        
-															<label for="required-hotelTickets" class="registration-text">Tickets:</label>
+															<label for="required-hotelTickets" class="registration-text"><span class ="lang-install-StepLabel-DefaultTickets">Tickets:</span></label>
 															<br>                                                        
 															<input type="text" name="required-hotelTickets" pattern="[0-9]+" id="hotelTickets" maxlength="200" value="0" class="registration-text required-hotelTickets">                                                    
 														</p> 
 														
 														<p>                                                        
-															<label for="required-hotelFilms" class="registration-text">Filmes:</label>
+															<label for="required-hotelFilms" class="registration-text"><span class ="lang-install-StepLabel-DefaultFilms">Filmes da Camera:</span></label>
 															<br>                                                        
 															<input type="text" name="required-hotelFilms" pattern="[0-9]+" id="hotelRolls" maxlength="200" value="0" class="registration-text required-hotelRolls">                                                    
 														</p>
 
 														<p>                                                        
-															<label for="required-hotelHC" class="registration-text">Dias de HC:</label>
+															<label for="required-hotelHC" class="registration-text"><span class ="lang-install-StepLabel-DefaultHC">Dias de HC:</span></label>
 															<br>                                                        
 															<input type="text" name="required-hotelHC" pattern="[0-9]+" id="hotelHC" maxlength="200" value="0" class="registration-text required-hotelHC" disabled>                                                    
 														</p> 
@@ -95,25 +95,25 @@ require_once('./web/includes/modules/headers/install.viewpart');
 														<hr>
 														
 														<p>                                                        
-															<b>Outras Definições:</b>
+															<b><span class ="lang-install-StepTitle-UserOthers">Outras Definições:</span></b>
 															<br>
-															Defina outras informações do usuario como missão, status da habbo home, missão do console...
+															<span class ="lang-install-StepContent-UserOthers">Defina outras informações do usuario como missão, status da habbo home, missão do console...</span>
 															
 														</p> 														
 														<p>                                                        
-															<label for="required-hotelMotto" class="registration-text">Missão:</label>
+															<label for="required-hotelMotto" class="registration-text"><span class ="lang-install-StepLabel-DefaultMotto">Missão:</span></label>
 															<br>                                                        
 															<input type="text" name="required-hotelMotto" id="hotelMotto" maxlength="200" value="" class="registration-text required-hotelMotto">                                                    
 														</p> 
 															
 														<p>                                                        
-															<label for="required-hotelConsole" class="registration-text">Missão do Console:</label>
+															<label for="required-hotelConsole" class="registration-text"><span class ="lang-install-StepLabel-DefaultConsoleMotto">Missão do Console:</span></label>
 															<br>                                                        
 															<input type="text" name="required-hotelConsole" id="hotelConsole" maxlength="200" value="" class="registration-text required-hotelConsole">                                                    
 														</p> 						
 
 														<p>                                                        
-															<label for="required-hotelHome" class="registration-text">Visibilidade da Habbo Home:</label>
+															<label for="required-hotelHome" class="registration-text"><span class ="lang-install-StepLabel-DefaultHome">Visibilidade da Habbo Home:</span></label>
 															<br>                                                        
 															<input type="radio" name="visibility" value="true" disabled> <label for="required-hotelHome" style="color: Grey;">Visivel
 															<input type="radio" name="visibility" value="false" disabled> <label for="required-hotelHome" style="color: Grey;">Oculta

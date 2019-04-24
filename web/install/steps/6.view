@@ -32,7 +32,7 @@ require_once('./web/includes/modules/headers/install.viewpart');
 							<div class="content-column1">
 									<div class="bubble">
 										<div class="bubble-body">               
-											<span class ="lang-register-BubbleContent2a">O seu hotel já esta instalado, agora, escolha seu nome habbo e senha. Uma boa senha deve conter números e letras MAIÚSCULAS e minúsculas..</span>
+											<span class ="lang-install-BubbleContent6">O seu hotel já esta instalado, agora, escolha seu nome habbo e senha. Uma boa senha deve conter números e letras MAIÚSCULAS e minúsculas..</span>
 											<div class="clear"></div>
 										</div>
 									</div>
@@ -62,13 +62,13 @@ require_once('./web/includes/modules/headers/install.viewpart');
 												<div class="content-white-content">                                                
 													<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/install/done" id="stepform">                                                    
 														<p>                                                        
-															<b><span class ="lang-register-StepTitle-Username">ESCOLHA SEU NOME HABBO:</span></b>
+															<b><span class ="lang-install-StepTitle-Username">ESCOLHA SEU NOME HABBO:</span></b>
 															<br>
-															<span class ="lang-register-StepContent-UsernameBefore">Seu</span> <b><span class ="lang-register-StepHolder-Username">nome habbo</span></b> <span class ="lang-register-StepContent-UsernameAfter">pode conter letras minúsculas e maiúsculas. Seu nome habbo também pode conter números e os seguintes caracteres: - =?! @ :. </span>                                                    
+															<span class ="lang-install-StepContent-UsernameBefore">Seu</span> <b><span class ="lang-install-StepHolder-Username">nome habbo</span></b> <span class ="lang-install-StepContent-UsernameAfter">pode conter letras minúsculas e maiúsculas. Seu nome habbo também pode conter números e os seguintes caracteres: - =?! @ :. </span>                                                    
 														</p> 
 														
 														<p>                                                        
-															<label for="required-avatarName" class="registration-text"><span class ="lang-register-StepHolder-Username">Nome Habbo</span></label>
+															<label for="required-avatarName" class="registration-text"><span class ="lang-install-StepHolder-Username">Nome Habbo</span></label>
 															<br>                                                        
 															<input type="text" name="required-avatarName" id="username" maxlength="14" value="" class="registration-text required-avatarName">                                                    
 														</p> 
@@ -78,18 +78,18 @@ require_once('./web/includes/modules/headers/install.viewpart');
 														<p>                                                        
 															<b>AGORA ESCOLHA SUA SENHA:</b>
 															<br>
-															<span class ="lang-register-StepContent-PasswordBefore">Sua</span> <b><span class ="lang-register-StepHolder-Password">senha</span></b> <span class ="lang-register-StepContent-PasswordAfter">deve ter pelo menos seis caracteres. Sua senha pode conter letras maiúsculas e números.</span>
+															<span class ="lang-install-StepContent-PasswordBefore">Sua</span> <b><span class ="lang-install-StepHolder-Password">senha</span></b> <span class ="lang-install-StepContent-PasswordAfter">deve ter pelo menos seis caracteres. Sua senha pode conter letras maiúsculas e números.</span>
 														</p> 
 														
 														<p>                                                        
-															<label for="required-password" class="registration-text"><span class ="lang-register-StepHolder-Password">Senha</span></label><br>                                                        
+															<label for="required-password" class="registration-text"><span class ="lang-install-StepHolder-Password">Senha</span></label><br>                                                        
 															<input type="password" name="required-password" id="password" maxlength="32" value="" class="registration-text required-password required-password2">                                                    
 														</p>  
 														
 														<div id="pwStatus"></div>                                                    
 														
 														<p>                                                       
-															<label for="required-password" class="registration-text"><span class ="lang-register-StepHolder-RetypePassword">Digite sua senha de novo</span></label><br>                                                        
+															<label for="required-password" class="registration-text"><span class ="lang-install-StepHolder-RetypePassword">Digite sua senha de novo</span></label><br>                                                        
 															<input type="password" name="required-password" id="retypedPassword" maxlength="32" value="" class="registration-text required-retypedPassword required-retypedPassword2">                                                    
 														</p>	
 														

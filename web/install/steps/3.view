@@ -23,7 +23,7 @@ require_once('./web/includes/modules/headers/install.viewpart');
 					<div class="headline">
 						<div class="headline-content">
 							<div class="headline-wrapper">
-								<h2>Install</h2>
+								<h2><span class ="lang-install-headerTitle">Instalação</span></h2>
 							</div>
 						</div>
 					</div>
@@ -32,7 +32,7 @@ require_once('./web/includes/modules/headers/install.viewpart');
 							<div class="content-column1">
 									<div class="bubble">
 										<div class="bubble-body">               
-											<span class ="lang-register-BubbleContent2a">Certo, agora que você ja customizou o seu hotel é hora de configurarmos as infomações basica de acesso.</span>
+											<span class ="lang-install-BubbleContent3">Certo, agora que você ja customizou o seu hotel é hora de configurarmos as infomações basica de acesso.</span>
 											<div class="clear"></div>
 										</div>
 									</div>
@@ -63,25 +63,25 @@ require_once('./web/includes/modules/headers/install.viewpart');
 													<form method="post" action="<?php echo $this->hotel->get_HotelURL() ?>/install/step/4" id="stepform">
 													
 														<p>                                                        
-															<b>DEFINA AS INFORMAÇÕES BASICAS DO HOTEL</b><br>
-															Por favor preencha as informações sobre o seu hotel.
+															<b><span class ="lang-install-StepTitle-BasicInfo">DEFINA AS INFORMAÇÕES BASICAS DO HOTEL</span></b><br>
+															<span class ="lang-install-StepContent-BasicInfo">Por favor preencha as informações sobre o seu hotel.</span>
 														</p>
 														
 														<p>
-															<label for="required-hotelName" class="registration-text">Nome do Hotel</label><br>                                                        
+															<label for="required-hotelName" class="registration-text"><span class ="lang-install-StepLabel-HotelName">Nome do Hotel</span></label><br>                                                        
 															<input type="text" name="required-hotelName" id="hotelname" maxlength="20" placeholder="RetroCMS" class="registration-text required-hotelName">                                                    
 														</p>
 														
 														<p>                                                        
-															<label for="required-hotelNick" class="registration-text">Nick do Hotel</label><br>                                                        
+															<label for="required-hotelNick" class="registration-text"><span class ="lang-install-StepLabel-HotelNick">Nick do Hotel</span></label><br>                                                        
 															<input type="text" name="required-hotelNick" id="hotelnick" maxlength="20" placeholder="Retro" class="registration-text required-hotelNick">                                                    
 														</p> 
 														
 														<p>                                                        
-															<label for="required-hotelVersion" class="registration-text">Versão do Hotel</label><br>
+															<label for="required-hotelVersion" class="registration-text"><span class ="lang-install-StepLabel-HotelVersion">Versão do Hotel</span></label><br>
 															<div id="required-selectedVersion">
 																<select name="required-hotelVersion" id="required-Version"  class="dateselector" onchange="checkSelectedVersion(this.value)">
-																	<option value="">Selecione a versão do seu Hotel</option>
+																	<option value=""><span class ="lang-install-StepOption-HotelVersion">Selecione a versão do seu Hotel</span></option>
 																	<option value="14">v14</option>
 																	<option value="15">v15</option>
 																	<option value="16">v16</option>
@@ -100,25 +100,25 @@ require_once('./web/includes/modules/headers/install.viewpart');
 															}
 														</script>
 														
-														<p><input type="checkbox" name="required-windowsStatus" id="windowsStatus" name="scales" checked disabled> <label for="required-windowsStatus">Desejo ativar o suporte para execução de janelas estaticas aos quartos ( recurso compativel apenas com a v17 *RetroDCR).</label></p> 
+														<p><input type="checkbox" name="required-windowsStatus" id="windowsStatus" name="scales" checked disabled> <label for="required-windowsStatus"><span class ="lang-install-StepLabel-HotelWindows">Desejo ativar o suporte para execução de janelas estaticas aos quartos ( recurso compativel apenas com a v17 *RetroDCR).</span></label></p> 
 														
 														<p><input type="checkbox" id="required-noobStatus" name="scales" disabled> <label for="required-noobStatus" style="color: Grey;">Desejo ativar o suporte para Quartos novato (Recurso disponivel apenas com a v17 *RetroDCR, v19 ou superior ).</label></p> 
 
 														<hr> 
 														
 														<p>                                                        
-															<b>AGORA INFORME AS URLS DE ACESSO DO SEU HOTEL:</b>
+															<b><span class ="lang-install-StepTitle-HotelUrls">AGORA INFORME AS URLS DE ACESSO DO SEU HOTEL:</span></b>
 															<br>
-															Por favor informe os dados referentes a url de acesso do hotel e diretorio de imagens:	
+															<span class ="lang-install-StepContent-HotelUrls">Por favor informe os dados referentes a url de acesso do hotel e diretorio de imagens:</span>
 														</p>
 														
 														<p>                                                        
-															<label for="required-hotelUrl" class="registration-text">Url do Website</label><br>                                                        
+															<label for="required-hotelUrl" class="registration-text"><span class ="lang-install-StepLabel-HotelUrl">Url do Website</span></label><br>                                                        
 															<input type="text" name="required-hotelUrl" id="hotelurl" maxlength="100"  placeholder="<?php echo $this->hotel->get_HotelURL() ?>" class="registration-text required-hotelUrl">                                                    
 														</p>   
 														
 														<p>                                                        
-															<label for="required-hotelWeb" class="registration-text">Diretorio de Imagens</label><br>                                                        
+															<label for="required-hotelWeb" class="registration-text"><span class ="lang-install-StepLabel-HotelWeb">Diretorio de Imagens</span></label><br>                                                        
 															<input type="text" name="required-hotelWeb" id="hotelweb" maxlength="100"  placeholder="<?php echo $this->hotel->get_HotelURL() ?>" class="registration-text required-hotelWeb">                                                    
 														</p>
 														  																							   
