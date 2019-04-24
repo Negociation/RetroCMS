@@ -115,6 +115,7 @@ class Install extends ControllerTemplate{
 					}
 					break;
 				case 7:			
+					
 					if ($this->habboModel->set_HabboRegistration($this->newHabbo)){
 						$this->hotelModel->set_HotelAdjusts($this->newHotel);
 						$this->habboModel->set_habboLogin($this->newHabbo);

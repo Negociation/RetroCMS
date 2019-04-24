@@ -88,13 +88,13 @@ class HotelModel extends ModelTemplate{
 					$stmt->bindValue(':version', $hotelObject->get_HotelVersion());
 					$stmt->bindValue(':name',$hotelObject->get_HotelName());
 					$stmt->bindValue(':nick',$hotelObject->get_HotelNick());
+					$stmt->bindValue(':language',$hotelObject->get_HotelLanguage());
 					$stmt->bindValue(':texts',$hotelObject->get_HotelTexts());
 					$stmt->bindValue(':vars',$hotelObject->get_HotelVars());
 					$stmt->bindValue(':dcr',$hotelObject->get_HotelDcr());
 					$stmt->bindValue(':host',$hotelObject->get_HotelHost());
 					$stmt->bindValue(':port',$hotelObject->get_HotelPort());
 					$stmt->bindValue(':musport',$hotelObject->get_HotelMus());
-					$stmt->bindValue(':language',$hotelObject->get_HotelLanguage());
 					$stmt->bindValue(':windows',0);
 				}
 				

@@ -22,10 +22,11 @@ class Hotel{
 	protected $hotelName;
 	protected $hotelNick;
 	protected $hotelVersion;
-	protected $hotelClient;
-	protected $hotelCustom;
+	protected $hotelClient = [];
+	protected $hotelCustom = [];
 	protected $hotelAdvertisement;
 	protected $hotelLanguage;
+	protected $hotelWindows;
 	
 	public function __construct(){
 		
@@ -88,6 +89,14 @@ class Hotel{
 	public function get_HotelVersion(){
 		return $this->hotelVersion;	
 	}
+
+	public function get_HotelWindows(){
+		if(is_null($this->hotelWindows)){
+			return 0;
+		}else{
+			return $this->hotelWindows;
+		}
+	}
 	
 	public function get_HotelDCR(){
 		return $this->hotelClient[0];
@@ -145,36 +154,36 @@ class Hotel{
 	}
 
 	function set_HotelUrl($url){
-		$this->hotel_Url = $url;
+		$this->hotelUrl = $url;
 	}
 
 	function set_HotelVersion($version){
-		$this->hotel_Version = $version;
+		$this->hotelVersion = $version;
 	}
 
 
 	function set_HotelWeb($web){
-		 $this->hotel_Web = $web;
+		 $this->hotelWeb = $web;
 	}
 	
 	function set_HotelVariables($variables){
-		$this->hotel_Client[2] = $variables;
-		}
+		$this->hotelClient[2] = $variables;
+	}
 	
 	function set_HotelTexts($texts){
-		$this->hotel_Client[1] = $texts;
+		$this->hotelClient[1] = $texts;
 	}
 	
 	function set_HotelDcr($dcr){
-		$this->hotel_Client[0] = $dcr;
+		$this->hotelClient[0] = $dcr;
 	}
 	
 	function set_HotelHost($host){
-				$this->hotel_Client[3] = $host;
+		$this->hotelClient[3] = $host;
 	}
 
 	function set_HotelPort($port){
-				$this->hotel_Client[4] = $port;
+		$this->hotelClient[4] = $port;
 	}
 	
 	function set_HotelMusHost($mushost){
@@ -182,8 +191,11 @@ class Hotel{
 	}
 
 	function set_HotelMusPort($musport){
-				$this->hotel_Client[5] = $musport;
+		$this->hotelClient[5] = $musport;
 	}	
 
+	function set_HotelWindows($param){
+		$this->hotelWindows = $param;
+	}
 }
 ?>

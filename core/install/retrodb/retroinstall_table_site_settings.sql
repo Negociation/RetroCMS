@@ -27,5 +27,5 @@ INSERT INTO `site_settings` (`id`, `setting_name`, `setting_value`) VALUES
 (9, 'Hotel_Vars', :vars),
 (10, 'Hotel_Host', :host),
 (11, 'Hotel_Port', :port),
-(12, 'Hotel_MUS', :musport);
+(12, 'Hotel_MUS', :musport),
 (13, 'Hotel_Windows', :windows);
