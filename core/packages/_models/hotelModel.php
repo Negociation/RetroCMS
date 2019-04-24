@@ -95,7 +95,7 @@ class HotelModel extends ModelTemplate{
 					$stmt->bindValue(':host',$hotelObject->get_HotelHost());
 					$stmt->bindValue(':port',$hotelObject->get_HotelPort());
 					$stmt->bindValue(':musport',$hotelObject->get_HotelMus());
-					$stmt->bindValue(':windows',0);
+					$stmt->bindValue(':windows',$hotelObject->get_HotelWindows());
 				}
 				
 				if($sqlcontent == './core/install/retrodb/retroinstall_table_users.sql'){

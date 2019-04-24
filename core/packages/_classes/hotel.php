@@ -195,7 +195,12 @@ class Hotel{
 	}	
 
 	function set_HotelWindows($param){
-		$this->hotelWindows = $param;
+		echo $param;
+		if($param == 'on'){
+			$this->hotelWindows = 1;
+		}else{
+			$this->hotelWindows = 0;
+		}
 	}
 }
 ?>

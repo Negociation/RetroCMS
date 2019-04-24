@@ -62,7 +62,7 @@ class Install extends ControllerTemplate{
 			if (isset($_POST['required-hotelName'])){ $this->newHotel->set_HotelName($_POST['required-hotelName']); }
 			if (isset($_POST['required-hotelNick'])){ $this->newHotel->set_HotelNick($_POST['required-hotelNick']); }
 			if (isset($_POST['required-hotelVersion'])){ $this->newHotel->set_HotelVersion($_POST['required-hotelVersion']); }
-			//if (isset($_POST['required-hotelWindows'])){ $this->newHotel->set_HotelWindows($_POST['required-hotelWindows']); }
+			if (isset($_POST['required-windowsStatus'])){ $this->newHotel->set_HotelWindows($_POST['required-windowsStatus']); }
 			if (isset($_POST['required-hotelUrl'])){ $this->newHotel->set_HotelUrl($_POST['required-hotelUrl']); }
 			if (isset($_POST['required-hotelWeb'])){ $this->newHotel->set_HotelWeb($_POST['required-hotelWeb']); }
 			
