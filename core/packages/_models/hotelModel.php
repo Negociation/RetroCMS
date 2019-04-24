@@ -81,29 +81,41 @@ class HotelModel extends ModelTemplate{
 		foreach (glob("./core/install/retrodb/*.sql") as $sqlcontent){ 
 			try{
 				$stmt = $this->hotelConection->prepare(file_get_contents($sqlcontent));
+				
 				if($sqlcontent == './core/install/retrodb/retroinstall_table_site_settings.sql'){
-				$stmt->bindValue(':url',$hotelObject->get_HotelUrl());
-				$stmt->bindValue(':web',$hotelObject->get_HotelWeb());
-				$stmt->bindValue(':version', $hotelObject->get_HotelVersion());
-				$stmt->bindValue(':name',$hotelObject->get_HotelName());
-				$stmt->bindValue(':nick',$hotelObject->get_HotelNick());
-				$stmt->bindValue(':texts',$hotelObject->get_HotelTexts());
-				$stmt->bindValue(':vars',$hotelObject->get_HotelVars());
-				$stmt->bindValue(':dcr',$hotelObject->get_HotelDcr());
-				$stmt->bindValue(':host',$hotelObject->get_HotelHost());
-				$stmt->bindValue(':port',$hotelObject->get_HotelPort());
-				$stmt->bindValue(':musport',$hotelObject->get_HotelMus());
-				$stmt->bindValue(':language',$hotelObject->get_HotelLanguage());
-				$stmt->bindValue(':windows',1);
+					$stmt->bindValue(':url',$hotelObject->get_HotelUrl());
+					$stmt->bindValue(':web',$hotelObject->get_HotelWeb());
+					$stmt->bindValue(':version', $hotelObject->get_HotelVersion());
+					$stmt->bindValue(':name',$hotelObject->get_HotelName());
+					$stmt->bindValue(':nick',$hotelObject->get_HotelNick());
+					$stmt->bindValue(':texts',$hotelObject->get_HotelTexts());
+					$stmt->bindValue(':vars',$hotelObject->get_HotelVars());
+					$stmt->bindValue(':dcr',$hotelObject->get_HotelDcr());
+					$stmt->bindValue(':host',$hotelObject->get_HotelHost());
+					$stmt->bindValue(':port',$hotelObject->get_HotelPort());
+					$stmt->bindValue(':musport',$hotelObject->get_HotelMus());
+					$stmt->bindValue(':language',$hotelObject->get_HotelLanguage());
+					$stmt->bindValue(':windows',0);
 				}
+				
 				if($sqlcontent == './core/install/retrodb/retroinstall_table_users.sql'){
-				$stmt->bindValue(':startcredits',$habboObject->get_HabboCredits());
-				$stmt->bindValue(':starttickets',$habboObject->get_HabboTickets());
-				$stmt->bindValue(':startfilms',$habboObject->get_HabboFilms());
-				$stmt->bindValue(':startmotto',$habboObject->get_HabboMotto());
-				$stmt->bindValue(':startconsole',$habboObject->get_HabboConsoleMotto());
-				$stmt->bindValue(':startlanguage',$hotelObject->get_HotelLanguage());
-				}				
+					$stmt->bindValue(':startcredits',$habboObject->get_HabboCredits());
+					$stmt->bindValue(':starttickets',$habboObject->get_HabboTickets());
+					$stmt->bindValue(':startfilms',$habboObject->get_HabboFilms());
+					$stmt->bindValue(':startmotto',$habboObject->get_HabboMotto());
+					$stmt->bindValue(':startconsole',$habboObject->get_HabboConsoleMotto());
+					$stmt->bindValue(':startlanguage',$hotelObject->get_HotelLanguage());
+				}
+				
+				if($sqlcontent == './core/install/retrodb/retroinstall_table_site_advertisements.sql'){
+					$stmt->bindValue(':url',$hotelObject->get_HotelUrl());
+					$stmt->bindValue(':web',$hotelObject->get_HotelWeb());	
+				}
+
+				if($sqlcontent == './core/install/retrodb/retroinstall_table_site_promos.sql'){
+					$stmt->bindValue(':url',$hotelObject->get_HotelUrl());
+					$stmt->bindValue(':web',$hotelObject->get_HotelWeb());	
+				}
 				
 				if($sqlcontent == './core/install/retrodb/retroinstall_table_xtra.sql'){
 					//$stmt->bindValue(':habboname', $adminObject->get_HabboName());

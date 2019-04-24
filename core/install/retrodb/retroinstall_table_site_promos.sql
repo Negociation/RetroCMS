@@ -21,6 +21,6 @@ CREATE TABLE `site_promos` (
 --
 
 INSERT INTO `site_promos` (`id`, `image`, `text`, `buttonTextTop`, `buttonUrlTop`, `buttonTextBottom`, `buttonUrlBottom`, `status`) VALUES
-(1, '../../c_images/album1054/beta_updated_promo.gif', 'Warning: Beta Preview Only for Tests. For more information access the GitHub directory.<br /\\>', 'Github', 'https://github.com/Negociation/RetroCMS', 'none', '../../client', 1),
-(2, 'https://i.imgur.com/BSDLmRF.png', 'Windows added to Hotel, what your waiting for ?', 'none', '', 'Check In', '../../client', 1),
-(3, 'https://i.imgur.com/B0v5asa.png', 'RetroCMS foi instalado com sucesso.<br /\\>', 'Mais', './news/article/1', 'Check In', '../../client', 1);
+(1, concat(:web,'/c_images/album1054/beta_updated_promo.gif'), 'Warning: Beta Preview Only for Tests. For more information access the GitHub directory.<br /\\>', 'Github', 'https://github.com/Negociation/RetroCMS', 'none', concat(:url,'/client'), 1),
+(2, 'https://i.imgur.com/BSDLmRF.png', 'Windows added to Hotel, what your waiting for ?', 'none', '', 'Check In', concat(:url,'/client'), 1),
+(3, 'https://i.imgur.com/B0v5asa.png', 'RetroCMS foi instalado com sucesso.<br /\\>', 'Mais', concat(:url,'/news/article/1'), 'Check In', concat(:url,'/client'), 1);

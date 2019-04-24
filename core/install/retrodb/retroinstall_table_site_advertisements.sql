@@ -18,9 +18,9 @@ CREATE TABLE `site_advertisements` (
 --
 
 INSERT INTO `site_advertisements` (`id`, `image`, `url`, `type`, `status`) VALUES
-(1, '../../c_images/album728/ads_habbogroup_clubjoin.png', '../../#', 1, 1),
-(2, '../../c_images/album728/ads_habbogroup_habbogarden.png', '../../#', 1, 1),
-(3, '../../c_images/album728/ads_habbogroup_traxintro.png', '../../#', 2, 1),
-(4, '../../c_images/album728/ads_habbogroup_monstersofhabbo.png', '../../#', 2, 1),
-(5, '../../c_images/album728/ads_habbogroup_bbpromo.gif', '../../#', 3, 1),
-(6, '../../c_images/album728/160x600_WS_CN.gif', '../../#', 3, 1);
+(1, concat(:web,'/c_images/album728/ads_habbogroup_clubjoin.png'), concat(:url,'/#'), 1, 1),
+(2, concat(:web,'/c_images/album728/ads_habbogroup_habbogarden.png'), concat(:url,'/#'), 1, 1),
+(3, concat(:web,'/c_images/album728/ads_habbogroup_traxintro.png'), concat(:url,'/#'), 2, 1),
+(4, concat(:web,'/c_images/album728/ads_habbogroup_monstersofhabbo.png'), concat(:url,'/#'), 2, 1),
+(5, concat(:web,'/c_images/album728/ads_habbogroup_bbpromo.gif'), concat(:url,'/#'), 3, 1),
+(6, concat(:web,'/c_images/album728/160x600_WS_CN.gif'), concat(:url,'/#'), 3, 1);
