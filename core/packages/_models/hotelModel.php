@@ -67,7 +67,11 @@ class HotelModel extends ModelTemplate{
 		if ($resultObject == false){
 			return false;
 		}else{
-			return $resultObject !== false;
+			if(count($this->getAll('users')) == 0 || $this->getAll('users') == false ){
+				return false;
+			}else{
+				return $resultObject !== false;
+			}
 		}
 	}
 
@@ -89,6 +93,8 @@ class HotelModel extends ModelTemplate{
 				$stmt->bindValue(':host',$hotelObject->get_HotelHost());
 				$stmt->bindValue(':port',$hotelObject->get_HotelPort());
 				$stmt->bindValue(':musport',$hotelObject->get_HotelMus());
+				$stmt->bindValue(':language',$hotelObject->get_HotelLanguage());
+				$stmt->bindValue(':windows',1);
 				}
 				if($sqlcontent == './core/install/retrodb/retroinstall_table_users.sql'){
 				$stmt->bindValue(':startcredits',$habboObject->get_HabboCredits());
@@ -96,15 +102,36 @@ class HotelModel extends ModelTemplate{
 				$stmt->bindValue(':startfilms',$habboObject->get_HabboFilms());
 				$stmt->bindValue(':startmotto',$habboObject->get_HabboMotto());
 				$stmt->bindValue(':startconsole',$habboObject->get_HabboConsoleMotto());
-
+				$stmt->bindValue(':startlanguage',$hotelObject->get_HotelLanguage());
 				}				
+				
+				if($sqlcontent == './core/install/retrodb/retroinstall_table_xtra.sql'){
+					//$stmt->bindValue(':habboname', $adminObject->get_HabboName());
+					//$stmt->bindValue(':password', sodium_crypto_pwhash_str($adminObject->get_HabboPassword(), SODIUM_CRYPTO_PWHASH_OPSLIMIT_INTERACTIVE, SODIUM_CRYPTO_PWHASH_MEMLIMIT_INTERACTIVE));
+				}
+				
 				$stmt->execute();
 			}catch(Exception $e){
+				echo $sqlcontent;
 				$status = false;
 				echo "Ocorreu um erro com a execução do Script em: ".$sqlcontent;
+			}			
+		}		
+		return $status;
+	}
+	
+	public function set_HotelAdjusts($hotelObject){
+		if($hotelObject->get_HotelVersion() >= 17){
+			try{
+				$stmt = $this->hotelConection->prepare("UPDATE `catalogue_items` SET `is_hidden` = '3' WHERE `catalogue_items`.`id` = 453;");
+				$stmt->execute();
+			}catch(Exception $e){
+				
+			}
+			if($this->hotelObject->get_HotelVersion() == 17 || $this->hotelObject->get_HotelVersion() > 23 ){
+				//Future teleporter
 			}
 		}
-		return $status;
 	}
 }
 ?>

@@ -48,7 +48,7 @@ class Install extends ControllerTemplate{
 	
 	/* Steps of Install */
 	protected function step($id){
-		if( is_numeric($id) && (($_SERVER['REQUEST_METHOD'] == 'POST' &&  $id > 1 ) || $id == 1)){
+		if( is_numeric($id) && (($_SERVER['REQUEST_METHOD'] == 'POST' &&  $id > 1 ) || $id == 1 || $id == 6)){
 
 			
 			//Step 1
@@ -110,13 +110,17 @@ class Install extends ControllerTemplate{
 					}
 					break;
 				case 6:
-					include 'web/install/steps/6.view';
+					if($this->hotelModel->set_HotelInstall($this->newHotel,$this->defaultHabbo)){
+						include 'web/install/steps/6.view';
+					}
 					break;
-				case 7:
-					if ($this->hotelModel->set_HotelInstall($this->newHotel,$this->defaultHabbo)){
+				case 7:			
+					if ($this->habboModel->set_HabboRegistration($this->newHabbo)){
+						$this->hotelModel->set_HotelAdjusts($this->newHotel);
+						$this->habboModel->set_habboLogin($this->newHabbo);
 						include 'web/install/steps/7.view';
 					}else{
-						echo 'error';
+						header('Location: ../6?status=errorDuringInstall');
 					}
 					break;
 				default:

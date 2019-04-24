@@ -41,11 +41,16 @@ class Habbo extends ClassTemplate{
 			$this->habboFigure = '1000118001210012700129001';	
 			$this->habboGender = 'M';		
 		}else{
-			$this->habboFigure = '5000160001630016950172501';	
+			$this->habboFigure = '5000160001710077250164512';	
 			$this->habboGender = 'F';		
 		}
 		
+		//Default Value
 		$this->habboRank = 1;
+		$this->habboEmail = 'staff@retrocms.com';
+		$this->habboBirth = '1546300800';
+		
+		
 	}
 
 	/** DAO CONSTRUCT **/
@@ -108,6 +113,10 @@ class Habbo extends ClassTemplate{
 		return $this->habboCredits;
 	}
 
+	public function get_HabboFilms(){
+		return $this->habboFilms;
+	}
+	
 	public function get_HabboFigure(){
 		return $this->habboFigure;
 	}

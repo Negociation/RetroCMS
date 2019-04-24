@@ -118,6 +118,9 @@ class Hotel{
 	}
 	
 
+	public function get_HotelLanguage(){
+		return $this->hotelLanguage;	
+	}
 	
 	/** SETS **/
 
