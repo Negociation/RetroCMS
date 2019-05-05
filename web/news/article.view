@@ -64,7 +64,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 									 <img vspace="0"; src="<?php echo $this->hotel->get_HotelWeb() ?>/habboweb/17/16/web-gallery/images/staff_icon.png" border="0">
 									 <div style="display: inline-block">
 									 <p class="article-author">
-									<b><?php if(!is_null($authorObject->get_HabboName())){ echo $authorObject->get_HabboName().' - '; } ?> Gerente do Hotel</b></p>
+									<b><?php if(!is_null($authorObject->get_HabboName())){ echo $authorObject->get_HabboName().' - '; } ?> <span class="lang-article-managerTitle">Gerente do Hotel</span></b></p>
 									</div>
 								  </div>
 								  <div class="clear"></div>

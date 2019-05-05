@@ -68,6 +68,14 @@ var WORDS_EN = {
   "promoheader" : "Top Stories",
   "newsbox-header" : "What's New",
   "newsbox-footer" : "More News",
+  
+  //Index Welcome Box
+  "index-welcomeBox-header" : "Welcome!",
+  
+  //Index Habbo Tag Box
+   "index-tagsBox-header" : "Habbo Tags",
+   "index-tagsBox-subheader" : "Use Habbo Tags to find new friends with similar interests! Start by adding some tags to your Habbo Home Page or check out some of these hot tags...",
+   "index-tagsBox-notFound" : "Sorry, No Tags to Display!",
 
   //Login
   "login-headline-wrapperLeft" : "NEW TO HABBO? REGISTER HERE!",
@@ -157,6 +165,10 @@ var WORDS_EN = {
 	"month-11": "November",	
 	"month-12": "December",	
 	
+	//Credits
+	"creditsMain-headline": "Habbo Coins Main",
+	"creditsMain-creditsTitle": "Habbo Coins",
+	
 	//Habbo Club
 		"hc-login-before": "In order to join Habbo Club you need to",
 		"hc-login-after": "first.",		
@@ -180,5 +192,15 @@ var WORDS_EN = {
 		"hcjoin-subscribe3Buy" : "Buy 6 month(s)",		
 		//Habbo Club->Shop
 		"hcshop-headline": "Club Shop",
-
+		
+		
+	//Default Promos
+	"promo-install-title": "RetroCMS has been installed successfull",
+	
+	//Default News
+	"article-install-title": "RetroCMS has been installed successfull",
+	"article-install-sub": "Click here for more information.",
+		
+	//News Article
+	"article-managerTitle": "Hotel Manager",		
 };

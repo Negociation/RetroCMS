@@ -54,7 +54,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 										<tr>
 											<td valign="top" style="width: 450px; height: 400px;" class="habboPage-col">
 												<div class="v2box red darker">
-													<div class="headline"><h3>Bem-Vindos!</h3></div>
+													<div class="headline"><h3><span class="lang-index-welcomeBox-header">Bem-Vindos!</span></h3></div>
 													<div class="border"><div></div></div>
 													<div class="body">
 														<img hspace="10" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/common/habbo_window.gif" align="left" alt="">Entre e fique à vontade. Você não paga nada, e <span style="FONT-WEIGHT: bold">pode conversar, andar, dançar, comer e beber, sem nunca se cansar.</span><br/><br/>Tome um café, nade um pouco, jogue. Invente mil coisas pra fazer com seus Habbo amigos e amigas. 

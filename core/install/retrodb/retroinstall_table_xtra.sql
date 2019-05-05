@@ -252,6 +252,12 @@ ALTER TABLE `soundmachine_songs`
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
+ALTER TABLE `site_promos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+ALTER TABLE `site_news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  
 --
 -- Constraints for dumped tables
 --
@@ -261,6 +267,7 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users_badges`
   ADD CONSTRAINT `users_badges_users_FK` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
 
 
 --
