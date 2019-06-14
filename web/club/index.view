@@ -18,7 +18,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 
 				<div id="page-headline">
 					<div id="page-headline-breadcrums"></div>
-					<div id="page-headline-text">Habbo Club</div>
+					<div id="page-headline-text"><span class="lang-hcindex-headline">Habbo Club</span></div>
 				</div>
 				<table border="0" cellpadding="0" cellspacing="0" width="100%">
 					<tr>
@@ -26,11 +26,11 @@ require_once('./web/includes/modules/headers/default.viewpart');
 						<td valign="top" style="width: 202px;" class="habboPage-col">
 							<div class="v3box orange">
 								<div class="v3box-top">
-									<h3>Para o seu Habbo...</h3>
+									<h3><span class="lang-hcindex-feature1Title">Para o seu Habbo...</span></h3>
 								</div>
 								<div class="v3box-content">
 									<div class="v3box-body">
-										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Roupas e penteados<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Emblema HC<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Danças exclusivas<br/>
+										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature1-DescA">Roupas e penteados</span><br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature1-DescB">Emblema HC</span><br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature1-DescC">Danças exclusivas</span><br/>
 										<div class="clear"></div>
 									</div>
 								</div>
@@ -40,11 +40,11 @@ require_once('./web/includes/modules/headers/default.viewpart');
 							</div>
 							<div class="v3box orange">
 								<div class="v3box-top">
-									<h3>Para o seu Quarto...</h3>
+									<h3><span class="lang-hcindex-feature2Title">Para o seu Quarto...</span></h3>
 								</div>
 								<div class="v3box-content">
 									<div class="v3box-body">
-										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Um Mobi HC a cada período<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Quartos diferentes<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Fura fila das salas<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Acesso a salas exclusivas<br/>
+										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature2-DescA">Um Mobi HC a cada período</span><br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature2-DescB">Quartos diferentes</span><br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature2-DescC">Fura fila das salas</span><br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature2-DescD">Acesso a salas exclusivas</span><br/>
 										<div class="clear"></div>
 									</div>
 								</div>
@@ -54,11 +54,11 @@ require_once('./web/includes/modules/headers/default.viewpart');
 							</div>
 							<div class="v3box orange">
 								<div class="v3box-top">
-									<h3>Para a sua Habbo Home...</h3>
+									<h3><span class="lang-hcindex-feature3Title">Para a sua Habbo Home...</span></h3>
 								</div>
 								<div class="v3box-content">
 									<div class="v3box-body">
-										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Novos Colantes<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Novos Fundos<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Sem propagandas<br/>
+										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature3-DescA">Novos Colantes</span><br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature3-DescB">Novos Fundos</span><br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature3-DescC">Sem propagandas</span><br/>
 										<div class="clear"></div>
 									</div>
 								</div>
@@ -68,11 +68,11 @@ require_once('./web/includes/modules/headers/default.viewpart');
 							</div>
 							<div class="v3box orange">
 								<div class="v3box-top">
-									<h3>Extras!</h3>
+									<h3><span class="lang-hcindex-feature4Title">Extras!</span></h3>
 								</div>
 								<div class="v3box-content">
 									<div class="v3box-body">
-										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Console 5 vezes maior<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Comando :chooser <br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> Comando :furni<br/>
+										<br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature4-DescA">Console 5 vezes maior</span><br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature4-DescB">Comando :chooser</span> <br/><img hspace="0" border="0" align="absmiddle" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album1423/miniHCbadge.gif" alt=""> <span class="lang-hcindex-feature4-DescC">Comando :furni</span><br/>
 										<div class="clear"></div>
 									</div>
 								</div>
@@ -104,11 +104,11 @@ require_once('./web/includes/modules/headers/default.viewpart');
 							</div>
 							<div class="v3box orange">
 								<div class="v3box-top">
-									<h3>Associe-se ao Habbo Club</h3>
+									<h3><span class="lang-hcindex-joinTitle">Associe-se ao Habbo Club</span></h3>
 								</div>
 								<div class="v3box-content">
 									<div class="v3box-body">
-										Associe-se ao Habbo Club, o clube VIP do Habbo Hotel, para ter privilégios como acesso prioritário às salas, Mobis, roupas e penteados exclusivos, comandos especiais e layouts para Quartos. <br/><span style="font-weight: bold;"><br/>O Habbo Club custa 30 Moedas por período. Cada período dura 31 dias. Ao comprar 3 ou 6 períodos você ganha desconto, <a href="<?php echo $this->hotel->get_HotelUrl(); ?>/club/join" target="_self">veja</a>.<br/><br/></span><a href="<?php echo $this->hotel->get_HotelUrl(); ?>/club/join" class="colorlink"><span>Associe-se</span></a> 
+										<span class="lang-hcindex-joinSubheaderTitle">Associe-se ao Habbo Club, o clube VIP do Habbo Hotel, para ter privilégios como acesso prioritário às salas, Mobis, roupas e penteados exclusivos, comandos especiais e layouts para Quartos.</span> <br/><span style="font-weight: bold;"><br/><span class="lang-hcindex-joinSubheaderContent">O Habbo Club custa 30 Moedas por período. Cada período dura 31 dias. Ao comprar 3 ou 6 períodos você ganha desconto,</span> <a href="<?php echo $this->hotel->get_HotelUrl(); ?>/club/join" target="_self"><span class="lang-hcindex-joinSubheaderLink">veja</span></a><br/><br/></span><a href="<?php echo $this->hotel->get_HotelUrl(); ?>/club/join" class="colorlink"><span class="lang-hcindex-joinSubheaderJoin">Associe-se</span></a> 
 										<div class="clear"></div>
 									</div>
 								</div>

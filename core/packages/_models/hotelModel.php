@@ -140,7 +140,7 @@ class HotelModel extends ModelTemplate{
 			}catch(Exception $e){
 				
 			}
-			if($this->hotelObject->get_HotelVersion() == 17 || $this->hotelObject->get_HotelVersion() > 23 ){
+			if($hotelObject->get_HotelVersion() == 17 || $hotelObject->get_HotelVersion() > 23 ){
 				//Future teleporter
 			}
 		}

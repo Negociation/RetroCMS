@@ -14,23 +14,23 @@
 if($this->habbo->get_isHabboLoggedIn()){
 	echo'
 												<div class="purse-balance">
-														Você tem <span class="purse-balance-amount">&nbsp;<span class="habbocredits">'.$this->habbo->get_HabboCredits().'</span>&nbsp;</span> Habbo Moedas
+														<span class="lang-creditsMain-purseContentBefore">Você tem</span> <span class="purse-balance-amount">&nbsp;<span class="habbocredits">'.$this->habbo->get_HabboCredits().'</span>&nbsp;</span> <span class="lang-creditsMain-purseContentAfter">Habbo Moedas</span>
 												</div>
-												<p><a href="'.$this->hotel->get_HotelURL().'/credits" class="colorlink"><span>Comprar mais Moedas</span></a></p>
+												<p><a href="'.$this->hotel->get_HotelURL().'/credits" class="colorlink"><span class="lang-creditsMain-purseContentBuy">Comprar mais Moedas</span></a></p>
 												<div id="purse-redeem">
 													<div id="purse-form-container" >
-														If you have a Coins or furniture redemption code, enter it below to get your stuff.
+														<span class="lang-creditsMain-purseContentRedeem">Se você tem codigos de moedas ou mobilias, digite abaixo para gerar o mesmo.</span>
 														<form method="post" action="'.$this->hotel->get_HotelUrl().'/credits/redeem" id="purse-redeem-form">
-															<input type="text" name="redeem-code" size="35" id="redeem-code" />
+															<input type="text" name="redeem-code" size="35" id="redeem-code"/ disabled>
 															<input type="hidden" name="doRedeem" value="yes" id="doredeem"/>
-															<input type="image" src="'.$this->hotel->get_HotelWeb().'/habboweb/17/16/web-gallery/images/button/arrow_button.gif" class="arrow-button" align="top"/>
+															<input type="image" src="'.$this->hotel->get_HotelWeb().'/habboweb/17/16/web-gallery/images/button/arrow_button.gif" class="arrow-button" align="top"/ disabled>
 														</form>
 													</div>
 												</div>
 	';
 }else{
 	echo'
-												<p><a href="'.$this->hotel->get_HotelURL().'/credits" class="colorlink"><span>Comprar mais Moedas</span></a></p>
+												<p><a href="'.$this->hotel->get_HotelURL().'/credits" class="colorlink"><span class="lang-creditsMain-purseContentBuy">Comprar mais Moedas</span></a></p>
 												<div id="purse-redeem">
 													<div>
 														<div class="content-beige">

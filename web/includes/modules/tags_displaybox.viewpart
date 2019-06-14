@@ -42,7 +42,7 @@ if($this->hotel->get_HotelVersion() > 14){
 								</p>
 								<p>
 									<a href="'.$this->hotel->get_HotelURL().'/tag/search">
-										<br/> Search more tags here! </a>
+										<br/><span class="lang-index-tagsBox-hyperLink">Clique para procurar mais etiquetas!</span></a>
 								</p>
 							</td>
 						</tr>

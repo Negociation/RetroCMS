@@ -109,13 +109,13 @@ require_once('./web/includes/modules/headers/default.viewpart');
 									 <div class="nobox-content">
 										<div class="v2box brown darkest">
 										   <div class="headline">
-											  <h3>Porta-Moedas</h3>
+											  <h3><span class='lang-creditsMain-purseTitle'>Porta-Moedas</span></h3>
 										   </div>
 										   <div class="border">
 											  <div></div>
 										   </div>
 										   <div class="body">
-										      <p>Você pode usar as Moedas para comprar Mobis, tíquetes para jogos e conteúdo para Habbo Home. <a href="<?php echo $this->hotel->get_HotelURL(); ?>/credits">Saiba mais</a></p>
+										      <p><span class='lang-creditsMain-purseIntro'>Você pode usar as Moedas para comprar Mobis, tíquetes para jogos e conteúdo para Habbo Home.</span> <a href="<?php echo $this->hotel->get_HotelURL(); ?>/credits"><span class='lang-creditsMain-purseIntroLink'>Saiba mais</span></a></p>
 											  <!-- Include Habbo Purse Module Content -->
 											  <?php include('./web/includes/modules/credits_purse.viewpart'); ?>
 											  <div class="clear"></div>

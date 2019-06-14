@@ -50,7 +50,7 @@ class Api extends ControllerTemplate{
 	
 	protected function hotel(){
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
-			$hotelData = array('hotel_language' => 'EN');
+			$hotelData = array('hotel_language' => $this->hotel->get_HotelLanguage());
 			echo json_encode($hotelData);
 		}else{
 			echo 'not allowed';

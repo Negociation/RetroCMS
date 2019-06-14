@@ -75,6 +75,7 @@ var WORDS_PT = {
    "index-tagsBox-header" : "Habbo Etiquetas",
    "index-tagsBox-subheader" : "Use as Habbo Etiquetas para encontrar novos amigos com interesses semelhantes! Comece adicionando algumas etiquetas à sua Habbo Home ou confira algumas dessas etiquetas que estão bombando...",
    "index-tagsBox-notFound" : "Desculpe, nennhuma etiqueta foi encontrada!",
+   "index-tagsBox-hyperLink" : "Clique para procurar mais etiquetas!",
 	
   //Login
   "login-headline-wrapperLeft" : "PRIMEIRA VEZ NO HABBO? REGISTRE-SE.",
@@ -163,13 +164,58 @@ var WORDS_PT = {
 	"month-11": "Novembro",	
 	"month-12": "Dezembro",		
 	
-	
+	//Credits
+	"creditsMain-headline": "Habbo Moedas",
+	"creditsMain-creditsTitle": "Habbo Moedas",
+	"creditsMain-purseTitle": "Porta-Moedas",	
+	"creditsMain-purseIntro": "Você pode usar as Moedas para comprar Mobis, tíquetes para jogos e conteúdo para Habbo Home. ",	
+	"creditsMain-purseIntroLink": "Saiba mais",		
+	"creditsMain-purseContentBefore": "Você tem",	
+	"creditsMain-purseContentAfter": "Habbo Moedas",		
+	"creditsMain-purseContentBuy": "Comprar mais moedas",	
+	"creditsMain-purseContentRedeem": "Se você tem codigos de moedas ou mobilias, digite abaixo para gerar o mesmo.",		
+
+	//Habbo Home
+		"home-button-make" : "Monte a sua Habbo Home",
+		"home-button-reportStart" : "Show Report Buttons",
+		"home-button-reportStop" : "Hide Report Buttons",
+		"home-button-edit" : "Editar",
+		"home-button-editInventory" : "Inventário",	
+		"home-button-editWebstore" : "Loja Habbo Home",	
+		"home-button-editSave" : "Salvar",	
+		"home-button-editCancel" : "Cancelar",	
+		"home-button-tell" : "Convidar um amigo",
+		"home-button-export" : "Exportar o seu Avatar",
+		
 	//Habbo Club 
 		"hc_login_before": "Para associar-se ao Habbo Club você precisa primeiro",
 		"hc_login_after": "no Hotel.",	
 		
 		//Habbo Club->Index
-		
+		"hcindex-headline": "Habbo Clube",
+		"hcindex-feature1Title": "PARA O SEU HABBO...",
+		"hcindex-feature1-DescA": "Roupas e penteados",
+		"hcindex-feature1-DescB": "Emblema HC",	
+		"hcindex-feature1-DescC": "Danças exclusivas",		
+		"hcindex-feature2Title": "PARA O SEU QUARTO...",
+		"hcindex-feature2-DescA": "Um Mobi HC a cada período",
+		"hcindex-feature2-DescB": "Quartos diferentes",	
+		"hcindex-feature2-DescC": "Fura fila das salas",	
+		"hcindex-feature2-DescD": "Acesso a salas exclusivas",
+		"hcindex-feature3Title": "PARA A SUA HABBO HOME...",
+		"hcindex-feature3-DescA": "Novos Colantes",
+		"hcindex-feature3-DescB": "Novos Fundos",	
+		"hcindex-feature3-DescC": "Sem propagandas",	
+		"hcindex-feature4Title": "EXTRAS!",
+		"hcindex-feature4-DescA": "Console 5 vezes maior",
+		"hcindex-feature4-DescB": "Comando :chooser",	
+		"hcindex-feature4-DescC": "Comando :furni",	
+		"hcindex-joinTitle": "ASSOCIE-SE AO HABBO CLUB",
+		"hcindex-joinSubheaderTitle": "Associe-se ao Habbo Club, o clube VIP do Habbo Hotel, para ter privilégios como acesso prioritário às salas, Mobis, roupas e penteados exclusivos, comandos especiais e layouts para Quartos.",
+		"hcindex-joinSubheaderContent": "O Habbo Club custa 30 Moedas por período. Cada período dura 31 dias. Ao comprar 3 ou 6 períodos você ganha desconto, ",
+		"hcindex-joinSubheaderLink": "veja.",
+		"hcindex-joinSubheaderJoin": "Associe-se",
+
 		//Habbo Club->Join
 		"hcjoin-headline": "Associe-se ou renove seu HC",
 		"hcjoin-aboutTitle": "Associe-se",

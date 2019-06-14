@@ -76,6 +76,8 @@ var WORDS_EN = {
    "index-tagsBox-header" : "Habbo Tags",
    "index-tagsBox-subheader" : "Use Habbo Tags to find new friends with similar interests! Start by adding some tags to your Habbo Home Page or check out some of these hot tags...",
    "index-tagsBox-notFound" : "Sorry, No Tags to Display!",
+   "index-tagsBox-hyperLink" : "Search more tags here!",
+
 
   //Login
   "login-headline-wrapperLeft" : "NEW TO HABBO? REGISTER HERE!",
@@ -168,12 +170,43 @@ var WORDS_EN = {
 	//Credits
 	"creditsMain-headline": "Habbo Coins Main",
 	"creditsMain-creditsTitle": "Habbo Coins",
+	"creditsMain-purseTitle": "My Habbo Purse",	
+	"creditsMain-purseIntro": "You can use Habbo Coins for buying furniture and playing games in Habbo Hotel or enhancing your Habbo Home page content.",	
+	"creditsMain-purseIntroLink": "Learn more!",		
+	"creditsMain-purseContentBefore": "You have",	
+	"creditsMain-purseContentAfter": "Habbo Credit(s)",		
+	"creditsMain-purseContentBuy": "Buy more coins",	
+	"creditsMain-purseContentRedeem": "If you have a Coins or furniture redemption code, enter it below to get your stuff.",	
 	
 	//Habbo Club
 		"hc-login-before": "In order to join Habbo Club you need to",
 		"hc-login-after": "first.",		
 		
+
 		//Habbo Club->Index
+		"hcindex-headline": "Habbo Club",
+		"hcindex-feature1Title": "For your Habbo...",
+		"hcindex-feature1-DescA": "Extra clothes and Hair",
+		"hcindex-feature1-DescB": "Club badge",	
+		"hcindex-feature1-DescC": "Extra dances",		
+		"hcindex-feature2Title": "For your room...",
+		"hcindex-feature2-DescA": "Monthly free furni ",
+		"hcindex-feature2-DescB": "Extra Guest Rooms ",	
+		"hcindex-feature2-DescC": "Priority access",	
+		"hcindex-feature2-DescD": "VIP Public Rooms ",
+		"hcindex-feature3Title": "For your Habbo Home...",
+		"hcindex-feature3-DescA": "New widget skins",
+		"hcindex-feature3-DescB": "New Backgrounds",	
+		"hcindex-feature3-DescC": "No ads!",	
+		"hcindex-feature4Title": "Extras!",
+		"hcindex-feature4-DescA": " Huge Friends List ",
+		"hcindex-feature4-DescB": ":chooser command",	
+		"hcindex-feature4-DescC": ":furni command",	
+		"hcindex-joinTitle": "ASSOCIE-SE AO HABBO CLUB",
+		"hcindex-joinSubheaderTitle": "",
+		"hcindex-joinSubheaderContent": "Join Habbo Club, the VIP members-only club, and enjoy exclusive room layouts, furni, priority access, cool clothes and commands for just 30 Credits a month!",
+		"hcindex-joinSubheaderLink": "",
+		"hcindex-joinSubheaderJoin": "Join now",
 		
 		//Habbo Club->Join
 		"hcjoin-headline": "Join or Extend Membership ",
@@ -193,7 +226,19 @@ var WORDS_EN = {
 		//Habbo Club->Shop
 		"hcshop-headline": "Club Shop",
 		
-		
+	//Habbo Home
+		"home-button-make" : "Make your own Habbo Home",
+		"home-button-edit" : "Edit",
+		"home-button-reportStart" : "Show Report Buttons",
+		"home-button-reportStop" : "Hide Report Buttons",
+		"home-button-reportStop" : "Edit",
+		"home-button-editInventory" : "Inventory",	
+		"home-button-editWebstore" : "Webstore",	
+		"home-button-editSave" : "Save",	
+		"home-button-editCancel" : "Cancel",	
+		"home-button-tell" : "Tell a friend",
+		"home-button-export" : "Avatar export",
+	
 	//Default Promos
 	"promo-install-title": "RetroCMS has been installed successfull",
 	
