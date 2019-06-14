@@ -50,7 +50,7 @@ class NewsModel extends ModelTemplate{
 			return false;
 			exit;
 		}elseif( is_array($result) && $result != false){
-			$articleObject->constructObject($result['id'],$result['date'],utf8_encode($result['title']),utf8_Dencode($result['description']),utf8_encode($result['content']),$result['author'],$result['status']);	
+			$articleObject->constructObject($result['id'],$result['date'],utf8_encode($result['title']),utf8_Decode($result['description']),utf8_encode($result['content']),$result['author'],$result['status']);	
 		}
 		return $articleObject;	
 	}
