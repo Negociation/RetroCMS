@@ -21,10 +21,15 @@
 
 3º) ENABLE SODIUM LIBRARY 
     a) If u using a Webhost just need to enable sodium library , recommend to use php 7.2 
+    
     b) If u using Xampp jut follow these steps:
+    
       > Uncomment extension=sodium from php.ini file on C:/../Xampp/php removing ";"
+      
       > Search libsodium.dll from php directory
+      
       > Paste libsodium.dll on C:/../Xampp/Apache/bin
+      
       > Restart apache
         
 4º) Open the main directory on Navigator example "localhost" and set the information on Install
