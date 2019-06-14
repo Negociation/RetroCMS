@@ -6,7 +6,7 @@
   - MVC with Security (90%)
   - Diagnosis Class ( 100% )
   - Diagnosis Panel ( 100% )
-  - Views ( 81% ) 
+  - Views ( 83% ) 
   - Optimize some content
   - DAO templates (96%)
   - Controller template (100%)
