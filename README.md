@@ -20,6 +20,7 @@
 2º) Set the correctly information on ./core/install/settings.ini "USERNAME , PASSWORD, HOST"...
 
 3º) ENABLE SODIUM LIBRARY 
+
     a) If u using a Webhost just need to enable sodium library , recommend to use php 7.2 
     
     b) If u using Xampp jut follow these steps:
