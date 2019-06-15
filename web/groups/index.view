@@ -19,7 +19,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 				<div id="page-headline">
 					<div id="page-headline-breadcrums">
 					</div>
-					<div id="page-headline-text">Habbo Grupos</div>
+					<div id="page-headline-text"><span class='lang-groupsindex-headline'>Habbo Grupos</span></div>
 				</div>
 				<table border="0" cellpadding="0" cellspacing="0" width="100%" class="content-2col">
 				<tr>
@@ -27,11 +27,11 @@ require_once('./web/includes/modules/headers/default.viewpart');
 					<td valign="top" style="width: 202px;" class="habboPage-col">
 						<div class="v3box orange">
 							<div class="v3box-top">
-								<h3>Seja membro de um Grupo</h3>
+								<h3><span class='lang-groupsindex-tutorialTitle'>Seja membro de um Grupo</span></h3>
 							</div>
 							<div class="v3box-content">
 								<div class="v3box-body">
-									Seja membro de um Habbo Grupo. Isso é grátis.<br/><br/><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> Entre <a href="<?php echo $this->hotel->get_HotelUrl(); ?>/account/login">Hotel</a><br/><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> Procure no <a href="<?php echo $this->hotel->get_HotelWeb(); ?>/groups/directory">Guia</a><br/><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> Clique num Grupo<br/><img src="<?php echo $this->hotel->get_HotelUrl(); ?>/c_images/unsorted/golden_star.gif" alt=""> Torne-se membro<br/>
+									<span class='lang-groupsindex-tutorialDesc'>Seja membro de um Habbo Grupo. Isso é grátis.</span><br/><br/><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> <span class='lang-groupsindex-tutorialStep1'>Entre no</span> <a href="<?php echo $this->hotel->get_HotelUrl(); ?>/account/login"><span class='lang-groupsindex-tutorialStep1Link'>Hotel</span></a><br/><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> <span class='lang-groupsindex-tutorialStep2'>Procure no</span> <a href="<?php echo $this->hotel->get_HotelWeb(); ?>/groups/directory"><span class='lang-groupsindex-tutorialStep2Link'>Guia</span></a><br/><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> <span class='lang-groupsindex-tutorialStep3'>Clique num Grupo</span><br/><img src="<?php echo $this->hotel->get_HotelUrl(); ?>/c_images/unsorted/golden_star.gif" alt=""> <span class='lang-groupsindex-tutorialStep4'>Torne-se membro</span><br/>
 									<div class="clear"></div>
 									<div class="clear"></div>
 								</div>
@@ -42,12 +42,12 @@ require_once('./web/includes/modules/headers/default.viewpart');
 						</div>
 						<div class="v3box orange">
 							<div class="v3box-top">
-								<h3>Cria teu Habbo Grupo</h3>
+								<h3><span class='lang-groupsindex-createTitle'>Cria teu Habbo Grupo</span></h3>
 							</div>
 							<div class="v3box-content">
 								<div class="v3box-body">
-									Você pode criar teu Habbo Grupo por 10 Habbo Moedas.<br/><br/><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> Entre <a href="<?php echo $this->hotel->get_HotelUrl(); ?>/login">Hotel</a><br/>
-									<div class="groups-toplist-sidebar"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> Crie teu grupo<br/><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> Faz um Emblema descolado<br/><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> Convide teus amigos!<br/></div>
+									<span class='lang-groupsindex-createDesc'>Você pode criar teu Habbo Grupo por 10 Habbo Moedas.</span><br/><br/><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> <span class='lang-groupsindex-createStep1'> Entre no</span> <a href="<?php echo $this->hotel->get_HotelUrl(); ?>/login"><span class='lang-groupsindex-createStep1Link'>Hotel</span></a><br/>
+									<div class="groups-toplist-sidebar"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> <span class='lang-groupsindex-createStep2'>Crie teu grupo</span><br/><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> <span class='lang-groupsindex-createStep3'>Faz um Emblema descolado</span><br/><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/unsorted/golden_star.gif" alt=""> <span class='lang-groupsindex-createStep4'>Convide teus amigos!</span><br/></div>
 									<div class="clear"></div>
 									<br/>
 									<div id="group_purchase_1">
@@ -80,7 +80,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 						</div>
 						<div class="v3box orange">
 							<div class="v3box-top">
-								<h3>Grupos Públicos</h3>
+								<h3><span class='lang-groupsindex-publicTitle'>Grupos Públicos</span></h3>
 							</div>
 							<div class="v3box-content">
 								<div class="v3box-body">
@@ -96,14 +96,14 @@ require_once('./web/includes/modules/headers/default.viewpart');
 					<td valign="top" style="width: 539px;" class="habboPage-col rightmost">
 						<div class="v3box blue">
 							<div class="v3box-top">
-								<h3>Habbo Grupos: é o que há</h3>
+								<h3><span class='lang-groupsindex-aboutTitle'>Habbo Grupos: é o que há</span></h3>
 							</div>
 							<div class="v3box-content">
 								<div class="v3box-body">
 									<p align="center"><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album2137/habbogroups.gif" alt=""></p>
-									<p>Grupo, coletivo, gangue, horda (êpa!). Antes bem acompanhado do que só. Seja membro de um Grupo, crie um fã clube, junte amigos que gostam de música, ou que colecionem munnys como você. Habbo Grupos é o que há.</p>
-									<p>Tornar-se membro é grátis e criar teu próprio Habbo Grupo custa 10 Habbo Moedas. <br/></p>
-									<p><span style="font-weight: bold;">Veja mais Grupos no </span><a style="font-weight: bold;" href="<?php echo $this->hotel->get_HotelURL(); ?>/groups/directory">Guia</a><span style="font-weight: bold;">.</span><br/></p>
+									<p><span class='lang-groupsindex-aboutDesc'>Grupo, coletivo, gangue, horda (êpa!). Antes bem acompanhado do que só. Seja membro de um Grupo, crie um fã clube, junte amigos que gostam de música, ou que colecionem munnys como você. Habbo Grupos é o que há.</span></p>
+									<p><span class='lang-groupsindex-aboutSubheader'>Tornar-se membro é grátis e criar teu próprio Habbo Grupo custa 10 Habbo Moedas.</span> <br/></p>
+									<p><span style="font-weight: bold;" class='lang-groupsindex-aboutGuide'>Veja mais Grupos no</span> <a style="font-weight: bold;" href="<?php echo $this->hotel->get_HotelURL(); ?>/groups/directory"><span class='lang-groupsindex-aboutLink'>Guia</span></a><span style="font-weight: bold;">.</span><br/></p>
 									<p>
 									<div id="group_purchase_2">
 										<span id="group_purchase_2_group_purchase"></span>
