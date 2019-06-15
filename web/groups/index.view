@@ -53,7 +53,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 									<div id="group_purchase_1">
 										<span id="group_purchase_1_group_purchase"></span>
 										<script type="text/javascript">
-											var groupPurchaseButton = Builder.node("a", {href:"#", className:"colorlink orange"}, [ Builder.node("span", "Crie um Grupo") ]);
+											var groupPurchaseButton = Builder.node("a", {href:"#", className:"colorlink orange"}, [ Builder.node("span", {className: "lang-groupsindex-createButton"}, "Crie um Grupo") ]);
 											$("group_purchase_1_group_purchase").appendChild(groupPurchaseButton);
 											
 											Event.observe(groupPurchaseButton, "click", function(e) {
@@ -108,7 +108,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 									<div id="group_purchase_2">
 										<span id="group_purchase_2_group_purchase"></span>
 										<script type="text/javascript">
-											var groupPurchaseButton = Builder.node("a", {href:"#", className:"colorlink orange"}, [ Builder.node("span", "Crie um Grupo") ]);
+											var groupPurchaseButton = Builder.node("a", {href:"#", className:"colorlink orange"}, [ Builder.node("span", {className: "lang-groupsindex-createButton"},"Crie um Grupo") ]);
 											$("group_purchase_2_group_purchase").appendChild(groupPurchaseButton);
 											
 											Event.observe(groupPurchaseButton, "click", function(e) {
@@ -125,16 +125,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 											}, false);
 											
 										</script>
-										<noscript>
-											<form action=<?php echo $this->hotel->get_hotelUrl(); ?>#group_purchase_2" method="post">
-												<input type="hidden" name="webwork.token.name" value="webwork.token"/>
-												<input type="hidden" name="webwork.token" value="HOBQI3295PRZOETXYOIZT7YHV3YQYZ2B"/>
-												<input type="hidden" name="group_purchase_2_task" value="purchase"/>
-												<input type="hidden" name="group_purchase_2_product" value="g0 group_product"/>
-												<input type="hidden" name="__app_key" value=""/>
-												<input type="submit" value="Comprar" class="process-button"/>
-											</form>
-										</noscript>
+
 									</div>
 									<group_code>&nbsp;</group_code>
 									</p>
@@ -147,7 +138,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 						</div>
 						<div class="v3box orange">
 							<div class="v3box-top">
-								<h3>Mais Ativos</h3>
+								<h3><span class='lang-groupsindex-mostactiveTitle'>Mais Ativos</span></h3>
 							</div>
 							<div class="v3box-content">
 								<div class="v3box-body">
