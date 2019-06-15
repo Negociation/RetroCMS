@@ -270,12 +270,12 @@ var WORDS_PT = {
 		"groupsindex-headline": "Habbo Grupos",
 		"groupsindex-tutorialTitle": "Seja Membro de um Grupo",
 		"groupsindex-tutorialDesc": "Seja membro de um Habbo Grupo. Isso é grátis.",
-		"groupsindex-tutorialStep1": "Entre no" 
-		"groupsindex-tutorialStep1Link": "Hotel"
-		"groupsindex-tutorialStep2": "Procure no" 
-		"groupsindex-tutorialStep2Link": "Guia"
-		"groupsindex-tutorialStep3": "Clique num Grupo" 
-		"groupsindex-tutorialStep4": "Torne-se membro" 
+		"groupsindex-tutorialStep1": "Entre no",
+		"groupsindex-tutorialStep1Link": "Hotel",
+		"groupsindex-tutorialStep2": "Procure no", 
+		"groupsindex-tutorialStep2Link": "Guia",
+		"groupsindex-tutorialStep3": "Clique num Grupo",
+		"groupsindex-tutorialStep4": "Torne-se membro",
 
 		"groupsindex-createTitle": "Cria teu Habbo Grupo",
 		"groupsindex-createDesc": "Você pode criar teu Habbo Grupo por 10 Habbo Moedas.",		

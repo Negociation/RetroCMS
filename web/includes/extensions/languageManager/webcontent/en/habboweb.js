@@ -260,12 +260,12 @@ var WORDS_EN = {
 		"groupsindex-headline": "Groups",
 		"groupsindex-tutorialTitle": "Joining a Group",
 		"groupsindex-tutorialDesc": "Joining a group is free, so what are you waiting for?",
-		"groupsindex-tutorialStep1": "Log in or register " 
-		"groupsindex-tutorialStep1Link": "(Click Here)"
-		"groupsindex-tutorialStep2": "Browse the" 
-		"groupsindex-tutorialStep2Link": "Directory"
-		"groupsindex-tutorialStep3": "Click a Group's name" 
-		"groupsindex-tutorialStep4": "Join" 
+		"groupsindex-tutorialStep1": "Log in or register " ,
+		"groupsindex-tutorialStep1Link": "(Click Here)",
+		"groupsindex-tutorialStep2": "Browse the",
+		"groupsindex-tutorialStep2Link": "Directory",
+		"groupsindex-tutorialStep3": "Click a Group's name",
+		"groupsindex-tutorialStep4": "Join", 
 
 		"groupsindex-createTitle": "Creating your own Group",
 		"groupsindex-createDesc": "Create your own Group for just 10 Habbo Credits:",		
