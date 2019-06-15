@@ -13,7 +13,7 @@
 
 foreach($this->newsArray as $index=>$row){
 	if($index <= 5){
-		if($row == $this->articleObject){
+		if($row->get_Id() == $this->articleObject->get_Id()){
 			echo '
 				<li>
 					<span class="articledate">'.$row->get_DateFormat(1,$row->get_Date()).'</span>'.$row->get_Title().'	

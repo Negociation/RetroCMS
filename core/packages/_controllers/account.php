@@ -77,7 +77,7 @@ class Account extends ControllerTemplate{
 			//Recieve the result of habbo login
 			$requestStatus = $this->habboModel->set_HabboLogin($this->habbo);
 			//The request return True , so Login is valid
-			if ($requestStatus){				
+			if ($requestStatus[0]){				
 				echo 'Redirecting now...';
 				//If login hasn't a target ( like client )just redirect to Index
 				if (!isset($_POST['target'])){
@@ -101,7 +101,8 @@ class Account extends ControllerTemplate{
 
 				//The request returned Login or Password Wrong
 				if(!is_array($requestStatus[1])){
-					
+					header('Location: ../account/login');
+					exit;
 				}else{
 					//habbo Banned (comming soon)
 				}

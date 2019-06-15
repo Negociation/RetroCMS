@@ -84,7 +84,9 @@ require_once('./web/includes/modules/headers/default.viewpart');
 							</div>
 							<div class="v3box-content">
 								<div class="v3box-body">
-									<span style="text-decoration: underline;"><span style="font-weight: bold;"><a href="http://web.archive.org/web/20070704053351/http://www.habbo.pt/groups/455/id">Trocas e Negócios</a></span></span><span style="font-weight: bold; text-decoration: underline;">&nbsp;</span><br/>Se tens Mobis para trocar é neste Grupo que deves entrar.<br/><br/><span style="font-weight: bold; text-decoration: underline;"><a href="http://web.archive.org/web/20070704053351/http://www.habbo.pt/groups/453/id">Classificados</a></span><br style="font-weight: bold;"/>Torne-se membro para encontrar uma pessoa que tenha os mesmos interesses que você.<br/><br/><span style="font-weight: bold; text-decoration: underline;"><a href="http://web.archive.org/web/20070704053351/http://www.habbo.pt/groups/451/id">Eventos</a></span><br style="font-weight: bold;"/>Não fique entediado. É deste Grupo que saem as melhores diversões. Seja membro.<br/>
+									<!-- TODO -->
+									<center><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/progress_habbos.gif" alt="Loading Groups..."></center>
+
 									<div class="clear"></div>
 								</div>
 							</div>
@@ -144,7 +146,8 @@ require_once('./web/includes/modules/headers/default.viewpart');
 								<div class="v3box-body">
 									<ul class="groups-toplist toplist">
 										<!-- TODO -->
-										<h4> Sorry , Nothing to show... </h4>
+										<center><img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/progress_habbos.gif" alt="Loading Groups..."></center>
+
 									</ul>
 									<div class="clear"></div>
 								</div>
