@@ -255,6 +255,37 @@ var WORDS_EN = {
 		"hcjoin-subscribe3Buy" : "Buy 6 month(s)",		
 		//Habbo Club->Shop
 		"hcshop-headline": "Club Shop",
+
+		//Groups->Index
+		"groupsindex-headline": "Groups",
+		"groupsindex-tutorialTitle": "Joining a Group",
+		"groupsindex-tutorialDesc": "Joining a group is free, so what are you waiting for?",
+		"groupsindex-tutorialStep1": "Log in or register " 
+		"groupsindex-tutorialStep1Link": "(Click Here)"
+		"groupsindex-tutorialStep2": "Browse the" 
+		"groupsindex-tutorialStep2Link": "Directory"
+		"groupsindex-tutorialStep3": "Click a Group's name" 
+		"groupsindex-tutorialStep4": "Join" 
+
+		"groupsindex-createTitle": "Creating your own Group",
+		"groupsindex-createDesc": "Create your own Group for just 10 Habbo Credits:",		
+		"groupsindex-createStep1": "Log in or register",
+		"groupsindex-createStep1Link": "(Click here)",
+		"groupsindex-createStep2": "Create your Group",
+		"groupsindex-createStep3": "Make the Group badge",
+		"groupsindex-createStep4": "Invite your friends!",
+		
+		"groupsindex-publicTitle": "Public Groups",
+
+		"groupsindex-aboutTitle": "Habbo Groups - it's what you make it!",
+		"groupsindex-aboutDesc": "Join a collective, form a gang, create a fan club, make new friends or just hang out with your old mates - Habbo Groups is what you make it!",
+		"groupsindex-aboutSubheader": "Joining a group is free and it's only 10 Habbo Credits to start your own.",		
+		"groupsindex-aboutGuide": "See more groups on",		
+		"groupsindex-aboutLink": "Directory",
+		
+		"groupsindex-mostactiveTitle": "Most Actives",
+		
+		"groupsindex-createButton": "Create a Group",
 		
 	//Habbo Home
 		"home-button-make" : "Make your own Habbo Home",

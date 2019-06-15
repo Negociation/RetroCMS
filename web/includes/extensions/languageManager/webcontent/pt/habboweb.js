@@ -264,6 +264,38 @@ var WORDS_PT = {
 		//Habbo Club->Shop
 		"hcshop-headline": "Loja HC",
 		
+	//Groups
+		
+		//Groups->Index
+		"groupsindex-headline": "Habbo Grupos",
+		"groupsindex-tutorialTitle": "Seja Membro de um Grupo",
+		"groupsindex-tutorialDesc": "Seja membro de um Habbo Grupo. Isso é grátis.",
+		"groupsindex-tutorialStep1": "Entre no" 
+		"groupsindex-tutorialStep1Link": "Hotel"
+		"groupsindex-tutorialStep2": "Procure no" 
+		"groupsindex-tutorialStep2Link": "Guia"
+		"groupsindex-tutorialStep3": "Clique num Grupo" 
+		"groupsindex-tutorialStep4": "Torne-se membro" 
+
+		"groupsindex-createTitle": "Cria teu Habbo Grupo",
+		"groupsindex-createDesc": "Você pode criar teu Habbo Grupo por 10 Habbo Moedas.",		
+		"groupsindex-createStep1": "Entre no",
+		"groupsindex-createStep1Link": "Hotel",
+		"groupsindex-createStep2": "Crie teu grupo",
+		"groupsindex-createStep3": "Faz um Emblema descolado",
+		"groupsindex-createStep4": "Convide teus amigos!",
+		
+		"groupsindex-publicTitle": "Grupos Públicos",
+
+		"groupsindex-aboutTitle": "Habbo Grupos: É o que há",
+		"groupsindex-aboutDesc": "Grupo, coletivo, gangue, horda (êpa!). Antes bem acompanhado do que só. Seja membro de um Grupo, crie um fã clube, junte amigos que gostam de música, ou que colecionem munnys como você. Habbo Grupos é o que há.",
+		"groupsindex-aboutSubheader": "Tornar-se membro é grátis e criar teu próprio Habbo Grupo custa 10 Habbo Moedas. ",		
+		"groupsindex-aboutGuide": "Veja mais Grupos no",		
+		"groupsindex-aboutLink": "Guia",
+		
+		"groupsindex-mostactiveTitle": "Mais Ativos",
+		
+		"groupsindex-createButton": "Crie um Grupo",
 		
 	//Default News
 	"article-install-title": "RetroCMS foi instalado com Sucesso",
