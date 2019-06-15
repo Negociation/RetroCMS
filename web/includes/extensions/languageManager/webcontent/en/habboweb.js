@@ -108,6 +108,7 @@ var WORDS_EN = {
   "login-error2": "Habbo Name or Password wrong!!",
   "login-error3": "You have been baned permanently!",
   "login-error4": "You have been banned permanently!", 
+  
    //Client
    "topbar-client-count": "Habbos online now",
    "topbar-client-logout": "CLOSE HOTEL",
@@ -170,14 +171,43 @@ var WORDS_EN = {
 	//Credits
 	"creditsMain-headline": "Habbo Coins Main",
 	"creditsMain-creditsTitle": "Habbo Coins",
+	"creditsMain-aboutTitle": "HABBO CREDITS",
+	"creditsMain-aboutDescBefore": "Habbo Credits are the Hotel's currency, they are kept in your Habbo Purse and can used for a variety of things. Habbo Credits allow you to decorate your room with Habbo Furni, buy gifts for your friends, join ",
+	"creditsMain-aboutDescUrl":"Habbo Club",
+	"creditsMain-aboutDescAfter": "our exclusive VIP club or play games like Wobble Squabble and Battle Ball.",
+	"creditsMain-aboutSubheader": "Habbo Credits can be get in a variety of ways, read about the different methods below. Then you can find a method that suits you.",
+
+	"creditsMain-redeemTitle": "HOW REDEEM HABBO CREDITS",
+	"creditsMain-redeemDesc": "If you have a voucher and you need to generate the same to get the respective currencies. Follow that steps bellow to get your credits:",	
+	"creditsMain-redeemStep1": "Enter on Hotel with your avatar.",	
+	"creditsMain-redeemStep2": "Click on your Habbo Purse (you will find on the bottom , super easy).",	
+	"creditsMain-redeemStep3": "Click on vouchers. Will open a new window with a Blank Box and a button \"OK\"",	
+	"creditsMain-redeemStep4": "On the blank box, type your voucher, then click on \"OK\".",
+	"creditsMain-redeemSubheader": "Well, now you will recieve your credits, just remember to keep your voucher safe until you redeem on Habbo Purse , right? ",	
+	"creditsMain-redeemReminderTitle": "Remember:",
+	"creditsMain-redeemReminderDesc": "You have to type and redeem your voucher to recieve your credits.",
+	
+	"creditsMain-waysTitle": "HOW TO GET!",
+	"creditsMain-waysDesc": "You can get Habbo Coins for free, currently there are two ways to get habbo coins. Read below and stay informed:",
+	"creditsMain-waysTitle1": "Be Online",
+	"creditsMain-waysDesc1Before": "",
+	"creditsMain-waysDesc1Middle": "",
+	"creditsMain-waysDesc1After": "",
+	"creditsMain-waysTitle2": "Vouchers",
+	"creditsMain-waysDesc2": "You can get coins by redeem vouchers that can be earned through competitions, be sure to write down and generate on your habbo purse.",
 	"creditsMain-purseTitle": "My Habbo Purse",	
 	"creditsMain-purseIntro": "You can use Habbo Coins for buying furniture and playing games in Habbo Hotel or enhancing your Habbo Home page content.",	
 	"creditsMain-purseIntroLink": "Learn more!",		
 	"creditsMain-purseContentBefore": "You have",	
 	"creditsMain-purseContentAfter": "Habbo Credit(s)",		
-	"creditsMain-purseContentBuy": "Buy more coins",	
+	"creditsMain-purseContentBuy": "Buy more coins",
+	"creditsMain-purseContentnotLoggedIn": "You are not logged in.",
 	"creditsMain-purseContentRedeem": "If you have a Coins or furniture redemption code, enter it below to get your stuff.",	
-	
+	"creditsMain-helpTitle": "CREDITS HELP",	
+	"creditsMain-helpDesc": "If you are having any problems with Credits then please read the Credit FAQs or contact Player Support using the",
+	"creditsMain-helpLink": "Habbo Help Tool",
+	"creditsMain-helpSubheader": "",
+
 	//Habbo Club
 		"hc-login-before": "In order to join Habbo Club you need to",
 		"hc-login-after": "first.",		
