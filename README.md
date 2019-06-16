@@ -1,8 +1,11 @@
 # RetroCMS
-- A Oldschool CMS compatible with Kepler , with support between v14...v17, allowing Multi-language and Ajax Request like the old days.
+- A Oldschool CMS compatible with Kepler Server ( v14 -> v17 ), based on the Web 1.0 revison 17 (2007), with support for Multi-language, Login , Logout , SSO...
 
 
-+ This is the Beta Ring ( Aquamarine ) , for a stable Beta please Use Beta 2 (Citrine), who as planned to get some features from the Private Branch:
+
+
++ This is the Beta Ring ( Aquamarine ) , all old versions ( Opal "Alpha" , Citrine"Beta1,Beta2" ) are deprecated now , we recommend to you use the Beta3 Builds , it have more features and securitys patches every month. Development Progress:
+
   - MVC with Security (90%)
   - Diagnosis Class ( 100% )
   - Diagnosis Panel ( 100% )
@@ -11,7 +14,19 @@
   - DAO templates (96%)
   - Controller template (100%)
   - Controllers (72%)
+  - LanguageManager Library (90%)
+ 
+ + Current Features:
+  - Registration with Validations (99%) [Only neeed add captcha validation for safety]
+  - Login (80%) [Only need to add Login Messages]
+  - Logout
+  - Habbo Credits Page
+  - Habbo Club Page (50% only shows doesnt allows subscriptions)
+  - English and Portuguese Support 
+  - Client (70%) , doesnt allow LanguageManager and only works with SSO
+  - Install (90%) [Except for Hotel Customizations]
   
+ 
   
 ### Install:
 
