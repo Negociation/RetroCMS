@@ -24,13 +24,20 @@ if($this->habbo->get_isHabboLoggedIn() && $this->homeObject->get_homeStatus() ==
 								<a id="cancel-button" class="toolbutton cancel" href="#"><span class="lang-home-button-editCancel">Cancelar</span></a>
 								<a id="save-button" class="toolbutton save" href="#"><span class="lang-home-button-editSave">Salvar</span></a>
 							</form>
+							
+							<script language="JavaScript" type="text/javascript">
+								initEditToolbar();
+							</script>
+
 						</div>
 					</div>
 				</div>
 			</div>
+			
 	'; 	
 }
 
 ?>
+
 
 

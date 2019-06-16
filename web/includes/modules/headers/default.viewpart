@@ -34,7 +34,7 @@
 		</script>
 		
 	</head>
-	<body id="<?php echo $this->get_viewBody(); ?>">
+	<body id="<?php echo $this->get_viewBody(); ?>" >
         <div id="overlay"></div>
         <h1 id="main-header"><?php echo $this->hotel->get_HotelNick();?></h1>
         <div id="wrapper">
