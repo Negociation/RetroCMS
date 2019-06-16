@@ -72,10 +72,10 @@ class Home extends ControllerTemplate{
 	/* Load Home by Name */
 	protected function name($habboname){
 		//Set Page Title;
-		$this->pageTitle = "Habbo Home não encontrada";	
+		$this->pageTitle = "Habbo home: ".$habboname;	
 		if($this->habboModel->get_HabboObject($habboname,2) == false){
 			//Set Page Title;
-			$this->pageTitle = "Habbo Home não encontrada";	
+			$this->pageTitle = "Habbo Home não encontrada";
 			//Include Not Found
 			include 'web/404.view';	
 			exit;
