@@ -84,8 +84,10 @@ function selectLanguage(sender,lang){
 	var images = getDivId.getElementsByTagName("img");
 	var imglist =  Array.prototype.slice.call(images);
 	imglist.forEach(cleanSelector);
-	document.getElementById('flag_'+sender.id).src = habboReqPath+"/c_images/album1401/flag_"+sender.id.toLowerCase()+".gif";
-	selectedLang = lang;
+	if(lang != null){
+		document.getElementById('flag_'+sender.id).src = habboReqPath+"/c_images/album1401/flag_"+sender.id.toLowerCase()+".gif";
+		selectedLang = lang;
+	}
 		
 }
 

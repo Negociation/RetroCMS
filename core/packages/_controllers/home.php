@@ -92,7 +92,7 @@ class Home extends ControllerTemplate{
 		if($this->homeObject->get_HabboObject()->get_isHomeVisible()){
 			//Set Home Status if as edit
 			if((isset($_GET['do']) && $_GET['do'] == 'edit') && ($this->homeObject->get_HabboObject()->get_habboId() == $this->habbo->get_HabboId())){
-				$this->homeObject->set_homeMode('edit');
+				$this->homeObject->set_pageMode('edit');
 				$this->set_viewBody('editmode');
 			}else{
 				$this->set_viewBody('viewmode');

@@ -18,17 +18,17 @@ require_once('./web/includes/modules/headers/default.viewpart');
 
 				<div id="page-headline">
 					<div id="page-headline-breadcrums"></div>
-					<div id="page-headline-text">Arquivo</div>
+					<div id="page-headline-text"><span class="lang-archive-headline">Arquivo</span></div>
 				</div>
 				<table border="0" cellpadding="0" cellspacing="0" width="100%">
 					<tr>
 						<td style="width: 8px;"></td>
 						<td valign="top" style="width: 202px;" class="habboPage-col">
 							<div class="portlet-scale gold">
-								<div class="portlet-scale-header"><h3>Notícias Habbo</h3></div>
+								<div class="portlet-scale-header"><h3><span class="lang-archive-aboutTitle">Notícias Habbo</span></h3></div>
 								<div class="portlet-scale-body">
 									<div class="portlet-scale-content">
-										No Arquivo de Notícias Habbo você encontra o que está buscando.
+										<span class="lang-archive-aboutDesc">No Arquivo de Notícias Habbo você encontra o que está buscando.</span>
 										<div class="clear"></div>
 									</div>
 								</div>
@@ -39,7 +39,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 						</td>	
 						<td valign="top" style="width: 539px;" class="habboPage-col rightmost">
 							<div class="portlet-scale gold">
-								<div class="portlet-scale-header"><h3>Lista de Notícias</h3></div>
+								<div class="portlet-scale-header"><h3><span class="lang-archive-browseTitle">Lista de Notícias</span></h3></div>
 									<div class="portlet-scale-body">
 										<div class="portlet-scale-content">
 											<p>

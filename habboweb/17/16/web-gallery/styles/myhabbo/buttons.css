@@ -145,10 +145,8 @@ a.toolbutton.reporting-stop {
 }
 
 a.toolbutton.tell {
-	
 	background-image: url(../../images/myhabbo/buttons/tools_tell.gif);
 	padding-left: 27px;
-	padding-right: -100px;
 }
 
 a.toolbutton.avatar-export {
@@ -187,26 +185,24 @@ a.toolbutton.cancel {
 	background-image: url(../../images/myhabbo/buttons/tools_cancel.gif);
 	padding-left: 25px;
 	float: right;
-	margin-right: 10;
+	margin-right: 0;
 }
 
 a.toolbutton.group-settings {
-	background-image: url(../../images/groups/settings_icon.png);
-	padding-left: 30px;
-   	padding-top:0px;
+	background-image: url(../../images/groups/settings_icon.gif);
+	padding-left: 35px;
 }
 
 
 a.toolbutton.group-badge span{
+    margin-top:-2px;
     padding-left:10px;
-
 }
 
 a.toolbutton.group-badge {
-	background-image: url(../../images/groups/edit_badge_button.png);
-	padding-left: 26px;
-	padding-top:0px;
-
+	background-image: url(../../images/groups/edit_badge_button.gif);
+	padding-left: 23px;
+	 margin-top:2px;
 	
 }
 

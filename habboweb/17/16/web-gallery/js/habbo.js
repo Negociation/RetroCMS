@@ -494,17 +494,18 @@ function updateCredits() {
 		creditsUpdateOn = true;
 		document.getElementById('credits-status').innerHTML = getProgressNode();
 		setTimeout(function(){ new Ajax.Updater("credits-status", habboReqPath + "/topbar/credits", { onComplete: function() { creditsUpdateOn = false; }, evalScripts: true });}, 500);
+		creditsUpdated = true;
+		setTimeout(function(){ creditsUpdated = false; },50000)
 	}
 }
 var habboClubUpdated = false;
 var habboClubUpdateOn = false;
 function updateHabboClub() {
 	if (!habboClubUpdated && !habboClubUpdateOn) {
-		habboClubUpdateOn = true;		
+		habboClubUpdateOn = true;
 		document.getElementById('habboclub-status').innerHTML = getProgressNode();
 		setTimeout(function(){ new Ajax.Updater("habboclub-status", habboReqPath + "/topbar/habboclub", { onComplete: function() { habboClubUpdateOn = false; }, evalScripts : true }); }, 500);
-
-
+		habboClubUpdated = true;
 	}
 }
 
@@ -639,7 +640,6 @@ function moveDialogToView(dialog, e, coordinates) {
 }
 
 function moveDialogToCenter(dialog) {
-	
 	var topPos;
 	
 	if (document.getElementById('top') != null){
@@ -767,7 +767,7 @@ function closeSubscription(e) {
 
 function showSubscriptionResult(optionNumber,res_dialog_header) {
 	new Ajax.Request(
-		habboReqPath + "/club/club_subscribe",
+		habboReqPath + "/myhabbo/habboclub_subscribe",
 		{ method: "post", parameters: "optionNumber="+encodeURIComponent(optionNumber), onComplete: function(req, json) {
    			if ($("subscription_dialog")) Element.remove("subscription_dialog");
 			var resultDialog = createDialog("subscription_result", res_dialog_header, "9003", 0, -1000, closeSubscription);
@@ -1006,7 +1006,7 @@ var ClientMessageHandler = {
 	},
 
     nielsen: function(data){
-      ClientMessageHandler.url("https://web.archive.org/web/20130124113003/http://secure-dk.imrworldwide.com/cgi-bin/m?ci=Habbohotel&cg=0&si=" + data);
+      ClientMessageHandler.url("https://web.archive.org/web/20130701113007/http://secure-dk.imrworldwide.com/cgi-bin/m?ci=Habbohotel&cg=0&si=" + data);
     },
 
 	customjs: function(data) {
@@ -1021,89 +1021,6 @@ var ClientMessageHandler = {
 		alert(data);
 	}
 };
-
-/*  Advertsement Top */
-				
-var Images_Top = new Array();
-var Links_Top = new Array();				
-var curOffsetT = 0;
-
-function Ads_Top(){
-	for (var i = 0; i < arguments.length; i++){
-		Images_Top[i] = document.createElement('img');
-		Images_Top[i].setAttribute('src',arguments[i]);
-	};
-}
-				
-/*  Advertsement Middle */
-				
-var Images_Middle = new Array();
-var Links_Middle = new Array();
-var curOffsetM = 0;
-				
-function Ads_Middle(){
-	for (var i = 0; i < arguments.length; i++){
-		Images_Middle[i] = document.createElement('img');
-		Images_Middle[i].setAttribute('src',arguments[i]);
-	};
-}
-				
-/*  Advertsement Right */			
-				
-var Images_Right = new Array();
-var Links_Right = new Array();
-var curOffsetR = 0;
-	
-function Ads_Right(){
-	for (var i = 0; i < arguments.length; i++){
-		Images_Right[i] = document.createElement('img');
-		Images_Right[i].setAttribute('src',arguments[i]);
-	};
-}
-
-/* Load All ADS */
-
-function advertisementLoad(){
-	if(document.getElementById('TopLink')){
-		document.getElementById('TopLink').href = Links_Top[0];
-		document.getElementById('TopImage').src = Images_Top[0].src;
-	
-		setInterval(
-			function() {
-				document.getElementById('TopLink').href = Links_Top[curOffsetT];
-				document.getElementById('TopImage').src = Images_Top[curOffsetT].src;
-				curOffsetT = (curOffsetT >= Images_Top.length-1) ? 0 : curOffsetT + 1;
-			}
-		,10000);
-	}
-	
-	if(document.getElementById('MiddleLink')){			
-		document.getElementById('MiddleLink').href = Links_Middle[0];
-		document.getElementById('MiddleImage').src = Images_Middle[0].src;
-			
-		setInterval(
-			function() {
-				document.getElementById('MiddleLink').href = Links_Middle[curOffsetM];
-				document.getElementById('MiddleImage').src = Images_Middle[curOffsetM].src;
-				curOffsetM = (curOffsetM >= Images_Middle.length-1) ? 0 : curOffsetM + 1;
-			}
-		,20000);
-	}
-	
-	if(document.getElementById('RightLink')){
-		document.getElementById('RightLink').href = Links_Right[0];
-		document.getElementById('RightImage').src = Images_Right[0].src;	
-		
-		setInterval(
-			function() {
-				document.getElementById('RightLink').href = Links_Right[curOffsetR];
-				document.getElementById('RightImage').src = Images_Right[curOffsetR].src;
-				curOffsetR = (curOffsetR >= Images_Right.length-1) ? 0 : curOffsetR + 1;
-			}
-		,25000);
-	}	
-	
-}
 
 var TagHelper = Class.create();
 /**
@@ -1345,4 +1262,3 @@ function setPreview(selectedoption, template, targetDiv) {
 			habboReqPath + "/components/roomlink_export_update",
 			{ method: "post", parameters: "roomId="+selectedoption+"&template="+template });
 }
-

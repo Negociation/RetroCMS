@@ -20,14 +20,29 @@ if($this->habbo->get_isHabboLoggedIn()){
 												<div id="purse-redeem">
 													<div id="purse-form-container" >
 														<span class="lang-creditsMain-purseContentRedeem">Se você tem codigos de moedas ou mobilias, digite abaixo para gerar o mesmo.</span>
-														<form method="post" action="'.$this->hotel->get_HotelUrl().'/credits/redeem" id="purse-redeem-form">
-															<input type="text" name="redeem-code" size="35" id="redeem-code"/ disabled>
+	';
+	if($this->hotel->get_HotelPurchaseFeatures('creditsRedeem')){
+		echo'
+														<form method="post" action="'.$this->hotel->get_HotelUrl().'/credits/redeem" id="purse-redeem-form" disabled>
+															<input type="text" name="redeem-code" size="35" id="redeem-code"/>
 															<input type="hidden" name="doRedeem" value="yes" id="doredeem"/>
-															<input type="image" src="'.$this->hotel->get_HotelWeb().'/habboweb/17/16/web-gallery/images/button/arrow_button.gif" class="arrow-button" align="top"/ disabled>
+															<input type="image" src="'.$this->hotel->get_HotelWeb().'/habboweb/17/16/web-gallery/images/button/arrow_button.gif" class="arrow-button" align="top"/>
 														</form>
 													</div>
 												</div>
-	';
+		';
+	}else{
+		echo'
+														<form method="post" action="'.$this->hotel->get_HotelUrl().'/credits/redeem" id="purse-redeem-form">
+															<input type="text" name="redeem-code" size="35" id="redeem-code"/ disabled>
+															<input type="hidden" name="doRedeem" value="yes" id="doredeem"/>
+															<input type="image" src="'.$this->hotel->get_HotelWeb().'/habboweb/17/16/web-gallery/images/button/arrow_button_disabled.gif" class="arrow-button" align="top"/ disabled>
+														</form>
+													</div>
+												</div>
+		';	
+	}
+	
 }else{
 	echo'
 												<p><a href="'.$this->hotel->get_HotelURL().'/credits" class="colorlink"><span class="lang-creditsMain-purseContentBuy">Comprar mais Moedas</span></a></p>
@@ -35,7 +50,7 @@ if($this->habbo->get_isHabboLoggedIn()){
 													<div>
 														<div class="content-beige">
 															<div class="content-beige-body">
-																Você ainda não entrou no Habbo.
+																<span class="lang-creditsMain-purseContentnotLoggedIn">Você ainda não entrou no Habbo.</span>
 																<div class="clear"></div>
 															</div>
 														</div>

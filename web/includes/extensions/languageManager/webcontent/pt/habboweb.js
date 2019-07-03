@@ -296,7 +296,34 @@ var WORDS_PT = {
 		"groupsindex-mostactiveTitle": "Mais Ativos",
 		
 		"groupsindex-createButton": "Crie um Grupo",
-		
+	
+	//404
+	"notFound-headline": "PAGE NOT FOUND",	
+	"notFound-Title": "PÁGINA NÃO ENCONTRADA",	
+	"notFound-ContentLine1": "Desculpe, o endereço solicitado não foi encontrado.",		
+	"notFound-ContentLine2": "Cheque se digitou corretamente o endereço, se não funcionar, procure o link navegando na página do",	
+	"notFound-ContentLine2Link": "Habbo Hotel",	
+	"notFound-ContentLine3": "Se esta página apareceu depois que você clicou em \"Compre Créditos\", por favor,",	
+	"notFound-ContentLine3Link": "siga este link.",		
+
+	//Profile
+	"profile-headerTitle": "MEU HABBO",	
+	"profile-tab1Title": "MEU VISUAL",
+	"profile-tab2Title": "PREFERÊNCIAS",
+	"profile-tab3Title": "MEU EMAIL",
+	"profile-tab4Title": "MINHA SENHA",
+	"profile-infoTitle": "MINHAS INFORMAÇÕES",
+	"profile-infoCreation": "Habbo criado em:",	
+	
+	//News Archive
+	"archive-headline": "ARQUIVO",	
+	"archive-aboutTitle": "NOTÍCIAS HABBO",
+	"archive-aboutDesc": "No Arquivo de Notícias Habbo você encontra o que está buscando.",
+	"archive-browseTitle": "LISTA DE NOTÍCIAS",	
+
+	//News Article
+	"article-browseTitle":"ÚLTIMAS NOTÍCIAS",
+	
 	//Default News
 	"article-install-title": "RetroCMS foi instalado com Sucesso",
 	"article-install-sub": "Clique aqui para mais informações.",

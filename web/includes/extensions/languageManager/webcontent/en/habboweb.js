@@ -249,7 +249,7 @@ var WORDS_EN = {
 		"hcjoin-remainingHeader" : "days left of hc",
 		"hcjoin-subscribe1Title" : "31 days = 25 Coins",
 		"hcjoin-subscribe1Buy" : "Buy 1 month(s)",
-		"hcjoin-subscribe2Title" : "93 ddays = 60 Coins",
+		"hcjoin-subscribe2Title" : "93 days = 60 Coins",
 		"hcjoin-subscribe2Buy" : "Buy 3 month(s)",
 		"hcjoin-subscribe3Title" : "186 days = 105 Coins",
 		"hcjoin-subscribe3Buy" : "Buy 6 month(s)",		
@@ -292,13 +292,39 @@ var WORDS_EN = {
 		"home-button-edit" : "Edit",
 		"home-button-reportStart" : "Show Report Buttons",
 		"home-button-reportStop" : "Hide Report Buttons",
-		"home-button-reportStop" : "Edit",
 		"home-button-editInventory" : "Inventory",	
 		"home-button-editWebstore" : "Webstore",	
 		"home-button-editSave" : "Save",	
 		"home-button-editCancel" : "Cancel",	
 		"home-button-tell" : "Tell a friend",
 		"home-button-export" : "Avatar export",
+
+	//404
+	"notFound-headline": "PAGE NOT FOUND",	
+	"notFound-Title": "PAGE NOT FOUND",	
+	"notFound-ContentLine1": "We're sorry, but the page you have requested cannot be found. Perhaps it's lost, or it might have run off... OR, Kedo might have thought it was a Twinkie and eaten it!",		
+	"notFound-ContentLine2": "Please try typing the URL again, if that doesn't work visit the Home Page and click the links to find the page you're looking for.",	
+	"notFound-ContentLine2Link": "",	
+	"notFound-ContentLine3": "If you have come to this page from the Hotel after clicking 'Buy Credits' then please",	
+	"notFound-ContentLine3Link": "Click Here",	
+		
+	//Profile
+	"profile-headerTitle": "HABBO PROFILE",
+	"profile-tab1Title": "MY CLOTHING",
+	"profile-tab2Title": "MY SETTINGS",
+	"profile-tab3Title": "MY EMAIL",
+	"profile-tab4Title": "MY PASSWORD",
+	"profile-infoTitle": "MY INFO",
+	"profile-infoCreation": "Habbo Created On:",	
+	
+	//News Archive
+	"archive-headline": "ARCHIVE",	
+	"archive-aboutTitle": "BROWSE",
+	"archive-aboutDesc": "Did you miss reading about something happening in Habbo? You can find all of the news articles here!",
+	"archive-browseTitle": "BROWSE",	
+	
+	//News Article
+	"article-browseTitle":"What's New",
 	
 	//Default Promos
 	"promo-install-title": "RetroCMS has been installed successfull",
@@ -309,4 +335,6 @@ var WORDS_EN = {
 		
 	//News Article
 	"article-managerTitle": "Hotel Manager",		
+	
+	
 };

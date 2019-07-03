@@ -14,46 +14,17 @@
 // Class: Habbo
 // Desc: Habbo Home Object;
 
-class HomeObject extends ClassTemplate{
+class HomeObject extends ContentObject{
 	
 	protected $habboObject;
-	protected $background;
-	protected $widgetsArray  = [];
-	protected $stickersArray = []; 
-	protected $homeStatus;
 	
 	/** DAO CONSTRUCT **/
 	public function constructObject($habboObject){
 		$this->habboObject = $habboObject;
 		$this->background = 'b_hc_bg_machine';
-		$this->homeStatus = 'view';
+		$this->editStatus = 'view';
 	}	
 	
-	/** GETS **/
-	public function get_habboObject(){
-		return $this->habboObject;
-	}
-	
-	public function get_widgetsArray(){
-		return $this->widgetsArray;
-	}
-	
-	public function get_stickersArray(){
-		return $this->stickersArray;
-	}
-	
-	public function get_background(){
-		return $this->background;
-	}
-
-	public function get_homeStatus(){
-		return $this->homeStatus;
-	}
-	
-	/** SETS **/
-	public function set_homeMode($mode){
-		$this->homeStatus = $mode;
-	}
 	
 }
 ?>

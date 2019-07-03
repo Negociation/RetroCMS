@@ -39,7 +39,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 						<div id="mypage-bg" class="<?php echo $this->homeObject->get_background()?>">
 							<div id="mypage-ad">
 								<!--Advertisement Right if habbo doesnt have HC -->
-								<?php if(true){ include('./web/includes/modules/advertisement_right.viewpart'); } ?>
+								<?php if(!$habboObject->get_HabboClub(1)){ include('./web/includes/modules/advertisement_right.viewpart'); } ?>
 							</div>
 							<div id="playground">
 								<!-- Include the Home Draw Module  -->

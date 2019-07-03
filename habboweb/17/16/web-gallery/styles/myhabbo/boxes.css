@@ -8,7 +8,8 @@
 }
 
 .box-content {
-
+	height: 14px;
+	padding-left: 3px;
 }
 
 /*** DARK BLUE ***/
@@ -31,10 +32,33 @@
 .box.dark-blue .box-content {
 	background: url(../../images/myhabbo/boxes/dark-blue-br.gif) no-repeat bottom right;
 	padding-bottom: 3px;
+	padding-right: 5px;
+}
+
+/*** BLUE (V14) ***/
+
+.box.blue .box-header {
+	background: url(../../images/myhabbo/boxes/blue-tl.gif) no-repeat top left;
+	padding-left: 3px;
+}
+
+.box.blue .box-header div {
+	background: url(../../images/myhabbo/boxes/blue-tr.gif) no-repeat top right;
+	height: 3px;
+}
+
+.box.blue .box-body {
+	background: url(../../images/myhabbo/boxes/blue-bl.gif) no-repeat bottom left;
+	padding-left: 3px;
+}
+
+.box.blue .box-content {
+	background: url(../../images/myhabbo/boxes/blue-br.gif) no-repeat bottom right;
+	padding-bottom: 3px;
 	padding-right: 3px;
 }
 
-/*** DARK ***/
+/*** DARK (V13) ***/
 
 .box.dark .box-header {
 	background: url(../../images/myhabbo/boxes/dark-tl.gif) no-repeat top left;
@@ -54,8 +78,9 @@
 .box.dark .box-content {
 	background: url(../../images/myhabbo/boxes/dark-br.gif) no-repeat bottom right;
 	padding-bottom: 3px;
-	padding-right: 3px;
+	padding-right: 5px;
 }
+
 
 #edit-button-wrapper .box-content {
 	height: 18px;

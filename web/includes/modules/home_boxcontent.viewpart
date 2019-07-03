@@ -15,9 +15,11 @@ echo '<span id="header-bar-text">Habbo Home: '.$this->homeObject->get_habboObjec
 
 if($this->habbo->get_isHabboLoggedIn()){
 	if($this->homeObject->get_habboObject()->get_habboId() == $this->habbo->get_habboId()){
-		if($this->homeObject->get_homeStatus() == 'view'){ echo '<a href="'.$this->hotel->get_HotelUrl().'/home/'.$this->homeObject->get_habboObject()->get_habboName().'?do=edit" id="editing-button" class="toolbutton edit"><span class="lang-home-button-edit">Editar</span></a>'; }
-		echo '<a href="'.$this->hotel->get_hotelUrl().'/community/mgm_sendlink_invite?sendLink=/home/'.$this->homeObject->get_habboObject()->get_habboName().'" id="tell-button" class="toolbutton tell"><span class="lang-home-button-tell">Convidar um amigo</span></a>';
-		echo '<a href="./" id="export-button" class="toolbutton avatar-export"><span class="lang-home-button-export">Exportar o seu avatar</span></a>';
+		if($this->homeObject->get_pageStatus() == 'view'){
+			echo '<a href="'.$this->hotel->get_HotelUrl().'/home/'.$this->homeObject->get_habboObject()->get_habboName().'?do=edit" id="editing-button" class="toolbutton edit"><span class="lang-home-button-edit">Editar</span></a>'; 
+			echo '<a href="'.$this->hotel->get_hotelUrl().'/community/mgm_sendlink_invite?sendLink=/home/'.$this->homeObject->get_habboObject()->get_habboName().'" id="tell-button" class="toolbutton tell"><span class="lang-home-button-tell">Convidar um amigo</span></a>';
+			echo '<a href="./" id="export-button" class="toolbutton avatar-export"><span class="lang-home-button-export">Exportar o seu avatar</span></a>';
+		}
 	}else{
 		echo '<a href="#" id="reporting-button" class="toolbutton reporting-start" style="display: none;"><span class="lang-home-button-reportStart">Show Report Buttons</span></a>';
 		echo '<a href="#" id="stop-reporting-button" class="toolbutton reporting-stop" style="display: none;"><span class="lang-home-button-reportStop">Hide Report Buttons</span></a>';	

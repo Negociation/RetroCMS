@@ -27,7 +27,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 					  <td valign="top" style="width: 202px; padding-top: 3px;" class="habboPage-col">
 						 <div class="portlet-scale gold">
 							<div class="portlet-scale-header">
-							   <h3>Últimas Notícias</h3>
+							   <h3><span class="lang-article-browseTitle">Últimas Notícias</span></h3>
 							</div>
 							<div class="portlet-scale-body">
 							   <div class="portlet-scale-content">
@@ -39,7 +39,7 @@ require_once('./web/includes/modules/headers/default.viewpart');
 
 		
 									 </ul>
-									 <div class="promo-button"><a href="<?php echo $this->hotel->get_HotelUrl().'/news'; ?>">mais notícias</a></div>
+									 <div class="promo-button"><a href="<?php echo $this->hotel->get_HotelUrl().'/news'; ?>"><span class="lang-newsbox-footer">mais notícias</span></a></div>
 								  </div>
 								  <div class="clear"></div>
 							   </div>

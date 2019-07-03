@@ -27,6 +27,8 @@ class Hotel{
 	protected $hotelAdvertisement;
 	protected $hotelLanguage;
 	protected $hotelWindows;
+	protected $hotelPurchaseFeatures = [];
+	protected $hotelCredits = [];
 	
 	public function __construct(){
 		
@@ -50,6 +52,7 @@ class Hotel{
 		$this->hotelClient = $hotelClient;
 		$this->hotelCustom = $hotelCustom;
 		$this->hotelStatus = true;
+		$this->hotelPurchaseFeatures = array(false,false,false);
 		
 	}
 	
@@ -126,9 +129,25 @@ class Hotel{
 		return $this->hotelAdvertisement;
 	}
 	
-
 	public function get_HotelLanguage(){
 		return $this->hotelLanguage;	
+	}
+
+	public function get_HotelPurchaseFeatures($feature){
+		switch($feature){
+			case 'groupPurchase':
+				return $this->hotelPurchaseFeatures[0];
+				break;
+			case  'clubPurchase':
+				return $this->hotelPurchaseFeatures[0];
+				break;
+			case 'creditsRedeem':
+				return $this->hotelPurchaseFeatures[0];
+				break;
+			case 'all':
+				return $this->hotelPurchaseFeatures;
+				break;
+		}
 	}
 	
 	/** SETS **/
@@ -160,7 +179,6 @@ class Hotel{
 	function set_HotelVersion($version){
 		$this->hotelVersion = $version;
 	}
-
 
 	function set_HotelWeb($web){
 		 $this->hotelWeb = $web;

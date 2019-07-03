@@ -26,7 +26,6 @@
 
 		<script language='JavaScript' type='text/javascript'>
 			window.onload = function(){ 
-				advertisementLoad(); 
 				loadCurrentLanguage(); 
 			}
 		</script>

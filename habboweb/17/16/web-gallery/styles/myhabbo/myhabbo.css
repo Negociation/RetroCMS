@@ -19,15 +19,12 @@
 
 #mypage-bg {
     position: relative;
-    padding: 0 3px;
+    padding-right: 1px;
 }
-
-
 
 #playground {
 	position: relative;
 }
-
 
 body#editmode #playground-outer {
 	border: 1px dotted white;
@@ -39,7 +36,7 @@ body#editmode #playground {
 
 #mypage-ad {
 	position: absolute;
-	top: 5px;
+	top: 0;
 	right: 3px;
     z-index: 10000;
 }
@@ -48,28 +45,18 @@ body#editmode #playground {
 	color: white;
 	font-weight: bold;
 	font-size: 12px;
-	margin: 0px 3px;
+	margin: 0 3px;
 }
 
 #header-bar .box-content {
-    height: 17px;
-    padding-bottom: 10px;
+	height: 14px;	
+	padding-bottom: 13px;
 }
 
 #header-bar-text {
 	float: left;
-	height: 15px;
-	padding: 5px 15px 0 15px; 
-
- 
+	padding: 5px 10px 0 10px;
 }
-#header-bar-text2 {
-
-
-
- 
-}
-
 
 #header-bar-warning {
 	float: left;

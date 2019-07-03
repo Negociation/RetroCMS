@@ -26,11 +26,9 @@
 		
 		<script language='JavaScript' type='text/javascript'>
 			window.onload = function(){ 
-				advertisementLoad(); 
 				loadCurrentLanguage(); 
 			}
-		</script>
-		
+		</script>		
 	</head>
 	<body>
 		<div id="overlay"></div>

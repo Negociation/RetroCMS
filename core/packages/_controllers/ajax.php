@@ -55,7 +55,9 @@ class Ajax extends ControllerTemplate{
 	protected function languageResult(){
 		if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			if($this->habbo->get_isHabboLoggedIn()){
-				$this->habboModel->setColumnById('users','user_language',$this->habbo->get_HabboId(),$_POST["userLang"]);
+				if($_POST["userLang"] != 'null'){
+					$this->habboModel->setColumnById('users','user_language',$this->habbo->get_HabboId(),$_POST["userLang"]);
+				}
 			}
 			include './web/includes/extensions/languageManager/ajax/languageResult.ajax';
 			exit;
