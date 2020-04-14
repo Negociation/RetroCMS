@@ -1,0 +1,13 @@
+{
+    "name": "RetroCMS",
+    "description": "A completly CMS from 2007 Habbo Ages with a lot o features and retrocompatibility between v13-v17...",
+    "authors": [
+        {
+            "name": "Negociation",
+            "email": "tiagitofranca04@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    }
+}
