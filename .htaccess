@@ -1,3 +1,16 @@
+#//////////////////////////////////////////////////////////////
+#//						  RetroCMS							//
+#//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+#//----------------------------------------------------------//
+#// Developed by: Marcos [ aka: m.tiago ]					//
+#// Development Thread: goo.gl/nwzdZo						//
+#//////////////////////////////////////////////////////////////
+#// Beta Version 0.9.5.110 ( Aquamarine ) 				    //
+#// Branch: Public (Unstable)								//
+#// Compatibility Version(s): [r14,r15,r16,r17]				//
+#//////////////////////////////////////////////////////////////
+
+#Rewrite Rules
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	Options -Indexes
@@ -9,6 +22,8 @@
 	RewriteRule ^(.*)$ index.php?origin=$1 [QSA,L]
 </IfModule>
 
+
+#Deny Access to certain file extensions
 <filesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|view|txt)$">
 	Order Allow,Deny
 	Deny from all

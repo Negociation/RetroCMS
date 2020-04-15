@@ -11,22 +11,6 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-//UTF-8(Portuguese and Spanish Accents for PHP)
-header("Content-Type: text/html; charset=utf-8",true);
-
-
-//Vendor Autoload (Only if using Composer)
-require_once 'vendor/autoload.php';
-
-
-// + Call the Configuration File Once
-require_once('./application/core.php');
-
-
-// + Start Session "habboWebsite"
-// - Desc: Sessions for Website
-session_start();	
-
 
 
 ?>
