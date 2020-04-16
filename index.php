@@ -12,12 +12,10 @@
 //////////////////////////////////////////////////////////////
 
 //UTF-8(Portuguese and Spanish Accents for PHP)
-header("Content-Type: text/html; charset=utf-8",true);
+header("Content-Type: text/html; charset=utf-8",true);	
 
 // + Call the Configuration File Once
 require_once('./application/core.php');
 
-// + Start Session "habboWebsite"
-// - Desc: Sessions for Website
-session_start();	
+
 ?>
