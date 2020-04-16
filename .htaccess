@@ -19,10 +19,9 @@
 	RewriteCond %{REQUEST_URI} !-d
 	RewriteCond %{REQUEST_URI} !-f
 	RewriteRule ^c_images/(.*)$ /web/c_images/$1 [NC,L]
+	RewriteRule ^habboweb/(.*)$ /web/habboweb/$1 [NC,L]
 	RewriteCond %{REQUEST_URI} !\.(?:css|js|jpeg|gif|png)$ [NC]
-	RewriteRule ^web/(.*) /index.php [R=403,NC,L]
 	RewriteRule ^(.*)$ index.php?origin=$1 [QSA,L]
-
 </IfModule>
 
 
@@ -31,3 +30,5 @@
 	Order Allow,Deny
 	Deny from all
 </filesMatch>
+
+
