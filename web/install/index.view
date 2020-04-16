@@ -1,0 +1,66 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.5.110 ( Aquamarine ) 				    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+?>
+
+<html>
+	<head>
+		<title> RetroCMS ~ Not ready yet</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" type="text/css" href="<?php 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/css/style.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h1><a href="#"><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/logos/retrocms_logo_nourl.gif" alt="Retro" width="113" height="41" border="0"/></a></h1>
+			</div>
+			<div id="content">
+					<div id="writecontent">
+						<div align="center">
+							<div id="error" align="left" vspace="2000" style="width: 620px;">
+								<h3><p><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/tools.gif"> <font color="#c00">Check your configuration before proceed with RetroCMS Install:</font></p></h3>
+								<br>
+								<table>
+									<tr>
+										<td><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/<?php echo System\Install::result(1)[0] ? 'yes' : 'no' ?>.gif" alt="Status"></td>
+										<td><div style="margin-left: 0px;padding-top: 5px;padding-left: 5px;padding-bottom: 5px;"><h6><b>PHP version 7.0 or higher</b></h6></div></td>
+									</tr>
+									<tr>
+										<td><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/<?php echo System\Install::result(1)[1] ? 'yes' : 'no' ?>.gif" alt="Status"></td>
+										<td><div style="margin-left: 0px;padding-top: 5px;padding-left: 5px;padding-bottom: 5px;"><h6><b>Settings file configuration integrity</b></h6></div></td>
+									</tr>
+									<tr>
+										<td><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/<?php echo System\Install::result(1)[2] ? 'yes' : 'no' ?>.gif" alt="Status"></td>
+										<td><div style="margin-left: 0px;padding-top: 5px;padding-left: 5px;padding-bottom: 5px;"><h6><b>Libsodium library installed and loaded</b></h6></div></td>
+									</tr>
+									<tr>
+										<td><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/<?php echo System\Install::result(1)[3] ? 'yes' : 'no' ?>.gif" alt="Status"></td>
+										<td><div style="margin-left: 0px;padding-top: 5px;padding-left: 5px;padding-bottom: 5px;"><h6><b>Composer Autoload executed</b></h6></div></td>
+									</tr>
+									<tr>
+										<td><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME']; ?>/web/install/images/<?php echo !is_array(System\Install::result(1)[4]) ? 'yes' : 'no' ?>.gif"></td>
+										<td><div style="margin-left: 0px;padding-top: 5px;padding-left: 5px;padding-bottom: 5px;"><h6><b>MySQL Conection Status ~ </b> <?php echo is_array(System\Install::result(1)[4]) ? System\Install::result(1)[4][1] : '' ?></h6></div></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			<div id="sidebar"> </div>
+			
+			<div id="footer"><div id="footer-content"><p>© 2009-2020 RetroCMS ~ The Oldschool era is Back!!! <br> Powered by m.tiago from Ragezone</p></div> 
+		</div>
+	</body>
+</html>

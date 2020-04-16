@@ -21,18 +21,20 @@ ini_set('max_execution_time', 300);
 // - Desc: Preveting XSS Atacks
 ini_set('session.cookie_httponly', 1);
 
-// + Import Install Diagnosis Class
+
+// + Import Install Diagnosis Class 
+// - Desc: Basic Class nedded without Autoload support
 require(__DIR__."/appcore/_system/installDiag.php");
 
 
-// + Include Autoload for other Classes
-// - Desc: Check if Autoload file exists then include it
-if(System\Install::result()){
+// + Validate System Integrity 
+// - Desc: Check if Autoload file exists, all minimum requirements as PHP Version its valid...
+if(System\Install::result(0)){
 	require_once(__DIR__."/install/vendor/autoload.php");
 	//$lala = new Controller\Index();
 	exit;
 }else{
-	echo 'Waiting Composer Setup or Install of Libraries';
+	include './web/install/index.view';
 	exit;
 }
 

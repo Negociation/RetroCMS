@@ -44,7 +44,6 @@ final class Install{
 		
 		//TEST PDO CONECTION
 		try{
-			
 			//Recieve MySQL/MariaDB Conection
 			self::$hotelConection = new PDO('mysql:host=' . self::$hotelData['database']['host'] . ';dbname=' . self::$hotelData['database']['name'], self::$hotelData['database']['user'], self::$hotelData['database']['password']);
 			self::$testsStatus[4]= true;
@@ -61,10 +60,15 @@ final class Install{
 	}
 	
 	
-	public static function result(){
+	public static function result($type){
 		self::start();
-		echo (self::$resultStatus) ? 'true':'false';
-		return  self::$resultStatus;
+		if($type){
+			return self::$testsStatus;
+			exit;
+		}else{
+			return self::$resultStatus;
+			exit;
+		}
 	}
 
 
