@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e340ab2de9fe56679877bfc24bedeaf4",
+    "content-hash": "e017daa05f3784f7fe871021df1c587d",
     "packages": [
         {
             "name": "ewout/retrorcon",
@@ -141,7 +141,7 @@
         "php": ">=7.2.0",
         "ext-pdo_mysql": "^7.2",
         "ext-pdo": "^7.2",
-        "ext-sodium": "^7.2"
+        "ext-sodium": "^7.4"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"

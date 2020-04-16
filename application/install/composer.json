@@ -11,13 +11,16 @@
         "php": ">=7.2.0",
 		"ext-pdo_mysql": "^7.2",
         "ext-PDO": "^7.2",
-        "ext-sodium": "^7.2",
-		"ewout/retrorcon": "^1.0"
+		"ewout/retrorcon": "^1.0",
+        "ext-sodium": "^7.4"
     },
 	"autoload": {
 		"psr-4": {
+			"Model\\": "../appcore/_models/",
+			"View\\": "../appcore/_views/",
 			"Controller\\": "../appcore/_controllers/",
-			"Template\\": "../appcore/_templates/"
+			"Template\\": "../appcore/_templates/",
+			"System\\": "../appcore/_system/"
 		}
 	}
 }
