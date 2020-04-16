@@ -18,8 +18,11 @@
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_URI} !-d
 	RewriteCond %{REQUEST_URI} !-f
-	RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png)$ [NC]
+	RewriteRule ^c_images/(.*)$ /web/c_images/$1 [NC,L]
+	RewriteCond %{REQUEST_URI} !\.(?:css|js|jpeg|gif|png)$ [NC]
+	RewriteRule ^web/(.*) /index.php [R=403,NC,L]
 	RewriteRule ^(.*)$ index.php?origin=$1 [QSA,L]
+
 </IfModule>
 
 
