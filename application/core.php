@@ -24,12 +24,12 @@ ini_set('session.cookie_httponly', 1);
 
 // + Import Install Diagnosis Class 
 // - Desc: Basic Class nedded without Autoload support
-require(__DIR__."/appcore/_system/installDiag.php");
+require(__DIR__."/install/retrosys/classes/installDiag.php");
 
 
 // + Validate System Integrity 
 // - Desc: Check if Autoload file exists, all minimum requirements as PHP Version its valid...
-if(System\Install::result(0)){
+if(InstallDiag::result(0)){
 	require_once(__DIR__."/install/vendor/autoload.php");
 	//$lala = new Controller\Index();
 	exit;
