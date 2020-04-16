@@ -24,7 +24,7 @@
 
 
 #Deny Access to certain file extensions
-<filesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|view|txt)$">
+<filesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|view|txt|json)$">
 	Order Allow,Deny
 	Deny from all
 </filesMatch>

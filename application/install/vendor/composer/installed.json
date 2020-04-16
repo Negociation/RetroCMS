@@ -1,0 +1,132 @@
+[
+    {
+        "name": "ewout/retrorcon",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/emansom/retrorcon-php.git",
+            "reference": "c5aeb5735437cabd70af2f3085395febe9c5f294"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/emansom/retrorcon-php/zipball/c5aeb5735437cabd70af2f3085395febe9c5f294",
+            "reference": "c5aeb5735437cabd70af2f3085395febe9c5f294",
+            "shasum": ""
+        },
+        "require": {
+            "google/protobuf": "^3.6.0.1",
+            "grpc/grpc": "^v1.12.0"
+        },
+        "time": "2018-06-17T13:33:32+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "RetroRCON\\": [
+                    "dist/php/RetroRCON/",
+                    "dist/grpc/RetroRCON/",
+                    "src/"
+                ],
+                "GPBMetadata\\Protos\\": "dist/php/GPBMetadata/Protos/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "AGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Ewout van Mansom",
+                "email": "ewout@freedom.nl"
+            }
+        ],
+        "description": "A PHP library to communicate with emulators adhering to the RetroRCON standard"
+    },
+    {
+        "name": "google/protobuf",
+        "version": "v3.11.4",
+        "version_normalized": "3.11.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/protocolbuffers/protobuf-php.git",
+            "reference": "a5001eb559dcaac0bf6d8c7edc52b3828c618185"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/a5001eb559dcaac0bf6d8c7edc52b3828c618185",
+            "reference": "a5001eb559dcaac0bf6d8c7edc52b3828c618185",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": ">=4.8.0"
+        },
+        "suggest": {
+            "ext-bcmath": "Need to support JSON deserialization"
+        },
+        "time": "2020-02-14T22:17:05+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Google\\Protobuf\\": "src/Google/Protobuf",
+                "GPBMetadata\\Google\\Protobuf\\": "src/GPBMetadata/Google/Protobuf"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": "proto library for PHP",
+        "homepage": "https://developers.google.com/protocol-buffers/",
+        "keywords": [
+            "proto"
+        ]
+    },
+    {
+        "name": "grpc/grpc",
+        "version": "1.27.0",
+        "version_normalized": "1.27.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/grpc/grpc-php.git",
+            "reference": "a461cb1a975dde305c73168aa4494b90c3801c62"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/grpc/grpc-php/zipball/a461cb1a975dde305c73168aa4494b90c3801c62",
+            "reference": "a461cb1a975dde305c73168aa4494b90c3801c62",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "google/auth": "^v1.3.0"
+        },
+        "suggest": {
+            "ext-protobuf": "For better performance, install the protobuf C extension.",
+            "google/protobuf": "To get started using grpc quickly, install the native protobuf library."
+        },
+        "time": "2020-01-23T19:27:18+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Grpc\\": "src/lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "description": "gRPC library for PHP",
+        "homepage": "https://grpc.io",
+        "keywords": [
+            "rpc"
+        ]
+    }
+]

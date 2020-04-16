@@ -1,5 +1,5 @@
 {
-    "name": "RetroCMS",
+    "name": "retrocms/beta",
     "description": "A completly CMS from 2007 Habbo Ages with a lot o features and retrocompatibility between v13-v17...",
     "authors": [
         {
@@ -8,6 +8,15 @@
         }
     ],
     "require": {
-        "php": ">=7.2.0"
-    }
+        "php": ">=7.2.0",
+		"ext-pdo_mysql": "^7.2",
+        "ext-PDO": "^7.2",
+        "ext-sodium": "^7.2",
+		"ewout/retrorcon": "^1.0"
+    },
+	"autoload": {
+		"psr-4": {
+		
+		}
+	}
 }
