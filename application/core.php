@@ -27,9 +27,16 @@ ini_set('session.cookie_httponly', 1);
 
 if(stream_resolve_include_path(__DIR__."/install/vendor/autoload.php")){
 	require_once(__DIR__."/install/vendor/autoload.php");
+
+
 }else{
 	echo 'Waiting Composer Setup';
+
 }
+
+	$lala = new Controller\Index();
+
+
 
 
 ?>

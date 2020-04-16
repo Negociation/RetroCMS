@@ -6,9 +6,11 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Template\\' => array($baseDir . '/../appcore/_templates'),
     'RetroRCON\\' => array($vendorDir . '/ewout/retrorcon/dist/php/RetroRCON', $vendorDir . '/ewout/retrorcon/dist/grpc/RetroRCON', $vendorDir . '/ewout/retrorcon/src'),
     'Grpc\\' => array($vendorDir . '/grpc/grpc/src/lib'),
     'Google\\Protobuf\\' => array($vendorDir . '/google/protobuf/src/Google/Protobuf'),
     'GPBMetadata\\Protos\\' => array($vendorDir . '/ewout/retrorcon/dist/php/GPBMetadata/Protos'),
     'GPBMetadata\\Google\\Protobuf\\' => array($vendorDir . '/google/protobuf/src/GPBMetadata/Google/Protobuf'),
+    'Controller\\' => array($baseDir . '/../appcore/_controllers'),
 );
