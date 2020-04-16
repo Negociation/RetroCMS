@@ -30,7 +30,16 @@ require(__DIR__."/install/retrosys/classes/installDiag.php");
 // + Validate System Integrity 
 // - Desc: Check if Autoload file exists, all minimum requirements as PHP Version its valid...
 if(InstallDiag::result(0)){
+	
+	//Include Autoload for Classes
 	require_once(__DIR__."/install/vendor/autoload.php");
+	
+	// + Start Session "habboWebsite"
+	// - Desc: Sessions for Website
+	session_start();
+	
+	$routeManager = new System\Router();
+	//$routeManager = new 
 	//$lala = new Controller\Index();
 	exit;
 }else{
