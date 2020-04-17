@@ -21,7 +21,7 @@ namespace Template;
 abstract class Controller{
 	
     function __construct(){
-		echo 'oi';
+		
 	}
 
 }

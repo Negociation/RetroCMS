@@ -44,25 +44,42 @@ final class Router{
 	//Handle request based on URL
 	private function handleRequest(){
 		if(is_array($this->urlParsed)){
-			$urlTarget = [$this->urlParsed[0],isset($this->urlParsed[1]) ? $this->urlParsed[1] : 'default', count($this->urlParsed) > 2 ? array_slice($this->urlParsed, 1) : null];
-			return $urlTarget;
+			
+			if($this->urlParsed[0] != 'index' && $this->urlParsed[1] != 'default'){
+				$urlTarget = [$this->urlParsed[0],isset($this->urlParsed[1]) ? $this->urlParsed[1] : 'default', count($this->urlParsed) > 2 ? array_slice($this->urlParsed, 1) : null];
+				return $urlTarget;
+			}else{
+				return ['NotFound','default',null];
+			}
 		}else{
 			return ['index','default',null];
 		}
 	}
 	
+	//Validate Request Params into existing controls and functions
+	private function validateRequest($handledRequest){
+		if(class_exists($handledRequest[0] = "Controller\\".$handledRequest[0])){
+			if(Method_Exists(new $handledRequest[0](),$handledRequest[1])){
+				$reflectionAction = new \ReflectionMethod($handledRequest[0],$handledRequest[1]); 
+				if($reflectionAction->getNumberOfParameters() == (is_array($handledRequest[2]) ? count($handledRequest[2]) : 0 )){
+					
+					//Destroying Reflection
+					unset($reflectionAction);
+					
+					return [$handledRequest[0],$handledRequest[1],$handledRequest[2]];
+				}
+			}
+		}
+		return ['NotFound','default',null];
+	}
 	
 	//Load Request Controller based on URL
 	public function loadRequest(){
 		
 		//Handle Request based on Route Rules
-		$urlTarget = $this->handleRequest();
+		$requestTarget = $this->validateRequest($this->handleRequest());
 		
-		call_user_func_array();
-
-		print_r($urlTarget);
-		
-		
+		//call_user_func_array();
 		
 	}
 	

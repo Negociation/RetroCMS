@@ -12,18 +12,24 @@
 //////////////////////////////////////////////////////////////
 
 
-// Class: ControllerTemplate
-// Desc: Default Template for Controllers
+// Class: Index Controller
+// Desc: Index Controller
 
 namespace Controller;
 
 final class Index extends \Template\Controller{
+	
+	//Construct Method
     function __construct(){
-		
+		//Call the super-class constructor
 		parent::__construct(); 
 		
-		echo 'lili';
 	}
+	
+	function default(){
+		
+	}
+
 }
 
 ?>
