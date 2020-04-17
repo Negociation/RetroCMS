@@ -16,11 +16,11 @@
     },
 	"autoload": {
 		"psr-4": {
-			"Model\\": "../appcore/_models/",
-			"View\\": "../appcore/_views/",
-			"Controller\\": "../appcore/_controllers/",
-			"Template\\": "../appcore/_templates/",
-			"System\\": "../appcore/_system/"
+			"Model\\": "../core/_models/",
+			"View\\": "../core/_views/",
+			"Controller\\": "../core/_controllers/",
+			"Template\\": "../core/_templates/",
+			"System\\": "../core/_system/"
 		}
 	}
 }

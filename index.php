@@ -15,7 +15,7 @@
 header("Content-Type: text/html; charset=utf-8",true);	
 
 // + Call the Configuration File Once
-require_once('./application/core.php');
+require_once('./app/core.php');
 
 
 ?>

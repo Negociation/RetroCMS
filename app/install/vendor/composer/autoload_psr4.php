@@ -6,14 +6,14 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'View\\' => array($baseDir . '/../appcore/_views'),
-    'Template\\' => array($baseDir . '/../appcore/_templates'),
-    'System\\' => array($baseDir . '/../appcore/_system'),
+    'View\\' => array($baseDir . '/../core/_views'),
+    'Template\\' => array($baseDir . '/../core/_templates'),
+    'System\\' => array($baseDir . '/../core/_system'),
     'RetroRCON\\' => array($vendorDir . '/ewout/retrorcon/dist/php/RetroRCON', $vendorDir . '/ewout/retrorcon/dist/grpc/RetroRCON', $vendorDir . '/ewout/retrorcon/src'),
-    'Model\\' => array($baseDir . '/../appcore/_models'),
+    'Model\\' => array($baseDir . '/../core/_models'),
     'Grpc\\' => array($vendorDir . '/grpc/grpc/src/lib'),
     'Google\\Protobuf\\' => array($vendorDir . '/google/protobuf/src/Google/Protobuf'),
     'GPBMetadata\\Protos\\' => array($vendorDir . '/ewout/retrorcon/dist/php/GPBMetadata/Protos'),
     'GPBMetadata\\Google\\Protobuf\\' => array($vendorDir . '/google/protobuf/src/GPBMetadata/Google/Protobuf'),
-    'Controller\\' => array($baseDir . '/../appcore/_controllers'),
+    'Controller\\' => array($baseDir . '/../core/_controllers'),
 );

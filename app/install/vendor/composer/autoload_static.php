@@ -43,15 +43,15 @@ class ComposerStaticInit5c11d097dca1e012790c73d8d30ae0b5
     public static $prefixDirsPsr4 = array (
         'View\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/../appcore/_views',
+            0 => __DIR__ . '/../..' . '/../core/_views',
         ),
         'Template\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/../appcore/_templates',
+            0 => __DIR__ . '/../..' . '/../core/_templates',
         ),
         'System\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/../appcore/_system',
+            0 => __DIR__ . '/../..' . '/../core/_system',
         ),
         'RetroRCON\\' => 
         array (
@@ -61,7 +61,7 @@ class ComposerStaticInit5c11d097dca1e012790c73d8d30ae0b5
         ),
         'Model\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/../appcore/_models',
+            0 => __DIR__ . '/../..' . '/../core/_models',
         ),
         'Grpc\\' => 
         array (
@@ -81,14 +81,15 @@ class ComposerStaticInit5c11d097dca1e012790c73d8d30ae0b5
         ),
         'Controller\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/../appcore/_controllers',
+            0 => __DIR__ . '/../..' . '/../core/_controllers',
         ),
     );
 
     public static $classMap = array (
-        'Controller\\Client' => __DIR__ . '/../..' . '/../appcore/_controllers/client.php',
-        'Controller\\Index' => __DIR__ . '/../..' . '/../appcore/_controllers/index.php',
-        'Controller\\NotFound' => __DIR__ . '/../..' . '/../appcore/_controllers/notfound.php',
+        'Controller\\Client' => __DIR__ . '/../..' . '/../core/_controllers/client.php',
+        'Controller\\Index' => __DIR__ . '/../..' . '/../core/_controllers/index.php',
+        'Controller\\Install' => __DIR__ . '/../..' . '/../core/_controllers/install.php',
+        'Controller\\NotFound' => __DIR__ . '/../..' . '/../core/_controllers/notfound.php',
         'GPBMetadata\\Google\\Protobuf\\Any' => __DIR__ . '/..' . '/google/protobuf/src/GPBMetadata/Google/Protobuf/Any.php',
         'GPBMetadata\\Google\\Protobuf\\Api' => __DIR__ . '/..' . '/google/protobuf/src/GPBMetadata/Google/Protobuf/Api.php',
         'GPBMetadata\\Google\\Protobuf\\Duration' => __DIR__ . '/..' . '/google/protobuf/src/GPBMetadata/Google/Protobuf/Duration.php',
@@ -238,9 +239,8 @@ class ComposerStaticInit5c11d097dca1e012790c73d8d30ae0b5
         'RetroRCON\\UserAlertRequest' => __DIR__ . '/..' . '/ewout/retrorcon/dist/php/RetroRCON/UserAlertRequest.php',
         'RetroRCON\\UserOnlineRequest' => __DIR__ . '/..' . '/ewout/retrorcon/dist/php/RetroRCON/UserOnlineRequest.php',
         'RetroRCON\\UserOnlineResponse' => __DIR__ . '/..' . '/ewout/retrorcon/dist/php/RetroRCON/UserOnlineResponse.php',
-        'System\\Install' => __DIR__ . '/../..' . '/../appcore/_system/Routes.php',
-        'System\\Router' => __DIR__ . '/../..' . '/../appcore/_system/Router.php',
-        'Template\\Controller' => __DIR__ . '/../..' . '/../appcore/_templates/controllerTemplate.php',
+        'System\\Router' => __DIR__ . '/../..' . '/../core/_system/Router.php',
+        'Template\\Controller' => __DIR__ . '/../..' . '/../core/_templates/controllerTemplate.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

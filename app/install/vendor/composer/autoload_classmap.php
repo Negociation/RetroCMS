@@ -6,9 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Controller\\Client' => $baseDir . '/../appcore/_controllers/client.php',
-    'Controller\\Index' => $baseDir . '/../appcore/_controllers/index.php',
-    'Controller\\NotFound' => $baseDir . '/../appcore/_controllers/notfound.php',
+    'Controller\\Client' => $baseDir . '/../core/_controllers/client.php',
+    'Controller\\Index' => $baseDir . '/../core/_controllers/index.php',
+    'Controller\\Install' => $baseDir . '/../core/_controllers/install.php',
+    'Controller\\NotFound' => $baseDir . '/../core/_controllers/notfound.php',
     'GPBMetadata\\Google\\Protobuf\\Any' => $vendorDir . '/google/protobuf/src/GPBMetadata/Google/Protobuf/Any.php',
     'GPBMetadata\\Google\\Protobuf\\Api' => $vendorDir . '/google/protobuf/src/GPBMetadata/Google/Protobuf/Api.php',
     'GPBMetadata\\Google\\Protobuf\\Duration' => $vendorDir . '/google/protobuf/src/GPBMetadata/Google/Protobuf/Duration.php',
@@ -158,7 +159,6 @@ return array(
     'RetroRCON\\UserAlertRequest' => $vendorDir . '/ewout/retrorcon/dist/php/RetroRCON/UserAlertRequest.php',
     'RetroRCON\\UserOnlineRequest' => $vendorDir . '/ewout/retrorcon/dist/php/RetroRCON/UserOnlineRequest.php',
     'RetroRCON\\UserOnlineResponse' => $vendorDir . '/ewout/retrorcon/dist/php/RetroRCON/UserOnlineResponse.php',
-    'System\\Install' => $baseDir . '/../appcore/_system/Routes.php',
-    'System\\Router' => $baseDir . '/../appcore/_system/Router.php',
-    'Template\\Controller' => $baseDir . '/../appcore/_templates/controllerTemplate.php',
+    'System\\Router' => $baseDir . '/../core/_system/Router.php',
+    'Template\\Controller' => $baseDir . '/../core/_templates/controllerTemplate.php',
 );

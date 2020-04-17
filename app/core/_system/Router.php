@@ -11,22 +11,19 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-
 // Class: Route Class 
 // Desc: Manage the Routes of MVC Model
 
-
 namespace System;
-
 
 final class Router{
 	
 	private static $urlRequest;
 	private static $urlParsed;
 	private static $urlRoutes = [];
+
 	//Default Construct Method
 	public static function init($hotelConnection){
-		
 		
 		//Sanatize Request
 		if(isset($_SERVER["REQUEST_URI"])){
