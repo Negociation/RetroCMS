@@ -12,12 +12,12 @@
 //////////////////////////////////////////////////////////////
 
 
-// Class: Index Controller
-// Desc: Index Controller
+// Class: 404 Controller
+// Desc: 404 Controller
 
 namespace Controller;
 
-final class Index extends \Template\Controller{
+final class NotFound extends \Template\Controller{
 	
 	//Construct Method
     function __construct(){
@@ -27,7 +27,7 @@ final class Index extends \Template\Controller{
 	}
 	
 	function default(){
-		echo 'RetroCMS ~ Home';
+		echo 'RetroCMS ~ NotFound';
 	}
 
 }

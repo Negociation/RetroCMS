@@ -45,7 +45,7 @@ final class Router{
 	private function handleRequest(){
 		if(is_array($this->urlParsed)){
 			
-			if($this->urlParsed[0] != 'index' && $this->urlParsed[1] != 'default'){
+			if($this->urlParsed[0] != 'index' && isset($this->urlParsed[1]) && $this->urlParsed[1] != 'default'){
 				$urlTarget = [$this->urlParsed[0],isset($this->urlParsed[1]) ? $this->urlParsed[1] : 'default', count($this->urlParsed) > 2 ? array_slice($this->urlParsed, 1) : null];
 				return $urlTarget;
 			}else{
@@ -70,7 +70,7 @@ final class Router{
 				}
 			}
 		}
-		return ['NotFound','default',null];
+		return ['Controller\\NotFound','default',null];
 	}
 	
 	//Load Request Controller based on URL
@@ -79,7 +79,8 @@ final class Router{
 		//Handle Request based on Route Rules
 		$requestTarget = $this->validateRequest($this->handleRequest());
 		
-		//call_user_func_array();
+		//Call Controller Handler
+		call_user_func_array([new $requestTarget[0](),$requestTarget[1]],is_array($requestTarget[1]) ? $requestTarget[1] : [] );
 		
 	}
 	
