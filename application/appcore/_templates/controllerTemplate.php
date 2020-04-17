@@ -28,6 +28,9 @@ class Controller{
 	
     function __construct(){
 
+		//Default Page Title
+		$this->pageTitle = 'Habbo';
+		
 		//Set_Deafult Body Id
 		$this->bodyId = 'home';
 		
