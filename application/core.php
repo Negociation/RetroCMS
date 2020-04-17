@@ -38,9 +38,8 @@ if(InstallDiag::result(0)){
 	// - Desc: Sessions for Website
 	session_start();
 	
-	$routeManager = new System\Router();
-	//$routeManager = new 
-	//$lala = new Controller\Index();
+	System\Router::init(InstallDiag::daoConnection());
+
 	exit;
 }else{
 	include './web/install/index.view';

@@ -12,12 +12,12 @@
 //////////////////////////////////////////////////////////////
 
 
-// Class: NotFound
-// Desc: 404 Controller 
+// Class: Client
+// Desc: Hotel Client Class
 
 namespace Controller;
 
-final class NotFound extends \Template\Controller{
+final class Client extends \Template\Controller{
 	
 	//Construct Method
     function __construct(){
@@ -27,7 +27,7 @@ final class NotFound extends \Template\Controller{
 	}
 	
 	function default(){
-		echo 'RetroCMS ~ NotFound';
+		echo 'RetroCMS ~ Client';
 	}
 
 }

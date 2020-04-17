@@ -21,32 +21,33 @@ namespace System;
 
 final class Router{
 	
-	private $urlRequest;
-	private $urlParsed;
-	private $urlRoutes = [];
+	private static $urlRequest;
+	private static $urlParsed;
+	private static $urlRoutes = [];
 	//Default Construct Method
-	public function __construct(){
+	public static function init($hotelConnection){
+		
 		
 		//Sanatize Request
 		if(isset($_SERVER["REQUEST_URI"])){
 			
 			//Sanatize Request String
-			$this->urlRequest = strtok(strtolower(trim( substr(substr($_SERVER["REQUEST_URI"],-1) == '/' ?  substr($_SERVER["REQUEST_URI"],0,-1) : $_SERVER["REQUEST_URI"],1))), '?');	
+			self::$urlRequest = strtok(strtolower(trim( substr(substr($_SERVER["REQUEST_URI"],-1) == '/' ?  substr($_SERVER["REQUEST_URI"],0,-1) : $_SERVER["REQUEST_URI"],1))), '?');	
 
 			//Split String into Array
-			$this->urlParsed = (!empty($this->urlRequest))? explode("/",filter_var(rtrim($this->urlRequest), FILTER_SANITIZE_URL)) : $this->urlRequest;
+			self::$urlParsed = (!empty(self::$urlRequest))? explode("/",filter_var(rtrim(self::$urlRequest), FILTER_SANITIZE_URL)) : self::$urlRequest;
 		}
 		
 		//Load URL
-			$this->loadRequest();
+			self::loadRequest($hotelConnection);
 	}
 	
 	//Handle request based on URL
-	private function handleRequest(){
-		if(is_array($this->urlParsed)){
+	private static function handleRequest(){
+		if(is_array(self::$urlParsed)){
 			
-			if($this->urlParsed[0] != 'index' && isset($this->urlParsed[1]) && $this->urlParsed[1] != 'default'){
-				$urlTarget = [$this->urlParsed[0],isset($this->urlParsed[1]) ? $this->urlParsed[1] : 'default', count($this->urlParsed) > 2 ? array_slice($this->urlParsed, 1) : null];
+			if(self::$urlParsed[0] != 'index'){
+				$urlTarget = [  (isset(self::$urlParsed[1]) && self::$urlParsed[1] == 'default' ?  'NotFound' : self::$urlParsed[0]),isset(self::$urlParsed[1]) ? self::$urlParsed[1] : 'default', count(self::$urlParsed) > 2 ? array_slice(self::$urlParsed, 1) : null];
 				return $urlTarget;
 			}else{
 				return ['NotFound','default',null];
@@ -57,7 +58,7 @@ final class Router{
 	}
 	
 	//Validate Request Params into existing controls and functions
-	private function validateRequest($handledRequest){
+	private static function validateRequest($handledRequest){
 		if(class_exists($handledRequest[0] = "Controller\\".$handledRequest[0])){
 			if(Method_Exists(new $handledRequest[0](),$handledRequest[1])){
 				$reflectionAction = new \ReflectionMethod($handledRequest[0],$handledRequest[1]); 
@@ -74,13 +75,13 @@ final class Router{
 	}
 	
 	//Load Request Controller based on URL
-	public function loadRequest(){
-		
+	private static function loadRequest($hotelConnection){
+	
 		//Handle Request based on Route Rules
-		$requestTarget = $this->validateRequest($this->handleRequest());
-		
+		$requestTarget = self::validateRequest(self::handleRequest());
+				
 		//Call Controller Handler
-		call_user_func_array([new $requestTarget[0](),$requestTarget[1]],is_array($requestTarget[1]) ? $requestTarget[1] : [] );
+		call_user_func_array([new $requestTarget[0]($hotelConnection),$requestTarget[1]],is_array($requestTarget[1]) ? $requestTarget[1] : [] );
 		
 	}
 	

@@ -86,6 +86,7 @@ class ComposerStaticInit5c11d097dca1e012790c73d8d30ae0b5
     );
 
     public static $classMap = array (
+        'Controller\\Client' => __DIR__ . '/../..' . '/../appcore/_controllers/client.php',
         'Controller\\Index' => __DIR__ . '/../..' . '/../appcore/_controllers/index.php',
         'Controller\\NotFound' => __DIR__ . '/../..' . '/../appcore/_controllers/notfound.php',
         'GPBMetadata\\Google\\Protobuf\\Any' => __DIR__ . '/..' . '/google/protobuf/src/GPBMetadata/Google/Protobuf/Any.php',

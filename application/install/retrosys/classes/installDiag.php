@@ -54,7 +54,6 @@ final class InstallDiag{
 		}
 	}
 	
-	
 	public static function result($type){
 		// START TESTS ROUTINE
 		self::start();
@@ -68,6 +67,10 @@ final class InstallDiag{
 			exit;
 		}
 	}
+	
+		public static function daoConnection(){
+			return self::$hotelConection;
+		}
 
 
 }

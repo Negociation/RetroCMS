@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Controller\\Client' => $baseDir . '/../appcore/_controllers/client.php',
     'Controller\\Index' => $baseDir . '/../appcore/_controllers/index.php',
     'Controller\\NotFound' => $baseDir . '/../appcore/_controllers/notfound.php',
     'GPBMetadata\\Google\\Protobuf\\Any' => $vendorDir . '/google/protobuf/src/GPBMetadata/Google/Protobuf/Any.php',
