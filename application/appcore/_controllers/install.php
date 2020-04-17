@@ -12,22 +12,22 @@
 //////////////////////////////////////////////////////////////
 
 
-// Class: Index Controller
-// Desc: Index Controller
+// Class: Install
+// Desc: Hotel Install Controller
 
 namespace Controller;
 
-final class Index extends \Template\Controller{
+final class Install extends \Template\Controller{
 	
 	//Construct Method
-    function __construct($hotelConection){
+    function __construct(){
 		//Call the super-class constructor
 		parent::__construct(); 
 		
 	}
 	
 	function default(){
-		echo 'RetroCMS ~ Home';
+		echo 'RetroCMS ~ Install';
 	}
 
 }

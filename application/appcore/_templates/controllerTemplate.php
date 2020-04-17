@@ -18,12 +18,41 @@
 
 namespace Template;
 
-abstract class Controller{
+class Controller{
+	
+	protected $pageTitle;
+	protected $habbo;
+	protected $habboModel;		
+	protected $hotel;
+	protected $hotelModel;
 	
     function __construct(){
+
+		//Set_Deafult Body Id
+		$this->bodyId = 'home';
+		
+		//Intercept MVC Requests based on some conditions (Version | Rank | Hotel Status)
+		$this->requestIntercept();
 		
 	}
 
+	private function requestIntercept(){
+		
+		//if($this->hotel->get_HotelInstall()){
+		if(true){
+			if(get_class($this) != 'Controller\Install'){
+				
+			}else{
+				header('Location: '.$this->hotel->get_HotelUrl());
+			}
+		}else{
+			if(get_class($this) != 'Controller\Install'){	
+				header('Location: '.$this->hotel->get_HotelUrl().'/install/start');
+			}else{
+				call_user_func_array([new $this($this->hotelConection),$request->get_DecodeAction()],$request->get_DecodeParams());
+			}
+		}
+	}
 }
 
 ?>

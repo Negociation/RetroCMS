@@ -58,9 +58,9 @@ final class Router{
 	}
 	
 	//Validate Request Params into existing controls and functions
-	private static function validateRequest($handledRequest){
+	private static function validateRequest($handledRequest,$hotelConnection){
 		if(class_exists($handledRequest[0] = "Controller\\".$handledRequest[0])){
-			if(Method_Exists(new $handledRequest[0](),$handledRequest[1])){
+			if(Method_Exists(new $handledRequest[0]($hotelConnection),$handledRequest[1])){
 				$reflectionAction = new \ReflectionMethod($handledRequest[0],$handledRequest[1]); 
 				if($reflectionAction->getNumberOfParameters() == (is_array($handledRequest[2]) ? count($handledRequest[2]) : 0 )){
 					
@@ -78,7 +78,7 @@ final class Router{
 	private static function loadRequest($hotelConnection){
 	
 		//Handle Request based on Route Rules
-		$requestTarget = self::validateRequest(self::handleRequest());
+		$requestTarget = self::validateRequest(self::handleRequest(),$hotelConnection);
 				
 		//Call Controller Handler
 		call_user_func_array([new $requestTarget[0]($hotelConnection),$requestTarget[1]],is_array($requestTarget[1]) ? $requestTarget[1] : [] );
