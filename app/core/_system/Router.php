@@ -46,7 +46,8 @@ final class Router{
 			
 			if($resolvedUrl = $this->isDefined($this->urlParsed)){
 				return $resolvedUrl;
-			}else if($this->urlParsed[0] != 'index'){
+			}else if($this->urlParsed[0] != 'index' && !$this->inUse()){
+			
 				$urlTarget = [  (isset($this->urlParsed[1]) && $this->urlParsed[1] == 'default' ?  'NotFound' : $this->urlParsed[0]),isset($this->urlParsed[1]) ? $this->urlParsed[1] : 'default', count($this->urlParsed) > 2 ? array_slice($this->urlParsed, 1) : null];
 				return $urlTarget;
 			}else{
@@ -89,6 +90,18 @@ final class Router{
 	public function add($urlTarget,$controllerTarget){
 		array_push($this->urlRoutes,['url'=>$urlTarget,'config'=>$controllerTarget,]);
 	}
+	
+	//Verify if a url is setted 
+	private function inUse(){
+		$inUse = false;
+		foreach($this->urlRoutes as $route){
+			if($this->urlRequest == ($route['config']['action'].'/'.$route['config']['action'])){
+				$inUse = true;
+			}
+		}
+		return $inUse;
+	}
+	
 	
 	//Validate Route if Exists
 	public function isDefined($urlParsed){
@@ -133,9 +146,9 @@ final class Router{
 				}
 			}
 		}
-		print_r($foundRoute);
 		return $foundRoute;
 	}
+	
 	
 	
 	

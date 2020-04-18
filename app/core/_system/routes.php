@@ -28,7 +28,6 @@ $routerManager->add(
     ]
 );
 
-
 // Define a route
 $routerManager->add(
     '/home/$1/',
@@ -38,7 +37,23 @@ $routerManager->add(
     ]
 );
 
+// Define a route
+$routerManager->add(
+    '/groups/$1/',
+    [
+        'controller' => 'groups',
+        'action'     => 'loadByName',
+    ]
+);
 
+// Define a route
+$routerManager->add(
+    '/groups/$1/id',
+    [
+        'controller' => 'groups',
+        'action'     => 'loadById',
+    ]
+);
 
 
 //Start Router Validation
