@@ -15,15 +15,33 @@
 // Desc: Create Custom Routes for RetroCMS Controllers, if not setted a route will use the default [ REQUEST_URI/Controller_Name/View_Function/Params ]
 
 	
-//Router Manager
-$routerManager = new System\Router(InstallDiag::daoConnection());
+//Router Manager Declaration
+$routerManager = new System\Router();
 	
+
 // Define a route
 $routerManager->add(
-    '/admin/users/my-profile',
+    '/home/$1/id/',
     [
-        'controller' => 'users',
-        'action'     => 'profile',
+        'controller' => 'home',
+        'action'     => 'loadById',
     ]
 );
+
+
+// Define a route
+$routerManager->add(
+    '/home/$1/',
+    [
+        'controller' => 'home',
+        'action'     => 'loadByName',
+    ]
+);
+
+
+
+
+//Start Router Validation
+$routerManager->init(InstallDiag::daoConnection());
+
 ?>

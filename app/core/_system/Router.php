@@ -23,7 +23,7 @@ final class Router{
 	private $urlRoutes = [];
 	
 	//Default Construct Method
-	public function __construct($hotelConnection){	
+	public function init($hotelConnection){	
 		
 		//Sanatize Request
 		if(isset($_SERVER["REQUEST_URI"])){
@@ -38,7 +38,6 @@ final class Router{
 		//Load URL
 			$this->loadRequest($hotelConnection);
 	}
-	
 	
 	//Handle request based on URL
 	private function handleRequest(){
@@ -87,25 +86,56 @@ final class Router{
 	}
 	
 	//Add all Custom Routes 
-	public function add($route){
-		array_push($this->urlRoutes,$route);
+	public function add($urlTarget,$controllerTarget){
+		array_push($this->urlRoutes,['url'=>$urlTarget,'config'=>$controllerTarget,]);
 	}
 	
 	//Validate Route if Exists
 	public function isDefined($urlParsed){
-
-		//TODO: Add validator for Route Objects
+	
+		$foundRoute = false;
 		
-		//If find a valid Route send it resolved 
-		if(1 == 2){
-			return array('NotFound','default',null);			
-		}else{
-			return false;
+		foreach($this->urlRoutes as $route){
+			$testRoute = explode("/",filter_var(rtrim(strtok(strtolower(trim( substr(substr($route['url'],-1) == '/' ?  substr($route['url'],0,-1) : $route['url'],1))), '?')), FILTER_SANITIZE_URL));
+			
+			if(is_array($testRoute) && (count($testRoute) == count($urlParsed))){
+				if($urlParsed[0] == $testRoute[0]){
+					if(isset($urlParsed[1])){	
+						
+						if($urlParsed[1] == $testRoute[1] || $testRoute[1]  == '$1'){
+
+							if(isset($urlParsed[2])){
+								$switch = false;
+								if($testRoute[1] == '$1' && substr($testRoute[2],0,1)  != '$' && $testRoute[2] == $urlParsed[2]){
+									$switch = $urlParsed[1];
+									$urlParsed[1] = $urlParsed[2];
+									$urlParsed[2] = $switch;		
+								}
+								
+								$isEverythingParams = true;
+
+								foreach(array_slice($testRoute, ($switch ? 3 : 2)) as $params){
+									if(substr($params,0,1) != '$' || !is_numeric(intval(substr($params,1)))){
+										$isEverythingParams = false;
+									}
+								}								
+							
+								if($isEverythingParams){
+									$foundRoute = array($route['config']['controller'],$route['config']['action'],array_slice($urlParsed,2));
+								}		
+							}else{
+								$foundRoute = array($route['config']['controller'],$route['config']['action'],$testRoute[1]  == '$1' ? $urlParsed[1] : null);
+							}
+						}			
+					}else{
+						$foundRoute = array($route['config']['controller'],$route['config']['action'],null);
+					}
+				}
+			}
 		}
+		print_r($foundRoute);
+		return $foundRoute;
 	}
-	
-	
-	
 	
 	
 	
