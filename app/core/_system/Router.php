@@ -41,16 +41,11 @@ final class Router{
 	
 	//Handle request based on URL
 	private function handleRequest(){
-			
 		if(is_array($this->urlParsed)){
-			
 			if($resolvedUrl = $this->isDefined($this->urlParsed)){
 				return $resolvedUrl;
 			}else if($this->urlParsed[0] != 'index' && !$this->inUse()){
-				
 				$urlTarget = [  (isset($this->urlParsed[1]) && $this->urlParsed[1] == 'default' ?  'NotFound' : $this->urlParsed[0]),isset($this->urlParsed[1]) ? $this->urlParsed[1] : 'default', count($this->urlParsed) > 2 ? array_slice($this->urlParsed, 2) : null];
-				print_r($urlTarget);
-				echo "/";
 				return $urlTarget;
 			}else{
 				return ['NotFound','default',null];

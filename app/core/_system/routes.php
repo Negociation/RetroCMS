@@ -55,6 +55,15 @@ $routerManager->add(
     ]
 );
 
+// Define a route
+$routerManager->add(
+    '/allseeingeye/',
+    [
+        'controller' => 'housekeeping',
+        'action'     => 'default',
+    ]
+);
+
 
 //Start Router Validation
 $routerManager->init(InstallDiag::daoConnection());

@@ -22,15 +22,20 @@ final class Hotel{
 	protected $hotelStatus;
 	protected $hotelUrl;
 	protected $hotelWeb;
+	protected $hotelName;
+	protected $hotelNick;
+	protected $hotelCustom = [];
 	
 	//Default Construct Method
     function __construct(){
 		$this->hotelStatus = false;
-		$this->hotelInstalled = false;
+		$this->hotelInstalled = true;
+		$this->hotelName = 'RetroCMS';
+		$this->hotelNick = 'Retro';		
 		$this->hotelWeb = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
 		$this->hotelUrl = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
+		$this->hotelCustom = array('http://localhost/habboweb/17/16/web-gallery/images/bg_patterns/habbo.gif','http://localhost/habboweb/17/16/web-gallery/images/hotelviews/web_view_bg_beta.gif','http://localhost/habboweb/17/16/web-gallery/images/logos/habbo_logo_nourl.gif');
 	}
-	
 	
 	//Return if Hotel is Installed Correctly (Based on Database Structure)
 	public function get_isHotelInstalled(){
@@ -46,7 +51,6 @@ final class Hotel{
 		return $this->hotelUrl;
 	}
 	
-
 }
 
 ?>
