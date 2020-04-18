@@ -92,8 +92,10 @@ final class Router{
 	private function inUse(){
 		$inUse = false;
 		foreach($this->urlRoutes as $route){
-			if($this->urlRequest == ($route['config']['action'].'/'.$route['config']['action'])){
+			if($this->urlRequest == ($route['config']['controller'].($route['config']['action'] != 'default' ? '/'.$route['config']['action'] : ''))){
+				
 				$inUse = true;
+				echo 'oi';
 			}
 		}
 		return $inUse;
@@ -102,7 +104,7 @@ final class Router{
 	
 	//Validate Route if Exists
 	public function isDefined($urlParsed){
-	
+		
 		$foundRoute = false;
 		
 		foreach($this->urlRoutes as $route){
