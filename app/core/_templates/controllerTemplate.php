@@ -59,8 +59,7 @@ class Controller{
 			}
 		}else if(get_class($this) != 'Controller\Install'){
 			header('Location: '.$this->hotel->get_HotelUrl().'/install/start');
-		}
-		
+		}		
 	}
 }
 

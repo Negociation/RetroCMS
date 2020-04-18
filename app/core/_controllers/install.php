@@ -26,8 +26,8 @@ final class Install extends \Template\Controller{
 		
 	}
 	
-	function default(){
-		echo 'RetroCMS ~ Install';
+	function step($param){
+		echo 'step:'.$param;
 	}
 
 }

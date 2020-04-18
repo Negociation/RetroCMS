@@ -19,20 +19,33 @@ namespace CLR;
 
 final class Hotel{
 	
-	//Construct Method
+	protected $hotelStatus;
+	protected $hotelUrl;
+	protected $hotelWeb;
+	
+	//Default Construct Method
     function __construct(){
-		
+		$this->hotelStatus = false;
+		$this->hotelInstalled = false;
+		$this->hotelWeb = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
+		$this->hotelUrl = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
 	}
+	
 	
 	//Return if Hotel is Installed Correctly (Based on Database Structure)
 	public function get_isHotelInstalled(){
-		return true;
+		return $this->hotelInstalled;
 	}
 	
 	//Return if Hotel is Locked (Offline is setted or Maintenance )
 	public function get_isHotelLocked(){
 		return false;
 	}
+	
+	public function get_HotelUrl(){
+		return $this->hotelUrl;
+	}
+	
 
 }
 
