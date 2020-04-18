@@ -52,9 +52,9 @@ class Controller{
 		//Is Hotel Installed ?
 		if($this->hotel->get_isHotelInstalled()){
 			//If Hotel is Closed (Maintenance/(Closed if Offline))
-			if(!$this->hotel->get_isHotelLocked() && get_class($this) != 'Controller\Housekeeping' && get_class($this) != 'Controller\Maintenance'){
-				header('Location: '.$this->hotel->get_HotelUrl().'/maintenance');	
-			}else if(get_class($this) == 'Controller\Install' || ($this->hotel->get_isHotelLocked() && get_class($this) == 'Controller\Maintenance' )){
+			if($this->hotel->get_isHotelLocked() && get_class($this) != 'Controller\Housekeeping' && get_class($this) != 'Controller\Maintenance'){
+				header('Location: '.$this->hotel->get_HotelUrl().'/maintenance');
+			}else if(get_class($this) == 'Controller\Install' || (!$this->hotel->get_isHotelLocked() && get_class($this) == 'Controller\Maintenance' )){
 				header('Location: '.$this->hotel->get_HotelUrl());
 			}
 		}else if(get_class($this) != 'Controller\Install'){

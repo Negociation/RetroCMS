@@ -37,19 +37,39 @@ final class Hotel{
 		$this->hotelCustom = array('http://localhost/habboweb/17/16/web-gallery/images/bg_patterns/habbo.gif','http://localhost/habboweb/17/16/web-gallery/images/hotelviews/web_view_bg_beta.gif','http://localhost/habboweb/17/16/web-gallery/images/logos/habbo_logo_nourl.gif');
 	}
 	
+	
+	/** GETS **/
+		
+	//Return if Hotel is Locked (Offline is setted or Maintenance )
+	public function get_isHotelLocked(){
+		return true;
+	}
+	
 	//Return if Hotel is Installed Correctly (Based on Database Structure)
 	public function get_isHotelInstalled(){
 		return $this->hotelInstalled;
 	}
 	
-	//Return if Hotel is Locked (Offline is setted or Maintenance )
-	public function get_isHotelLocked(){
-		return false;
+
+	
+	public function get_HotelName(){
+		return $this->hotelName;
 	}
+	
+	public function get_HotelNick(){
+		return $this->hotelNick;
+	}
+	
+	
 	
 	public function get_HotelUrl(){
 		return $this->hotelUrl;
 	}
+	
+	public function get_HotelWeb(){
+		return $this->hotelWeb;
+	}
+	
 	
 }
 

@@ -95,7 +95,6 @@ final class Router{
 			if($this->urlRequest == ($route['config']['controller'].($route['config']['action'] != 'default' ? '/'.$route['config']['action'] : ''))){
 				
 				$inUse = true;
-				echo 'oi';
 			}
 		}
 		return $inUse;

@@ -26,7 +26,10 @@ final class Maintenance extends \Template\Controller{
 		
 	}
 	
+	//Maintenance Index
 	function default(){
+		include 'web/maintenance/index.view';	
+		exit;		
 	}
 
 }
