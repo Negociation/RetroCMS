@@ -82,7 +82,7 @@ final class Router{
 		$requestTarget = $this->validateRequest($this->handleRequest(),$hotelConnection);
 				
 		//Call Controller Handler
-		call_user_func_array([new $requestTarget[0]($hotelConnection),$requestTarget[1]],is_array($requestTarget[1]) ? $requestTarget[1] : [] );
+		call_user_func_array([new $requestTarget[0]($hotelConnection),$requestTarget[1]],is_array($requestTarget[2]) ? $requestTarget[2] : [] );
 		
 	}
 	
@@ -114,7 +114,6 @@ final class Router{
 			if(is_array($testRoute) && (count($testRoute) == count($urlParsed))){
 				if($urlParsed[0] == $testRoute[0]){
 					if(isset($urlParsed[1])){	
-						
 						if($urlParsed[1] == $testRoute[1] || $testRoute[1]  == '$1'){
 
 							if(isset($urlParsed[2])){
@@ -137,7 +136,7 @@ final class Router{
 									$foundRoute = array($route['config']['controller'],$route['config']['action'],array_slice($urlParsed,2));
 								}		
 							}else{
-								$foundRoute = array($route['config']['controller'],$route['config']['action'],$testRoute[1]  == '$1' ? $urlParsed[1] : null);
+								$foundRoute = array($route['config']['controller'],$route['config']['action'],$testRoute[1]  == '$1' ? array($urlParsed[1]) : null);
 							}
 						}			
 					}else{

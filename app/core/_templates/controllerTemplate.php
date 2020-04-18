@@ -27,7 +27,7 @@ class Controller{
 	protected $hotelModel;
 	
     function __construct(){
-
+		
 		//Default Page Title
 		$this->pageTitle = 'Habbo';
 		
@@ -37,14 +37,24 @@ class Controller{
 		//Intercept MVC Requests based on some conditions (Version | Rank | Hotel Status)
 		$this->requestIntercept();
 		
-	}
-
+		//Default Models
+		//$this->hotelModel = ;
+		//$this->habboModel =;
+		
+		//Default Hotel Object
+		//$this->hotel = 
+	}			
+			
+	//Request Intercept Rules
 	private function requestIntercept(){
-	
+		echo get_class($this);
 		//Is Hotel Installed ?
 		if(true){
-			if(get_class($this) == 'Controller\Install' || 1==2){
-				header('Location: '.$this->hotel->get_HotelUrl());	
+			//If Hotel is Closed (Maintenance/(Closed if Offline))
+			if(1==2 && get_class($this) != 'Controller\AllSeeingEye' && get_class($this) != 'Controller\Maintenance'){
+				header('Location: '.$this->hotel->get_HotelUrl().'/maintenance');	
+			}else if(get_class($this) == 'Controller\Install'){
+				header('Location: '.$this->hotel->get_HotelUrl());
 			}
 		}else if(get_class($this) != 'Controller\Install'){
 			header('Location: '.$this->hotel->get_HotelUrl().'/install/start');
