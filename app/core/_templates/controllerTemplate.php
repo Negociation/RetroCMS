@@ -18,6 +18,8 @@
 
 namespace Template;
 
+use CLR;
+
 class Controller{
 	
 	protected $pageTitle;
@@ -34,24 +36,23 @@ class Controller{
 		//Set_Deafult Body Id
 		$this->bodyId = 'home';
 		
-		//Intercept MVC Requests based on some conditions (Version | Rank | Hotel Status)
-		$this->requestIntercept();
-		
 		//Default Models
 		//$this->hotelModel = ;
 		//$this->habboModel =;
 		
 		//Default Hotel Object
-		//$this->hotel = 
+		$this->hotel = new CLR\Hotel();		
+				
+		//Intercept MVC Requests based on some conditions (Version | Rank | Hotel Status)
+		$this->requestIntercept();
 	}			
 			
 	//Request Intercept Rules
 	private function requestIntercept(){
-		echo get_class($this);
 		//Is Hotel Installed ?
-		if(true){
+		if($this->hotel->get_isHotelInstalled()){
 			//If Hotel is Closed (Maintenance/(Closed if Offline))
-			if(1==2 && get_class($this) != 'Controller\AllSeeingEye' && get_class($this) != 'Controller\Maintenance'){
+			if($this->hotel->get_isHotelLocked() && get_class($this) != 'Controller\AllSeeingEye' && get_class($this) != 'Controller\Maintenance'){
 				header('Location: '.$this->hotel->get_HotelUrl().'/maintenance');	
 			}else if(get_class($this) == 'Controller\Install'){
 				header('Location: '.$this->hotel->get_HotelUrl());
@@ -59,6 +60,7 @@ class Controller{
 		}else if(get_class($this) != 'Controller\Install'){
 			header('Location: '.$this->hotel->get_HotelUrl().'/install/start');
 		}
+		
 	}
 }
 

@@ -16,4 +16,5 @@ return array(
     'GPBMetadata\\Protos\\' => array($vendorDir . '/ewout/retrorcon/dist/php/GPBMetadata/Protos'),
     'GPBMetadata\\Google\\Protobuf\\' => array($vendorDir . '/google/protobuf/src/GPBMetadata/Google/Protobuf'),
     'Controller\\' => array($baseDir . '/../core/_controllers'),
+    'CLR\\' => array($baseDir . '/../core/_classes'),
 );

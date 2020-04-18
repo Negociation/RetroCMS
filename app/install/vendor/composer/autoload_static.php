@@ -37,6 +37,7 @@ class ComposerStaticInit5c11d097dca1e012790c73d8d30ae0b5
         'C' => 
         array (
             'Controller\\' => 11,
+            'CLR\\' => 4,
         ),
     );
 
@@ -83,10 +84,16 @@ class ComposerStaticInit5c11d097dca1e012790c73d8d30ae0b5
         array (
             0 => __DIR__ . '/../..' . '/../core/_controllers',
         ),
+        'CLR\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/../core/_classes',
+        ),
     );
 
     public static $classMap = array (
+        'CLR\\Hotel' => __DIR__ . '/../..' . '/../core/_classes/hotel.php',
         'Controller\\Client' => __DIR__ . '/../..' . '/../core/_controllers/client.php',
+        'Controller\\Home' => __DIR__ . '/../..' . '/../core/_controllers/home.php',
         'Controller\\Index' => __DIR__ . '/../..' . '/../core/_controllers/index.php',
         'Controller\\Install' => __DIR__ . '/../..' . '/../core/_controllers/install.php',
         'Controller\\NotFound' => __DIR__ . '/../..' . '/../core/_controllers/notfound.php',
@@ -239,7 +246,7 @@ class ComposerStaticInit5c11d097dca1e012790c73d8d30ae0b5
         'RetroRCON\\UserAlertRequest' => __DIR__ . '/..' . '/ewout/retrorcon/dist/php/RetroRCON/UserAlertRequest.php',
         'RetroRCON\\UserOnlineRequest' => __DIR__ . '/..' . '/ewout/retrorcon/dist/php/RetroRCON/UserOnlineRequest.php',
         'RetroRCON\\UserOnlineResponse' => __DIR__ . '/..' . '/ewout/retrorcon/dist/php/RetroRCON/UserOnlineResponse.php',
-        'System\\Router' => __DIR__ . '/../..' . '/../core/_system/Router.php',
+        'System\\Router' => __DIR__ . '/../..' . '/../core/_system/router.php',
         'Template\\Controller' => __DIR__ . '/../..' . '/../core/_templates/controllerTemplate.php',
     );
 

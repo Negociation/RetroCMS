@@ -20,7 +20,9 @@
 			"View\\": "../core/_views/",
 			"Controller\\": "../core/_controllers/",
 			"Template\\": "../core/_templates/",
-			"System\\": "../core/_system/"
+			"System\\": "../core/_system/",
+			"CLR\\": "../core/_classes/"
+
 		}
 	}
 }

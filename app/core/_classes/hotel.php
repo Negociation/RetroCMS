@@ -12,34 +12,26 @@
 //////////////////////////////////////////////////////////////
 
 
-// Class: Home
-// Desc: Habbo Home Classes (Load / Edit / Manager)
+// Class: Hotel
+// Desc:  Plain OLD CLR for Hotel 
 
-namespace Controller;
+namespace CLR;
 
-final class Home extends \Template\Controller{
+final class Hotel{
 	
 	//Construct Method
     function __construct(){
-		//Call the super-class constructor
-		parent::__construct(); 
 		
 	}
 	
-	function default(){
-		echo 'RetroCMS ~ Habbo Home Index';
+	//Return if Hotel is Installed Correctly (Based on Database Structure)
+	public function get_isHotelInstalled(){
+		return true;
 	}
 	
-	function loadById($param){
-		if(is_numeric($param)){
-			echo 'Home By Id: '.$param;
-		}else{
-			echo 'Not Found';
-		}
-	}
-	
-	function loadByName($param){
-		echo 'Home By Name: '.$param;
+	//Return if Hotel is Locked (Offline is setted or Maintenance )
+	public function get_isHotelLocked(){
+		return false;
 	}
 
 }

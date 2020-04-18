@@ -6,7 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CLR\\Hotel' => $baseDir . '/../core/_classes/hotel.php',
     'Controller\\Client' => $baseDir . '/../core/_controllers/client.php',
+    'Controller\\Home' => $baseDir . '/../core/_controllers/home.php',
     'Controller\\Index' => $baseDir . '/../core/_controllers/index.php',
     'Controller\\Install' => $baseDir . '/../core/_controllers/install.php',
     'Controller\\NotFound' => $baseDir . '/../core/_controllers/notfound.php',
@@ -159,6 +161,6 @@ return array(
     'RetroRCON\\UserAlertRequest' => $vendorDir . '/ewout/retrorcon/dist/php/RetroRCON/UserAlertRequest.php',
     'RetroRCON\\UserOnlineRequest' => $vendorDir . '/ewout/retrorcon/dist/php/RetroRCON/UserOnlineRequest.php',
     'RetroRCON\\UserOnlineResponse' => $vendorDir . '/ewout/retrorcon/dist/php/RetroRCON/UserOnlineResponse.php',
-    'System\\Router' => $baseDir . '/../core/_system/Router.php',
+    'System\\Router' => $baseDir . '/../core/_system/router.php',
     'Template\\Controller' => $baseDir . '/../core/_templates/controllerTemplate.php',
 );
