@@ -40,20 +40,14 @@ class Controller{
 	}
 
 	private function requestIntercept(){
-		
-		//if($this->hotel->get_HotelInstall()){
+	
+		//Is Hotel Installed ?
 		if(true){
-			if(get_class($this) != 'Controller\Install'){
-				
-			}else{
-				header('Location: '.$this->hotel->get_HotelUrl());
+			if(get_class($this) == 'Controller\Install' || 1==2){
+				header('Location: '.$this->hotel->get_HotelUrl());	
 			}
-		}else{
-			if(get_class($this) != 'Controller\Install'){	
-				header('Location: '.$this->hotel->get_HotelUrl().'/install/start');
-			}else{
-				call_user_func_array([new $this($this->hotelConection),$request->get_DecodeAction()],$request->get_DecodeParams());
-			}
+		}else if(get_class($this) != 'Controller\Install'){
+			header('Location: '.$this->hotel->get_HotelUrl().'/install/start');
 		}
 	}
 }
