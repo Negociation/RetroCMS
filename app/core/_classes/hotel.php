@@ -17,6 +17,8 @@
 
 namespace CLR;
 
+use RetroRCON\RemoteConnection;
+
 final class Hotel{
 	
 	protected $hotelStatus;
@@ -25,7 +27,9 @@ final class Hotel{
 	protected $hotelName;
 	protected $hotelNick;
 	protected $hotelLayout = [];
-	
+	protected $hotelConnection;
+	protected $hotelClient = [];
+
 	//Default Construct Method
     function __construct(){
 		$this->hotelStatus = false;
@@ -36,6 +40,15 @@ final class Hotel{
 		$this->hotelUrl = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
 		$this->hotelLayout = array($this->hotelWeb.'/habboweb/17/16/web-gallery/images/bg_patterns/habbo.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/hotelviews/web_view_bg_beta.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/logos/habbo_logo_nourl.gif');
 	}
+	
+	function constructObject(){
+			
+		//If GRPC Enabled set a rCon based on Hotel Object Info
+		$this->hotelConnection = ( extension_loaded("grpc") !== null && extension_loaded("grpc") ) ? new RemoteConnection(['host' => '127.0.0.1','port' => 12309]) : false;
+			
+		//Check if Hotel is Online/Offline
+		$this->hotelStatus = (is_resource(@fsockopen('127.0.0.1', 12309))) ? true : false;
+    }
 	
 	
 	/** GETS **/
@@ -63,8 +76,10 @@ final class Hotel{
 		return $this->hotelNick;
 	}
 	
-	
-	
+	public function get_HotelStatus(){
+		return $this->hotelStatus;
+	}
+		
 	public function get_HotelUrl(){
 		return $this->hotelUrl;
 	}

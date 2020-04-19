@@ -37,7 +37,7 @@ if(InstallDiag::result(0)){
 	// + Start Session "habboWebsite"
 	// - Desc: Sessions for Website
 	session_start();
-
+	
 	//Load Custom Routes
 	include (__DIR__.'\core\_system\routes.php');
 
