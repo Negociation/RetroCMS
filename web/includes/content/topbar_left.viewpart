@@ -11,11 +11,7 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-
-//Include Content 
-//Desc = TopBar Left (Users Online / Hotel Offline)
-echo "<td id='topbar-count'>".($this->hotel->get_HotelStatus() ? "<span id='topbar-online'>0</span> <span class='lang-topbar-count'>Habbos no Hotel</span>":" <span class='lang-topbar-offline'>Hotel Offline</span> ")."</td>";
-
-
 ?>
+
+								<td id="topbar-count"> 0 <span class="lang-topbar-count">Habbos no Hotel</span></td>
 

@@ -24,9 +24,5 @@
 			"CLR\\": "../core/_classes/"
 
 		}
-	},
-    "require-dev": {
-        "phpunit/phpunit": "9.1",
-        "grpc/grpc": "1.15.0"
-    }
+	}
 }

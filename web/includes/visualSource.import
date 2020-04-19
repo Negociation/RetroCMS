@@ -55,7 +55,7 @@ echo"
 		</script>
 ";
 
-echo "\n\t\t"."<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/prototype.js'></script>"."\n\t\t";
+
 echo "\n\t\t"."<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/habbo.js'></script>"."\n\t\t";
 
 
