@@ -24,7 +24,7 @@ final class Hotel{
 	protected $hotelWeb;
 	protected $hotelName;
 	protected $hotelNick;
-	protected $hotelCustom = [];
+	protected $hotelLayout = [];
 	
 	//Default Construct Method
     function __construct(){
@@ -34,7 +34,7 @@ final class Hotel{
 		$this->hotelNick = 'Retro';		
 		$this->hotelWeb = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
 		$this->hotelUrl = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
-		$this->hotelCustom = array('http://localhost/habboweb/17/16/web-gallery/images/bg_patterns/habbo.gif','http://localhost/habboweb/17/16/web-gallery/images/hotelviews/web_view_bg_beta.gif','http://localhost/habboweb/17/16/web-gallery/images/logos/habbo_logo_nourl.gif');
+		$this->hotelLayout = array($this->hotelWeb.'/habboweb/17/16/web-gallery/images/bg_patterns/habbo.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/hotelviews/web_view_bg_beta.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/logos/habbo_logo_nourl.gif');
 	}
 	
 	
@@ -42,7 +42,7 @@ final class Hotel{
 		
 	//Return if Hotel is Locked (Offline is setted or Maintenance )
 	public function get_isHotelLocked(){
-		return true;
+		return false;
 	}
 	
 	//Return if Hotel is Installed Correctly (Based on Database Structure)
@@ -50,7 +50,10 @@ final class Hotel{
 		return $this->hotelInstalled;
 	}
 	
-
+	public function get_HotelLayout(){
+		return $this->hotelLayout;
+	}
+	
 	
 	public function get_HotelName(){
 		return $this->hotelName;

@@ -1,0 +1,71 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.5.110 ( Aquamarine ) 				    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <title><?php echo $this->hotel->get_HotelName(); ?> ~ <?php echo $this->get_ViewTitle(); ?></title>
+		
+		<!-- IMPORT LAYOUT CONTENT(CSS/JS) -->
+		<?php require_once('./web/includes/visualSource.import'); ?>
+		
+	</head>
+	<body id="<?php echo $this->get_ViewBody(); ?>" >
+        <div id="overlay"></div>
+        <h1 id="main-header"><?php echo $this->hotel->get_HotelNick();?></h1>
+        <div id="wrapper">
+			<div id="top_wrap">
+				<div id="top">
+					<div id="topdim"></div>
+					<div id="top-elements">
+						<table id="topbar">
+							<tr>
+								<!-- TOPBAR INCLUDE ( User Status ) -->
+								<?php include('./web/includes/content/topbar_left.viewpart'); ?>
+								<td id="topbar-menu" align="center">
+									<ul>
+										<li id="myhabbo" class="selected" onmouseover="switchTab('myhabbo')">
+											<div>
+												<a href="<?php echo $this->hotel->get_HotelURL();?>/tab/myhabbo" class="topbar-menu-link" onclick="return false;">
+													<span class="lang-topbar-myhabbo">Meu Habbo</span>
+												</a>
+											</div>
+										</li>
+										
+										<li id="mycredits" onmouseover="switchTab('mycredits')">
+											<div>
+												<a href="<?php echo $this->hotel->get_HotelURL();?>/tab/credits" class="topbar-menu-link" onclick="return false;">
+													<span class="lang-topbar-mycredits">Minhas Moedas</span>
+												</a>
+											</div>
+										</li>
+										
+										<li id="habboclub" onmouseover="switchTab('habboclub')">
+											<div>
+												<a href="<?php echo $this->hotel->get_HotelURL();?>/tab/habboclub" class="topbar-menu-link" onclick="return false;">
+													<span class="lang-topbar-habboclub">Habbo Club</span>
+												</a>
+											</div>
+										</li>
+
+									</ul>
+								</td>
+								<!-- TOPBAR INCLUDE ( User Status ) -->
+								<?php include('./web/includes/content/topbar_right.viewpart'); ?>
+							</tr>
+						</table>					
+
+

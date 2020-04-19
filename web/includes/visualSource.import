@@ -1,0 +1,62 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.5.110 ( Aquamarine ) 				    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+//Default CSS Content
+echo "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/style.css' type='text/css' rel='stylesheet'/>"."\n\t\t";
+
+
+
+if($this->hotel->get_HotelLayout()){
+		echo "
+		<style>
+
+			body {
+				background-image: url(".$this->hotel->get_HotelLayout()[0].");
+			}
+
+
+			#top {
+				background-image: url(".$this->hotel->get_HotelLayout()[1].");
+			}
+
+
+			#viewlogo {
+				position: absolute;
+				top: 63px;
+				left: 35px;
+				background-image: url(".$this->hotel->get_HotelLayout()[2].");
+				background-repeat: no-repeat;
+				height: 66px;
+				width: 160px;
+			}
+			
+		</style>
+		";
+}
+
+//Default Javascript Content
+echo"
+		<script language='JavaScript' type='text/javascript'>
+			var habboReqPath = '".$this->hotel->get_HotelUrl()."';
+			var habboStaticFilePath = '".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery';
+			var habboImagerUrl = '/habbo-imaging/';
+			document.habboLoggedIn = 'true';
+			window.name = 'habboMain';
+		</script>
+";
+
+
+echo "\n\t\t"."<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/habbo.js'></script>"."\n\t\t";
+
+
+?>

@@ -46,7 +46,21 @@ class Controller{
 		//Intercept MVC Requests based on some conditions (Version | Rank | Hotel Status)
 		$this->requestIntercept();
 	}			
-			
+
+	/* GETS [DO NOT REMOVE]*/
+
+	public function get_ViewTitle(){
+		return $this->pageTitle;
+	}		
+	
+	public function get_ViewBody(){
+		return $this->bodyId;
+	}
+		
+
+	/* EXTRA */
+	
+	
 	//Request Intercept Rules
 	private function requestIntercept(){
 		//Is Hotel Installed ?
@@ -61,6 +75,11 @@ class Controller{
 			header('Location: '.$this->hotel->get_HotelUrl().'/install/start');
 		}		
 	}
+	
+
+	
+	
+	
 }
 
 ?>

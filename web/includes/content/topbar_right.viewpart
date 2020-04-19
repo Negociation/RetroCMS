@@ -11,11 +11,9 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-
-//Include Header Content
-require_once('./web/includes/headers/default.viewpart');
-
 ?>
 
-
+								<td id="topbar-status" class="loggedin">
+									Something
+								</td>
 

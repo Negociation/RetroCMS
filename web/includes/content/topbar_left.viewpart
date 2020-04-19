@@ -11,11 +11,7 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-
-//Include Header Content
-require_once('./web/includes/headers/default.viewpart');
-
 ?>
 
-
+								<td id="topbar-count"> 0 <span class="lang-topbar-count">Habbos no Hotel</span></td>
 
