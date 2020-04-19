@@ -36,14 +36,17 @@ final class InstallDiag{
 		// TEST IF LIBSODIUM EXTENSION LOADED
 		self::$testsStatus[3] = extension_loaded("sodium") !== null && extension_loaded("sodium") ? true : false;
 		
+		//TEST IF GRPC EXTENSION LIBRARY IS LOADED
+		self::$testsStatus[4] = ( extension_loaded("grpc") !== null && extension_loaded("grpc") ) || ( self::$hotelData['features']['grpc'] == 'false' )  ? true : false;
+		
 		// TEST PDO CONECTION
 		try{
 			//Recieve MySQL/MariaDB Conection
 			self::$hotelConection = new PDO('mysql:host=' . self::$hotelData['database']['host'] . ';dbname=' . self::$hotelData['database']['name'], self::$hotelData['database']['user'], self::$hotelData['database']['password']);
-			self::$testsStatus[4]= true;
+			self::$testsStatus[5]= true;
 			
 		}catch ( PDOException $e){	
-			self::$testsStatus[4]= array(false,$e->getMessage());
+			self::$testsStatus[5]= array(false,$e->getMessage());
 		}
 		
 		// VALIDATE TEST RESULTS

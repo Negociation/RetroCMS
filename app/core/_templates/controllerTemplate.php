@@ -40,9 +40,11 @@ class Controller{
 		//$this->hotelModel = ;
 		//$this->habboModel =;
 		
-		//Default Hotel Object
-		$this->hotel = new CLR\Hotel();		
-				
+		//Default Hotel Object (REMOVE)
+		$this->hotel = new CLR\Hotel();	
+		$this->hotel->constructObject();
+		
+		
 		//Intercept MVC Requests based on some conditions (Version | Rank | Hotel Status)
 		$this->requestIntercept();
 	}			
