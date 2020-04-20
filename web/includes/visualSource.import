@@ -13,6 +13,7 @@
 
 //Default CSS Content
 echo "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/style.css' type='text/css' rel='stylesheet'/>"."\n\t\t";
+echo "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/boxes.css' type='text/css' rel='stylesheet'/>"."\n\t\t";
 
 
 

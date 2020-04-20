@@ -11,26 +11,25 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-
-// Class: NotFound
-// Desc: 404 Controller 
-
-namespace Controller;
-
-final class NotFound extends \Template\Controller{
-	
-	//Construct Method
-    function __construct(){
-		//Call the super-class constructor
-		parent::__construct(); 
-		
-	}
-	
-	function default(){
-		include 'web/404.view';	
-		exit;
-	}
-
-}
-
 ?>
+			</div>
+			<div id="outer">
+				<div id="outer-content">
+					<div id="footer">
+						<div id="footer-top">
+							<div id="footer-content">
+								<p class="footer-legal">&copy; 2009-2020 RetroCMS ~ The Oldschool era is Back!!! <br> Powered by m.tiago from Ragezone</p>
+							</div>
+						</div>
+						<div id="footer-bottom">
+							<div id="footer-bottom-content"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="outer-bottom">
+				<div id="outer-bottom-content"></div>
+			</div>
+		</div>
+	</body>
+</html>

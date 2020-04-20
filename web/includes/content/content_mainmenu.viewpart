@@ -1,0 +1,46 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.5.110 ( Aquamarine ) 				    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+//Include Content 
+//Desc = Main Menu Bar
+
+?>
+
+
+					<div id="mainmenu">
+						<ul>
+						<?php 
+							foreach(array('') as $menuObject){
+							echo"
+							<li".((get_class($this) == 'Controller\Index') ? " id=\"active\"" : "").">
+								<span class=\"left\"></span>
+								<a href=\"".$this->hotel->get_HotelURL()."\">
+									<img src=\"".$this->hotel->get_HotelWeb()."/c_images/navi_icons/tab_icon_01_home.gif\" alt=\"\"/> 
+									<span class=\"lang-navbar-home\">Home</span>
+								</a>
+								<span class=\"right\"></span>
+							</li>";
+							}
+						?>
+						</ul>
+					</div>
+					<div id="submenu">
+						<div class="subnav">
+							<span>
+								<a href="#" onclick="" style="margin-left: 5px; height: 14px;">
+									<img src="<?php echo $this->hotel->get_HotelWeb(); ?>/habboweb/17/16/web-gallery/images/languages/header/icon_default.png" id="languageIcon" alt="">
+								</a>
+							</span>
+						</div>
+					</div>	
+	
