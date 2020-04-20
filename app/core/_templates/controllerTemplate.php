@@ -44,6 +44,7 @@ class Controller{
 		$this->hotel = new CLR\Hotel();	
 		$this->hotel->constructObject();
 		
+		$this->habbo = new CLR\Habbo();
 		
 		//Intercept MVC Requests based on some conditions (Version | Rank | Hotel Status)
 		$this->requestIntercept();

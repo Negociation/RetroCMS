@@ -48,7 +48,7 @@
 										<li id="mycredits" onmouseover="switchTab('mycredits')">
 											<div>
 												<a href="<?php echo $this->hotel->get_HotelURL();?>/tab/credits" class="topbar-menu-link" onclick="return false;">
-													<span class="lang-topbar-mycredits">Minhas Moedass</span>
+													<span class="lang-topbar-mycredits"> Minhas Moedas</span>
 												</a>
 											</div>
 										</li>

@@ -11,9 +11,11 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
+
+//Include Content 
+//Desc = TopBar Right (Habbo Logged In Status)
+echo "<td id=\"topbar-status\" class=\"".($this->habbo->get_isHabboLoggedIn() ? "loggedin" : "notloggedin" )."\">".($this->habbo->get_isHabboLoggedIn() ? '</span><b>'.$this->habbo->get_HabboName().'</b><span class="lang-topbar-status-loggedinAfter">, você esta no Habbo</span>' : '<span class="lang-topbar-status-notLogged">Entre para acessar o Habbo</span>')."</td>";
+
 ?>
 
-								<td id="topbar-status" class="loggedin">
-									Something
-								</td>
-
+		
