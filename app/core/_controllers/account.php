@@ -36,6 +36,22 @@ final class Account extends \Template\Controller{
 		exit;
 	}
 	
+	function reauthenticate(){
+		 if($this->habbo->get_isHabboLoggedIn()){
+		 
+		 }else{
+			header('Location: '.$this->hotel->get_HotelUrl().'/login');
+		 }
+	}
+	
+	function submit(){
+		if($_SERVER['REQUEST_METHOD'] == 'POST' && !$this->habbo->get_isHabboLoggedIn()){
+			echo 'Submiting Data';
+		}else{
+			header('Location: '.$this->hotel->get_HotelUrl());
+		}
+	}
+	
 	function disconnected(){
 		//Habbo is Logged destroy session
 		if($this->habbo->get_isHabboLoggedIn()){
@@ -44,6 +60,8 @@ final class Account extends \Template\Controller{
 			header('Location: '.$this->hotel->get_HotelUrl());
 		}
 	}
+	
+	
 
 }
 
