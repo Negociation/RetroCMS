@@ -20,20 +20,17 @@ namespace CLR;
 use RetroRCON\RemoteConnection;
 
 final class Habbo{
-
+	private $habboId;
 	private $habboLoggedIn;
 
 	//Default Construct Method
     function __construct(){
-		
+		$this->habboLoggedIn = false;
 	}
 	
 	function constructObject(){
 		//If GRPC Enabled set a rCon based on Hotel Object Info
-		$hotelConnection = ( extension_loaded("grpc") !== null && extension_loaded("grpc") ) ? new RemoteConnection(['host' => '127.0.0.1','port' => 12309]) : false;
-				
-		$this->habboLoggedIn = false;
-	
+		$hotelConnection = ( extension_loaded("grpc") !== null && extension_loaded("grpc") ) ? new RemoteConnection(['host' => '127.0.0.1','port' => 12309]) : false;	
     }
 	
 	
@@ -47,6 +44,14 @@ final class Habbo{
 		return null;
 	}
 	
+	public function get_habboSession(){
+		return (isset($_SESSION['habboLoggedId']) &&  isset($_SESSION['habboLoggedToken'])) ? array($_SESSION['habboLoggedId'],$_SESSION['habboLoggedToken']) : false;
+	}
+	
+	/** SETS **/
+	public function set_HabboId($param){
+		$this->habboId = $param;
+	}
 }
 
 ?>

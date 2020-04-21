@@ -12,25 +12,21 @@
 //////////////////////////////////////////////////////////////
 
 
-// Class: Index Controller
-// Desc: Index Controller
+// Class: ModelTemplate
+// Desc: Default Template for Models
 
-namespace Controller;
 
-final class Index extends \Template\Controller{
+namespace Template;
+
+class Model{
 	
-	//Construct Method
-    function __construct($hotelConection){
-		//Call the super-class constructor
-		parent::__construct($hotelConection); 
-		
-	}
+	protected $hotelConection;
 	
-	function default(){
-		include 'web/index.view';	
-		exit;
-	}
-
+    function __construct($hotelConection){		
+		//Setting MySQL Conection to Hotel Database
+		$this->hotelConection = $hotelConection;
+	}			
+	
 }
 
 ?>

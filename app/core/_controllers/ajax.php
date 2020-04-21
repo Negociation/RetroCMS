@@ -12,22 +12,26 @@
 //////////////////////////////////////////////////////////////
 
 
-// Class: Index Controller
-// Desc: Index Controller
+// Class: Client
+// Desc: Hotel Client Class
 
 namespace Controller;
 
-final class Index extends \Template\Controller{
+final class Ajax extends \Template\Controller{
 	
 	//Construct Method
     function __construct($hotelConection){
 		//Call the super-class constructor
 		parent::__construct($hotelConection); 
-		
 	}
 	
-	function default(){
-		include 'web/index.view';	
+	function myhabbo_creditsUpdate(){
+		include('./web/includes/content/topbar_mycredits.viewpart');
+		exit;
+	}
+
+	function myhabbo_habboClubUpdate(){
+		include('./web/includes/content/topbar_myclub.viewpart');
 		exit;
 	}
 

@@ -18,8 +18,6 @@
 
 namespace Template;
 
-use CLR;
-
 class Controller{
 	
 	protected $pageTitle;
@@ -28,7 +26,7 @@ class Controller{
 	protected $hotel;
 	protected $hotelModel;
 	
-    function __construct(){
+    function __construct($hotelConection){
 		
 		//Default Page Title
 		$this->pageTitle = 'Habbo';
@@ -38,14 +36,20 @@ class Controller{
 		
 		//Default Models
 		//$this->hotelModel = ;
-		//$this->habboModel =;
+		$this->habboModel = new \Model\Habbo($hotelConection);
 		
 		//Default Hotel Object (REMOVE)
-		$this->hotel = new CLR\Hotel();	
+		$this->hotel = new \CLR\Hotel();	
 		$this->hotel->constructObject();
 		
-		$this->habbo = new CLR\Habbo();
+		//Current Habbo Object
+		$this->habbo = new \CLR\Habbo();
 		
+		//Check if Habbo is Logged In 
+		if($habboId = $this->habboModel->get_SessionStatus($this->habbo->get_habboSession())){
+			$this->habbo = $this->habboModel->get_HabboById($habboId);
+		}
+				
 		//Intercept MVC Requests based on some conditions (Version | Rank | Hotel Status)
 		$this->requestIntercept();
 	}			

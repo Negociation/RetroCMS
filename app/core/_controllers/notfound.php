@@ -20,9 +20,9 @@ namespace Controller;
 final class NotFound extends \Template\Controller{
 	
 	//Construct Method
-    function __construct(){
+    function __construct($hotelConection){
 		//Call the super-class constructor
-		parent::__construct(); 
+		parent::__construct($hotelConection); 
 		
 	}
 	

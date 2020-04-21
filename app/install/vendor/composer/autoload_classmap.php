@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CLR\\Habbo' => $baseDir . '/../core/_classes/habbo.php',
     'CLR\\Hotel' => $baseDir . '/../core/_classes/hotel.php',
     'Controller\\Client' => $baseDir . '/../core/_controllers/client.php',
     'Controller\\Home' => $baseDir . '/../core/_controllers/home.php',
@@ -284,6 +285,7 @@ return array(
     'GuzzleHttp\\TransferStats' => $vendorDir . '/guzzlehttp/guzzle/src/TransferStats.php',
     'GuzzleHttp\\UriTemplate' => $vendorDir . '/guzzlehttp/guzzle/src/UriTemplate.php',
     'GuzzleHttp\\Utils' => $vendorDir . '/guzzlehttp/guzzle/src/Utils.php',
+    'Model\\Habbo' => $baseDir . '/../core/_models/habbo.php',
     'PHPUnit\\Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert.php',
     'PHPUnit\\Framework\\AssertionFailedError' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/AssertionFailedError.php',
@@ -1065,6 +1067,7 @@ return array(
     'Symfony\\Polyfill\\Php72\\Php72' => $vendorDir . '/symfony/polyfill-php72/Php72.php',
     'System\\Router' => $baseDir . '/../core/_system/router.php',
     'Template\\Controller' => $baseDir . '/../core/_templates/controllerTemplate.php',
+    'Template\\Model' => $baseDir . '/../core/_templates/modelTemplate.php',
     'TheSeer\\Tokenizer\\Exception' => $vendorDir . '/theseer/tokenizer/src/Exception.php',
     'TheSeer\\Tokenizer\\NamespaceUri' => $vendorDir . '/theseer/tokenizer/src/NamespaceUri.php',
     'TheSeer\\Tokenizer\\NamespaceUriException' => $vendorDir . '/theseer/tokenizer/src/NamespaceUriException.php',

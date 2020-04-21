@@ -45,7 +45,7 @@
 											</div>
 										</li>
 										
-										<li id="mycredits" onmouseover="switchTab('mycredits')">
+										<li id="mycredits" onmouseover="switchTab('mycredits'); <?php echo $this->habbo->get_isHabboLoggedIn() ? 'updateCredits();' : ''; ?>">
 											<div>
 												<a href="<?php echo $this->hotel->get_HotelURL();?>/tab/credits" class="topbar-menu-link" onclick="return false;">
 													<span class="lang-topbar-mycredits"> Minhas Moedas</span>
@@ -53,7 +53,7 @@
 											</div>
 										</li>
 										
-										<li id="habboclub" onmouseover="switchTab('habboclub')">
+										<li id="habboclub" onmouseover="switchTab('habboclub'); <?php echo $this->habbo->get_isHabboLoggedIn() ? 'updateHabboClub();' : ''; ?>">
 											<div>
 												<a href="<?php echo $this->hotel->get_HotelURL();?>/tab/habboclub" class="topbar-menu-link" onclick="return false;">
 													<span class="lang-topbar-habboclub">Habbo Club</span>
@@ -70,7 +70,6 @@
 						<div id="viewlogo"><a href="<?php echo $this->hotel->get_HotelURL();?>"></a></div>
 						<!-- TOPMENU INCLUDE ( Enter Hotel ) -->
 						<?php include('./web/includes/content/topbar_enterhotel.viewpart'); ?>
-
 						<div id="tabmenu" onmouseover="lockCurrentTab();" onmouseout="fadeTab('myhabbo')">
 							<div id="tabmenu-content">
 								<div id="myhabbo-content" class="tabmenu-inner selected">
@@ -102,4 +101,3 @@
 				</div>
 			</div>	
 			<div id="main-content">
-			

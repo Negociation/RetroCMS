@@ -17,7 +17,7 @@
 
 namespace Controller;
 
-final class Index extends \Template\Controller{
+final class Account extends \Template\Controller{
 	
 	//Construct Method
     function __construct($hotelConection){
@@ -26,9 +26,22 @@ final class Index extends \Template\Controller{
 		
 	}
 	
-	function default(){
-		include 'web/index.view';	
-		exit;
+	function login(){
+		//Habbo is already Logged so redirect to Index
+		if($this->habbo->get_isHabboLoggedIn()){
+			header('Location: '.$this->hotel->get_HotelUrl());
+		}else{
+			echo 'Show Login';
+		}
+	}
+	
+	function disconnected(){
+		//Habbo is Logged destroy session
+		if($this->habbo->get_isHabboLoggedIn()){
+			echo 'Logout Page';
+		}else{
+			header('Location: '.$this->hotel->get_HotelUrl());
+		}		
 	}
 
 }

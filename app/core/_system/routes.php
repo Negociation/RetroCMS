@@ -17,9 +17,8 @@
 	
 //Router Manager Declaration
 $routerManager = new System\Router();
-	
 
-// Define a route
+//Home(By Id)
 $routerManager->add(
     '/home/$1/id/',
     [
@@ -28,7 +27,7 @@ $routerManager->add(
     ]
 );
 
-// Define a route
+//Home(By Name)
 $routerManager->add(
     '/home/$1/',
     [
@@ -37,7 +36,7 @@ $routerManager->add(
     ]
 );
 
-// Define a route
+//Groups (By Name)
 $routerManager->add(
     '/groups/$1/',
     [
@@ -46,7 +45,7 @@ $routerManager->add(
     ]
 );
 
-// Define a route
+//Groups (By Id)
 $routerManager->add(
     '/groups/$1/id',
     [
@@ -55,7 +54,7 @@ $routerManager->add(
     ]
 );
 
-// Define a route
+//Housekeeping
 $routerManager->add(
     '/allseeingeye/',
     [
@@ -64,6 +63,24 @@ $routerManager->add(
     ]
 );
 
+
+//Ajax Request (Update MyHabbo Tab - Credits)
+$routerManager->add(
+    '/topbar/credits',
+    [
+        'controller' => 'ajax',
+        'action'     => 'myhabbo_creditsUpdate',
+    ]
+);
+
+//Ajax Request (Update MyHabbo Tab - Habboclub)
+$routerManager->add(
+    '/topbar/habboclub',
+    [
+        'controller' => 'ajax',
+        'action'     => 'myhabbo_habboClubUpdate',
+    ]
+);
 
 //Start Router Validation
 $routerManager->init(InstallDiag::daoConnection());

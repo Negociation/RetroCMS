@@ -201,6 +201,7 @@ class ComposerStaticInitb5fc32f74951a53d7bf10d10b9b632e1
     );
 
     public static $classMap = array (
+        'CLR\\Habbo' => __DIR__ . '/../..' . '/../core/_classes/habbo.php',
         'CLR\\Hotel' => __DIR__ . '/../..' . '/../core/_classes/hotel.php',
         'Controller\\Client' => __DIR__ . '/../..' . '/../core/_controllers/client.php',
         'Controller\\Home' => __DIR__ . '/../..' . '/../core/_controllers/home.php',
@@ -479,6 +480,7 @@ class ComposerStaticInitb5fc32f74951a53d7bf10d10b9b632e1
         'GuzzleHttp\\TransferStats' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/TransferStats.php',
         'GuzzleHttp\\UriTemplate' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/UriTemplate.php',
         'GuzzleHttp\\Utils' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Utils.php',
+        'Model\\Habbo' => __DIR__ . '/../..' . '/../core/_models/habbo.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Exception/AssertionFailedError.php',
@@ -1260,6 +1262,7 @@ class ComposerStaticInitb5fc32f74951a53d7bf10d10b9b632e1
         'Symfony\\Polyfill\\Php72\\Php72' => __DIR__ . '/..' . '/symfony/polyfill-php72/Php72.php',
         'System\\Router' => __DIR__ . '/../..' . '/../core/_system/router.php',
         'Template\\Controller' => __DIR__ . '/../..' . '/../core/_templates/controllerTemplate.php',
+        'Template\\Model' => __DIR__ . '/../..' . '/../core/_templates/modelTemplate.php',
         'TheSeer\\Tokenizer\\Exception' => __DIR__ . '/..' . '/theseer/tokenizer/src/Exception.php',
         'TheSeer\\Tokenizer\\NamespaceUri' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUri.php',
         'TheSeer\\Tokenizer\\NamespaceUriException' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUriException.php',

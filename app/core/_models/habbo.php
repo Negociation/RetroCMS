@@ -11,24 +11,26 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
+// Class: Client
+// Desc: Hotel Client Class
 
-// Class: Index Controller
-// Desc: Index Controller
+namespace Model;
 
-namespace Controller;
 
-final class Index extends \Template\Controller{
+final class Habbo extends \Template\Model{
 	
 	//Construct Method
     function __construct($hotelConection){
 		//Call the super-class constructor
 		parent::__construct($hotelConection); 
-		
 	}
 	
-	function default(){
-		include 'web/index.view';	
-		exit;
+	public function get_SessionStatus($habboLT){
+		return false;
+	}
+	
+	public function get_HabboById($habboId){
+		
 	}
 
 }
