@@ -20,14 +20,19 @@ namespace Controller;
 final class Client extends \Template\Controller{
 	
 	//Construct Method
-    function __construct(){
+    function __construct($hotelConection){
 		//Call the super-class constructor
-		parent::__construct(); 
+		parent::__construct($hotelConection); 
 		
 	}
 	
 	function default(){
-		echo 'RetroCMS ~ Client';
+		if($this->habbo->get_isHabboLoggedIn()){
+					echo 'RetroCMS ~ Client';
+
+		}else{
+			header('Location: '.$this->hotel->get_HotelUrl().'/login?origin=habboClient');
+		}
 	}
 
 }

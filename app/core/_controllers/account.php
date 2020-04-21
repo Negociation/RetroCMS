@@ -31,8 +31,9 @@ final class Account extends \Template\Controller{
 		if($this->habbo->get_isHabboLoggedIn()){
 			header('Location: '.$this->hotel->get_HotelUrl());
 		}else{
-			echo 'Show Login';
+			include 'web/account/login.view';	
 		}
+		exit;
 	}
 	
 	function disconnected(){
@@ -41,7 +42,7 @@ final class Account extends \Template\Controller{
 			echo 'Logout Page';
 		}else{
 			header('Location: '.$this->hotel->get_HotelUrl());
-		}		
+		}
 	}
 
 }

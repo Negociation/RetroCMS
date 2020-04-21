@@ -1,0 +1,284 @@
+body {
+	text-align: center;
+}
+
+.validation-failed {
+	border: 2px solid red;
+}
+
+#process-wrapper {
+    text-align: left;
+    margin: 9px auto;
+	width: 720px;
+}
+
+#process-wrapper p, #process-wrapper form {
+	margin: 0;
+}
+
+#process-wrapper hr {
+	margin-bottom: 1em;
+}
+
+#process-header {
+	height: 79px;
+	background: url(../images/process/top-l.gif) no-repeat;
+	position: relative;
+}
+
+#process-header-body {
+	height: 79px;
+	margin-left: 9px;
+	background: url(../images/process/top-r.gif) no-repeat top right;
+}
+
+#process-header-content {
+	padding: 5px 20px;
+}
+
+#habbologo {
+	position: relative;
+	background-image: url(../images/logos/habbo_logo_nourl.gif);
+	top: 0;
+	left: 0;
+}
+
+#retrologo {
+	position: relative;
+	background-image: url(../images/logos/retrocms_logo_nourl.gif);
+	width: 113px;
+	height: 41px;
+	top: 15px;
+	left: 5px;
+}
+
+#steps {
+	position: absolute;
+	right: 13px;
+	top: 49px;
+}
+
+div.processbox.left {
+	width: 345px;
+	float: left;
+	margin-right: 2px;
+}
+
+div.processbox.right {
+	width: 345px;
+	float: right;
+	margin-left: 2px;
+}
+
+div.content-column1 {
+	float: left;
+	width: 245px;
+}
+
+div.content-column2 {
+	float: right;
+	width: 430px;
+}
+
+#terms {
+	margin-bottom: 1em;
+	padding: 7px;
+	border: 1px solid black;
+	background-color: #FFC;
+	height: 150px;
+	overflow: auto;
+}
+
+div.frank {
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+
+/* --- bubble --- */
+
+div.bubble {
+    background-image: url(../images/register/bubble_tl.gif);
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+}
+
+div.bubble-body {
+	margin-left: 11px;
+	padding-top: 11px;
+	padding-right: 11px;
+	margin-bottom: 0;
+    background-image: url(../images/register/bubble_tr.gif );
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+div.bubble-bottom {
+	clear: both;
+    background-image: url(../images/register/bubble_bl.gif );
+    background-repeat: no-repeat;
+    background-position: top left;
+    margin-top: 0;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+div.bubble-bottom-body {
+	margin-left: 11px;
+    margin-top: 0;
+    background-image: url(../images/register/bubble_br.gif);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+
+/* --- registration and authentication --- */
+
+#registration-start {
+	text-align: center;
+}
+
+#registration-start #required-birthday {
+	margin-bottom: 1em;
+}
+
+#register-buttons {
+	margin-top: 1em;
+}
+
+#register-buttons-back {
+	float: left;
+}
+
+#register-buttons-continue {
+	float: right;
+}
+
+label.registration-text {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+input.registration-text {
+	width: 60%;
+}
+
+#registration-errors, #login-errors, #process-errors {
+	display: none;
+}
+
+div.field-status-ok, div.field-status-error {
+	padding-left: 14px;
+	background-position: 0 2px;
+	background-repeat: no-repeat;
+}
+
+div.field-status-ok {
+	background-image: url(../images/register/icon_ok.gif);
+}
+
+div.field-status-ok b {
+	color: #030;
+}
+
+div.field-status-error {
+	background-image: url(../images/register/icon_error.gif);
+}
+
+div.field-status-error b {
+	color: #600;
+}
+
+#pwStatus {
+	margin-bottom: 1em;
+}
+
+#pwTotal {
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+#login-form {
+	text-align: right;
+	background: url(../images/login/key.gif) no-repeat 6px 4px;
+	margin: 0;
+}
+
+#login-username, #login-password {
+	width: 125px;
+}
+
+div.processbox div.headline {
+	position: relative;
+}
+
+div.processbox div.headline a.exit {
+	position: absolute;
+	right: 15px;
+	text-transform: none;
+	color: white;
+}
+
+div.avatars {
+	clear: both;
+}
+
+div.avatar-wrapper {
+	margin: 0 14px 0 0;
+	float: left;
+}
+
+div.avatar-wrapper div.avatar-outer, div.avatar-wrapper div.avatar-outer div.content-beige,
+div.avatar-wrapper div.avatar-outer div.content-blue {
+	float: left;
+}
+
+div.avatar {
+	background-position: -6px -5px;
+	background-repeat: no-repeat;
+	width: 55px;
+	height: 102px;
+	float: left;
+}
+
+
+/* --- popup --- */
+
+body#popup {
+	background-image: none;
+	background-color: #47839D;
+	margin: 0;
+}
+
+body#popup #process-wrapper {
+	width: auto;
+	margin: 0;
+}
+
+body#popup #process-header {
+	height: 74px;
+	background: url(../images/process/top-popup.gif) no-repeat;
+	margin: 0;
+	padding: 0;
+}
+
+body#popup #process-header-content {
+	padding-top: 3px;
+}
+
+body#popup #outer, body#popup #outer-bottom {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+body#popup #steps {
+	top: 44px;
+}
+
+body#popup #process-header-body, 
+body#popup #outer, 
+body#popup #outer-content, 
+body#popup #outer-bottom, 
+body#popup #outer-bottom-content {
+	background: none;
+}

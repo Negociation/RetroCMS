@@ -1,0 +1,37 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.5.110 ( Aquamarine ) 				    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <title><?php echo $this->hotel->get_HotelName(); ?> ~ <?php echo $this->get_ViewTitle(); ?></title>
+		<!-- IMPORT LAYOUT CONTENT(CSS/JS) -->
+		<?php require_once('./web/includes/import/shared.import'); ?>
+		
+		<!-- IMPORT SPECIFIC CONTENT(CSS/JS) -->		
+		<?php require_once('./web/includes/import/process.import'); ?>
+		
+	</head>
+	<body>
+		<div id="overlay"></div>
+		<div id="process-wrapper">
+			<div id="process-header">
+				<div id="process-header-body">
+					<div id="process-header-content">
+						<div id="habbologo"><a href="<?php echo $this->hotel->get_HotelURL();?>"></a></div>
+					</div>	
+				</div>
+			</div>
