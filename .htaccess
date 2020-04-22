@@ -10,28 +10,45 @@
 #// Compatibility Version(s): [r14,r15,r16,r17]				//
 #//////////////////////////////////////////////////////////////
 
-#Rewrite Rules
+
+
+
+
+#Redirects
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-	Options -Indexes
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_URI} !-d
-	RewriteCond %{REQUEST_URI} !-f
-	RewriteRule ^c_images/(.*)$ /web/c_images/$1 [NC,L]
-	RewriteRule ^habboweb/(.*)$ /web/habboweb/$1 [NC,L]
 	RedirectMatch 301 ^/install/start /install/step/0 
 	RedirectMatch 301 ^/login /account/login
 	RedirectMatch 301 ^/logout /account/disconnected
-	RewriteCond %{REQUEST_URI} !\.(?:css|js|jpeg|gif|png)$ [NC]
-	RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
 
+#Rewrite for Web
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	Options -Indexes
+	RewriteRule ^c_images/(.*)$ /web/c_images/$1 [NC,L]
+	RewriteRule ^habboweb/(.*)$ /web/habboweb/$1 [NC,L]
+</IfModule>
 
 #Deny Access to certain file extensions
 <filesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|view|txt|json)$">
 	Order Allow,Deny
 	Deny from all
 </filesMatch>
+
+#Rewrite Rules
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	Options -Indexes
+	RewriteCond %{REQUEST_URI} !\.(?:css|js|jpeg|gif|png|dcr|cct|xml|swf)$ [NC]
+	RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+#CORS
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css|js|gif|png|jpe?g|svg|svgz|ico|webp|dcr|cct)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
 
 
