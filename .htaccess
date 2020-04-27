@@ -36,19 +36,22 @@
 	Deny from all
 </filesMatch>
 
+
+
 #Rewrite Rules
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	Options -Indexes
-	RewriteCond %{REQUEST_URI} !\.(?:css|js|jpeg|gif|png|dcr|cct|xml|swf)$ [NC]
+	RewriteCond %{REQUEST_URI} !\.(?:css|js|jpeg|gif|png|dcr|cct|xml|swf|ico)$ [NC]
 	RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
 
 #CORS
 <IfModule mod_headers.c>
-    <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css|js|gif|png|jpe?g|svg|svgz|ico|webp|dcr|cct)$">
+    <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css|js|gif|png|jpeg|svg|svgz|ico|webp|dcr|cct)$">
         Header set Access-Control-Allow-Origin "*"
     </FilesMatch>
 </IfModule>
+
 
 

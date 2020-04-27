@@ -11,11 +11,7 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
+//Extensions Import as Custom
 
-//Include Content 
-//Desc = TopBar Right (Habbo Logged In Status)
-echo "<td id=\"topbar-status\" class=\"".($this->habbo->get_isHabboLoggedIn() ? "loggedin" : "notloggedin" )."\">".($this->habbo->get_isHabboLoggedIn() ? '</span><b>'.$this->habbo->get_HabboName().'</b><span class="lang-topbar-status-loggedinAfter">, você esta no Habbo</span>' : '<x-lang id="lang-topbar-status-notLogged">Entre para acessar o Habbo</x-lang>')."</td>";
 
 ?>
-
-		

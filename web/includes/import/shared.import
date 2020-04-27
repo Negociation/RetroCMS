@@ -51,6 +51,8 @@ echo"
 			var habboImagerUrl = '/habbo-imaging/';
 			document.habboLoggedIn = ".(!$this->habbo->get_isHabboLoggedIn() ? 'true' : 'false').";
 			window.name = 'habboMain';
+			var XFoo = document.registerElement('x-lang');
+			document.body.appendChild(new XFoo());
 		</script>
 "."\n\t\t";;
 
@@ -58,5 +60,7 @@ echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/habbo.js'></script>"."\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/builder.js'></script>"."\n\t\t";
 
+//Extensions Import [DO NOT REMOVE]
+include(__DIR__.'./ext.import');
 
 ?>
