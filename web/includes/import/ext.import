@@ -85,9 +85,14 @@ var WORDS_EN = {
 	"month-10": "October",	
 	"month-11": "November",	
 	"month-12": "December",	
+	
+	//Navbar
+	"navbar-title-home": "home",
+	"navbar-title-home": "home",
+	
+	
 	  
 }
-
 
 function loadLanguageData(language){
 	//Validate HTML Content (x-lang TAG)

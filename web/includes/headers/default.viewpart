@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="text/html;charset=utf-8;IE=8" />
         <title><?php echo $this->hotel->get_HotelName(); ?> ~ <?php echo $this->get_ViewTitle(); ?></title>
 		
 		<!-- IMPORT LAYOUT CONTENT(CSS/JS) -->
@@ -96,7 +96,7 @@
 						</script>
 					</div>
 					<!-- CONTENT MENU INCLUDE -->
-					<?php include('./web/includes/content/content_mainmenu.viewpart'); ?>					
+					<?php include('./web/includes/content/navbar_content.viewpart'); ?>					
 				</div>
 			</div>	
 			<div id="main-content">

@@ -20,16 +20,19 @@
 					<div id="mainmenu">
 						<ul>
 						<?php 
-							foreach(array('') as $menuObject){
-							echo"
-							<li".((get_class($this) == 'Controller\Index') ? " id=\"active\"" : "").">
-								<span class=\"left\"></span>
-								<a href=\"".$this->hotel->get_HotelURL()."\">
-									<img src=\"".$this->hotel->get_HotelWeb()."/c_images/navi_icons/tab_icon_01_home.gif\" alt=\"\"/> 
-									<span class=\"lang-navbar-home\">Home</span>
-								</a>
-								<span class=\"right\"></span>
-							</li>";
+							$hotelPages = $this->hotel->get_HotelPages();
+							foreach($hotelPages as $pageObject){
+								if($pageObject->get_PageStatus() > -1){
+									echo"
+									<li".((get_class($this) == "Controller\\".$pageObject->get_PageController() && $pageObject->get_PageStatus() == 1 ) ? " id=\"active\"" : "").(($pageObject->get_PageStatus() == 0 ) ? " id=\"disabled\"" : "").(!next($hotelPages) ? " class=\"last\"" : '' ).">
+										<span class=\"left\"></span>
+										<a href=\"".(($pageObject->get_PageStatus() == 1 ) ? $this->hotel->get_HotelUrl()."/".$pageObject->get_PageUrl() : "#")."\">
+											<img src=\"".$this->hotel->get_HotelWeb()."/".$pageObject->get_PageIcon()."\" alt=\"\"/> 
+											<x-lang id=\"navbar-title-".$pageObject->get_PageTranslate()."\">".$pageObject->get_PageTitle()."</x-lang>
+										</a>
+										<span class=\"right\"></span>
+									</li>";
+								}
 							}
 						?>
 						</ul>

@@ -29,6 +29,8 @@ final class Hotel{
 	protected $hotelLayout = [];
 	protected $hotelConnection;
 	protected $hotelClient = [];
+	protected $hotelPages = [];
+	
 
 	//Default Construct Method
     function __construct(){
@@ -39,6 +41,9 @@ final class Hotel{
 		$this->hotelWeb = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
 		$this->hotelUrl = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
 		$this->hotelLayout = array($this->hotelWeb.'/habboweb/17/16/web-gallery/images/bg_patterns/habbo.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/hotelviews/web_view_bg_beta.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/logos/habbo_logo_nourl.gif');
+		
+		//Remove Later
+		array_push($this->hotelPages, new Page());
 	}
 	
 	function constructObject(){
@@ -79,6 +84,10 @@ final class Hotel{
 	public function get_HotelStatus(){
 		return $this->hotelStatus;
 	}
+	
+	public function get_HotelPages(){
+		return $this->hotelPages;
+	}
 		
 	public function get_HotelUrl(){
 		return $this->hotelUrl;
@@ -87,6 +96,7 @@ final class Hotel{
 	public function get_HotelWeb(){
 		return $this->hotelWeb;
 	}
+	
 	
 	
 }
