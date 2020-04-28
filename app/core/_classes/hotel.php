@@ -44,8 +44,14 @@ final class Hotel{
 		$this->hotelLayout = array($this->hotelWeb.'/habboweb/17/16/web-gallery/images/bg_patterns/habbo.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/hotelviews/web_view_bg_beta.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/logos/habbo_logo_nourl.gif');
 	}
 	
-	function constructObject($hotelAdvertisements,$hotelPages){
-			
+	function constructObject($hotelName,$hotelNick,$hotelVersion,$hotelWeb,$hotelUrl,$hotelAdvertisements,$hotelPages){
+		//Default Construct Data
+		$this->hotelName = $hotelName;
+		$this->hotelNick = $hotelNick;
+		$this->hotelVersion = $hotelVersion;
+		$this->hotelWeb = $hotelWeb;
+		$this->hotelUrl = $hotelUrl;
+		
 		//If GRPC Enabled set a rCon based on Hotel Object Info
 		$this->hotelConnection = ( extension_loaded("grpc") !== null && extension_loaded("grpc") ) ? new RemoteConnection(['host' => '127.0.0.1','port' => 12309]) : false;
 			

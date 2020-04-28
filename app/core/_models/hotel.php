@@ -28,8 +28,6 @@ final class Hotel extends \Template\Model{
 
 	public function get_HotelObject(){
 
-		//Empty Hotel Object
-		$hotelObject = new \CLR\Hotel();
 		
 		//Empty Advertisement Array
 		$advertisementArray = [];
@@ -52,7 +50,13 @@ final class Hotel extends \Template\Model{
 			}
 		}
 		
-		$hotelObject->constructObject($advertisementArray,$pagesArray);
+
+		//Empty Hotel Object
+		$hotelObject = new \CLR\Hotel();
+		$queryResult = $this->getAll('web_settings');
+		if (true){
+			$hotelObject->constructObject($queryResult[0]['value'],$queryResult[1]['value'],$queryResult[2]['value'],$queryResult[3]['value'],$queryResult[4]['value'],$advertisementArray,$pagesArray);
+		}
 		
 		return $hotelObject;
 	}

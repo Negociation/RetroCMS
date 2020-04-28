@@ -20,7 +20,7 @@ namespace Template;
 
 use PDO;
 use CLR;
-class Model{
+class Model extends \Template\Shared{
 	
 	protected $hotelConection;
 	

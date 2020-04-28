@@ -46,7 +46,25 @@ final class Account extends \Template\Controller{
 	
 	function submit(){
 		if($_SERVER['REQUEST_METHOD'] == 'POST' && !$this->habbo->get_isHabboLoggedIn()){
-			echo 'Submiting Data';
+			
+			//Recieve the result of habbo login
+			$requestStatus = $this->habboModel->set_HabboLogin(array(isset($_POST['login-username']) ? $_POST['login-username'] : '',isset($_POST['login-password']) ? $_POST['login-password'] : ''));
+
+			if ($requestStatus[0]){	
+				switch($requestStatus[0]){
+					case 1:
+						header('Location: '.$this->hotel->get_HotelUrl());
+					break;
+					case 2:
+					echo 'Password Wrong';
+					break;
+					case 3:
+					echo 'BANNED';
+					break;
+				}
+			}else{
+				echo 'Something invalid';
+			}
 		}else{
 			header('Location: '.$this->hotel->get_HotelUrl());
 		}
@@ -55,6 +73,7 @@ final class Account extends \Template\Controller{
 	function disconnected(){
 		//Habbo is Logged destroy session
 		if($this->habbo->get_isHabboLoggedIn()){
+			 $this->habbo->set_HabboLogout();
 			include 'web/account/disconnected.view';	
 		}else{
 			header('Location: '.$this->hotel->get_HotelUrl());

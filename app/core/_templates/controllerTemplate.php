@@ -46,7 +46,10 @@ class Controller{
 		
 		//Check if Habbo is Logged In 
 		if($habboId = $this->habboModel->get_SessionStatus($this->habbo->get_habboSession())){
-			$this->habbo = $this->habboModel->get_HabboById($habboId);
+			$this->habbo = $this->habboModel->get_HabboObject(1,$habboId);
+			$this->habbo->set_isHabboLoggedIn(true);
+		}else{
+			$this->habbo->set_isHabboLoggedIn(false);
 		}
 				
 		//Intercept MVC Requests based on some conditions (Version | Rank | Hotel Status)
