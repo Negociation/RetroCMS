@@ -23,15 +23,15 @@ require_once('./web/includes/headers/account.viewpart');
 						<div class="headline">
 							<div class="headline-content">
 								<div class="headline-wrapper">
-									<h2><span class="lang-login-headline-wrapperLeft">Primeira vez no Habbo? Registre-se.</span></h2>
+									<h2><x-lang id="account-login-headerLeft">Primeira vez no Habbo? Registre-se.</x-lang></h2>
 								</div>
 							</div>
 						</div>
 						<div class="content-top">
 							<div class="content">
 								<div class="processbox-inner">
-									<h4><span class="lang-login-content-subheaderLeft">Primeira vez? Registre-se aqui!</span></h4>
-									<p><img vspace="10" hspace="10" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album209/frank_with_key.gif" alt="" ><span class="lang-login-content-contentLeft">Habbo é uma comunidade que te permite criar seu próprio espaço virtual para si e teus amigos. Mais de um milhão de Habbos já se registraram (já pensou?). Então, há muito para se fazer aí dentro.</span><br/><br/><br/><br/></p>
+									<h4><x-lang id="account-login-registerHeader">Primeira vez? Registre-se aqui!</x-lang></h4>
+									<p><img vspace="10" hspace="10" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album209/frank_with_key.gif" alt="" ><x-lang id="account-login-registerContent">Habbo é uma comunidade que te permite criar seu próprio espaço virtual para si e teus amigos. Mais de um milhão de Habbos já se registraram (já pensou?). Então, há muito para se fazer aí dentro.</x-lang><br/><br/><br/><br/></p>
 								</div>
 								<div id="registration-errors">
 									<div class="content-red">
@@ -50,7 +50,7 @@ require_once('./web/includes/headers/account.viewpart');
 											<div class="content-white-content">
 												<form method="post" action="<?php echo $this->hotel->get_HotelURL(); ?>/register/start" id="registration-form">
 													<p>
-														<label for="day" class="registration-text"><span class="lang-login-content-registrationText">Por favor, comece pela data de nascimento</span></label>
+														<label for="day" class="registration-text"><x-lang id="account-login-registerBirthHeader">Por favor, comece pela data de nascimento</x-lang></label>
 													</p>
 													<div id="required-birthday">
 														<select name="day" id="day" class="dateselector">
@@ -89,18 +89,18 @@ require_once('./web/includes/headers/account.viewpart');
 														</select>
 														<select name="month" id="month" class="dateselector">
 															<option value="">--</option>
-															<option id="lang-month-1" value="1">Janeiro</option>
-															<option id="lang-month-2" value="2">Fevereiro</option>
-															<option id="lang-month-3" value="3">Março</option>
-															<option id="lang-month-4" value="4">Abril</option>
-															<option id="lang-month-5" value="5">Maio</option>
-															<option id="lang-month-6" value="6">Junho</option>
-															<option id="lang-month-7" value="7">Julho</option>
-															<option id="lang-month-8" value="8">Agosto</option>
-															<option id="lang-month-9" value="9">Setembro</option>
-															<option id="lang-month-10" value="10">Outubro</option>
-															<option id="lang-month-11" value="11">Novembro</option>
-															<option id="lang-month-12" value="12">Dezembro</option>
+															<option id="month-1" value="1">Janeiro</option>
+															<option id="month-2" value="2">Fevereiro</option>
+															<option id="month-3" value="3">Março</option>
+															<option id="month-4" value="4">Abril</option>
+															<option id="month-5" value="5">Maio</option>
+															<option id="month-6" value="6">Junho</option>
+															<option id="month-7" value="7">Julho</option>
+															<option id="month-8" value="8">Agosto</option>
+															<option id="month-9" value="9">Setembro</option>
+															<option id="month-10" value="10">Outubro</option>
+															<option id="month-11" value="11">Novembro</option>
+															<option id="month-12" value="12">Dezembro</option>
 														</select>
 														<select name="year" id="year" class="dateselector">
 															<option value="">--</option>
@@ -225,7 +225,7 @@ require_once('./web/includes/headers/account.viewpart');
 													</script>
 													<p class="last">
 														<input type="hidden" name="required-birth" id="required-birth" />
-														<input type="submit" value="Continuar" onmousedown="MergeData()" class="process-button" id="registration-submit"/></span>
+														<input type="submit" value="Continuar" onsubmit="MergeData()" class="process-button" id="account-login-registerSubmit"/></span>
 													</p>
 												</form>
 											</div>
@@ -240,13 +240,13 @@ require_once('./web/includes/headers/account.viewpart');
 								<div class="processbox-inner">
 									</br>
 									<p><img vspace="0" hspace="0" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album109/reindeer_1_small.gif" alt=""><br/>
-										<span class="lang-login-content-reistrationReason" style="font-weight: bold;">Razões para registrar-se:</span><br/>
+										<span style="font-weight: bold;"><x-lang id="account-login-registerReasonsHeader">Razões para registrar-se:<x-lang></span><br/>
 									<ul>
-										<li><span class="lang-login-content-registerReason1">Criar seu próprio Habbo e página pessoal</span></li>
-										<li><span class="lang-login-content-registerReason2">Encontrar seus amigos e fazer novas amizades</span></li>
-										<li><span class="lang-login-content-registerReason3">Decorar seu próprio Quarto</span></li>
-										<li><span class="lang-login-content-registerReason4">É muito divertido mesmo</span></li>
-										<li><span class="lang-login-content-registerReason5">É gratuito</span><br/></li>
+										<x-lang id="account-login-registerReason1"><li>Criar seu próprio Habbo e página pessoal</li></x-lang>
+										<x-lang id="account-login-registerReason2"><li>Encontrar seus amigos e fazer novas amizades</li></x-lang>
+										<x-lang id="account-login-registerReason3"><li>Decorar seu próprio Quarto</li></x-lang>
+										<x-lang id="account-login-registerReason4"><li>É muito divertido mesmo</li></x-lang>
+										<x-lang id="account-login-registerReason5"><li>É gratuito</li></x-lang><br/>
 									</ul>
 									</p>
 								</div>
@@ -261,7 +261,7 @@ require_once('./web/includes/headers/account.viewpart');
 						<div class="headline">
 							<div class="headline-content">
 								<div class="headline-wrapper">
-									<h2><span class="lang-login-headline-wrapperRight">Já é um Habbo? Entre!</span></h2>
+									<h2><x-lang id="account-login-headerRight">Já é um Habbo? Entre!</x-lang></h2>
 								</div>
 							</div>
 						</div>
@@ -269,7 +269,7 @@ require_once('./web/includes/headers/account.viewpart');
 							<div class="content">
 								<div class="processbox-inner">
 									<p>
-										<span class="lang-login-content-subheaderRight">Já é registrado? Entre aqui.</span><br/><span class="lang-login-content-contentRight">Se você já possui conta no Habbo, entre aqui usando seu nome Habbo e senha (os mesmo que você usa no Hotel).</span><br/><br/>
+										<x-lang id="account-login-subheaderRight">Já é registrado? Entre aqui.<br/></x-lang><x-lang id="account-login-content">Se você já possui conta no Habbo, entre aqui usando seu nome Habbo e senha (os mesmo que você usa no Hotel).</x-lang><br/><br/>
 									</p>
 								</div>
 								
@@ -290,18 +290,18 @@ require_once('./web/includes/headers/account.viewpart');
 													<?php if(isset($_GET['target'])){ echo '<input type="hidden" name="target" value="'.$_GET['target'].'"/>'; } ?>
 													<input type="hidden" name="service" value="/security_check"/>
 													<p>
-														<label for="login-username" class="registration-text"><span class="lang-login-content-holderUser">Meu nome Habbo</span></label>
+														<label for="login-username" class="registration-text"><x-lang id="account-login-labelUsername">Meu nome Habbo</x-lang></label>
 														<input type="text" class="required-username" name="login-username" id="login-username" value=""/>
 													</p>
 													<script type="text/javascript" language="JavaScript">
 														$("login-username").focus();
 													</script>
 													<p>
-														<label for="login-password" class="registration-text"><span class="lang-login-content-holderPassword">Senha</span></label>
+														<label for="login-password" class="registration-text"><x-lang id="account-login-labelPassword">Senha</x-lang></label>
 														<input type="password" class="required-password" name="login-password" id="login-password" value=""/>
 													</p>
 													<p class="last">
-														<input type="submit" value="Entre" class="process-button" id="lang-login-content-loginSubmit"/>
+														<input type="submit" value="Entre" class="process-button" id="account-login-loginSubmit">
 													</p>
 												</form>
 											</div>
@@ -314,11 +314,11 @@ require_once('./web/includes/headers/account.viewpart');
 								</div>
 								<div class="processbox-inner">
 									<p>
-										<br style="font-weight: bold;"/><span style="font-weight: bold;" class="lang-login-content-loginForgotTitle"> Esqueceu a senha?</span><br/><br/><span class="lang-login-content-loginForgotContent">Se você esqueceu sua senha, entre em contato com o Suporte usando a </span><a href="http://web.archive.org/web/20070613213428/http://www.habbohotel.com.br/iot/go?lang=pt_BR&amp;country=br" target="_blank"><span class="lang-login-content-loginForgotContentURL">Ferramenta de Ajuda Habbo</span></a>.<br/><br/>
+										<br style="font-weight: bold;"/><span style="font-weight: bold;"><x-lang id="account-login-forgottenPassHeader">Esqueceu a senha?</x-lang></span><br/><br/><x-lang id="account-login-forgottenPassContent">Se você esqueceu sua senha, entre em contato com o Suporte usando a <a href="<?php echo $this->hotel->get_HotelUrl(); ?>/iot/go?lang=pt_BR&amp;country=br" target="_blank">Ferramenta de Ajuda Habbo</a>.</x-lang><br/><br/>
 									</p>
-									<h4><span class="lang-login-content-loginSafetyTitle">PARA SUA SEGURANÇA</span></h4>
+									<h4><x-lang id="account-login-safetyHeader">PARA SUA SEGURANÇA</x-lang></h4>
 									<p>
-										<img vspace="10" hspace="9" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album209/encryption_pc_ie.gif?h=e4fc37398b1a546726f6e1e4694c8035" alt=""><span class="lang-login-content-loginSafetyContent">O Habbo é criptografado para proteger todos os seus dados. Para saber se a página é segura, olha no Cadeado que aparece embaixo, na janela do seu navegador (por exemplo, Internet Explorer e Firefox).</span><br/><br/><br/>
+										<img vspace="10" hspace="9" border="0" align="right" src="<?php echo $this->hotel->get_HotelWeb(); ?>/c_images/album209/encryption_pc_ie.gif?h=e4fc37398b1a546726f6e1e4694c8035" alt=""><x-lang id="account-login-safetyContent">O Habbo é criptografado para proteger todos os seus dados. Para saber se a página é segura, olha no Cadeado que aparece embaixo, na janela do seu navegador (por exemplo, Internet Explorer e Firefox).</x-lang><br/><br/><br/>
 									</p>
 								</div>
 								<div class="clear"></div>
@@ -338,7 +338,7 @@ require_once('./web/includes/headers/account.viewpart');
 								$("required-birthday").className = "validation-failed";
 								Event.stop(e);
 							} else {
-								$("registration-submit").disabled = 'true';
+								$("account-login-registerSubmit").disabled = 'true';
 							}
 						}, false);
 						
