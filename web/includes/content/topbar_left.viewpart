@@ -14,7 +14,7 @@
 
 //Include Content 
 //Desc = TopBar Left (Users Online / Hotel Offline)
-echo "<td id='topbar-count'>".($this->hotel->get_HotelStatus() ? "<x-lang id='topbar-online'>0</x-lang> <span class='lang-topbar-count'>Habbos no Hotel</span>":" <span class='lang-topbar-offline'>Hotel Offline</span> ")."</td>";
+echo "<td id='topbar-count'>".($this->hotel->get_HotelStatus() ? '0 <x-lang id="topbar-online">Habbos no Hotel</x-lang>':'<x-lang id="topbar-offline">Hotel Offline</x-lang>')."</td>";
 
 
 ?>

@@ -16,7 +16,7 @@
 if($this->habbo->get_isHabboLoggedIn()){ 
 	echo'
 									<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?figure='.$this->habbo->get_HabboFigure().'&size=b&action=wav,&direction=3&head_direction=3&gesture=sml&size=m" alt="" class="tabmenu-image" style="margin-right: 5px; margin-right: 0px;"/>
-									<h3 style=""><span class="lang-topbar-myhabbo-content-loggedinBefore">Bem Vindo </span> '.$this->habbo->get_HabboName().' <span class="lang-topbar-myhabbo-content-loggedinAfter"> ao Habbo</span></h3>
+									<h3 style=""><x-lang id="topbar-myhabbo-headerLoggedIn" constant="'.$this->habbo->get_HabboName().'">Bem Vindo '.$this->habbo->get_HabboName().' ao Habbo</x-lang></h3>
 									<div class="tabmenu-inner-content">
 										<p>
 											<a href="'.$this->hotel->get_HotelURL().'/client" class="arrow" target="client" onclick="openOrFocusHabbo(this); return false;"><span class="lang-topbar-myhabbo-inner-client">Entrar no Habbo Hotel</span></a> 
@@ -32,13 +32,13 @@ if($this->habbo->get_isHabboLoggedIn()){
 	}else{
 		echo '
 									<img src="'.$this->hotel->get_HotelWeb().'/habboweb/17/16/web-gallery/images/top_bar/myhabbo_frank.gif" alt="" width="60" height="85" class="tabmenu-image"/>
-									<h3><span class="lang-topbar-myhabbo-content-notLoggedin">Olá! Por favor, entre ou registre-se</span></h3>
+									<h3><x-lang id="topbar-myhabbo-headerNotLoggedIn">Olá! Por favor, entre ou registre-se</x-lang></h3>
 									<div class="tabmenu-inner-content">
 										<p>
-											<a href="'.$this->hotel->get_HotelURL().'/login" class="colorlink orange" style="margin-left: 0px; margin-right: 2px;"><span class="lang-topbar-myhabbo-inner-register">Registre-se, é gratuito</span></a>
+											<a href="'.$this->hotel->get_HotelURL().'/login" class="colorlink orange" style="margin-left: 0px; margin-right: 2px;"><span><x-lang id="topbar-myhabbo-inner-register">Registre-se, é gratuito</x-lang></span></a>
 										</p>
 										<p>
-											<a href="'.$this->hotel->get_HotelURL().'/login" class="colorlink orange last" style="margin-left: 0px; margin-right: 2px;"><span class="lang-topbar-myhabbo-inner-login">Entre</span></a>
+											<a href="'.$this->hotel->get_HotelURL().'/login" class="colorlink orange last" style="margin-left: 0px; margin-right: 2px;"><span><x-lang id="topbar-myhabbo-inner-login">Entre</x-lang></span></a>
 										</p>
 									</div>';
 }

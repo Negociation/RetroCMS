@@ -15,3 +15,68 @@
 
 
 ?>
+
+
+<script>
+
+var WORDS_EN = {
+	//Topbar
+	"topbar-offline" : "Hotel Offline",
+	"topbar-status-loggedIn" : "Logged in as <b>%data%</b>", 
+	"topbar-status-notLoggedIn" : "Not logged in",
+
+	//TopBar -> My Habbo Tab
+	"topbar-myhabbo" : "My Habbo",
+	"topbar-myhabbo-headerNotLoggedIn" : "Welcome! Please sign in or register",
+	  "topbar-myhabbo-inner-login" : "Sign In",
+	  "topbar-myhabbo-inner-register" : "Register Now, it's free!",
+	  "topbar-myhabbo-inner-client" : "Enter Habbo Hotel",
+	  "topbar-myhabbo-inner-home" : "View your Habbo Home Page",
+	  "topbar-myhabbo-inner-profile" : "Edit Your Settings",
+	  "topbar-myhabbo-inner-logout" : "Sign Out",
+
+	//TopBar -> My Credits Tab
+	"topbar-mycredits" : "My Coins",
+	"topbar-mycredits-headerNotLoggedIn" : "Please <a href='"+habboReqPath+"/login'>enter</a> to see your balance",
+	"topbar-mycredits-inner-buy" : "Buy More Coins",
+	"topbar-mycredits-inner-redeem" : "Redeem a Coin or Furni Code",
+	
+	  
+	//TopBar -> My Club Tab
+	"topbar-habboclub" : "Habbo Club",
+	"topbar-habboclub-headerNotLoggedIn" : "Please <a href='"+habboReqPath+"/login'>enter</a> to see your Club status",
+	"topbar-habboclub-inner-about": "Habbo Club gives you access to the full benefits on Habbo Hotel.",
+	"topbar-habboclub-inner-club" : "Latest News on Habbo Club",
+
+}
+
+
+function loadLanguageData(language){
+	jLibrary('x-lang').each(function(){  
+		let constantElements = [];
+		//If Id exists and a respective Language Tag 
+		if( this.hasAttribute("id") && typeof(window["WORDS_"+language][this.getAttribute("id")]) !== 'undefined'){
+			
+			if ( this.hasAttribute("constant")){ constantElements = this.getAttribute("constant").split(','); }
+				let replacementText = window["WORDS_"+language][this.getAttribute("id")];
+				constantElements.each(function(value){
+					replacementText = replacementText.replace('%data%',value);
+				});	
+				
+				//Replace with the new Language Markeup
+				jLibrary(this).html(replacementText);
+		}
+	});
+}
+
+function initializeLanguageManager(){
+	loadLanguageData('EN');
+}
+
+
+window.onload = function(){
+	initializeLanguageManager();
+}
+</script>
+
+		

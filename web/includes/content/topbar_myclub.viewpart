@@ -19,7 +19,11 @@ if($this->habbo->get_isHabboLoggedIn()){
 			';
 		}else{
 			echo'
-						<h3><span class="lang-topbar-habboclub-content-loggedinBefore">Você possui</span> '.$this->habbo->get_HabboClub(2).' <span class="lang-topbar-habboclub-content-loggedinAfter">dias restantes no Habbo Clube</span></h3>';	
+						<h3> <x-lang id="lang-topbar-habboclub-status"> 
+						
+						
+						
+						<span class="lang-topbar-habboclub-content-loggedinBefore">Você possui</span> '.$this->habbo->get_HabboClub(2).' <span class="lang-topbar-habboclub-content-loggedinAfter">dias restantes no Habbo Clube</span></h3>';	
 		}
 		echo'					
 						<div class="tabmenu-inner-content">
@@ -32,17 +36,16 @@ if($this->habbo->get_isHabboLoggedIn()){
 						</div>'; 
 }else{
 	echo '
-									<h3><span class="lang-topbar-habboclub-content-notloggedinBefore">Por favor,</span> <a href="'.$this->hotel->get_HotelWeb().'/login"><span class="lang-sign">entre</span></a> <span class="lang-topbar-habboclub-content-notloggedinAfter">para ver suas informações do Habbo Club</span></h3>
+									<h3><x-lang id="topbar-habboclub-headerNotLoggedIn">Por favor, <a href="'.$this->hotel->get_HotelWeb().'/login">entre</a> para ver suas informações do Habbo Club</x-lang></h3>
 									<div class="tabmenu-inner-content">
 										<p>
-											<span class="lang-topbar-habboclub-inner-about">Habbo Club te dá os melhores benefícios</span>
+											<x-lang id="topbar-habboclub-inner-about">Habbo Club te dá os melhores benefícios</x-lang>
 											
 										</p>
 										<p>
-											<a href="'.$this->hotel->get_HotelWeb().'/tab/habboclub" class="arrow"><span class="lang-topbar-habboclub-inner-club">Últimas Notícias</span></a>
+											<a href="'.$this->hotel->get_HotelWeb().'/tab/habboclub" class="arrow"><x-lang id="topbar-habboclub-inner-club">Últimas Notícias</x-lang></a>
 										</p>
 									</div>';
 }
-
 ?>
 

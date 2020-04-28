@@ -14,7 +14,7 @@
 
 //Include Content 
 //Desc = TopBar Right (Habbo Logged In Status)
-echo "<td id=\"topbar-status\" class=\"".($this->habbo->get_isHabboLoggedIn() ? "loggedin" : "notloggedin" )."\">".($this->habbo->get_isHabboLoggedIn() ? '</span><b>'.$this->habbo->get_HabboName().'</b><span class="lang-topbar-status-loggedinAfter">, você esta no Habbo</span>' : '<x-lang id="lang-topbar-status-notLogged">Entre para acessar o Habbo</x-lang>')."</td>";
+echo "<td id=\"topbar-status\" class=\"".($this->habbo->get_isHabboLoggedIn() ? "loggedin" : "notloggedin" )."\">".($this->habbo->get_isHabboLoggedIn() ? '<x-lang id="topbar-status-loggedIn" constant="'.$this->habbo->get_HabboName().'"><b>'.$this->habbo->get_HabboName().'</b>, você esta no Habbo </x-lang>' : '<x-lang id="topbar-status-notLoggedIn">Entre para acessar o Habbo</x-lang>')."</td>";
 
 ?>
 
