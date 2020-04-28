@@ -55,7 +55,7 @@ final class Account extends \Template\Controller{
 	function disconnected(){
 		//Habbo is Logged destroy session
 		if($this->habbo->get_isHabboLoggedIn()){
-			echo 'Logout Page';
+			include 'web/account/disconnected.view';	
 		}else{
 			header('Location: '.$this->hotel->get_HotelUrl());
 		}

@@ -105,6 +105,11 @@ var WORDS_EN = {
 	"notFound-headline": "PAGE NOT FOUND",	
 	"notFound-Title": "PAGE NOT FOUND",	
 	"notFound-Content": "We're sorry, but the page you have requested cannot be found. Perhaps it's lost, or it might have run off... OR, Kedo might have thought it was a Twinkie and eaten it!.<br><br>Please try typing the URL again, if that doesn't work visit the Home Page and click the links to find the page you're looking for...<br><br>If you have come to this page from the Hotel after clicking 'Buy Credits' then please, <a href=\""+habboReqPath+"/credits\" target=\"_self\">Click Here</a>.<br><br><br>",
+	
+	//Logout
+	"logout-header": "Logged out",
+	"logout-content": "You have logged out succesfully.<br><br>Goodbye, and we hope you come back soon!<br/><br/><a href=\""+habboReqPath+"\" target=\"_self\">Sign in again</a>",
+	
 	  
 }
 
