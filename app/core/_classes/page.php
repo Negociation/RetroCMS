@@ -28,13 +28,13 @@ final class Page{
 	
 
 	//Default Construct Method
-    function __construct(){
-		$this->pageTitle = 'TESTE';
-		$this->pageController = 'Index';
-		$this->pageTranslate = "home";
-		$this->pageStatus = 1;
-		$this->pageUrl = "";
-		$this->pageIcon = "c_images/navi_icons/tab_icon_01_home.gif";
+    function __construct($pageTitle,$pageTranslate,$pageController,$pageStatus,$pageUrl,$pageIcon){
+		$this->pageTitle = $pageTitle;
+		$this->pageController = $pageController;
+		$this->pageTranslate = $pageTranslate;
+		$this->pageStatus = $pageStatus;
+		$this->pageUrl = $pageUrl;
+		$this->pageIcon = $pageIcon;
 	
 	}
 	

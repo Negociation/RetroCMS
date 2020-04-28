@@ -40,10 +40,8 @@ final class Hotel{
 		$this->hotelNick = 'Retro';		
 		$this->hotelWeb = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
 		$this->hotelUrl = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
+		$this->hotelPages = array(new Page('HOME','home','Index',1,"","c_images/navi_icons/tab_icon_01_home.gif"));
 		$this->hotelLayout = array($this->hotelWeb.'/habboweb/17/16/web-gallery/images/bg_patterns/habbo.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/hotelviews/web_view_bg_beta.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/logos/habbo_logo_nourl.gif');
-		
-		//Remove Later
-		array_push($this->hotelPages, new Page());
 	}
 	
 	function constructObject(){
