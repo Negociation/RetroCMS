@@ -51,7 +51,7 @@
 
 #CORS
 <IfModule mod_headers.c>
-    <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css|js|gif|png|jpeg|svg|svgz|ico|webp|dcr|cct)$">
+    <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css|js|gif|png|jpeg|svg|svgz|webp|dcr|cct)$">
         Header set Access-Control-Allow-Origin "*"
     </FilesMatch>
 </IfModule>

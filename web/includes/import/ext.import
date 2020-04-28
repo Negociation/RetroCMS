@@ -99,7 +99,13 @@ var WORDS_EN = {
 	
 	//Navbar
 	"navbar-title-home": "home",
-	"navbar-title-home": "home",
+	"navbar-title-hotel": "hotel",
+	"navbar-title-community": "community",
+	"navbar-title-games": "games",
+	"navbar-title-credits": "coins",
+	"navbar-title-club": "habbo club",
+	"navbar-title-groups": "groups",
+	"navbar-title-help": "help",
 	
 	//404
 	"notFound-headline": "PAGE NOT FOUND",	

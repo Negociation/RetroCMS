@@ -35,12 +35,11 @@ class Controller{
 		$this->bodyId = 'home';
 		
 		//Default Models
-		//$this->hotelModel = ;
+		$this->hotelModel = new \Model\Hotel($hotelConection);
 		$this->habboModel = new \Model\Habbo($hotelConection);
 		
-		//Default Hotel Object (REMOVE)
-		$this->hotel = new \CLR\Hotel();	
-		$this->hotel->constructObject();
+		//Default Hotel Object
+		$this->hotel = $this->hotelModel->get_HotelObject();
 		
 		//Current Habbo Object
 		$this->habbo = new \CLR\Habbo();

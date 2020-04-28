@@ -40,17 +40,18 @@ final class Hotel{
 		$this->hotelNick = 'Retro';		
 		$this->hotelWeb = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
 		$this->hotelUrl = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
-		$this->hotelPages = array(new Page('HOME','home','Index',1,"","c_images/navi_icons/tab_icon_01_home.gif"));
+		$this->hotelPages = array(new Page(0,'HOME','home','Index',1,"","c_images/navi_icons/tab_icon_01_home.gif"));
 		$this->hotelLayout = array($this->hotelWeb.'/habboweb/17/16/web-gallery/images/bg_patterns/habbo.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/hotelviews/web_view_bg_beta.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/logos/habbo_logo_nourl.gif');
 	}
 	
-	function constructObject(){
+	function constructObject($hotelAdvertisements,$hotelPages){
 			
 		//If GRPC Enabled set a rCon based on Hotel Object Info
 		$this->hotelConnection = ( extension_loaded("grpc") !== null && extension_loaded("grpc") ) ? new RemoteConnection(['host' => '127.0.0.1','port' => 12309]) : false;
 			
 		//Check if Hotel is Online/Offline
 		$this->hotelStatus = (is_resource(@fsockopen('127.0.0.1', 12309))) ? true : false;
+		$this->hotelPages = array_merge($this->hotelPages,$hotelPages);
     }
 	
 	

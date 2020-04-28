@@ -18,7 +18,7 @@
 namespace CLR;
 
 final class Page{
-	
+	protected $pageId;
 	protected $pageTitle;
 	protected $pageStatus;
 	protected $pageController;
@@ -28,14 +28,14 @@ final class Page{
 	
 
 	//Default Construct Method
-    function __construct($pageTitle,$pageTranslate,$pageController,$pageStatus,$pageUrl,$pageIcon){
+    function __construct($pageId,$pageTitle,$pageTranslate,$pageController,$pageStatus,$pageUrl,$pageIcon){
+		$this->pageId = $pageId;
 		$this->pageTitle = $pageTitle;
 		$this->pageController = $pageController;
 		$this->pageTranslate = $pageTranslate;
 		$this->pageStatus = $pageStatus;
 		$this->pageUrl = $pageUrl;
 		$this->pageIcon = $pageIcon;
-	
 	}
 	
 	/* GETS */
