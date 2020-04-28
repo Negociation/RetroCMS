@@ -20,6 +20,11 @@
 <script>
 
 var WORDS_EN = {
+	
+	
+	//
+	// Shared
+	//
 	//Topbar
 	"topbar-offline" : "Hotel Offline",
 	"topbar-status-loggedIn" : "Logged in as <b>%data%</b>", 
@@ -48,7 +53,12 @@ var WORDS_EN = {
 	"topbar-habboclub-inner-about": "Habbo Club gives you access to the full benefits on Habbo Hotel.",
 	"topbar-habboclub-inner-club" : "Latest News on Habbo Club",
 	
-	//Account 
+	//--------------------------------------------------------------------------------------------------------------
+	// Account
+	//--------------------------------------------------------------------------------------------------------------
+	
+	//Page: Login
+		
 	"account-login-headerLeft" : "NEW TO HABBO? REGISTER HERE!",
 	"account-login-registerHeader" : "REGISTER NOW!",
 	"account-login-registerContent" : "Habbo is an online community that lets you create your own virtual space for you and your friends. With thousands of members already checked in there's always something to do...", 
@@ -72,6 +82,7 @@ var WORDS_EN = {
 	"account-login-safetyHeader": "SECURITY INFORMATION",   
 	"account-login-safetyContent": "The real Habbo site is encrypted to protect you and your data. You can check whether or not this site is encrypted by looking for the nice looking padlock at the bottom of your web browser.",
 
+
 	//Months
 	"month-1": "Janaury",
 	"month-2": "February",
@@ -90,7 +101,10 @@ var WORDS_EN = {
 	"navbar-title-home": "home",
 	"navbar-title-home": "home",
 	
-	
+	//404
+	"notFound-headline": "PAGE NOT FOUND",	
+	"notFound-Title": "PAGE NOT FOUND",	
+	"notFound-Content": "We're sorry, but the page you have requested cannot be found. Perhaps it's lost, or it might have run off... OR, Kedo might have thought it was a Twinkie and eaten it!.<br><br>Please try typing the URL again, if that doesn't work visit the Home Page and click the links to find the page you're looking for...<br><br>If you have come to this page from the Hotel after clicking 'Buy Credits' then please, <a href=\""+habboReqPath+"/credits\" target=\"_self\">Click Here</a>.<br><br><br>",
 	  
 }
 
