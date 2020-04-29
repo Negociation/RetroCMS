@@ -57,7 +57,7 @@ final class Habbo extends \Template\Model{
 		if($resultQuery){
 			//Empty Habbo Object
 			$habboObject = new \CLR\Habbo();
-			$habboObject->constructObject($resultQuery['id'],$resultQuery['username'],$resultQuery['password'],$resultQuery['rank']);
+			$habboObject->constructObject($resultQuery['id'],$resultQuery['username'],$resultQuery['password'],$resultQuery['rank'],$resultQuery['credits']);
 			return $habboObject;
 		}else{
 			return false;
@@ -74,7 +74,7 @@ final class Habbo extends \Template\Model{
 		
 		//If found the habbo
 		if(count($resultQuery) == 1){
-				$habboObject->constructObject($resultQuery[0]['id'],$resultQuery[0]['username'],$resultQuery[0]['password'],$resultQuery[0]['rank']);
+				$habboObject->constructObject($resultQuery[0]['id'],$resultQuery[0]['username'],$resultQuery[0]['password'],$resultQuery[0]['rank'],$resultQuery[0]['credits']);
 				if(!$this->validatePassword($habboCredentials[1],$habboObject->get_HabboPassword())){
 					return array(3);
 				}else if($habboObject->get_HabboRank() == 0){
@@ -91,7 +91,7 @@ final class Habbo extends \Template\Model{
 	}
 	
 		
-	private function set_HabboTicket($type,$habboObject){
+	public function set_HabboTicket($type,$habboObject){
 		switch($type){
 			
 			//Set Login ticket on site_sessions

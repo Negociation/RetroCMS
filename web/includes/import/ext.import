@@ -33,12 +33,13 @@ var WORDS_EN = {
 	//TopBar -> My Habbo Tab
 	"topbar-myhabbo" : "My Habbo",
 	"topbar-myhabbo-headerNotLoggedIn" : "Welcome! Please sign in or register",
-	  "topbar-myhabbo-inner-login" : "Sign In",
-	  "topbar-myhabbo-inner-register" : "Register Now, it's free!",
-	  "topbar-myhabbo-inner-client" : "Enter Habbo Hotel",
-	  "topbar-myhabbo-inner-home" : "View your Habbo Home Page",
-	  "topbar-myhabbo-inner-profile" : "Edit Your Settings",
-	  "topbar-myhabbo-inner-logout" : "Sign Out",
+	"topbar-myhabbo-headerLoggedIn" : "Welcome! %data%",
+	"topbar-myhabbo-inner-login" : "Sign In",
+	"topbar-myhabbo-inner-register" : "Register Now, it's free!",
+	"topbar-myhabbo-inner-client" : "Enter Habbo Hotel",
+	"topbar-myhabbo-inner-home" : "View your Habbo Home Page",
+	"topbar-myhabbo-inner-profile" : "Edit Your Settings",
+	"topbar-myhabbo-inner-logout" : "Sign Out",
 
 	//TopBar -> My Credits Tab
 	"topbar-mycredits" : "My Coins",

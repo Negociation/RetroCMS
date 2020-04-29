@@ -42,6 +42,7 @@ final class Hotel{
 		$this->hotelUrl = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
 		$this->hotelPages = array(new Page(0,'HOME','home','Index',1,"","c_images/navi_icons/tab_icon_01_home.gif"));
 		$this->hotelLayout = array($this->hotelWeb.'/habboweb/17/16/web-gallery/images/bg_patterns/habbo.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/hotelviews/web_view_bg_beta.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/logos/habbo_logo_nourl.gif');
+		$this->hotelClient= array('','','','','','','');
 	}
 	
 	function constructObject($hotelName,$hotelNick,$hotelVersion,$hotelWeb,$hotelUrl,$hotelAdvertisements,$hotelPages){
@@ -100,6 +101,30 @@ final class Hotel{
 	
 	public function get_HotelWeb(){
 		return $this->hotelWeb;
+	}
+	
+	public function get_HotelDCR(){
+		return $this->hotelClient[0];
+	}
+	
+	public function get_HotelTexts(){
+		return $this->hotelClient[1];
+	}
+	
+	public function get_HotelVars(){
+		return $this->hotelClient[2];
+	}
+	
+	public function get_HotelHost(){
+		return $this->hotelClient[3];
+	}
+	
+	public function get_HotelPort(){
+		return $this->hotelClient[4];
+	}
+
+	public function get_HotelMUS(){
+		return $this->hotelClient[5];
 	}
 	
 	

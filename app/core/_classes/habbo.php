@@ -35,11 +35,12 @@ final class Habbo extends \Template\Shared{
 		$this->habboLoggedIn = false;
 	}
 	
-	function constructObject($habboId,$habboName,$habboPassword,$habboRank){
+	function constructObject($habboId,$habboName,$habboPassword,$habboRank,$habboCredits){
 		$this->habboId = $habboId;
 		$this->habboName = $habboName;
 		$this->habboPassword = $habboPassword;
 		$this->habboRank = $habboRank;
+		$this->habboCredits = $habboCredits;
 		$this->habboLanguage= 'EN';
 		
 		//If GRPC Enabled set a rCon based on Hotel Object Info
@@ -104,6 +105,10 @@ final class Habbo extends \Template\Shared{
 		$_SESSION['habboLoggedIn']  = false;
 		unset($_SESSION['habboLoggedId']);
 		unset($_SESSION['habboLoggedToken']);
+	}
+	
+	public function get_HabboTicket(){
+		return  $this->getValidTicket('ST',$this->habboLanguage);
 	}
 	
 	public function set_isHabboLoggedIn($status){

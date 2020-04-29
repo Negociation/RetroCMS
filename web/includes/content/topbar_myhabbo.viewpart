@@ -19,15 +19,15 @@ if($this->habbo->get_isHabboLoggedIn()){
 									<h3 style=""><x-lang id="topbar-myhabbo-headerLoggedIn" constant="'.$this->habbo->get_HabboName().'">Bem Vindo '.$this->habbo->get_HabboName().' ao Habbo</x-lang></h3>
 									<div class="tabmenu-inner-content">
 										<p>
-											<a href="'.$this->hotel->get_HotelURL().'/client" class="arrow" target="client" onclick="openOrFocusHabbo(this); return false;"><span class="lang-topbar-myhabbo-inner-client">Entrar no Habbo Hotel</span></a> 
+											<a href="'.$this->hotel->get_HotelURL().'/client" class="arrow" target="client" onclick="openOrFocusHabbo(this); return false;"><x-lang id="topbar-myhabbo-inner-client">Entrar no Habbo Hotel</x-lang></a> 
 										</p>
 										<p>
-											<a href="'.$this->hotel->get_HotelURL().'/home/'.$this->habbo->Get_HabboName().'" class="arrow"><span class="lang-topbar-myhabbo-inner-home">Ver sua Habbo Home</span></a>  
+											<a href="'.$this->hotel->get_HotelURL().'/home/'.$this->habbo->Get_HabboName().'" class="arrow"><x-lang id="topbar-myhabbo-inner-home">Ver sua Habbo Home</x-lang></a>  
 										</p>
 										<p>
-											<a href="'.$this->hotel->get_HotelURL().'/profile" class="arrow"><span class="lang-topbar-myhabbo-inner-profile">Editar Preferências</span></a> 							
+											<a href="'.$this->hotel->get_HotelURL().'/profile" class="arrow"><x-lang id="topbar-myhabbo-inner-profile">Editar Preferências</x-lang></a> 							
 										</p>
-											<a href="'.$this->hotel->get_HotelURL().'/logout" class="colorlink orange last" style=" margin-right: 2px;"><span class="lang-topbar-myhabbo-inner-logout">Sair</span></a>   
+											<a href="'.$this->hotel->get_HotelURL().'/logout" class="colorlink orange last" style=" margin-right: 2px;"><span><x-lang id="topbar-myhabbo-inner-logout">Sair<x-lang></span></a>   
 									</div>'; 
 	}else{
 		echo '
