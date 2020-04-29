@@ -20,6 +20,7 @@
 	RedirectMatch 301 ^/install/start /install/step/0 
 	RedirectMatch 301 ^/login /account/login
 	RedirectMatch 301 ^/logout /account/disconnected
+	RedirectMatch 301 ^/register/$ /register/start
 	RedirectMatch 301 ^/tab/credits /credits 
 	RedirectMatch 301 ^/tab/redeem /credits 
 	RedirectMatch 301 ^/tab/habboclub /club

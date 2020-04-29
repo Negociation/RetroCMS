@@ -27,7 +27,28 @@ final class Register extends \Template\Controller{
 	}
 	
 	function step($param){
-		echo 'step:'.$param;
+		if(!$this->habbo->get_isHabboLoggedIn()){
+			if($_SERVER['REQUEST_METHOD'] == 'POST' && $param > 0){
+				switch($param){
+					case 1:
+					break;
+					case 2:
+					break;
+					case 3:
+					break;
+					case 4:
+					break;
+					case 5:
+					break;					
+				}
+			}else if($param == 0){
+				include 'web/register/0.view';	
+			}else{
+				header('Location: '.$this->hotel->get_HotelUrl().'/register/step/0');
+			}
+		}else{
+			header('Location: '.$this->hotel->get_HotelUrl());
+		}
 	}
 
 }
