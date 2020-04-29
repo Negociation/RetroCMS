@@ -82,6 +82,43 @@ $routerManager->add(
     ]
 );
 
+$routerManager->add(
+    '/register/start',
+    [
+        'controller' => 'register',
+        'action'     => 'step',
+		'params' => [1],
+    ]
+);
+
+$routerManager->add(
+    '/register/done',
+    [
+        'controller' => 'register',
+        'action'     => 'step',
+		'params' => [5],
+    ]
+);
+
+$routerManager->add(
+    '/install/start',
+    [
+        'controller' => 'insyall',
+        'action'     => 'step',
+		'params' => [1],
+    ]
+);
+
+$routerManager->add(
+    '/install/done',
+    [
+        'controller' => 'install',
+        'action'     => 'step',
+		'params' => [5],
+    ]
+);
+
+
 //Start Router Validation
 $routerManager->init(InstallDiag::daoConnection());
 

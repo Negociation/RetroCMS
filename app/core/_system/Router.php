@@ -103,7 +103,6 @@ final class Router{
 	
 	//Validate Route if Exists
 	public function isDefined($urlParsed){
-		
 		$foundRoute = false;
 		
 		foreach($this->urlRoutes as $route){
@@ -134,7 +133,7 @@ final class Router{
 									$foundRoute = array($route['config']['controller'],$route['config']['action'],array_slice($urlParsed,2));
 								}		
 							}else{
-								$foundRoute = array($route['config']['controller'],$route['config']['action'],$testRoute[1]  == '$1' ? array($urlParsed[1]) : null);
+								$foundRoute = array($route['config']['controller'],$route['config']['action'],$testRoute[1]  == '$1' ? array($urlParsed[1]) : $route['config']['params']);
 							}
 						}			
 					}else{
