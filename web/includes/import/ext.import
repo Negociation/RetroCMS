@@ -117,6 +117,13 @@ var WORDS_EN = {
 	"logout-header": "Logged out",
 	"logout-content": "You have logged out succesfully.<br><br>Goodbye, and we hope you come back soon!<br/><br/><a href=\""+habboReqPath+"\" target=\"_self\">Sign in again</a>",
 	
+	//Register	 
+	"register-header": "Registration",
+	"register-headerExit": "Cancel",
+	"register-BubbleContent0": "Please tell us your birthday.",
+	"register-labelBirthday" : "Birthday",
+	"register-BubbleContent1": "Now the fun begins! Choose what you want to look like in habbo!",
+
 	  
 }
 

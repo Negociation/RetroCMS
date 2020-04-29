@@ -46,7 +46,7 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	Options -Indexes
-	RewriteCond %{REQUEST_URI} !\.(?:css|js|jpeg|gif|png|dcr|cct|xml|swf|ico)$ [NC]
+	RewriteCond %{REQUEST_URI} !\.(?:css|js|jpeg|gif|png|dcr|cct|xml|swf|ico|xml)$ [NC]
 	RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
 

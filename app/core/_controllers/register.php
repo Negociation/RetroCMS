@@ -28,9 +28,10 @@ final class Register extends \Template\Controller{
 	
 	function step($param){
 		if(!$this->habbo->get_isHabboLoggedIn()){
-			if($_SERVER['REQUEST_METHOD'] == 'POST' && $param > 0){
-				switch($param){
+			if($_SERVER['REQUEST_METHOD'] == 'POST' && $param > 0){		
+				switch($id = $param){
 					case 1:
+						include 'web/register/1.view';	
 					break;
 					case 2:
 					break;

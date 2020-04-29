@@ -11,10 +11,7 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-//Default CSS Content
-echo "<link href='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/styles/process.css' type='text/css' rel='stylesheet'/>"."\n\t\t";
-
 //Default Javascript Content
-echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/swfobject.js'></script>"."\n\t\t";
-
+echo "<script type='text/javascript' language='JavaScript'  src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/validation.js'></script>"."\n\t\t";
+echo "<script type='text/javascript' language='JavaScript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/registration.js'></script>"."\n\t\t";
 ?>

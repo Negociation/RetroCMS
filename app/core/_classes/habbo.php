@@ -33,6 +33,16 @@ final class Habbo extends \Template\Shared{
 	//Default Construct Method
     function __construct(){
 		$this->habboLoggedIn = false;
+		
+		//Habbo Avatar Default Easter Egg
+		if(rand(1,100) <= 50){
+			$this->habboFigure = '1000118001210012700129001';	
+			$this->habboGender = 'M';		
+		}else{
+			$this->habboFigure = '5000160001710077250164512';	
+			$this->habboGender = 'F';		
+		}
+		
 	}
 	
 	function constructObject($habboId,$habboName,$habboPassword,$habboRank,$habboCredits){
