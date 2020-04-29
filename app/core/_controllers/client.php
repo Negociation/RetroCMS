@@ -27,7 +27,7 @@ final class Client extends \Template\Controller{
 		parent::__construct($hotelConection); 
 		
 		//Set Servet Ticket
-		$this->habboModel->set_HabboTicket(2,$this->habbo);
+		$this->habboModel->set_HabboTicket('ST',$this->habbo);
 
 		
 	}
