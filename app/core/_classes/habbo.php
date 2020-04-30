@@ -100,6 +100,11 @@ final class Habbo extends \Template\Shared{
 	public function get_HabboClub(){
 		return null;
 	}
+	
+	public function get_isHabboHomeVisible(){
+		return false;
+	}
+	
 	/** SETS **/
 	public function set_HabboId($param){
 		$this->habboId = $param;

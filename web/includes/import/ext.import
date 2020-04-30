@@ -125,6 +125,19 @@ var WORDS_EN = {
 	"register-BubbleContent1": "Now the fun begins! Choose what you want to look like in habbo!",
 
 	  
+	 //Home
+	 "home-headline-error": "Page could not be shown",
+	 "home-header-infoHidden": "Did you know?",
+	 "home-content-infoHidden": "That you can make your Habbo Home private through in your Habbo Profile?<br/><br/>Well, now you do!<br/>",
+	 "home-header-infoBanned": "Did you know?",
+	 "home-content-infoBanned": "If you own this page, and you believe you have been unjustly banned, please explain your case to our Support through <a target=\"_self\" href=\""+habboReqPath+"/iot/go?lang=pt_BR&amp;country=br\">Habbo Helping Tool</a>.<br><br><a href=\""+habboReqPath+"\" target=\"_self\">Back to Homepage</a><br>",
+	 "home-header-error": "Sorry!",
+	 "home-content-errorHidden": "<span style=\"font-weight: bold;\">%data%</span> marked this page as private.<br/><br/>Sorry!<br/><br/>",
+	 "home-content-errorHidden-hotelUrl":"New to Habbo?",
+	 "home-content-errorHidden-homeUrl":"Habbo Home main page",
+	 "home-content-errorBanned": "This page is no longer available because <span style=\"font-weight: bold;\">%data%</span> was banned.<br>",
+
+
 }
 
 function loadLanguageData(language){

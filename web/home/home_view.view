@@ -1,0 +1,27 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.5.110 ( Aquamarine ) 				    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+
+//Include Header Content
+require_once('./web/includes/headers/default.viewpart');
+?>
+				
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" class="content-home">
+				   <tbody>
+				   </tbody>
+				</table>
+				<br style="clear: both;"/>
+<?php
+//Include Footer Content
+require_once('./web/includes/footers/default.viewpart');
+?>

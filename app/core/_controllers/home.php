@@ -19,10 +19,11 @@ namespace Controller;
 
 final class Home extends \Template\Controller{
 	
+	protected $homeUser;
 	//Construct Method
-    function __construct(){
+    function __construct($hotelConnection){
 		//Call the super-class constructor
-		parent::__construct(); 
+		parent::__construct($hotelConnection); 
 		
 	}
 	
@@ -31,15 +32,27 @@ final class Home extends \Template\Controller{
 	}
 	
 	function loadById($param){
-		if(is_numeric($param)){
-			echo 'Home By Id: '.$param;
+		if(is_numeric($param) && $this->homeUser = $this->habboModel->get_HabboObject($param,1)){
+			if(true){
+				include 'web/home/'.(($this->homeUser->get_isHabboHomeVisible() && ($this->homeUser->get_HabboId() == $this->habbo->get_HabboId())) ? 'home_view' : 'home_hidden').'.view';	
+			}else{
+				include 'web/home/home_banned.view';
+			}
 		}else{
-			echo 'Not Found';
+			include 'web/404.view';	
 		}
 	}
 	
 	function loadByName($param){
-		echo 'Home By Name: '.$param;
+		if($this->homeUser = $this->habboModel->get_HabboObject($param,2)){
+			if(true){
+				include 'web/home/'.(($this->homeUser->get_isHabboHomeVisible() && ($this->homeUser->get_HabboId() == $this->habbo->get_HabboId())) ? 'home_view' : 'home_hidden').'.view';	
+			}else{
+				include 'web/home/home_banned.view';
+			}
+		}else{
+			include 'web/404.view';	
+		}
 	}
 
 }
