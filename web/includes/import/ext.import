@@ -100,7 +100,7 @@ var WORDS_EN = {
 	
 	//Navbar
 	"navbar-title-home": "home",
-	"navbar-title-hotel": "hotel",
+	"navbar-title-hotel": "new here?",
 	"navbar-title-community": "community",
 	"navbar-title-games": "games",
 	"navbar-title-credits": "coins",

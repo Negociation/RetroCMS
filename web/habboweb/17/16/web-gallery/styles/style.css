@@ -549,6 +549,14 @@ img.tabmenu-image.coins {
 	background-position: 100% -39px;
 }
 
+#mainmenu li#disabled a img{
+	vertical-align: middle;
+	padding: 0 !important;
+	padding /**/: 4px 0 0 0;
+	padding: 4px 0 0 0;
+   	filter: brightness(50%);
+}
+
 #mainmenu li#disabled.last .right {
 	width: 12px;
 	height: 39px;

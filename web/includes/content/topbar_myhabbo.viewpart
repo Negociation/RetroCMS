@@ -19,7 +19,7 @@ if($this->habbo->get_isHabboLoggedIn()){
 									<h3 style=""><x-lang id="topbar-myhabbo-headerLoggedIn" constant="'.$this->habbo->get_HabboName().'">Bem Vindo '.$this->habbo->get_HabboName().' ao Habbo</x-lang></h3>
 									<div class="tabmenu-inner-content">
 										<p>
-											<a href="'.$this->hotel->get_HotelURL().'/client" class="arrow" target="client" onclick="openOrFocusHabbo(this); return false;"><x-lang id="topbar-myhabbo-inner-client">Entrar no Habbo Hotel</x-lang></a> 
+											'.($this->hotel->get_HotelStatus() ? '<a href="'.$this->hotel->get_HotelURL().'/client" class="arrow" target="client" onclick="openOrFocusHabbo(this); return false;"><x-lang id="topbar-myhabbo-inner-client">Entrar no Habbo Hotel</x-lang></a> ' : '').'
 										</p>
 										<p>
 											<a href="'.$this->hotel->get_HotelURL().'/home/'.$this->habbo->Get_HabboName().'" class="arrow"><x-lang id="topbar-myhabbo-inner-home">Ver sua Habbo Home</x-lang></a>  
