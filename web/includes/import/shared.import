@@ -64,3 +64,14 @@ echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->
 include(__DIR__.'./ext.import');
 
 ?>
+
+<script type='text/javascript'>
+  
+  Ajax.Responders.register({
+  onComplete: function() {
+		loadLanguageData('EN');
+
+  }
+});
+
+</script>
