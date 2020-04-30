@@ -44,6 +44,7 @@ var WORDS_EN = {
 	//TopBar -> My Credits Tab
 	"topbar-mycredits" : "My Coins",
 	"topbar-mycredits-headerNotLoggedIn" : "Please <a href='"+habboReqPath+"/login'>enter</a> to see your balance",
+	"topbar-mycredits-headerLoggedIn" : "You have <span id=\"amount-credits\" class=\"amount habbocredits\">%data%</span> credits",
 	"topbar-mycredits-inner-buy" : "Buy More Coins",
 	"topbar-mycredits-inner-redeem" : "Redeem a Coin or Furni Code",
 	
@@ -184,6 +185,15 @@ function initializeLanguageManager(){
 window.onload = function(){
 	initializeLanguageManager();
 }
+
+  
+  Ajax.Responders.register({
+  onComplete: function() {
+		loadLanguageData('EN');
+
+  }
+});
+
 </script>
 
 		
