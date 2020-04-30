@@ -14,7 +14,7 @@
 
 if($this->habbo->get_isHabboLoggedIn()){ 
 	echo '
-										<h3><x-lang id="topbar-mycredits-headerLoggedIn" constant="'.$this->habbo->get_HabboCredits().'">Você tem <span id="amount-credits" class="amount habbocredits">'.$this->habbo->get_HabboCredits().'</span> Habbo Moedas</x-lang></h3>
+										<h3>'.( $this->habbo->get_HabboCredits() > 0 ? '<x-lang id="topbar-mycredits-headerLoggedIn-haveCredits" constant="'.$this->habbo->get_HabboCredits().'">Você tem <span id="amount-credits" class="amount habbocredits">'.$this->habbo->get_HabboCredits().'</span> Habbo Moedas</x-lang>' : '<x-lang id="topbar-mycredits-headerLoggedIn-haveCredits" constant="'.$this->habbo->get_HabboCredits().'">Você não tem Habbo Moedas</x-lang>').'</h3>
 										<div class="tabmenu-inner-content">
 											<p>
 												<img src="'.$this->hotel->get_HotelWeb().'/habboweb/17/16/web-gallery/images/top_bar/mycredits_coins.gif" alt="" width="47" height="21" class="tabmenu-image coins"/>

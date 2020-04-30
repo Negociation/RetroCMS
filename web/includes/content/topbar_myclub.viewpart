@@ -13,39 +13,19 @@
 
 
 if($this->habbo->get_isHabboLoggedIn()){
-	if(!$this->habbo->get_HabboClub(1)){
-			echo'
-						<h3><span class="lang-topbar-habboclub-content-loggedin">Você não é membro do Habbo Clube</span></h3>
-			';
-		}else{
-			echo'
-						<h3> <x-lang id="lang-topbar-habboclub-status"> 
-						
-						
-						
-						<span class="lang-topbar-habboclub-content-loggedinBefore">Você possui</span> '.$this->habbo->get_HabboClub(2).' <span class="lang-topbar-habboclub-content-loggedinAfter">dias restantes no Habbo Clube</span></h3>';	
-		}
-		echo'					
-						<div class="tabmenu-inner-content">
-							<p>
-								<span class="lang-topbar-habboclub-inner-about">Habbo Club te dá os melhores benefícios</span>
-							</p>
-							<p>
-								<a href="'.$this->hotel->get_HotelWeb().'/tab/habboclub" class="arrow"><span class="lang-topbar-habboclub-inner-club">Últimas Notícias</span></a>
-							</p>
-						</div>'; 
+	echo (!$this->habbo->get_HabboClub(1) ? '<h3><x-lang id="topbar-habboclub-headerLoggedIn-notMember">Você não é membro do Habbo Clube</x-lang></h3>' :  '<h3><x-lang id="topbar-habboclub-headerLoggedIn-isMember" constant="'.$this->habbo->get_HabboClub(2).'">Você possui</span> '.$this->habbo->get_HabboClub(2).' dias restantes no Habbo Clube</span></h3>');
+	echo'					
+										<div class="tabmenu-inner-content">
+											<p><x-lang id="topbar-habboclub-inner-about">Habbo Club te dá os melhores benefícios</x-lang></p>
+											<p><a href="'.$this->hotel->get_HotelWeb().'/tab/habboclub" class="arrow"><x-lang id="topbar-habboclub-inner-club">Últimas Notícias</x-lang></a></p>
+										</div>'; 
 }else{
 	echo '
-									<h3><x-lang id="topbar-habboclub-headerNotLoggedIn">Por favor, <a href="'.$this->hotel->get_HotelWeb().'/login">entre</a> para ver suas informações do Habbo Club</x-lang></h3>
-									<div class="tabmenu-inner-content">
-										<p>
-											<x-lang id="topbar-habboclub-inner-about">Habbo Club te dá os melhores benefícios</x-lang>
-											
-										</p>
-										<p>
-											<a href="'.$this->hotel->get_HotelWeb().'/tab/habboclub" class="arrow"><x-lang id="topbar-habboclub-inner-club">Últimas Notícias</x-lang></a>
-										</p>
-									</div>';
+										<h3><span class="topbar-habboclub-headerLoggedIn-notMember">Por favor, <a href="'.$this->hotel->get_HotelWeb().'/login">entre</a> para ver suas informações do Habbo Club</x-lang></h3>
+										<div class="tabmenu-inner-content">
+											<p><x-lang id="topbar-habboclub-inner-about">Habbo Club te dá os melhores benefícios</x-lang></p>
+											<p><a href="'.$this->hotel->get_HotelWeb().'/tab/habboclub" class="arrow"><x-lang id="topbar-habboclub-inner-club">Últimas Notícias</x-lang></a></p>
+										</div>';
 }
 ?>
 

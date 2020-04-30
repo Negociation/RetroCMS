@@ -50,19 +50,39 @@ echo"
 			var habboStaticFilePath = '".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery';
 			var habboImagerUrl = '/habbo-imaging/';
 			var habboSiteLanguage = 'en';
-			document.habboLoggedIn = ".(!$this->habbo->get_isHabboLoggedIn() ? 'true' : 'false').";
+			document.habboLoggedIn = ".($this->habbo->get_isHabboLoggedIn() ? 'true' : 'false').";
 			window.name = 'habboMain';
 		</script>
-"."\n\t\t";;
+"."\n\t\t";
+
 
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/prototype.js'></script>"."\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/habbo.js'></script>"."\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/builder.js'></script>"."\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/jquery.min.js'></script>"."\n\t\t";
 
+
+if(true){
+	echo"
+		<script>
+			window.onload = function(){
+				initializeLanguageManager();
+			}
+			
+			Ajax.Responders.register({
+				onComplete: function() {					
+					loadLanguageData('EN');
+				}
+			});
+		</script>
+	\n\t\t";
+}
+
+
 //Extensions Import [DO NOT REMOVE]
 include(__DIR__.'./ext.import');
 
 ?>
+
 
 

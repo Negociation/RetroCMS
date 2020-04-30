@@ -44,7 +44,8 @@ var WORDS_EN = {
 	//TopBar -> My Credits Tab
 	"topbar-mycredits" : "My Coins",
 	"topbar-mycredits-headerNotLoggedIn" : "Please <a href='"+habboReqPath+"/login'>enter</a> to see your balance",
-	"topbar-mycredits-headerLoggedIn" : "You have <span id=\"amount-credits\" class=\"amount habbocredits\">%data%</span> credits",
+	"topbar-mycredits-headerLoggedIn-haveCredits" : "You have <span id=\"amount-credits\" class=\"amount habbocredits\">%data%</span> credits",
+	"topbar-mycredits-headerLoggedIn-noCredits" : "You have no Credits",
 	"topbar-mycredits-inner-buy" : "Buy More Coins",
 	"topbar-mycredits-inner-redeem" : "Redeem a Coin or Furni Code",
 	
@@ -52,6 +53,8 @@ var WORDS_EN = {
 	//TopBar -> My Club Tab
 	"topbar-habboclub" : "Habbo Club",
 	"topbar-habboclub-headerNotLoggedIn" : "Please <a href='"+habboReqPath+"/login'>enter</a> to see your Club status",
+	"topbar-habboclub-headerLoggedIn-notMember" : "You are not subscribed to Club",
+	"topbar-habboclub-headerLoggedIn-isMember" : "You have %data% days left in your subscription",
 	"topbar-habboclub-inner-about": "Habbo Club gives you access to the full benefits on Habbo Hotel.",
 	"topbar-habboclub-inner-club" : "Latest News on Habbo Club",
 	
@@ -182,17 +185,6 @@ function initializeLanguageManager(){
 }
 
 
-window.onload = function(){
-	initializeLanguageManager();
-}
-
-  
-  Ajax.Responders.register({
-  onComplete: function() {
-		loadLanguageData('EN');
-
-  }
-});
 
 </script>
 
