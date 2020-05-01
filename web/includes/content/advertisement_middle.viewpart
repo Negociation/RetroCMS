@@ -13,29 +13,19 @@
 
 
 //Include Content 
-//Desc = TopBar Left (Users Online / Hotel Offline)
+//Desc = Advertisement (MIDDLE)
 
-//Check if have any Top Ads and if as enabled
+//Check if have any Middle Ads and if as enabled
 foreach($this->hotel->get_HotelAdvertisements() as $advertisement){
 	if ($advertisement->get_advertisementType() == 2 && $advertisement->get_advertisementStatus()){
+		$staticAd = $advertisement;
 		$status = true;
 		break;
 	}
 }
 
-//If exist a Top Ads 
+//If exist a Middle Ads 
 if(isset($status) && $status){
-	
-	//Temp Array Var
-	$array = [];
-	
-	foreach($this->hotel->get_HotelAdvertisements() as $advertisement){
-		if ($advertisement->get_advertisementType() == 2 && $advertisement->get_advertisementStatus()){
-			array_push($array,$advertisement);
-		}
-	}
-
-
 	echo '
 										 <div class="ad-scale ad300"  id="habboMiddleAd">
 											<table>
@@ -54,7 +44,7 @@ if(isset($status) && $status){
 												  </tr>
 												  <tr>
 													 <td class="ad-content-ml"></td>
-													 <td class="ad-content-m" align="center" valign="top"><a href="#" target="_blank" id="MiddleLink"><img style="width: 300px; height: 250px;" alt="" src="'.end($array)->get_advertisementImage().'" id="MiddleImage"></a><br></td>
+													 <td class="ad-content-m" align="center" valign="top"><a href="'.$staticAd->get_advertisementUrl().'" target="_blank" id="MiddleLink"><img style="width: 300px; height: 250px;" alt="" src="'.$staticAd->get_advertisementImage().'" id="MiddleImage"></a><br></td>
 													 <td class="ad-content-mr"></td>
 												  </tr>
 												  <tr>
@@ -66,10 +56,7 @@ if(isset($status) && $status){
 											</table>
 										 </div>
 	';
-	unset($array);
 	unset($status);
+	unset($staticAd);
 }
-
-
 ?>
-

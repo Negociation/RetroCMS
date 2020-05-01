@@ -13,46 +13,20 @@
 
 
 //Include Content 
-//Desc = TopBar Left (Users Online / Hotel Offline)
+//Desc = Advertisement (BOX)
 
 //Check if have any Top Ads and if as enabled
 foreach($this->hotel->get_HotelAdvertisements() as $advertisement){
 	if ($advertisement->get_advertisementType() == 3 && $advertisement->get_advertisementStatus()){
+		$staticAd = $advertisement;
 		$status = true;
 		break;
 	}
 }
 
-//If exist a Top Ads 
+//If exist a Box Ads 
 if(isset($status) && $status){
-	
-	//Temp Array Var
-	$array = [];
-	
-	foreach($this->hotel->get_HotelAdvertisements() as $advertisement){
-		if ($advertisement->get_advertisementType() == 3 && $advertisement->get_advertisementStatus()){
-			array_push($array,$advertisement);
-		}
-	}
-	//Write All Top Ads Javascript
-	echo "<script type='text/javascript'>";
-	echo 'Ads_Top(';
-	foreach($array as $advertisement){ 
-		if(!next($array)){ echo "'".$advertisement->get_advertisementImage()."'); "; }else{ echo "'".$advertisement->get_advertisementImage()."',"; }
-	}
-	
-	foreach($array as $advertisement){ 
-		echo "Links_Top.push('".$advertisement->get_advertisementUrl()."'); ";
-	}
-	echo '</script>';
-	
-
-	echo '
-	';
-	unset($array);
 	unset($status);
+	unset($staticAd);
 }
-
-
 ?>
-

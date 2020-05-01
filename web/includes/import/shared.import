@@ -65,14 +65,10 @@ echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->
 
 
 
-
-
-
-
 //Extensions Import [DO NOT REMOVE]
 include(__DIR__.'./ext.import');
 
-//Advertisements
+
 echo"
 		<script language='JavaScript' type='text/javascript'>	
 			window.onload = function(){	

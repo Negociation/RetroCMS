@@ -23,7 +23,7 @@
 			newSliderTarget('middleAd',5000);
 			newSliderTarget('rightAd',5000);
 			
-		<?php	
+		<?php echo "\t";
 			foreach($this->hotel->get_HotelAdvertisements() as $advertisement){
 				if($advertisement->get_advertisementStatus()){
 					switch($advertisement->get_advertisementType()){
@@ -40,8 +40,5 @@
 				}
 			}
 		?>
+		
 		</script>
-			
-
-
-

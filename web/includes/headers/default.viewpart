@@ -22,6 +22,9 @@
 		<!-- IMPORT LAYOUT CONTENT(CSS/JS) -->
 		<?php require_once('./web/includes/import/shared.import'); ?>
 		
+		<!-- INCLUDE ADVERTISEMENT CONTENT (SCRIPT) -->
+		<?php include('./web/includes/content/advertisement.viewpart'); ?>
+		
 	</head>
 	<body id="<?php echo $this->get_ViewBody(); ?>" >
         <div id="overlay"></div>
