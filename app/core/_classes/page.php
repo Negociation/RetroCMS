@@ -25,10 +25,11 @@ final class Page{
 	protected $pageUrl;
 	protected $pageIcon;
 	protected $pageTranslate;
+	protected $pageMinVersion;
 	
 
 	//Default Construct Method
-    function __construct($pageId,$pageTitle,$pageTranslate,$pageController,$pageStatus,$pageUrl,$pageIcon){
+    function __construct($pageId,$pageTitle,$pageTranslate,$pageController,$pageStatus,$pageUrl,$pageIcon,$pageMinVersion){
 		$this->pageId = $pageId;
 		$this->pageTitle = $pageTitle;
 		$this->pageController = $pageController;
@@ -36,6 +37,7 @@ final class Page{
 		$this->pageStatus = $pageStatus;
 		$this->pageUrl = $pageUrl;
 		$this->pageIcon = $pageIcon;
+		$this->pageMinVersion = $pageMinVersion;
 	}
 	
 	/* GETS */
@@ -62,6 +64,10 @@ final class Page{
 	
 	public function get_pageUrl(){
 		return $this->pageUrl;
+	}
+	
+	public function get_pageMinVersion(){
+		return $this->pageMinVersion;
 	}
 
 }

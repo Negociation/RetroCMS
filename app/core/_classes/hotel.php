@@ -40,7 +40,7 @@ final class Hotel{
 		$this->hotelNick = 'Retro';		
 		$this->hotelWeb = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
 		$this->hotelUrl = 'http://'.$_SERVER['SERVER_NAME'].($_SERVER['SERVER_PORT'] != "80" ? ':'.$_SERVER['SERVER_PORT'] : '');
-		$this->hotelPages = array(new Page(0,'HOME','home','Index',1,"","c_images/navi_icons/tab_icon_01_home.gif"));
+		$this->hotelPages = array(new Page(0,'HOME','home','Index',1,"","c_images/navi_icons/tab_icon_01_home.gif",13));
 		$this->hotelLayout = array($this->hotelWeb.'/habboweb/17/16/web-gallery/images/bg_patterns/habbo.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/hotelviews/web_view_bg_beta.gif',$this->hotelWeb.'/habboweb/17/16/web-gallery/images/logos/habbo_logo_nourl.gif');
 		$this->hotelClient= array('','','','','','','');
 	}
@@ -128,6 +128,10 @@ final class Hotel{
 	}
 	
 	
+	
+	public function get_HotelVersion(){
+		return 17;
+	}
 	
 }
 

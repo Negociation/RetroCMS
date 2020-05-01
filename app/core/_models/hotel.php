@@ -45,7 +45,7 @@ final class Hotel extends \Template\Model{
 		$queryResult = $this->getAll('web_pages');
 		if (count($queryResult) > 0){
 			foreach($queryResult as $row){
-				$pageObject = new \CLR\Page($row['id'],$row['title'],$row['translate_tag'],$row['controller_name'],intval($row['status']),$row['url'],$row['icon_url']);
+				$pageObject = new \CLR\Page($row['id'],$row['title'],$row['translate_tag'],$row['controller_name'],intval($row['status']),$row['url'],$row['icon_url'],$row['ver_min']);
 				array_push($pagesArray,$pageObject);
 			}
 		}

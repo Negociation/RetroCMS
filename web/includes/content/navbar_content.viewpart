@@ -22,7 +22,7 @@
 						<?php 
 							$hotelPages = $this->hotel->get_HotelPages();
 							foreach($hotelPages as $pageObject){
-								if($pageObject->get_PageStatus() > -1){
+								if($pageObject->get_PageStatus() > -1 && $pageObject->get_PageMinVersion() <= $this->hotel->get_HotelVersion()){
 									echo"
 									<li".((get_class($this) == "Controller\\".$pageObject->get_PageController() && $pageObject->get_PageStatus() == 1 ) ? " id=\"active\"" : "").(($pageObject->get_PageStatus() == 0 ) ? " id=\"disabled\"" : "").(!next($hotelPages) ? " class=\"last\"" : '' ).">
 										<span class=\"left\"></span>
