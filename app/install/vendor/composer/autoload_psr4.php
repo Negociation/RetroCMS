@@ -29,6 +29,7 @@ return array(
     'GPBMetadata\\Protos\\' => array($vendorDir . '/ewout/retrorcon/dist/php/GPBMetadata/Protos'),
     'GPBMetadata\\Google\\Protobuf\\' => array($vendorDir . '/google/protobuf/src/GPBMetadata/Google/Protobuf'),
     'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
+    'Extension\\' => array($baseDir . '/../core/_extensions'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Controller\\' => array($baseDir . '/../core/_controllers'),

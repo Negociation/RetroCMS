@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CLR\\ExtensionManager' => $baseDir . '/../core/_classes/extensionManager.php',
     'CLR\\Habbo' => $baseDir . '/../core/_classes/habbo.php',
     'CLR\\Hotel' => $baseDir . '/../core/_classes/hotel.php',
     'CLR\\Page' => $baseDir . '/../core/_classes/page.php',
@@ -48,6 +49,7 @@ return array(
     'Doctrine\\Instantiator\\Exception\\UnexpectedValueException' => $vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator/Exception/UnexpectedValueException.php',
     'Doctrine\\Instantiator\\Instantiator' => $vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator/Instantiator.php',
     'Doctrine\\Instantiator\\InstantiatorInterface' => $vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator/InstantiatorInterface.php',
+    'Extension\\LanguageManager' => $baseDir . '/../core/_extensions/LanguageManager.php',
     'Firebase\\JWT\\BeforeValidException' => $vendorDir . '/firebase/php-jwt/src/BeforeValidException.php',
     'Firebase\\JWT\\ExpiredException' => $vendorDir . '/firebase/php-jwt/src/ExpiredException.php',
     'Firebase\\JWT\\JWK' => $vendorDir . '/firebase/php-jwt/src/JWK.php',
@@ -1072,6 +1074,7 @@ return array(
     'Symfony\\Polyfill\\Php72\\Php72' => $vendorDir . '/symfony/polyfill-php72/Php72.php',
     'System\\Router' => $baseDir . '/../core/_system/router.php',
     'Template\\Controller' => $baseDir . '/../core/_templates/controllerTemplate.php',
+    'Template\\Extension' => $baseDir . '/../core/_templates/extensionTemplate.php',
     'Template\\Model' => $baseDir . '/../core/_templates/modelTemplate.php',
     'Template\\Shared' => $baseDir . '/../core/_templates/sharedTemplate.php',
     'TheSeer\\Tokenizer\\Exception' => $vendorDir . '/theseer/tokenizer/src/Exception.php',

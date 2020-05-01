@@ -73,6 +73,10 @@ class ComposerStaticInitb5fc32f74951a53d7bf10d10b9b632e1
         array (
             'Firebase\\JWT\\' => 13,
         ),
+        'E' => 
+        array (
+            'Extension\\' => 10,
+        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
@@ -182,6 +186,10 @@ class ComposerStaticInitb5fc32f74951a53d7bf10d10b9b632e1
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
+        'Extension\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/../core/_extensions',
+        ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
@@ -201,6 +209,7 @@ class ComposerStaticInitb5fc32f74951a53d7bf10d10b9b632e1
     );
 
     public static $classMap = array (
+        'CLR\\ExtensionManager' => __DIR__ . '/../..' . '/../core/_classes/extensionManager.php',
         'CLR\\Habbo' => __DIR__ . '/../..' . '/../core/_classes/habbo.php',
         'CLR\\Hotel' => __DIR__ . '/../..' . '/../core/_classes/hotel.php',
         'CLR\\Page' => __DIR__ . '/../..' . '/../core/_classes/page.php',
@@ -243,6 +252,7 @@ class ComposerStaticInitb5fc32f74951a53d7bf10d10b9b632e1
         'Doctrine\\Instantiator\\Exception\\UnexpectedValueException' => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator/Exception/UnexpectedValueException.php',
         'Doctrine\\Instantiator\\Instantiator' => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator/Instantiator.php',
         'Doctrine\\Instantiator\\InstantiatorInterface' => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator/InstantiatorInterface.php',
+        'Extension\\LanguageManager' => __DIR__ . '/../..' . '/../core/_extensions/LanguageManager.php',
         'Firebase\\JWT\\BeforeValidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/BeforeValidException.php',
         'Firebase\\JWT\\ExpiredException' => __DIR__ . '/..' . '/firebase/php-jwt/src/ExpiredException.php',
         'Firebase\\JWT\\JWK' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWK.php',
@@ -1267,6 +1277,7 @@ class ComposerStaticInitb5fc32f74951a53d7bf10d10b9b632e1
         'Symfony\\Polyfill\\Php72\\Php72' => __DIR__ . '/..' . '/symfony/polyfill-php72/Php72.php',
         'System\\Router' => __DIR__ . '/../..' . '/../core/_system/router.php',
         'Template\\Controller' => __DIR__ . '/../..' . '/../core/_templates/controllerTemplate.php',
+        'Template\\Extension' => __DIR__ . '/../..' . '/../core/_templates/extensionTemplate.php',
         'Template\\Model' => __DIR__ . '/../..' . '/../core/_templates/modelTemplate.php',
         'Template\\Shared' => __DIR__ . '/../..' . '/../core/_templates/sharedTemplate.php',
         'TheSeer\\Tokenizer\\Exception' => __DIR__ . '/..' . '/theseer/tokenizer/src/Exception.php',

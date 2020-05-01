@@ -35,6 +35,8 @@ class Shared{
 	public function getValidTicket($type,$language){
 		return $type.'-'.rand (100000 , 999999 ).'-'.bin2hex(random_bytes(10)).'-'.strtolower($language).'-fe2';
 	}
+
+
 }
 
 ?>

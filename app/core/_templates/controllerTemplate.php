@@ -18,7 +18,7 @@
 
 namespace Template;
 
-class Controller{
+class Controller extends Shared{
 	
 	protected $pageTitle;
 	protected $habbo;
@@ -28,12 +28,17 @@ class Controller{
 	
     function __construct($hotelConection){
 		
+		//Default Controllers Extensions 
+		\CLR\ExtensionManager::init();
+		\CLR\ExtensionManager::loadAll();
+
 		//Default Page Title
 		$this->pageTitle = 'Habbo';
 		
 		//Set_Deafult Body Id
 		$this->bodyId = 'home';
 		
+
 		//Default Models
 		$this->hotelModel = new \Model\Hotel($hotelConection);
 		$this->habboModel = new \Model\Habbo($hotelConection);
