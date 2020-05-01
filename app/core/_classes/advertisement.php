@@ -25,7 +25,7 @@ final class Advertisement{
 	protected $advertisementUrl;
 	
 	//Default Construct Method
-	public function constructObject($advertisementId,$advertisementImage,$advertisementStatus,$advertisementType,$advertisementUrl){
+	public function constructObject($advertisementId,$advertisementImage,$advertisementUrl,$advertisementType,$advertisementStatus){
 		$this->advertisementId = $advertisementId;
 		$this->advertisementImage = $advertisementImage;
 		$this->advertisementStatus = $advertisementStatus;
@@ -40,7 +40,7 @@ final class Advertisement{
 	}
 	
 	public function get_advertisementUrl(){		
-		return "#";
+		return $this->advertisementUrl;
 	}
 	
 	public function get_advertisementType(){

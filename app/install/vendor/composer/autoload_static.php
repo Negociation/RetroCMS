@@ -209,7 +209,7 @@ class ComposerStaticInitb5fc32f74951a53d7bf10d10b9b632e1
     );
 
     public static $classMap = array (
-        'CLR\\Advertisement' => __DIR__ . '/../..' . '/../core/_classes/advertisment.php',
+        'CLR\\Advertisement' => __DIR__ . '/../..' . '/../core/_classes/advertisement.php',
         'CLR\\ExtensionManager' => __DIR__ . '/../..' . '/../core/_classes/extensionManager.php',
         'CLR\\Habbo' => __DIR__ . '/../..' . '/../core/_classes/habbo.php',
         'CLR\\Hotel' => __DIR__ . '/../..' . '/../core/_classes/hotel.php',
@@ -253,6 +253,7 @@ class ComposerStaticInitb5fc32f74951a53d7bf10d10b9b632e1
         'Doctrine\\Instantiator\\Exception\\UnexpectedValueException' => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator/Exception/UnexpectedValueException.php',
         'Doctrine\\Instantiator\\Instantiator' => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator/Instantiator.php',
         'Doctrine\\Instantiator\\InstantiatorInterface' => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator/InstantiatorInterface.php',
+        'Extension\\ImageSlider' => __DIR__ . '/../..' . '/../core/_extensions/ImageSlider.php',
         'Extension\\LanguageManager' => __DIR__ . '/../..' . '/../core/_extensions/LanguageManager.php',
         'Firebase\\JWT\\BeforeValidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/BeforeValidException.php',
         'Firebase\\JWT\\ExpiredException' => __DIR__ . '/..' . '/firebase/php-jwt/src/ExpiredException.php',

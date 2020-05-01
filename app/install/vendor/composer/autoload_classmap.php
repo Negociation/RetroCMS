@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CLR\\Advertisement' => $baseDir . '/../core/_classes/advertisment.php',
+    'CLR\\Advertisement' => $baseDir . '/../core/_classes/advertisement.php',
     'CLR\\ExtensionManager' => $baseDir . '/../core/_classes/extensionManager.php',
     'CLR\\Habbo' => $baseDir . '/../core/_classes/habbo.php',
     'CLR\\Hotel' => $baseDir . '/../core/_classes/hotel.php',
@@ -50,6 +50,7 @@ return array(
     'Doctrine\\Instantiator\\Exception\\UnexpectedValueException' => $vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator/Exception/UnexpectedValueException.php',
     'Doctrine\\Instantiator\\Instantiator' => $vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator/Instantiator.php',
     'Doctrine\\Instantiator\\InstantiatorInterface' => $vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator/InstantiatorInterface.php',
+    'Extension\\ImageSlider' => $baseDir . '/../core/_extensions/ImageSlider.php',
     'Extension\\LanguageManager' => $baseDir . '/../core/_extensions/LanguageManager.php',
     'Firebase\\JWT\\BeforeValidException' => $vendorDir . '/firebase/php-jwt/src/BeforeValidException.php',
     'Firebase\\JWT\\ExpiredException' => $vendorDir . '/firebase/php-jwt/src/ExpiredException.php',
