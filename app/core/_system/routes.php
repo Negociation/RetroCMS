@@ -118,6 +118,21 @@ $routerManager->add(
     ]
 );
 
+$routerManager->add(
+    '/habbo-imaging/avatar',
+    [
+        'controller' => 'habbo_imaging',
+        'action'     => 'avatar',
+    ]
+);
+
+$routerManager->add(
+    '/habbo-imaging/badge',
+    [
+        'controller' => 'habbo_imaging',
+        'action'     => 'badge',
+    ]
+);
 
 //Start Router Validation
 $routerManager->init(InstallDiag::daoConnection());

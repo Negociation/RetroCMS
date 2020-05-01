@@ -24,7 +24,7 @@ abstract class Extension{
 	protected $extensionPublisher;
 	protected $extensionVersion;
 	protected $extensionDirectory = 'web/includes/_ext/';
-	protected $extensionScripts =[];
+	protected $extensionScripts = [];
 	
 	
 	public abstract function onWindowLoaded();

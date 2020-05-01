@@ -62,6 +62,10 @@ abstract class ExtensionManager extends \Template\Shared{
 	public static function getLoadedExtensions(){
 		return self::$extensionsObject;
 	}
+	
+	public static function getExtension($name){
+		return self::$extensionsObject['Extension\\'.$name];
+	}
 }
 
 ?>

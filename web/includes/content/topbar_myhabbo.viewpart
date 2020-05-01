@@ -14,8 +14,9 @@
 //Include Content 
 //Desc = TopBar MyHabbo
 if($this->habbo->get_isHabboLoggedIn()){ 
+	
 	echo'
-									<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?figure='.$this->habbo->get_HabboFigure().'&size=b&action=wav,&direction=3&head_direction=3&gesture=sml&size=m" alt="" class="tabmenu-image" style="margin-right: 5px; margin-right: 0px;"/>
+									<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?figure='.(CLR\ExtensionManager::getExtension('FigureConverter')->get_ConvertedImage($this->habbo->get_HabboFigure())).'&size=b&action=wav,&direction=3&head_direction=3&gesture=sml&size=m" alt="" class="tabmenu-image" style="margin-right: 5px; margin-right: 0px;"/>
 									<h3 style=""><x-lang id="topbar-myhabbo-headerLoggedIn" constant="'.$this->habbo->get_HabboName().'">Bem Vindo '.$this->habbo->get_HabboName().' ao Habbo</x-lang></h3>
 									<div class="tabmenu-inner-content">
 										<p>

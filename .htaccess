@@ -46,6 +46,9 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	Options -Indexes
+	Header set Access-Control-Allow-Origin "*"
+	Header set Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+	Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
 	RewriteCond %{REQUEST_URI} !\.(?:css|js|jpeg|gif|png|dcr|cct|xml|swf|ico|xml)$ [NC]
 	RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
@@ -54,6 +57,8 @@
 <IfModule mod_headers.c>
     <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css|js|gif|png|jpeg|svg|svgz|webp|dcr|cct)$">
         Header set Access-Control-Allow-Origin "*"
+		Header set Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+		Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
     </FilesMatch>
 </IfModule>
 

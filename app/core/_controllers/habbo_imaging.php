@@ -11,15 +11,35 @@
 // Compatibility Version(s): [r14,r15,r16,r17]				//
 //////////////////////////////////////////////////////////////
 
-//Extensions Import as Custom
 
-//Extension Javascripts
-			//print_r(\CLR\ExtensionManager::getloadedExtensions());
+// Class: Index Controller
+// Desc: Index Controller
 
-foreach(\CLR\ExtensionManager::getloadedExtensions() as $extensionObject){
+namespace Controller;
 
-	foreach($extensionObject->get_extensionScripts() as $extensionScript){
-		echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb().'/'.$extensionScript."'></script>"."\n\t\t";
+final class Habbo_Imaging extends \Template\Controller{
+	
+	//Construct Method
+    function __construct($hotelConection){
+		//Call the super-class constructor
+		parent::__construct($hotelConection); 
+		
 	}
+	
+	function avatar(){
+		   header("Content-type: image/png");
+
+			if(isset($_GET['figure'])) {
+				echo file_get_contents('http://habbo.com/habbo-imaging/avatarimage');
+			}
+	}
+	
+	function badge(){
+		if(isset($_GET['figure'])) {
+			echo'<img src="http://habbo.com/habbo-imaging/avatarimage?figure=""">';
+		}
+	}
+
 }
+
 ?>

@@ -45,13 +45,15 @@ final class Habbo extends \Template\Shared{
 		
 	}
 	
-	function constructObject($habboId,$habboName,$habboPassword,$habboRank,$habboCredits){
+	function constructObject($habboId,$habboName,$habboPassword,$habboRank,$habboCredits,$habboFigure,$habboGender){
 		$this->habboId = $habboId;
 		$this->habboName = $habboName;
 		$this->habboPassword = $habboPassword;
 		$this->habboRank = $habboRank;
 		$this->habboCredits = $habboCredits;
 		$this->habboLanguage= 'EN';
+		$this->habboFigure = $habboFigure;
+		$this->habboGender = $habboGender;		
 		
 		//If GRPC Enabled set a rCon based on Hotel Object Info
 		$hotelConnection = ( extension_loaded("grpc") !== null && extension_loaded("grpc") ) ? new RemoteConnection(['host' => '127.0.0.1','port' => 12309]) : false;	

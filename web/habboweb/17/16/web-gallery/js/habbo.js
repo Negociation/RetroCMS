@@ -493,7 +493,7 @@ function updateCredits() {
 	if (!creditsUpdated && !creditsUpdateOn) {
 		creditsUpdateOn = true;
 		document.getElementById('credits-status').innerHTML = getProgressNode();
-		setTimeout(function(){ new Ajax.Updater("credits-status", habboReqPath + "/topbar/credits", { onComplete: function() { creditsUpdateOn = false; }, evalScripts: true });}, 500);
+		new Ajax.Updater("credits-status", habboReqPath + "/topbar/credits", { onComplete: function() { creditsUpdateOn = false; }, evalScripts: true });
 		creditsUpdated = true;
 		setTimeout(function(){ creditsUpdated = false; },30000)
 	}
@@ -504,7 +504,7 @@ function updateHabboClub() {
 	if (!habboClubUpdated && !habboClubUpdateOn) {
 		habboClubUpdateOn = true;		
 		document.getElementById('habboclub-status').innerHTML = getProgressNode();
-		setTimeout(function(){ new Ajax.Updater("habboclub-status", habboReqPath + "/topbar/habboclub", { onComplete: function() { habboClubUpdateOn = false; }, evalScripts : true }); }, 500);
+		new Ajax.Updater("habboclub-status", habboReqPath + "/topbar/habboclub", { onComplete: function() { habboClubUpdateOn = false; }, evalScripts : true });
 		habboClubUpdated = true;
 		setTimeout(function(){ habboClubUpdated = false; },30000);
 	}

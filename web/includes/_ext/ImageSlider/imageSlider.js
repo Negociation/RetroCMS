@@ -24,7 +24,6 @@ function initializeSlider(){
 							if(sliderIndexes[value][2].length > 0){
 								document.getElementById(value).src =  sliderIndexes[value][2][sliderIndexes[value][1]].src;
 								document.getElementById(value).parentElement.href =  sliderIndexes[value][2][sliderIndexes[value][1]].href;
-								console.log(sliderIndexes[value][2][sliderIndexes[value][1]].href);
 								sliderIndexes[value][1] = (sliderIndexes[value][1] >= sliderIndexes[value][2].length - 1) ? 0 : sliderIndexes[value][1] + 1;
 							}						
 						}
