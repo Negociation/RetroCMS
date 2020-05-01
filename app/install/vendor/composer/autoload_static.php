@@ -209,6 +209,7 @@ class ComposerStaticInitb5fc32f74951a53d7bf10d10b9b632e1
     );
 
     public static $classMap = array (
+        'CLR\\Advertisement' => __DIR__ . '/../..' . '/../core/_classes/advertisment.php',
         'CLR\\ExtensionManager' => __DIR__ . '/../..' . '/../core/_classes/extensionManager.php',
         'CLR\\Habbo' => __DIR__ . '/../..' . '/../core/_classes/habbo.php',
         'CLR\\Hotel' => __DIR__ . '/../..' . '/../core/_classes/hotel.php',

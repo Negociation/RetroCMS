@@ -30,7 +30,7 @@ final class Hotel{
 	protected $hotelConnection;
 	protected $hotelClient = [];
 	protected $hotelPages = [];
-	
+	protected $hotelAdvertisements = [];
 
 	//Default Construct Method
     function __construct(){
@@ -52,6 +52,7 @@ final class Hotel{
 		$this->hotelVersion = $hotelVersion;
 		$this->hotelWeb = $hotelWeb;
 		$this->hotelUrl = $hotelUrl;
+		$this->hotelAdvertisements = $hotelAdvertisements;
 		
 		//If GRPC Enabled set a rCon based on Hotel Object Info
 		$this->hotelConnection = ( extension_loaded("grpc") !== null && extension_loaded("grpc") ) ? new RemoteConnection(['host' => '127.0.0.1','port' => 12309]) : false;
@@ -127,7 +128,9 @@ final class Hotel{
 		return $this->hotelClient[5];
 	}
 	
-	
+	public function get_HotelAdvertisements(){
+		return $this->hotelAdvertisements;
+	}
 	
 	public function get_HotelVersion(){
 		return 17;

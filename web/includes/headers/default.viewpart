@@ -27,6 +27,8 @@
         <div id="overlay"></div>
         <h1 id="main-header"><?php echo $this->hotel->get_HotelNick();?></h1>
         <div id="wrapper">
+			<!-- ADVERTISEMENT INCLUDE -->
+			<?php include('./web/includes/content/advertisement_top.viewpart'); ?>
 			<div id="top_wrap">
 				<div id="top">
 					<div id="topdim"></div>

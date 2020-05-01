@@ -53,6 +53,7 @@ require_once('./web/includes/headers/default.viewpart');
 									  </td>
 									  <td align="right" valign="top" style="width: 310px; height: 400px;" class="habboPage-col rightmost"  id="habboMiddleColumn">
 										<!-- Advertisement Middle -->
+										<?php include('./web/includes/content/advertisement_middle.viewpart'); ?>
 										<script> if(!document.getElementById("habboMiddleAd")){ document.getElementById("habboMiddleColumn").style.width = "0px";  document.getElementById("habboLeftColumn").style.width = "730px"; } </script>
 									  </td>
 
@@ -73,13 +74,17 @@ require_once('./web/includes/headers/default.viewpart');
 									 <tbody>
 										<tr>
 										   <td>
-												<!--Partner Box Advertisement-->									
+												<!--Partner Box Advertisement-->	
+												<?php include('./web/includes/content/advertisement_box.viewpart'); ?>
+												
 										   </td>
 										</tr>
 									 </tbody>
 								  </table>
 							   </div>
 							   <!--Advertisement Right if as enabled-->
+							   <?php include('./web/includes/content/advertisement_right.viewpart'); ?>
+
 							</div>
 						 </td>
 					  </tr>

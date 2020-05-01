@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CLR\\Advertisement' => $baseDir . '/../core/_classes/advertisment.php',
     'CLR\\ExtensionManager' => $baseDir . '/../core/_classes/extensionManager.php',
     'CLR\\Habbo' => $baseDir . '/../core/_classes/habbo.php',
     'CLR\\Hotel' => $baseDir . '/../core/_classes/hotel.php',

@@ -34,7 +34,7 @@ final class Hotel extends \Template\Model{
 		$queryResult = $this->getAll('web_advertisements');
 		if (count($queryResult) > 0){
 			foreach($queryResult as $row){
-				$advertisementObject = new Advertisement();
+				$advertisementObject = new \CLR\Advertisement();
 				$advertisementObject->constructObject($row['id'],$row['image'],$row['url'],$row['type'],$row['status']);
 				array_push($advertisementArray,$advertisementObject);
 			}
