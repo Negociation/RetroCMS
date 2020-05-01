@@ -41,11 +41,11 @@ final class LanguageManager extends \Template\Extension{
 	}
 	
 	public function onWindowLoaded(){
-		
+		echo 'initializeLanguageManager();';
 	}
 	
 	public function onAjaxRequestCompleted(){
-		
+		echo 'initializeLanguageManager();';
 	}
 
 	public function onAjaxRequestInit(){

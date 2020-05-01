@@ -62,22 +62,6 @@ echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/jquery.min.js'></script>"."\n\t\t";
 
 
-if(true){
-	echo"
-		<script>
-			window.onload = function(){
-				initializeLanguageManager();
-			}
-			
-			Ajax.Responders.register({
-				onComplete: function() {					
-					loadLanguageData('EN');
-				}
-			});
-		</script>
-	\n\t\t";
-}
-
 
 //Extensions Import [DO NOT REMOVE]
 include(__DIR__.'./ext.import');
