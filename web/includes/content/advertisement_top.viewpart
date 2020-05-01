@@ -35,18 +35,8 @@ if(isset($status) && $status){
 		}
 	}
 	//Write All Top Ads Javascript
-	echo "<script type='text/javascript'>";
-	echo 'Ads_Top(';
-	foreach($array as $advertisement){ 
-		if(!next($array)){ echo "'".$advertisement->get_advertisementImage()."'); "; }else{ echo "'".$advertisement->get_advertisementImage()."',"; }
-	}
-	
-	foreach($array as $advertisement){ 
-		echo "Links_Top.push('".$advertisement->get_advertisementUrl()."'); ";
-	}
-	echo '</script>';
-	
 	echo '
+		</script>
 		<div align="center">
             <div class="ad-scale ad-leader">
                 <table>
@@ -66,7 +56,7 @@ if(isset($status) && $status){
                         </tr>
                         <tr>
                             <td class="ad-content-ml"></td>
-                            <td class="ad-content-m" align="center" valign="top"><a href="#" target="_blank" id="TopLink"><img style="width: 728px; height: 90px;" alt="" src="'.end($array)->get_advertisementImage().'" id="TopImage" ></a>
+                            <td class="ad-content-m" align="center" valign="top"><a href="#" target="_blank"><img style="width: 728px; height: 90px;" src="'.end($array)->get_advertisementImage().'" id="topAd" ></a>
                             </td>
                             <td class="ad-content-mr"></td>
                         </tr>

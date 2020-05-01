@@ -1,0 +1,47 @@
+<?php
+//////////////////////////////////////////////////////////////
+//						  RetroCMS							//
+//<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
+//----------------------------------------------------------//
+// Developed by: Marcos [ aka: m.tiago ]					//
+// Development Thread: goo.gl/nwzdZo						//
+//////////////////////////////////////////////////////////////
+// Beta Version 0.9.5.110 ( Aquamarine ) 				    //
+// Branch: Public (Unstable)								//
+// Compatibility Version(s): [r14,r15,r16,r17]				//
+//////////////////////////////////////////////////////////////
+
+
+//Include Content 
+//Desc = Advertisement Javascript 
+
+
+?>
+
+		<script language='JavaScript' type='text/javascript'>	
+			newSliderTarget('topAd',5000);
+			newSliderTarget('middleAd',5000);
+			newSliderTarget('rightAd',5000);
+			
+		<?php	
+			foreach($this->hotel->get_HotelAdvertisements() as $advertisement){
+				if($advertisement->get_advertisementStatus()){
+					switch($advertisement->get_advertisementType()){
+						case 1:
+							echo "newSliderElement(['topAd','".$advertisement->get_advertisementImage()."','".$advertisement->get_advertisementUrl()."']); \n\t\t\t";
+							break;
+						case 2:
+							echo "newSliderElement(['middleAd','".$advertisement->get_advertisementImage()."','".$advertisement->get_advertisementUrl()."']); \n\t\t\t";
+							break;
+						case 3:
+							echo "newSliderElement(['rightAd','".$advertisement->get_advertisementImage()."','".$advertisement->get_advertisementUrl()."']); \n\t\t\t";
+							break;
+					}
+				}
+			}
+		?>
+		</script>
+			
+
+
+

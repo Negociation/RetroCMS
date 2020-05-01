@@ -57,6 +57,7 @@ echo"
 "."\n\t\t";
 
 
+
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/prototype.js'></script>"."\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/habbo.js'></script>"."\n\t\t";
 echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb()."/habboweb/17/16/web-gallery/js/builder.js'></script>"."\n\t\t";
@@ -64,10 +65,44 @@ echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->
 
 
 
+
+
+
+
 //Extensions Import [DO NOT REMOVE]
 include(__DIR__.'./ext.import');
 
+//Advertisements
+echo"
+		<script language='JavaScript' type='text/javascript'>	
+			window.onload = function(){	
+
+";
+				foreach(\CLR\ExtensionManager::getloadedExtensions() as $extensionObject){
+						echo"\t\t\t\t";
+						$extensionObject->onWindowLoaded();
+						echo"\n";
+					}		
+				
+echo"
+			}
+			
+			Ajax.Responders.register({
+				onComplete: function() {";
+						foreach(\CLR\ExtensionManager::getloadedExtensions() as $extensionObject){
+							echo"\t\t\t\t\t";
+							$extensionObject->onAjaxRequestCompleted();
+							echo"\n";
+						}				
+						
+echo"								
+				}
+			});
+		</script>
+
+";
 ?>
+
 
 
 

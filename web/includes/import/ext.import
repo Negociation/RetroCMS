@@ -20,27 +20,7 @@ foreach(\CLR\ExtensionManager::getloadedExtensions() as $extensionObject){
 		echo "<script language='JavaScript' type='text/javascript' src='".$this->hotel->get_HotelWeb().'/'.$extensionScript."'></script>"."\n\t\t";
 	}
 }
+		require_once('./web/includes/content/advertisement.viewpart');
+
 
 ?>
-
-
-		<script>
-			window.onload = function(){
-				<?php 
-					foreach(\CLR\ExtensionManager::getloadedExtensions() as $extensionObject){
-						$extensionObject->onWindowLoaded();
-					}
-				?>
-				
-			}
-			
-			Ajax.Responders.register({
-				onComplete: function() {		
-					<?php 
-						foreach(\CLR\ExtensionManager::getloadedExtensions() as $extensionObject){
-							$extensionObject->onAjaxRequestCompleted();
-						}
-					?>				
-				}
-			});
-		</script>

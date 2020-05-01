@@ -1,18 +1,26 @@
 ﻿//////////////////////////////////////////////////////////////
-//                       RetroCMS                           //
+//                         RetroCMS                         //
 //<<<<<<<<<<<<<< The Oldschool Era is Back >>>>>>>>>>>>>>>>>//
 //----------------------------------------------------------//
-// Developed by: Marcos ( M.tiago )                         //
+// Developed by: Marcos [ aka: m.tiago ]                    //
+// Development Thread: goo.gl/nwzdZo                        //
 //////////////////////////////////////////////////////////////
-// Alpha Version 0.7.0 ( Opal )                             //
+// Beta Version 0.9.5.110 ( Aquamarine )                    //
+// Branch: Public (Unstable)                                //
+// Compatibility Version(s): [r14,r15,r16,r17]              //
 //////////////////////////////////////////////////////////////
 
+
 var LANG_EN = {
-	//--------------------------------------------------------------------------------------------------------------	
-	// Shared
-	//--------------------------------------------------------------------------------------------------------------
 	
-	//Topbar
+	
+	//-------------------------------------------------------------------------------------------------------------------------------------------	
+	// Shared Content
+	//-------------------------------------------------------------------------------------------------------------------------------------------
+	
+	//----------------------------------
+	// Topbar
+	//----------------------------------
 	"topbar-offline" : "Hotel Offline",
 	"topbar-status-loggedIn" : "Logged in as <b>%data%</b>", 
 	"topbar-status-notLoggedIn" : "Not logged in",
@@ -46,7 +54,9 @@ var LANG_EN = {
 	"topbar-habboclub-inner-club" : "Latest News on Habbo Club",
 	
 	
-	//Navbar
+	//----------------------------------
+	// Navbar
+	//----------------------------------
 	"navbar-title-home": "home",
 	"navbar-title-hotel": "new here?",
 	"navbar-title-community": "community",
@@ -56,7 +66,9 @@ var LANG_EN = {
 	"navbar-title-groups": "groups",
 	"navbar-title-help": "help",
 	
-	//Months
+	//----------------------------------
+	// Months
+	//----------------------------------
 	"month-1": "Janaury",
 	"month-2": "February",
 	"month-3": "March",
@@ -71,12 +83,17 @@ var LANG_EN = {
 	"month-12": "December",	
 	
 	
-	//--------------------------------------------------------------------------------------------------------------
-	// Account
-	//--------------------------------------------------------------------------------------------------------------
 	
-	//Page: Login
+	//-------------------------------------------------------------------------------------------------------------------------------------------	
+	// Account
+	//-------------------------------------------------------------------------------------------------------------------------------------------
+	
+	
+	//----------------------------------
+	// Page: account/login | login
+	//----------------------------------
 		
+	//Login -> Left Content (Registration)
 	"account-login-headerLeft" : "NEW TO HABBO? REGISTER HERE!",
 	"account-login-registerHeader" : "REGISTER NOW!",
 	"account-login-registerContent" : "Habbo is an online community that lets you create your own virtual space for you and your friends. With thousands of members already checked in there's always something to do...", 
@@ -88,7 +105,8 @@ var LANG_EN = {
 	"account-login-registerReason3": "<li>Decorate your own room</li>",
 	"account-login-registerReason4": "<li>It’s more fun than not joining!</li>",
 	"account-login-registerReason5": "<li>It's completely free!</li>",
-	
+
+	//Login -> Right Content (Login)	
 	"account-login-headerRight": "ALREADY HAVE A HABBO? PLEASE LOG IN HERE!",
 	"account-login-subheaderRight": "",
 	"account-login-content": "If you already have a Habbo account then log in here using your Habbo user name and your password. Your user name and password are the same for here as they are in the Hotel.",
@@ -101,28 +119,45 @@ var LANG_EN = {
 	"account-login-safetyContent": "The real Habbo site is encrypted to protect you and your data. You can check whether or not this site is encrypted by looking for the nice looking padlock at the bottom of your web browser.",
 
 
-
 	
-
-	
-	//404
-	"notFound-headline": "PAGE NOT FOUND",	
-	"notFound-Title": "PAGE NOT FOUND",	
-	"notFound-Content": "We're sorry, but the page you have requested cannot be found. Perhaps it's lost, or it might have run off... OR, Kedo might have thought it was a Twinkie and eaten it!.<br><br>Please try typing the URL again, if that doesn't work visit the Home Page and click the links to find the page you're looking for...<br><br>If you have come to this page from the Hotel after clicking 'Buy Credits' then please, <a href=\""+habboReqPath+"/credits\" target=\"_self\">Click Here</a>.<br><br><br>",
-	
-	//Logout
+	//----------------------------------
+	// Page: account/disconnected | logout
+	//----------------------------------
+		
 	"logout-header": "Logged out",
 	"logout-content": "You have logged out succesfully.<br><br>Goodbye, and we hope you come back soon!<br/><br/><a href=\""+habboReqPath+"\" target=\"_self\">Sign in again</a>",
 	
-	//Register	 
+
+
+	//-------------------------------------------------------------------------------------------------------------------------------------------	
+	// Register
+	//-------------------------------------------------------------------------------------------------------------------------------------------
+	
 	"register-header": "Registration",
 	"register-headerExit": "Cancel",
 	"register-BubbleContent0": "Please tell us your birthday.",
 	"register-labelBirthday" : "Birthday",
 	"register-BubbleContent1": "Now the fun begins! Choose what you want to look like in habbo!",
 
-	  
-	 //Home
+
+
+	//-------------------------------------------------------------------------------------------------------------------------------------------	
+	// 404 NOT FOUND
+	//-------------------------------------------------------------------------------------------------------------------------------------------
+	"notFound-headline": "PAGE NOT FOUND",	
+	"notFound-Title": "PAGE NOT FOUND",	
+	"notFound-Content": "We're sorry, but the page you have requested cannot be found. Perhaps it's lost, or it might have run off... OR, Kedo might have thought it was a Twinkie and eaten it!.<br><br>Please try typing the URL again, if that doesn't work visit the Home Page and click the links to find the page you're looking for...<br><br>If you have come to this page from the Hotel after clicking 'Buy Credits' then please, <a href=\""+habboReqPath+"/credits\" target=\"_self\">Click Here</a>.<br><br><br>",
+	
+	
+	
+	//-------------------------------------------------------------------------------------------------------------------------------------------	
+	// HABBO HOMES 
+	//-------------------------------------------------------------------------------------------------------------------------------------------
+	
+	
+	//----------------------------------
+	// Page: home/%data% | hidden or banned
+	//----------------------------------	
 	 "home-headline-error": "Page could not be shown",
 	 "home-header-infoHidden": "Did you know?",
 	 "home-content-infoHidden": "That you can make your Habbo Home private through in your Habbo Profile?<br/><br/>Well, now you do!<br/>",
@@ -133,5 +168,12 @@ var LANG_EN = {
 	 "home-content-errorHidden-hotelUrl":"New to Habbo?",
 	 "home-content-errorHidden-homeUrl":"Habbo Home main page",
 	 "home-content-errorBanned": "This page is no longer available because <span style=\"font-weight: bold;\">%data%</span> was banned.<br>",
+	 
+	 
+
+	//----------------------------------
+	// Page: home/%data% | view and edit
+	//----------------------------------
+	
 
 };
